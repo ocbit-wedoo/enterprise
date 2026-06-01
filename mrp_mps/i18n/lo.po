@@ -1,0 +1,980 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mrp_mps
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 18:46+0000\n"
+"PO-Revision-Date: 2026-05-20 11:57+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/mrp_mps/lo/>"
+"\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
+msgid "<span invisible=\"enable_batch_size\">No Batch Size</span>"
+msgstr "<span invisible=\"enable_batch_size\">ບໍ່ມີຂະໜາດຊຸດ</span>"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
+msgid "<span invisible=\"enable_max_replenish\">No Maximum</span>"
+msgstr "<span invisible=\"enable_max_replenish\">ບໍ່ມີຄ່າສູງສຸດ</span>"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_bom_form_view_inherit_mps
+msgid "<span>Schedules</span>"
+msgstr "<span>ຕາຕະລາງ</span>"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "ATP"
+msgstr "ATP"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "Actual"
+msgstr "ຕົວຈິງ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Actual Demand"
+msgstr "ຄວາມຕ້ອງການຕົວຈິງ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/models/mrp_mps.py:0
+msgid "Actual Demand %(product)s %(date)s (%(date_start)s - %(date_end)s)"
+msgstr "ຄວາມຕ້ອງການຕົວຈິງ %(product)s %(date)s (%(date_start)s - %(date_end)s)"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Actual Demand Y-1"
+msgstr "ຄວາມຕ້ອງການຕົວຈິງ ປີ Y-1"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Actual Demand Y-2"
+msgstr "ຄວາມຕ້ອງການຕົວຈິງ ປີ Y-2"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__total_qty
+msgid "Actual Replenishment"
+msgstr "ການເຕີມເຕັມຕົວຈິງ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/models/mrp_mps.py:0
+msgid ""
+"Actual Replenishment %(product)s %(date)s (%(date_start)s - %(date_end)s)"
+msgstr "ການເຕີມເຕັມຕົວຈິງ %(product)s %(date)s (%(date_start)s - %(date_end)s)"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.xml:0
+#: model:ir.actions.act_window,name:mrp_mps.action_mrp_mps_form_view
+msgid "Add a Product"
+msgstr "ເພີ່ມສິນຄ້າ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__allowed_route_ids
+msgid "Allowed Route"
+msgstr "ເສັ້ນທາງທີ່ອະນຸຍາດ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/models/master_production_schedule_model.js:0
+msgid "Are you sure you want to delete these records?"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບບັນທຶກເຫຼົ່ານີ້?"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/models/master_production_schedule_model.js:0
+msgid "Are you sure you want to delete this record?"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບບັນທຶກນີ້?"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_trigger__automated
+msgid "Automatic"
+msgstr "ອັດຕະໂນມັດ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "Automatically Replenished"
+msgstr "ເຕີມເຕັມໂດຍອັດຕະໂນມັດ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Available to Promise"
+msgstr "ຈຳນວນທີ່ສັນຍາຂາຍໄດ້ (ATP)"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__batch_size
+msgid "Batch Size"
+msgstr "ຂະໜາດຊຸດ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_bom
+msgid "Bill of Material"
+msgstr "ລາຍການວັດສະດຸ (BoM)"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__bom_id
+msgid "Bill of Materials"
+msgstr "ລາຍການວັດສະດຸ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_forecast_details_form_view
+msgid "Close"
+msgstr "ປິດ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_res_company
+msgid "Companies"
+msgstr "ບັນດາບໍລິສັດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__company_id
+msgid "Company"
+msgstr "ບໍລິສັດ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການຕັ້ງຄ່າລະບົບ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/models/master_production_schedule_model.js:0
+msgid "Confirmation"
+msgstr "ການຢືນຢັນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__create_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__create_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__create_date
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__create_date
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__res_company__manufacturing_period__day
+msgid "Daily"
+msgstr "ລາຍວັນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__date
+msgid "Date"
+msgstr "ວັນທີ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Day"
+msgstr "ວັນ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.res_config_settings_view_form
+msgid "Default Time Range"
+msgstr "ຊ່ວງເວລາເລີ່ມຕົ້ນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__product_uom_id
+msgid "Default unit of measure used for all stock operations."
+msgstr "ຫົວໜ່ວຍວັດແທກເລີ່ມຕົ້ນທີ່ໃຊ້ສຳລັບທຸກການດຳເນີນງານສາງ."
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_res_company__manufacturing_period
+#: model:ir.model.fields,help:mrp_mps.field_res_config_settings__manufacturing_period
+msgid ""
+"Default value for the time ranges in Master Production Schedule report."
+msgstr "ຄ່າເລີ່ມຕົ້ນສຳລັບຊ່ວງເວລາໃນລາຍງານແຜນການຜະລິດຫຼັກ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Delete"
+msgstr "ລຶບ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__forecast_qty
+msgid "Demand Forecast"
+msgstr "ຄາດຄະເນຄວາມຕ້ອງການ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand
+msgid "Display Actual Demand"
+msgstr "ສະແດງຄວາມຕ້ອງການຕົວຈິງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand_year_minus_2
+msgid "Display Actual Demand Before Year"
+msgstr "ສະແດງຄວາມຕ້ອງການຕົວຈິງກ່ອນປີ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand_year_minus_1
+msgid "Display Actual Demand Last Year"
+msgstr "ສະແດງຄວາມຕ້ອງການຕົວຈິງປີແລ້ວນີ້"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_replenishment
+msgid "Display Actual Replenishment"
+msgstr "ສະແດງການເຕີມເຕັມຕົວຈິງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_available_to_promise
+msgid "Display Available to Promise"
+msgstr "ສະແດງຈຳນວນທີ່ສັນຍາຂາຍໄດ້ (ATP)"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_demand_forecast
+msgid "Display Demand Forecast"
+msgstr "ສະແດງການຄາດຄະເນຄວາມຕ້ອງການ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_indirect_demand
+msgid "Display Indirect Demand"
+msgstr "ສະແດງຄວາມຕ້ອງການທາງອ້ອມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__display_name
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__display_name
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_safety_stock
+msgid "Display Safety Stock"
+msgstr "ສະແດງສິນຄ້າຄົງຄັງສຳຮອງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_starting_inventory
+msgid "Display Starting Inventory"
+msgstr "ສະແດງສິນຄ້າຄົງຄັງເລີ່ມຕົ້ນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_to_replenish
+msgid "Display To Replenish"
+msgstr "ສະແດງຈຳນວນທີ່ຕ້ອງເຕີມເຕັມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__enable_batch_size
+msgid "Enable Batch Size"
+msgstr "ເປີດໃຊ້ຂະໜາດຊຸດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__enable_max_replenish
+msgid "Enable Max Replenish"
+msgstr "ເປີດໃຊ້ການເຕີມເຕັມສູງສຸດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_state__excessive_replenishment
+msgid "Excessive Replenishment"
+msgstr "ການເຕີມເຕັມເກີນກຳນົດ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Export"
+msgstr "ສົ່ງອອກ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "External ID"
+msgstr "External ID"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_mps_forecast_details
+msgid "Forecast Demand Details"
+msgstr "ລາຍລະອຽດການຄາດຄະເນຄວາມຕ້ອງການ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "Forecasted"
+msgstr "ຄາດຄະເນໄວ້"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "Forecasted Demand"
+msgstr "ຄວາມຕ້ອງການຄາດຄະເນ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Forecasted Stock"
+msgstr "ສິນຄ້າຄົງຄັງຄາດຄະເນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__forecast_ids
+msgid "Forecasted quantity at date"
+msgstr "ຈຳນວນຄາດຄະເນຕາມວັນທີ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__id
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__id
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__bom_id
+msgid "If set, the bill of materials components will also be imported."
+msgstr "ຖ້າຕັ້ງຄ່າໄວ້, ສ່ວນປະກອບໃນລາຍການວັດສະດຸຈະຖືກນຳເຂົ້າໄປພ້ອມກັນ."
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__batch_size
+msgid ""
+"If set, the generated manufacturing orders will be split in quantities of "
+"this value at maximum."
+msgstr ""
+"ຖ້າຕັ້ງຄ່າໄວ້, ໃບສັ່ງຜະລິດທີ່ຖືກສ້າງຈະຖືກແບ່ງອອກຕາມຈຳນວນສູງສຸດຂອງຄ່ານີ້."
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/models/mrp_mps.py:0
+msgid "Import Template for Master Production Schedule"
+msgstr "ແບບຟອມນຳເຂົ້າສຳລັບແຜນການຜະລິດຫຼັກ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "Indirect Demand"
+msgstr "ຄວາມຕ້ອງການທາງອ້ອມ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Indirect Demand Forecast"
+msgstr "ການຄາດຄະເນຄວາມຕ້ອງການທາງອ້ອມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__is_indirect
+msgid "Indirect demand product"
+msgstr "ສິນຄ້າທີ່ມີຄວາມຕ້ອງການທາງອ້ອມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__is_manufacture_route
+msgid "Is Manufacture Route"
+msgstr "ແມ່ນເສັ້ນທາງການຜະລິດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__write_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__write_uid
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__write_uid
+msgid "Last Updated by"
+msgstr "ອັບເດດຫຼ້າສຸດໂດຍ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__write_date
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__write_date
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__write_date
+msgid "Last Updated on"
+msgstr "ອັບເດດຫຼ້າສຸດເມື່ອ"
+
+#. module: mrp_mps
+#: model:ir.ui.menu,name:mrp_mps.mrp_mps_menu_planning
+msgid "MPS"
+msgstr "MPS"
+
+#. module: mrp_mps
+#: model:ir.actions.server,name:mrp_mps.ir_cron_replenish_automated_mps_ir_actions_server
+msgid "MPS: replenish automated schedules"
+msgstr "MPS: ເຕີມເຕັມຕາຕະລາງອັດຕະໂນມັດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_trigger__manual
+msgid "Manual"
+msgstr "ດ້ວຍຕົນເອງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__replenish_trigger
+msgid ""
+"Manual: Product to be replenished manually from MPS.\n"
+"Automatic: Product replenished automatically via scheduled action.\n"
+"Never: Product is not replenished from MPS."
+msgstr ""
+"ດ້ວຍຕົນເອງ: ສິນຄ້າຈະຖືກເຕີມເຕັມດ້ວຍຕົນເອງຈາກ MPS.\n"
+"ອັດຕະໂນມັດ: ສິນຄ້າຈະຖືກເຕີມເຕັມໂດຍອັດຕະໂນມັດຜ່ານການເຮັດວຽກທີ່ກຳນົດໄວ້.\n"
+"ບໍ່ເລີຍ: ສິນຄ້າຈະບໍ່ຖືກເຕີມເຕັມຈາກ MPS."
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "Manually Replenished"
+msgstr "ເຕີມເຕັມດ້ວຍຕົນເອງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__manufacture_string
+msgid "Manufacture String"
+msgstr "ຂໍ້ຄວາມການຜະລິດ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
+msgid "Manufacturing Order"
+msgstr "ໃບສັ່ງຜະລິດ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_forecast_details_form_view
+msgid "Manufacturing Orders"
+msgstr "ໃບສັ່ງຜະລິດທັງໝົດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period
+#: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period
+msgid "Manufacturing Period"
+msgstr "ໄລຍະເວລາການຜະລິດ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/models/res_company.py:0
+msgid ""
+"Manufacturing Settings: Your Master Production Schedule must always display "
+"at least 1 period."
+msgstr "ການຕັ້ງຄ່າການຜະລິດ: ແຜນການຜະລິດຫຼັກຂອງທ່ານຕ້ອງສະແດງຢ່າງໜ້ອຍ 1 ໄລຍະເວລາ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+#: model:ir.actions.client,name:mrp_mps.action_mrp_mps
+#: model:ir.ui.menu,name:mrp_mps.mrp_mps_report_menu
+#: model:ir.ui.menu,name:mrp_mps.stock_mrp_mps_report_menu
+msgid "Master Production Schedule"
+msgstr "ແຜນການຜະລິດຫຼັກ (MPS)"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__max_to_replenish_qty
+msgid "Maximum to Replenish"
+msgstr "ຈຳນວນເຕີມເຕັມສູງສຸດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__min_to_replenish_qty
+msgid "Minimum to Replenish"
+msgstr "ຈຳນວນເຕີມເຕັມຕໍ່າສຸດ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Month"
+msgstr "ເດືອນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__res_company__manufacturing_period__month
+msgid "Monthly"
+msgstr "ລາຍເດືອນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__move_ids
+msgid "Move"
+msgstr "ການເຄື່ອນຍ້າຍ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__moves_string
+msgid "Moves String"
+msgstr "ຂໍ້ຄວາມການເຄື່ອນຍ້າຍ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_trigger__never
+msgid "Never"
+msgstr "ບໍ່ເລີຍ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.xml:0
+msgid "No product yet. Add one to start scheduling."
+msgstr "ຍັງບໍ່ມີສິນຄ້າເທື່ອ. ເພີ່ມສິນຄ້າເພື່ອເລີ່ມວາງແຜນ."
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "Not Replenished from MPS"
+msgstr "ບໍ່ໄດ້ເຕີມເຕັມຈາກ MPS"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_day
+msgid "Number of Daily Manufacturing Period Columns"
+msgstr "ຈຳນວນຖັນໄລຍະເວລາການຜະລິດລາຍວັນ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_month
+msgid "Number of Monthly Manufacturing Period Columns"
+msgstr "ຈຳນວນຖັນໄລຍະເວລາການຜະລິດລາຍເດືອນ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.res_config_settings_view_form
+msgid "Number of Periods"
+msgstr "ຈຳນວນໄລຍະເວລາ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_week
+msgid "Number of Weekly Manufacturing Period Columns"
+msgstr "ຈຳນວນຖັນໄລຍະເວລາການຜະລິດລາຍອາທິດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_year
+msgid "Number of Yearly Manufacturing Period Columns"
+msgstr "ຈຳນວນຖັນໄລຍະເວລາການຜະລິດລາຍປີ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_day
+msgid ""
+"Number of columns for the daily period to display in Master Production "
+"Schedule"
+msgstr "ຈຳນວນຖັນສຳລັບໄລຍະເວລາລາຍວັນທີ່ຈະສະແດງໃນແຜນການຜະລິດຫຼັກ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_month
+msgid ""
+"Number of columns for the monthly period to display in Master Production "
+"Schedule"
+msgstr "ຈຳນວນຖັນສຳລັບໄລຍະເວລາລາຍເດືອນທີ່ຈະສະແດງໃນແຜນການຜະລິດຫຼັກ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_week
+msgid ""
+"Number of columns for the weekly period to display in Master Production "
+"Schedule"
+msgstr "ຈຳນວນຖັນສຳລັບໄລຍະເວລາລາຍອາທິດທີ່ຈະສະແດງໃນແຜນການຜະລິດຫຼັກ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_year
+msgid ""
+"Number of columns for the yearly period to display in Master Production "
+"Schedule"
+msgstr "ຈຳນວນຖັນສຳລັບໄລຍະເວລາລາຍປີທີ່ຈະສະແດງໃນແຜນການຜະລິດຫຼັກ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+#: code:addons/mrp_mps/static/src/components/main.js:0
+#: code:addons/mrp_mps/static/src/components/main.xml:0
+msgid "Order"
+msgstr "ສັ່ງຊື້/ສັ່ງຜະລິດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__route_id
+msgid "Preferred Route"
+msgstr "ເສັ້ນທາງທີ່ຕ້ອງການ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__procurement_launched
+msgid "Procurement has been run for this forecast"
+msgstr "ການຈັດຊື້ຈັດຈ້າງໄດ້ຖືກດຳເນີນການແລ້ວສຳລັບການຄາດຄະເນນີ້"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_product_template
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__product_id
+msgid "Product"
+msgstr "ສິນຄ້າ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__product_category_id
+msgid "Product Category"
+msgstr "ໝວດສິນຄ້າ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_product_forecast
+msgid "Product Forecast at Date"
+msgstr "ຄາດຄະເນສິນຄ້າຕາມວັນທີ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__product_tmpl_id
+msgid "Product Template"
+msgstr "ແບບຟອມສິນຄ້າ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__product_uom_id
+msgid "Product UoM"
+msgstr "ຫົວໜ່ວຍສິນຄ້າ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_product_product
+msgid "Product Variant"
+msgstr "ລຸ້ນສິນຄ້າ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__production_schedule_id
+msgid "Production Schedule"
+msgstr "ຕາຕະລາງການຜະລິດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__warehouse_id
+msgid "Production Warehouse"
+msgstr "ສາງການຜະລິດ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_purchase_order
+msgid "Purchase Order"
+msgstr "ໃບສັ່ງຊື້"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__purchase_order_line_ids
+msgid "Purchase Order Line"
+msgstr "ລາຍການໃບສັ່ງຊື້"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__moves_qty
+msgid "Quantity from Incoming Moves"
+msgstr "ຈຳນວນຈາກການເຄື່ອນຍ້າຍຂາເຂົ້າ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__manufacture_qty
+msgid "Quantity from Manufacturing Order"
+msgstr "ຈຳນວນຈາກໃບສັ່ງຜະລິດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__rfq_qty
+msgid "Quantity from RFQ"
+msgstr "ຈຳນວນຈາກໃບສະເໜີລາຄາ (RFQ)"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid ""
+"Quantity predicted to be available for sale at the end of the period (= to "
+"replenish - actual demand)."
+msgstr ""
+"ຈຳນວນທີ່ຄາດວ່າຈະມີໄວ້ຂາຍເມື່ອໝົດໄລຍະເວລາ (= ຈຳນວນເຕີມເຕັມ - ຄວາມຕ້ອງການຕົວຈິງ)."
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
+msgid "Receipt"
+msgstr "ໃບຮັບ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_forecast_details_form_view
+msgid "Receipts"
+msgstr "ໃບຮັບສິນຄ້າທັງໝົດ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "Replenish"
+msgstr "ເຕີມເຕັມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__replenish_state
+msgid "Replenish State"
+msgstr "ສະຖານະການເຕີມເຕັມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__replenish_qty_updated
+msgid "Replenish_qty has been manually updated"
+msgstr "ຈຳນວນເຕີມເຕັມໄດ້ຖືກອັບເດດດ້ວຍຕົນເອງແລ້ວ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "Replenishment Too High"
+msgstr "ການເຕີມເຕັມສູງເກີນໄປ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "Replenishment Too Low"
+msgstr "ການເຕີມເຕັມຕໍ່າເກີນໄປ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__replenish_trigger
+msgid "Replenishment Trigger"
+msgstr "ຕົວຊ່ວຍກະຕຸ້ນການເຕີມເຕັມ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "Replenishment:"
+msgstr "ການເຕີມເຕັມ:"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
+msgid "Request for quotation"
+msgstr "ໃບສະເໜີລາຄາ (RFQ)"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_forecast_details_form_view
+msgid "Requests for quotation"
+msgstr "ໃບສະເໜີລາຄາທັງໝົດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__rfq_string
+msgid "Rfq String"
+msgstr "ຂໍ້ຄວາມ RFQ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
+msgid "Route"
+msgstr "ເສັ້ນທາງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__route_id
+msgid "Route to replenish your product."
+msgstr "ເສັ້ນທາງສຳລັບເຕີມເຕັມສິນຄ້າຂອງທ່ານ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Rows"
+msgstr "ແຖວ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__forecast_target_qty
+msgid "Safety Stock Target"
+msgstr "ເປົ້າໝາຍສິນຄ້າຄົງຄັງສຳຮອງ"
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
+msgid "Save"
+msgstr "ບັນທຶກ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_mrp_production_schedule
+msgid "Schedule the production of Product in a warehouse"
+msgstr "ວາງແຜນການຜະລິດສິນຄ້າໃນສາງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_purchase_order__date_planned_mps
+msgid "Scheduled Date"
+msgstr "ວັນທີທີ່ກຳນົດໄວ້"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_product_product__schedule_count
+#: model:ir.model.fields,field_description:mrp_mps.field_product_template__schedule_count
+#: model_terms:ir.ui.view,arch_db:mrp_mps.product_normal_form_view_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.product_template_only_form_view_mps
+msgid "Schedules"
+msgstr "ຕາຕະລາງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__mps_sequence
+msgid "Sequence"
+msgstr "ລຳດັບ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__show_bom
+msgid "Show Bom"
+msgstr "ສະແດງ BoM"
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__show_vendor
+msgid "Show Vendor"
+msgstr "ສະແດງຜູ້ສະໜອງ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+msgid "Starting Inventory"
+msgstr "ສິນຄ້າຄົງຄັງເລີ່ມຕົ້ນ"
+
+#. module: mrp_mps
+#: model:ir.model,name:mrp_mps.model_stock_rule
+msgid "Stock Rule"
+msgstr "ກົດລະບຽບສາງ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__replenish_state
+msgid "Technical field to support filtering by replenish state"
+msgstr "Technical field ເພື່ອຮອງຮັບການກັ່ນຕອງຕາມສະຖານະການເຕີມເຕັມ"
+
+#. module: mrp_mps
+#: model:ir.model.constraint,message:mrp_mps.constraint_mrp_production_schedule_warehouse_product_ref_uniq
+msgid "The combination of warehouse and product must be unique!"
+msgstr "ການຈັບຄູ່ລະຫວ່າງສາງ ແລະ ສິນຄ້າ ຕ້ອງບໍ່ຊໍ້າກັນ!"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "The confirmed demand, based on the confirmed sales orders."
+msgstr "ຄວາມຕ້ອງການທີ່ຢືນຢັນແລ້ວ, ອີງຕາມໃບສັ່ງຂາຍທີ່ຢືນຢັນແລ້ວ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid ""
+"The forecasted demand to fulfill the needs in components of the "
+"Manufacturing Orders."
+msgstr "ຄວາມຕ້ອງການຄາດຄະເນເພື່ອຕອບສະໜອງຄວາມຕ້ອງການສ່ວນປະກອບຂອງໃບສັ່ງຜະລິດ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "The forecasted demand. This value has to be entered manually."
+msgstr "ຄວາມຕ້ອງການຄາດຄະເນ. ຄ່ານີ້ຕ້ອງໄດ້ປ້ອນເຂົ້າດ້ວຍຕົນເອງ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "The forecasted quantity in stock at the beginning of the period."
+msgstr "ຈຳນວນສິນຄ້າຄົງຄັງຄາດຄະເນໃນຕອນເລີ່ມຕົ້ນຂອງໄລຍະເວລາ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "The forecasted quantity in stock at the end of the period."
+msgstr "ຈຳນວນສິນຄ້າຄົງຄັງຄາດຄະເນເມື່ອໝົດໄລຍະເວລາ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.xml:0
+msgid ""
+"The master schedule translates your sales and demand forecasts into a production and purchase planning for each component.\n"
+"                    It ensures everything gets scheduled on time, based on constraints such as: safety stock, production capacity, lead times.\n"
+"                    It's the perfect tool to support your S&OP meetings."
+msgstr ""
+"ແຜນການຫຼັກຈະແປງການຂາຍ ແລະ ການຄາດຄະເນຄວາມຕ້ອງການຂອງທ່ານໃຫ້ເປັນແຜນການຜະລິດ ແລະ ການຈັດຊື້ສ"
+"ຳລັບແຕ່ລະສ່ວນປະກອບ.\n"
+"                    ມັນຮັບປະກັນວ່າທຸກຢ່າງຈະຖືກກຳນົດເວລາຢ່າງຖືກຕ້ອງ, ອີງຕາມຂໍ້ຈຳກັດເຊັ່ນ: ສິນຄ້າຄົ"
+"ງຄັງສຳຮອງ, ຂີດຄວາມສາມາດໃນການຜະລິດ, ໄລຍະເວລານຳສົ່ງ.\n"
+"                    ມັນເປັນເຄື່ອງມືທີ່ສົມບູນແບບເພື່ອຮອງຮັບການປະຊຸມ S&OP ຂອງທ່ານ."
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__max_to_replenish_qty
+msgid ""
+"The maximum replenishment you would like to launch for each period in the "
+"MPS. This is only applied for the period defined in the settings. Note that "
+"if the demand is higher than that amount, the remaining quantity will be "
+"transferred to the next period automatically."
+msgstr ""
+"ຈຳນວນເຕີມເຕັມສູງສຸດທີ່ທ່ານຕ້ອງການດຳເນີນການສຳລັບແຕ່ລະໄລຍະເວລາໃນ MPS. ນີ້ຈະຖືກນຳໃຊ້ສະເພາະກັບໄລຍ"
+"ະເວລາທີ່ກຳນົດໃນການຕັ້ງຄ່າເທົ່ານັ້ນ. ໝາຍເຫດວ່າ ຖ້າຄວາມຕ້ອງການສູງກວ່າຈຳນວນນັ້ນ, ຈຳນວນທີ່ເຫຼືອຈະຖືກໂອນ"
+"ໄປຫາໄລຍະເວລາຖັດໄປໂດຍອັດຕະໂນມັດ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid ""
+"The quantity being replenished, based on the Requests for Quotation and the "
+"Manufacturing Orders."
+msgstr "ຈຳນວນທີ່ກຳລັງຖືກເຕີມເຕັມ, ອີງຕາມໃບສະເໜີລາຄາ (RFQ) ແລະ ໃບສັ່ງຜະລິດ."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid ""
+"The quantity to replenish through Purchase Orders or Manufacturing Orders."
+msgstr "ຈຳນວນທີ່ຈະເຕີມເຕັມຜ່ານໃບສັ່ງຊື້ ຫຼື ໃບສັ່ງຜະລິດ."
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__forecast_target_qty
+msgid ""
+"This is the minimum free stock you want to keep for that product at all "
+"times."
+msgstr ""
+"ນີ້ຄືຈຳນວນສິນຄ້າຄົງຄັງຕໍ່າສຸດທີ່ທ່ານຕ້ອງການຮັກສາໄວ້ສຳລັບສິນຄ້ານີ້ຕະຫຼອດເວລາ."
+
+#. module: mrp_mps
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "To Forecast"
+msgstr "ທີ່ຈະຄາດຄະເນ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/search/group_menu.xml:0
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__replenish_qty
+#: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_state__to_replenish
+#: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
+msgid "To Replenish"
+msgstr "ທີ່ຈະເຕີມເຕັມ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Toggle Indirect Demand"
+msgstr "ເປີດ/ປິດ ຄວາມຕ້ອງການທາງອ້ອມ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_state__under_replenishment
+msgid "Under Replenishment"
+msgstr "ການເຕີມເຕັມຕໍ່າກວ່າກຳນົດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__min_to_replenish_qty
+msgid ""
+"Unless the demand is 0, Odoo will always at least replenish this quantity."
+msgstr "ເວັ້ນເສຍແຕ່ຄວາມຕ້ອງການຈະເປັນ 0, Odoo ຈະເຕີມເຕັມຈຳນວນນີ້ຢ່າງໜ້ອຍສະເໝີ."
+
+#. module: mrp_mps
+#: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__supplier_id
+msgid "Vendor"
+msgstr "ຜູ້ສະໜອງ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Week"
+msgstr "ອາທິດ"
+
+#. module: mrp_mps
+#. odoo-python
+#: code:addons/mrp_mps/models/res_company.py:0
+msgid "Week %(week_num)s (%(start_date)s-%(end_date)s/%(month)s)"
+msgstr "ອາທິດ %(week_num)s (%(start_date)s-%(end_date)s/%(month)s)"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__res_company__manufacturing_period__week
+msgid "Weekly"
+msgstr "ລາຍອາທິດ"
+
+#. module: mrp_mps
+#: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__is_indirect
+msgid ""
+"When checked, this product will not appear in the 'To Forecast' filter."
+msgstr "ເມື່ອໝາຍເລືອກ, ສິນຄ້ານີ້ຈະບໍ່ສະແດງໃນຕົວກັ່ນຕອງ 'ທີ່ຈະຄາດຄະເນ'."
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/main.js:0
+msgid "Year"
+msgstr "ປີ"
+
+#. module: mrp_mps
+#: model:ir.model.fields.selection,name:mrp_mps.selection__res_company__manufacturing_period__year
+msgid "Yearly"
+msgstr "ລາຍປີ"
+
+#. module: mrp_mps
+#. odoo-javascript
+#: code:addons/mrp_mps/static/src/components/line.xml:0
+msgid "by"
+msgstr "ໂດຍ"

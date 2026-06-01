@@ -1,0 +1,1507 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * stock_barcode
+#
+# Translators:
+# Martin Trigaux <mat@odoo.com>, 2017
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.saas~18+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-16 16:01+0000\n"
+"PO-Revision-Date: 2026-05-22 12:26+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
+"stock_barcode/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "%s can't be inventoried. Only storable products can be inventoried."
+msgstr ""
+"%s ບໍ່ສາມາດກວດນັບສາງໄດ້. ສະເພາະສິນຄ້າທີ່ເກັບຮັກສາໄດ້ເທົ່ານັ້ນທີ່ສາມາດກວດນັບສາງໄດ້."
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "<i class=\"fa fa-fw fa-lg fa-archive me-3\" title=\"Package\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-archive me-3\" title=\"ແພັກເກດ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-archive me-3\" title=\"Source Package\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-archive me-3\" title=\"ແພັກເກດຕົ້ນທາງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-barcode me-3\" title=\"Serial/Lot Number\" attrs=\"{'invisible': [('tracking', 'not in', ['serial', 'lot'])]}\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-barcode me-3\" title=\"ເລກຊີຣີ/ເລກລັອດ\" attrs=\""
+"{'invisible': [('tracking', 'not in', ['serial', 'lot'])]}\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "<i class=\"fa fa-fw fa-lg fa-barcode me-3\" title=\"Serial/Lot Number\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-barcode me-3\" title=\"ເລກຊີຣີ/ເລກລັອດ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "<i class=\"fa fa-fw fa-lg fa-cube me-3\" title=\"Counted Quantity\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-cube me-3\" title=\"ຈຳນວນທີ່ນັບໄດ້\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-cube me-3\" title=\"Quantity\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-cube me-3\" title=\"ຈຳນວນ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-cubes me-3\" title=\"Locations\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-cubes me-3\" title=\"ສະຖານທີ່\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"Destination Location\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"ສະຖານທີ່ປາຍທາງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"Destination Package\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"ແພັກເກດປາຍທາງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "<i class=\"fa fa-fw fa-lg fa-map-marker me-3\" title=\"Location\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-map-marker me-3\" title=\"ສະຖານທີ່\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-map-marker text-center me-3\" title=\"Source Location\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-map-marker text-center me-3\" title=\"ສະຖານທີ່ຕົ້ນທາ"
+"ງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "<i class=\"fa fa-fw fa-lg fa-tags me-3\" title=\"Product\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-tags me-3\" title=\"ສິນຄ້າ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "<i class=\"fa fa-fw fa-lg fa-user-o me-3\" title=\"Owner\"/>"
+msgstr "<i class=\"fa fa-fw fa-lg fa-user-o me-3\" title=\"ເຈົ້າຂອງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-fw fa-lg fa-user-o text-center me-3\" title=\"Owner\"/>"
+msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-user-o text-center me-3\" title=\"ເຈົ້າຂອງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban_2
+msgid "<i class=\"fa fa-lg fa-archive\" title=\"Package\"/>"
+msgstr "<i class=\"fa fa-lg fa-archive\" title=\"ແພັກເກດ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban_2
+msgid "<i class=\"fa fa-lg fa-user-o\" title=\"Owner\"/>"
+msgstr "<i class=\"fa fa-lg fa-user-o\" title=\"ເຈົ້າຂອງ\"/>"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+msgid "<i class=\"fa fa-print\"/> Print barcode commands"
+msgstr "<i class=\"fa fa-print\"/> ພິມຄຳສັ່ງບາໂຄດ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+msgid "<i class=\"fa fa-print\"/> Print barcode demo sheet"
+msgstr "<i class=\"fa fa-print\"/> ພິມເອກະສານບາໂຄດຕົວຢ່າງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "<i class=\"fa fa-trash-o\"/> Delete"
+msgstr "<i class=\"fa fa-trash-o\"/> ລຶບ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "A product tracked by serial numbers can't have multiple quantities for the same serial number."
+msgstr "ສິນຄ້າທີ່ຕິດຕາມດ້ວຍເລກຊີຣີ ບໍ່ສາມາດມີຫຼາຍຈຳນວນໃນເລກຊີຣີດຽວກັນໄດ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Add Product"
+msgstr "ເພີ່ມສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "Add extra product?"
+msgstr "ເພີ່ມສິນຄ້າເພີ່ມເຕີມບໍ່?"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__mandatory
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__mandatory
+msgid "After each product"
+msgstr "ຫຼັງຈາກແຕ່ລະສິນຄ້າ"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__optional
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__optional
+msgid "After group of Products"
+msgstr "ຫຼັງຈາກກຸ່ມສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "All products need to be packed"
+msgstr "ສິນຄ້າທັງໝົດຕ້ອງໄດ້ຮັບການຫຸ້ມຫໍ່"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+msgid "Allocation"
+msgstr "ການຈັດສັນ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_full
+msgid "Allow full picking validation"
+msgstr "ອະນຸຍາດໃຫ້ຢືນຢັນການເບີກຈ່າຍທັງໝົດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__barcode_validation_full
+msgid "Allow to validate a picking even if nothing was scanned yet (and so, do an immediate transfert)"
+msgstr ""
+"ອະນຸຍາດໃຫ້ຢືນຢັນລາຍການໂອນ ເຖິງແມ່ນວ່າຍັງບໍ່ໄດ້ສະແກນຫຍັງກໍຕາມ (ເພື່ອເຮັດການໂອນທັນທີ)"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "An unexisting package type was scanned. This part of the barcode can't be processed."
+msgstr ""
+"ມີການສະແກນປະເພດແພັກເກດທີ່ບໍ່ມີຢູ່ໃນລະບົບ. ບາງສ່ວນຂອງບາໂຄດນີ້ບໍ່ສາມາດປະມວນຜົນໄດ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#: code:addons/stock_barcode/static/src/components/manual_barcode.xml:0
+msgid "Apply"
+msgstr "ນຳໃຊ້"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+msgid "Are you sure you want to cancel this operation?"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການຍົກເລີກການດຳເນີນການນີ້?"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+msgid "Backorder"
+msgstr "ລາຍການຄ້າງສົ່ງ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_backorder_confirmation
+msgid "Backorder Confirmation"
+msgstr "ການຢືນຢັນລາຍການຄ້າງສົ່ງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+#: model:ir.actions.client,name:stock_barcode.stock_barcode_action_main_menu
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_scrap__product_barcode
+#: model:ir.ui.menu,name:stock_barcode.stock_barcode_menu
+msgid "Barcode"
+msgstr "ບາໂຄດ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Barcode App"
+msgstr "ແອັບບາໂຄດ"
+
+#. module: stock_barcode
+#: model:ir.actions.client,name:stock_barcode.stock_barcode_inventory_client_action
+msgid "Barcode Inventory Client Action"
+msgstr "ການດຳເນີນການສາງບາໂຄດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/manual_barcode.js:0
+msgid "Barcode Manual Entry"
+msgstr "ປ້ອນບາໂຄດດ້ວຍຕົນເອງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+msgid "Barcode Nomenclature"
+msgstr "ລະບົບການຕັ້ງຊື່ບາໂຄດ"
+
+#. module: stock_barcode
+#: model:ir.actions.client,name:stock_barcode.stock_barcode_picking_client_action
+msgid "Barcode Picking Client Action"
+msgstr "ການດຳເນີນການເບີກສິນຄ້າດ້ວຍບາໂຄດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_scrap___barcode_scanned
+msgid "Barcode Scanned"
+msgstr "ສະແກນບາໂຄດແລ້ວ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Barcode Scanning"
+msgstr "ການສະແກນບາໂຄດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "Barcode scan is ambiguous with several model: %s. Use the most likely."
+msgstr ""
+"ການສະແກນບາໂຄດມີຄວາມກຳກວມລະຫວ່າງຫຼາຍຮູບແບບ: %s. ຈະໃຊ້ຮູບແບບທີ່ມີຄວາມເປັນໄປໄດ້ທີ່ສຸດ."
+
+#. module: stock_barcode
+#: model:product.template,name:stock_barcode.product_cable_management_box_2_product_template
+msgid "Cable Management Box"
+msgstr "ກ່ອງຈັດເກັບສາຍໄຟ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/manual_barcode.xml:0
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_barcode_cancel_operation
+msgid "Cancel Operation"
+msgstr "ຍົກເລີກການດຳເນີນການ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Cancel Transfer"
+msgstr "ຍົກເລີກການໂອນ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+msgid "Cancel operation"
+msgstr "ຍົກເລີກການດຳເນີນການ"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+msgid "Cancel this operation?"
+msgstr "ຍົກເລີກການດຳເນີນການນີ້ບໍ່?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_move_line__is_completed
+msgid "Check if the quantity done matches the demand"
+msgstr "ກວດສອບວ່າຈຳນວນທີ່ເຮັດແລ້ວ ກົງກັບຄວາມຕ້ອງການບໍ່"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Close"
+msgstr "ປິດ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການຕັ້ງຄ່າ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
+msgid "Configure Product Barcodes"
+msgstr "ຕັ້ງຄ່າບາໂຄດສິນຄ້າ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Confirm"
+msgstr "ຢືນຢັນ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_res_partner
+msgid "Contact"
+msgstr "ຜູ້ຕິດຕໍ່"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Counted Quantity"
+msgstr "ຈຳນວນທີ່ນັບໄດ້"
+
+#. module: stock_barcode
+#: model_terms:ir.actions.act_window,help:stock_barcode.stock_picking_action_kanban
+msgid "Create a new transfer"
+msgstr "ສ້າງລາຍການໂອນໃໝ່"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: stock_barcode
+#: model:product.template,name:stock_barcode.product_custom_cabinet_metric_product_template
+msgid "Customized Cabinet (Metric)"
+msgstr "ຕູ້ແບບກຳນົດເອງ (ເມຕຣິກ)"
+
+#. module: stock_barcode
+#: model:product.template,name:stock_barcode.product_custom_cabinet_usa_product_template
+msgid "Customized Cabinet (USA)"
+msgstr "ຕູ້ແບບກຳນົດເອງ (USA)"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Delete"
+msgstr "ລຶບ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__stock_barcode_demo_active
+msgid "Demo Data Active"
+msgstr "ຂໍ້ມູນຕົວຢ່າງກຳລັງໃຊ້ງານ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/line.xml:0
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__picking_location_dest_id
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Destination Location"
+msgstr "ສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Destination Package"
+msgstr "ແພັກເກດປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Destination location must be scanned"
+msgstr "ຕ້ອງສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Discard"
+msgstr "ຍົກເລີກ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.js:0
+msgid ""
+"Do you want to permanently remove this message?\n"
+"                    It won't appear anymore, so make sure you don't need the barcodes sheet or you have a copy."
+msgstr ""
+"ທ່ານຕ້ອງການລຶບຂໍ້ຄວາມນີ້ຖາວອນບໍ່?\n"
+"                    ມັນຈະບໍ່ສະແດງອີກ, ດັ່ງນັ້ນ ໃຫ້ແນ່ໃຈວ່າທ່ານບໍ່ຕ້ອງການແຜ່ນບາໂຄດແລ້ວ ຫຼື ທ່ານມີສຳ"
+"ເນົາໄວ້ແລ້ວ."
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_put_in_pack
+msgid "Does the picker have to put in a package the scanned products? If yes, at which rate?"
+msgstr "ຜູ້ເບີກສິນຄ້າຕ້ອງໃສ່ສິນຄ້າທີ່ສະແກນລົງໃນແພັກເກດບໍ່? ຖ້າແມ່ນ, ໃນລະດັບໃດ?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_scan_dest_location
+msgid "Does the picker have to scan the destination? If yes, at which rate?"
+msgstr "ຜູ້ເບີກສິນຄ້າຕ້ອງສະແກນປາຍທາງບໍ່? ຖ້າແມ່ນ, ໃນລະດັບໃດ?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
+msgid "Don't cancel"
+msgstr "ບໍ່ຕ້ອງຍົກເລີກ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.js:0
+msgid "Don't show this message again"
+msgstr "ບໍ່ຕ້ອງສະແດງຂໍ້ຄວາມນີ້ອີກ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+msgid "Done /"
+msgstr "ສຳເລັດ /"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Download"
+msgstr "ດາວໂຫຼດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__dummy_id
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__dummy_id
+msgid "Dummy"
+msgstr "ຂໍ້ມູນທົດລອງ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__empty_move_count
+msgid "Empty Move Count"
+msgstr "ຈຳນວນລາຍການໂອນທີ່ວ່າງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Final Validation"
+msgstr "ການຢືນຢັນຂັ້ນສຸດທ້າຍ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Following backorder was created:"
+msgstr "ລາຍການຄ້າງສົ່ງຕໍ່ໄປນີ້ໄດ້ຖືກສ້າງຂຶ້ນ:"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Following backorders were created:"
+msgstr "ລາຍການຄ້າງສົ່ງເຫຼົ່ານີ້ໄດ້ຖືກສ້າງຂຶ້ນ:"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_dest_location
+msgid "Force Destination Location scan?"
+msgstr "ບັງຄັບໃຫ້ສະແກນສະຖານທີ່ປາຍທາງບໍ່?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_tracking_number
+msgid "Force Lot/Serial scan?"
+msgstr "ບັງຄັບໃຫ້ສະແກນລັອດ/ຊີຣີບໍ່?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_product
+msgid "Force Product scan?"
+msgstr "ບັງຄັບໃຫ້ສະແກນສິນຄ້າບໍ່?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_source_location
+msgid "Force Source Location scan?"
+msgstr "ບັງຄັບໃຫ້ສະແກນສະຖານທີ່ຕົ້ນທາງບໍ່?"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_after_dest_location
+msgid "Force a destination on all products"
+msgstr "ບັງຄັບໃຫ້ລະບຸປາຍທາງໃນທຸກສິນຄ້າ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_all_product_packed
+msgid "Force all products to be packed"
+msgstr "ບັງຄັບໃຫ້ສິນຄ້າທັງໝົດຕ້ອງຖືກຫຸ້ມຫໍ່"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_put_in_pack
+msgid "Force put in pack?"
+msgstr "ບັງຄັບໃຫ້ໃສ່ໃນແພັກເກດບໍ່?"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "General"
+msgstr "ທົ່ວໄປ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__id
+msgid "ID"
+msgstr "ລະຫັດ"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+msgid "If the source location must be scanned, then the destination location must either be scanned after each product or not scanned at all."
+msgstr ""
+"ຖ້າຕ້ອງສະແກນສະຖານທີ່ຕົ້ນທາງ, ສະຖານທີ່ປາຍທາງຈະຕ້ອງຖືກສະແກນຫຼັງຈາກແຕ່ລະສິນຄ້າ ຫຼື ບໍ່ຕ້ອງສະແກນເລີຍ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+msgid "If you validate now, the remaining products will be added to a backorder."
+msgstr "ຖ້າທ່ານຢືນຢັນດຽວນີ້, ສິນຄ້າທີ່ເຫຼືອຈະຖືກເພີ່ມເຂົ້າໃນລາຍການຄ້າງສົ່ງ."
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_type_kanban
+msgid "In #{kanban_getcolorname(record.color.raw_value)}"
+msgstr "ໃນ #{kanban_getcolorname(record.color.raw_value)}"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.js:0
+msgid "Incomplete Transfer"
+msgstr "ການໂອນບໍ່ສຳເລັດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_move_line__product_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_scrap__product_barcode
+msgid "International Article Number used for product identification."
+msgstr "ໝາຍເລກບົດຄວາມສາກົນທີ່ໃຊ້ເພື່ອລະບຸຕົວຕົນສິນຄ້າ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Inventory Adjustment"
+msgstr "ການປັບປຸງສາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Inventory Adjustments"
+msgstr "ການປັບປຸງສາງ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_location
+msgid "Inventory Locations"
+msgstr "ສະຖານທີ່ສາງ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__is_completed
+msgid "Is Completed"
+msgstr "ສຳເລັດແລ້ວ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__write_uid
+msgid "Last Updated by"
+msgstr "ອັບເດດຫຼ້າສຸດໂດຍ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__write_date
+msgid "Last Updated on"
+msgstr "ອັບເດດຫຼ້າສຸດເມື່ອ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.js:0
+msgid "Leave it"
+msgstr "ປະໄວ້ຄືເກົ່າ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_scan_product
+msgid "Line's product must be scanned before the line can be edited"
+msgstr "ຕ້ອງສະແກນສິນຄ້າໃນລາຍການກ່ອນທີ່ຈະສາມາດແກ້ໄຂລາຍການໄດ້"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Location"
+msgstr "ສະຖານທີ່"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__location_processed
+msgid "Location Processed"
+msgstr "ສະຖານທີ່ຖືກປະມວນຜົນແລ້ວ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_lot
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Lot/Serial"
+msgstr "ລັອດ/ຊີຣີ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Mandatory Destination Location"
+msgstr "ບັງຄັບລະບຸສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_source_location__mandatory
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_tracking_number__mandatory
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Mandatory Scan"
+msgstr "ບັງຄັບໃຫ້ສະແກນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Mandatory Source Location"
+msgstr "ບັງຄັບລະບຸສະຖານທີ່ຕົ້ນທາງ"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__no
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__no
+msgid "No"
+msgstr "ບໍ່"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+msgid "No %(picking_type)s ready for this %(barcode_type)s"
+msgstr "ບໍ່ມີ %(picking_type)s ທີ່ພ້ອມສຳລັບ %(barcode_type)s ນີ້"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_source_location__no
+msgid "No Scan"
+msgstr "ບໍ່ມີການສະແກນ"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+msgid "No internal operation type. Please configure one in warehouse settings."
+msgstr "ບໍ່ມີປະເພດການດຳເນີນການພາຍໃນ. ກະລຸນາຕັ້ງຄ່າໃນການຕັ້ງຄ່າສາງ."
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+msgid "No picking or location or product corresponding to barcode %(barcode)s"
+msgstr "ບໍ່ພົບລາຍການໂອນ, ສະຖານທີ່ ຫຼື ສິນຄ້າ ທີ່ກົງກັບບາໂຄດ %(barcode)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/controllers/stock_barcode.py:0
+msgid "No picking or product corresponding to barcode %(barcode)s"
+msgstr "ບໍ່ພົບລາຍການໂອນ ຫຼື ສິນຄ້າ ທີ່ກົງກັບບາໂຄດ %(barcode)s"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+msgid "No product or package found for barcode %s"
+msgstr "ບໍ່ພົບສິນຄ້າ ຫຼື ແພັກເກດ ສຳລັບບາໂຄດ %s"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_nomenclature_id
+msgid "Nomenclature"
+msgstr "ລະບົບການຕັ້ງຊື່"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Not the expected scan"
+msgstr "ບໍ່ແມ່ນການສະແກນທີ່ຄາດໄວ້"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.picking_view_kanban_inherit_barcode
+msgid "Open picking"
+msgstr "ເປີດລາຍການໂອນ"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+#: model:ir.actions.act_window,name:stock_barcode.open_picking
+msgid "Open picking form"
+msgstr "ເປີດຟອມລາຍການໂອນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+#: model:ir.actions.act_window,name:stock_barcode.stock_picking_action_kanban
+#: model:ir.actions.act_window,name:stock_barcode.stock_picking_type_action_kanban
+msgid "Operations"
+msgstr "ການດຳເນີນການ"
+
+#. module: stock_barcode
+#: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_tracking_number__optional
+msgid "Optional Scan"
+msgstr "ການສະແກນແບບເລືອກໄດ້"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Owner"
+msgstr "ເຈົ້າຂອງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Package"
+msgstr "ແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Package type %s was correctly applied to the package %s"
+msgstr "ປະເພດແພັກເກດ %s ໄດ້ຖືກນຳໃຊ້ຢ່າງຖືກຕ້ອງກັບແພັກເກດ %s"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_quant_package
+msgid "Packages"
+msgstr "ແພັກເກດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_packaging_id
+msgid "Packaging"
+msgstr "ການຫຸ້ມຫໍ່"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_packaging_uom_qty
+msgid "Packaging Quantity"
+msgstr "ຈຳນວນການຫຸ້ມຫໍ່"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__partial_move_count
+msgid "Partial Move Count"
+msgstr "ຈຳນວນລາຍການໂອນບາງສ່ວນ"
+
+#. module: stock_barcode
+#: model:ir.actions.act_window,name:stock_barcode.stock_picking_action_form
+msgid "Picking"
+msgstr "ການເບີກຈ່າຍ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
+msgid "Picking Details"
+msgstr "ລາຍລະອຽດການເບີກຈ່າຍ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_picking_type
+msgid "Picking Type"
+msgstr "ປະເພດການເບີກຈ່າຍ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Please scan destination location for %s before scanning other product"
+msgstr "ກະລຸນາສະແກນສະຖານທີ່ປາຍທາງສຳລັບ %s ກ່ອນທີ່ຈະສະແກນສິນຄ້າອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.js:0
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.js:0
+#: code:addons/stock_barcode/static/src/main_menu.js:0
+msgid "Please, Scan again!"
+msgstr "ກະລຸນາສະແກນອີກຄັ້ງ!"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Press Validate or scan another product"
+msgstr "ກົດຢືນຢັນ ຫຼື ສະແກນສິນຄ້າອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Print Barcodes PDF"
+msgstr "ພິມບາໂຄດເປັນ PDF"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Print Delivery Slip"
+msgstr "ພິມໃບສົ່ງສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Print Inventory"
+msgstr "ພິມລາຍການສາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Print Packages"
+msgstr "ພິມແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Print Picking Operations"
+msgstr "ພິມການດຳເນີນການເບີກສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Product"
+msgstr "ສິນຄ້າ"
+
+#. module: stock_barcode
+#: model:ir.actions.act_window,name:stock_barcode.product_action_barcodes
+#: model_terms:ir.ui.view,arch_db:stock_barcode.product_view_list_barcodes
+msgid "Product Barcodes"
+msgstr "ບາໂຄດສິນຄ້າ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "ການເຄື່ອນໄຫວສິນຄ້າ (ລາຍການເຄື່ອນໄຫວສາງ)"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_product_packaging
+msgid "Product Packaging"
+msgstr "ການຫຸ້ມຫໍ່ສິນຄ້າ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_stock_quant_ids
+msgid "Product Stock Quant"
+msgstr "ຈຳນວນສິນຄ້າໃນສາງ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_uom_uom
+msgid "Product Unit of Measure"
+msgstr "ຫົວໜ່ວຍວັດແທກສິນຄ້າ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_product_product
+msgid "Product Variant"
+msgstr "ລຸ້ນສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Put In Pack"
+msgstr "ໃສ່ໃນແພັກເກດ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+msgid "Put in Pack"
+msgstr "ໃສ່ໃນແພັກເກດ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Quantity"
+msgstr "ຈຳນວນ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban
+msgid "Quantity Done"
+msgstr "ຈຳນວນທີ່ເຮັດແລ້ວ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_move_line__product_packaging_uom_qty
+msgid "Quantity of the Packaging in the UoM of the Stock Move Line."
+msgstr "ຈຳນວນຂອງການຫຸ້ມຫໍ່ໃນຫົວໜ່ວຍວັດແທກຂອງລາຍການເຄື່ອນໄຫວສາງ."
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_quant
+msgid "Quants"
+msgstr "ຈຳນວນໃນສາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.js:0
+msgid "Remove it"
+msgstr "ເອົາອອກ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Scan a"
+msgstr "ສະແກນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scan a location"
+msgstr "ສະແກນສະຖານທີ່"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a lot number"
+msgstr "ສະແກນເລກລັອດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a lot number or a packages then the destination location"
+msgstr "ສະແກນເລກລັອດ ຫຼື ແພັກເກດ ຈາກນັ້ນສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a lot number then the destination location"
+msgstr "ສະແກນເລກລັອດ ຈາກນັ້ນສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a package"
+msgstr "ສະແກນແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a package or put in pack"
+msgstr "ສະແກນແພັກເກດ ຫຼື ໃສ່ໃນແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a package or the destination location"
+msgstr "ສະແກນແພັກເກດ ຫຼື ສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a package, the destination location or another product"
+msgstr "ສະແກນແພັກເກດ, ສະຖານທີ່ປາຍທາງ ຫຼື ສິນຄ້າອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scan a product"
+msgstr "ສະແກນສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product before scanning a tracking number"
+msgstr "ສະແກນສິນຄ້າກ່ອນທີ່ຈະສະແກນເລກຕິດຕາມ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product from %s"
+msgstr "ສະແກນສິນຄ້າຈາກ %s"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scan a product in %s or scan another location"
+msgstr "ສະແກນສິນຄ້າໃນ %s ຫຼື ສະແກນສະຖານທີ່ອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product or a package"
+msgstr "ສະແກນສິນຄ້າ ຫຼື ແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-python
+#: code:addons/stock_barcode/models/stock_picking.py:0
+msgid "Scan a product or a package to filter the transfers."
+msgstr "ສະແກນສິນຄ້າ ຫຼື ແພັກເກດ ເພື່ອຄັດຕອງລາຍການໂອນ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product or another package"
+msgstr "ສະແກນສິນຄ້າ ຫຼື ແພັກເກດອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product or the destination location."
+msgstr "ສະແກນສິນຄ້າ ຫຼື ສະຖານທີ່ປາຍທາງ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product then the destination location"
+msgstr "ສະແກນສິນຄ້າ ຈາກນັ້ນສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product, a package or the destination location"
+msgstr "ສະແກນສິນຄ້າ, ແພັກເກດ ຫຼື ສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a product, a package or the destination location."
+msgstr "ສະແກນສິນຄ້າ, ແພັກເກດ ຫຼື ສະຖານທີ່ປາຍທາງ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number"
+msgstr "ສະແກນເລກຊີຣີ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number or a package"
+msgstr "ສະແກນເລກຊີຣີ ຫຼື ແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number or a package then the destination location"
+msgstr "ສະແກນເລກຊີຣີ ຫຼື ແພັກເກດ ຈາກນັ້ນສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan a serial number then the destination location"
+msgstr "ສະແກນເລກຊີຣີ ຈາກນັ້ນສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.xml:0
+msgid "Scan a transfer or a product to filter your records"
+msgstr "ສະແກນລາຍການໂອນ ຫຼື ສິນຄ້າ ເພື່ອຄັດຕອງຂໍ້ມູນຂອງທ່ານ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/kanban/stock_barcode_kanban_renderer.xml:0
+msgid "Scan a transfer, a product or a package to filter your records"
+msgstr "ສະແກນລາຍການໂອນ, ສິນຄ້າ ຫຼື ແພັກເກດ ເພື່ອຄັດຕອງຂໍ້ມູນຂອງທ່ານ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Scan an"
+msgstr "ສະແກນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan another serial number"
+msgstr "ສະແກນເລກຊີຣີອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scan lot numbers for product %s to change their quantity"
+msgstr "ສະແກນເລກລັອດສຳລັບສິນຄ້າ %s ເພື່ອປ່ຽນຈຳນວນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan more lot numbers"
+msgstr "ສະແກນເລກລັອດເພີ່ມເຕີມ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan more lot numbers or a package"
+msgstr "ສະແກນເລກລັອດ ຫຼື ແພັກເກດ ເພີ່ມເຕີມ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scan more products in %s or scan another location"
+msgstr "ສະແກນສິນຄ້າເພີ່ມເຕີມໃນ %s ຫຼື ສະແກນສະຖານທີ່ອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan more products or a package"
+msgstr "ສະແກນສິນຄ້າ ຫຼື ແພັກເກດ ເພີ່ມເຕີມ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan more products, or scan a new source location"
+msgstr "ສະແກນສິນຄ້າເພີ່ມເຕີມ ຫຼື ສະແກນສະຖານທີ່ຕົ້ນທາງໃໝ່"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scan serial numbers for product %s to change their quantity"
+msgstr "ສະແກນເລກຊີຣີສຳລັບສິນຄ້າ %s ເພື່ອປ່ຽນຈຳນວນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the destination location"
+msgstr "ສະແກນສະຖານທີ່ປາຍທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the package %s"
+msgstr "ສະແກນແພັກເກດ %s"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the source location"
+msgstr "ສະແກນສະຖານທີ່ຕົ້ນທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scan the source location or a package"
+msgstr "ສະແກນສະຖານທີ່ຕົ້ນທາງ ຫຼື ແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "Scanned product %s is not reserved for this transfer. Are you sure you want to add it?"
+msgstr ""
+"ສິນຄ້າ %s ທີ່ສະແກນ ບໍ່ໄດ້ຖືກຈອງໄວ້ສຳລັບລາຍການໂອນນີ້. ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການເພີ່ມມັນ?"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "Scanned product [%s] %s is not reserved for this transfer. Are you sure you want to add it?"
+msgstr ""
+"ສິນຄ້າ [%s] %s ທີ່ສະແກນ ບໍ່ໄດ້ຖືກຈອງໄວ້ສຳລັບລາຍການໂອນນີ້. ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການເພີ່ມມັນ?"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "Scanned quantity uses %s as Unit of Measure, but this UoM is not compatible with the line's one (%s)."
+msgstr ""
+"ຈຳນວນທີ່ສະແກນໃຊ້ %s ເປັນຫົວໜ່ວຍວັດແທກ, ແຕ່ຫົວໜ່ວຍນີ້ບໍ່ສາມາດໃຊ້ຮ່ວມກັບຫົວໜ່ວຍໃນລາຍການ (%s) ໄດ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Scanned quantity uses %s as Unit of Measure, but this UoM is not compatible with the product's one (%s)."
+msgstr ""
+"ຈຳນວນທີ່ສະແກນໃຊ້ %s ເປັນຫົວໜ່ວຍວັດແທກ, ແຕ່ຫົວໜ່ວຍນີ້ບໍ່ສາມາດໃຊ້ຮ່ວມກັບຫົວໜ່ວຍຂອງສິນຄ້າ (%s) ໄດ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: model:ir.model,name:stock_barcode.model_stock_scrap
+msgid "Scrap"
+msgstr "ສິນຄ້າເສຍຫາຍ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Select a Product"
+msgstr "ເລືອກສິນຄ້າ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
+msgid "Serial/Lot Number"
+msgstr "ເລກຊີຣີ/ເລກລັອດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__show_barcode_nomenclature
+msgid "Show Barcode Nomenclature"
+msgstr "ສະແດງລະບົບການຕັ້ງຊື່ບາໂຄດ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__show_barcode_validation
+msgid "Show Barcode Validation"
+msgstr "ສະແດງການຢືນຢັນບາໂຄດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/line.xml:0
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__picking_location_id
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Source Location"
+msgstr "ສະຖານທີ່ຕົ້ນທາງ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+msgid "Source Package"
+msgstr "ແພັກເກດຕົ້ນທາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+msgid "Stay on transfer"
+msgstr "ຢູ່ໜ້າການໂອນຕໍ່"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_package_type
+msgid "Stock package type"
+msgstr "ປະເພດແພັກເກດສາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "Tap to scan"
+msgstr "ແຕະເພື່ອສະແກນ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__show_barcode_validation
+msgid "Technical field used to compute whether the \"Final Validation\" group should be displayed, solving combined groups/invisible complexity."
+msgstr ""
+"ຟິວຂໍ້ມູນທາງເຕັກນິກທີ່ໃຊ້ເພື່ອຄິດໄລ່ວ່າຄວນສະແດງກຸ່ມ \"ການກວດສອບຄັ້ງສຸດທ້າຍ\" ຫຼື ບໍ່, ເພື່ອແກ້ໄຂຄວາມຊັບຊ້ອ"
+"ນຂອງການຮວມກຸ່ມ ແລະ ການຊ່ອນຂໍ້ມູນ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "The inventory adjustment has been validated"
+msgstr "ການປັບປຸງສາງໄດ້ຖືກຢືນຢັນແລ້ວ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "The scanned serial number is already used."
+msgstr "ເລກຊີຣີທີ່ສະແກນຖືກໃຊ້ໄປແລ້ວ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "The transfer has been cancelled"
+msgstr "ລາຍການໂອນຖືກຍົກເລີກແລ້ວ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "The transfer has been validated"
+msgstr "ລາຍການໂອນຖືກຢືນຢັນແລ້ວ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "There is nothing to apply in this page."
+msgstr "ບໍ່ມີຫຍັງທີ່ຈະນຳໃຊ້ໃນໜ້ານີ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "There is nothing to print in this page."
+msgstr "ບໍ່ມີຫຍັງທີ່ຈະພິມໃນໜ້ານີ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "This package is already scanned."
+msgstr "ແພັກເກດນີ້ຖືກສະແກນແລ້ວ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "This picking is already done"
+msgstr "ລາຍການເບີກສິນຄ້ານີ້ສຳເລັດແລ້ວ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "This picking is cancelled"
+msgstr "ລາຍການເບີກສິນຄ້ານີ້ຖືກຍົກເລີກແລ້ວ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "This serial number is already used."
+msgstr "ເລກຊີຣີນີ້ຖືກໃຊ້ໄປແລ້ວ."
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_type_kanban
+msgid "To Process"
+msgstr "ທີ່ຕ້ອງດຳເນີນການ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+msgid "To do"
+msgstr "ສິ່ງທີ່ຈະຕ້ອງເຮັດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "To use packages, enable 'Packages' in the settings"
+msgstr "ເພື່ອໃຊ້ແພັກເກດ, ໃຫ້ເປີດໃຊ້ 'ແພັກເກດ' ໃນການຕັ້ງຄ່າ"
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_picking
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__picking_id
+msgid "Transfer"
+msgstr "ການໂອນ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__picking_name
+msgid "Transfer Name"
+msgstr "ຊື່ລາຍການໂອນ"
+
+#. module: stock_barcode
+#: model_terms:ir.actions.act_window,help:stock_barcode.stock_picking_action_kanban
+msgid "Transfers allow you to move products from one location to another."
+msgstr "ການໂອນຊ່ວຍໃຫ້ທ່ານສາມາດຍ້າຍສິນຄ້າຈາກສະຖານທີ່ໜຶ່ງໄປຍັງອີກສະຖານທີ່ໜຶ່ງໄດ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/manual_barcode.xml:0
+msgid "Type barcode you want to scan here"
+msgstr "ພິມບາໂຄດທີ່ທ່ານຕ້ອງການສະແກນທີ່ນີ້"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
+#: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode_kanban
+msgid "Unit of Measure"
+msgstr "ຫົວໜ່ວຍວັດແທກ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_stock_quant_tree
+msgid "UoM"
+msgstr "ຫົວໜ່ວຍ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/manual_barcode.xml:0
+msgid "Use camera to scan"
+msgstr "ໃຊ້ກ້ອງຖ່າຍຮູບເພື່ອສະແກນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
+#: code:addons/stock_barcode/static/src/components/main.xml:0
+msgid "Validate"
+msgstr "ຢືນຢັນ"
+
+#. module: stock_barcode
+#: model:ir.model.fields,help:stock_barcode.field_stock_scrap___barcode_scanned
+msgid "Value of the last barcode scanned."
+msgstr "ຄ່າຂອງບາໂຄດຫຼ້າສຸດທີ່ສະແກນ."
+
+#. module: stock_barcode
+#: model:ir.model,name:stock_barcode.model_stock_warehouse
+msgid "Warehouse"
+msgstr "ສາງສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "We have created a few demo data with barcodes for you to explore the features. Print the"
+msgstr "ພວກເຮົາໄດ້ສ້າງຂໍ້ມູນຕົວຢ່າງບາງຢ່າງພ້ອມບາໂຄດໃຫ້ທ່ານໄດ້ທົດລອງໃຊ້ງານ. ພິມ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+#: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
+msgid "Wrong Unit of Measure"
+msgstr "ຫົວໜ່ວຍວັດແທກບໍ່ຖືກຕ້ອງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "You are expected to scan one or more products or a package available at the picking location"
+msgstr ""
+"ທ່ານຄວນສະແກນສິນຄ້າໜຶ່ງລາຍການ ຫຼື ຫຼາຍກວ່າ ຫຼື ແພັກເກດທີ່ມີຢູ່ໃນສະຖານທີ່ເບີກສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_model.js:0
+msgid "You are expected to scan one or more products."
+msgstr "ທ່ານຄວນສະແກນສິນຄ້າໜຶ່ງລາຍການ ຫຼື ຫຼາຍກວ່າ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "You are supposed to scan %s or another source location"
+msgstr "ທ່ານຄວນສະແກນ %s ຫຼື ສະຖານທີ່ຕົ້ນທາງອື່ນ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "You can't apply a package type. First, scan product or select a line"
+msgstr "ທ່ານບໍ່ສາມາດນຳໃຊ້ປະເພດແພັກເກດໄດ້. ກະລຸນາສະແກນສິນຄ້າ ຫຼື ເລືອກລາຍການກ່ອນ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
+msgid "You have processed less products than the initial demand:"
+msgstr "ທ່ານໄດ້ດຳເນີນການສິນຄ້າໜ້ອຍກວ່າຄວາມຕ້ອງການໃນເບື້ອງຕົ້ນ:"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "You must scan a package or put in pack"
+msgstr "ທ່ານຕ້ອງສະແກນແພັກເກດ ຫຼື ໃສ່ໃນແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
+msgid "You must scan a product"
+msgstr "ທ່ານຕ້ອງສະແກນສິນຄ້າ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "commands for Inventory"
+msgstr "ຄຳສັ່ງສຳລັບສາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "document"
+msgstr "ເອກະສານ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "location"
+msgstr "ສະຖານທີ່"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/widgets/digipad.xml:0
+msgid "o_digipad_button btn d-flex justify-content-center align-items-center border w-100 py-2"
+msgstr ""
+"o_digipad_button btn d-flex justify-content-center align-items-center border "
+"w-100 py-2"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "operation type"
+msgstr "ປະເພດການດຳເນີນການ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "package"
+msgstr "ແພັກເກດ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "product"
+msgstr "ສິນຄ້າ"
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
+msgid "products were not processed at all."
+msgstr "ສິນຄ້າບໍ່ໄດ້ຖືກປະມວນຜົນເລີຍ."
+
+#. module: stock_barcode
+#: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
+msgid "products were partially processed."
+msgstr "ສິນຄ້າຖືກປະມວນຜົນບາງສ່ວນ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "stock barcodes sheet"
+msgstr "ແຜ່ນບາໂຄດສາງ"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "to check out what this module can do! You can also print the barcode"
+msgstr "ເພື່ອເບິ່ງວ່າໂມດູນນີ້ສາມາດເຮັດຫຍັງໄດ້ແດ່! ທ່ານຍັງສາມາດພິມບາໂຄດໄດ້"
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "to create a new transfer from this location."
+msgstr "ເພື່ອສ້າງລາຍການໂອນໃໝ່ຈາກສະຖານທີ່ນີ້."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "to create a new transfer."
+msgstr "ເພື່ອສ້າງລາຍການໂອນໃໝ່."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "to know its content."
+msgstr "ເພື່ອຮູ້ເນື້ອໃນຂອງມັນ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "to open it."
+msgstr "ເພື່ອເປີດມັນ."
+
+#. module: stock_barcode
+#. odoo-javascript
+#: code:addons/stock_barcode/static/src/main_menu.xml:0
+msgid "to show its location and quantity."
+msgstr "ເພື່ອສະແດງສະຖານທີ່ ແລະ ຈຳນວນຂອງມັນ."

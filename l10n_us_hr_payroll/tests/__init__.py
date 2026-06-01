@@ -1,0 +1,4 @@
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+from . import test_hourly_rate
+from . import test_l10n_us_w2

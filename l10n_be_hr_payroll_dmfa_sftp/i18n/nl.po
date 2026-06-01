@@ -1,0 +1,4507 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * l10n_be_hr_payroll_dmfa_sftp
+#
+# Translators:
+# Erwin van der Ploeg <erwin@odooexperts.nl>, 2025
+# Wil Odoo, 2025
+# Tiffany Chang, 2025
+# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Bren Driesen <brdri@odoo.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 19:01+0000\n"
+"PO-Revision-Date: 2026-05-23 18:21+0000\n"
+"Last-Translator: Bren Driesen <brdri@odoo.com>\n"
+"Language-Team: Dutch <https://translate.odoo.com/projects/odoo-18-l10n/"
+"l10n_be_hr_payroll_dmfa_sftp/nl/>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "- Anomaly Class: %s"
+msgstr "- Anomalieklasse: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "- Employee: %(employee_name)s (NISS: %(niss)s)"
+msgstr "- Werknemer: %(employee_name)s (INSZ: %(niss)s)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "- NISS: %s"
+msgstr "- INSZ: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "- Tag Name: %s"
+msgstr "- Tagnaam: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "- Value: %s"
+msgstr "- Waarde: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "--- Related Info ---"
+msgstr "--- Gerelateerde informatie ---"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_dmfa_view_form
+msgid ""
+"<span invisible=\"onss_declaration_count == 1\" class=\"o_stat_text\">ONSS "
+"Declaration</span>\n"
+"                        <span invisible=\"onss_declaration_count &gt; 1\" "
+"class=\"o_stat_text\">ONSS Declarations</span>"
+msgstr ""
+"<span invisible=\"onss_declaration_count == 1\" class=\"o_stat_text\">RSZ-"
+"aangifte</span>\n"
+"                                <span invisible=\"onss_declaration_count "
+"&gt; 1\" class=\"o_stat_text\">RSZ-aangiften</span>"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_declaration_view_form
+msgid ""
+"<span invisible=\"onss_file_count == 1\" class=\"o_stat_text\">ONSS File</"
+"span>\n"
+"                                <span invisible=\"onss_file_count &gt; 1\" "
+"class=\"o_stat_text\">ONSS Files</span>"
+msgstr ""
+"<span invisible=\"onss_file_count == 1\" class=\"o_stat_text\">RSZ-bestand</"
+"span>\n"
+"                                <span invisible=\"onss_file_count &gt; 1\" "
+"class=\"o_stat_text\">eer RSZ-bestanden</span>"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "=== System Correction ==="
+msgstr "=== Systeemcorrectie ==="
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"A file or message with an R environment was deposited in a directory other "
+"than IN or in a queue not reserved for production, respectively;"
+msgstr ""
+"Een bestand of een bericht met omgeving R werd respectievelijk gedeponeerd "
+"in een ander repertorium dan IN of in een wachtrij die niet voorbehouden is "
+"voor de productie;"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"A file or message with an S environment was deposited in a directory other "
+"than INTEST-S or in a queue not reserved for testing"
+msgstr ""
+"Een bestand of een bericht met een omgeving S werd gedeponeerd in een ander "
+"repertorium dan INTEST-S ofwel in een wachtrij die niet voorbehouden is voor "
+"de testen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"A file or message with an T environment was deposited in a directory other "
+"than INTEST or in a queue not reserved for testing, respectively."
+msgstr ""
+"Een bestand of een bericht met omgeving T werd respectievelijk gedeponeerd "
+"in een ander repertorium dan INTEST of in een wachtrij die niet voorbehouden "
+"is voor de testen."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"A file with the same name has already been sent previously. A message with "
+"the same RFH2 has already been sent previously."
+msgstr ""
+"Een bestand met dezelfde naam werd reeds eerder doorgestuurd. Een bericht "
+"met dezelfde RFH2 werd reeds eerder doorgestuurd."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"A notification has already been recorded for the declaration with this "
+"ticket number"
+msgstr ""
+"Er werd reeds een notificatie geregistreerd voor de aangifte met dit "
+"ticketnummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "A valid notification has already been recorded for this declaration"
+msgstr "Er werd reeds een geldige notificatie geregistreerd voor deze aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"A valid response has already been received or an impermissible response has "
+"been received for the form to which this document refers"
+msgstr ""
+"Er werd reeds een geldig antwoord ontvangen of een niet-toegelaten antwoord "
+"ontvangen voor het formulier waarnaar dit document verwijst"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Absence of Capelo block in the DmfA(PPL) for this worker and this reporting "
+"employer"
+msgstr ""
+"Capelo-blok ontbreekt in de DmfA(PPL) voor deze werknemer en deze aangevende "
+"werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Absence of declaration or inconsistency with the record attribute"
+msgstr "Geen aangifte aanwezig of incoherentie met het attribuut record"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__acrf
+msgid "Acknowledgment Receipt"
+msgstr "Ontvangstbevestiging"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Action            : %s"
+msgstr "Actie            : %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_needaction
+msgid "Action Needed"
+msgstr "Actie gevraagd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Action authorized only for ONSS"
+msgstr "Actie alleen toegelaten voor de RSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Action not authorized"
+msgstr "Actie niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_ids
+msgid "Activities"
+msgstr "Activiteiten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activiteit uitzondering decoratie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_state
+msgid "Activity State"
+msgstr "Activiteitsfase"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activiteitensoort icoon"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Age to verify"
+msgstr "Leeftijd te verifiëren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Agreement date later than the start date of employment"
+msgstr "Datum van het akkoord groter dan begindatum van de tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Already processed or declared"
+msgstr "Reeds verwerkt of aangegeven"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Already responded to by a declaration made on your own initiative"
+msgstr "Reeds beantwoord via een aangifte op eigen initiatief"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Amount to be verified"
+msgstr "Bedrag te verifiëren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Amount too high"
+msgstr "Bedrag te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Amount too low"
+msgstr "Bedrag te laag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Anomaly (%(count)s/%(total)s) - Code: %(error_code)s"
+msgstr "Anomalie (%(count)s/%(total)s) - Code: %(error_code)s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Anomaly related to deduction rights verification"
+msgstr "Anomalie met betrekking tot verificatie van aftrekrechten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Another employer has submitted at least one DmfA(PPL) after 01/01/2011"
+msgstr ""
+"Een andere werkgever heeft minstens één DmfA(PPL) doorgestuurd na 01/01/2011"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Applicable if the conditions are met"
+msgstr "Van toepassing indien aan de voorwaarden is voldaan"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Application canceled by the social security transfer point"
+msgstr "Aanvraag geannuleerd door het transferpunt van de sociale zekerheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Auto-validation not requested"
+msgstr "Automatische validatie niet aangevraagd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Average income too low"
+msgstr "Gemiddeld loon te laag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Batch submission not authorized for this type of historical certificate"
+msgstr "Verzending in batch niet toegelaten voor dit type historisch attest"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Benefits to be verified"
+msgstr "Prestaties te verifiëren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Block Name        : %s"
+msgstr "Bloknaam        : %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Block not applicable"
+msgstr "Blok niet van toepassing"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Blocking anomaly"
+msgstr "Blokkerende anomalie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Calculated amount different from the declared amount"
+msgstr "Berekend bedrag verschilt van het aangegeven bedrag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Calculated total different from declared total"
+msgstr "Berekend totaal verschilt van aangegeven totaal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Calculation basis for the special contribution for the Corona bonus or "
+"purchasing power bonus too high"
+msgstr ""
+"Berekeningsbasis voor de speciale bijdrage voor de coronabonus of "
+"koopkrachtbonus te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Calculation error (fixed rates)"
+msgstr "Berekeningsfout (forfaits)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__td
+msgid "Cancel File"
+msgstr "Bestand annuleren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__cdhg
+msgid "Capelo Historical Data"
+msgstr "Historiek Capelo"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__loic
+msgid "Career Break/Credit-Time/Leave Request"
+msgstr "Loopbaanonderbreking/Tijdskrediet/verlofaanvraag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Career Element block not present for this employer"
+msgstr "Blok Loopbaanelement niet aanwezig voor deze werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__bewl
+msgid "Checklist of Sent Corrective Notices (BEWA)"
+msgstr "Controlelijst verstuurde wijzigende berichten (BEWA)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__environment__t
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__environment__t
+msgid "Circuit Test"
+msgstr "Testcircuit"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model,name:l10n_be_hr_payroll_dmfa_sftp.model_res_company
+msgid "Companies"
+msgstr "Bedrijven"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__company_id
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__company_id
+msgid "Company"
+msgstr "Bedrijf"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Compensation to be declared in the quarter in which the base salary was "
+"declared"
+msgstr ""
+"Vergoeding aan te geven in het kwartaal waarin het basisloon aangegeven wordt"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__co
+msgid "Compressed File (Received)"
+msgstr "Gecomprimeerd bestand (ontvangen)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model,name:l10n_be_hr_payroll_dmfa_sftp.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuratie-instellingen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Connection Test Succeeded. Files in remote root: %s"
+msgstr "Verbindingstest geslaagd. Bestanden in externe root: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Continuing career with the same employer"
+msgstr "Doorlopende loopbaan bij dezelfde werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Contribution required according to current conditions"
+msgstr "Bijdrage vereist volgens de geldende voorwaarden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Contribution type - combination not allowed"
+msgstr "Type bijdrage - niet-toegelaten combinatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Conversion to PDF not possible"
+msgstr "Conversie naar pdf niet mogelijk"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Corrected Value   : %s"
+msgstr "Gecorrigeerde waarde   : %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Correction Type   : %s"
+msgstr "Correctietype   : %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__bewa
+msgid "Corrective Notices"
+msgstr "Wijzigende berichten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__create_uid
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__create_date
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__creation_date
+msgid "Creation Date"
+msgstr "Aanmaakdatum"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Cumulative deductions for non-admitted occupation"
+msgstr "Cumulatieve vermindering voor niet-toegelaten tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Cumulative deductions for non-admitted worker line"
+msgstr "Niet toegelaten cumul verminderingen werknemerslijn"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "DIMONA NISS Mutation declaration (old: %(old_niss)s, new %(new_niss)s)"
+msgstr "DIMONA-aangifte wijziging INSZ (old: %(old_niss)s, new %(new_niss)s)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "DIMONA declaration done (Starting %(start)s, Ending %(end)s)"
+msgstr "DIMONA-aangifte klaar (Begin %(start)s, Einde %(end)s)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "DIMONA declaration opened (Starting %(start)s, Ending %(end)s)"
+msgstr "DIMONA-aangifte geopend (Begin %(start)s, Einde %(end)s)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model,name:l10n_be_hr_payroll_dmfa_sftp.model_l10n_be_dmfa
+msgid "DMFA xml report"
+msgstr "DMFA xml report"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__zima
+msgid "DRS declaration 'Allowances'"
+msgstr "ASR-aangifte 'Uitkeringen'"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__wech
+msgid "DRS declaration 'Unemployment'"
+msgstr "ASR-aangifte 'Werkloosheid'"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__aoat
+msgid "DRS declaration 'Work Accidents'"
+msgstr "ASR-aangifte 'Arbeidsongevallen'"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Date not possible"
+msgstr "Datum onmogelijk"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Date of taking up a new position after the end date of the salary scale"
+msgstr "Datum van ranginneming valt na de einddatum van de baremieke wedde"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "DeclNaturalPersonPID - Discrepancy with DmfA DB"
+msgstr "DeclNaturalPersonPID - Discordantie met de DB DmfA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_search
+msgid "Declaration"
+msgstr "Aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__fo
+msgid "Declaration File (Received)"
+msgstr "Aangiftebestand (ontvangen)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__fi
+msgid "Declaration File (Sent)"
+msgstr "Aangiftebestand (verzonden)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_search
+msgid "Declaration Files"
+msgstr "Aangiftebestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__environment__s
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__environment__s
+msgid "Declaration Test"
+msgstr "Aangiftetest"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__declaration_type
+msgid "Declaration Type"
+msgstr "Type verklaring"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Declaration for another employer employing the worker on 12/31/2010 "
+"prohibited"
+msgstr ""
+"Aangifte verboden voor een andere werkgever die de werknemer tewerkstelt op "
+"31/12/20"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Declaration posted successfully to %(folder)s"
+msgstr "Aangifte succesvol verzonden naar %(folder)s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Declaration rejected - blocking anomalies"
+msgstr "Aangifte afgewezen - blokkerende anomalieën"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Declaration rejected - too many anomalies"
+msgstr "Aangifte afgewezen - te veel anomalieën"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Declaration type temporarily prohibited for the selected period"
+msgstr "Type aangifte tijdelijk verboden voor de geselecteerde periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Deduction code not applicable for the transitional measure"
+msgstr "Verminderingscode niet toepasbaar voor overgangbepaling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Deduction code not present or incompatible"
+msgstr "Verminderingscode ontbreekt of is niet compatibel"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Deduction not applicable for this level"
+msgstr "Vermindering niet van toepassing voor dit niveau"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Difference between ONSS deduction type and authentic source"
+msgstr "Verschil type vermindering RSZ / RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Difference between ONSS validity period and authentic source"
+msgstr "Verschil periode geldigheid RSZ / RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Difference between employer and authentic source"
+msgstr "Verschil werkgever RSZ / RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Difference in employment contract type compared to the previous career "
+"element"
+msgstr "Verschil met type arbeidsovereenkomst in het voorgaande loopbaanelement"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Difference in hours in DmfA - scheduled hours in Dimona with reduced "
+"contributions"
+msgstr ""
+"Verschil in uren in DmfA - geplande uren in Dimona met verminderde bijdragen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Difference with the data declared in DmfA(PPL)"
+msgstr "Verschil met de gegevens aangegeven in DmfA(PPL)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dimn
+msgid "Dimona declaration"
+msgstr "Dimona-aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Dimona period already closed"
+msgstr "Reeds afgesloten Dimonaperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Dimona period or daily record already canceled"
+msgstr "Reeds geannuleerde Dimonaperiode of dagelijkse registratie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Dimona period with blocking anomaly"
+msgstr "Dimonaperiode met blokkerende anomalie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Directory not found on server: %s"
+msgstr "Repertorium niet gevonden op server: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Discrepancy with DmfA DB"
+msgstr "Discordantie met de DB DmfA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__display_name
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dmdb
+msgid "DmfA Consultation Response"
+msgstr "Antwoord op DmfA-raadpleging"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/hr_dmfa.py:0
+msgid "DmfA Declaration type should be via batch"
+msgstr "DmfA-aangiftetype moet in batch gebeuren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dmwa
+msgid "DmfA Modification"
+msgstr "DmfA-wijziging"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dmno
+msgid "DmfA Modification Notification"
+msgstr "DmfA-wijzigingsmelding"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dmrq
+msgid "DmfA consultation (Request)"
+msgstr "DmfA-raadpleging (aanvraag)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dmfa
+msgid "DmfA declaration"
+msgstr "DmfA-aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__dmfa_id
+msgid "Dmfa"
+msgstr "DmfA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__dmpi
+msgid "Dmfa Technical Key Identification"
+msgstr "Dmfa Identificatie met technische sleutel"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Does not correspond to a form accepted by this sector"
+msgstr "Stemt niet overeen met een aanvaard formulier voor deze sector"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Does not correspond to a form rejected by this sector"
+msgstr "Stemt niet overeen met een afgewezen formulier voor deze sector"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Does not meet the fund conditions"
+msgstr "Voldoet niet aan de fondsvoorwaarden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__state__draft
+msgid "Draft"
+msgstr "Concept"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Duplicate Dimona period"
+msgstr "Dubbele Dimonaperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Duplicate work schedule"
+msgstr "Dubbel arbeidsreglement"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "ECB data to be verified"
+msgstr "ECB-gegevens te verifiëren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__ecrq
+msgid "Ecaro Data Consultation Request"
+msgstr "Verzoek om raadpleging van Ecaro-gegevens"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__ecan
+msgid "Ecaro Data Consultation Response"
+msgstr "Antwoord op het verzoek om gegevens van Ecaro"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__ecor
+msgid "Ecaro Technical Identification Keys"
+msgstr "Ecaro Technische identificatiesleutels"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__ecoa
+msgid "Economic Unemployment Contribution Days Response"
+msgstr "Antwoord bijdrage economische werkloosheidsdagen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__employee_id
+msgid "Employee"
+msgstr "Werknemer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__sign
+msgid "Employer Directory Alert"
+msgstr "Waarschuwing werkgeversregister"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer category / worker code incompatibility"
+msgstr "Onverenigbaar met de werkgeverscategorie en het werknemerskengetal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer has not yet opted for Dimona New"
+msgstr "De werkgever heeft nog niet geopteerd voor de Dimona New"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer incompatibility"
+msgstr "Onverenigbaar met werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer not affiliated with an approved social security office"
+msgstr "Werkgever niet aangesloten bij een erkend sociaal secretariaat"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer not authorized for auto-validation"
+msgstr "Werkgever niet geautoriseerd voor automatische validatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer not included in the directory"
+msgstr "Werkgever niet aanwezig in het repertorium"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employer not or no longer active in the employer directory"
+msgstr "Werkgever niet of niet langer actief in het werkgeversrepertorium"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "EmployerDeclarationPID - Discrepancy with DmfA DB"
+msgstr "EmployerDeclarationPID - Discordantie met de DB DmfA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employment promotion measure cannot be indicated"
+msgstr ""
+"Maatregel ter bevordering van de werkgelegenheid mag niet aangeduid worden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Employment start date prior to the employer's registration date"
+msgstr "Begindatum tewerkstelling valt voor datum inschrijving werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "End date before the start date"
+msgstr "Einddatum voorafgaand aan de begindatum"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "End date later than the end date of the parent block"
+msgstr "Einddatum groter dan einddatum van het ouderblok"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "End date of employment missing for at least one occupation"
+msgstr "Einddatum tewerkstelling ontbreekt voor minstens één tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "End date of the career element is later than 12/31/2010"
+msgstr "Einddatum van het loopbaanelement later dan 31/12/2010"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "End time earlier than start time"
+msgstr "Einduur valt vroeger dan beginuur"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__environment
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__environment
+msgid "Environment"
+msgstr "Omgeving"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__state__error
+msgid "Error"
+msgstr "Fout"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__error_message
+msgid "Error Message"
+msgstr "Foutbericht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Error in cardinality"
+msgstr "Fout op cardinaliteit"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Error reading files from %(folder)s: %(error)s"
+msgstr "Fout bij het lezen van bestanden uit %(folder)s: %(error)s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Exceeding the quota"
+msgstr "Overschrijdt het quotum"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__expeditor_number
+msgid "Expeditor Number"
+msgstr "Afzendernummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Extra-statutory pension contribution (sectoral or company pension plan) not "
+"present"
+msgstr ""
+"Bijdrage voor buitenwettelijk pensioen (sector- of ondernemingsplan) niet "
+"aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Fewer than 50 workers"
+msgstr "Minder dan 50 werknemers"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Fewer workers declared in DmfA than in DIMONA"
+msgstr "Minder werknemers aangegeven in DmfA dan in DIMONA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Field to Correct  : %s"
+msgstr "Veld te corrigeren  : %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__file
+msgid "File"
+msgstr "Bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_form
+msgid "File Configuration"
+msgstr "Bestandsconfiguratie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__file_content
+msgid "File Content"
+msgstr "Bestandsinhoud"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__file_count
+msgid "File Count"
+msgstr "Aantal bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_form
+msgid "File Information"
+msgstr "Bestandsinformatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__name
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__file_number
+msgid "File Number"
+msgstr "Bestandsnummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__file_sequence
+msgid "File Sequence"
+msgstr "Bestandsvolgorde"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__file_type
+msgid "File Type"
+msgstr "Bestandstype"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__fino
+msgid "Financial Note"
+msgstr "Financial Note"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__fisi
+msgid "Financial Statement for Accredited Social Secretariats"
+msgstr "Financiële verklaring voor erkende sociale secretariaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__reco
+msgid "First Hire Deduction Data Request (DmfA)"
+msgstr "Gegevensaanvraag aftrek eerste aanwerving (DmfA)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__rean
+msgid "First Hire Deduction Data Response (DmfA)"
+msgstr "Gegevensantwoord aftrek eerste aanwerving (DmfA)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "First engagement deduction code not present"
+msgstr "Verminderingscode eerste aanwerving niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "First sequence number other than 1"
+msgstr "Eerste volgnummer verschillend van 1"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Flexi-Jobs access conditions not met"
+msgstr "Voldoet niet aan toegangsvoorwaarden voor flexi-jobs"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Flexijob cannot be combined with a contract of 80% or more"
+msgstr "Flexi-job kan niet worden gecombineerd met een contract van 80% of meer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Flexijob cannot be combined with another employment relationship"
+msgstr "Flexi-job kan niet worden gecombineerd met een andere arbeidsrelatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Flexijob employment covered fully or partially by a severance payment"
+msgstr ""
+"Flexi-job-dienstverband geheel of gedeeltelijk gedekt door een "
+"ontslagvergoeding"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Flexijob employment not covered or not fully covered by Dimona"
+msgstr "Flexi-job-dienstverband niet of niet volledig gedekt door Dimona"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Partners)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome icoon bijv. fa-tasks"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__form_creation_date
+msgid "Form Creation Date"
+msgstr "Aanmaakdatum van formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__form_creation_hour
+msgid "Form Creation Hour"
+msgstr "Aanmaakuur van formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Form cannot be processed"
+msgstr "Niet verwerkbaar formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Form cannot be processed in sequence"
+msgstr "Formulier kan niet sequentieel worden verwerkt"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Found %(count)s files in %(folder)s"
+msgstr "%(count)s bestanden gevonden in %(folder)s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "GO file not received for a set of files"
+msgstr "GO-bestand niet ontvangen voor een verzameling bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Gap between the last career element and the occupation declared in the "
+"DmfA(PPL)"
+msgstr ""
+"Hiaat tussen het laatste loopbaanelement en de tewerkstelling aangegeven in "
+"DmfA(PPL)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_dmfa_view_form
+msgid "Generate ONSS Declaration"
+msgstr "RSZ-aangifte genereren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__go
+msgid "Go File"
+msgstr "GO-bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_search
+msgid "Group By"
+msgstr "Groeperen op"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Hap between occupations (or career elements)"
+msgstr "Hiaat tussen tewerkstellingen (of loopbaanelementen)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Hap between salaries"
+msgstr "Hiaat tussen wedden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Hap between two occupations (or career elements) with reason for termination "
+"of the statutory relationship"
+msgstr ""
+"Hiaat tussen twee tewerkstellingen (of loopbaanelementen) met reden van het "
+"einde van de statutaire relatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__has_message
+msgid "Has Message"
+msgstr "Heeft bericht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__id
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_exception_icon
+msgid "Icon"
+msgstr "Icoon"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icoon om uitzondering op activiteit aan te geven."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__idfl
+msgid "Identification Change"
+msgstr "Wijziging van de identificatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt vragen nieuwe berichten je aandacht."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_has_error
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt hebben sommige berichten een leveringsfout."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Importance code mismatch"
+msgstr "Onverenigbaar met belangrijkheidscode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Impossibility of having two main or secondary careers with the same employer"
+msgstr ""
+"Het is onmogelijk om 2 hoofdambten of bijambten bij dij dezelfde werkgever "
+"te hebben"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Inactive certificate"
+msgstr "Inactief certificaat"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between benefits and remuneration"
+msgstr "Onverenigbaarheid prestaties en bezoldigingen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between daily records and the Dimona period"
+msgstr "Onverenigbaarheid tussen dagelijkse registraties en de Dimona-periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between employer and 2nd pension pillar"
+msgstr "Onverenigbaarheid tussen werkgever en 2e pensioenpijler"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between joint committee and type of worker"
+msgstr "Onverenigbaarheid tussen het paritair comité en het werknemerstype"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between postal code and municipality"
+msgstr "Onverenigbaarheid postcode-gemeente"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Incompatibility between the DmfA(PPL) worker code and the nature of the "
+"employment relationship"
+msgstr ""
+"Onverenigbaarheid tussen het werknemerskengetal DmfA(PPL) en de aard van de "
+"arbeidsrelatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between the certificate and its owner"
+msgstr "Onverenigbaarheid tussen het certificaat en de eigenaar ervan"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between the day's nature codes"
+msgstr "Onverenigbaarheid tussen de codes aard van de dag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Incompatibility between the month of the first day of youth or senior "
+"vacation"
+msgstr "Onverenigbaarheid maand met eerste jeugd- of seniorvakantiedag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between the sender number and the file purpose"
+msgstr ""
+"Onverenigbaarheid tussen het verzendernummer en het onderwerp van het bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Incompatibility between the value of the Identification tag and the value of "
+"the Environment tag provided in the RFH2 of a message"
+msgstr ""
+"De waarde van de tag Identification is onverenigbaar met de waarde van de "
+"tag Environment meegedeeld in de RFH2 van een bericht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility between the worker and the reporting employer"
+msgstr "Onverenigbaarheid tussen de werknemer en de aangevende werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with Dimona"
+msgstr "Onverenigbaarheid met Dimona"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with a natural person"
+msgstr "Onverenigbaarheid met natuurlijke persoon"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with code FFE"
+msgstr "Onverenigbaar met code FSO"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with employer category"
+msgstr "Onverenigbaarheid met werkgeverscategorie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with risk identification"
+msgstr "Onverenigbaar met de identificatie van het risico"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with sectoral supplementary pension code"
+msgstr "Onverenigbaar met code sectoraal aanvullend pensioen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the ONEM file"
+msgstr "Onverenigbaar met het RVA-bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the concept of pensioner"
+msgstr "Onverenigbaar met de notie gepensioneerde"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the country code"
+msgstr "Onverenigbaar met de landcode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the declared period"
+msgstr "Onverenigbaar met de aangegeven periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the directory"
+msgstr "Onverenigbaar met het repertorium"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the employer's daily reporting type (full/light)"
+msgstr ""
+"Onverenigbaarheid met het type dagelijkse aangifte (full/light) van de "
+"werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the joint committee"
+msgstr "Onverenigbaar met het paritair comité"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the personnel file"
+msgstr "Onverenigbaarheid met het personeelsbestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the request"
+msgstr "Onverenigbaar met de aanvraag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the risk"
+msgstr "Onverenigbaarheid met het risico"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the sender"
+msgstr "Onverenigbaarheid met de verzender"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatibility with the year of the reference period start date"
+msgstr "Onverenigbaarheid met het jaar van de begindatum van de referteperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with benefits"
+msgstr "Onverenigbaar met de prestaties"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with employee number"
+msgstr "Onverenigbaar met het werknemerskengetal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with employer type"
+msgstr "Onverenigbaar met het type werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with other quarters"
+msgstr "Onverenigbaar met andere kwartalen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the Collective Social Service"
+msgstr "Onverenigbaar met de Gemeenschappelijke Sociale Dienst"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the Dimona period identification number"
+msgstr "Onverenigbaar met het identificatienummer van de Dimonaperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the FPS Employment data"
+msgstr "Onverenigbaar met de tewerkstellingsgegevens van FOD"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the NISS"
+msgstr "Onverenigbaar met het INSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the ONSS/PPL number and/or the NISS"
+msgstr "Onverenigbaar met het RSZ/RSZPPO-nummer en/of met het INSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the absence code"
+msgstr "Onverenigbaar met de afwezigheidscode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the amount of the previous salary scale"
+msgstr "Onverenigbaar met het bedrag van de vorige baremieke wedde"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the annual reference salary"
+msgstr "Onverenigbaar met het refertejaarloon"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Incompatible with the concept of a company in difficulty or undergoing "
+"restructuring"
+msgstr ""
+"Onverenigbaar met de notie onderneming in moeilijkheden of in "
+"herstructurering"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the concept of a compliant replacement"
+msgstr "Onverenigbaar met de notie conforme vervanging"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Incompatible with the concept of exemption from supplementary pension scheme"
+msgstr ""
+"Onverenigbaar met de notie van vrijstelling van aanvullende pensioenregeling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the concept of part-time"
+msgstr "Onverenigbaar met de notie halftijds"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the date of first granting of the allowance"
+msgstr "Onverenigbaar met de datum van de eerste toekenning van de vergoeding"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the date of notification of the notice"
+msgstr "Onverenigbaar met de datum van betekening van de opzegging"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the date of the dismissal announcement collective"
+msgstr "Onverenigbaar met de datum van de collectieve ontslagmededeling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the declared career elements"
+msgstr "Onverenigbaar met de aangegeven loopbaanelementen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the employment promotion measure"
+msgstr "Onverenigbaar met de maatregel ter bevordering van de werkgelegenheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the end date of the parent block"
+msgstr "Onverenigbaar met de einddatum van het ouderblok"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the interruption of employment code"
+msgstr "Onverenigbaar met de code inzake onderbreking van het dienstverband"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the job number"
+msgstr "Onverenigbaar met het functienummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the ministerial decision date"
+msgstr "Onverenigbaar met de datum van het ministerieel besluit"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the nature of the employment"
+msgstr "Onverenigbaar met de aard van de tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the nature of the employment relationship"
+msgstr "Onverenigbaar met de aard van de arbeidsrelatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the number of workers"
+msgstr "Onverenigbaar met het aantal werknemers"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the occupation data relating to the public sector"
+msgstr ""
+"Onverenigbaar met de gegevens van de tewerkstelling met betrekking tot de "
+"overheidssector"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Incompatible with the original declaration or the latest status of this "
+"declaration"
+msgstr ""
+"Onverenigbaar met de oorspronkelijke aangifte of de meest recente status van "
+"deze aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the public sector pension code"
+msgstr "Onverenigbaar met de pensioencode voor de overheidssector"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the recognition period"
+msgstr "Onverenigbaar met de periode van erkenning"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the remuneration"
+msgstr "Onverenigbaar met de bezoldigingen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the sector"
+msgstr "Onverenigbaar met de sector"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the ship's identification number"
+msgstr "Onverenigbaar met het identificatienummer van het schip"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the staff category"
+msgstr "Onverenigbaar met de personeelscategorie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the start date of the parent block"
+msgstr "Onverenigbaar met de begindatum van het ouderblok"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the training situation"
+msgstr "Onverenigbaar met de opleidingssituatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the type of contract"
+msgstr "Onverenigbaar met het type arbeidsovereenkomst"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the type of day code"
+msgstr "Onverenigbaarheid met het type dagcode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the type of interruption"
+msgstr "Onverenigbaar met het type onderbreking"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the type of public sector institution"
+msgstr "Onverenigbaar met het type openbare instelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the validity period of the collective agreement"
+msgstr "Onverenigbaar met de geldigheidsduur van de cao"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the work reorganization measure"
+msgstr "Onverenigbaar met de maatregel tot reorganisatie van de arbeidstijd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with the worker's working hours"
+msgstr "Onverenigbaar met de werkuren van de werknemer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incompatible with worker status"
+msgstr "Onverenigbaar met het werknemersstatuut"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incomplete declaration"
+msgstr "Onvolledige aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incomplete declaration: too few workers declared"
+msgstr "Onvolledige aangifte: te weinig werknemers aangegeven"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incomplete questionnaire"
+msgstr "Onvolledige vragenlijst"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Inconsistency between the form reference mentioned in the form and in its "
+"header"
+msgstr ""
+"Inconsistentie tussen de referentie die in het formulier vermeld wordt en de "
+"referentie vermeld in de hoofding van het formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Inconsistency between the number of hours per week and the worker's average "
+"number of hours per week"
+msgstr ""
+"Incoherentie tussen het aantal uren per week en het gemiddeld aantal uren "
+"per week van de werknemer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Inconsistency between the specified form type and the schema"
+msgstr "Incoherentie tussen het vermelde type formulier en het schema"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Inconsistent action codes"
+msgstr "Incoherente actiecodes"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect ONSS/PPL number"
+msgstr "Verkeerd RSZ/RSZPPO-nummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect XML syntax"
+msgstr "XML-syntax niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect ZIP file (contains no file or more than one file)"
+msgstr "Foutief ZIP-bestand (bevat geen bestand of meer dan één bestand)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect employment promotion measure"
+msgstr "Maatregel ter bevordering van de werkgelegenheid is fout"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect file name prefix or Identification tag value in RFH2"
+msgstr ""
+"Prefix van de bestandsnaam of waarde van de tag Identification in de RFH2 is "
+"verkeerd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect length"
+msgstr "Foutieve lengte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect number of months for the employer's share"
+msgstr "Aantal maanden foutief voor het werkgeversgedeelte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect number of months for the personal portion"
+msgstr "Aantal maanden foutief voor het werknemersgedeelte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect numbering for FI files"
+msgstr "Nummering verkeerd voor de FI-bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect numbering for files FS"
+msgstr "Nummering verkeerd voor de FS-bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect occupancy fraction"
+msgstr "Onjuiste tewerkstellingsfractie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "Incorrect passphrase or invalid RSA key: %s"
+msgstr "Onjuiste wachtwoordzin of ongeldige RSA-sleutel: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect prefix type for an ACR"
+msgstr "Verkeerd type prefix voor een ontvangstbewijs"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect processing type for an ACR"
+msgstr "Verkeerd type verwerking voor een ontvangstbewijs"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Incorrect working time reorganization measure"
+msgstr "Maatregel tot reorganisatie van de arbeidstijd is fout"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Info: Calculated balance"
+msgstr "Info: Berekend saldo"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Insufficient benefits"
+msgstr "Onvoldoende prestaties"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid"
+msgstr "Ongeldig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid ZIP file"
+msgstr "Ongeldig ZIP-bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid attribute"
+msgstr "Ongeldig attribuut"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid compensation code combination"
+msgstr "Ongeldige combinatie bezoldigingscodes"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid compression algorithm"
+msgstr "Ongeldig compressie-algoritme"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid control number"
+msgstr "Ongeldig controlegetal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Invalid signature"
+msgstr "Handtekening ongeldig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Investigation"
+msgstr "Onderzoek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_is_follower
+msgid "Is Follower"
+msgstr "Is een volger"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Isabel reports that the message was duplicated"
+msgstr "Isabel signaleert een herhaalde verzending"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Isabel submission not signed or not compressed"
+msgstr "Isabel-verzending niet getekend of niet gecomprimeerd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Joint Committee 999 not allowed"
+msgstr "Paritair comité 999 niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__write_uid
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__write_date
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__write_date
+msgid "Last Updated on"
+msgstr "Laatste bijgewerkt op"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Late declaration"
+msgstr "Verjaarde aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Late request from the authentic source"
+msgstr "Verjaard verzoek van RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Lines of Public sector occupation data not strictly successive"
+msgstr ""
+"Gegevenslijnen van de tewerkstelling met betrekking tot de publieke sector "
+"niet strikt opeenvolgend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Mandatory employer identifier"
+msgstr "Identificatie werkgever verplicht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Maximum number of quarters exceeded"
+msgstr "Maximum aantal trimesters overschreden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Maximum period exceeded"
+msgstr "Maximumperiode overschreden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_has_error
+msgid "Message Delivery error"
+msgstr "Bericht afleverfout"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_ids
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Missing company number or name"
+msgstr "Ondernemingsnummer of benaming ontbreekt"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Missing service type or end date and time"
+msgstr "Prestatietype of einddatum en -uur ontbreekt"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Mixed declaration - employer category 021"
+msgstr "Gemengde aangifte - werkgeverscategorie 021"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Modification or cancellation not authorized"
+msgstr "Wijziging of annulering niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "More contributions due"
+msgstr "Meer bijdragen verschuldigd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "More than 6 consecutive days of temporary unemployment"
+msgstr "Meer dan 6 opeenvolgende dagen tijdelijke werkloosheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "More than one Destination tag present in the record"
+msgstr "Meer dan één tag Destination aanwezig in het record"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "More than one enhanced form sent for the original form"
+msgstr ""
+"Meer dan één uitgebreid formulier verzonden voor het originele formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "More workers declared in DmfA than in DIMONA"
+msgstr "Meer werknemers aangegeven in DmfA dan in DIMONA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Most recent certificate already received for this worker and this reporting "
+"employer"
+msgstr ""
+"Recenter attest reeds ontvangen voor deze werknemer en deze aangevende "
+"werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Multiple deduction detail blocks present"
+msgstr "Meerdere blokken detail vermindering aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Multiple different versions are referenced in different records in the file"
+msgstr ""
+"Er wordt verwezen naar verschillende versies in de verschillende records van "
+"het bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Mijn activiteit deadline"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NACE code mismatch"
+msgstr "Onverenigbaar met NACE code"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NISS Unknown"
+msgstr "INSZ onbekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NISS not included during the reference period"
+msgstr "INSZ niet geïntegreerd binnen de referteperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NISS not processed by this recipient"
+msgstr "INSZ-nummer niet verwerkt door deze ontvanger"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NISS number changed"
+msgstr "Wijziging INSZ-Nummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NISS or identification data required"
+msgstr "INSZ-nummer of identificatiegegevens vereist"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "NISS unknown to the authentic source"
+msgstr "INSZ niet gekend bij de RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Name and NISS mismatch"
+msgstr "Onverenigbaarheid tussen de naam en INSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Negative balance by employer category"
+msgstr "Balans per werkgeverscategorie is negatief"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Volgende activiteitenafspraak"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Volgende activiteit deadline"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_summary
+msgid "Next Activity Summary"
+msgstr "Volgende activiteit overzicht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_type_id
+msgid "Next Activity Type"
+msgstr "Volgende activiteit type"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No Data tag in the record"
+msgstr "Geen tag Data in het record"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No Destination institution attributes in the 'Mailbox' tag"
+msgstr "Geen attributen institution Destination in de tag \"Mailbox\""
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No Dimona as a casual worker for this occupation"
+msgstr "Geen Dimona als gelegenheidswerknemer voor deze tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "No ONSS technical user name defined on the payroll configuration"
+msgstr ""
+"Geen technische RSZ-gebruikersnaam gedefinieerd in de Loonadministratie-"
+"configuratie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "No ONSS technical user private key defined on the payroll configuration"
+msgstr ""
+"Geen RSZ-technische gebruikerssleutel gedefinieerd in de loonadministratie-"
+"configuratie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No authorization"
+msgstr "Niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No career element declared for 31/12/2010"
+msgstr "Geen loopbaanelement aangegeven voor 31/12/2010"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No career element with the reporting employer"
+msgstr "Geen loopbaanelement bij de aangevende werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No change detected"
+msgstr "Er zijn geen wijzigingen gevonden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No data"
+msgstr "Geen data"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No declaration file attached"
+msgstr "Geen aangiftebestand bijgevoegd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No declaration was found in the file"
+msgstr "In het bestand werd geen enkele aangifte gevonden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No deduction detail block present"
+msgstr "Geen blok detail vermindering aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No employer is associated with this natural person"
+msgstr ""
+"De natuurlijk persoon heeft geen enkele arbeidsrelatie met een werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No employment relationship found for the given period or date"
+msgstr "Er is geen arbeidsrelatie gevonden voor de opgegeven periode of datum"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No entitlement based on the data from the authentic source"
+msgstr "Geen recht op basis van de gegevens van RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No institution attribute present in the tag Destination"
+msgstr "Geen attribuut institution aanwezig in de tag Destination"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No or no longer a mandate"
+msgstr "Geen of niet langer een mandaat"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"No output channel is associated with the agent to which the employer is "
+"affiliated"
+msgstr ""
+"Er is geen uitgangskanaal gekoppeld aan het sociaal secretariaat of full "
+"service waarbij de werkgever aangesloten is"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"No output channel is associated with the employer mentioned in the "
+"declaration"
+msgstr ""
+"Er is geen uitvoerkanaal gekoppeld aan de werkgever die wordt genoemd in de "
+"aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"No scheduled hours in Dimona eligible for reduced social security "
+"contributions"
+msgstr ""
+"Geen geplande uren in Dimona die in aanmerking komen voor verlaagde sociale "
+"bijdragen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No schema was specified"
+msgstr "Geen enkel schema is vermeld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No sector attribute present in the Destination tag"
+msgstr "Geen attribuut sector aanwezig in de tag Destination"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"No sender number associated with the agent to which the employer is "
+"affiliated was found"
+msgstr ""
+"Er werd geen enkel verzendernummer gevonden dat hoort bij het sociaal "
+"secretariaat of de full service waarbij de werkgever is aangesloten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No sender number associated with this ONSS/PPL number was found"
+msgstr ""
+"Er werd geen enkel verzendernummer gevonden dat hoort bij dit RSZ/RSZPPO-"
+"nummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "No signature file must be provided for the communication protocol used"
+msgstr ""
+"Er moet geen handtekeningsbestand geleverd worden voor het gebruikte "
+"communicatieprotocol"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Non-existent participant on the declaration"
+msgstr "Betrokkene onbestaande op de aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Non-linear progression of sequence number"
+msgstr "De opeenvolging van het volgnummer is niet linear"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Non-numeric"
+msgstr "Niet numeriek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Non-percentage-based anomaly"
+msgstr "Niet-procentuele anomalie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not SME"
+msgstr "Geen kmo"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not allowed"
+msgstr "Niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not applicable"
+msgstr "Niet van toepassing"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not authorized for apprentice type"
+msgstr "Niet toegelaten voor het type leerling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not entitled"
+msgstr "Geen recht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not found in DmfA database"
+msgstr "Niet gevonden in de DB DmfA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not identifiable"
+msgstr "Niet identificeerbaar"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not included in the directory"
+msgstr "Niet opgenomen in het repertorium"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not included in the directory for the reporting quarter"
+msgstr "Niet aanwezig in het repertorium voor het aangiftekwartaal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not intended for this worker"
+msgstr "Niet bedoeld voor deze werknemer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not planned for this employer"
+msgstr "Niet gepland voor deze werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not present"
+msgstr "Niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not present - intermittent worker"
+msgstr "Niet aanwezig - arbeider bij tussenpozen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not present - seasonal worker"
+msgstr "Niet aanwezig - seizoenarbeider"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not within scope"
+msgstr "Valt niet onder het toepassingsgebied"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not within the scope of Flexijob"
+msgstr "Valt niet onder het toepassingsgebied van flexi-job"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Not within the scope of application - AMI Indemnités Scheme"
+msgstr "Niet binnen het toepassingsgebied - Schema ZIV-vergoedingen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__noti
+msgid "Notification"
+msgstr "Melding"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__state__notified
+msgid "Notified"
+msgstr "Op de hoogte gesteld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Number of days declared in DMFA different from the number of days declared "
+"in DIMONA"
+msgstr ""
+"Aantal aangegeven dagen in DmfA verschilt van het aantal aangegeven dagen in "
+"DIMONA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Number of hours too high"
+msgstr "Aantal uren te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Number of hours/week - salary scale greater than the number of hours/week of "
+"the person. of reference"
+msgstr ""
+"Aantal uren/week – baremieke wedde hoger dan het aantal uren/week van de "
+"maatpersoon"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Number of hours/week - salary scale lower than the number of hours/week of "
+"the reference person"
+msgstr ""
+"Aantal uren/week – baremieke wedde lager dan het aantal uren/week van de "
+"maatpersoon"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Number of hours/week greater than the number of hours/week - full salary "
+"scale"
+msgstr ""
+"Aantal uren per week hoger dan het aantal uren per week – volledige "
+"baremieke wedde"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Aantal berichten die actie vereisen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met leveringsfout"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Number of months too high"
+msgstr "Aantal maanden te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Number too high"
+msgstr "Aantal te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model,name:l10n_be_hr_payroll_dmfa_sftp.model_l10n_be_onss_declaration
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_declaration_view_form
+msgid "ONSS Declaration"
+msgstr "RSZ-aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.actions.act_window,name:l10n_be_hr_payroll_dmfa_sftp.action_l10n_be_onss_declaration
+#: model:ir.ui.menu,name:l10n_be_hr_payroll_dmfa_sftp.menu_l10n_be_onss_declaration
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_declaration_view_list
+msgid "ONSS Declarations"
+msgstr "RSZ-aangiften"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model,name:l10n_be_hr_payroll_dmfa_sftp.model_l10n_be_onss_file
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_form
+msgid "ONSS File"
+msgstr "RSZ-bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.actions.act_window,name:l10n_be_hr_payroll_dmfa_sftp.action_l10n_be_onss_file
+#: model:ir.ui.menu,name:l10n_be_hr_payroll_dmfa_sftp.menu_l10n_be_onss_file
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_list
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_search
+msgid "ONSS Files"
+msgstr "RSZ-bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "ONSS Files fetched successfully (%s new imported files)"
+msgstr "RSZ-bestanden succesvol opgehaald (%s nieuwe geïmporteerde bestanden)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_res_company__onss_technical_user_name
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_res_config_settings__onss_technical_user_name
+msgid "ONSS Technical User Name"
+msgstr "Technische gebruikersnaam RSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_res_company__onss_technical_user_name
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_res_config_settings__onss_technical_user_name
+msgid ""
+"ONSS Technical User Name provided when registering service on the ONSS "
+"platform"
+msgstr ""
+"Technische gebruikersnaam van de RSZ die wordt verstrekt bij de registratie "
+"van de dienst op het RSZ-platform"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_res_company__onss_sftp_private_key
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_res_config_settings__onss_sftp_private_key
+msgid "ONSS Technical User Private Key"
+msgstr "Technische gebruikerssleutel RSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.constraint,message:l10n_be_hr_payroll_dmfa_sftp.constraint_l10n_be_onss_file_unique_name
+msgid "ONSS file name should be unique!"
+msgstr "De RSZ-bestandsnaam moet uniek zijn!"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "ONSS number or company number required"
+msgstr "RSZ-nummer of ondernemingsnummer verplicht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "ONSS/PPL number - NISS - Period' combination not found in DIMONA"
+msgstr "Combinatie 'RSZ/RSZPPO-nummer - INSZ - Periode' niet gevonden in DIMONA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.actions.server,name:l10n_be_hr_payroll_dmfa_sftp.ir_action_server_fetch_onss_files
+#: model:ir.actions.server,name:l10n_be_hr_payroll_dmfa_sftp.ir_cron_fetch_onss_files_ir_actions_server
+msgid "ONSS: Fetch SFTP files"
+msgstr "RSZ: SFTP-bestanden ophalen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Obsolete request"
+msgstr "Verouderd verzoek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Occupation after the current quarter"
+msgstr "Tewerkstelling valt na het lopende kwartaal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Occupation after the quarter covered by the data"
+msgstr ""
+"Tewerkstelling valt na het kwartaal waarop de gegevens betrekking hebben"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Occupation incompatibility"
+msgstr "Onverenigbaarheid tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__onss_declaration_ids
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_file__onss_declaration_id
+msgid "Onss Declaration"
+msgstr "RSZ-aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__onss_declaration_count
+msgid "Onss Declaration Count"
+msgstr "Aantal RSZ-verklaringen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__onss_file_ids
+msgid "Onss File"
+msgstr "RSZ-bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__onss_file_count
+msgid "Onss File Count"
+msgstr "Aantal RSZ-bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__ddtn
+msgid "Original/Modified Work Declaration"
+msgstr "Originele of wijzigende aangifte van werken"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__state__other
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__other
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__other
+msgid "Other"
+msgstr "Overige"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Other deduction requested"
+msgstr "Andere gevraagde verminderingen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Overlapping"
+msgstr "Overlappend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "Paramiko python library is not installed."
+msgstr "Paramiko Python-bibliotheek is niet geïnstalleerd."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__lire
+msgid "Payment Allocation List (Social Secretariats)"
+msgstr "Betalingsverdelingslijst (Sociale Secretariaten)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Percentage of benefits (µ) does not meet requirements"
+msgstr "Prestatiebreuk (µ) voldoet niet aan de vereisten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Percentage-based anomaly"
+msgstr "Percentage-gebaseerde anomalie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Period too long (>24h)"
+msgstr "Te lange periode (>24 uur)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__pfrq
+msgid "Personnel File Consultation"
+msgstr "Raadpleging personeelsbestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__pfan
+msgid "Personnel File Consultation Response"
+msgstr "Antwoord raadpleging personeelsbestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_declaration_view_form
+msgid "Post Declaration"
+msgstr "Aangiften indienen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__state__posted
+msgid "Posted"
+msgstr "Geplaatst"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Presence of a record that does not match the fileType mentioned in the "
+"Mailbox element"
+msgstr ""
+"Aanwezigheid van een record dat niet overeenkomt met het fileType vermeld in "
+"het element Mailbox"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Presence of a web certificate"
+msgstr "Aanwezigheid van een webcertificaat"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Presence of anomaly/anomalies"
+msgstr "Aanwezigheid van anomalie(ën)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Previous certificate already modified via the web application"
+msgstr "Vorige certificaat reeds gewijzigd via de webapplicatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__proa
+msgid "Proactive Action Information (Social Secretariats)"
+msgstr "Informatie over proactieve maatregelen (Sociale secretariaten)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__environment__r
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__environment__r
+msgid "Production"
+msgstr "Productie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited"
+msgstr "Verboden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited from deleting the end date for this period"
+msgstr "Verboden de einddatum te verwijderen voor deze periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Prohibited from having casual periods lasting more than two consecutive days"
+msgstr ""
+"Het is verboden om meer dan twee opeenvolgende dagen occasionele periodes te "
+"hebben"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited from having multiple Dimona-light periods for the same day"
+msgstr "Verboden om meerdere Dimona-light periodes te hebben voor dezelfde dag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Prohibited from making Dimona-Full and Dimona-Light declarations for the "
+"same day"
+msgstr ""
+"Verboden om Dimona-full en Dimona-light aangiftes voor dezelfde dag te "
+"verrichten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited from mentioning both company number and name"
+msgstr ""
+"Verboden om tegelijkertijd het ondernemingsnummer en de benaming te vermelden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited from postponing"
+msgstr "Uitstel verboden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited from stating both the service type and the end date and time"
+msgstr ""
+"Verboden om tegelijkertijd prestatietype en einddatum en -uur te vermelden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Prohibited from submitting Dimona declarations for a locked period"
+msgstr "Verboden Dimona-aangiften te doen op een vergrendelde periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Prohibited from submitting a change declaration to close a Dimona period"
+msgstr ""
+"Verboden om een wijzigende aangifte te doen om een Dimonaperiode af te "
+"sluiten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Proxy not known for the employer"
+msgstr "Proxy niet bekend bij de werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Public sector pension contribution not present"
+msgstr "Pensioenbijdrage openbare sector niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Quarter - category - worker contribution code incompatibility"
+msgstr "Onverenigbaar met kwartaal - categorie - werknemerskengetal bijdrage"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Quarter - employer category mismatch"
+msgstr "Onverenigbaarheid kwartaal - werkgeverscategorie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Quarter mismatch"
+msgstr "Onverenigbaar met kwartaal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Quarter not authorized for employer"
+msgstr "Kwartaal niet toegelaten voor de werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__rating_ids
+msgid "Ratings"
+msgstr "Beoordelingen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Reason for termination of statutory relationship or career element with the "
+"reporting employer missing"
+msgstr ""
+"Reden van het einde van de statutaire relatie of loopbaanelement bij de "
+"aangevende werkgever ontbreekt"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_declaration__state__received
+msgid "Received"
+msgstr "Ontvangen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Reduction not applicable based on the number Local unit identification number"
+msgstr ""
+"Vermindering niet van toepassing op basis van het aantal Identificatienummer "
+"van de lokale eenheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Reduction not applicable for the region"
+msgstr "Vermindering niet van toepassing voor deze regio"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Reference period incompatibility"
+msgstr "Onverenigbaarheid referteperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Referenced form not found"
+msgstr "Formulier waarnaar verwezen wordt niet gevonden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Remuneration code mismatch"
+msgstr "Onverenigbaar met bezoldigingscode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Reporting only via a secure channel for this employer"
+msgstr "Aangifte alleen via een beveiligd kanaal voor deze werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Reporting quarter not included in the validity period"
+msgstr "Aangiftekwartaal niet binnen de geldigheidsperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Required declaration"
+msgstr "Verjaarde aangifte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Required declaration: Mixture of credits and debits not allowed"
+msgstr "Verjaarde aangifte: Mengeling van credits en debets niet toegestaan"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Required declaration: Too many items"
+msgstr "Verjaarde aangifte: Te veel elementen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Reservation not possible"
+msgstr "Reservering onmogelijk"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Response to request already returned"
+msgstr "Aanvraag reeds beantwoord"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_user_id
+msgid "Responsible User"
+msgstr "Verantwoordelijke gebruiker"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Retired after 31/12/2015"
+msgstr "Gepensioneerd na 31/12/2015"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Retired before 01/01/2016"
+msgstr "Gepensioneerd vóór 01/01/2016"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Risk paid by the employer"
+msgstr "Risico gedragen door de werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "SFTP Connection Failed: %s"
+msgstr "SFTP-verbinding mislukt: %s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "SFTP Connection disabled in testing environment."
+msgstr "SFTP-verbinding uitgeschakeld in testomgeving."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "SIS and NISS mismatch"
+msgstr "Onverenigbaarheid SIS en INSZ"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS fout bij versturen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Salary scale block not present for the reporting employer"
+msgstr "Blok Baremieke wedde niet aanwezig voor de aangevende werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Salary scale block only expected for the reporting employer"
+msgstr "Blok baremieke wedde enkel gevraagd voor de aangevende werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Salary too high"
+msgstr "Bezoldigingen te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Same C3.2A card number as the previous month"
+msgstr "Zelfde kaartnummer C3.2A als de vorige maand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Second pillar pension data missing"
+msgstr "Gegevens over de tweede pensioenpijler ontbreken"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Sender not authorized"
+msgstr "Verzender niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Sender not authorized for this employee number"
+msgstr "Verzender niet toegelaten voor dit RSZ-inschrijvingsnummer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Sequence error"
+msgstr "Fout op volgorde"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Severance or termination compensation present with other remuneration"
+msgstr "Ontslag- of beëindigingsvergoeding aanwezig samen met andere beloningen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__file_type__fs
+msgid "Signature File"
+msgstr "Handtekening-bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Signature not possible"
+msgstr "Handtekening niet mogelijk"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Special contribution on severance pay not present"
+msgstr "Geen speciale bijdrage op ontslagvergoeding aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Specific request - Please submit a paper form"
+msgstr "Specifiek verzoek - Gelieve een papieren formulier in te dienen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Start and/or end date of the occupation line outside the validity period"
+msgstr "Begin- en/of einddatum tewerkstellingslijn buiten geldigheidsperiode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start and/or end date required"
+msgstr "Start- en/of einddatum vereist"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start date earlier than the start date of the parent block"
+msgstr "Begindatum groter dan begindatum van het ouderblok"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start date incompatibility"
+msgstr "Onverenigbaarheid begindatum"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start date later than the start date of the parent block"
+msgstr "Begindatum kleiner dan de begindatum van het ouderblok"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start date prior to the certificate eligibility date"
+msgstr "Startdatum vóór de datum waarop het certificaat in aanmerking komt"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start date/time and/or end date/time required"
+msgstr "Startdatum/-tijd en/of einddatum/-tijd vereist"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Start or end date after 12/31/2011 not permitted for a student"
+msgstr "Begin- of einddatum na 31/12/2011 is niet toegelaten voor een student"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Starter-Jobs access conditions not met"
+msgstr "Voorwaarden voor toegang tot startersbanen niet vervuld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_onss_declaration__state
+msgid "State"
+msgstr "Status"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status gebaseerd op activiteiten\n"
+"Te laat: Datum is al gepasseerd\n"
+"Vandaag: Activiteit datum is vandaag\n"
+"Gepland: Toekomstige activiteiten."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Statutory employment relationship not authorized for 01/01/2011"
+msgstr "Werkrelatie van het statutaire type niet toegelaten op 01/01/2011"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Submission deadline not met"
+msgstr "Indieningstermijn niet gerespecteerd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Technical problem receiving ISABEL"
+msgstr "Technisch probleem ontvangst ISABEL"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Technical problem: Unable to check the \"Young worker without experience\" "
+"status"
+msgstr ""
+"Technisch probleem: Kan de status 'Jonge werknemer zonder ervaring' niet "
+"controleren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__twct
+msgid "Temporary Unemployment Declaration"
+msgstr "Aangifte van tijdelijke werkloosheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__defi
+msgid "Temporary Unemployment Final Decision"
+msgstr "Definitieve beslissing inzake tijdelijke werkloosheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_declaration_view_form
+msgid "Test SFTP Connection"
+msgstr "SFTP-verbinding testen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The %(declaration)s (id=%(declaration_id)s) has been notified as invalid by "
+"the ONSS"
+msgstr ""
+"De %(declaration)s (id=%(declaration_id)s) is door de RSZ als ongeldig gemeld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The %(declaration)s (id=%(declaration_id)s) has been notified as valid by "
+"the ONSS"
+msgstr ""
+"De %(declaration)s (id=%(declaration_id)s) is door de RSZ als geldig gemeld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The %(declaration)s (id=%(declaration_id)s) has been posted by %(user)s to "
+"ONSS portal"
+msgstr ""
+"De %(declaration)s (id=%(declaration_id)s) is door %(user)s op het RSZ-"
+"portaal geplaatst"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The %(declaration)s (id=%(declaration_id)s) has been received as invalid by "
+"the ONSS"
+msgstr ""
+"De %(declaration)s (id=%(declaration_id)s) is door de RSZ als ongeldig "
+"ontvangen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The %(declaration)s (id=%(declaration_id)s) has been received as valid by "
+"the ONSS"
+msgstr ""
+"De %(declaration)s (id=%(declaration_id)s) is door de RSZ als geldig "
+"ontvangen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The CBSS/Reference tag is not present in the MessageContext tag"
+msgstr "De tag CBSS/Référence is niet aanwezig in de tag MessageContext"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The CBSS/TreatmentTime tag does not match the expected format (yyyy-"
+"MMdd'T'HH:mm:ss.SSS)"
+msgstr ""
+"De tag CBSS/TreatmentTime heeft niet het verwachte formaat (\"yyyy-"
+"MMdd'T'HH:mm:ss.SSS\")"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The CBSS/TreatmentTime tag is not present in the MessageContext tag"
+msgstr "De tag CBSS/TreatmentTime is niet aanwezig in de tag MessageContext"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The Compressed tag must be specified in the RFH2 and its value must be 0 or 1"
+msgstr ""
+"De tag Compressed moet gespecificeerd worden in de RFH2 en de waarde ervan "
+"moet 0 of 1 zijn"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The ContentsStatus tag must be specified in the RFH2 and its value must be 0 "
+"or 3"
+msgstr ""
+"De tag ContentsStatus moet gespecificeerd worden in de RFH2 en de waarde "
+"ervan moet 0 of 3 zijn"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The DIMONA declaration has been notified as invalid by the ONSS:\n"
+"%(error_message)s"
+msgstr ""
+"De DIMONA-aangifte is door de RSZ als ongeldig gemeld:\n"
+"%(error_message)s"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The DataFormat tag must be specified in the RFH2 and its value must be 0 or 2"
+msgstr ""
+"De tag DataFormat moet gespecificeerd worden in de RFH2 en de waarde ervan "
+"moet 0 of 2 zijn"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The Destination tag is not present in the record"
+msgstr "Het tag Destination is niet aanwezig in het record"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The DirectoryEnvironment tag must be specified in the RFH2 and its value "
+"must be 0, 1, or 3 (0, 1, or 3 if WebChannel = 0; 1 or 3 if WebChannel = 1)"
+msgstr ""
+"De tag DirectoryEnvironment moet gespecificeerd worden in de RFH2 en de "
+"waarde ervan moet 0, 1 of 3 zijn (0, 1 of 3 indien WebChannel = 0; 1 of 3 "
+"indien WebChannel = 1)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The ErrorId tag must be specified in the RFH2 and its value must be a "
+"maximum of 9 characters"
+msgstr ""
+"De tag ErrorId moet gespecificeerd worden in de RFH2 en de waarde ervan mag "
+"maximum 9 karakters tellen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The FileReferenceNbr tag must be specified in the RFH2 and its value must be "
+"13 characters long"
+msgstr ""
+"De tag FileReferenceNbr moet gespecificeerd worden in de RFH2 en de waarde "
+"ervan moet 13 karakters tellen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The FormReferenceNbr tag must be specified in the RFH2 and its value must "
+"have 13 characters"
+msgstr ""
+"De tag FormReferenceNbr moet gespecificeerd worden in de RFH2 en de waarde "
+"ervan moet 13 karakters tellen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The Isabel signature hash is not correct"
+msgstr "De hashing van de Isabel-handtekening is niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The Isabel signature is incorrect"
+msgstr "De Isabel-handtekening is niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The Isabel user is not authorized to send in real time"
+msgstr "De Isabel-gebruiker heeft geen toelating om realtime te verzenden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The LengthCompressed tag must be specified in the RFH2 and its value must be "
+"numeric"
+msgstr ""
+"De tag LengthCompressed moet gespecificeerd worden in de RFH2 en de waarde "
+"ervan moet numeriek zijn"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The LengthNonCompressed tag must be specified in the RFH2 and its value must "
+"be numeric"
+msgstr ""
+"De tag LengthNonCompressed moet gespecificeerd worden in de RFH2 en de "
+"waarde ervan moet numeriek zijn"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The MessageCreationDate tag must be specified in the RFH2 and its value must "
+"be in the format YYYY-MM-DD"
+msgstr ""
+"De tag MessageCreationDate moet gespecificeerd worden in de RFH2 en de "
+"waarde ervan moet het formaat JJJJ-MM-DD hebben"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The MessageCreationHour tag must be specified in the RFH2 and its value must "
+"be in the format format HH:mm:ss.SSS"
+msgstr ""
+"De tag MessageCreationHour moet worden opgegeven in de RFH2 en de waarde "
+"ervan moet de indeling HH:mm:ss.SSS hebben"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The Records attribute of the Mailbox tag is not present"
+msgstr "Het attribuut Records van de tag Mailbox is niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The SectorPointId tag must be specified in the RFH2"
+msgstr "De tag SectorPointId moet gespecificeerd worden in de RFH2"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The UserId tag must be specified in the RFH2 and its value must have 6 "
+"numeric characters if WebChannel = 0 or 1 to 30 characters if WebChannel = 1"
+msgstr ""
+"De tag UserId moet gespecificeerd worden in de RFH2 en de waarde ervan moet "
+"6 numerieke posities tellen indien WebChannel = 0 of van 1 tot 30 posities "
+"indien WebChannel = 1"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The WebChannel tag must be specified in the RFH2 and its value must be 0 or 1"
+msgstr ""
+"De tag WebChannel moet gespecificeerd worden in de RFH2 en de waarde ervan "
+"moet gelijk zijn aan 0 of 1"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The amount does not correspond to the prorated minimum"
+msgstr "Het bedrag stemt niet overeen met het geproratiseerde minimumbedrag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The beneficiary is not indicated"
+msgstr "De begunstigde is niet aangeduid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The channel is different from the one listed in the access directory"
+msgstr ""
+"Het kanaal verschilt van het kanaal dat is opgenomen in het "
+"toegangsrepertorium"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The completed occupancy is not found"
+msgstr "De beëindigde tewerkstelling wordt niet teruggevonden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The data used to route the message is missing or invalid"
+msgstr ""
+"De gegevens die nodig zijn om het bericht te sturen, ontbreken of zijn "
+"ongeldig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The date specified in the file name or RFH2 is greater than today's date"
+msgstr ""
+"De datum gespecificeerd in de naam van het bestand of de RFH2 is groter dan "
+"de datum van de dag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The date specified in the file name or RFH2 is not a valid date in YYYYMMDD "
+"format"
+msgstr ""
+"De datum gespecificeerd in de naam van het bestand of de RFH2 is geen "
+"correcte datum met het formaat JJJJMMDD"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The date specified in the file name or RFH2 is too old compared to today's "
+"date."
+msgstr ""
+"De datum gespecificeerd in de naam van het bestand of de RFH2 is te oud ten "
+"opzichte van de datum van de dag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The date specified in the file name or the RFH2 has more or less 8 digits."
+msgstr ""
+"De datum die in de bestandsnaam of de RFH2 wordt vermeld, bestaat uit "
+"ongeveer 8 cijfers."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The day is not indicated"
+msgstr "De dag is niet aangeduid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The destination 'sector-institution' of the Mailbox tag is invalid (non-"
+"numeric)."
+msgstr ""
+"De \"sector-institution\" destination van de tag Mailbox is niet correct "
+"(niet numeriek)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The destination 'sector-institution' of the Mailbox tag is unknown"
+msgstr "De \"sector-institution\" destination van de tag Mailbox is onbekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The destination 'sector-institution' of the MessageContext tag does not "
+"match the destination 'sector-institution' of the Mailbox tag"
+msgstr ""
+"De \"sector-institution\" destination van de tag MessageContext komt niet "
+"overeen met de \"sector-institution\" destination van de tag mailbox"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The document does not have a default NameSpace or the default NameSpace is "
+"not compliant"
+msgstr ""
+"Het document bezit geen default NameSpace of deze laatste is niet conform"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/hr_dmfa.py:0
+msgid "The draft %(declaration)s (id=%(declaration_id)s) has been created"
+msgstr "Het concept van %(declaration)s (id=%(declaration_id)s) is opgesteld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The employer entered must be different from the reporting employer"
+msgstr "De ingevoerde werkgever moet verschillen van de aangevende werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The employer has not opted for the Dimona system for their daily records"
+msgstr ""
+"De werkgever heeft niet gekozen voor het Dimona-systeem voor zijn dagelijkse "
+"registraties"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The employer remains silent"
+msgstr "De werkgever blijft stil"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The entity associated with the ONSS/PPL number mentioned is not a sender"
+msgstr ""
+"De entiteit die geassocieerd wordt met het vermelde RSZ/RSZPPO-nummer is "
+"geen verzender"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The environment attribute of the Mailbox tag is not present"
+msgstr "Het attribuut environment van de tag Mailbox is niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The environment specified in the file name or RFH2 is different from T, R, "
+"and S"
+msgstr ""
+"De omgeving gespecificeerd in de bestandsnaam of de RFH2 is verschillend van "
+"T, R en S"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The expected sequence number was not entered or is invalid"
+msgstr "Het verwachte volgnummer is niet ingevoerd of is ongeldig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The expected ticket number was not specified"
+msgstr "Het verwachte ticketnummer werd niet vermeld"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The file contains at least one data block that is not a form (Form block)"
+msgstr ""
+"Het bestand bevat ten minste één gegevensblok dat geen formulier is (blok "
+"Form)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The file is not valid based on the associated data models (XML schema)"
+msgstr ""
+"Het bestand is niet geldig op basis van de bijbehorende gegevensmodellen "
+"(xml-schema)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The file size exceeds the imposed limit"
+msgstr "De grootte van het bestand overschrijdt de opgelegde grens"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The file(s) causing problems during the initial submission have been deleted."
+msgstr ""
+"Het/de bestand(en) die problemen vormden tijdens de eerste verzending werd"
+"(en) verwijderd."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The fileType attribute of the Mailbox tag is not present"
+msgstr "Het attribuut fileType van de tag Mailbox is niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The form references more than one previously recorded form"
+msgstr ""
+"Het formulier verwijst naar meer dan één vroeger geregistreerd formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The form type mentioned in the file name does not match the form type "
+"present in the file"
+msgstr ""
+"Het formuliertype in het bestand is verschillend van die vermeld in de "
+"bestandsnaam"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The geolocation of the address provided in the declaration is inaccurate"
+msgstr ""
+"De geolocatie van het adres dat in de aangifte is opgegeven is onnauwkeurig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The id attribute of the Service tag does not match the serviceName attribute "
+"of the Mailbox tag"
+msgstr ""
+"Het attribuut id van de tag Service komt niet overeen met het attribuut "
+"serviceName van de tag Mailbox"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The id attribute of the Service tag is not present"
+msgstr "Het attribuut id van de tag Service is niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The identification of the form referenced by this ticket number is not of "
+"the type expected"
+msgstr ""
+"Identificatie van het formulier waarnaar dit ticketnummer verwijst, behoort "
+"niet tot het verwachte type"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The item number specified in the file name or RFH2 has more or less than 5 "
+"digits"
+msgstr ""
+"Het zendingsnummer gespecificeerd in de naam van het bestand of de RFH2 "
+"bevat meer of minder dan 5 posities"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The item number specified in the file name or RFH2 is not numeric"
+msgstr ""
+"Het zendingsnummer gespecificeerd in de naam van het bestand of de RFH2 is "
+"niet numeriek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/utils.py:0
+msgid "The key is encrypted but no passphrase was provided."
+msgstr "De sleutel is versleuteld, maar er is geen wachtwoordzin opgegeven."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The mailbox_id in the incoming file does not match its mailbox_id in the "
+"sender's database"
+msgstr ""
+"Het mailbox_id in het binnenkomend bestand stemt niet overeen met het "
+"mailbox_id in de verzenders-DB"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The message contains more than one form"
+msgstr "De boodschap bevat meer dan één formulier"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The modification or cancellation does not affect the last situation"
+msgstr "De wijziging of annulering heeft geen invloed op de laatste situatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The name structure of an FI file or RFH2 is incorrect"
+msgstr ""
+"De structuur van de naam van een FI-bestand of van de RFH2 is niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The name structure of an FS file is incorrect"
+msgstr "De structuur van de naam van een FS-bestand is niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The number of FI files in the directory does not match the number of "
+"required files"
+msgstr ""
+"Het aantal FI-bestanden aanwezig in het repertorium stemt niet overeen met "
+"het vereiste aantal bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The number of FS files in the directory does not match the number of "
+"required files"
+msgstr ""
+"Het aantal FS-bestanden aanwezig in het repertorium stemt niet overeen met "
+"het vereiste aantal bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The number of authorized forms has been exceeded"
+msgstr "Het toegelaten aantal formulieren is overschreden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The number of days declared exceeds the number of days in the period"
+msgstr ""
+"Het aantal aangegeven dagen overschrijdt het aantal dagen van de periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The number of declarations present in the file is larger than the number "
+"allowed for a file of this size"
+msgstr ""
+"Het aantal aangiften aanwezig in het bestand is groter dan het toegelaten "
+"aantal voor een bestand van deze grootte"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The number of pieces specified in the file name has more or less than 1 digit"
+msgstr ""
+"Het aantal stukken gespecificeerd in de naam van het bestand bestaat uit "
+"meer of minder dan 1 cijfer"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The number of pieces specified in the file name is greater than the maximum "
+"allowed"
+msgstr ""
+"Het aantal stukken gespecificeerd in de naam van het bestand is groter dan "
+"het toegelaten maximumaantal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The number of pieces specified in the file name is not numeric"
+msgstr ""
+"Het aantal stukken gespecificeerd in de naam van het bestand is niet numeriek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The number of pieces specified in the file name is zero"
+msgstr ""
+"Het aantal stukken gespecificeerd in de naam van het bestand is gelijk aan "
+"nul"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The period start and end dates must fall within the same quarter"
+msgstr ""
+"De begin- en einddatum van de periode moeten tot hetzelfde kwartaal behoren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The publication format was not specified or is incorrect"
+msgstr "Het publicatieformaat werd niet gespecificeerd of is verkeerd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The qualification does not meet the criteria"
+msgstr "De kwalificatie voldoet niet aan de criteria"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The quarterly reference salary does not meet the conditions."
+msgstr "Refertekwartaalloon voldoet niet aan vereisten."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The recipient of the form does not have an electronic channel"
+msgstr ""
+"De bestemmeling van het formulier beschikt over geen enkel elektronisch "
+"kanaal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The referenced request or declaration has already been canceled"
+msgstr "Het verzoek of de aangifte waarnaar verwezen wordt is al geannuleerd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The requested period is too long"
+msgstr "De gevraagde periode is te lang"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The requested period is too short"
+msgstr "De gevraagde periode is te kort"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The routing recipient is not known"
+msgstr "De bestemmeling van de routing is niet gekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The sender specified in the file name or the RFH2 of the MQ-series message "
+"does not match the sender listed in the directory name where the file was "
+"uploaded or the user ID specified in the MQMD of said message."
+msgstr ""
+"De verzender gespecificeerd in de naam van het bestand of de RFH2 van het "
+"MQseries-bericht stemt niet overeen met de verzender respectievelijk vermeld "
+"in de naam van het repertorium waar het bestand werd gedeponeerd of met de "
+"user-id gespecificeerd in de MQMD van het betreffende bericht."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The serviceName attribute of the Mailbox tag is not present"
+msgstr "Het attribuut serviceName van de tag Mailbox is niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The serviceName attribute of the Mailbox tag is unknown"
+msgstr "Het attribuut serviceName van de tag Mailbox is onbekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The severance pay begins before the end of paid employment"
+msgstr ""
+"De ontslagvergoeding gaat in vóór het einde van het betaalde dienstverband"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The specified encoding is not supported"
+msgstr "De vermelde encoding wordt niet ondersteund"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The specified schema standard is not supported or is unknown"
+msgstr ""
+"De standaard van het vermelde schema wordt niet ondersteund of is onbekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The structure of a GO file name is incorrect"
+msgstr "De structuur van de naam van een GO-bestand is niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The submission number specified in the file name or RFH2 contains a "
+"character other than 0 to 9 and A to Z"
+msgstr ""
+"Het zendingsnummer gespecificeerd in de naam van het bestand of de RFH2 "
+"bevat een karakter verschillend van 0 tot 9 en van A tot Z"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The submitted form is not valid according to the data model"
+msgstr ""
+"Het doorgestuurde formulier is niet geldig in vergelijking met het "
+"gegevensmodel"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The ticket number mentioned is not known or is invalid"
+msgstr "Het vermelde ticketnummer is niet gekend of is ongeldig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The time (hours/minutes) of the activity is before the time of the accident, "
+"even though the activity and the accident occurred at the same time"
+msgstr ""
+"Het tijdstip (uur/minuten) van de activiteit is vroeger dan het tijdstip van "
+"het ongeval, terwijl de activiteit en het ongeval op dezelfde dag "
+"plaatsvonden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The total number of bytes specified in a Mailbox A1 header is incorrect"
+msgstr ""
+"Het totaal aantal bytes gespecificeerd in een Mailbox A1-header is niet "
+"correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The total number of bytes specified in a Mailbox A1 header is not numeric"
+msgstr ""
+"Het totaal aantal bytes gespecificeerd in een Mailbox A1-header is niet "
+"numeriek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The total number of records specified in a Mailbox A1 header is not numeric"
+msgstr ""
+"Het totaal aantal records gespecificeerd in een Mailbox A1-header is niet "
+"numeriek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The upload number specified in the file name or RFH2 is zero"
+msgstr "Het uploadaantal dat in de bestandsnaam of RFH2 is opgegeven, is nul"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The value of The sectorDestination attribute of the Mailbox tag does not "
+"exist for the specified serviceName"
+msgstr ""
+"De waarde van het attribuut sectorDestination van de tag Mailbox bestaat "
+"niet voor de opgegeven serviceName"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The value of the Records attribute of the Mailbox tag is non-numeric"
+msgstr "De waarde van het attribuut Records van de tag Mailbox is niet numeriek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The value of the environment attribute of the Mailbox tag is not consistent "
+"with the environment stipulated in the file name"
+msgstr ""
+"De waarde van het attribuut environment van de tag Mailbox is niet coherent "
+"met de omgeving opgegeven in de naam van het bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The value of the fileType attribute is not compatible with the serviceName"
+msgstr ""
+"De waarde van het attribuut fileType is niet verenigbaar met de serviceName"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The values of the institution and sector attributes in the Destination tag "
+"are incorrect"
+msgstr ""
+"De waarden van de attributen institution en sector van de tag Destination "
+"zijn niet correct"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The version attribute of the Service tag contains an unknown version ID"
+msgstr ""
+"Het attribuut version van de tag Service bevat een onbekende versie-"
+"identificatie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The version attribute of the Service tag is not present"
+msgstr "Het attribuut version van de tag Service is niet aanwezig"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The work environment could not be detected in the message name"
+msgstr "De werkomgeving kon niet worden gedetecteerd in de naam van het bericht"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"The worker does not meet the conditions for access to this type of "
+"interruption"
+msgstr ""
+"De werknemer voldoet niet aan de voorwaarden voor toegang tot dit type "
+"onderbreking"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "The year does not match the year of the accident"
+msgstr "Jaartal niet gelijk aan jaartal waarin ongeval zich voordeed"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Time unit incompatibility"
+msgstr "Onverenigbaar met tijdseenheid"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "To be checked"
+msgstr "Te controleren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Too many mailbox tags present in the file"
+msgstr "Te veel tags mailbox aanwezig in het bestand"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Too many missing Dimona entries"
+msgstr "Te veel ontbrekende Dimona-registraties"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Too many missing NISS numbers"
+msgstr "Te veel ontbrekende INSZ-nummers"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Too many occurrences with the same identifiers"
+msgstr "Te veel gevallen met dezelfde identificatiecodes"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Total inconsistency of the contribution calculation bases - total "
+"compensation."
+msgstr ""
+"Totale inconsistentie van de berekeningsgrondslagen voor bijdragen - totale "
+"vergoeding."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Total number of days incompatible with the reporting quarter for the "
+"occupation"
+msgstr ""
+"Aantal dagen onverenigbaar met het aangiftekwartaal voor de tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Total number of days incompatible with the work schedule for the occupation"
+msgstr ""
+"Aantal dagen onverenigbaar met het arbeidsstelsel voor de tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Total number of days insufficient according to the work schedule within the "
+"occupation"
+msgstr ""
+"Aantal dagen ontoereikend volgens arbeidsstelsel binnen de tewerkstelling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Total number of days too high"
+msgstr "Totaal aantal dagen te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Total number of hours for the day indication exceeds the scope of definition"
+msgstr ""
+"Totaal aantal uren voor de aanduiding van de dag overschrijdt het "
+"definitiedomein"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Total percentage incorrect"
+msgstr "Totaal percentage foutief"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid ""
+"Total size of FI and FS files exceeds the imposed limit after compression"
+msgstr ""
+"De totale grootte van FI- en FS-bestanden overschrijdt de opgelegde limiet "
+"na compressie"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Total to verify"
+msgstr "Totaal te verifiëren"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Total too high"
+msgstr "Totaal te hoog"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type van de geregistreerde uitzonderingsactiviteit."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Type of worker prohibited for this employer"
+msgstr "Type werknemer verboden voor deze werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unable to assign an occupation number. Inconsistent data"
+msgstr ""
+"Toekenning van een tewerkstellingsnummer onmogelijk. Gegevens incoherent"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unable to determine a time indication for social risk"
+msgstr "Kan geen tijdindicatie voor sociaal risico bepalen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unable to identify the recipient"
+msgstr "Ontvanger kan niet worden geïdentificeerd"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unauthorized access mode"
+msgstr "Toegangsmodus niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unauthorized employment contract type"
+msgstr "Type arbeidsovereenkomst niet toegelaten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown Anomaly Class Label"
+msgstr "Onbekende anomalieklasse tag"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown Diagnosis Label"
+msgstr "Onbekende tag diagnose"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown Dimona period identification number"
+msgstr "Identificatienummer van Dimonaperiode onbekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown Error Label"
+msgstr "Tag onbekende fout"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown element"
+msgstr "Element niet gekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown flow success code for an ACR"
+msgstr "Onbekende flowsuccescode voor een ACR"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown root"
+msgstr "Root niet gekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown schedule"
+msgstr "Schema niet gekend"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Unknown to the authentic source"
+msgstr "Onbekend bij de RVA"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model_terms:ir.ui.view,arch_db:l10n_be_hr_payroll_dmfa_sftp.l10n_be_onss_file_view_search
+msgid "Unlinked Files"
+msgstr "Niet-gekoppelde bestanden"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__vblv
+msgid "Validation Book Declaration"
+msgstr "Aangifte validatieboek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Value not authorized for this period"
+msgstr "Waarde niet toegelaten voor deze periode"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Value not permitted for this employer"
+msgstr "Waarde niet toegelaten voor deze werkgever"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Warning"
+msgstr "Waarschuwing"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Warning! Quarter in danger of being time-barred or time-barred."
+msgstr "Let op! Kwartaal met gevaar voor verjaring of verjaard kwartaal."
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "We are not concerned by the request"
+msgstr "Wij zijn niet betrokken bij het verzoek"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,field_description:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__website_message_ids
+msgid "Website Messages"
+msgstr "Websiteberichten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields,help:l10n_be_hr_payroll_dmfa_sftp.field_l10n_be_dmfa__website_message_ids
+msgid "Website communication history"
+msgstr "Website communicatie geschiedenis"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__declaration_type__publ
+msgid "Work Accident Declaration (Public Sector)"
+msgstr "Aangifte arbeidsongeval (openbare sector)"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Work schedule mismatch"
+msgstr "Onverenigbaar met arbeidsregeling"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Worker code mismatch"
+msgstr "Werknemerskengetal komt niet overeen"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Worker does not meet age requirements"
+msgstr "Werknemer voldoet niet aan de leeftijdsvereisten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Worker not in service on the last day of the quarter"
+msgstr "Werknemer niet in dienst op de laatste dag van het kwartaal"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Worker too old"
+msgstr "Werknemer te oud"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Worker too young"
+msgstr "Werknemer te jong"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Worker type incompatibility"
+msgstr "Onverenigbaar met werknemerstype"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Working schedule does not meet requirements"
+msgstr "Arbeidsregime voldoet niet aan de vereisten"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Working time reduction too low"
+msgstr "Arbeidsduurvermindering te gering"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Young worker without experience"
+msgstr "Jonge werknemer zonder ervaring"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#. odoo-python
+#: code:addons/l10n_be_hr_payroll_dmfa_sftp/models/l10n_be_onss_declaration.py:0
+msgid "Zone not applicable"
+msgstr "Zone niet van toepassing"
+
+#. module: l10n_be_hr_payroll_dmfa_sftp
+#: model:ir.model.fields.selection,name:l10n_be_hr_payroll_dmfa_sftp.selection__l10n_be_onss_file__environment__other
+msgid "other"
+msgstr "Overige"

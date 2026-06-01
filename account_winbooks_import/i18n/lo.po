@@ -1,0 +1,241 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_winbooks_import
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 18:46+0000\n"
+"PO-Revision-Date: 2026-05-29 04:34+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
+"account_winbooks_import/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: account_winbooks_import
+#: model_terms:ir.ui.view,arch_db:account_winbooks_import.winbooks_import_form
+msgid ""
+"<span invisible=\"only_open\"/>\n"
+"                    <span class=\"text-warning mb4 mt16\" invisible=\"only_open\">\n"
+"                        The export of data from Winbooks for closed years might contain unbalanced entries. However if you want to try to import everything, Odoo will set the difference of balance in a Suspense Account.\n"
+"                    </span>"
+msgstr ""
+"<span invisible=\"only_open\"/>\n"
+"                    <span class=\"text-warning mb4 mt16\" "
+"invisible=\"only_open\">\n"
+"                        ການສົ່ງອອກຂໍ້ມູນຈາກ Winbooks ສໍາລັບປີທີ່ປິດແລ້ວ ອາດຈະມີລາຍການທີ່ບໍ່ສົມດຸ"
+"ນ. ແນວໃດກໍຕາມ ຖ້າທ່ານຕ້ອງການນໍາເຂົ້າທັງໝົດ, Odoo ຈະກໍານົດສ່ວນຕ່າງຂອງຍອດເຫຼືອໄວ້ໃນ ບັນຊີພັກ.\n"
+"                    </span>"
+
+#. module: account_winbooks_import
+#: model:ir.model,name:account_winbooks_import.model_account_winbooks_import_wizard
+msgid "Account Winbooks import wizard"
+msgstr "ຕົວຊ່ວຍນໍາເຂົ້າບັນຊີ Winbooks"
+
+#. module: account_winbooks_import
+#: model:ir.model,name:account_winbooks_import.model_account_import_summary
+msgid "Account import summary view"
+msgstr "ເບິ່ງບົດສະຫຼຸບການນໍາເຂົ້າບັນຊີ"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid "Accounting Settings"
+msgstr "ການຕັ້ງຄ່າການບັນຊີ"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid ""
+"At least one automatic counterpart has been created at import. This is "
+"probably an error. Please check entry lines with reference: Counterpart "
+"(generated at import from Winbooks)"
+msgstr ""
+"ມີລາຍການຄູ່ອັດຕະໂນມັດຢ່າງໜ້ອຍໜຶ່ງລາຍການຖືກສ້າງຂຶ້ນຕອນນໍາເຂົ້າ. ນີ້ອາດຈະເປັນຂໍ້ຜິດພາດ. ກະລຸນາກວດສອບແຖ"
+"ວລາຍການທີ່ມີການອ້າງອີງ: ລາຍການຄູ່ (ສ້າງຂຶ້ນຕອນນໍາເຂົ້າຈາກ Winbooks)"
+
+#. module: account_winbooks_import
+#: model_terms:ir.ui.view,arch_db:account_winbooks_import.winbooks_import_form
+msgid "Cancel"
+msgstr "ຍົກເລີອກ"
+
+#. module: account_winbooks_import
+#: model:ir.model,name:account_winbooks_import.model_res_company
+msgid "Companies"
+msgstr "ບໍລິສັດ"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid "Company Settings"
+msgstr "ການຕັ້ງຄ່າບໍລິສັດ"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid "Counterpart (generated at import from Winbooks)"
+msgstr "ລາຍການຄູ່ (ສ້າງຂຶ້ນຕອນນໍາເຂົ້າຈາກ Winbooks)"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__zip_file
+msgid "File"
+msgstr "ໄຟລ໌"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__id
+msgid "ID"
+msgstr "ລະຫັດ (ID)"
+
+#. module: account_winbooks_import
+#: model_terms:ir.ui.view,arch_db:account_winbooks_import.winbooks_import_form
+msgid "Import"
+msgstr "ນໍາເຂົ້າ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_import_summary__import_summary_analytic_ids
+msgid "Import Summary Analytic"
+msgstr "ບົດສະຫຼຸບການນໍາເຂົ້າການວິເຄາະ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_import_summary__import_summary_analytic_line_ids
+msgid "Import Summary Analytic Line"
+msgstr "ແຖວບົດສະຫຼຸບການນໍາເຂົ້າການວິເຄາະ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_import_summary__import_summary_len_analytic
+msgid "Import Summary Len Analytic"
+msgstr "ຄວາມຍາວບົດສະຫຼຸບການນໍາເຂົ້າການວິເຄາະ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_import_summary__import_summary_len_analytic_line
+msgid "Import Summary Len Analytic Line"
+msgstr "ຄວາມຍາວແຖວບົດສະຫຼຸບການນໍາເຂົ້າການວິເຄາະ"
+
+#. module: account_winbooks_import
+#. odoo-javascript
+#: code:addons/account_winbooks_import/static/src/xml/account_winbooks_import.xml:0
+msgid "Import WBK"
+msgstr "ນໍາເຂົ້າ WBK"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__only_open
+msgid "Import only open years"
+msgstr "ນໍາເຂົ້າສະເພາະປີທີ່ຍັງເປີດຢູ່"
+
+#. module: account_winbooks_import
+#: model:ir.model,name:account_winbooks_import.model_account_move_line
+msgid "Journal Item"
+msgstr "ລາຍການບັນຊີ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__write_uid
+msgid "Last Updated by"
+msgstr "ອັບເດດລ້າສຸດໂດຍ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__write_date
+msgid "Last Updated on"
+msgstr "ອັບເດດລ້າສຸດເມື່ອ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,help:account_winbooks_import.field_account_move_line__winbooks_line_id
+msgid "Line ID that was used in Winbooks"
+msgstr "ລະຫັດແຖວທີ່ໃຊ້ໃນ Winbooks"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid ""
+"No data zip in the main archive. Please use the complete Winbooks export."
+msgstr ""
+"ບໍ່ມີໄຟລ໌ zip ຂໍ້ມູນໃນບ່ອນເກັບມ້ຽນຫຼັກ. ກະລຸນາໃຊ້ການສົ່ງອອກ Winbooks ທີ່ສົມບູນ."
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid "Please define the country on your company."
+msgstr "ກະລຸນາກໍານົດປະເທດໃຫ້ກັບບໍລິສັດຂອງທ່ານ."
+
+#. module: account_winbooks_import
+#: model_terms:ir.ui.view,arch_db:account_winbooks_import.winbooks_import_form
+msgid "Stage Search"
+msgstr "ຄົ້ນຫາຂັ້ນຕອນ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_winbooks_import_wizard__suspense_code
+msgid "Suspense Account Code"
+msgstr "ລະຫັດບັນຊີພັກ"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid ""
+"The code for the Suspense Account you entered doesn't match any account"
+msgstr "ລະຫັດບັນຊີພັກທີ່ທ່ານປ້ອນເຂົ້າ ບໍ່ກົງກັບບັນຊີໃດເລີຍ"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,help:account_winbooks_import.field_account_winbooks_import_wizard__suspense_code
+msgid ""
+"This is the code of the account in which you want to put the counterpart of "
+"unbalanced moves. This might be an account from your Winbooks data, or an "
+"account that you created in Odoo before the import."
+msgstr ""
+"ນີ້ແມ່ນລະຫັດຂອງບັນຊີທີ່ທ່ານຕ້ອງການໃຊ້ເພື່ອໃສ່ລາຍການຄູ່ຂອງການເຄື່ອນໄຫວທີ່ບໍ່ສົມດຸນ. ນີ້ອາດຈະເປັນບັນຊີຈາກຂໍ້ມູ"
+"ນ Winbooks ຂອງທ່ານ, ຫຼື ບັນຊີທີ່ທ່ານສ້າງຂຶ້ນໃນ Odoo ກ່ອນການນໍາເຂົ້າ."
+
+#. module: account_winbooks_import
+#: model:ir.actions.act_window,name:account_winbooks_import.winbooks_import_action
+msgid "Winbooks Import"
+msgstr "ການນໍາເຂົ້າ Winbooks"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,field_description:account_winbooks_import.field_account_move_line__winbooks_line_id
+msgid "Winbooks Line"
+msgstr "ແຖວ Winbooks"
+
+#. module: account_winbooks_import
+#: model:ir.model.fields,help:account_winbooks_import.field_account_winbooks_import_wizard__only_open
+msgid ""
+"Years closed in Winbooks are likely to have incomplete data. The counter "
+"part of incomplete entries will be set in a suspense account"
+msgstr ""
+"ປີທີ່ປິດແລ້ວໃນ Winbooks ອາດຈະມີຂໍ້ມູນທີ່ບໍ່ຄົບຖ້ວນ. ລາຍການຄູ່ຂອງລາຍການທີ່ບໍ່ຄົບຖ້ວນ ຈະຖືກຕັ້ງໄວ້ໃນບັນຊີພັກ"
+
+#. module: account_winbooks_import
+#. odoo-python
+#: code:addons/account_winbooks_import/wizard/import_wizard.py:0
+msgid "You should install a Fiscal Localization first."
+msgstr "ທ່ານຄວນຕິດຕັ້ງ ການກໍານົດທ້ອງຖິ່ນທາງດ້ານການເງິນ ກ່ອນ."
+
+#. module: account_winbooks_import
+#: model_terms:ir.ui.view,arch_db:account_winbooks_import.account_import_summary_form
+msgid "account analytic lines imported"
+msgstr "ແຖວການວິເຄາະບັນຊີທີ່ນໍາເຂົ້າແລ້ວ"
+
+#. module: account_winbooks_import
+#: model_terms:ir.ui.view,arch_db:account_winbooks_import.account_import_summary_form
+msgid "account analytics imported"
+msgstr "ການວິເຄາະບັນຊີທີ່ນໍາເຂົ້າແລ້ວ"

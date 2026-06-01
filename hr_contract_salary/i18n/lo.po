@@ -1,0 +1,1836 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * hr_contract_salary
+#
+# Translators:
+# Martin Trigaux <mat@odoo.com>, 2017
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.saas~18+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-16 16:02+0000\n"
+"PO-Revision-Date: 2026-05-19 10:45+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
+"hr_contract_salary/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_personal_info__impacts_net_salary
+msgid " If checked, any change on this information will trigger a new computation of the gross-->net salary."
+msgstr ""
+" ຖ້າໝາຍເລືອກ, ທຸກໆການປ່ຽນແປງຂໍ້ມູນນີ້ຈະກະຕຸ້ນໃຫ້ມີການຄິດໄລ່ເງິນເດືອນຈາກລວມ (Gross) ຫາ ສຸດທິ "
+"(Net) ຄືນໃໝ່."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__signatures_count
+msgid "# Signatures"
+msgstr "# ຈຳນວນການເຊັນຊື່"
+
+#. module: hr_contract_salary
+#: model:mail.template,body_html:hr_contract_salary.mail_template_send_offer
+#: model:mail.template,body_html:hr_contract_salary.mail_template_send_offer_applicant
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <h2>Congratulations!</h2>\n"
+"    You can configure your salary package by clicking on the link below.\n"
+"    <div style=\"padding: 16px 0px 16px 0px;\">\n"
+"        <a t-att-href=\"ctx.get('salary_package_url')\" target=\"_blank\" style=\"background-color: #875a7b; text-decoration: none; color: #fff; padding: 8px 16px 8px 16px; border-radius: 5px;\">Configure your package</a>\n"
+"    </div>\n"
+"</div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <h2>ຂໍສະແດງຄວາມຍິນດີ!</h2>\n"
+"    ທ່ານສາມາດຕັ້ງຄ່າຊຸດເງິນເດືອນຂອງທ່ານໄດ້ໂດຍການຄລິກທີ່ລິ້ງລຸ່ມນີ້.\n"
+"    <div style=\"padding: 16px 0px 16px 0px;\">\n"
+"        <a t-att-href=\"ctx.get('salary_package_url')\" target=\"_blank\" "
+"style=\"background-color: #875a7b; text-decoration: none; color: #fff; "
+"padding: 8px 16px 8px 16px; border-radius: 5px;\">ຕັ້ງຄ່າຊຸດຂອງທ່ານ</a>\n"
+"    </div>\n"
+"</div>\n"
+"        "
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_thank_you
+msgid "<i class=\"fa fa-check-circle-o mr8\"/>Congratulations"
+msgstr "<i class=\"fa fa-check-circle-o mr8\"/>ຂໍສະແດງຄວາມຍິນດີ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid ""
+"<span class=\"alert alert-warning\" role=\"alert\" colspan=\"2\" attrs=\"{'invisible':[('contract_id', '!=', False)]}\">\n"
+"                            Before accessing the simulation link, you first need to set up an offer template.\n"
+"                    </span>"
+msgstr ""
+"<span class=\"alert alert-warning\" role=\"alert\" colspan=\"2\" attrs=\""
+"{'invisible':[('contract_id', '!=', False)]}\">\n"
+"                            ກ່ອນທີ່ຈະເຂົ້າເຖິງລິ້ງຈຳລອງ, ກ່ອນອື່ນທ່ານຕ້ອງຕັ້ງຄ່າແບບຟອມຂໍ້ສະເໜີກ່ອ"
+"ນ.\n"
+"                    </span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "<span class=\"ms-3\">/ month</span>"
+msgstr "<span class=\"ms-3\">/ ເດືອນ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "<span class=\"ms-3\">/ year</span>"
+msgstr "<span class=\"ms-3\">/ ປີ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "<span class=\"o_stat_text ml4\">Previous Contract</span>"
+msgstr "<span class=\"o_stat_text ml4\">ສັນຍາສະບັບກ່ອນ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_applicant_view_form
+msgid "<span class=\"o_stat_text\">Contracts</span>"
+msgstr "<span class=\"o_stat_text\">ສັນຍາ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "<span class=\"o_stat_text\">Reviews</span>"
+msgstr "<span class=\"o_stat_text\">ການທົບທວນ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_thank_you
+msgid "<span class=\"text-muted mr4 ml4\">|</span>"
+msgstr "<span class=\"text-muted mr4 ml4\">|</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid ""
+"<span>\n"
+"                                    This field can only be modified by a server administrator, contact them if these field requires modifications.\n"
+"                                </span>\n"
+"                                <span attrs=\"{'invisible': [('requested_documents_fields_string', '!=', False)]}\">\n"
+"                                    There are currently no requested fields.\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                    ຫ້ອງຂໍ້ມູນນີ້ສາມາດແກ້ໄຂໄດ້ໂດຍຜູ້ດູແລລະບົບເທົ່ານັ້ນ, ກະລຸນາ"
+"ຕິດຕໍ່ພວກເຂົາຖ້າຫາກຫ້ອງຂໍ້ມູນນີ້ຕ້ອງການການແກ້ໄຂ.\n"
+"                                </span>\n"
+"                                <span attrs=\"{'invisible': ["
+"('requested_documents_fields_string', '!=', False)]}\">\n"
+"                                    ປັດຈຸບັນຍັງບໍ່ມີຫ້ອງຂໍ້ມູນທີ່ຖືກຮ້ອງຂໍ.\n"
+"                                </span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid "<span> /year</span>"
+msgstr "<span> /ປີ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.res_config_settings_view_form
+msgid "<span> days</span>"
+msgstr "<span> ມື້</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "<span>/ month</span>"
+msgstr "<span>/ ເດືອນ</span>"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "<span>days / year</span>"
+msgstr "<span>ມື້ / ປີ</span>"
+
+#. module: hr_contract_salary
+#: model:ir.model.constraint,message:hr_contract_salary.constraint_hr_contract_salary_advantage_required_fold_res_field_id
+msgid "A folded field is required"
+msgstr "ຕ້ອງມີຫ້ອງຂໍ້ມູນທີ່ພັບໄວ້"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_applicant__access_token_end_date
+msgid "Access Token Validity Date"
+msgstr "ວັນທີໝົດອາຍຸຂອງ Security Token"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__active
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__active
+msgid "Active"
+msgstr "ເປີດໃຊ້ງານ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "Activity"
+msgstr "ກິດຈະກຳ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__activity_creation
+msgid "Activity Creation"
+msgstr "ການສ້າງກິດຈະກຳ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__activity_creation_type
+msgid "Activity Creation Type"
+msgstr "ປະເພດການສ້າງກິດຈະກຳ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__activity_type_id
+msgid "Activity Type"
+msgstr "ປະເພດກິດຈະກຳ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "Add a line"
+msgstr "ເພີ່ມລາຍການ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "Add a section"
+msgstr "ເພີ່ມພາກສ່ວນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__advantage_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__advantage_ids
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "Advantage"
+msgstr "ຜົນປະໂຫຍດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__res_field_id
+msgid "Advantage Field"
+msgstr "ຫ້ອງຂໍ້ມູນຜົນປະໂຫຍດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__advantage_type_id
+msgid "Advantage Type"
+msgstr "ປະເພດຜົນປະໂຫຍດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__uom
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__uom
+msgid "Advantage Unit of Measure"
+msgstr "ຫົວໜ່ວຍວັດແທກຜົນປະໂຫຍດ"
+
+#. module: hr_contract_salary
+#: model:ir.actions.act_window,name:hr_contract_salary.hr_contract_advantage_action
+#: model:ir.ui.menu,name:hr_contract_salary.salary_package_advantage
+msgid "Advantages"
+msgstr "ຜົນປະໂຫຍດຕ່າງໆ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/models/hr_contract_salary_advantage.py:0
+msgid "Advantages that are not linked to a field should always be displayed."
+msgstr "ຜົນປະໂຫຍດທີ່ບໍ່ໄດ້ເຊື່ອມໂຍງກັບຫ້ອງຂໍ້ມູນໃດໜຶ່ງຄວນຖືກສະແດງຕະຫຼອດເວລາ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__res_field_public
+msgid "Advantage Field"
+msgstr "ຫ້ອງຂໍ້ມູນຜົນປະໂຫຍດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__advantage_ids
+msgid "All advantages in this field need to be selected, as a condition for the current one to be editable. Before edition, the current advantage is always set to false."
+msgstr ""
+"ທຸກໆຜົນປະໂຫຍດໃນຫ້ອງຂໍ້ມູນນີ້ຕ້ອງຖືກເລືອກ, ເພື່ອເປັນເງື່ອນໄຂໃຫ້ລາຍການປັດຈຸບັນສາມາດແກ້ໄຂໄດ້. ກ່ອນການແກ້"
+"ໄຂ, ຜົນປະໂຫຍດປັດຈຸບັນຈະຖືກຕັ້ງຄ່າເປັນ false ສະເໝີ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__always
+msgid "Always Selected"
+msgstr "ຖືກເລືອກສະເໝີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_employee_report__final_yearly_costs
+msgid "Annual Employee Budget"
+msgstr "ງົບປະມານພະນັກງານປະຈຳປີ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Annual Employer Cost"
+msgstr "ຕົ້ນທຶນນາຍຈ້າງປະຈຳປີ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_applicant
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__applicant_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__applicant_id
+msgid "Applicant"
+msgstr "ຜູ້ສະໝັກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__applies_on
+msgid "Applies On"
+msgstr "ນຳໃຊ້ກັບ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_next_step_button
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_sidebar
+msgid "Apply Now"
+msgstr "ສະໝັກດຽວນີ້"
+
+#. module: hr_contract_salary
+#: model:ir.actions.server,name:hr_contract_salary.ir_cron_clean_redundant_salary_data_ir_actions_server
+msgid "Archive/Delete redundant generated salary data"
+msgstr "ຈັດເກັບ/ລຶບ ຂໍ້ມູນເງິນເດືອນທີ່ສ້າງຂຶ້ນຊ້ຳຊ້ອນ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_search
+msgid "Archived"
+msgstr "ຈັດເກັບແລ້ວ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__activity_responsible_id
+msgid "Assigned to"
+msgstr "ມອບໝາຍໃຫ້"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_certificate_bachelor
+msgid "Bachelor"
+msgstr "ປະລິນຍາຕີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__applies_on__bank_account
+msgid "Bank Account"
+msgstr "ບັນຊີທະນາຄານ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_acc_number
+msgid "Bank account"
+msgstr "ບັນຊີທະນາຄານ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_birthdate
+msgid "Birthdate"
+msgstr "ວັນເດືອນປີເກີດ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__category_id
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_personal_info_view_form
+msgid "Category"
+msgstr "ໝວດໝູ່"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_certificate
+msgid "Certificate"
+msgstr "ໃບຢັ້ງຢືນ / ວຸດທິການສຶກສາ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_diff_email_template
+msgid "Changes summary since previous contract:"
+msgstr "ສະຫຼຸບການປ່ຽນແປງຕັ້ງແຕ່ສັນຍາສະບັບກ່ອນ:"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__checkbox
+msgid "Checkbox"
+msgstr "ຊ່ອງໝາຍເລືອກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__child_ids
+msgid "Child"
+msgstr "ລູກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__activity_creation
+msgid ""
+"Choose when the activity is created:\n"
+"- Employee signs his contract: Activity is created as soon as the employee signed the contract\n"
+"- Contract is countersigned: HR responsible have signed the contract and conclude the process."
+msgstr ""
+"ເລືອກເວລາທີ່ຈະສ້າງກິດຈະກຳ:\n"
+"- ພະນັກງານເຊັນສັນຍາ: ກິດຈະກຳຈະຖືກສ້າງຂຶ້ນທັນທີທີ່ພະນັກງານເຊັນສັນຍາ\n"
+"- ສັນຍາຖືກເຊັນຮ່ວມ: ຜູ້ຮັບຜິດຊອບຝ່າຍບຸກຄົນໄດ້ເຊັນສັນຍາ ແລະ ສິ້ນສຸດຂັ້ນຕອນ."
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_city
+msgid "City"
+msgstr "ເມືອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__code
+msgid "Code"
+msgstr "ລະຫັດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__color
+msgid "Color"
+msgstr "ສີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__company_id
+msgid "Company"
+msgstr "ບໍລິສັດ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການຕັ້ງຄ່າລະບົບ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_advantage_type
+msgid "Contract Advantage Type"
+msgstr "ປະເພດຜົນປະໂຫຍດໃນສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_advantage_value
+msgid "Contract Advantage Value"
+msgstr "ມູນຄ່າຜົນປະໂຫຍດໃນສັນຍາ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Contract Information:"
+msgstr "ຂໍ້ມູນສັນຍາ:"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__contract_start_date
+msgid "Contract Start Date"
+msgstr "ວັນທີເລີ່ມຕົ້ນສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__default_contract_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_history__default_contract_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_job__default_contract_id
+msgid "Contract Template"
+msgstr "ແບບຟອມສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.actions.act_window,name:hr_contract_salary.action_hr_contract_templates
+msgid "Contract Templates"
+msgstr "ແບບຟອມສັນຍາຕ່າງໆ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Contract Type"
+msgstr "ປະເພດສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__contract_update_template_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_history__contract_update_template_id
+msgid "Contract Update Document Template"
+msgstr "ແບບຟອມເອກະສານການອັບເດດສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__value_type__contract
+msgid "Contract Value"
+msgstr "ມູນຄ່າສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_employee_report
+msgid "Contract and Employee Analysis Report"
+msgstr "ບົດລາຍງານການວິເຄາະສັນຍາ ແລະ ພະນັກງານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__res_field_id
+msgid "Contract field linked to this advantage"
+msgstr "ຫ້ອງຂໍ້ມູນສັນຍາທີ່ເຊື່ອມໂຍງກັບຜົນປະໂຫຍດນີ້"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__cost_res_field_id
+msgid "Contract field linked to this advantage cost. If not set, the advantage won't be taken into account when computing the employee budget."
+msgstr ""
+"ຫ້ອງຂໍ້ມູນສັນຍາທີ່ເຊື່ອມໂຍງກັບຕົ້ນທຶນຜົນປະໂຫຍດນີ້. ຖ້າບໍ່ໄດ້ຕັ້ງຄ່າໄວ້, ຜົນປະໂຫຍດຈະບໍ່ຖືກນຳມາຄິດໄລ່ໃນງົບປະມາ"
+"ນພະນັກງານ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__fold_res_field_id
+msgid "Contract field used to fold this advantage."
+msgstr "ຫ້ອງຂໍ້ມູນສັນຍາທີ່ໃຊ້ເພື່ອພັບຜົນປະໂຫຍດນີ້."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__manual_res_field_id
+msgid "Contract field used to manually encode an advantage value."
+msgstr "ຫ້ອງຂໍ້ມູນສັນຍາທີ່ໃຊ້ເພື່ອປ້ອນມູນຄ່າຜົນປະໂຫຍດດ້ວຍຕົນເອງ."
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_history
+msgid "Contract history"
+msgstr "ປະຫວັດສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__activity_creation__countersigned
+msgid "Contract is countersigned"
+msgstr "ສັນຍາຖືກເຊັນຮ່ວມແລ້ວ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "Contracts Reviews"
+msgstr "ການທົບທວນສັນຍາຕ່າງໆ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__cost_res_field_id
+msgid "Cost Field"
+msgstr "ຫ້ອງຂໍ້ມູນຕົ້ນທຶນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__cost_field
+msgid "Cost Field Name"
+msgstr "ຊື່ຫ້ອງຂໍ້ມູນຕົ້ນທຶນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__cost_res_field_public
+msgid "Cost Field"
+msgstr "ຫ້ອງຂໍ້ມູນຕົ້ນທຶນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__dropdown_selection__country
+msgid "Countries"
+msgstr "ປະເທດຕ່າງໆ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_country
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__country_id
+msgid "Country"
+msgstr "ປະເທດ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_country_of_birth
+msgid "Country of Birth"
+msgstr "ປະເທດທີ່ເກີດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__hash_token
+msgid "Created From Token"
+msgstr "ສ້າງຂຶ້ນຈາກ Token"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__create_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__create_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__currency_id
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__uom__currency
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__uom__currency
+msgid "Currency"
+msgstr "ສະກຸນເງິນ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package
+msgid "Customize your salary"
+msgstr "ປັບແຕ່ງເງິນເດືອນຂອງທ່ານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__date
+msgid "Date"
+msgstr "ວັນທີ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__uom__days
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__uom__days
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_advantages
+msgid "Days"
+msgstr "ມື້"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_res_config_settings__access_token_validity
+msgid "Default Access Token Validity Duration"
+msgstr "ໄລຍະເວລາການນຳໃຊ້ເລີ່ມຕົ້ນຂອງ Security Token"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__default_contract_id
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_history__default_contract_id
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_job__default_contract_id
+msgid "Default contract used when making an offer to an applicant."
+msgstr "ແບບຟອມສັນຍາເລີ່ມຕົ້ນທີ່ໃຊ້ເມື່ອເຮັດຂໍ້ສະເໜີໃຫ້ຜູ້ສະໝັກ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__sign_template_id
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_history__sign_template_id
+msgid "Default document that the applicant will have to sign to accept a contract offer."
+msgstr "ເອກະສານເລີ່ມຕົ້ນທີ່ຜູ້ສະໝັກຈະຕ້ອງໄດ້ເຊັນເພື່ອຍອມຮັບຂໍ້ສະເໜີສັນຍາ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__contract_update_template_id
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_history__contract_update_template_id
+msgid "Default document that the employee will have to sign to update his contract."
+msgstr "ເອກະສານເລີ່ມຕົ້ນທີ່ພະນັກງານຈະຕ້ອງໄດ້ເຊັນເພື່ອອັບເດດສັນຍາຂອງຕົນ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__activity_creation_type
+msgid ""
+"Define when the system creates a new activity:\n"
+"- When the advantage is set: Unique creation the first time the employee will take the advantage\n"
+"- When the advantage is modified: Activity will be created for each change regarding the advantage."
+msgstr ""
+"ກຳນົດເວລາທີ່ລະບົບຈະສ້າງກິດຈະກຳໃໝ່:\n"
+"- ເມື່ອມີການຕັ້ງຄ່າຜົນປະໂຫຍດ: ສ້າງຄັ້ງດຽວໃນຄັ້ງທຳອິດທີ່ພະນັກງານໄດ້ຮັບຜົນປະໂຫຍດ\n"
+"- ເມື່ອມີການແກ້ໄຂຜົນປະໂຫຍດ: ກິດຈະກຳຈະຖືກສ້າງຂຶ້ນທຸກຄັ້ງທີ່ມີການປ່ຽນແປງກ່ຽວກັບຜົນປະໂຫຍດ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__sign_frenquency
+msgid ""
+"Define when the system creates a new sign request:\n"
+"- When the advantage is set: Unique signature request the first time the employee will take the advantage\n"
+"- When the advantage is modified: Signature request will be created for each change regarding the advantage."
+msgstr ""
+"ກຳນົດເວລາທີ່ລະບົບຈະສ້າງຄຳຮ້ອງຂໍເຊັນຊື່ໃໝ່:\n"
+"- ເມື່ອມີການຕັ້ງຄ່າຜົນປະໂຫຍດ: ຮ້ອງຂໍເຊັນຊື່ຄັ້ງດຽວໃນຄັ້ງທຳອິດທີ່ພະນັກງານໄດ້ຮັບຜົນປະໂຫຍດ\n"
+"- ເມື່ອມີການແກ້ໄຂຜົນປະໂຫຍດ: ຄຳຮ້ອງຂໍເຊັນຊື່ຈະຖືກສ້າງຂຶ້ນທຸກຄັ້ງທີ່ມີການປ່ຽນແປງກ່ຽວກັບຜົນປະໂຫຍດ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__department_id
+msgid "Department"
+msgstr "ພະແນກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__description
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "Description"
+msgstr "ຄຳອະທິບາຍ"
+
+#. module: hr_contract_salary
+#. odoo-javascript
+#: code:addons/hr_contract_salary/static/src/xml/resume_sidebar.xml:0
+msgid "Details"
+msgstr "ລາຍລະອຽດ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "Display"
+msgstr "ສະແດງຜົນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__display_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__display_type
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__display_type
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__display_type
+msgid "Display Type"
+msgstr "ປະເພດການສະແດງຜົນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__display_warning_message
+msgid "Display Warning Message"
+msgstr "ສະແດງຂໍ້ຄວາມເຕືອນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_certificate_doctor
+msgid "Doctor"
+msgstr "ປະລິນຍາເອກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__document
+msgid "Document"
+msgstr "ເອກະສານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__sign_template_id
+msgid "Documents selected here will be requested to the employee for additional signatures related to the advantage. eg: A company car policy to approve if you choose a company car."
+msgstr ""
+"ເອກະສານທີ່ເລືອກຢູ່ນີ້ຈະຖືກຮ້ອງຂໍໃຫ້ພະນັກງານເຊັນເພີ່ມເຕີມເຊິ່ງກ່ຽວຂ້ອງກັບຜົນປະໂຫຍດ. ຕົວຢ່າງ: ນະໂຍບາຍກາ"
+"ນນຳໃຊ້ລົດຂອງບໍລິສັດທີ່ຈະຕ້ອງອະນຸມັດ ຖ້າທ່ານເລືອກຮັບລົດຂອງບໍລິສັດ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_sign_document_wizard__sign_template_ids
+msgid "Documents to sign"
+msgstr "ເອກະສານທີ່ຕ້ອງເຊັນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_sign_document_wizard__sign_template_ids
+msgid ""
+"Documents to sign. Only documents with 1 or 2 different responsible are selectable.\n"
+"        Documents with 1 responsible will only have to be signed by the employee while documents with 2 different responsible will have to be signed by both the employee and the responsible.\n"
+"        "
+msgstr ""
+"ເອກະສານທີ່ຕ້ອງເຊັນ. ສາມາດເລືອກໄດ້ສະເພາະເອກະສານທີ່ມີຜູ້ຮັບຜິດຊອບ 1 ຫຼື 2 ຄົນເທົ່ານັ້ນ.\n"
+"        ເອກະສານທີ່ມີຜູ້ຮັບຜິດຊອບ 1 ຄົນ ຈະມີພຽງພະນັກງານເທົ່ານັ້ນທີ່ຕ້ອງເຊັນ, ສ່ວນເອກະສານທີ່ມີຜູ້ຮັບຜິດຊອ"
+"ບ 2 ຄົນ ຈະຕ້ອງໄດ້ເຊັນທັງພະນັກງານ ແລະ ຜູ້ຮັບຜິດຊອບ.\n"
+"        "
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__dropdown
+msgid "Dropdown"
+msgstr "ລາຍການເລືອກແບບດຶງລົງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__dropdown-group
+msgid "Dropdown Group"
+msgstr "ກຸ່ມລາຍການເລືອກແບບດຶງລົງ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_email
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__email
+msgid "Email"
+msgstr "ອີເມວ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__email_to
+msgid "Email To"
+msgstr "ສົ່ງອີເມວຫາ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__sign_copy_partner_id
+msgid "Email address to which to transfer the signature."
+msgstr "ທີ່ຢູ່ອີເມວທີ່ຈະສົ່ງສຳເນົາການເຊັນຊື່ໄປໃຫ້."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__employee_id
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__applies_on__employee
+msgid "Employee"
+msgstr "ພະນັກງານ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__employee_contract_id
+msgid "Employee Contract"
+msgstr "ສັນຍາພະນັກງານ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Employee Name"
+msgstr "ຊື່ພະນັກງານ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_image_1920
+msgid "Employee Photo"
+msgstr "ຮູບພະນັກງານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__activity_creation__running
+msgid "Employee signs his contract"
+msgstr "ພະນັກງານເຊັນສັນຍາຂອງຕົນ"
+
+#. module: hr_contract_salary
+#: model:mail.template,name:hr_contract_salary.mail_template_send_offer
+msgid "Employee: Contract And Salary Package"
+msgstr "ພະນັກງານ: ສັນຍາ ແລະ ຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid ""
+"Equals to the sum of the following values:\n"
+"\n"
+"%s"
+msgstr ""
+"ເທົ່າກັບຜົນລວມຂອງມູນຄ່າຕໍ່ໄປນີ້:\n"
+"\n"
+"%s"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.advantage,name:hr_contract_salary.advantage_extra_time_off
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__holidays
+msgid "Extra Time Off"
+msgstr "ວັນພັກເພີ່ມເຕີມ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_gender_female
+msgid "Female"
+msgstr "ເພດຍິງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__field
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__field
+msgid "Field Name"
+msgstr "ຊື່ຫ້ອງຂໍ້ມູນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_study_field
+msgid "Field of Study"
+msgstr "ສາຂາທີ່ຮຽນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__fixed_value
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__value_type__fixed
+msgid "Fixed Value"
+msgstr "ມູນຄ່າຄົງທີ່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__fold_field
+msgid "Fold Field Name"
+msgstr "ຊື່ຫ້ອງຂໍ້ມູນການພັບ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__fold_label
+msgid "Fold Label"
+msgstr "ປ້າຍກຳກັບການພັບ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__fold_res_field_id
+msgid "Fold Res Field"
+msgstr "ຫ້ອງຂໍ້ມູນ Res ການພັບ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__folded
+msgid "Folded"
+msgstr "ພັບໄວ້"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_gender
+msgid "Gender"
+msgstr "ເພດ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_applicant_view_form
+msgid "Generate Offer"
+msgstr "ສ້າງຂໍ້ສະເໜີ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_generate_simulation_link
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "Generate Simulation Link"
+msgstr "ສ້າງລິ້ງຈຳລອງ"
+
+#. module: hr_contract_salary
+#: model:ir.actions.act_window,name:hr_contract_salary.generate_offer_link_action
+#: model:ir.actions.act_window,name:hr_contract_salary.generate_simulation_link_action
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid "Generate a Simulation Link"
+msgstr "ສ້າງລິ້ງການຈຳລອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage_value__color__green
+msgid "Green"
+msgstr "ສີຂຽວ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_search
+msgid "Group By"
+msgstr "ຈັດກຸ່ມໂດຍ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/models/hr_contract.py:0
+msgid "HR Responsible %s should be a User of Sign and have a valid email address when New Contract Document Template is specified"
+msgstr ""
+"ຜູ້ຮັບຜິດຊອບຝ່າຍບຸກຄົນ %s ຄວນເປັນຜູ້ໃຊ້ລະບົບການເຊັນ (Sign) ແລະ ມີທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ ເມື່ອມີການກຳນົດແບ"
+"ບຟອມເອກະສານສັນຍາໃໝ່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__has_admin_access
+msgid "Has Admin Access"
+msgstr "ມີສິດເຂົ້າເຖິງຂອງຜູ້ດູແລ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__helper
+msgid "Helper"
+msgstr "ຕົວຊ່ວຍ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_personal_information
+msgid "Hide <i class=\"oi oi-chevron-up\"/>"
+msgstr "ເຊື່ອງ <i class=\"oi oi-chevron-up\"/>"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__hide_children
+msgid "Hide Children"
+msgstr "ເຊື່ອງລູກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__hide_description
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__hide_description
+msgid "Hide Description"
+msgstr "ເຊື່ອງຄຳອະທິບາຍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_personal_info_value__hide_children
+msgid "Hide children personal info when checked."
+msgstr "ເຊື່ອງຂໍ້ມູນສ່ວນຕົວຂອງລູກເມື່ອໝາຍເລືອກ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__hide_description
+msgid "Hide the description if the advantage is not taken."
+msgstr "ເຊື່ອງຄຳອະທິບາຍຖ້າບໍ່ໄດ້ຮັບຜົນປະໂຫຍດນີ້."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__id
+msgid "ID"
+msgstr "ລະຫັດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__icon
+msgid "Icon"
+msgstr "ໄອຄອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_resume__impacts_monthly_total
+msgid "If checked, the value of this information will be computed in all information set as Monthly Total"
+msgstr ""
+"ຖ້າໝາຍເລືອກ, ມູນຄ່າຂອງຂໍ້ມູນນີ້ຈະຖືກຄິດໄລ່ໃນທຸກຂໍ້ມູນທີ່ຕັ້ງເປັນ ຍອດລວມປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__image_1920
+msgid "Image"
+msgstr "ຮູບພາບ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__impacts_monthly_total
+msgid "Impacts Monthly Total"
+msgstr "ມີຜົນຕໍ່ຍອດລວມປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__impacts_net_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__impacts_net_salary
+msgid "Impacts Net Salary"
+msgstr "ມີຜົນຕໍ່ເງິນເດືອນສຸດທິ"
+
+#. module: hr_contract_salary
+#: model_terms:hr.contract.salary.advantage,description:hr_contract_salary.advantage_extra_time_off
+msgid ""
+"In addition to your legal leaves, you can chose up to 30 extra days off.\n"
+"            The amount of annual time off (legal leaves) you get depends on your work schedule in the previous year. A full-time work schedule through the 12 months of the last year, under your contract, will grant you 20 annual time off (legal leaves)."
+msgstr ""
+"ນອກຈາກວັນພັກຕາມກົດໝາຍແລ້ວ, ທ່ານສາມາດເລືອກວັນພັກເພີ່ມເຕີມໄດ້ສູງສຸດ 30 ມື້.\n"
+"            ຈຳນວນວັນພັກປະຈຳປີ (ວັນພັກຕາມກົດໝາຍ) ທີ່ທ່ານໄດ້ຮັບ ແມ່ນຂຶ້ນກັບຕາຕະລາງການເຮັດວຽກຂອງ"
+"ທ່ານໃນປີຜ່ານມາ. ການເຮັດວຽກເຕັມເວລາຕະຫຼອດ 12 ເດືອນຂອງປີກາຍ ພາຍໃຕ້ສັນຍາຂອງທ່ານ ຈະເຮັດໃຫ້ທ່ານໄ"
+"ດ້ຮັບວັນພັກປະຈຳປີ 20 ມື້ (ວັນພັກຕາມກົດໝາຍ)."
+
+#. module: hr_contract_salary
+#. odoo-javascript
+#: code:addons/hr_contract_salary/static/src/js/hr_contract_salary.js:0
+msgid ""
+"In order to choose %s, first you need to choose:\n"
+" %s"
+msgstr ""
+"ເພື່ອທີ່ຈະເລືອກ %s, ທຳອິດທ່ານຕ້ອງເລືອກ:\n"
+" %s"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__info_type_id
+msgid "Info Type"
+msgstr "ປະເພດຂໍ້ມູນ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_personal_info_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_form
+msgid "Information"
+msgstr "ຂໍ້ມູນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__integer
+msgid "Integer"
+msgstr "ຕົວເລກຖ້ວນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__is_required
+msgid "Is Required"
+msgstr "ຈຳເປັນຕ້ອງປ້ອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__is_origin_contract_template
+msgid "Is origin contract a contract template?"
+msgstr "ສັນຍາຕົ້ນສະບັບເປັນແບບຟອມສັນຍາ ຫຼື ບໍ່?"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+#: model:ir.model,name:hr_contract_salary.model_hr_job
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__employee_job_id
+msgid "Job Position"
+msgstr "ຕຳແໜ່ງງານ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__job_title
+msgid "Job Title"
+msgstr "ຊື່ຕຳແໜ່ງງານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__dropdown_selection__lang
+msgid "Languages"
+msgstr "ພາສາຕ່າງໆ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__write_uid
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__write_uid
+msgid "Last Updated by"
+msgstr "ອັບເດດລ້າສຸດໂດຍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__write_date
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__write_date
+msgid "Last Updated on"
+msgstr "ອັບເດດລ້າສຸດເມື່ອ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.actions.act_window,help:hr_contract_salary.action_hr_contract_templates
+msgid "Let's create one"
+msgstr "ມາສ້າງກັນເລີຍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage_value__display_type__line
+msgid "Line"
+msgstr "ເສັ້ນ / ລາຍການ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__position__left
+msgid "Main Panel"
+msgstr "ແຜງຫຼັກ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_gender_male
+msgid "Male"
+msgstr "ເພດຊາຍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__advantage_ids
+msgid "Mandatory Advantages"
+msgstr "ຜົນປະໂຫຍດທີ່ບັງຄັບ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__manual_field
+msgid "Manual Field Name"
+msgstr "ຊື່ຫ້ອງຂໍ້ມູນແບບປ້ອນເອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__manual
+msgid "Manual Input"
+msgstr "ປ້ອນຂໍ້ມູນດ້ວຍຕົນເອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__manual_res_field_id
+msgid "Manual Res Field"
+msgstr "ຫ້ອງຂໍ້ມູນ Res ແບບປ້ອນເອງ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_certificate_master
+msgid "Master"
+msgstr "ປະລິນຍາໂທ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/models/hr_contract_salary_personal_info.py:0
+msgid "Mismatch between res_field_id %(field)s and model %(model)s for info %(personal_info)s"
+msgstr ""
+"ຂໍ້ມູນບໍ່ກົງກັນລະຫວ່າງ res_field_id %(field)s ແລະ ໂມເດວ %(model)s ສຳລັບຂໍ້ມູນ %"
+"(personal_info)s"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage_type__periodicity__monthly
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume_category__periodicity__monthly
+msgid "Monthly"
+msgstr "ປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_history_view_form
+msgid "Monthly Cost"
+msgstr "ຕົ້ນທຶນປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__monthly_yearly_costs
+msgid "Monthly Cost (Real)"
+msgstr "ຕົ້ນທຶນປະຈຳເດືອນ (ຕົວຈິງ)"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Monthly Gross Salary"
+msgstr "ເງິນເດືອນລວມປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__value_type__monthly_total
+msgid "Monthly Total"
+msgstr "ຍອດລວມປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_history__reference_monthly_wage
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_history_view_form
+msgid "Monthly Wage"
+msgstr "ຄ່າຈ້າງປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__name
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__name
+msgid "Name"
+msgstr "ຊື່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_personal_info__res_field_id
+msgid "Name of the field related to this personal info."
+msgstr "ຊື່ຂອງຫ້ອງຂໍ້ມູນທີ່ກ່ຽວຂ້ອງກັບຂໍ້ມູນສ່ວນຕົວນີ້."
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_identification_id
+msgid "National Identification Number"
+msgstr "ເລກບັດປະຈຳຕົວປະຊາຊົນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_country_id
+msgid "Nationality"
+msgstr "ສັນຊາດ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package
+msgid "Net calculation"
+msgstr "ການຄິດໄລ່ເງິນສຸດທິ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__sign_template_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_history__sign_template_id
+msgid "New Contract Document Template"
+msgstr "ແບບຟອມເອກະສານສັນຍາໃໝ່"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "No"
+msgstr "ບໍ່"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "No HR responsible defined on the job position. Please contact an administrator."
+msgstr ""
+"ບໍ່ໄດ້ກຳນົດຜູ້ຮັບຜິດຊອບຝ່າຍບຸກຄົນໃນຕຳແໜ່ງງານນີ້. ກະລຸນາຕິດຕໍ່ຜູ້ດູແລລະບົບ."
+
+#. module: hr_contract_salary
+#: model_terms:ir.actions.act_window,help:hr_contract_salary.action_hr_contract_templates
+msgid "No Template found"
+msgstr "ບໍ່ພົບແບບຟອມ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/models/hr_contract.py:0
+msgid "No private address defined on the employee!"
+msgstr "ບໍ່ໄດ້ກຳນົດທີ່ຢູ່ສ່ວນຕົວຂອງພະນັກງານ!"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "No signature template defined on the contract. Please contact the HR responsible."
+msgstr "ບໍ່ໄດ້ກຳນົດແບບຟອມການເຊັນຊື່ໃນສັນຍາ. ກະລຸນາຕິດຕໍ່ຜູ້ຮັບຜິດຊອບຝ່າຍບຸກຄົນ."
+
+#. module: hr_contract_salary
+#. odoo-javascript
+#: code:addons/hr_contract_salary/static/src/js/hr_contract_salary.js:0
+msgid "Not a valid e-mail address"
+msgstr "ທີ່ຢູ່ອີເມວບໍ່ຖືກຕ້ອງ"
+
+#. module: hr_contract_salary
+#. odoo-javascript
+#: code:addons/hr_contract_salary/static/src/js/hr_contract_salary.js:0
+msgid "Not a valid input in integer field"
+msgstr "ຂໍ້ມູນທີ່ປ້ອນໃນຫ້ອງຕົວເລກຖ້ວນບໍ່ຖືກຕ້ອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__holidays
+msgid "Number of days of paid leaves the employee gets per year."
+msgstr "ຈຳນວນມື້ພັກທີ່ໄດ້ຮັບຄ່າຈ້າງ ທີ່ພະນັກງານໄດ້ຮັບຕໍ່ປີ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__contract_id
+msgid "Offer Template"
+msgstr "ແບບຟອມຂໍ້ສະເໜີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__url
+msgid "Offer link"
+msgstr "ລິ້ງຂໍ້ສະເໜີ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Oops"
+msgstr "ໂອ໊ະ"
+
+#. module: hr_contract_salary
+#: model:sign.template,redirect_url_text:hr_contract_salary.sign_template_cdi_developer
+msgid "Open Link"
+msgstr "ເປີດລິ້ງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__origin_contract_id
+msgid "Origin Contract"
+msgstr "ສັນຍາຕົ້ນສະບັບ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Original Link"
+msgstr "ລິ້ງຕົ້ນສະບັບ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_certificate_other
+#: model:hr.contract.salary.personal.info.value,name:hr_contract_salary.hr_contract_salary_personal_info_gender_other
+msgid "Other"
+msgstr "ອື່ນໆ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__parent_id
+msgid "Parent"
+msgstr "ລາຍການຫຼັກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__uom__percent
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__uom__percent
+msgid "Percent"
+msgstr "ເປີເຊັນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__periodicity
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__periodicity
+msgid "Periodicity"
+msgstr "ຮອບວຽນເວລາ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_emergency_contact
+msgid "Person to call"
+msgstr "ບຸກຄົນທີ່ຕິດຕໍ່ໄດ້"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "Personal Documents"
+msgstr "ເອກະສານສ່ວນຕົວ"
+
+#. module: hr_contract_salary
+#: model:ir.actions.act_window,name:hr_contract_salary.hr_contract_salary_personal_info_action
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__personal_info_id
+#: model:ir.ui.menu,name:hr_contract_salary.salary_package_personal_info
+msgid "Personal Info"
+msgstr "ຂໍ້ມູນສ່ວນຕົວ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Personal Information"
+msgstr "ຂໍ້ມູນສ່ວນຕົວ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_phone
+msgid "Phone Number"
+msgstr "ເບີໂທລະສັບ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_emergency_phone
+msgid "Phone number"
+msgstr "ເບີໂທລະສັບ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_resume__category_id
+msgid "Pick a category to display this information"
+msgstr "ເລືອກໝວດໝູ່ເພື່ອສະແດງຂໍ້ມູນນີ້"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_resume__value_type
+msgid ""
+"Pick how the value of the information is computed:\n"
+"Fixed value: Set a determined value static for all links\n"
+"Contract value: Get the value from a field on the contract record\n"
+"Payslip value: Get the value from a field on the payslip record\n"
+"Sum of Advantages value: You can pick in all advantages and compute a sum of them\n"
+"Monthly Total: The information will be a total of all the informations in the category Monthly Advantages"
+msgstr ""
+"ເລືອກວິທີການຄິດໄລ່ມູນຄ່າຂອງຂໍ້ມູນ:\n"
+"ມູນຄ່າຄົງທີ່: ຕັ້ງຄ່າມູນຄ່າທີ່ກຳນົດໄວ້ຕາຍຕົວສຳລັບທຸກລິ້ງ\n"
+"ມູນຄ່າສັນຍາ: ດຶງມູນຄ່າຈາກຫ້ອງຂໍ້ມູນໃນບັນທຶກສັນຍາ\n"
+"ມູນຄ່າສະລິບເງິນເດືອນ: ດຶງມູນຄ່າຈາກຫ້ອງຂໍ້ມູນໃນບັນທຶກສະລິບເງິນເດືອນ\n"
+"ຜົນລວມຂອງມູນຄ່າຜົນປະໂຫຍດ: ທ່ານສາມາດເລືອກຜົນປະໂຫຍດທັງໝົດ ແລະ ຄິດໄລ່ຜົນລວມຂອງພວກມັນ\n"
+"ຍອດລວມປະຈຳເດືອນ: ຂໍ້ມູນຈະເປັນຍອດລວມຂອງຂໍ້ມູນທັງໝົດໃນໝວດໝູ່ ຜົນປະໂຫຍດປະຈຳເດືອນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_place_of_birth
+msgid "Place of Birth"
+msgstr "ສະຖານທີ່ເກີດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__placeholder
+msgid "Placeholder"
+msgstr "ຂໍ້ຄວາມແນະນຳໃນຫ້ອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__position
+msgid "Position"
+msgstr "ຕຳແໜ່ງ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
+msgid "Previous Contract"
+msgstr "ສັນຍາສະບັບກ່ອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__applies_on__address
+msgid "Private Home Address"
+msgstr "ທີ່ຢູ່ເຮືອນສ່ວນຕົວ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_private_license_plate
+msgid "Private License Plate"
+msgstr "ປ້າຍທະບຽນລົດສ່ວນຕົວ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_applicant__proposed_contracts
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_applicant_view_form
+msgid "Proposed Contracts"
+msgstr "ສັນຍາທີ່ສະເໜີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_applicant__proposed_contracts_count
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__contract_reviews_count
+msgid "Proposed Contracts Count"
+msgstr "ຈຳນວນສັນຍາທີ່ສະເໜີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__radio
+msgid "Radio"
+msgstr "ປຸ່ມເລືອກ (Radio)"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__radio
+msgid "Radio Buttons"
+msgstr "ປຸ່ມເລືອກ (Radio Buttons)"
+
+#. module: hr_contract_salary
+#. odoo-javascript
+#: code:addons/hr_contract_salary/static/src/xml/resume_sidebar.xml:0
+msgid "Recompute"
+msgstr "ຄິດໄລ່ຄືນໃໝ່"
+
+#. module: hr_contract_salary
+#: model:mail.template,name:hr_contract_salary.mail_template_send_offer_applicant
+msgid "Recruitment: Your Salary Package"
+msgstr "ການຮັບສະໝັກ: ຊຸດເງິນເດືອນຂອງທ່ານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage_value__color__red
+msgid "Red"
+msgstr "ສີແດງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__res_field_id
+msgid "Related Field"
+msgstr "ຫ້ອງຂໍ້ມູນທີ່ກ່ຽວຂ້ອງ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_personal_info_view_form
+msgid "Related Model"
+msgstr "ໂມເດວທີ່ກ່ຽວຂ້ອງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__requested_documents_field_ids
+msgid "Requested Documents"
+msgstr "ເອກະສານທີ່ຮ້ອງຂໍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__requested_documents
+msgid "Requested Documents Fields"
+msgstr "ຫ້ອງຂໍ້ມູນເອກະສານທີ່ຮ້ອງຂໍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__requested_documents_fields_string
+msgid "Requested Documents"
+msgstr "ເອກະສານທີ່ຮ້ອງຂໍ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__res_model
+msgid "Res Model"
+msgstr "ໂມເດວ Res"
+
+#. module: hr_contract_salary
+#: model:ir.actions.act_window,name:hr_contract_salary.hr_contract_salary_resume_action
+#: model:ir.ui.menu,name:hr_contract_salary.salary_package_resume
+msgid "Resume"
+msgstr "ປະຫວັດຫຍໍ້ / ສະຫຼຸບຂໍ້ມູນ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_next_step_button
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_sidebar
+msgid "Review Contract &amp; Sign"
+msgstr "ທົບທວນສັນຍາ ແລະ ເຊັນຊື່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_payroll_structure_type__salary_advantage_ids
+msgid "Salary Advantage"
+msgstr "ຜົນປະໂຫຍດດ້ານເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_advantage
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_tree
+msgid "Salary Package Advantage"
+msgstr "ຜົນປະໂຫຍດໃນຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.ui.menu,name:hr_contract_salary.salary_package_menu
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.res_config_settings_view_form
+msgid "Salary Package Configurator"
+msgstr "ຕົວຕັ້ງຄ່າຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_personal_info
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_personal_info_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_personal_info_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_tree
+msgid "Salary Package Personal Info"
+msgstr "ຂໍ້ມູນສ່ວນຕົວໃນຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_personal_info_type
+msgid "Salary Package Personal Info Type"
+msgstr "ປະເພດຂໍ້ມູນສ່ວນຕົວໃນຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_personal_info_value
+msgid "Salary Package Personal Info Value"
+msgstr "ມູນຄ່າຂໍ້ມູນສ່ວນຕົວໃນຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_resume
+msgid "Salary Package Resume"
+msgstr "ປະຫວັດຫຍໍ້ໃນຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_salary_resume_category
+msgid "Salary Package Resume Category"
+msgstr "ໝວດໝູ່ປະຫວັດຫຍໍ້ໃນຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Salary Package Summary"
+msgstr "ສະຫຼຸບຊຸດເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_payroll_structure_type
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__structure_type_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__structure_type_id
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__structure_type_id
+msgid "Salary Structure Type"
+msgstr "ປະເພດໂຄງສ້າງເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_study_school
+msgid "School"
+msgstr "ໂຮງຮຽນ / ສະຖາບັນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage_value__display_type__section
+msgid "Section"
+msgstr "ພາກສ່ວນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_applicant__access_token
+msgid "Security Token"
+msgstr "Security Token"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__dropdown
+msgid "Selection"
+msgstr "ການເລືອກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__dropdown_selection
+msgid "Selection Nature"
+msgstr "ລັກສະນະການເລືອກ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid "Send"
+msgstr "ສົ່ງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__sign_copy_partner_id
+msgid "Send a copy to"
+msgstr "ສົ່ງສຳເນົາໃຫ້"
+
+#. module: hr_contract_salary
+#: model:mail.template,description:hr_contract_salary.mail_template_send_offer_applicant
+msgid "Sent automatically when you generate an offer for an application"
+msgstr "ສົ່ງໂດຍອັດຕະໂນມັດເມື່ອທ່ານສ້າງຂໍ້ສະເໜີໃຫ້ກັບໃບສະໝັກ"
+
+#. module: hr_contract_salary
+#: model:mail.template,description:hr_contract_salary.mail_template_send_offer
+msgid "Sent manually when you generate a simulation link on the employee contract"
+msgstr "ສົ່ງດ້ວຍຕົນເອງເມື່ອທ່ານສ້າງລິ້ງຈຳລອງໃນສັນຍາພະນັກງານ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__sequence
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_type__sequence
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__sequence
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__sequence
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_type__sequence
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__sequence
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume_category__sequence
+msgid "Sequence"
+msgstr "ລຳດັບ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_personal_information
+msgid "Show <i class=\"oi oi-chevron-down\"/>"
+msgstr "ສະແດງ <i class=\"oi oi-chevron-down\"/>"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__show_name
+msgid "Show Name"
+msgstr "ສະແດງຊື່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__position__right
+msgid "Side Panel"
+msgstr "ແຜງດ້ານຂ້າງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__sign_frenquency
+msgid "Sign Creation Type"
+msgstr "ປະເພດການສ້າງການເຊັນ"
+
+#. module: hr_contract_salary
+#: model:ir.model,name:hr_contract_salary.model_hr_contract_sign_document_wizard
+msgid "Sign document in contract"
+msgstr "ເຊັນເອກະສານໃນສັນຍາ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Signature Request - %s"
+msgstr "ຄຳຮ້ອງຂໍເຊັນຊື່ - %s"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__slider
+msgid "Slider"
+msgstr "ແຖບເລື່ອນ (Slider)"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__slider_max
+msgid "Slider Max"
+msgstr "ຄ່າສູງສຸດຂອງແຖບເລື່ອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__slider_min
+msgid "Slider Min"
+msgstr "ຄ່າຕ່ຳສຸດຂອງແຖບເລື່ອນ"
+
+#. module: hr_contract_salary
+#. odoo-javascript
+#: code:addons/hr_contract_salary/static/src/js/hr_contract_salary.js:0
+msgid "Some required fields are not filled"
+msgstr "ບາງຫ້ອງຂໍ້ມູນທີ່ຈຳເປັນຍັງບໍ່ໄດ້ປ້ອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__dropdown_selection__specific
+msgid "Specific Values"
+msgstr "ມູນຄ່າສະເພາະ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_state_id
+msgid "State"
+msgstr "ແຂວງ / ລັດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__dropdown_selection__state
+msgid "States"
+msgstr "ແຂວງຕ່າງໆ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_street
+msgid "Street"
+msgstr "ຖະໜົນ"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_street2
+msgid "Street 2"
+msgstr "ຖະໜົນ 2"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_search
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_search
+msgid "Structure Type"
+msgstr "ປະເພດໂຄງສ້າງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume__value_type__sum
+msgid "Sum of Advantages Values"
+msgstr "ຜົນລວມຂອງມູນຄ່າຜົນປະໂຫຍດ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__sign_template_id
+msgid "Template to Sign"
+msgstr "ແບບຟອມທີ່ຈະເຊັນ"
+
+#. module: hr_contract_salary
+#: model:ir.ui.menu,name:hr_contract_salary.hr_menu_contract_templates
+msgid "Templates"
+msgstr "ແບບຟອມຕ່າງໆ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__display_type__text
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__text
+msgid "Text"
+msgstr "ຂໍ້ຄວາມ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__origin_contract_id
+msgid "The contract from which this contract has been duplicated."
+msgstr "ສັນຍາທີ່ຖືກສຳເນົາມາເພື່ອສ້າງສັນຍາສະບັບນີ້."
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "The current requested documents are the followings:"
+msgstr "ເອກະສານທີ່ຖືກຮ້ອງຂໍໃນປັດຈຸບັນມີດັ່ງຕໍ່ໄປນີ້:"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid "The employee does not have a valid email set in the private information. The Simulation Link won't be able to be completed."
+msgstr ""
+"ພະນັກງານບໍ່ມີອີເມວທີ່ຖືກຕ້ອງໃນຂໍ້ມູນສ່ວນຕົວ. ລິ້ງການຈຳລອງຈະບໍ່ສາມາດເຮັດວຽກໄດ້ສົມບູນ."
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "The employee is not linked to an existing user, please contact the administrator.."
+msgstr "ພະນັກງານບໍ່ໄດ້ເຊື່ອມໂຍງກັບຜູ້ໃຊ້ທີ່ມີຢູ່, ກະລຸນາຕິດຕໍ່ຜູ້ດູແລລະບົບ."
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/models/hr_contract_salary_advantage.py:0
+msgid "The minimum value for the slider should be inferior to the maximum value."
+msgstr "ຄ່າຕ່ຳສຸດຂອງແຖບເລື່ອນຄວນຈະໜ້ອຍກວ່າຄ່າສູງສຸດ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__signatures_count
+msgid "The number of signatures on the pdf contract with the most signatures."
+msgstr "ຈຳນວນການເຊັນຊື່ໃນສັນຍາ PDF ທີ່ມີການເຊັນຊື່ຫຼາຍທີ່ສຸດ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__activity_type_id
+msgid "The type of activity that will be created automatically on the contract if this advantage is chosen by the employee."
+msgstr ""
+"ປະເພດກິດຈະກຳທີ່ຈະຖືກສ້າງຂຶ້ນໂດຍອັດຕະໂນມັດໃນສັນຍາ ຖ້າພະນັກງານເລືອກຜົນປະໂຫຍດນີ້."
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_advantages
+msgid "There is no available option to customize your salary"
+msgstr "ບໍ່ມີທາງເລືອກໃນການປັບແຕ່ງເງິນເດືອນຂອງທ່ານ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_thank_you
+msgid "They will review your contract.<br/> Feel free to contact them if you have any questions."
+msgstr ""
+"ພວກເຂົາຈະທົບທວນສັນຍາຂອງທ່ານ.<br/> ທ່ານສາມາດຕິດຕໍ່ສອບຖາມພວກເຂົາໄດ້ ຖ້າມີຂໍ້ສົງໄສໃດໆ."
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "This contract has been updated, please request an updated link.."
+msgstr "ສັນຍານີ້ໄດ້ຖືກອັບເດດແລ້ວ, ກະລຸນາຂໍລິ້ງໃໝ່ທີ່ອັບເດດແລ້ວ."
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.generate_simulation_link_view_form
+msgid "This job position does not have any contract template related and the advantages will be related to the current employee contract instead of the new job position."
+msgstr ""
+"ຕຳແໜ່ງງານນີ້ບໍ່ມີແບບຟອມສັນຍາທີ່ກ່ຽວຂ້ອງ ແລະ ຜົນປະໂຫຍດຕ່າງໆ ຈະອີງຕາມສັນຍາພະນັກງານປັດຈຸບັນ ແທນທີ່ຈະເ"
+"ປັນຕຳແໜ່ງງານໃໝ່."
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "This link is invalid. Please contact the HR Responsible to get a new one..."
+msgstr "ລິ້ງນີ້ບໍ່ຖືກຕ້ອງ. ກະລຸນາຕິດຕໍ່ຜູ້ຮັບຜິດຊອບຝ່າຍບຸກຄົນ ເພື່ອຂໍລິ້ງໃໝ່."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__monthly_yearly_costs
+msgid "Total real monthly cost of the employee for the employer."
+msgstr "ຕົ້ນທຶນປະຈຳເດືອນຕົວຈິງທັງໝົດຂອງພະນັກງານ ສຳລັບນາຍຈ້າງ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__final_yearly_costs
+msgid "Total real yearly cost of the employee for the employer."
+msgstr "ຕົ້ນທຶນປະຈຳປີຕົວຈິງທັງໝົດຂອງພະນັກງານ ສຳລັບນາຍຈ້າງ."
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_history__reference_yearly_cost
+msgid "Total yearly cost of the employee for the employer."
+msgstr "ຕົ້ນທຶນປະຈຳປີທັງໝົດຂອງພະນັກງານ ສຳລັບນາຍຈ້າງ."
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.res_config_settings_view_form
+msgid "Validity duration for salary package requests for new applicants"
+msgstr "ໄລຍະເວລາການນຳໃຊ້ ສຳລັບການຮ້ອງຂໍຊຸດເງິນເດືອນຂອງຜູ້ສະໝັກໃໝ່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage__value_ids
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_advantage_value__value
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__value_ids
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info_value__value
+msgid "Value"
+msgstr "ມູນຄ່າ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_resume__value_type
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_search
+msgid "Value Type"
+msgstr "ປະເພດມູນຄ່າ"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Wage"
+msgstr "ຄ່າຈ້າງ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__wage_on_signature
+msgid "Wage on Payroll"
+msgstr "ຄ່າຈ້າງໃນບັນຊີເງິນເດືອນ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract__wage_on_signature
+msgid "Wage on contract signature"
+msgstr "ຄ່າຈ້າງເມື່ອເຊັນສັນຍາ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_history__reference_monthly_wage
+msgid "Wage update with holidays retenues"
+msgstr "ການອັບເດດຄ່າຈ້າງໂດຍມີການຫັກວັນພັກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__wage_with_holidays
+msgid "Wage with Holidays"
+msgstr "ຄ່າຈ້າງລວມວັນພັກ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__activity_creation_type__onchange
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__sign_frenquency__always
+msgid "When the advantage is modified"
+msgstr "ເມື່ອຜົນປະໂຫຍດຖືກແກ້ໄຂ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__activity_creation_type__always
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage__sign_frenquency__onchange
+msgid "When the advantage is set"
+msgstr "ເມື່ອຜົນປະໂຫຍດຖືກຕັ້ງຄ່າ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_advantage__show_name
+msgid "Whether the name should be displayed in the Salary Configurator"
+msgstr "ຄວນສະແດງຊື່ໃນຕົວຕັ້ງຄ່າເງິນເດືອນ ຫຼື ບໍ່"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_advantage_type__periodicity__yearly
+#: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume_category__periodicity__yearly
+msgid "Yearly"
+msgstr "ປະຈຳປີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_generate_simulation_link__final_yearly_costs
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_history__reference_yearly_cost
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_history_view_form
+msgid "Yearly Cost"
+msgstr "ຕົ້ນທຶນປະຈຳປີ"
+
+#. module: hr_contract_salary
+#: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract__final_yearly_costs
+msgid "Yearly Cost (Real)"
+msgstr "ຕົ້ນທຶນປະຈຳປີ (ຕົວຈິງ)"
+
+#. module: hr_contract_salary
+#. odoo-python
+#: code:addons/hr_contract_salary/controllers/main.py:0
+msgid "Yes"
+msgstr "ແມ່ນ / ຕົກລົງ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_personal_information
+msgid "Your Personal Information"
+msgstr "ຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package_thank_you
+msgid "Your contract has been sent to:"
+msgstr "ສັນຍາຂອງທ່ານໄດ້ຖືກສົ່ງໄປຫາ:"
+
+#. module: hr_contract_salary
+#: model:hr.contract.salary.personal.info,name:hr_contract_salary.hr_contract_salary_personal_info_zip
+msgid "Zip Code"
+msgstr "ລະຫັດໄປສະນີ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.salary_package
+msgid "close"
+msgstr "ປິດ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_personal_info_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_resume_view_form
+msgid "e.g. Birthdate"
+msgstr "ຕົວຢ່າງ: ວັນທີເກີດ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "e.g. Meal Vouchers"
+msgstr "ຕົວຢ່າງ: ຄູປອງອາຫານ"
+
+#. module: hr_contract_salary
+#: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_advantage_view_form
+msgid "sign"
+msgstr "ເຊັນ"
+
+#. module: hr_contract_salary
+#: model:mail.template,subject:hr_contract_salary.mail_template_send_offer
+#: model:mail.template,subject:hr_contract_salary.mail_template_send_offer_applicant
+msgid "{{ object.company_id.name }}: Job Offer - {{ object.name }}"
+msgstr "{{ object.company_id.name }}: ຂໍ້ສະເໜີວຽກ - {{ object.name }}"

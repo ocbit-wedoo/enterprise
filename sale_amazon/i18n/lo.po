@@ -1,0 +1,1539 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_amazon
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 18:45+0000\n"
+"PO-Revision-Date: 2026-05-20 23:47+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/sale_amazon/"
+"lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: sale_amazon
+#: model:mail.template,body_html:sale_amazon.order_sync_failure
+msgid ""
+"<div>\n"
+"            <p>The synchronization of the Amazon order with reference <t t-out=\"ctx.get('amazon_order_ref') or ''\">REF</t> encountered an error and was not completed.</p>\n"
+"            <p>Unless the order is canceled in SellerCentral, no other synchronization will be attempted.</p>\n"
+"            <p>To schedule a new synchronization attempt, proceed as follows:\n"
+"                </p><ol>\n"
+"                    <li>Enter the Developer Tools.</li>\n"
+"                    <li>Open the form of the Amazon Account on which the order was placed.</li>\n"
+"                    <li>Navigate to the Order Follow-up tab.</li>\n"
+"                    <li>Set a date for <em>Last Orders Sync</em> that is anterior to the last status update of the order.</li>\n"
+"                    <li>Save the changes and click on the <em>SYNC ORDERS</em> button.</li>\n"
+"                </ol>\n"
+"            \n"
+"            <p>If the problem persists, contact <a href=\"https://www.odoo.com/help/\">Odoo support</a>.</p>\n"
+"        </div>\n"
+"        "
+msgstr ""
+"<div>\n"
+"            <p>ການຊິງໂຄຣໄນຄຳສັ່ງຊື້ Amazon ທີ່ມີລະຫັດອ້າງອີງ <t t-out=\"ctx.get"
+"('amazon_order_ref') or ''\">REF</t> ພົບຂໍ້ຜິດພາດ ແລະ ບໍ່ສຳເລັດ.</p>\n"
+"            <p>ນອກຈາກວ່າຄຳສັ່ງຊື້ຈະຖືກຍົກເລີກໃນ SellerCentral, ຈະບໍ່ມີການພະຍາຍາມຊິງໂຄຣໄນໃ"
+"ໝ່ອີກ.</p>\n"
+"            <p>ເພື່ອຕັ້ງກຳນົດເວລາການພະຍາຍາມຊິງໂຄຣໄນໃໝ່, ໃຫ້ປະຕິບັດດັ່ງນີ້:\n"
+"                </p><ol>\n"
+"                    <li>ເຂົ້າໄປທີ່ ເຄື່ອງມືນັກພັດທະນາ (Developer Tools).</li>\n"
+"                    <li>ເປີດຟອມຂອງບັນຊີ Amazon ທີ່ໃຊ້ໃນການສັ່ງຊື້.</li>\n"
+"                    <li>ໄປທີ່ແຖບ ຕິດຕາມຄຳສັ່ງຊື້ (Order Follow-up).</li>\n"
+"                    <li>ກຳນົດວັນທີສຳລັບ <em>ການຊິງໂຄຣໄນຄຳສັ່ງຊື້ຫຼ້າສຸດ</em> ໃຫ້ເປັນມື້ກ່ອນການ"
+"ອັບເດດສະຖານະຫຼ້າສຸດຂອງຄຳສັ່ງຊື້.</li>\n"
+"                    <li>ບັນທຶກການປ່ຽນແປງ ແລະ ກົດປຸ່ມ <em>ຊິງໂຄຣໄນຄຳສັ່ງຊື້ (SYNC ORDERS)"
+"</em>.</li>\n"
+"                </ol>\n"
+"            \n"
+"            <p>ຫາກບັນຫາຍັງຄົງມີຢູ່, ກະລຸນາຕິດຕໍ່ <a href=\"https://www.odoo.com/help/"
+"\">ໜ່ວຍງານຊ່ວຍເຫຼືອຂອງ Odoo</a>.</p>\n"
+"        </div>\n"
+"        "
+
+#. module: sale_amazon
+#: model:mail.template,body_html:sale_amazon.picking_sync_failure
+msgid ""
+"<style>\n"
+"                .amz_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .amz_table th,\n"
+"                .amz_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .amz_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table tbody th,\n"
+"                .amz_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>The synchronization of the delivery orders encountered some errors and was not completed.</p>\n"
+"                <p>Please correct the problem before manually synchronizing the delivery orders again, as no other synchronization will be attempted.</p>\n"
+"                <p>Here are the errors sent by Amazon: </p>\n"
+"                <table class=\"amz_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Order Reference</th>\n"
+"                            <th>Message</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-as=\"error\">\n"
+"                            <th><t t-out=\"error['order_ref']\"/></th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">An unknown error occurred during the synchronisation with Amazon.\n"
+"                                    Unfortunately you need to manually check if the state of the order is correct or not.\n"
+"                                    You can find all information about this\n"
+"                                    <a href=\"https://www.odoo.com/documentation/latest/applications/sales/sales/amazon_connector/manage.html#manage_deliveries_errors\">\n"
+"                                        in the documentation\n"
+"                                    </a>.</t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+msgstr ""
+"<style>\n"
+"                .amz_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .amz_table th,\n"
+"                .amz_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .amz_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table tbody th,\n"
+"                .amz_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>ການຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າພົບຂໍ້ຜິດພາດບາງຢ່າງ ແລະ ບໍ່ສຳເລັດ.</p>\n"
+"                <p>ກະລຸນາແກ້ໄຂບັນຫາກ່ອນທີ່ຈະເຮັດການຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າດ້ວຍຕົນເອງອີກຄັ້ງ, ເພ"
+"າະຈະບໍ່ມີການພະຍາຍາມຊິງໂຄຣໄນອັດຕະໂນມັດຄືນໃໝ່.</p>\n"
+"                <p>ນີ້ຄືຂໍ້ຜິດພາດທີ່ສົ່ງມາຈາກ Amazon: </p>\n"
+"                <table class=\"amz_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>ລະຫັດອ້າງອີງຄຳສັ່ງຊື້</th>\n"
+"                            <th>ຂໍ້ຄວາມ</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th><t t-out=\"error['order_ref']\"/></th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ຈັກໃນລະຫວ່າງການຊິງໂຄຣ"
+"ໄນກັບ Amazon.\n"
+"                                    ຂໍອະໄພ, ທ່ານຈຳເປັນຕ້ອງກວດສອບສະຖານະຂອງຄຳສັ່ງຊື້ດ້ວຍ"
+"ຕົນເອງວ່າມັນຖືກຕ້ອງຫຼືບໍ່.\n"
+"                                    ທ່ານສາມາດຄົ້ນຫາຂໍ້ມູນທັງໝົດກ່ຽວກັບເລື່ອງນີ້\n"
+"                                    <a href=\"https://www.odoo.com/"
+"documentation/latest/applications/sales/sales/amazon_connector/"
+"manage.html#manage_deliveries_errors\">\n"
+"                                        ໄດ້ໃນເອກະສານຄູ່ມື\n"
+"                                    </a>.</t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+
+#. module: sale_amazon
+#: model:mail.template,body_html:sale_amazon.inventory_sync_failure
+msgid ""
+"<style>\n"
+"                .amz_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .amz_table th,\n"
+"                .amz_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .amz_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table tbody th,\n"
+"                .amz_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>The synchronization of the products availability for Amazon Account\n"
+"                    <b><t t-out=\"ctx.get('amazon_account') or ''\">REF</t></b>\n"
+"                    encountered some errors and was not completed.</p>\n"
+"                <p>Here are the errors sent by Amazon: </p>\n"
+"                <table class=\"amz_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>SKU</th>\n"
+"                            <th>Message</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-as=\"error\">\n"
+"                            <th><t t-out=\"error['sku']\"/></th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">An unknown error occurred during the synchronisation with Amazon.\n"
+"                                    Unfortunately you need to manually check if the available quantity for the product is correct or not.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+msgstr ""
+"<style>\n"
+"                .amz_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .amz_table th,\n"
+"                .amz_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .amz_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .amz_table tbody th,\n"
+"                .amz_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>ການຊິງໂຄຣໄນຈຳນວນສິນຄ້າທີ່ພ້ອມຂາຍສຳລັບບັນຊີ Amazon\n"
+"                    <b><t t-out=\"ctx.get('amazon_account') or ''\">REF</t></"
+"b>\n"
+"                    ພົບຂໍ້ຜິດພາດບາງຢ່າງ ແລະ ບໍ່ສຳເລັດ.</p>\n"
+"                <p>ນີ້ຄືຂໍ້ຜິດພາດທີ່ສົ່ງມາຈາກ Amazon: </p>\n"
+"                <table class=\"amz_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>SKU</th>\n"
+"                            <th>ຂໍ້ຄວາມ</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th><t t-out=\"error['sku']\"/></th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ຈັກໃນລະຫວ່າງການຊິງໂຄຣ"
+"ໄນກັບ Amazon.\n"
+"                                    ຂໍອະໄພ, ທ່ານຈຳເປັນຕ້ອງກວດສອບຈຳນວນສິນຄ້າທີ່ພ້ອມຂາຍດ້"
+"ວຍຕົນເອງວ່າມັນຖືກຕ້ອງຫຼືບໍ່.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__api_ref
+msgid "API Identifier"
+msgstr "ຕົວລະບຸ API"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__account_id
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_search
+msgid "Account"
+msgstr "ບັນຊີ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Account Name"
+msgstr "ຊື່ບັນຊີ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__active
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_search
+msgid "Active"
+msgstr "ເປີດໃຊ້ງານ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid ""
+"After validation of the credentials, the marketplaces\n"
+"                                                to which this account has access will be\n"
+"                                                synchronized and automatically made available."
+msgstr ""
+"ຫຼັງຈາກຢັ້ງຢືນຂໍ້ມູນປະຈຳຕົວແລ້ວ, ຕະຫຼາດ (marketplaces)\n"
+"                                                ທີ່ບັນຊີນີ້ສາມາດເຂົ້າເຖິງໄດ້ຈະຖືກ\n"
+"                                                ຊິງໂຄຣໄນ ແລະ ເປີດໃຫ້ໃຊ້ງານໂດຍອັດຕະ"
+"ໂນມັດ."
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_amazon_account
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Amazon Account"
+msgstr "ບັນຊີ Amazon"
+
+#. module: sale_amazon
+#: model:ir.actions.act_window,name:sale_amazon.list_amazon_account_action
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_tree
+#: model_terms:ir.ui.view,arch_db:sale_amazon.res_config_settings_view_form
+msgid "Amazon Accounts"
+msgstr "ບັນຊີ Amazon ຕ່າງໆ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_res_partner__amazon_email
+#: model:ir.model.fields,field_description:sale_amazon.field_res_users__amazon_email
+msgid "Amazon Email"
+msgstr "ອີເມວ Amazon"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__amazon_feed_ref
+#: model:ir.model.fields,field_description:sale_amazon.field_stock_picking__amazon_feed_ref
+msgid "Amazon Feed Reference"
+msgstr "ລະຫັດອ້າງອີງ Feed ຂອງ Amazon"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_sale_order_line__amazon_item_ref
+msgid "Amazon Item Ref"
+msgstr "ລະຫັດອ້າງອີງສິນຄ້າ Amazon"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_amazon_marketplace
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_marketplace_view_form
+msgid "Amazon Marketplace"
+msgstr "ຕະຫຼາດ Amazon (Marketplace)"
+
+#. module: sale_amazon
+#: model:ir.actions.act_window,name:sale_amazon.list_amazon_marketplace_action
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_marketplace_view_tree
+#: model_terms:ir.ui.view,arch_db:sale_amazon.res_config_settings_view_form
+msgid "Amazon Marketplaces"
+msgstr "ຕະຫຼາດ Amazon ຕ່າງໆ"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_amazon_offer
+#: model:ir.model.fields,field_description:sale_amazon.field_sale_order_line__amazon_offer_id
+msgid "Amazon Offer"
+msgstr "ຂໍ້ສະເໜີ Amazon"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_offer_view_tree
+msgid "Amazon Offers"
+msgstr "ຂໍ້ສະເໜີ Amazon ຕ່າງໆ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__amazon_order_ref
+msgid "Amazon Order Reference"
+msgstr "ລະຫັດອ້າງອີງຄຳສັ່ງຊື້ Amazon"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_amazon_recover_order_wizard
+msgid "Amazon Recover Order Wizard"
+msgstr "ເຄື່ອງມືກູ້ຄືນຄຳສັ່ງຊື້ Amazon"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_sale_order__amazon_order_ref
+msgid "Amazon Reference"
+msgstr "ລະຫັດອ້າງອີງ Amazon"
+
+#. module: sale_amazon
+#: model:product.template,name:sale_amazon.default_product_product_template
+msgid "Amazon Sale"
+msgstr "ການຂາຍ Amazon"
+
+#. module: sale_amazon
+#: model:product.template,name:sale_amazon.shipping_product_product_template
+msgid "Amazon Shipping"
+msgstr "ການຂົນສົ່ງ Amazon"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__amazon_sync_status
+#: model:ir.model.fields,field_description:sale_amazon.field_stock_picking__amazon_sync_status
+msgid "Amazon Synchronization Status"
+msgstr "ສະຖານະການຊິງໂຄຣໄນ Amazon"
+
+#. module: sale_amazon
+#: model_terms:ir.actions.act_window,help:sale_amazon.list_amazon_account_action
+msgid "Amazon accounts correspond to Amazon Seller Central accounts."
+msgstr "ບັນຊີ Amazon ກົງກັບບັນຊີ Amazon Seller Central."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_marketplace.py:0
+msgid "Amazon marketplaces cannot be deleted."
+msgstr "ບໍ່ສາມາດລຶບຕະຫຼາດ Amazon ໄດ້."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "Amazon move: %s"
+msgstr "ການເຄື່ອນໄຫວ Amazon: %s"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/stock_picking.py:0
+msgid ""
+"Amazon requires that a tracking reference is provided with each delivery. "
+"Since the current carrier doesn't automatically provide a tracking "
+"reference, you need to set one manually."
+msgstr ""
+"Amazon ກຳນົດໃຫ້ລະບຸເລກຕິດຕາມສິນຄ້າ (tracking reference) ໃນທຸກໆການສົ່ງ. ເນື່ອງຈາກຜູ້ໃຫ້ບໍລິການ"
+"ຂົນສົ່ງປັດຈຸບັນບໍ່ໄດ້ໃຫ້ເລກຕິດຕາມໂດຍອັດຕະໂນມັດ, ທ່ານຈຳເປັນຕ້ອງລະບຸດ້ວຍຕົນເອງ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/stock_picking.py:0
+msgid ""
+"Amazon requires that a tracking reference is provided with each delivery. "
+"You need to assign a carrier to this delivery."
+msgstr ""
+"Amazon ກຳນົດໃຫ້ລະບຸເລກຕິດຕາມສິນຄ້າ (tracking reference) ໃນທຸກໆການສົ່ງ. ທ່ານຈຳເປັນຕ້ອງກຳນົດ"
+"ຜູ້ໃຫ້ບໍລິການຂົນສົ່ງໃຫ້ກັບການສົ່ງສິນຄ້ານີ້."
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_AE
+msgid "Amazon.ae"
+msgstr "Amazon.ae"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_CA
+msgid "Amazon.ca"
+msgstr "Amazon.ca"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_JP
+msgid "Amazon.co.jp"
+msgstr "Amazon.co.jp"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_UK
+msgid "Amazon.co.uk"
+msgstr "Amazon.co.uk"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_US
+msgid "Amazon.com"
+msgstr "Amazon.com"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_AU
+msgid "Amazon.com.au"
+msgstr "Amazon.com.au"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_BE
+msgid "Amazon.com.be"
+msgstr "Amazon.com.be"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_BR
+msgid "Amazon.com.br"
+msgstr "Amazon.com.br"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_MX
+msgid "Amazon.com.mx"
+msgstr "Amazon.com.mx"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_TR
+msgid "Amazon.com.tr"
+msgstr "Amazon.com.tr"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_DE
+msgid "Amazon.de"
+msgstr "Amazon.de"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_EG
+msgid "Amazon.eg"
+msgstr "Amazon.eg"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_ES
+msgid "Amazon.es"
+msgstr "Amazon.es"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_FR
+msgid "Amazon.fr"
+msgstr "Amazon.fr"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_IN
+msgid "Amazon.in"
+msgstr "Amazon.in"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_IT
+msgid "Amazon.it"
+msgstr "Amazon.it"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_NL
+msgid "Amazon.nl"
+msgstr "Amazon.nl"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_PL
+msgid "Amazon.pl"
+msgstr "Amazon.pl"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_SA
+msgid "Amazon.sa"
+msgstr "Amazon.sa"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_SE
+msgid "Amazon.se"
+msgstr "Amazon.se"
+
+#. module: sale_amazon
+#: model:amazon.marketplace,name:sale_amazon.marketplace_SG
+msgid "Amazon.sg"
+msgstr "Amazon.sg"
+
+#. module: sale_amazon
+#: model:mail.template,name:sale_amazon.inventory_sync_failure
+msgid "Amazon: Available Inventory for Offers Synchronization Failure"
+msgstr "Amazon: ການຊິງໂຄຣໄນຈຳນວນສິນຄ້າທີ່ພ້ອມຂາຍສຳລັບຂໍ້ສະເໜີບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model:mail.template,name:sale_amazon.picking_sync_failure
+msgid "Amazon: Delivery Order Synchronization Failure"
+msgstr "Amazon: ການຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model:mail.template,name:sale_amazon.order_sync_failure
+msgid "Amazon: Order Synchronization Failure"
+msgstr "Amazon: ການຊິງໂຄຣໄນຄຳສັ່ງຊື້ບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_inventory_ir_actions_server
+msgid "Amazon: sync available inventory"
+msgstr "Amazon: ຊິງໂຄຣໄນຈຳນວນສິນຄ້າທີ່ພ້ອມຂາຍ"
+
+#. module: sale_amazon
+#: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_pickings_ir_actions_server
+msgid "Amazon: sync delivery orders"
+msgstr "Amazon: ຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າ"
+
+#. module: sale_amazon
+#: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_feeds_ir_actions_server
+msgid "Amazon: sync feeds"
+msgstr "Amazon: ຊິງໂຄຣໄນ feeds"
+
+#. module: sale_amazon
+#: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_orders_ir_actions_server
+msgid "Amazon: sync orders"
+msgstr "Amazon: ຊິງໂຄຣໄນຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.authorization_error
+msgid "An error occurred"
+msgstr "ເກີດຂໍ້ຜິດພາດຂຶ້ນ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.authorization_error
+msgid "An error occurred while linking your account with Amazon."
+msgstr "ເກີດຂໍ້ຜິດພາດຂຶ້ນໃນຂະນະທີ່ກຳລັງເຊື່ອມຕໍ່ບັນຊີຂອງທ່ານກັບ Amazon."
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__available_marketplace_ids
+msgid "Available Marketplaces"
+msgstr "ຕະຫຼາດທີ່ມີໃຫ້ໃຊ້ງານ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.authorization_error
+msgid "Back to my account"
+msgstr "ກັບໄປທີ່ບັນຊີຂອງຂ້ອຍ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__company_id
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__company_id
+msgid "Company"
+msgstr "ບໍລິສັດ"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_res_config_settings
+msgid "Config Settings"
+msgstr "ການຕັ້ງຄ່າ"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_res_partner
+msgid "Contact"
+msgstr "ຜູ້ຕິດຕໍ່"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "Could not establish the connection to the API."
+msgstr "ບໍ່ສາມາດສ້າງການເຊື່ອມຕໍ່ກັບ API ໄດ້."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "Could not establish the connection to the feed URL."
+msgstr "ບໍ່ສາມາດສ້າງການເຊື່ອມຕໍ່ກັບ URL ຂອງ feed ໄດ້."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "Could not establish the connection to the proxy."
+msgstr "ບໍ່ສາມາດສ້າງການເຊື່ອມຕໍ່ກັບ proxy ໄດ້."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/controllers/onboarding.py:0
+msgid "Could not find Amazon account with id %s"
+msgstr "ບໍ່ພົບບັນຊີ Amazon ທີ່ມີລະຫັດ %s"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "Could not process the feed document send by Amazon."
+msgstr "ບໍ່ສາມາດປະມວນຜົນເອກະສານ feed ທີ່ສົ່ງໂດຍ Amazon ໄດ້."
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__create_uid
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__create_uid
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__create_uid
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__create_uid
+msgid "Created by"
+msgstr "ສ້າງໂດຍ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__create_date
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__create_date
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__create_date
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__create_date
+msgid "Created on"
+msgstr "ສ້າງເມື່ອ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Credentials"
+msgstr "ຂໍ້ມູນປະຈຳຕົວ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/res_config_settings.py:0
+#: model_terms:ir.ui.view,arch_db:sale_amazon.res_config_settings_view_form
+msgid "Default Products"
+msgstr "ສິນຄ້າເລີ່ມຕົ້ນ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.recover_order_wizard_form
+msgid "Discard"
+msgstr "ຍົກເລີກ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__display_name
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__display_name
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__display_name
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__display_name
+msgid "Display Name"
+msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_offer__amazon_sync_status__done
+#: model:ir.model.fields.selection,name:sale_amazon.selection__stock_picking__amazon_sync_status__done
+msgid "Done"
+msgstr "ສຳເລັດແລ້ວ"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_offer__amazon_sync_status__error
+#: model:ir.model.fields.selection,name:sale_amazon.selection__stock_picking__amazon_sync_status__error
+msgid "Error"
+msgstr "ຂໍ້ຜິດພາດ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "Error (%(code)s): %(message)s"
+msgstr "ຂໍ້ຜິດພາດ (%(code)s): %(message)s"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "Error code: %(error_code)s; description: %(error_message)s"
+msgstr "ລະຫັດຂໍ້ຜິດພາດ: %(error_code)s; ຄຳອະທິບາຍ: %(error_message)s"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_marketplace__region__eu-west-1
+msgid "Europe"
+msgstr "ເອີຣົບ"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_marketplace__region__us-west-2
+msgid "Far East"
+msgstr "ຕາເວັນອອກໄກ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
+msgid "Fulfilled by Amazon"
+msgstr "ດຳເນີນການໂດຍ Amazon"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
+msgid "Fulfilled by Merchant"
+msgstr "ດຳເນີນການໂດຍຜູ້ຂາຍ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_sale_order__amazon_channel
+msgid "Fulfillment Channel"
+msgstr "ຊ່ອງທາງການດຳເນີນການຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__sale_order__amazon_channel__fba
+msgid "Fulfillment by Amazon"
+msgstr "ການດຳເນີນການໂດຍ Amazon (FBA)"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__sale_order__amazon_channel__fbm
+msgid "Fulfillment by Merchant"
+msgstr "ການດຳເນີນການໂດຍຜູ້ຂາຍ (FBM)"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"Gift message:\n"
+"%s"
+msgstr ""
+"ຂໍ້ຄວາມຂອງຂວັນ:\n"
+"%s"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__base_marketplace_id
+msgid "Home Marketplace"
+msgstr "ຕະຫຼາດຫຼັກ (Home Marketplace)"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__id
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__id
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__id
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__id
+msgid "ID"
+msgstr "ລະຫັດ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__active
+msgid ""
+"If made inactive, this account will no longer be synchronized with Amazon."
+msgstr "ຫາກປິດການໃຊ້ງານ, ບັນຊີນີ້ຈະບໍ່ຖືກຊິງໂຄຣໄນກັບ Amazon ອີກຕໍ່ໄປ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"If the date is set in the past, orders placed on this Amazon Account before the first synchronization of the module might be synchronized with Odoo.\n"
+"If the date is set in the future, orders placed on this Amazon Account between the previous and the new date will not be synchronized with Odoo."
+msgstr ""
+"ຫາກກຳນົດວັນທີໃນອະດີດ, ຄຳສັ່ງຊື້ໃນບັນຊີ Amazon ນີ້ກ່ອນການຊິງໂຄຣໄນຄັ້ງທຳອິດອາດຈະຖືກຊິງໂຄຣໄນເຂົ້າ "
+"Odoo.\n"
+"ຫາກກຳນົດວັນທີໃນອະນາຄົດ, ຄຳສັ່ງຊື້ໃນບັນຊີ Amazon ນີ້ລະຫວ່າງວັນທີກ່ອນໜ້າ ແລະ ວັນທີໃໝ່ຈະບໍ່ຖືກຊິງໂຄຣໄນເຂົ້"
+"າ Odoo."
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
+msgid ""
+"If the sale is locked, you can not modify it anymore. However, you will "
+"still be able to invoice or deliver."
+msgstr ""
+"ຫາກການຂາຍຖືກລັອກ, ທ່ານຈະບໍ່ສາມາດແກ້ໄຂມັນໄດ້ອີກ. ຢ່າງໃດກໍຕາມ, ທ່ານຍັງສາມາດອອກໃບແຈ້ງໜີ້ ຫຼື ສົ່ງສິນຄ້"
+"າໄດ້."
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid ""
+"If this account gained access to new marketplaces,"
+"                                         synchronize and add them to the "
+"current sync marketplaces"
+msgstr ""
+"ຫາກບັນຊີນີ້ໄດ້ຮັບສິດເຂົ້າເຖິງຕະຫຼາດໃໝ່,                                         ໃຫ້ຊິງໂຄຣໄ"
+"ນ ແລະ ເພີ່ມພວກມັນເຂົ້າໃນລາຍຊື່ຕະຫຼາດທີ່ກຳລັງຊິງໂຄຣໄນຢູ່"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.picking_view_form
+msgid "In Processing by Amazon"
+msgstr "ກຳລັງປະມວນຜົນໂດຍ Amazon"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_search
+msgid "Inactive"
+msgstr "ປິດການໃຊ້ງານ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__is_follow_up_displayed
+msgid "Is Follow Up Displayed"
+msgstr "ສະແດງການຕິດຕາມຜົນ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__access_token
+msgid "LWA Access Token"
+msgstr "LWA Access Token"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__access_token_expiry
+msgid "LWA Access Token Expiry"
+msgstr "ວັນໝົດອາຍຸ LWA Access Token"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__refresh_token
+msgid "LWA Refresh Token"
+msgstr "LWA Refresh Token"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__last_orders_sync
+msgid "Last Orders Sync"
+msgstr "ຊິງໂຄຣໄນຄຳສັ່ງຊື້ຫຼ້າສຸດ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__write_uid
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__write_uid
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__write_uid
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__write_uid
+msgid "Last Updated by"
+msgstr "ແກ້ໄຂຫຼ້າສຸດໂດຍ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__write_date
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__write_date
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__write_date
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__write_date
+msgid "Last Updated on"
+msgstr "ແກ້ໄຂຫຼ້າສຸດເມື່ອ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Link with Amazon"
+msgstr "ເຊື່ອມຕໍ່ກັບ Amazon"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid ""
+"Link your Amazon account with Odoo to start synchronizing your\n"
+"                                Amazon orders."
+msgstr ""
+"ເຊື່ອມຕໍ່ບັນຊີ Amazon ຂອງທ່ານກັບ Odoo ເພື່ອເລີ່ມຕົ້ນການຊິງໂຄຣໄນ\n"
+"                                ຄຳສັ່ງຊື້ Amazon ຂອງທ່ານ."
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Linked Account"
+msgstr "ບັນຊີທີ່ເຊື່ອມຕໍ່ແລ້ວ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
+msgid "Lock"
+msgstr "ລັອກ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__marketplace_id
+msgid "Marketplace"
+msgstr "ຕະຫຼາດ (Marketplace)"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Marketplaces"
+msgstr "ຕະຫຼາດຕ່າງໆ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__name
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__name
+msgid "Name"
+msgstr "ຊື່"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_marketplace__region__us-east-1
+msgid "North America"
+msgstr "ອາເມຣິກາເໜືອ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__offer_count
+#: model:ir.model.fields,field_description:sale_amazon.field_product_product__offer_count
+#: model:ir.model.fields,field_description:sale_amazon.field_product_template__offer_count
+msgid "Offer Count"
+msgstr "ຈຳນວນຂໍ້ສະເໜີ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+#: code:addons/sale_amazon/models/product_product.py:0
+#: code:addons/sale_amazon/models/product_template.py:0
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__offer_ids
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_product_product_view_form
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_product_template_view_form
+msgid "Offers"
+msgstr "ຂໍ້ສະເໜີ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "Only available marketplaces can be selected"
+msgstr "ສາມາດເລືອກໄດ້ສະເພາະຕະຫຼາດທີ່ມີໃຫ້ໃຊ້ງານເທົ່ານັ້ນ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__order_count
+msgid "Order Count"
+msgstr "ຈຳນວນຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Order Follow-up"
+msgstr "ການຕິດຕາມຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Orders"
+msgstr "ຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__stock_picking__amazon_sync_status__pending
+msgid "Pending"
+msgstr "ລໍຖ້າການປະມວນຜົນ"
+
+#. module: sale_amazon
+#: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_offer__amazon_sync_status__processing
+#: model:ir.model.fields.selection,name:sale_amazon.selection__stock_picking__amazon_sync_status__processing
+msgid "Processing"
+msgstr "ກຳລັງປະມວນຜົນ"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_product_template
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__product_id
+msgid "Product"
+msgstr "ສິນຄ້າ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__product_template_id
+msgid "Product Template"
+msgstr "ແບບຟອມສິນຄ້າ"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_product_product
+msgid "Product Variant"
+msgstr "ລຸ້ນສິນຄ້າ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/stock_picking.py:0
+msgid ""
+"Products delivered to Amazon customers must have their respective parts in "
+"the same package. Operations related to the product %s were not all "
+"confirmed at once."
+msgstr ""
+"ສິນຄ້າທີ່ສົ່ງໃຫ້ລູກຄ້າ Amazon ຕ້ອງມີສ່ວນປະກອບທີ່ກ່ຽວຂ້ອງຢູ່ໃນກ່ອງດຽວກັນ. ການດຳເນີນການທີ່ກ່ຽວຂ້ອງກັບສິນຄ້"
+"າ %s ບໍ່ໄດ້ຖືກຢືນຢັນພ້ອມກັນທັງໝົດ."
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.recover_order_wizard_form
+msgid "Recover"
+msgstr "ກູ້ຄືນ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+#: model_terms:ir.ui.view,arch_db:sale_amazon.recover_order_wizard_form
+msgid "Recover Order"
+msgstr "ກູ້ຄືນຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__region
+msgid "Region"
+msgstr "ພາກພື້ນ"
+
+#. module: sale_amazon
+#: model_terms:ir.actions.act_window,help:sale_amazon.list_amazon_account_action
+msgid "Register your Amazon account"
+msgstr "ລົງທະບຽນບັນຊີ Amazon ຂອງທ່ານ"
+
+#. module: sale_amazon
+#: model_terms:ir.actions.act_window,help:sale_amazon.list_amazon_account_action
+msgid "Register yours to start synchronizing your orders into Odoo."
+msgstr "ລົງທະບຽນບັນຊີຂອງທ່ານເພື່ອເລີ່ມຕົ້ນການຊິງໂຄຣໄນຄຳສັ່ງຊື້ເຂົ້າໃນ Odoo."
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__restricted_data_token
+msgid "Restricted Data Token"
+msgstr "Restricted Data Token"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__restricted_data_token_expiry
+msgid "Restricted Data Token Expiry"
+msgstr "ວັນໝົດອາຍຸ Restricted Data Token"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.picking_view_form
+msgid "Retry Amazon Sync"
+msgstr "ລອງຊິງໂຄຣໄນ Amazon ອີກຄັ້ງ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__sku
+msgid "SKU"
+msgstr "SKU"
+
+#. module: sale_amazon
+#: model:ir.model.constraint,message:sale_amazon.constraint_amazon_offer_unique_sku
+msgid "SKU must be unique for a given account."
+msgstr "SKU ຕ້ອງບໍ່ຊ້ຳກັນສຳລັບບັນຊີທີ່ກຳນົດ."
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_sale_order
+msgid "Sales Order"
+msgstr "ໃບສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "ລາຍການໃບສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__team_id
+msgid "Sales Team"
+msgstr "ທີມງານຂາຍ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__user_id
+msgid "Salesperson"
+msgstr "ພະນັກງານຂາຍ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.picking_view_form
+msgid "Scheduled for Amazon Synchronization"
+msgstr "ກຳນົດເວລາສຳລັບການຊິງໂຄຣໄນກັບ Amazon"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid ""
+"Select the marketplace on which your seller account\n"
+"                                                was initially created."
+msgstr ""
+"ເລືອກຕະຫຼາດທີ່ບັນຊີຜູ້ຂາຍຂອງທ່ານ\n"
+"                                                ຖືກສ້າງຂຶ້ນໃນຕອນເລີ່ມຕົ້ນ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__seller_central_url
+msgid "Seller Central URL"
+msgstr "Seller Central URL"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__seller_key
+msgid "Seller Key"
+msgstr "Seller Key"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__location_id
+msgid "Stock Location"
+msgstr "ສະຖານທີ່ເກັບສິນຄ້າ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "Successfully updated the marketplaces available to this account!"
+msgstr "ອັບເດດຕະຫຼາດທີ່ມີໃຫ້ໃຊ້ງານສຳລັບບັນຊີນີ້ສຳເລັດແລ້ວ!"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Sync Deliveries"
+msgstr "ຊິງໂຄຣໄນການສົ່ງສິນຄ້າ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Sync FBM Inventory"
+msgstr "ຊິງໂຄຣໄນສິນຄ້າຄົງຄັງ FBM"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Sync Feeds Status"
+msgstr "ຊິງໂຄຣໄນສະຖານະ Feeds"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__active_marketplace_ids
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__active_marketplace_ids
+msgid "Sync Marketplaces"
+msgstr "ຊິງໂຄຣໄນຕະຫຼາດຕ່າງໆ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Sync Orders"
+msgstr "ຊິງໂຄຣໄນຄຳສັ່ງຊື້"
+
+#. module: sale_amazon
+#: model:mail.template,subject:sale_amazon.inventory_sync_failure
+msgid "Synchronization of Amazon Stock has failed"
+msgstr "ການຊິງໂຄຣໄນສິນຄ້າຄົງຄັງ Amazon ບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model:mail.template,subject:sale_amazon.order_sync_failure
+msgid ""
+"Synchronization of Amazon order {{ ctx.get('amazon_order_ref') }} has failed"
+msgstr "ການຊິງໂຄຣໄນຄຳສັ່ງຊື້ Amazon {{ ctx.get('amazon_order_ref') }} ບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model:mail.template,subject:sale_amazon.picking_sync_failure
+msgid "Synchronization of delivery orders has failed"
+msgstr "ການຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.picking_view_form
+msgid "Synchronization with Amazon failed"
+msgstr "ການຊິງໂຄຣໄນກັບ Amazon ບໍ່ສຳເລັດ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__synchronize_inventory
+msgid "Synchronize FBM Inventory"
+msgstr "ຊິງໂຄຣໄນສິນຄ້າຄົງຄັງ FBM"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.picking_view_form
+msgid "Synchronized with Amazon"
+msgstr "ຊິງໂຄຣໄນກັບ Amazon ແລ້ວ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__tax_included
+msgid "Tax Included"
+msgstr "ລວມພາສີແລ້ວ"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/wizards/recover_order_wizard.py:0
+msgid "The Amazon order reference must be in 3-7-7 format."
+msgstr "ລະຫັດອ້າງອີງຄຳສັ່ງຊື້ Amazon ຕ້ອງຢູ່ໃນຮູບແບບ 3-7-7."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"The Amazon order with reference %(ref)s was not recovered because its "
+"currency was missing from the Amazon order data."
+msgstr ""
+"ຄຳສັ່ງຊື້ Amazon ທີ່ມີລະຫັດອ້າງອີງ %(ref)s ບໍ່ໄດ້ຖືກກູ້ຄືນ ເພາະວ່າບໍ່ມີຂໍ້ມູນສະກຸນເງິນໃນຂໍ້ມູນຄຳສັ່ງຊື້ຂອງ "
+"Amazon."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"The Amazon order with reference %(ref)s was not recovered because its status"
+" (%(status)s) is not eligible for synchronization for its fulfillment "
+"channel (%(channel)s)."
+msgstr ""
+"ຄຳສັ່ງຊື້ Amazon ທີ່ມີລະຫັດອ້າງອີງ %(ref)s ບໍ່ໄດ້ຖືກກູ້ຄືນ ເພາະວ່າສະຖານະ (%(status)s) ບໍ່ກົງກັບເງື່ອນ"
+"ໄຂການຊິງໂຄຣໄນສຳລັບຊ່ອງທາງການດຳເນີນການ (%(channel)s)."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_marketplace__region
+msgid ""
+"The Amazon region of the marketplace. Please refer to the Selling Partner "
+"API documentation to find the correct region."
+msgstr ""
+"ພາກພື້ນ Amazon ຂອງຕະຫຼາດ. ກະລຸນາເບິ່ງເອກະສານ Selling Partner API ເພື່ອຄົ້ນຫາພາກພື້ນທີ່ຖືກຕ້ອ"
+"ງ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_sale_order_line__amazon_item_ref
+msgid "The Amazon-defined item reference."
+msgstr "ລະຫັດອ້າງອີງສິນຄ້າທີ່ກຳນົດໂດຍ Amazon."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_marketplace__api_ref
+msgid "The Amazon-defined marketplace reference."
+msgstr "ລະຫັດອ້າງອີງຕະຫຼາດທີ່ກຳນົດໂດຍ Amazon."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_sale_order__amazon_order_ref
+msgid "The Amazon-defined order reference."
+msgstr "ລະຫັດອ້າງອີງຄຳສັ່ງຊື້ທີ່ກຳນົດໂດຍ Amazon."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__team_id
+msgid "The Sales Team assigned to Amazon orders for reporting"
+msgstr "ທີມງານຂາຍທີ່ຖືກກຳນົດໃຫ້ກັບຄຳສັ່ງຊື້ Amazon ສຳລັບການລາຍງານ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_offer__sku
+msgid "The Stock Keeping Unit."
+msgstr "ໜ່ວຍເກັບຮັກສາສິນຄ້າ (Stock Keeping Unit)."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "The communication with the API failed."
+msgstr "ການສື່ສານກັບ API ບໍ່ສຳເລັດ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid ""
+"The communication with the API failed.\n"
+"Error code: %(error_code)s; description: %(error_message)s"
+msgstr ""
+"ການສື່ສານກັບ API ບໍ່ສຳເລັດ.\n"
+"ລະຫັດຂໍ້ຜິດພາດ: %(error_code)s; ຄຳອະທິບາຍ: %(error_message)s"
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_res_partner__amazon_email
+#: model:ir.model.fields,help:sale_amazon.field_res_users__amazon_email
+msgid "The encrypted email of the customer. Does not forward mails."
+msgstr "ອີເມວທີ່ຖືກເຂົ້າລະຫັດຂອງລູກຄ້າ. ບໍ່ມີການສົ່ງຕໍ່ເມວ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__base_marketplace_id
+msgid "The home marketplace of this account; used for authentication only."
+msgstr "ຕະຫຼາດຫຼັກຂອງບັນຊີນີ້; ໃຊ້ສຳລັບການຢັ້ງຢືນຕົວຕົນເທົ່ານັ້ນ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__last_orders_sync
+msgid ""
+"The last synchronization date for orders placed on this account. Orders "
+"whose status has not changed since this date will not be created nor updated"
+" in Odoo."
+msgstr ""
+"ວັນທີຊິງໂຄຣໄນຫຼ້າສຸດສຳລັບຄຳສັ່ງຊື້ໃນບັນຊີນີ້. ຄຳສັ່ງຊື້ທີ່ສະຖານະບໍ່ມີການປ່ຽນແປງຕັ້ງແຕ່ວັນທີນີ້ຈະບໍ່ຖືກສ້າງ ຫຼື ອັບເດ"
+"ດໃນ Odoo."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__location_id
+msgid ""
+"The location of the stock managed by Amazon under the Amazon Fulfillment "
+"program."
+msgstr "ສະຖານທີ່ເກັບສິນຄ້າທີ່ບໍລິຫານໂດຍ Amazon ພາຍໃຕ້ໂຄງການ Amazon Fulfillment."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__refresh_token
+msgid "The long-lived token that can be exchanged for a new access token."
+msgstr "Token ອາຍຸຍືນທີ່ສາມາດນຳໄປແລກເປັນ Access Token ໃໝ່ໄດ້."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_offer__marketplace_id
+msgid "The marketplace of this offer."
+msgstr "ຕະຫຼາດຂອງຂໍ້ສະເໜີນີ້."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__available_marketplace_ids
+msgid "The marketplaces this account has access to."
+msgstr "ຕະຫຼາດທີ່ບັນຊີນີ້ສາມາດເຂົ້າເຖິງໄດ້."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__active_marketplace_ids
+#: model:ir.model.fields,help:sale_amazon.field_amazon_offer__active_marketplace_ids
+msgid "The marketplaces this account sells on."
+msgstr "ຕະຫຼາດທີ່ບັນຊີນີ້ໃຊ້ໃນການຂາຍສິນຄ້າ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__restricted_data_token_expiry
+msgid "The moment at which the Restricted Data Token becomes invalid."
+msgstr "ເວລາທີ່ Restricted Data Token ໝົດອາຍຸ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__access_token_expiry
+msgid "The moment at which the token becomes invalid."
+msgstr "ເວລາທີ່ token ໝົດອາຍຸ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/sale_order.py:0
+msgid ""
+"The order has been cancelled by the Amazon customer while someproducts have "
+"already been delivered. Please create a return for this order to adjust the "
+"stock."
+msgstr ""
+"ຄຳສັ່ງຊື້ຖືກຍົກເລີກໂດຍລູກຄ້າ Amazon ໃນຂະນະທີ່ສິນຄ້າບາງຢ່າງຖືກສົ່ງໄປແລ້ວ. ກະລຸນາສ້າງລາຍການສົ່ງຄືນສຳລັບ"
+"ຄຳສັ່ງຊື້ນີ້ເພື່ອປັບປຸງສິນຄ້າຄົງຄັງ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "The order was not found on this account's marketplaces."
+msgstr "ບໍ່ພົບຄຳສັ່ງຊື້ໃນຕະຫຼາດຂອງບັນຊີນີ້."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "The provided reference does not match any Amazon order."
+msgstr "ລະຫັດອ້າງອີງທີ່ລະບຸບໍ່ກົງກັບຄຳສັ່ງຊື້ Amazon ໃດໆ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_recover_order_wizard__amazon_order_ref
+msgid "The reference to the Amazon order to recover, in 3-7-7 format"
+msgstr "ລະຫັດອ້າງອີງຂອງຄຳສັ່ງຊື້ Amazon ທີ່ຕ້ອງການກູ້ຄືນ, ໃນຮູບແບບ 3-7-7"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/stock_picking.py:0
+msgid ""
+"The sales order of this delivery order is not linked to an Amazon account."
+msgstr "ໃບສັ່ງຊື້ຂອງຄຳສັ່ງສົ່ງສິນຄ້ານີ້ບໍ່ໄດ້ເຊື່ອມຕໍ່ກັບບັນຊີ Amazon."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_offer__account_id
+msgid "The seller account used to manage this product."
+msgstr "ບັນຊີຜູ້ຂາຍທີ່ໃຊ້ໃນການບໍລິຫານສິນຄ້ານີ້."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__restricted_data_token
+msgid ""
+"The short-lived token used instead of the LWA Access Token to access "
+"restricted data"
+msgstr ""
+"Token ອາຍຸສັ້ນທີ່ໃຊ້ແທນ LWA Access Token ເພື່ອເຂົ້າເຖິງຂໍ້ມູນທີ່ຖືກຈຳກັດ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__access_token
+msgid "The short-lived token used to query Amazon API on behalf of a seller."
+msgstr "Token ອາຍຸສັ້ນທີ່ໃຊ້ໃນການສອບຖາມ Amazon API ໃນນາມຂອງຜູ້ຂາຍ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_stock_picking__amazon_sync_status
+msgid ""
+"The synchronization status of the delivery order to Amazon:\n"
+"- Pending: The delivery order has been confirmed and will soon be synchronized.\n"
+"- Processing: The delivery details have been sent and are being processed.\n"
+"- Done: The delivery details have been processed.\n"
+"- Error: The synchronization of the delivery order failed."
+msgstr ""
+"ສະຖານະການຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າໄປຫາ Amazon:\n"
+"- ລໍຖ້າ (Pending): ຄຳສັ່ງສົ່ງສິນຄ້າຖືກຢືນຢັນແລ້ວ ແລະ ຈະຖືກຊິງໂຄຣໄນໃນໄວໆນີ້.\n"
+"- ກຳລັງປະມວນຜົນ (Processing): ລາຍລະອຽດການສົ່ງຖືກສົ່ງໄປແລ້ວ ແລະ ກຳລັງຖືກປະມວນຜົນ.\n"
+"- ສຳເລັດ (Done): ລາຍລະອຽດການສົ່ງຖືກປະມວນຜົນສຳເລັດແລ້ວ.\n"
+"- ຂໍ້ຜິດພາດ (Error): ການຊິງໂຄຣໄນຄຳສັ່ງສົ່ງສິນຄ້າບໍ່ສຳເລັດ."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_offer__amazon_sync_status
+msgid ""
+"The synchronization status of the product's stock level to Amazon:\n"
+"- Processing: The stock level has been sent and is being processed.\n"
+"- Done: The stock level has been processed.\n"
+"- Error: The synchronization of the stock level failed."
+msgstr ""
+"ສະຖານະການຊິງໂຄຣໄນລະດັບສິນຄ້າຄົງຄັງໄປຫາ Amazon:\n"
+"- ກຳລັງປະມວນຜົນ (Processing): ລະດັບສິນຄ້າຄົງຄັງຖືກສົ່ງໄປແລ້ວ ແລະ ກຳລັງຖືກປະມວນຜົນ.\n"
+"- ສຳເລັດ (Done): ລະດັບສິນຄ້າຄົງຄັງຖືກປະມວນຜົນສຳເລັດແລ້ວ.\n"
+"- ຂໍ້ຜິດພາດ (Error): ການຊິງໂຄຣໄນລະດັບສິນຄ້າຄົງຄັງບໍ່ສຳເລັດ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"The synchronization with Amazon failed. Amazon gave us this information "
+"about the problem:"
+msgstr ""
+"ການຊິງໂຄຣໄນກັບ Amazon ບໍ່ສຳເລັດ. Amazon ໄດ້ແຈ້ງຂໍ້ມູນກ່ຽວກັບບັນຫາດັ່ງນີ້:"
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__name
+msgid "The user-defined name of the account."
+msgstr "ຊື່ບັນຊີທີ່ກຳນົດໂດຍຜູ້ໃຊ້."
+
+#. module: sale_amazon
+#: model:ir.model.constraint,message:sale_amazon.constraint_amazon_marketplace_unique_api_ref
+msgid "There can only exist one marketplace for a given API Identifier."
+msgstr "ສາມາດມີໄດ້ພຽງແຕ່ໜຶ່ງຕະຫຼາດສຳລັບແຕ່ລະ API Identifier."
+
+#. module: sale_amazon
+#: model:ir.model.constraint,message:sale_amazon.constraint_sale_order_unique_amazon_order_ref
+msgid ""
+"There can only exist one sale order for a given Amazon Order Reference."
+msgstr "ສາມາດມີໄດ້ພຽງແຕ່ໜຶ່ງໃບສັ່ງຊື້ສຳລັບແຕ່ລະ Amazon Order Reference."
+
+#. module: sale_amazon
+#: model:ir.model.constraint,message:sale_amazon.constraint_sale_order_line_unique_amazon_item_ref
+msgid ""
+"There can only exist one sale order line for a given Amazon Item Reference."
+msgstr "ສາມາດມີໄດ້ພຽງແຕ່ໜຶ່ງລາຍການໃບສັ່ງຊື້ສຳລັບແຕ່ລະ Amazon Item Reference."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/res_partner.py:0
+msgid ""
+"This Amazon partner was created with an invalid state (%s); please set the "
+"correct state manually."
+msgstr ""
+"ຄູ່ຄ້າ Amazon ນີ້ຖືກສ້າງຂຶ້ນດ້ວຍແຂວງ/ລັດທີ່ບໍ່ຖືກຕ້ອງ (%s); ກະລຸນາກຳນົດແຂວງ/ລັດທີ່ຖືກຕ້ອງດ້ວຍຕົນເອງ."
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid ""
+"This action will disconnect your account with Amazon and"
+"                                          cannot be undone. Are you sure you"
+" want to proceed?"
+msgstr ""
+"ການດຳເນີນການນີ້ຈະຕັດການເຊື່ອມຕໍ່ບັນຊີຂອງທ່ານກັບ Amazon ແລະ"
+"                                          ບໍ່ສາມາດກັບຄືນມາແກ້ໄຂໄດ້. ທ່ານແນ່ໃຈຫຼືບໍ່ວ່າຕ້ອງກ"
+"ານດຳເນີນການຕໍ່?"
+
+#. module: sale_amazon
+#: model:ir.model,name:sale_amazon.model_stock_picking
+msgid "Transfer"
+msgstr "ການໂອນສິນຄ້າ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Unlink account"
+msgstr "ຕັດການເຊື່ອມຕໍ່ບັນຊີ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Unlinked Account"
+msgstr "ບັນຊີທີ່ບໍ່ໄດ້ເຊື່ອມຕໍ່"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Update Available Marketplaces"
+msgstr "ອັບເດດຕະຫຼາດທີ່ມີໃຫ້ໃຊ້ງານ"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_offer_view_tree
+msgid "View on Seller Central"
+msgstr "ເບິ່ງໃນ Seller Central"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "Warning"
+msgstr "ຄຳເຕືອນ"
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_account__synchronize_inventory
+msgid ""
+"Whether the available quantities of FBM products linked to this account are "
+"synchronized with Amazon."
+msgstr ""
+"ກວດສອບວ່າຈຳນວນສິນຄ້າ FBM ທີ່ເຊື່ອມຕໍ່ກັບບັນຊີນີ້ຖືກຊິງໂຄຣໄນກັບ Amazon ຫຼື ບໍ່."
+
+#. module: sale_amazon
+#: model:ir.model.fields,help:sale_amazon.field_amazon_marketplace__tax_included
+msgid "Whether the price includes the tax amount or not."
+msgstr "ກວດສອບວ່າລາຄາໄດ້ລວມພາສີແລ້ວຫຼືບໍ່."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid "You first need to authorize the Amazon account %s."
+msgstr "ທ່ານຈຳເປັນຕ້ອງອະນຸຍາດບັນຊີ Amazon %s ກ່ອນ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/utils.py:0
+msgid ""
+"You first need to set the marketplaces to synchronize for the Amazon account"
+" %s."
+msgstr "ທ່ານຈຳເປັນຕ້ອງຕັ້ງຄ່າຕະຫຼາດທີ່ຈະຊິງໂຄຣໄນສຳລັບບັນຊີ Amazon %s ກ່ອນ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"You reached the maximum number of requests for this operation; please try "
+"again later."
+msgstr ""
+"ທ່ານໄດ້ສົ່ງຄຳຮ້ອງຂໍເກີນຈຳນວນສູງສຸດສຳລັບການດຳເນີນການນີ້; ກະລຸນາລອງໃໝ່ອີກຄັ້ງໃນພາຍຫຼັງ."
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "Your Amazon account is linked with Odoo."
+msgstr "ບັນຊີ Amazon ຂອງທ່ານຖືກເຊື່ອມຕໍ່ກັບ Odoo ແລ້ວ."
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "[%(gift_wrap_code)s] Gift Wrapping Charges for %(product)s"
+msgstr "[%(gift_wrap_code)s] ຄ່າບໍລິການຫໍ່ຂອງຂວັນສຳລັບ %(product)s"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid "[%(shipping_code)s] Delivery Charges for %(product)s"
+msgstr "[%(shipping_code)s] ຄ່າບໍລິການຈັດສົ່ງສຳລັບ %(product)s"
+
+#. module: sale_amazon
+#. odoo-python
+#: code:addons/sale_amazon/models/amazon_account.py:0
+msgid ""
+"[%(sku)s] %(item_title)s\n"
+"Condition: %(main_condition)s - %(sub_condition)s"
+msgstr ""
+"[%(sku)s] %(item_title)s\n"
+"ເງື່ອນໄຂ: %(main_condition)s - %(sub_condition)s"
+
+#. module: sale_amazon
+#: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
+msgid "e.g. American Market"
+msgstr "ຕົວຢ່າງ: ຕະຫຼາດອາເມຣິກາ"

@@ -1,0 +1,400 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * iap_extract
+#
+# Bone NI <bounkirdni@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 18:47+0000\n"
+"PO-Revision-Date: 2026-05-26 04:50+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/iap_extract/"
+"lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: iap_extract
+#: model:mail.template,body_html:iap_extract.iap_extract_no_credit
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p>Dear,<br/></p>\n"
+"    <p>There are no more credits on your IAP OCR account.<br/>\n"
+"    You can charge your IAP OCR account in the settings page.</p>\n"
+"    <p>Best regards,<br/></p>\n"
+"    <p>Odoo S.A.</p>\n"
+"</div>"
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p>ຮຽນ,<br/></p>\n"
+"    <p>ເຄຣດິດໃນບັນຊີ IAP OCR ຂອງທ່ານໝົດແລ້ວ.<br/>\n"
+"    ທ່ານສາມາດເຕີມເຄຣດິດບັນຊີ IAP OCR ຂອງທ່ານໄດ້ໃນໜ້າການຕັ້ງຄ່າ.</p>\n"
+"    <p>ດ້ວຍຄວາມນັບຖື,<br/></p>\n"
+"    <p>Odoo S.A.</p>\n"
+"</div>"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_needaction
+msgid "Action Needed"
+msgstr "ຈຳເປັນຕ້ອງດຳເນີນການ"
+
+#. module: iap_extract
+#. odoo-javascript
+#: code:addons/iap_extract/static/src/components/status_header/status.xml:0
+msgid ""
+"All fields will be automatically populated by Artificial Intelligence, it "
+"might take 5 seconds."
+msgstr ""
+"ທຸກໆຫ້ອງຂໍ້ມູນຈະຖືກຕື່ມໂດຍອັດຕະໂນມັດດ້ວຍປັນຍາປະດິດ (AI), ເຊິ່ງອາດໃຊ້ເວລາປະມານ 5 ວິນາທີ."
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__error_status
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__error_status
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__error_status
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__error_status
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__error_status
+msgid "An error occurred"
+msgstr "ເກີດຂໍ້ຜິດພາດຂຶ້ນ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "An error occurred during the upload"
+msgstr "ເກີດຂໍ້ຜິດພາດຂຶ້ນໃນລະຫວ່າງການອັບໂຫລດ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_attachment_count
+msgid "Attachment Count"
+msgstr "ຈຳນວນໄຟລ໌ຄັດຕິດ"
+
+#. module: iap_extract
+#: model:ir.model,name:iap_extract.model_extract_mixin
+msgid "Base class to extract data from documents"
+msgstr "ຄລາສພື້ນຖານເພື່ອສະກັດຂໍ້ມູນຈາກເອກະສານ"
+
+#. module: iap_extract
+#. odoo-javascript
+#: code:addons/iap_extract/static/src/components/status_header/status.xml:0
+msgid "Buy credits"
+msgstr "ຊື້ເຄຣດິດ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_can_show_send_button
+msgid "Can show the ocr send button"
+msgstr "ສາມາດສະແດງປຸ່ມສົ່ງ OCR"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__done
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__done
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__done
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__done
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__done
+msgid "Completed flow"
+msgstr "ຂັ້ນຕອນສຳເລັດແລ້ວ"
+
+#. module: iap_extract
+#: model:iap.service,description:iap_extract.iap_service_ocr
+msgid ""
+"Digitize your scanned or PDF vendor bills, expenses and resumes with OCR and"
+" Artificial Intelligence."
+msgstr ""
+"ປ່ຽນໃບບິນຜູ້ສະໜອງ, ຄ່າໃຊ້ຈ່າຍ ແລະ ຊີວະປະຫວັດທີ່ສະແກນ ຫຼື ເປັນໄຟລ໌ PDF ໃຫ້ເປັນຂໍ້ມູນດິຈິຕອນດ້ວຍ OCR ແ"
+"ລະ ປັນຍາປະດິດ (AI)."
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Document is being digitized"
+msgstr "ເອກະສານກຳລັງຖືກປ່ຽນເປັນຂໍ້ມູນດິຈິຕອນ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Document sent for digitization"
+msgstr "ສົ່ງເອກະສານເພື່ອປ່ຽນເປັນຂໍ້ມູນດິຈິຕອນແລ້ວ"
+
+#. module: iap_extract
+#. odoo-javascript
+#: code:addons/iap_extract/static/src/components/status_header/status.xml:0
+msgid "Document successfully parsed. Please refresh."
+msgstr "ວິເຄາະເອກະສານສຳເລັດແລ້ວ. ກະລຸນາໂຫລດຄືນໃໝ່."
+
+#. module: iap_extract
+#: model:iap.service,unit_name:iap_extract.iap_service_ocr
+msgid "Documents"
+msgstr "ເອກະສານ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Documents sent for digitization"
+msgstr "ສົ່ງບັນດາເອກະສານເພື່ອປ່ຽນເປັນຂໍ້ມູນດິຈິຕອນແລ້ວ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_error_message
+msgid "Error message"
+msgstr "ຂໍ້ຄວາມຜິດພາດ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_state_processed
+msgid "Extract State Processed"
+msgstr "ສະຖານະການສະກັດຂໍ້ມູນຖືກປະມວນຜົນແລ້ວ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_state
+msgid "Extract state"
+msgstr "ສະຖານະການສະກັດຂໍ້ມູນ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_status
+msgid "Extract status"
+msgstr "ສະຖານະພາບການສະກັດຂໍ້ມູນ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_follower_ids
+msgid "Followers"
+msgstr "ຜູ້ຕິດຕາມ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "ຜູ້ຕິດຕາມ (ຄູ່ຄ້າ)"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__has_message
+msgid "Has Message"
+msgstr "ມີຂໍ້ຄວາມ"
+
+#. module: iap_extract
+#: model:mail.template,name:iap_extract.iap_extract_no_credit
+#: model:mail.template,subject:iap_extract.iap_extract_no_credit
+msgid "IAP Extract Notification"
+msgstr "ການແຈ້ງເຕືອນການສະກັດຂໍ້ມູນ IAP"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_document_uuid
+msgid "ID of the request to IAP-OCR"
+msgstr "ໄອດີຂອງການຮ້ອງຂໍໄປຍັງ IAP-OCR"
+
+#. module: iap_extract
+#: model:ir.model.fields,help:iap_extract.field_extract_mixin__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "ຫາກໝາຍໄວ້, ຂໍ້ຄວາມໃໝ່ຈະແຈ້ງເຕືອນໃຫ້ທ່ານຊາບ."
+
+#. module: iap_extract
+#: model:ir.model.fields,help:iap_extract.field_extract_mixin__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "ຫາກໝາຍໄວ້, ບາງຂໍ້ຄວາມຈະມີຂໍ້ຜິດພາດໃນການສົ່ງ."
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Invalid PDF (Conversion error)"
+msgstr "ໄຟລ໌ PDF ບໍ່ຖືກຕ້ອງ (ເກີດຂໍ້ຜິດພາດໃນການແປງໄຟລ໌)"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Invalid PDF (Unable to get page count)"
+msgstr "ໄຟລ໌ PDF ບໍ່ຖືກຕ້ອງ (ບໍ່ສາມາດນັບຈຳນວນໜ້າໄດ້)"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_is_follower
+msgid "Is Follower"
+msgstr "ແມ່ນຜູ້ຕິດຕາມ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__is_in_extractable_state
+msgid "Is In Extractable State"
+msgstr "ຢູ່ໃນສະຖານະທີ່ສາມາດສະກັດຂໍ້ມູນໄດ້"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "ໄຟລ໌ຄັດຕິດຫຼັກ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_has_error
+msgid "Message Delivery error"
+msgstr "ການສົ່ງຂໍ້ຄວາມຜິດພາດ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_ids
+msgid "Messages"
+msgstr "ຂໍ້ຄວາມ"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__no_extract_requested
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__no_extract_requested
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__no_extract_requested
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__no_extract_requested
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__no_extract_requested
+msgid "No extract requested"
+msgstr "ບໍ່ມີການຮ້ອງຂໍການສະກັດຂໍ້ມູນ"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__not_enough_credit
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__not_enough_credit
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__not_enough_credit
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__not_enough_credit
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__not_enough_credit
+msgid "Not enough credits"
+msgstr "ເຄຣດິດບໍ່ພຽງພໍ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Not enough credits for data extraction"
+msgstr "ເຄຣດິດບໍ່ພຽງພໍສຳລັບການສະກັດຂໍ້ມູນ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_needaction_counter
+msgid "Number of Actions"
+msgstr "ຈຳນວນການດຳເນີນການ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_has_error_counter
+msgid "Number of errors"
+msgstr "ຈຳນວນຂໍ້ຜິດພາດ"
+
+#. module: iap_extract
+#: model:ir.model.fields,help:iap_extract.field_extract_mixin__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "ຈຳນວນຂໍ້ຄວາມທີ່ຕ້ອງດຳເນີນການ"
+
+#. module: iap_extract
+#: model:ir.model.fields,help:iap_extract.field_extract_mixin__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "ຈຳນວນຂໍ້ຄວາມທີ່ມີຂໍ້ຜິດພາດໃນການສົ່ງ"
+
+#. module: iap_extract
+#: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__rating_ids
+msgid "Ratings"
+msgstr "ການໃຫ້ຄະແນນ"
+
+#. module: iap_extract
+#. odoo-javascript
+#: code:addons/iap_extract/static/src/components/status_header/status.xml:0
+msgid "Refresh"
+msgstr "ໂຫລດຄືນໃໝ່"
+
+#. module: iap_extract
+#. odoo-javascript
+#: code:addons/iap_extract/static/src/components/status_header/status.xml:0
+msgid "Retry"
+msgstr "ລອງໃໝ່"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Server is currently under maintenance. Please retry later"
+msgstr "ເຊີເວີກຳລັງຢູ່ໃນລະຫວ່າງການປັບປຸງ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Server not available. Please retry later"
+msgstr "ເຊີເວີບໍ່ພ້ອມໃຊ້ງານ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Some documents were skipped as they were already digitized"
+msgstr "ບາງເອກະສານຖືກຂ້າມໄປ ເນື່ອງຈາກໄດ້ຖືກປ່ຽນເປັນຂໍ້ມູນດິຈິຕອນແລ້ວ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid ""
+"The 'invoice_ocr' IAP account token is invalid. Please delete it to let Odoo"
+" generate a new one or fill it with a valid token."
+msgstr ""
+"ໂທເຄັນບັນຊີ IAP 'invoice_ocr' ບໍ່ຖືກຕ້ອງ. ກະລຸນາລຶບອອກເພື່ອໃຫ້ Odoo ສ້າງໃໝ່ ຫຼື ປ້ອນໂທເຄັນທີ່ຖືກຕ້ອ"
+"ງ."
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "The document could not be found"
+msgstr "ບໍ່ພົບເອກະສານ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "The document has been rejected because it is too small"
+msgstr "ເອກະສານຖືກປະຕິເສດ ເນື່ອງຈາກມີຂະໜາດນ້ອຍເກີນໄປ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "The selected documents are already digitized"
+msgstr "ບັນດາເອກະສານທີ່ເລືອກໄດ້ຖືກປ່ຽນເປັນຂໍ້ມູນດິຈິຕອນແລ້ວ"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__to_validate
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__to_validate
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__to_validate
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__to_validate
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__to_validate
+msgid "To validate"
+msgstr "ລໍຖ້າການກວດສອບ"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Unsupported image format"
+msgstr "ຮູບແບບຮູບພາບບໍ່ຮອງຮັບ"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__waiting_extraction
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__waiting_extraction
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__waiting_extraction
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__waiting_extraction
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__waiting_extraction
+msgid "Waiting extraction"
+msgstr "ກຳລັງລໍຖ້າການສະກັດຂໍ້ມູນ"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__waiting_validation
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__waiting_validation
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__waiting_validation
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__waiting_validation
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__waiting_validation
+msgid "Waiting validation"
+msgstr "ກຳລັງລໍຖ້າການກວດສອບ"
+
+#. module: iap_extract
+#. odoo-javascript
+#: code:addons/iap_extract/static/src/components/status_header/status.xml:0
+msgid "You don't have enough credit to extract data from your document."
+msgstr "ທ່ານມີເຄຣດິດບໍ່ພຽງພໍເພື່ອສະກັດຂໍ້ມູນຈາກເອກະສານຂອງທ່ານ."
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid ""
+"Your PDF file is protected by a password. The OCR can't extract data from it"
+msgstr ""
+"ໄຟລ໌ PDF ຂອງທ່ານຖືກປ້ອງກັນດ້ວຍລະຫັດຜ່ານ. OCR ບໍ່ສາມາດສະກັດຂໍ້ມູນຈາກມັນໄດ້"
+
+#. module: iap_extract
+#. odoo-python
+#: code:addons/iap_extract/models/extract_mixin.py:0
+msgid "Your document contains too many pages"
+msgstr "ເອກະສານຂອງທ່ານມີຈຳນວນໜ້າຫຼາຍເກີນໄປ"
+
+#. module: iap_extract
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__extract_not_ready
+#: model:ir.model.fields.selection,name:iap_extract.selection__account_move__extract_state__extract_not_ready
+#: model:ir.model.fields.selection,name:iap_extract.selection__extract_mixin__extract_state__extract_not_ready
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__extract_not_ready
+#: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__extract_not_ready
+msgid "waiting extraction, but it is not ready"
+msgstr "ກຳລັງລໍຖ້າການສະກັດຂໍ້ມູນ, ແຕ່ຍັງບໍ່ທັນພ້ອມ"

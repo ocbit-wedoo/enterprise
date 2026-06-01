@@ -1,0 +1,1133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * pos_urban_piper
+#
+# Translators:
+# Martin Trigaux, 2024
+# Wil Odoo, 2024
+# Manav Shah, 2025
+# Ujjawal Pathak, 2025
+#
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-29 18:48+0000\n"
+"PO-Revision-Date: 2026-05-17 06:00+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
+"pos_urban_piper/hi/>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 5.17\n"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid " is offline on ."
+msgstr " ऑफ़लाइन है।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid " is online on ."
+msgstr " पर ऑनलाइन है।"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/res_config_settings.py:0
+msgid ""
+"(%(provider_name)s) delivery is only available in the following countries: \n"
+"%(country_names)s"
+msgstr ""
+"(%(provider_name)s) डिलीवरी सिर्फ़ नीचे दिए गए देशों में उपलब्ध है: \n"
+"%(country_names)s"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Accept"
+msgstr "स्वीकार करना"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__acknowledged
+msgid "Acknowledged"
+msgstr "स्वीकार किया गया"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Aggregator (Handled by Platform)"
+msgstr "एग्रीगेटर (प्लेटफ़ॉर्म द्वारा संभाला गया)"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__name
+msgid "An internal identification of the point of sale."
+msgstr "पॉइंट ऑफ़ सेल की एक आंतरिक पहचान।"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Api Key"
+msgstr "एपीआई कुंजी"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__available_country_ids
+msgid "Available Countries"
+msgstr "उपलब्ध देश"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_product__urbanpiper_pos_config_ids
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_template__urbanpiper_pos_config_ids
+msgid "Available on Food Delivery"
+msgstr "फ़ूड डिलीवरी पर उपलब्ध"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/product_screen/product_screen.js:0
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/product_screen/product_screen.xml:0
+msgid "Back"
+msgstr "वापस जाएं"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__cancelled
+msgid "Cancelled"
+msgstr "निरस्त"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Card on Delivery"
+msgstr "डिलीवरी पर कार्ड"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Cash"
+msgstr "कैश"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Channel"
+msgstr "चैनल"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_product__urbanpiper_pos_config_ids
+#: model:ir.model.fields,help:pos_urban_piper.field_product_template__urbanpiper_pos_config_ids
+msgid "Check this if the product is available for food delivery."
+msgstr "अगर प्रॉडक्ट फूड डिलीवरी के लिए उपलब्ध है, इसे चुनें।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_payment_method__is_delivery_payment
+msgid "Check this if this payment method is used for online delivery orders."
+msgstr ""
+"अगर पेमेंट का यह तरीका ऑनलाइन डिलीवरी ऑर्डर के लिए उपयोग की जाती है, तो इसे चुनें।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.xml:0
+msgid "Close"
+msgstr "बंद"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Complete Order"
+msgstr "पूरा ऑर्डर"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__completed
+msgid "Completed"
+msgstr "पूरा हुआ"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_res_config_settings
+msgid "Config Settings"
+msgstr "कॉन्फ़िगरेशन सेटिंग"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Connectivity Issue"
+msgstr "कनेक्टिविटी समस्या"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_delivery_provider__available_country_ids
+msgid "Countries where this provider is available"
+msgstr "वे देश जहां यह प्रोवाइडर उपलब्ध है"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Create Store"
+msgstr "स्टोर बनाएं"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__create_uid
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__create_uid
+msgid "Created by"
+msgstr "द्वारा निर्मित"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__create_date
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__create_date
+msgid "Created on"
+msgstr "इस तारीख को बनाया गया"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Customer Email"
+msgstr "कस्टमर ईमल"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Customer Info"
+msgstr "ग्राहक की जानकारी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Customer Name"
+msgstr "ग्राहक का नाम"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Customer Phone"
+msgstr "ग्राहक का फ़ोन नंबर"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/receipt_screen/receipt/order_receipt.xml:0
+msgid "Delivery Address"
+msgstr "डिलीवरी का पता"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Delivery Channel"
+msgstr "डिलीवरी चैनल"
+
+#. module: pos_urban_piper
+#: model:product.template,name:pos_urban_piper.product_delivery_charges_product_template
+msgid "Delivery Charges"
+msgstr "डिलीवरी शुल्क"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_identifier
+msgid "Delivery ID"
+msgstr "डिलीवरी आईडी"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_json
+msgid "Delivery JSON"
+msgstr "डिलीवरी JSON"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Delivery Order Status"
+msgstr "डिलीवरी ऑर्डर की स्थिति"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Delivery Partner"
+msgstr ""
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_payment_method__is_delivery_payment
+msgid "Delivery Payment"
+msgstr "डिलीवरी पेमेंट"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Delivery Person"
+msgstr "डिलीवरी करने वाला व्यक्ति"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_provider_id
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_payment_method__delivery_provider_id
+msgid "Delivery Provider"
+msgstr "डिलीवरी प्रोवाइडर"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_delivery_provider_ids
+msgid "Delivery Providers"
+msgstr "डिलीवरी प्रोवाइडर"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_rider_json
+msgid "Delivery Rider JSON"
+msgstr "डिलीवरी राइडर JSON"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_status
+msgid "Delivery Status"
+msgstr "डिलीवरी स्टेटस"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Delivery Time/Time-Slot"
+msgstr "डिलीवरी का समय/समय-स्लॉट"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/order_change_receipt_template.xml:0
+msgid "Delivery/Online"
+msgstr "डिलीवरी/ऑनलाइन"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.xml:0
+msgid "Details"
+msgstr "विवरण"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Dispatch Order"
+msgstr "ऑर्डर भेजें"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__dispatched
+msgid "Dispatched"
+msgstr "भेजा गया"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__display_name
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__display_name
+msgid "Display Name"
+msgstr "डिस्प्ले नाम"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/delivery_button/delivery_button.xml:0
+msgid "Done"
+msgstr "हो गया"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Edit"
+msgstr "संपादित"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__product_template__urbanpiper_meal_type__3
+msgid "Eggetarian"
+msgstr "एगेटेरियन"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Error"
+msgstr "त्रुटि!"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid "Error occurred while updating  status."
+msgstr "अपडेट करते समय गड़बड़ी हुई।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid "Error to send in preparation display."
+msgstr ""
+"ऑर्डर की जानकारी को तैयारी वाली स्क्रीन पर भेजते समय कोई तकनीकी खराबी आई है।"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Fill this form to get Username &amp; Api key"
+msgstr "यूज़रनेम &amp; एपीआई कुंजी प्राप्त करने के लिए यह फ़ॉर्म भरें।"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Fiscal Position"
+msgstr "वित्तीय स्थिति"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_fiscal_position_id
+msgid "Fiscal position for Urban Piper sync menu."
+msgstr "Urban Piper सिंक मेन्यू के लिए वित्तीय स्थिति।"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Food Delivery Platforms"
+msgstr "फ़ूड डिलीवरी प्लेटफ़ॉर्म"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__prep_time
+msgid "Food Preparation Time"
+msgstr "भोजन तैयार होने में लगने वाला समय"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__food_ready
+msgid "Food Ready"
+msgstr "भोजन तैयार"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Fulfilment Mode"
+msgstr "फुलफिलमेंट मोड"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/res_config_settings.py:0
+msgid "Go to Company configuration"
+msgstr "कंपनी कॉन्फ़िगरेशन पर जाएं"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_product__urban_piper_status_ids
+#: model:ir.model.fields,help:pos_urban_piper.field_product_template__urban_piper_status_ids
+msgid ""
+"Handle products with urban piper and pos config - Product is linked or not "
+"with appropriate store."
+msgstr ""
+"प्रॉडक्ट को urban piper और पीओएस कॉन्फ़िगरेशन के साथ संभालें - प्रॉडक्ट सही स्टोर से जुड़ा "
+"है या नहीं।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "HungerStation Code"
+msgstr "हंगरस्टेशन कोड"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__id
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__id
+msgid "ID"
+msgstr "आईडी"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_product__is_alcoholic_on_urbanpiper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_template__is_alcoholic_on_urbanpiper
+msgid "Indicates if the product contains alcohol."
+msgstr "यह दिखाता है कि प्रॉडक्ट में शराब है।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Info"
+msgstr "जानकारी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Invalid Product"
+msgstr "अमान्य प्रॉडक्ट"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Invalid Variant/Addons"
+msgstr "अमान्य वेरिएंट/ऐडऑन"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_product__is_alcoholic_on_urbanpiper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_template__is_alcoholic_on_urbanpiper
+msgid "Is Alcoholic"
+msgstr "शराबी है"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__is_product_linked
+msgid "Is Product Linked?"
+msgstr "क्या प्रॉडक्ट लिंक है?"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_product__is_recommended_on_urbanpiper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_template__is_recommended_on_urbanpiper
+msgid "Is Recommended"
+msgstr "सुझाव दिया जाता है"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_rider_json
+msgid "JSON data of the delivery rider."
+msgstr "डिलीवरी राइडर का JSON डेटा।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_json
+msgid "JSON data of the order."
+msgstr "ऑर्डर का JSON डेटा।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__journal_code
+msgid "Journal Short Code"
+msgstr "जर्नल शॉर्ट कोड"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_last_sync_date
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_last_sync_date
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Last Sync on"
+msgstr "आखिरी बार सिंक हुआ"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__write_uid
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__write_uid
+msgid "Last Updated by"
+msgstr "इन्होंने आखिरी बार अपडेट किया"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__write_date
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__write_date
+msgid "Last Updated on"
+msgstr "आखिरी बार अपडेट हुआ"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_last_sync_date
+msgid "Last sync date for menu sync."
+msgstr "मेन्यू सिंक के लिए सिंक की आखिरी तारीख।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Mark as ready"
+msgstr "तैयार के तौर पर मार्क करें"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_product__urbanpiper_meal_type
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_template__urbanpiper_meal_type
+msgid "Meal Type"
+msgstr "भोजन का प्रकार"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/order_change_receipt_template.xml:0
+msgid "Min"
+msgstr "मिनट"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__product_template__urbanpiper_meal_type__4
+msgid "N/A"
+msgstr "लागू नहीं"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__name
+msgid "Name"
+msgstr "नाम"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_delivery_provider__name
+msgid "Name of the delivery provider i.e. Zomato, UberEats, etc."
+msgstr "डिलीवरी प्रोवाइडर का नाम, जैसे- Zomato, UberEats, वगैरह।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/delivery_button/delivery_button.xml:0
+msgid "New"
+msgstr "नया"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid "New online order received."
+msgstr "नया ऑनलाइन ऑर्डर प्राप्त हुआ।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__product_template__urbanpiper_meal_type__2
+msgid "Non-Vegetarian"
+msgstr "नॉन-वेजिटेरियन"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Not Specified"
+msgstr "जानकारी नहीं दी गई है"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.product_template_only_form_view_inherit_pos_urban_piper
+msgid "Not available for online orders."
+msgstr "ऑनलाइन ऑर्डर के लिए उपलब्ध नहीं है।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/delivery_button/delivery_button.xml:0
+msgid "Ongoing"
+msgstr "ऑनगोइंग"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_payment_methods_ids
+msgid "Online Delivery Payment Methods"
+msgstr "ऑनलाइन डिलीवरी पेमेंट के तरीके"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_delivery_provider
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_delivery_provider_ids
+msgid "Online Delivery Providers"
+msgstr "ऑनलाइन डिलीवरी के प्रोवाइडर"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Order ID"
+msgstr "ऑर्डर आईडी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Order Info"
+msgstr "ऑर्डर की जानकारी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Order OTP"
+msgstr "ऑर्डर ओटीपी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Order Status"
+msgstr ""
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Order Time"
+msgstr "ऑर्डर का समय"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid "Order does not load from server"
+msgstr "सर्वर से ऑर्डर लोड नहीं हो रहा है"
+
+#. module: pos_urban_piper
+#: model:product.template,name:pos_urban_piper.product_other_charges_product_template
+msgid "Other Charges"
+msgstr "अन्य शुल्क"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Others"
+msgstr "अन्य"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Out of Delivery Radius"
+msgstr "डिलीवरी के तय इलाके से बाहर"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Outlet"
+msgstr "आउटलेट"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "POS ID"
+msgstr "पीओएस आईडी"
+
+#. module: pos_urban_piper
+#: model:product.template,name:pos_urban_piper.product_packaging_charges_product_template
+msgid "Packaging Charges"
+msgstr "पैकेजिंग शुल्क"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Payment Gateway"
+msgstr "पेमेंट गेटवे"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Payment Mode"
+msgstr "पेमेंट मोड"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_payment_methods_ids
+msgid "Payment methods for Urban Piper sync menu."
+msgstr "Urban Piper सिंक मेन्यू के लिए भुगतान के तरीके।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Paytm"
+msgstr "Paytm"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Phone"
+msgstr "फ़ोन"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__placed
+msgid "Placed"
+msgstr "ऑर्डर किया गया"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__name
+msgid "Point of Sale"
+msgstr "पॉइंट ऑफ़ सेल"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_category
+msgid "Point of Sale Category"
+msgstr "पॉइंट ऑफ़ सेल कैटगरी"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr "पॉइंट ऑफ़ सेल कॉन्फ़िगरेशन"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_order
+msgid "Point of Sale Orders"
+msgstr "पॉइंट ऑफ़ सेल ऑर्डर"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_payment_method
+msgid "Point of Sale Payment Methods"
+msgstr "पॉइंट ऑफ़ सेल के पेमेंट के तरीके"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_payment
+msgid "Point of Sale Payments"
+msgstr "पॉइंट ऑफ़ सेल पेमेंट"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_session
+msgid "Point of Sale Session"
+msgstr "पॉइंट ऑफ़ सेल सेशन"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_store_identifier
+msgid "Pos ID from Urban Piper (Atlas)"
+msgstr "Urban Piper (Atlas) से पीओएस आईडी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Prepaid"
+msgstr "प्रीपेड"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/order_change_receipt_template.xml:0
+msgid "Preparation Time:"
+msgstr "तैयारी का समय:"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_pos_preparation_display_order
+msgid "Preparation orders"
+msgstr ""
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_order__prep_time
+msgid "Preparation time for the food as provided by UrbanPiper."
+msgstr "UrbanPiper द्वारा प्रदान किया गया भोजन की तैयारी का समय।"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_product_pricelist
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Pricelist"
+msgstr "मूल्य सूची"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_pricelist_id
+msgid "Pricelist for Urban Piper sync menu."
+msgstr "Urban Piper सिंक मेन्यू के लिए प्राइसलिस्ट।"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_product_template
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__product_tmpl_id
+msgid "Product"
+msgstr "उत्पाद"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_urban_piper_status__is_product_linked
+msgid "Product Status on Urban piper."
+msgstr "Urban piper पर प्रॉडक्ट की स्थिति।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Product is out of Stock"
+msgstr "प्रॉडक्ट स्टॉक में नहीं है"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_product__urbanpiper_meal_type
+#: model:ir.model.fields,help:pos_urban_piper.field_product_template__urbanpiper_meal_type
+msgid "Product type i.e. Veg, Non-Veg, etc."
+msgstr "प्रॉडक्ट का प्रकार, जैसे- शाकाहारी, मांसाहारी, वगैरह।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__image_128
+msgid "Provider Image"
+msgstr "प्रोवाइडर इमेज"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__technical_name
+msgid "Provider Name"
+msgstr "प्रोवाइडर का नाम"
+
+#. module: pos_urban_piper
+#: model:ir.model.constraint,message:pos_urban_piper.constraint_pos_delivery_provider_technical_name_uniq
+msgid "Provider Name must be unique."
+msgstr "प्रोवाइडर का नाम यूनीक होना चाहिए।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_product__is_recommended_on_urbanpiper
+#: model:ir.model.fields,help:pos_urban_piper.field_product_template__is_recommended_on_urbanpiper
+msgid "Recommended products on food platforms."
+msgstr "फ़ूड प्लेटफ़ॉर्म पर सुझाए गए प्रॉडक्ट।"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Refresh webhooks"
+msgstr "वेबहुक्स को रीफ्रेश करें"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_webhook_url
+msgid "Register Urbanpiper Webhook URL"
+msgstr "Urbanpiper वेबहुक यूआरएल को रजिस्टर करें"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_webhook_url
+msgid "Register webhook with Urbanpiper."
+msgstr "Urbanpiper के साथ वेबहुक रजिस्टर करें।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
+msgid "Reject"
+msgstr "अस्वीकार करें"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Reject Order"
+msgstr "ऑर्डर अस्वीकार करें"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Rejecting this order is not allowed for \"%(providerName)s\""
+msgstr "\"%(providerName)s\" के लिए इस ऑर्डर को अस्वीकार करने की अनुमति नहीं है"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_provider_id
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_payment_method__delivery_provider_id
+msgid "Responsible delivery provider for online order, e.g., UberEats, Zomato."
+msgstr ""
+"ऑनलाइन ऑर्डर के लिए जिम्मेदार डिलीवरी प्रोवाइडर, जैसे, UberEats, Zomato।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
+msgid "Review Orders"
+msgstr "ऑर्डर की समीक्षा करें"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Rider is Not Available"
+msgstr "राइडर उपलब्ध नहीं है"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Set the POS ID in Urban Piper in Locations."
+msgstr "Urban Piper के जगह में पीओएस आईडी सेट करें।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_delivery_provider__journal_code
+msgid "Short code of the journal to be used for journal creation"
+msgstr "जर्नल क्रिएशन के लिए उपयोग किया जाने वाला जर्नल का शॉर्ट कोड"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Simpl (Deferred Payment)"
+msgstr "सिंपल (उधार भुगतान)"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Status"
+msgstr "स्थिति"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_status
+msgid "Status of the order as provided by UrbanPiper."
+msgstr "UrbanPiper द्वारा प्रदान की गई ऑर्डर की स्थिति।"
+
+#. module: pos_urban_piper
+#: model:ir.model.constraint,message:pos_urban_piper.constraint_pos_config_urbanpiper_store_identifier_uniq
+msgid "Store ID must be unique for every pos configuration."
+msgstr "हर पीओएस कॉन्फ़िगरेशन के लिए स्टोर आईडी यूनीक होना चाहिए।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Store is Busy"
+msgstr "स्टोर व्यस्त है"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Store is Closed"
+msgstr "स्टोर बंद है"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_webhook_url
+msgid "Store webhook url (base url) for security."
+msgstr "सुरक्षा के लिए वेबहुक यूआरएल (बेस यूआरएल) स्टोर करें।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_product__urban_piper_status_ids
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_template__urban_piper_status_ids
+msgid "Stores"
+msgstr "स्टोर"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Sync Menu"
+msgstr "मेन्यू सिंक करें"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_ir_config_parameter
+msgid "System Parameter"
+msgstr "सिस्टम पैरामीटर"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Talabat Code"
+msgstr "Talabat कोड"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Talabat Short Code"
+msgstr "Talabat शॉर्ट कोड"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_delivery_provider__technical_name
+msgid "Technical name of the provider used by UrbanPiper"
+msgstr "UrbanPiper द्वारा उपयोग किए गए प्रोवाइडर का टेक्निकल नाम"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__urbanpiper_apikey
+msgid "The API key for accessing the UrbanPiper services."
+msgstr "UrbanPiper सेवाओं को ऐक्सेस करने के लिए एपीआई कुंजी।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_store_identifier
+msgid "The POS ID associated with UrbanPiper."
+msgstr "UrbanPiper से जुड़ा पीओएस आईडी।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_last_sync_date
+msgid "The date and time of the last synchronization with UrbanPiper."
+msgstr "UrbanPiper के साथ आखिरी बार सिंक्रनाइज़ेशन की तारीख और समय।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_delivery_provider_ids
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_delivery_provider_ids
+msgid "The delivery providers used for online delivery through UrbanPiper."
+msgstr ""
+"UrbanPiper के माध्यम से ऑनलाइन डिलीवरी के लिए उपयोग किए जाने वाले डिलीवरी प्रोवाइडर।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_fiscal_position_id
+msgid "The fiscal position used for UrbanPiper transactions."
+msgstr "UrbanPiper ट्रांज़ैक्शन के लिए उपयोग की जाने वाली वित्तीय स्थिति।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_payment_methods_ids
+msgid "The payment methods used for online delivery through UrbanPiper."
+msgstr ""
+"UrbanPiper के माध्यम से ऑनलाइन डिलीवरी के लिए उपयोग किए जाने वाले भुगतान के तरीके।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__pos_urbanpiper_pricelist_id
+msgid "The pricelist used for UrbanPiper orders."
+msgstr "UrbanPiper ऑर्डर के लिए उपयोग की जाने वाली मूल्य सूची।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__urbanpiper_username
+msgid "The username for the UrbanPiper account."
+msgstr ""
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/delivery_button/delivery_button.xml:0
+msgid "There are no active delivery providers(s)."
+msgstr "कोई सक्रिय डिलीवरी प्रोवाइडर नहीं है।"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid ""
+"This action will flush(delete) the entire menu from Atlas for this store and "
+"re-sync it if any menu data is available."
+msgstr ""
+"यह ऐक्शन इस स्टोर के लिए Atlas से पूरे मेन्यू को हटा देगी (डिलीट कर देगी) और अगर कोई "
+"मेन्यू डेटा उपलब्ध है, तो इसे फिर से सिंक करेगी।"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Total Missmatch"
+msgstr "टोटल मिसमैच"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_identifier
+msgid "Unique delivery ID provided by UrbanPiper."
+msgstr "UrbanPiper द्वारा प्रदान किया गया यूनीक डिलीवरी आईडी।"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/pos_config.py:0
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.product_template_only_form_view_inherit_pos_urban_piper
+msgid "Urban Piper"
+msgstr "Urban Piper"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__config_id
+msgid "Urban Piper Config"
+msgstr "Urban Piper कॉन्फ़िगरेशन"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_fiscal_position_id
+msgid "Urban Piper Fiscal Position"
+msgstr "Urban Piper की वित्तीय स्थिति"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Urban Piper Location"
+msgstr "Urban Piper की लोकेशन"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_store_identifier
+msgid "Urban Piper POS ID"
+msgstr "Urban Piper पीओएस आईडी"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_payment_methods_ids
+msgid "Urban Piper Payment Methods"
+msgstr "Urban Piper पेमेंट के तरीके"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_pricelist_id
+msgid "Urban Piper Pricelist"
+msgstr "Urban Piper प्राइसलिस्ट"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_webhook_url
+msgid "Urban Piper Webhook URL"
+msgstr "Urban Piper वेबहुक यूआरएल"
+
+#. module: pos_urban_piper
+#: model:ir.model,name:pos_urban_piper.model_product_urban_piper_status
+msgid "Urban piper product status"
+msgstr "Urban Piper प्रॉडक्ट का स्टेटस"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__urbanpiper_apikey
+msgid "UrbanPiper API Key"
+msgstr "Urban Piper एपीआई कुंजी"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/pos_config.py:0
+msgid "UrbanPiper API Key is required.\n"
+msgstr "UrbanPiper API कुंजी ज़रूरी है.\n"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/res_config_settings.py:0
+msgid "UrbanPiper Delivery Providers are required."
+msgstr "UrbanPiper डिलीवरी प्रोवाइडर की ज़रूरत है।"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_fiscal_position_id
+msgid "UrbanPiper Fiscal Position"
+msgstr "UrbanPiper की वित्तीय स्थिति"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_pricelist_id
+msgid "UrbanPiper Pricelist"
+msgstr "UrbanPiper प्राइसलिस्ट"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/pos_config.py:0
+msgid "UrbanPiper Store ID is required.\n"
+msgstr "UrbanPiper स्टोर आईडी ज़रूरी है.\n"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__pos_urbanpiper_store_identifier
+msgid "UrbanPiper Store Identifier"
+msgstr "UrbanPiper स्टोर आइडेंटिफ़ॉयर"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields,field_description:pos_urban_piper.field_res_config_settings__urbanpiper_username
+msgid "UrbanPiper Username"
+msgstr "UrbanPiper यूज़रनेम"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/pos_config.py:0
+msgid "UrbanPiper Username is required.\n"
+msgstr "UrbanPiper उपयोगकर्ता नाम ज़रूरी है.\n"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/receipt_screen/receipt/receipt_header/receipt_header.xml:0
+msgid "UrbanPiper:"
+msgstr "UrbanPiper:"
+
+#. module: pos_urban_piper
+#: model:account.fiscal.position,name:pos_urban_piper.pos_account_fiscal_position_urbanpiper
+msgid "Urbanpiper"
+msgstr "Urbanpiper"
+
+#. module: pos_urban_piper
+#: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
+msgid "Username"
+msgstr "यूज़रनेम"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
+msgid "Variants/Addons out of Stock"
+msgstr "विकल्प/ऐडऑन स्टॉक से बाहर"
+
+#. module: pos_urban_piper
+#: model:ir.model.fields.selection,name:pos_urban_piper.selection__product_template__urbanpiper_meal_type__1
+msgid "Vegetarian"
+msgstr "शाकाहारी"
+
+#. module: pos_urban_piper
+#. odoo-javascript
+#: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
+msgid "Wallet Credit"
+msgstr "वॉलेट क्रेडिट"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/ir_config_parameter.py:0
+msgid "You cannot change the pos_urban_piper.uuid."
+msgstr "आप pos_urban_piper.uuid को नहीं बदल सकते।"
+
+#. module: pos_urban_piper
+#. odoo-python
+#: code:addons/pos_urban_piper/models/res_config_settings.py:0
+msgid "Your company %s needs to have a correct city in order create the store."
+msgstr "स्टोर बनाने के लिए आपकी कंपनी %s में सही शहर का होना ज़रूरी है।"
