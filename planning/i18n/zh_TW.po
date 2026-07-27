@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:47+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
 "PO-Revision-Date: 2026-01-24 09:12+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
@@ -2741,8 +2741,8 @@ msgstr "開始時間不可為負數。"
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
-"The start hour cannot be before the end hour for a one-day shift template."
-msgstr "單日輪班範本中, 開始時間不可早於結束時間."
+"The start hour cannot be after the end hour for a one-day shift template."
+msgstr ""
 
 #. module: planning
 #. odoo-python
@@ -3129,6 +3129,10 @@ msgstr "到"
 #: model:mail.template,subject:planning.email_template_slot_single
 msgid "{{ ctx.get('mail_subject', '') }} {{ ctx.get('start_datetime' , '') }}"
 msgstr "{{ ctx.get('mail_subject', '') }} {{ ctx.get('start_datetime' , '') }}"
+
+#~ msgid ""
+#~ "The start hour cannot be before the end hour for a one-day shift template."
+#~ msgstr "單日輪班範本中, 開始時間不可早於結束時間."
 
 #~ msgid "04:00"
 #~ msgstr "04:00"

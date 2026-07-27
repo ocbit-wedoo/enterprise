@@ -974,3 +974,30 @@ class TestGeneralLedgerReport(TestAccountReportsCommon, odoo.tests.HttpCase):
             [      '',                  move.name, '2010-01-01',              '',        '',         '',   '0.00', '100.00', '-100.00'],
             [      '',                    'Total',           '',              '',        '',         '', '100.00', '100.00',    '0.00'],
         ])
+
+    def test_open_gl_from_bs_then_change_date_filter(self):
+        """
+        Test that the 'filter_search_bar' option key is not filtered out when updating the date filter after opening
+        the General Ledger from a balance sheet line
+        """
+
+        # Open Balance Sheet
+        balance_sheet = self.env.ref('account_reports.balance_sheet')
+        bs_options = self._generate_options(balance_sheet, '2017-06-01', '2017-06-01', default_options={'unfold_all': True})
+        lines = balance_sheet._get_lines(bs_options)
+        line = [l for l in lines if l.get('caret_options')][:1]
+        self.assertLinesValues(line, [0, 1], [('121000 Account Receivable', 1000.0)], bs_options)
+
+        # Open General Ledger
+        general_ledger = self.env.ref('account_reports.general_ledger_report')
+        params = {'line_id': line[0]['id']}
+        res = balance_sheet.caret_option_open_general_ledger(bs_options, params)
+        gl_options = res['params']['options']
+
+        # options are updated afterward by the search() in account_reports/static/src/components/account_report/search_bar/search_bar.js
+        gl_options['filter_search_bar'] = '121000'
+
+        # Update the date filter
+        gl_options['date'] = {**gl_options['date'], 'filter': 'this_month'}
+        new_gl_options = general_ledger.with_context(res['context']).get_options(gl_options)
+        self.assertEqual(new_gl_options['filter_search_bar'], '121000', 'the filter_search_bar key should still be present and set in the options')

@@ -9,13 +9,14 @@
 # Mikael Åkerberg <mikael.akerberg@mariaakerberg.com>, 2024
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-04-14 08:19+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-20 09:04+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "documents_sign/sv/>\n"
 "Language: sv\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: documents_sign
 #: model_terms:ir.ui.view,arch_db:documents_sign.res_config_settings_view_form_inherit_documents_sign
@@ -62,7 +63,7 @@ msgstr "Mapp"
 #. module: documents_sign
 #: model_terms:ir.ui.view,arch_db:documents_sign.res_config_settings_view_form_inherit_documents_sign
 msgid "Go to Sign Document Templates"
-msgstr ""
+msgstr "Gå till mallar för att skriva under dokument"
 
 #. module: documents_sign
 #. odoo-python
@@ -80,7 +81,7 @@ msgstr "Nya mallar"
 #: model:ir.actions.server,name:documents_sign.ir_actions_server_create_sign_template_direct
 #: model_terms:ir.ui.view,arch_db:documents_sign.res_config_settings_view_form_inherit_documents_sign
 msgid "Sign"
-msgstr "Tecken"
+msgstr "Underskrifter"
 
 #. module: documents_sign
 #: model:ir.model.fields,field_description:documents_sign.field_res_config_settings__documents_sign_folder_id
@@ -101,27 +102,27 @@ msgstr ""
 #. module: documents_sign
 #: model:ir.model,name:documents_sign.model_sign_request
 msgid "Signature Request"
-msgstr "Signaturbegäran"
+msgstr "Underskriftsförfrågan"
 
 #. module: documents_sign
 #: model:ir.model,name:documents_sign.model_sign_request_item
 msgid "Signature Request Item"
-msgstr "Objekt för signaturbegäran"
+msgstr "Objekt i underskriftsförfrågan"
 
 #. module: documents_sign
 #: model:ir.model,name:documents_sign.model_sign_template
 msgid "Signature Template"
-msgstr "Signaturmall"
+msgstr "Underskriftsmall"
 
 #. module: documents_sign
 #: model:ir.model.fields,field_description:documents_sign.field_sign_template__folder_id
 msgid "Signed Document Folder"
-msgstr ""
+msgstr "Mapp med påskrivna dokument"
 
 #. module: documents_sign
 #: model:ir.model.fields,field_description:documents_sign.field_sign_template__documents_tag_ids
 msgid "Signed Document Tags"
-msgstr "Signerade Dokument Taggar"
+msgstr "Taggar för påskrivna dokument"
 
 #. module: documents_sign
 #. odoo-python
@@ -133,4 +134,4 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents_sign/models/documents_document.py:0
 msgid "This action can only be applied on pdf document."
-msgstr ""
+msgstr "Åtgärden kan bara användas med PDF-dokument."

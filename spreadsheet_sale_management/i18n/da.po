@@ -9,13 +9,14 @@
 # Wil Odoo, 2025
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-05-17 05:59+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-06-19 17:50+0000\n"
+"PO-Revision-Date: 2026-06-23 13:02+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "spreadsheet_sale_management/da/>\n"
 "Language: da\n"
@@ -23,18 +24,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: spreadsheet_sale_management
 #: model_terms:ir.ui.view,arch_db:spreadsheet_sale_management.sale_order_spreadsheet_view_search
 msgid "Calculator Templates"
-msgstr ""
+msgstr "Regnemaskineskabeloner"
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
 msgid "Cell to sync"
-msgstr ""
+msgstr "Celle, der skal synkroniseres"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__company_id
@@ -60,12 +61,12 @@ msgstr "UUID for den nuværende revision"
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
 msgid "Delete field syncing"
-msgstr ""
+msgstr "Slet feltsynkronisering"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__display_thumbnail
@@ -76,24 +77,29 @@ msgstr "Vis miniaturebillede"
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
 msgid "Edit sync"
-msgstr ""
+msgstr "Redigér synkronisering"
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
 msgid "Field syncing"
-msgstr ""
+msgstr "Feltsynkronisering"
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
 msgid "Field to sync"
-msgstr ""
+msgstr "Felt, der skal synkroniseres"
 
 #. module: spreadsheet_sale_management
 #: model:sale.order.template.line,name:spreadsheet_sale_management.sale_order_template_line_assembly
 msgid "Furniture Assembly"
 msgstr "Møbelmontering"
+
+#. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_ir_http
+msgid "HTTP Routing"
+msgstr "HTTP-routing"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__id
@@ -104,25 +110,25 @@ msgstr "ID"
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
 msgid "It should be a boolean."
-msgstr ""
+msgstr "Det skal være en boolesk værdi."
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
 msgid "It should be a number."
-msgstr ""
+msgstr "Det skal være et tal."
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
 msgid "It should be an id."
-msgstr ""
+msgstr "Det skal være et ID."
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
 msgid "It should be an integer."
-msgstr ""
+msgstr "Det skal være et heltal."
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__write_uid
@@ -146,6 +152,8 @@ msgid ""
 "Multiple cells are updating the same field of the same record! Unable to "
 "determine which one to choose: %s"
 msgstr ""
+"Flere celler opdaterer det samme felt i den samme post! Kan ikke afgøre, "
+"hvilken der skal vælges: %s"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__name
@@ -167,12 +175,12 @@ msgstr "Ordre"
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
 msgid "Position of the record in the list"
-msgstr ""
+msgstr "Postenes placering på listen"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model,name:spreadsheet_sale_management.model_sale_order_spreadsheet
 msgid "Quotation Spreadsheet"
-msgstr ""
+msgstr "Tilbudsregneark"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model,name:spreadsheet_sale_management.model_sale_order_template
@@ -189,12 +197,12 @@ msgstr "Tilbudsskabeloner"
 #. odoo-python
 #: code:addons/spreadsheet_sale_management/models/sale_order_spreadsheet.py:0
 msgid "Quote"
-msgstr "Citat"
+msgstr "Tilbud"
 
 #. module: spreadsheet_sale_management
 #: model_terms:ir.ui.view,arch_db:spreadsheet_sale_management.sale_order_spreadsheet_view_search
 msgid "Quote Sheets"
-msgstr ""
+msgstr "Tilbudsark"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order__spreadsheet_template_id
@@ -207,24 +215,24 @@ msgstr "Tilbudsberegner"
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/side_panel/field_sync_side_panel.xml:0
 msgid "Record to sync (position)"
-msgstr ""
+msgstr "Post, der skal synkroniseres (position)"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_spreadsheet_cell_thread__sale_order_spreadsheet_id
 msgid "Sale Order Spreadsheet"
-msgstr ""
+msgstr "Regneark til salgsordrer"
 
 #. module: spreadsheet_sale_management
 #: model:ir.actions.act_window,name:spreadsheet_sale_management.sale_order_spreadsheet_action
 #: model:ir.ui.menu,name:spreadsheet_sale_management.menu_technical_spreadsheet_sale_order_template
 msgid "Sale Order Spreadsheets"
-msgstr ""
+msgstr "Regneark til salgsordre"
 
 #. module: spreadsheet_sale_management
 #. odoo-python
 #: code:addons/spreadsheet_sale_management/models/sale_order_spreadsheet.py:0
 msgid "Sale order lines"
-msgstr ""
+msgstr "Salgsordrelinjer"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model,name:spreadsheet_sale_management.model_sale_order
@@ -246,7 +254,7 @@ msgstr "Gemt"
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_data
 msgid "Spreadsheet Data"
-msgstr "Regnearkdata"
+msgstr "Regnearksdata"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_file_name
@@ -266,18 +274,18 @@ msgstr "Snapshot af regneark"
 #. module: spreadsheet_sale_management
 #: model:ir.model,name:spreadsheet_sale_management.model_spreadsheet_cell_thread
 msgid "Spreadsheet discussion thread"
-msgstr "Samtaletråd i Regneark"
+msgstr "Tråd i regneark"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__spreadsheet_binary_data
 msgid "Spreadsheet file"
-msgstr "Regnearkfil"
+msgstr "Regnearksfil"
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/field_sync_extension_hook.js:0
 msgid "Sync with field"
-msgstr ""
+msgstr "Synkronisér med felt"
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
@@ -286,17 +294,19 @@ msgid ""
 "The value of %(cell_reference)s (%(cell_value)s) can't be used for field \"%"
 "(field_name)s\"."
 msgstr ""
+"Værdien af %(cell_reference)s (%(cell_value)s) kan ikke anvendes i feltet \"%"
+"(field_name)s\"."
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__thumbnail
 msgid "Thumbnail"
-msgstr "Thumbnail"
+msgstr "Miniature"
 
 #. module: spreadsheet_sale_management
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/action/field_sync_action.js:0
 msgid "Unable to save"
-msgstr ""
+msgstr "Kan ikke gemmes"
 
 #. module: spreadsheet_sale_management
 #. odoo-python

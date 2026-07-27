@@ -1,9 +1,12 @@
+import re
+
+from lxml import etree
+from stdnum.nl.btw import compact
+
 from odoo import fields, models, _
 from odoo.exceptions import RedirectWarning
 from odoo.tools import cleanup_xml_node
 
-from lxml import etree
-import re
 
 class DutchECSalesReportCustomHandler(models.AbstractModel):
     _inherit = 'l10n_nl.ec.sales.report.handler'
@@ -100,11 +103,16 @@ class DutchECSalesReportCustomHandler(models.AbstractModel):
             return ctx_id
 
         codes_values = options.get('codes_values', {})
+        vat_identification_division = codes_values.get('VATIdentificationNumberNLFiscalEntityDivision')
+        if vat_identification_division is None:
+            sender_vat = report._get_sender_company_for_export(options).vat
+            vat_identification_division = compact(sender_vat) if sender_vat else ''
+
         codes_values.update({
             'IntraCommunitySupplies': [],
             'IntraCommunityServices': [],
             'IntraCommunityABCSupplies': [],
-            'VATIdentificationNumberNLFiscalEntityDivision': self.env.company.vat[2:] if self.env.company.vat.startswith('NL') else self.env.company.vat,
+            'VATIdentificationNumberNLFiscalEntityDivision': vat_identification_division,
         })
 
         icp_contexts_map = {}

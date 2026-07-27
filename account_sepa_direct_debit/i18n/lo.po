@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.saas~18+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 16:02+0000\n"
-"PO-Revision-Date: 2026-05-18 12:03+0000\n"
+"POT-Creation-Date: 2026-06-19 17:47+0000\n"
+"PO-Revision-Date: 2026-06-26 07:46+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "account_sepa_direct_debit/lo/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -31,6 +31,89 @@ msgstr "(ຖ້າມີ)"
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
 msgid "(optional)"
 msgstr "(ເລືອກໄດ້)"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
+msgid ""
+".\n"
+"                                Make sure the mandate isn't meant for the "
+"parent contact."
+msgstr ""
+".\n"
+"                                ກະລຸນາກວດສອບໃຫ້ແນ່ໃຈວ່າ ໃບມອບສິດນີ້ບໍ່ໄດ້ມີໄວ້ສຳລັບຜູ້ຕິດຕໍ່ຫຼັກ."
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_batch_payment_form_inherit
+msgid ""
+".\n"
+"                        SEPA requires a 5 days notice."
+msgstr ""
+".\n"
+"                        SEPA ຮຽກຮ້ອງໃຫ້ມີການແຈ້ງບອກລ່ວງໜ້າ 5 ວັນ."
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,body_html:account_sepa_direct_debit.email_template_sdd_new_mandate
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;"
+"\">\n"
+"                        Dear <t t-out=\"object.partner_id.display_name or "
+"''\">Azure Interior</t>\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        Here is your SEPA Direct Debit Mandate to sign to "
+"authorize\n"
+"                        <t t-out=\"object.company_id.display_name or "
+"''\">YourCompany</t>\n"
+"                        to send instructions to your bank to debit your "
+"account in accordance with the instructions from\n"
+"                        <t t-out=\"object.company_id.display_name or "
+"''\">YourCompany</t>\n"
+"                        Do not hesitate to contact us if you have any "
+"questions.\n"
+"                        <br/>\n"
+"                        Best regards,\n"
+"                        <t t-if=\"not is_html_empty(user.signature)\" data-o-"
+"mail-quote-container=\"1\">\n"
+"                            <br/><br/>\n"
+"                            <t t-out=\"user.signature\" data-o-mail-"
+"quote=\"1\">--<br data-o-mail-quote=\"1\"/>Mitchell Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">"
+"\n"
+"                        ຮຽນ <t t-out=\"object.partner_id.display_name or "
+"''\">Azure Interior</t>\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        ນີ້ແມ່ນໃບມອບສິດການຫັກບັນຊີໂດຍກົງ SEPA ຂອງທ່ານເພື່ອລົງລາຍເຊັນເພື່ອອະນຸ"
+"ຍາດໃຫ້\n"
+"                        <t t-out=\"object.company_id.display_name or ''\">"
+"YourCompany</t>\n"
+"                        ສົ່ງຄຳສັ່ງໃຫ້ທະນາຄານຂອງທ່ານເພື່ອຫັກບັນຊີຂອງທ່ານຕາມຄຳແນະນຳຈາກ\n"
+"                        <t t-out=\"object.company_id.display_name or ''\">"
+"YourCompany</t>\n"
+"                        ຢ່າລັງເລທີ່ຈະຕິດຕໍ່ພວກເຮົາຫາກທ່ານມີຄຳຖາມໃດໆ.\n"
+"                        <br/>\n"
+"                        ດ້ວຍຄວາມເຄົາລົບ,\n"
+"                        <t t-if=\"not is_html_empty(user.signature)\" data-o-"
+"mail-quote-container=\"1\">\n"
+"                            <br/><br/>\n"
+"                            <t t-out=\"user.signature\" data-o-mail-"
+"quote=\"1\">--<br data-o-mail-quote=\"1\"/>Mitchell Admin</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
+msgid "<span> day(s)</span>"
+msgstr "<span> ວັນ</span>"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -54,10 +137,12 @@ msgstr "<strong>ລະຫັດລະບຸຕົວຕົນເຈົ້າໜ�
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
-msgid "<strong>Date and place of signature:</strong> ......................................"
+msgid ""
+"<strong>Date and place of signature:</"
+"strong> ......................................"
 msgstr ""
-"<strong>ວັນທີ ແລະ ສະຖານທີ່ລົງລາຍເຊັນ:</strong> "
-"......................................"
+"<strong>ວັນທີ ແລະ ສະຖານທີ່ລົງລາຍເຊັນ:</"
+"strong> ......................................"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -76,9 +161,10 @@ msgstr "<strong>ລະຫັດລະບຸຕົວຕົນໃບມອບສ�
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
-msgid "<strong>Name of the reference party:</strong> ......................................"
-msgstr ""
-"<strong>ຊື່ຂອງຝ່າຍອ້າງອີງ:</strong> ......................................"
+msgid ""
+"<strong>Name of the reference party:</"
+"strong> ......................................"
+msgstr "<strong>ຊື່ຂອງຝ່າຍອ້າງອີງ:</strong> ......................................"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -106,10 +192,494 @@ msgid "<strong>Zip: </strong>"
 msgstr "<strong>ລະຫັດໄປສະນີ: </strong>"
 
 #. module: account_sepa_direct_debit
+#: model:mail.template,body_html:account_sepa_direct_debit.email_template_sdd_pre_notification
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: "
+"16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; "
+"color: #454748; width: 100%; border-collapse:separate;\"><tr><td "
+"align=\"center\">\n"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" "
+"style=\"padding: 16px; background-color: white; color: #454748; border-"
+"collapse:separate;\">\n"
+"<tbody>\n"
+"    <!-- HEADER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" "
+"width=\"590\" style=\"min-width: 590px; background-color: white; padding: "
+"0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\">\n"
+"                    <t t-set=\"company\" t-value=\"object.company_id\"/>\n"
+"                    <span style=\"font-size: 10px;\">Your Direct Debit "
+"Payment Notification</span><br/>\n"
+"                </td></tr>\n"
+"                <tr><td valign=\"middle\" align=\"right\" t-if=\"not "
+"company.uses_default_logo\">\n"
+"                    <img t-attf-src=\"/logo.png?company={{ company.id }}\" "
+"style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-"
+"alt=\"company.name\"/>\n"
+"                </td></tr>\n"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                    <hr width=\"100%\" style=\"background-"
+"color:rgb(204,204,204);border:medium none;clear:both;display:block;font-"
+"size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"\n"
+"    <!-- CONTENT -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" "
+"width=\"590\" style=\"min-width: 590px; background-color: white; padding: "
+"0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                    Dear <t t-out=\"object.partner_id.name or ''\">Azure "
+"Interior</t><br/>\n"
+"                    <br/>\n"
+"                    A Direct Debit payment request amounting to\n"
+"                    <span style=\"font-weight:bold;\" t-"
+"out=\"format_amount(object.amount, object.currency_id) or ''\">$ 0.00</"
+"span>\n"
+"                    will be sent to your bank.<br/>\n"
+"                    Your account ending with <t t-"
+"out=\"ctx.get('iban_last_4') or ''\">1234</t> will be automatically debited "
+"on the\n"
+"                    <span style=\"font-weight:bold;\" t-"
+"out=\"format_date(ctx.get('collection_date'))\">2020-04-18</span>,\n"
+"                    or shortly thereafter.<br/>\n"
+"                    please make sure you have the requested funds.<br/>\n"
+"                    <br/>\n"
+"                    <t t-if=\"ctx.get('creditor_iban') or "
+"ctx.get('mandate_ref')\">\n"
+"                        Merchant data:<br/>\n"
+"                        <ul>\n"
+"                            <t t-if=\"ctx.get('creditor_iban')\">\n"
+"                                <li>IBAN: <t t-out=\"ctx['creditor_iban'] or "
+"''\">NO 93 8601 1117947</t></li>\n"
+"                            </t>\n"
+"                            <t t-if=\"ctx.get('mandate_ref')\">\n"
+"                                <li>SEPA DIRECT DEBIT MANDATE REFERENCE: <t "
+"t-out=\"ctx['mandate_ref'] or ''\"/></li>\n"
+"                            </t>\n"
+"                        </ul>\n"
+"                    </t>\n"
+"                    <br/>\n"
+"                    Do not hesitate to contact us if you have any question.\n"
+"                </td></tr>\n"
+"                <tr><td style=\"text-align:center;\">\n"
+"                    <hr width=\"100%\" style=\"background-"
+"color:rgb(204,204,204);border:medium none;clear:both;display:block;font-"
+"size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"    <!-- FOOTER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" "
+"width=\"590\" style=\"min-width: 590px; background-color: white; font-size: "
+"11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\" align=\"left\">\n"
+"                    <t t-out=\"company.name or ''\">YourCompany</t>\n"
+"                </td></tr>\n"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: "
+"0.7;\">\n"
+"                    <t t-if=\"company.phone\">\n"
+"                        <t t-out=\"company.phone or ''\">+1 650-123-4567</t> "
+"|\n"
+"                    </t>\n"
+"                    <t t-if=\"company.email\">\n"
+"                        <a t-attf-href=\"'mailto:%s' % {{ company.email }}\" "
+"style=\"text-decoration:none; color: #454748;\" t-out=\"company.email or "
+"''\">info@yourcompany.com</a> |\n"
+"                    </t>\n"
+"                    <t t-if=\"company.website\">\n"
+"                        <a t-attf-href=\"'%s' % {{ company.website }}\" "
+"style=\"text-decoration:none; color: #454748;\" t-out=\"company.website or "
+"''\">http://www.example.com</a>\n"
+"                    </t>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"</tbody>\n"
+"</table>\n"
+"</td></tr>\n"
+"<!-- POWERED BY -->\n"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" "
+"style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; "
+"padding: 8px; border-collapse:separate;\">\n"
+"      <tr><td style=\"text-align: center; font-size: 13px;\">\n"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?"
+"utm_source=db&amp;utm_medium=mail\" style=\"color: #875A7B;\">Odoo</a>\n"
+"      </td></tr>\n"
+"    </table>\n"
+"</td></tr>\n"
+"</table>\n"
+"            "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: "
+"16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; "
+"color: #454748; width: 100%; border-collapse:separate;\"><tr><td "
+"align=\"center\">\n"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" "
+"style=\"padding: 16px; background-color: white; color: #454748; border-"
+"collapse:separate;\">\n"
+"<tbody>\n"
+"    <!-- HEADER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" "
+"width=\"590\" style=\"min-width: 590px; background-color: white; padding: "
+"0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\">\n"
+"                    <t t-set=\"company\" t-value=\"object.company_id\"/>\n"
+"                    <span style=\"font-size: 10px;\">ການແຈ້ງເຕືອນການຊຳລະເງິນແບບຫັ"
+"ກບັນຊີໂດຍກົງຂອງທ່ານ</span><br/>\n"
+"                </td></tr>\n"
+"                <tr><td valign=\"middle\" align=\"right\" t-if=\"not "
+"company.uses_default_logo\">\n"
+"                    <img t-attf-src=\"/logo.png?company={{ company.id }}\" "
+"style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" t-att-"
+"alt=\"company.name\"/>\n"
+"                </td></tr>\n"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                    <hr width=\"100%\" style=\"background-color:rgb"
+"(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-"
+"height:1px;line-height:0; margin:16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"\n"
+"    <!-- CONTENT -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" "
+"width=\"590\" style=\"min-width: 590px; background-color: white; padding: "
+"0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                    ຮຽນ <t t-out=\"object.partner_id.name or ''\">Azure "
+"Interior</t><br/>\n"
+"                    <br/>\n"
+"                    ຄຳຮ້ອງຂໍການຊຳລະເງິນແບບຫັກບັນຊີໂດຍກົງເປັນຈຳນວນເງິນ\n"
+"                    <span style=\"font-weight:bold;\" t-out=\"format_amount"
+"(object.amount, object.currency_id) or ''\">$ 0.00</span>\n"
+"                    ຈະຖືກສົ່ງໄປຫາທະນາຄານຂອງທ່ານ.<br/>\n"
+"                    ບັນຊີຂອງທ່ານທີ່ລົງທ້າຍດ້ວຍ <t t-out=\"ctx.get('iban_last_4') or "
+"''\">1234</t> ຈະຖືກຫັກເງິນໂດຍອັດຕະໂນມັດໃນວັນທີ\n"
+"                    <span style=\"font-weight:bold;\" t-out=\"format_date"
+"(ctx.get('collection_date'))\">2020-04-18</span>,\n"
+"                    ຫຼື ຫຼັງຈາກນັ້ນບໍ່ດົນ.<br/>\n"
+"                    ກະລຸນາກວດສອບໃຫ້ແນ່ໃຈວ່າທ່ານມີເງິນພຽງພໍຕາມທີ່ຮ້ອງຂໍ.<br/>\n"
+"                    <br/>\n"
+"                    <t t-if=\"ctx.get('creditor_iban') or ctx.get"
+"('mandate_ref')\">\n"
+"                        ຂໍ້ມູນຜູ້ຄ້າ:<br/>\n"
+"                        <ul>\n"
+"                            <t t-if=\"ctx.get('creditor_iban')\">\n"
+"                                <li>IBAN: <t t-out=\"ctx['creditor_iban'] or "
+"''\">NO 93 8601 1117947</t></li>\n"
+"                            </t>\n"
+"                            <t t-if=\"ctx.get('mandate_ref')\">\n"
+"                                <li>ຂໍ້ມູນອ້າງອີງໃບມອບສິດ SEPA DIRECT DEBIT: <t t-"
+"out=\"ctx['mandate_ref'] or ''\"/></li>\n"
+"                            </t>\n"
+"                        </ul>\n"
+"                    </t>\n"
+"                    <br/>\n"
+"                    ຢ່າລັງເລທີ່ຈະຕິດຕໍ່ພວກເຮົາຫາກທ່ານມີຄຳຖາມໃດໆ.\n"
+"                </td></tr>\n"
+"                <tr><td style=\"text-align:center;\">\n"
+"                    <hr width=\"100%\" style=\"background-color:rgb"
+"(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-"
+"height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"    <!-- FOOTER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" "
+"width=\"590\" style=\"min-width: 590px; background-color: white; font-size: "
+"11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\" align=\"left\">\n"
+"                    <t t-out=\"company.name or ''\">YourCompany</t>\n"
+"                </td></tr>\n"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: "
+"0.7;\">\n"
+"                    <t t-if=\"company.phone\">\n"
+"                        <t t-out=\"company.phone or ''\">+1 650-123-4567</t> "
+"|\n"
+"                    </t>\n"
+"                    <t t-if=\"company.email\">\n"
+"                        <a t-attf-href=\"'mailto:%s' % {{ company.email }}\" "
+"style=\"text-decoration:none; color: #454748;\" t-out=\"company.email or "
+"''\">info@yourcompany.com</a> |\n"
+"                    </t>\n"
+"                    <t t-if=\"company.website\">\n"
+"                        <a t-attf-href=\"'%s' % {{ company.website }}\" "
+"style=\"text-decoration:none; color: #454748;\" t-out=\"company.website or "
+"''\">http://www.example.com</a>\n"
+"                    </t>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"</tbody>\n"
+"</table>\n"
+"</td></tr>\n"
+"<!-- POWERED BY -->\n"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" "
+"style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; "
+"padding: 8px; border-collapse:separate;\">\n"
+"      <tr><td style=\"text-align: center; font-size: 13px;\">\n"
+"        ຂັບເຄື່ອນໂດຍ <a target=\"_blank\" href=\"https://"
+"www.odoo.com?utm_source=db&amp;utm_medium=mail\" style=\"color: #875A7B;\">"
+"Odoo</a>\n"
+"      </td></tr>\n"
+"    </table>\n"
+"</td></tr>\n"
+"</table>\n"
+"            "
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,body_html:account_sepa_direct_debit.email_template_sdd_mandate_expiring
+msgid ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: "
+"16px; background-color: #FFFFFF; font-family:Verdana, Arial,sans-serif; "
+"color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" "
+"cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: "
+"#FFFFFF; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-"
+"width: 590px;\">\n"
+"                                            <table border=\"0\" "
+"cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; "
+"background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;"
+"\">\n"
+"                                                <tr>\n"
+"                                                    <td valign=\"top\" "
+"style=\"font-size: 13px;\">\n"
+"                                                        <div>\n"
+"                                                            Hello,<br/><br/"
+">\n"
+"                                                            A SEPA Direct "
+"Debit mandate will reach its automatic expiration date on <span t-"
+"out=\"format_date(object._get_expiry_date_per_mandate()[object])"
+"\">2020-04-18</span><br/>\n"
+"                                                            This can be "
+"caused by one of the following reason:\n"
+"                                                            <ul>\n"
+"                                                                <li>\n"
+"                                                                    That "
+"date is the mandate end date agreed upon signature.\n"
+"                                                                </li>\n"
+"                                                                <li>\n"
+"                                                                    It would "
+"then be more than 36 months since the last time this mandate was used.\n"
+"                                                                </li>\n"
+"                                                            </ul>\n"
+"                                                            <div "
+"style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                                <a t-attf-"
+"href=\"{{ website_url }}/odoo/sdd-mandates/{{ object.id }}\" "
+"style=\"background-color: #4caf50; padding: 8px 16px 8px 16px; text-"
+"decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                                                    Go to "
+"Mandate\n"
+"                                                                </a>\n"
+"                                                            </div>\n"
+"                                                            Security Tip: "
+"Check that the domain name you are redirected to is: <b><a t-att-"
+"href=\"object.get_base_url()\" t-out=\"object.get_base_url() or ''\">\n"
+"                                                            https://"
+"yourcompany.odoo.com</a></b>\n"
+"                                                        </div>\n"
+"                                                    </td>\n"
+"                                                </tr>\n"
+"                                                <tr>\n"
+"                                                    <td style=\"text-"
+"align:center;\">\n"
+"                                                        <hr width=\"100%\" "
+"style=\"background-color:rgb(204,204,204);border:medium "
+"none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; "
+"margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td>\n"
+"                                                </tr>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                    <!-- POWERED BY -->\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" "
+"cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: "
+"#F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td style=\"text-align: center; font-"
+"size: 13px;\">\n"
+"                                        Powered by <a target=\"_blank\" "
+"href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" "
+"style=\"color: #875A7B;\">Odoo</a>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                            <table border=\"0\" cellpadding=\"0\" "
+"cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; color: #454748; "
+"padding: 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td style=\"text-align: center; font-"
+"size: 11px;\">\n"
+"                                        PS: This is an automated email sent "
+"by Odoo Accounting to notify you a SEPA Direct Debit mandate is going to get "
+"automatically closed.\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            "
+msgstr ""
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: "
+"16px; background-color: #FFFFFF; font-family:Verdana, Arial,sans-serif; "
+"color: #454748; width: 100%; border-collapse:separate;\">\n"
+"                    <tr>\n"
+"                        <td align=\"center\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" "
+"cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: "
+"#FFFFFF; color: #454748; border-collapse:separate;\">\n"
+"                                <tbody>\n"
+"                                    <!-- CONTENT -->\n"
+"                                    <tr>\n"
+"                                        <td align=\"center\" style=\"min-"
+"width: 590px;\">\n"
+"                                            <table border=\"0\" "
+"cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; "
+"background-color: white; padding: 0px 8px 0px 8px; border-"
+"collapse:separate;\">\n"
+"                                                <tr>\n"
+"                                                    <td valign=\"top\" "
+"style=\"font-size: 13px;\">\n"
+"                                                        <div>\n"
+"                                                            ສະບາຍດີ,<br/><br/>"
+"\n"
+"                                                            ໃບມອບສິດ SEPA "
+"Direct Debit ຈະໝົດອາຍຸໂດຍອັດຕະໂນມັດໃນວັນທີ <span t-out=\"format_date"
+"(object._get_expiry_date_per_mandate()[object])\">2020-04-18</span><br/>\n"
+"                                                            ນີ້ອາດເກີດຈາກສາເຫດໃດ"
+"ໜຶ່ງດັ່ງນີ້:\n"
+"                                                            <ul>\n"
+"                                                                <li>\n"
+"                                                                    ວັນທີນັ້ນແມ່ນວັ"
+"ນທີສິ້ນສຸດໃບມອບສິດທີ່ໄດ້ຕົກລົງກັນເມື່ອລົງລາຍເຊັນ.\n"
+"                                                                </li>\n"
+"                                                                <li>\n"
+"                                                                    ຫຼື ມັນຜ່ານມາ"
+"ຫຼາຍກວ່າ 36 ເດືອນແລ້ວນັບຕັ້ງແຕ່ຄັ້ງລ່າສຸດທີ່ໃບມອບສິດນີ້ຖືກນຳໃຊ້.\n"
+"                                                                </li>\n"
+"                                                            </ul>\n"
+"                                                            <div "
+"style=\"margin: 16px 0px 16px 0px;\">\n"
+"                                                                <a t-attf-"
+"href=\"{{ website_url }}/odoo/sdd-mandates/{{ object.id }}\" "
+"style=\"background-color: #4caf50; padding: 8px 16px 8px 16px; text-"
+"decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                                                    ໄປຫາໃບມອບ"
+"ສິດ\n"
+"                                                                </a>\n"
+"                                                            </div>\n"
+"                                                            ເຄັດລັບຄວາມປອດໄພ: ກ"
+"ວດສອບໃຫ້ແນ່ໃຈວ່າຊື່ໂດເມນທີ່ທ່ານຖືກປ່ຽນເສັ້ນທາງໄປຫາແມ່ນ: <b><a t-att-"
+"href=\"object.get_base_url()\" t-out=\"object.get_base_url() or ''\">\n"
+"                                                            https://"
+"yourcompany.odoo.com</a></b>\n"
+"                                                        </div>\n"
+"                                                    </td>\n"
+"                                                </tr>\n"
+"                                                <tr>\n"
+"                                                    <td style=\"text-"
+"align:center;\">\n"
+"                                                        <hr width=\"100%\" "
+"style=\"background-color:rgb(204,204,204);border:medium "
+"none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; "
+"margin: 16px 0px 16px 0px;\"/>\n"
+"                                                    </td>\n"
+"                                                </tr>\n"
+"                                            </table>\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                    <!-- POWERED BY -->\n"
+"                    <tr>\n"
+"                        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"                            <table border=\"0\" cellpadding=\"0\" "
+"cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: "
+"#F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td style=\"text-align: center; font-"
+"size: 13px;\">\n"
+"                                        ຂັບເຄື່ອນໂດຍ <a target=\"_blank\" "
+"href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" "
+"style=\"color: #875A7B;\">Odoo</a>\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                            <table border=\"0\" cellpadding=\"0\" "
+"cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; color: #454748; "
+"padding: 8px; border-collapse:separate;\">\n"
+"                                <tr>\n"
+"                                    <td style=\"text-align: center; font-"
+"size: 11px;\">\n"
+"                                        ໝາຍເຫດ: ນີ້ແມ່ນອີເມວອັດຕະໂນມັດທີ່ສົ່ງໂດຍ Odoo "
+"Accounting ເພື່ອແຈ້ງໃຫ້ທ່ານຊາບວ່າໃບມອບສິດ SEPA Direct Debit ຈະຖືກປິດໂດຍອັດຕະໂນມັດ.\n"
+"                                    </td>\n"
+"                                </tr>\n"
+"                            </table>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </table>\n"
+"            "
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_payment.py:0
+msgid ""
+"A SEPA direct debit version should be selected to generate the addresses in "
+"the export file."
+msgstr "ຄວນເລືອກເວີຊັນ SEPA direct debit ເພື່ອສ້າງທີ່ຢູ່ໃນໄຟລ໌ສົ່ງອອກ."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_payment.py:0
+msgid ""
+"A SEPA direct debit version should be selected to generate the export file."
+msgstr "ຄວນເລືອກເວີຊັນ SEPA direct debit ເພື່ອສ້າງໄຟລ໌ສົ່ງອອກ."
+
+#. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "A debtor account is required to validate a SEPA Direct Debit mandate."
-msgstr "ຈຳເປັນຕ້ອງມີບັນຊີລູກໜີ້ ເພື່ອຢືນຢັນໃບມອບສິດ SEPA Direct Debit."
+msgid "A customer account is required to validate a SEPA Direct Debit mandate."
+msgstr "ຈຳເປັນຕ້ອງມີບັນຊີລູກຄ້າເພື່ອຢືນຢັນໃບມອບສິດ SEPA Direct Debit."
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.actions.act_window,help:account_sepa_direct_debit.account_sepa_direct_debit_mandate_tree_act
@@ -163,16 +733,32 @@ msgstr "ການຊຳລະທັງໝົດໃນຊຸດນີ້ ຕ້�
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
-msgid "As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. Your rights are explained in a statement that you can obtain from your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited."
+msgid "Antwerp"
+msgstr "ແອນເວີບ (Antwerp)"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid ""
+"As part of your rights, you are entitled to a refund from your bank under "
+"the terms and conditions of your agreement with your bank. Your rights are "
+"explained in a statement that you can obtain from your bank. A refund must "
+"be claimed within 8 weeks starting from the date on which your account was "
+"debited."
 msgstr ""
-"ໃນສ່ວນຂອງສິດທິຂອງທ່ານ, ທ່ານມີສິດໄດ້ຮັບເງິນຄືນຈາກທະນາຄານຂອງທ່ານ ພາຍໃຕ້ເງື່ອນໄຂຂອງຂໍ້ຕົກລົງຂອງທ່ານກັ"
-"ບທະນາຄານ. ສິດທິຂອງທ່ານໄດ້ຖືກອະທິບາຍໄວ້ໃນຖະແຫຼງການທີ່ທ່ານສາມາດຂໍໄດ້ຈາກທະນາຄານ. ການຂໍຄືນເງິນຕ້ອງ"
-"ເຮັດພາຍໃນ 8 ອາທິດ ນັບຈາກວັນທີບັນຊີຂອງທ່ານຖືກຫັກເງິນ."
+"ໃນສ່ວນຂອງສິດທິຂອງທ່ານ, ທ່ານມີສິດໄດ້ຮັບເງິນຄືນຈາກທະນາຄານຂອງທ່ານ "
+"ພາຍໃຕ້ເງື່ອນໄຂຂອງຂໍ້ຕົກລົງຂອງທ່ານກັບທະນາຄານ. "
+"ສິດທິຂອງທ່ານໄດ້ຖືກອະທິບາຍໄວ້ໃນຖະແຫຼງການທີ່ທ່ານສາມາດຂໍໄດ້ຈາກທະນາຄານ. ການຂໍຄືນເງິນຕ້ອງເຮັດພາຍໃນ "
+"8 ອາທິດ ນັບຈາກວັນທີບັນຊີຂອງທ່ານຖືກຫັກເງິນ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_attachment_count
 msgid "Attachment Count"
 msgstr "ຈຳເນວນໄຟລ໌ຄັດຕິດ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__author_id
+msgid "Author"
+msgstr "ຜູ້ຂຽນ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_sepa_direct_debit.selection__account_batch_payment__sdd_scheme__b2b
@@ -197,6 +783,21 @@ msgstr "ການຊຳລະແບບຊຸດ"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "Belgium"
+msgstr "ເບວຢ້ຽມ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__body_has_template_value
+msgid "Body content is the same as the template"
+msgstr "ເນື້ອໃນຂໍ້ຄວາມຄືກັນກັບແມ່ແບບ"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "Building C"
+msgstr "ອາຄານ C"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
 msgid "By signing this mandate form, you authorise (A)"
 msgstr "ໂດຍການລົງລາຍເຊັນໃນແບບຟອມມອບສິດນີ້, ທ່ານອະນຸຍາດໃຫ້ (A)"
 
@@ -207,9 +808,31 @@ msgid "CORE"
 msgstr "CORE"
 
 #. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "CREDIT-1234"
+msgstr "CREDIT-1234"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__can_edit_body
+msgid "Can Edit Body"
+msgstr "ສາມາດແກ້ໄຂເນື້ອໃນໄດ້"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_send_form
 msgid "Cancel"
 msgstr "ຍົກເລີກ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_sepa_direct_debit.selection__sdd_mandate__state__cancelled
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/wizard/sdd_mandate_send.py:0
+msgid "Check Partner(s) Email(s)"
+msgstr "ກວດສອບອີເມລຂອງຄູ່ຄ້າ"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
@@ -234,6 +857,7 @@ msgstr "ບໍລິສັດ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__company_id
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__company_id
 msgid "Company"
 msgstr "ບໍລິສັດ"
 
@@ -253,7 +877,13 @@ msgid "Contact"
 msgstr "ຜູ້ຕິດຕໍ່"
 
 #. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__body
+msgid "Contents"
+msgstr "ເນື້ອໃນ"
+
+#. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_payment__sdd_mandate_usable
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_payment_register__sdd_mandate_usable
 msgid "Could a SDD mandate be used?"
 msgstr "ສາມາດໃຊ້ໃບມອບສິດ SDD ໄດ້ບໍ່?"
 
@@ -269,11 +899,13 @@ msgstr "ສ້າງມັນ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__create_uid
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__create_uid
 msgid "Created by"
 msgstr "ສ້າງໂດຍ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__create_date
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__create_date
 msgid "Created on"
 msgstr "ສ້າງເມື່ອ"
 
@@ -294,6 +926,7 @@ msgstr "ລະຫັດລະບຸຕົວຕົນເຈົ້າໜີ້ຂ
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__partner_id
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__partner_id
 msgid "Customer"
 msgstr "ລູກຄ້າ"
 
@@ -304,8 +937,14 @@ msgstr "ໃບມອບສິດລູກຄ້າ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__partner_id
+#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate_send__partner_id
 msgid "Customer whose payments are to be managed by this mandate."
 msgstr "ລູກຄ້າທີ່ການຊຳລະເງິນຈະຖືກຈັດການໂດຍໃບມອບສິດນີ້."
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "DEBT1234"
+msgstr "DEBT1234"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__start_date
@@ -314,13 +953,19 @@ msgstr "ວັນທີທີ່ເລີ່ມໃຊ້ໃບມອບສິດ
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__end_date
-msgid "Date until which the mandate can be used. It will automatically be closed after this date."
+msgid ""
+"Date until which the mandate can be used. It will automatically be closed "
+"after this date."
 msgstr "ວັນທີສຸດທ້າຍທີ່ໃຊ້ໃບມອບສິດໄດ້. ມັນຈະຖືກປິດໂດຍອັດຕະໂນມັດຫຼັງຈາກວັນທີນີ້."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_batch_payment__sdd_required_collection_date
-msgid "Date when the company expects to receive the payments of this batch."
-msgstr "ວັນທີທີ່ບໍລິສັດຄາດວ່າຈະໄດ້ຮັບການຊຳລະເງິນຂອງຊຸດນີ້."
+msgid ""
+"Date when the company expects to receive the payments of this batch. It "
+"can't be inferior to the sending day + the minimum pre-notification period."
+msgstr ""
+"ວັນທີທີ່ບໍລິສັດຄາດວ່າຈະໄດ້ຮັບການຊຳລະເງິນຂອງຊຸດນີ້. ມັນບໍ່ສາມາດໜ້ອຍກວ່າວັນທີສົ່ງ + ໄລຍະເວລາການແຈ້ງບອກລ່"
+"ວງໜ້າຕໍ່າສຸດ."
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -331,6 +976,16 @@ msgstr "ລູກໜີ້"
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__debtor_id_code
 msgid "Debtor Identifier"
 msgstr "ລະຫັດລະບຸຕົວຕົນລູກໜີ້"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_sepa_direct_debit.selection__account_journal__debit_sepa_pain_version__pain_008_001_02
+msgid "Default (Pain 008.001.02)"
+msgstr "ຄ່າເລີ່ມຕົ້ນ (Pain 008.001.02)"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "Demo@email.com"
+msgstr "Demo@email.com"
 
 #. module: account_sepa_direct_debit
 #: model:ir.actions.act_window,name:account_sepa_direct_debit.account_sepa_direct_debit_mandate_tree_act
@@ -358,14 +1013,51 @@ msgstr "ລາຍການຊຳລະແບບຫັກບັນຊີທີ່
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__display_name
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__display_name
 msgid "Display Name"
 msgstr "ຊື່ທີ່ສະແດງ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__checkbox_download
+msgid "Download"
+msgstr "ດາວໂຫຼດ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields.selection,name:account_sepa_direct_debit.selection__sdd_mandate__state__draft
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sdd_mandate_search_view
 msgid "Draft"
 msgstr "ຮ່າງ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__state
+msgid ""
+"Draft: Validate before use.\n"
+"Active: Valid mandates to collect payments.\n"
+"Cancelled: Mandates never validated.\n"
+"Closed: Expired or manually closed mandates. Previous transactions remain "
+"valid.\n"
+"Revoked: Fraudulent mandates. Previous invoices might need reimbursement.\n"
+msgstr ""
+"ຮ່າງ: ຢືນຢັນກ່ອນໃຊ້ງານ.\n"
+"ໃຊ້ງານຢູ່: ໃບມອບສິດທີ່ຖືກຕ້ອງເພື່ອເກັບເງິນ.\n"
+"ຍົກເລີກ: ໃບມອບສິດທີ່ບໍ່ເຄີຍຖືກຢືນຢັນ.\n"
+"ປິດແລ້ວ: ໃບມອບສິດທີ່ໝົດອາຍຸ ຫຼື ຖືກປິດດ້ວຍຕົນເອງ. ທຸລະກຳກ່ອນໜ້ານີ້ຍັງຄົງມີຜົນ.\n"
+"ຖືກຖອນສິດ: ໃບມອບສິດທີ່ບໍ່ຖືກຕ້ອງ. ໃບແຈ້ງໜີ້ກ່ອນໜ້ານີ້ອາດຈະຕ້ອງໄດ້ຮັບການຄືນເງິນ.\n"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__checkbox_send_mail
+msgid "Email"
+msgstr "ອີເມລ"
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,description:account_sepa_direct_debit.email_template_sdd_new_mandate
+msgid "Email requesting the customer to sign the mandate attached"
+msgstr "ອີເມລທີ່ຮ້ອງຂໍໃຫ້ລູກຄ້າລົງລາຍເຊັນໃນໃບມອບສິດທີ່ຄັດຕິດມານຳ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__template_id
+msgid "Email template"
+msgstr "ແມ່ແບບອີເມວ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__end_date
@@ -382,6 +1074,16 @@ msgstr "ວັນທີສິ້ນສຸດ"
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_res_users__sdd_mandate_ids
 msgid "Every mandate belonging to this partner."
 msgstr "ທຸກໆໃບມອບສິດທີ່ເປັນຂອງຄູ່ຄ້ານີ້."
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__expiration_warning_already_sent
+msgid "Expiration warning sent"
+msgstr "ສົ່ງຄຳເຕືອນການໝົດອາຍຸແລ້ວ"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_batch_payment_form_inherit
+msgid "First-Time Payments"
+msgstr "ການຊຳລະເງິນຄັ້ງທຳອິດ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_follower_ids
@@ -404,9 +1106,34 @@ msgid "Free reference identifying the debtor in your company."
 msgstr "ຂໍ້ມູນອ້າງອີງສຳລັບລະບຸຕົວຕົນລູກໜີ້ໃນບໍລິສັດຂອງທ່ານ."
 
 #. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Go to journal"
+msgstr "ໄປຫາສະມຸດບັນຊີ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Go to mandates"
+msgstr "ໄປຫາໃບມອບສິດ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Go to payments"
+msgstr "ໄປຫາການຊຳລະເງິນ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Go to settings"
+msgstr "ໄປຫາການຕັ້ງຄ່າ"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_payment_register_form_inherit_account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_account_payment_form
-msgid "Good news! A valid Sepa Mandate is available."
-msgstr "ຂ່າວດີ! ມີໃບມອບສິດ Sepa ທີ່ໃຊ້ງານໄດ້ຢູ່."
+msgid "Good news! A valid SEPA Mandate is available."
+msgstr "ຂ່າວດີ! ມີໃບມອບສິດ SEPA ທີ່ໃຊ້ງານໄດ້."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__has_message
@@ -420,6 +1147,7 @@ msgstr "IBAN"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__id
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__id
 msgid "ID"
 msgstr "ລະຫັດ"
 
@@ -453,6 +1181,13 @@ msgstr "ຖ້າໝາຍໄວ້, ຂໍ້ຄວາມໃໝ່ຈະແຈ�
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "ຖ້າໝາຍໄວ້, ບາງຂໍ້ຄວາມມີຂໍ້ຜິດພາດໃນການສົ່ງ."
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__payment_ids
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
+msgid "In-process and completed payments generated under this mandate."
+msgstr ""
+"ລາຍການຊຳລະເງິນທີ່ກຳລັງດຳເນີນການ ແລະ ສຳເລັດແລ້ວ ທີ່ຖືກສ້າງຂຶ້ນພາຍໃຕ້ໃບມອບສິດນີ້."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
@@ -493,13 +1228,17 @@ msgid "Invoices paid with this mandate."
 msgstr "ໃບແຈ້ງໜີ້ທີ່ຊຳລະດ້ວຍໃບມອບສິດນີ້."
 
 #. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__is_mail_template_editor
+msgid "Is Editor"
+msgstr "ແມ່ນຜູ້ແກ້ໄຂ"
+
+#. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_is_follower
 msgid "Is Follower"
 msgstr "ແມ່ນຜູ້ຕິດຕາມ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model,name:account_sepa_direct_debit.model_account_journal
-#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__payment_journal_id
 msgid "Journal"
 msgstr "ສະມຸດບັນຊີ"
 
@@ -509,22 +1248,19 @@ msgid "Journal Entry"
 msgstr "ການບັນທຶກບັນຊີ"
 
 #. module: account_sepa_direct_debit
-#: model:ir.model,name:account_sepa_direct_debit.model_account_move_line
-msgid "Journal Item"
-msgstr "ລາຍການບັນຊີ"
-
-#. module: account_sepa_direct_debit
-#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__payment_journal_id
-msgid "Journal to use to receive SEPA Direct Debit payments from this mandate."
-msgstr "ສະມຸດບັນຊີທີ່ຈະໃຊ້ເພື່ອຮັບການຊຳລະເງິນ SEPA Direct Debit ຈາກໃບມອບສິດນີ້."
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__lang
+msgid "Language"
+msgstr "ພາສາ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__write_uid
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__write_uid
 msgid "Last Updated by"
 msgstr "ອັບເດດລ່າສຸດໂດຍ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__write_date
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__write_date
 msgid "Last Updated on"
 msgstr "ອັບເດດລ່າສຸດເມື່ອ"
 
@@ -532,6 +1268,22 @@ msgstr "ອັບເດດລ່າສຸດເມື່ອ"
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_main_attachment_id
 msgid "Main Attachment"
 msgstr "ໄຟລ໌ຄັດຕິດຫຼັກ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__mandate_id
+msgid "Mandate"
+msgstr "ໃບມອບສິດ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__mandate_pdf_file
+msgid "Mandate Form PDF"
+msgstr "ແບບຟອມມອບສິດ PDF"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Mandate customer and bank account need to match."
+msgstr "ລູກຄ້າໃນໃບມອບສິດ ແລະ ບັນຊີທະນາຄານຕ້ອງກົງກັນ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.actions.report,name:account_sepa_direct_debit.sdd_mandate_form_report_main
@@ -547,6 +1299,11 @@ msgstr "ລະຫັດລະບຸຕົວຕົນໃບມອບສິດຈ
 #: model:ir.actions.server,name:account_sepa_direct_debit.sdd_mandate_state_cron_ir_actions_server
 msgid "Mandate state updater"
 msgstr "ຕົວອັບເດດສະຖານະໃບມອບສິດ"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "Marc Demo"
+msgstr "Marc Demo"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_has_error
@@ -584,6 +1341,11 @@ msgid "Next Activity Type"
 msgstr "ປະເພດກິດຈະກຳຖັດໄປ"
 
 #. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_payment_register__no_sdd_mandate_partner_ids
+msgid "No Sdd Mandate Partner"
+msgstr "ບໍ່ມີຄູ່ຄ້າທີ່ມີໃບມອບສິດ Sdd"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.actions.act_window,help:account_sepa_direct_debit.action_sdd_payments_to_collect
 msgid "No direct debit payment to collect"
 msgstr "ບໍ່ມີການຊຳລະແບບຫັກບັນຊີທີ່ຕ້ອງເກັບ"
@@ -594,14 +1356,16 @@ msgid "Number of Actions"
 msgstr "ຈຳນວນການດຳເນີນການ"
 
 #. module: account_sepa_direct_debit
-#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__payments_to_collect_nber
-msgid "Number of Direct Debit payments to be collected for this mandate, that is, the number of payments that have been generated and posted thanks to this mandate and still needs their XML file to be generated and sent to the bank to debit the customer's account."
-msgstr "ຈຳນວນການຊຳລະແບບຫັກບັນຊີທີ່ຈະຖືກເກັບສຳລັບໃບມອບສິດນີ້."
-
-#. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_has_error_counter
 msgid "Number of errors"
 msgstr "ຈຳນວນຂໍ້ຜິດພາດ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__payments_to_collect_nber
+msgid ""
+"Number of in-process and completed payments generated under this mandate."
+msgstr ""
+"ຈຳນວນການຊຳລະເງິນທີ່ກຳລັງດຳເນີນການ ແລະ ສຳເລັດແລ້ວ ທີ່ສ້າງຂຶ້ນພາຍໃຕ້ໃບມອບສິດນີ້."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__paid_invoices_nber
@@ -610,8 +1374,8 @@ msgstr "ຈຳນວນໃບແຈ້ງໜີ້ທີ່ຊຳລະດ້ວ
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "ຈຳນວນຂໍ້ຄວາມທີ່ຕ້ອງການການດຳເນີນການ"
+msgid "Number of messages requiring action"
+msgstr "ຈຳນວນຂໍ້ຄວາມທີ່ຕ້ອງດຳເນີນການ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_has_error_counter
@@ -619,24 +1383,33 @@ msgid "Number of messages with delivery error"
 msgstr "ຈຳນວນຂໍ້ຄວາມທີ່ມີຂໍ້ຜິດພາດໃນການສົ່ງ"
 
 #. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "Odoo PVT LTD"
+msgstr "Odoo PVT LTD"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.actions.act_window,help:account_sepa_direct_debit.account_sepa_direct_debit_mandate_tree_act
 msgid ""
 "Once an invoice is made\n"
-"                    in Odoo for a customer having a mandate active on the invoice date,\n"
-"                    its validation will trigger its automatic payment, and you will\n"
-"                    then only have to generate a SEPA Direct Debit (SDD) XML file containing this operation\n"
+"                    in Odoo for a customer having a mandate active on the "
+"invoice date,\n"
+"                    its validation will trigger its automatic payment, and "
+"you will\n"
+"                    then only have to generate a SEPA Direct Debit (SDD) XML "
+"file containing this operation\n"
 "                    and send it to your bank to effectively get paid."
 msgstr ""
-"ເມື່ອໃບແຈ້ງໜີ້ຖືກສ້າງຂຶ້ນໃນ Odoo ສຳລັບລູກຄ້າທີ່ມີໃບມອບສິດທີ່ໃຊ້ງານຢູ່, ການຢືນຢັນຈະກະຕຸ້ນການຊຳລະເງິນອັດຕະ"
-"ໂນມັດ."
+"ເມື່ອໃບແຈ້ງໜີ້ຖືກສ້າງຂຶ້ນໃນ Odoo ສຳລັບລູກຄ້າທີ່ມີໃບມອບສິດທີ່ໃຊ້ງານຢູ່, "
+"ການຢືນຢັນຈະກະຕຸ້ນການຊຳລະເງິນອັດຕະໂນມັດ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_bank_statement_line__sdd_mandate_id
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_move__sdd_mandate_id
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_payment__sdd_mandate_id
-msgid "Once this invoice has been paid with Direct Debit, contains the mandate that allowed the payment."
-msgstr ""
-"ເມື່ອໃບແຈ້ງໜີ້ນີ້ຖືກຊຳລະດ້ວຍການຫັກບັນຊີແລ້ວ, ມັນຈະສະແດງໃບມອບສິດທີ່ອະນຸຍາດໃຫ້ຊຳລະ."
+msgid ""
+"Once this invoice has been paid with Direct Debit, contains the mandate that "
+"allowed the payment."
+msgstr "ເມື່ອໃບແຈ້ງໜີ້ນີ້ຖືກຊຳລະດ້ວຍການຫັກບັນຊີແລ້ວ, ມັນຈະສະແດງໃບມອບສິດທີ່ອະນຸຍາດໃຫ້ຊຳລະ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__one_off
@@ -645,18 +1418,25 @@ msgstr "ໃບມອບສິດແບບຄັ້ງດຽວ"
 
 #. module: account_sepa_direct_debit
 #. odoo-python
-#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "Only IBAN account numbers can receive SEPA Direct Debit payments. Please select a journal associated to one."
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid ""
+"Only IBAN account numbers can receive SEPA Direct Debit payments. Please "
+"select a journal associated to one or add an IBAN bank account to the "
+"current journal"
 msgstr ""
-"ມີແຕ່ເລກບັນຊີ IBAN ເທົ່ານັ້ນທີ່ສາມາດຮັບການຊຳລະແບບ SEPA Direct Debit. ກະລຸນາເລືອກສະມຸດບັນຊີທີ່ກ່ຽ"
-"ວຂ້ອງ."
+"ມີແຕ່ເລກບັນຊີ IBAN ເທົ່ານັ້ນທີ່ສາມາດຮັບການຊຳລະແບບ SEPA Direct Debit ໄດ້. ກະລຸນາເລືອກສະມຸດບັນຊີ"
+"ທີ່ກ່ຽວຂ້ອງ ຫຼື ເພີ່ມບັນຊີທະນາຄານ IBAN ໃສ່ສະມຸດບັນຊີປັດຈຸບັນ"
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "Only mandates in draft state can be deleted from database when cancelled."
-msgstr ""
-"ມີແຕ່ໃບມອບສິດໃນສະຖານະຮ່າງເທົ່ານັ້ນທີ່ສາມາດລຶບອອກຈາກຖານຂໍ້ມູນໄດ້ເມື່ອຖືກຍົກເລີກ."
+msgid "Only mandates in draft state can be deleted."
+msgstr "ມີແຕ່ໃບມອບສິດໃນສະຖານະຮ່າງເທົ່ານັ້ນທີ່ສາມາດລຶບໄດ້."
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_payment_register_form_inherit_account_sepa_direct_debit
+msgid "Oops! No valid SEPA mandate for the following partner(s):"
+msgstr "ຂໍອະໄພ! ບໍ່ມີໃບມອບສິດ SEPA ທີ່ໃຊ້ງານໄດ້ສຳລັບຄູ່ຄ້າດັ່ງຕໍ່ໄປນີ້:"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_account_payment_form
@@ -664,9 +1444,32 @@ msgid "Oops! No valid SEPA mandate for this customer."
 msgstr "ຂໍອະໄພ! ບໍ່ມີໃບມອບສິດ SEPA ທີ່ໃຊ້ງານໄດ້ສຳລັບລູກຄ້ານີ້."
 
 #. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Open customer"
+msgstr "ເປີດລູກຄ້າ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Open customers"
+msgstr "ເປີດລູກຄ້າ"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sdd_res_partner_view
 msgid "Open this partner's mandates"
 msgstr "ເປີດໃບມອບສິດຂອງຄູ່ຄ້ານີ້"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate_send__lang
+msgid ""
+"Optional translation language (ISO code) to select when sending out an "
+"email. If not set, the english version will be used. This should usually be "
+"a placeholder expression that provides the appropriate language, e.g. "
+"{{ object.partner_id.lang }}."
+msgstr ""
+"ພາສາແປທີ່ເລືອກໄດ້ (ລະຫັດ ISO) ເພື່ອເລືອກເມື່ອສົ່ງອີເມລ. ຫາກບໍ່ໄດ້ຕັ້ງໄວ້, ຈະໃຊ້ເວີຊັນພາສາອັງກິດ. ໂດຍປົ"
+"ກກະຕິຄວນເປັນ Placeholder ທີ່ລະບຸພາສາທີ່ເໝາະສົມ ເຊັ່ນ: {{ object.partner_id.lang }}."
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_account_payment_form
@@ -691,9 +1494,41 @@ msgid "Paid via direct debit"
 msgstr "ຊຳລະຜ່ານການຫັກບັນຊີໂດຍກົງ"
 
 #. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__partner_parent_id
+msgid "Parent Partner"
+msgstr "ຄູ່ຄ້າຫຼັກ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model,name:account_sepa_direct_debit.model_account_partial_reconcile
+msgid "Partial Reconcile"
+msgstr "ການກວດສອບຍອດເງິນບາງສ່ວນ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/wizard/sdd_mandate_send.py:0
+msgid "Partner should have an email address."
+msgstr "ຄູ່ຄ້າຄວນຈະມີທີ່ຢູ່ອີເມລ."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Partner's Parent"
+msgstr "ບໍລິສັດແມ່ຂອງຄູ່ຄ້າ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model,name:account_sepa_direct_debit.model_account_payment_register
+msgid "Pay"
+msgstr "ຊຳລະ"
+
+#. module: account_sepa_direct_debit
 #: model:ir.model,name:account_sepa_direct_debit.model_account_payment_method
 msgid "Payment Methods"
 msgstr "ວິທີການຊຳລະເງິນ"
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,subject:account_sepa_direct_debit.email_template_sdd_pre_notification
+msgid "Payment notification {{ object.memo }}"
+msgstr "ການແຈ້ງເຕືອນການຊຳລະເງິນ {{ object.memo }}"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model,name:account_sepa_direct_debit.model_account_payment
@@ -702,14 +1537,9 @@ msgid "Payments"
 msgstr "ການຊຳລະເງິນ"
 
 #. module: account_sepa_direct_debit
-#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
-msgid "Payments generated for this mandate that have not yet been collected."
-msgstr "ການຊຳລະເງິນທີ່ຖືກສ້າງຂຶ້ນສຳລັບໃບມອບສິດນີ້ທີ່ຍັງບໍ່ທັນໄດ້ເກັບ."
-
-#. module: account_sepa_direct_debit
-#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__payment_ids
-msgid "Payments generated thanks to this mandate."
-msgstr "ການຊຳລະເງິນທີ່ສ້າງຂຶ້ນຍ້ອນໃບມອບສິດນີ້."
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_account_move_line_payment_filter
+msgid "Payments matching a valid SEPA Direct Debit Mandate"
+msgstr "ການຊຳລະເງິນທີ່ກົງກັບໃບມອບສິດ SEPA Direct Debit ທີ່ໃຊ້ງານໄດ້"
 
 #. module: account_sepa_direct_debit
 #. odoo-python
@@ -718,22 +1548,45 @@ msgid "Payments to Collect"
 msgstr "ການຊຳລະທີ່ຕ້ອງເກັບ"
 
 #. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Payments without mandate"
+msgstr "ການຊຳລະເງິນໂດຍບໍ່ມີໃບມອບສິດ"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_report_invoice_document
 msgid ""
-"Please do not pay it manually, the payment will be asked to your bank to be processed\n"
+"Please do not pay it manually, the payment will be asked to your bank to be "
+"processed\n"
 "                        automatically."
 msgstr ""
 "ກະລຸນາຢ່າຊຳລະດ້ວຍຕົນເອງ, ການຊຳລະຈະຖືກຮ້ອງຂໍໄປຫາທະນາຄານຂອງທ່ານເພື່ອດຳເນີນການໂດຍອັດຕະໂນມັດ."
 
 #. module: account_sepa_direct_debit
-#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
-msgid "Print"
-msgstr "ພິມ"
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__pre_notification_period
+msgid "Pre-notification"
+msgstr "ການແຈ້ງບອກລ່ວງໜ້າ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Problematic mandates"
+msgstr "ໃບມອບສິດທີ່ມີບັນຫາ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__rating_ids
 msgid "Ratings"
 msgstr "ການໃຫ້ຄະແນນ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__recipient_ids
+msgid "Recipients"
+msgstr "ຜູ້ຮັບ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__render_model
+msgid "Rendering Model"
+msgstr "ໂມເດວການສະແດງຜົນ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_batch_payment__sdd_batch_booking
@@ -742,7 +1595,7 @@ msgstr "ຮ້ອງຂໍການບັນທຶກບັນຊີແບບຊ
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_batch_payment__sdd_required_collection_date
-msgid "Required collection date"
+msgid "Required Collection Date"
 msgstr "ວັນທີເກັບເງິນທີ່ກຳນົດ"
 
 #. module: account_sepa_direct_debit
@@ -766,6 +1619,11 @@ msgid "Revoked SDD Mandate"
 msgstr "ໃບມອບສິດ SDD ທີ່ຖືກຖອນສິດ"
 
 #. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "Rue de la Loi, 16"
+msgstr "Rue de la Loi, 16"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_account_payment_search
 msgid "SDD B2B"
 msgstr "SDD B2B"
@@ -783,13 +1641,17 @@ msgstr "SDD CORE"
 #. module: account_sepa_direct_debit
 #: model:ir.model,name:account_sepa_direct_debit.model_sdd_mandate
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_account_invoice_filter
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_account_move_line_payment_filter
 msgid "SDD Mandate"
 msgstr "ໃບມອບສິດ SDD"
 
 #. module: account_sepa_direct_debit
-#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_bank_statement_line__sdd_mandate_scheme
+#: model:ir.model,name:account_sepa_direct_debit.model_sdd_mandate_send
+msgid "SDD Mandate Send"
+msgstr "ສົ່ງໃບມອບສິດ SDD"
+
+#. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_batch_payment__sdd_scheme
-#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_move__sdd_mandate_scheme
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_payment__sdd_mandate_scheme
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__sdd_scheme
 msgid "SDD Scheme"
@@ -823,23 +1685,89 @@ msgid "SEPA Direct Debit"
 msgstr "SEPA Direct Debit"
 
 #. module: account_sepa_direct_debit
+#: model:mail.template,name:account_sepa_direct_debit.email_template_sdd_pre_notification
+msgid "SEPA Direct Debit Customer Pre-Notification mail"
+msgstr "ອີເມລແຈ້ງບອກລ່ວງໜ້າລູກຄ້າ SEPA Direct Debit"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
 msgid "SEPA Direct Debit Mandate"
 msgstr "ໃບມອບສິດ SEPA Direct Debit"
 
 #. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_journal__debit_sepa_pain_version
+msgid "SEPA Direct Debit Pain Version"
+msgstr "ເວີຊັນ SEPA Direct Debit Pain"
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,name:account_sepa_direct_debit.email_template_sdd_new_mandate
+msgid "SEPA Direct Debit Sending"
+msgstr "ການສົ່ງ SEPA Direct Debit"
+
+#. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_res_company__sdd_creditor_identifier
-msgid "SEPA Direct Debit creditor identifier of the company, given by the bank."
-msgstr ""
-"ລະຫັດລະບຸຕົວຕົນເຈົ້າໜີ້ SEPA Direct Debit ຂອງບໍລິສັດ ທີ່ອອກໃຫ້ໂດຍທະນາຄານ."
+msgid ""
+"SEPA Direct Debit creditor identifier of the company, given by the bank."
+msgstr "ລະຫັດລະບຸຕົວຕົນເຈົ້າໜີ້ SEPA Direct Debit ຂອງບໍລິສັດ ທີ່ອອກໃຫ້ໂດຍທະນາຄານ."
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,name:account_sepa_direct_debit.email_template_sdd_mandate_expiring
+#: model:mail.template,subject:account_sepa_direct_debit.email_template_sdd_mandate_expiring
+msgid "SEPA Direct Debit mandate expiration warning"
+msgstr "ຄຳເຕືອນການໝົດອາຍຸໃບມອບສິດ SEPA Direct Debit"
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "SEPA Direct Debit scheme only accepts IBAN account numbers. Please select an IBAN-compliant debtor account for this mandate."
+msgid ""
+"SEPA Direct Debit scheme only accepts IBAN account numbers. Please select an "
+"IBAN-compliant debtor account for this mandate."
 msgstr ""
-"ຮູບແບບ SEPA Direct Debit ຮອງຮັບແຕ່ເລກບັນຊີ IBAN ເທົ່ານັ້ນ. ກະລຸນາເລືອກບັນຊີລູກໜີ້ທີ່ເປັນ IBAN ສຳ"
-"ລັບໃບມອບສິດນີ້."
+"ຮູບແບບ SEPA Direct Debit ຮອງຮັບແຕ່ເລກບັນຊີ IBAN ເທົ່ານັ້ນ. ກະລຸນາເລືອກບັນຊີລູກໜີ້ທີ່ເປັນ IBAN "
+"ສຳລັບໃບມອບສິດນີ້."
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_account_journal_form
+msgid "SEPA Pain Version"
+msgstr "ເວີຊັນ SEPA Pain"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_account_journal_form
+msgid "SEPA Pain version"
+msgstr "ເວີຊັນ SEPA Pain"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_payment_register_form_inherit_account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_account_payment_form
+msgid "SEPA Scheme operates in Euro."
+msgstr "ຮູບແບບ SEPA ດຳເນີນການເປັນສະກຸນເງິນເອີໂຣ."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "SEPA direct debit stateless customer"
+msgstr "ລູກຄ້າ SEPA direct debit ທີ່ບໍ່ມີຂໍ້ມູນສະຖານະ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid ""
+"SEPA regulations set the minimum pre-notification period to a minimum of %s "
+"days to allow enough time for the customer to check that their account is "
+"adequately funded."
+msgstr ""
+"ລະບຽບ SEPA ກຳນົດໄລຍະເວລາການແຈ້ງບອກລ່ວງໜ້າຕໍ່າສຸດແມ່ນ %s ວັນ ເພື່ອໃຫ້ລູກຄ້າມີເວລາພຽງພໍໃນການກວດ"
+"ສອບວ່າບັນຊີຂອງພວກເຂົາມີເງິນພຽງພໍ."
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "SEPA-CUST-001"
+msgstr "SEPA-CUST-001"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid "SEPA1234"
+msgstr "SEPA1234"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__message_has_sms_error
@@ -849,7 +1777,6 @@ msgstr "ຂໍ້ຜິດພາດໃນການສົ່ງ SMS"
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_bank_statement_line__sdd_has_usable_mandate
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_move__sdd_has_usable_mandate
-#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_account_payment__sdd_has_usable_mandate
 msgid "Sdd Has Usable Mandate"
 msgstr "Sdd ມີໃບມອບສິດທີ່ໃຊ້ງານໄດ້"
 
@@ -863,6 +1790,34 @@ msgid "Sdd Mandate"
 msgstr "ໃບມອບສິດ Sdd"
 
 #. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_payment.py:0
+msgid "Select a SEPA Direct Debit version before generating the XML."
+msgstr "ເລືອກເວີຊັນ SEPA Direct Debit ກ່ອນທີ່ຈະສ້າງ XML."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Send"
+msgstr "ສົ່ງ"
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_send_form
+msgid "Send & Print"
+msgstr "ສົ່ງ ແລະ ພິມ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__is_sent
+msgid "Sent to the customer"
+msgstr "ສົ່ງໃຫ້ລູກຄ້າແລ້ວ"
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,description:account_sepa_direct_debit.email_template_sdd_pre_notification
+msgid "Sent to the customer to indicate their account will be charged"
+msgstr "ສົ່ງໃຫ້ລູກຄ້າເພື່ອແຈ້ງໃຫ້ຊາບວ່າບັນຊີຂອງພວກເຂົາຈະຖືກຫັກເງິນ"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
 msgid "Signature"
 msgstr "ລາຍເຊັນ"
@@ -870,8 +1825,22 @@ msgstr "ລາຍເຊັນ"
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
-msgid "Some draft payments could not be posted because of the lack of any active mandate."
+msgid ""
+"Some draft payments could not be posted because of the lack of any active "
+"mandate."
 msgstr "ບາງລາຍການຊຳລະແບບຮ່າງບໍ່ສາມາດລົງບັນຊີໄດ້ ເພາະຂາດໃບມອບສິດທີ່ໃຊ້ງານຢູ່."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Some payments are linked to an inactive mandate."
+msgstr "ບາງລາຍການຊຳລະເງິນຖືກເຊື່ອມໂຍງກັບໃບມອບສິດທີ່ບໍ່ໄດ້ໃຊ້ງານ."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid "Some payments are not linked to any mandate."
+msgstr "ບາງລາຍການຊຳລະເງິນບໍ່ໄດ້ເຊື່ອມໂຍງກັບໃບມອບສິດໃດໆ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__start_date
@@ -897,14 +1866,13 @@ msgstr ""
 "ວາງແຜນ: ກິດຈະກຳໃນອະນາຄົດ."
 
 #. module: account_sepa_direct_debit
-#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__suitable_journal_ids
-msgid "Suitable Journal"
-msgstr "ສະມຸດບັນຊີທີ່ເໝາະສົມ"
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__subject
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_send_form
+msgid "Subject"
+msgstr "ຫົວຂໍ້"
 
 #. module: account_sepa_direct_debit
-#: model:ir.model.fields,help:account_sepa_direct_debit.field_account_bank_statement_line__sdd_mandate_scheme
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_batch_payment__sdd_scheme
-#: model:ir.model.fields,help:account_sepa_direct_debit.field_account_move__sdd_mandate_scheme
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_account_payment__sdd_mandate_scheme
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__sdd_scheme
 msgid ""
@@ -919,9 +1887,24 @@ msgstr ""
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_payment.py:0
-msgid "The SEPA Direct Debit mandate associated to the payment has been revoked and cannot be used anymore."
+msgid ""
+"The SEPA Direct Debit mandate associated to the payment has been revoked and "
+"cannot be used anymore."
 msgstr ""
 "ໃບມອບສິດ SEPA Direct Debit ທີ່ກ່ຽວຂ້ອງກັບການຊຳລະເງິນນີ້ຖືກຖອນສິດແລ້ວ ແລະ ບໍ່ສາມາດໃຊ້ງານໄດ້ອີກ."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
+msgid ""
+"The bank needs to be informed at least %(min_days_new)s days in advance for "
+"collections related to a new mandate and %(min_days)s days in advance when "
+"the mandate is already known by them.\n"
+"The minimum collection date must be %(date)s."
+msgstr ""
+"ທະນາຄານຕ້ອງໄດ້ຮັບການແຈ້ງລ່ວງໜ້າຢ່າງໜ້ອຍ %(min_days_new)s ວັນ ສຳລັບການເກັບເງິນທີ່ກ່ຽວຂ້ອງກັບໃບມ"
+"ອບສິດໃໝ່ ແລະ %(min_days)s ວັນ ລ່ວງໜ້າເມື່ອພວກເຂົາຮູ້ຈັກໃບມອບສິດແລ້ວ.\n"
+"ວັນທີເກັບເງິນຕໍ່າສຸດຕ້ອງແມ່ນ %(date)s."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
@@ -932,43 +1915,74 @@ msgstr "ລະຫັດລະບຸຕົວຕົນເຈົ້າໜີ້ຍ
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "The debtor identifier you specified exceeds the limitation of 35 characters imposed by SEPA regulation"
+msgid "The customer must have a country"
+msgstr "ລູກຄ້າຕ້ອງມີປະເທດ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_payment.py:0
+msgid ""
+"The debtor and creditor city name is a compulsary information when "
+"generating the SDD XML."
+msgstr "ຊື່ເມືອງຂອງລູກໜີ້ ແລະ ເຈົ້າໜີ້ແມ່ນຂໍ້ມູນທີ່ຈຳເປັນເມື່ອສ້າງໄຟລ໌ SDD XML."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/account_payment.py:0
+msgid ""
+"The debtor and creditor country is a compulsary information when generating "
+"the SDD XML."
+msgstr "ປະເທດຂອງລູກໜີ້ ແລະ ເຈົ້າໜີ້ແມ່ນຂໍ້ມູນທີ່ຈຳເປັນເມື່ອສ້າງໄຟລ໌ SDD XML."
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid ""
+"The debtor identifier you specified exceeds the limitation of 35 characters "
+"imposed by SEPA regulation"
 msgstr "ລະຫັດລະບຸຕົວຕົນລູກໜີ້ທີ່ທ່ານກຳນົດຍາວເກີນກຳນົດ 35 ຕົວອັກສອນຕາມລະບຽບ SEPA"
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "The end date of the mandate must be posterior or equal to its start date."
+msgid ""
+"The end date of the mandate must be posterior or equal to its start date."
 msgstr "ວັນທີສິ້ນສຸດຂອງໃບມອບສິດຈະຕ້ອງຫຼັງຈາກ ຫຼື ເທົ່າກັບວັນທີເລີ່ມຕົ້ນ."
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
 msgid ""
-"The mandate will only be used to pay invoices into the\n"
-"                specified time range. If no end date is specified,\n"
-"                you will have to contact us to stop its use."
-msgstr "ໃບມອບສິດນີ້ຈະຖືກໃຊ້ເພື່ອຊຳລະໃບແຈ້ງໜີ້ໃນໄລຍະເວລາທີ່ກຳນົດເທົ່ານັ້ນ."
+"The mandate will only be used to pay invoices into the specified time range. "
+"If no end date is specified,\n"
+"                    you will have to contact us to stop its use. The minimum "
+"notification period for creditors\n"
+"                    to inform debtors about an upcoming collection is"
+msgstr ""
+"ໃບມອບສິດຈະຖືກນຳໃຊ້ເພື່ອຊຳລະໃບແຈ້ງໜີ້ພາຍໃນໄລຍະເວລາທີ່ກຳນົດເທົ່ານັ້ນ. ຫາກບໍ່ມີວັນທີສິ້ນສຸດ,\n"
+"                    ທ່ານຈະຕ້ອງຕິດຕໍ່ພວກເຮົາເພື່ອຢຸດການນຳໃຊ້. ໄລຍະເວລາແຈ້ງການຕໍ່າສຸດສຳລັບເຈົ້າ"
+"ໜີ້\n"
+"                    ເພື່ອແຈ້ງໃຫ້ລູກໜີ້ຊາບກ່ຽວກັບການເກັບເງິນທີ່ກຳລັງຈະມາເຖິງແມ່ນ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__pre_notification_period
+msgid ""
+"The minimum notice period in days, used to inform the customer prior to "
+"collection."
+msgstr ""
+"ໄລຍະເວລາແຈ້ງລ່ວງໜ້າຕໍ່າສຸດເປັນວັນ, ໃຊ້ເພື່ອແຈ້ງໃຫ້ລູກຄ້າຊາບກ່ອນການເກັບເງິນ."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_payment.py:0
-msgid "The payment must be linked to a SEPA Direct Debit mandate in order to generate a Direct Debit XML."
-msgstr ""
-"ການຊຳລະເງິນຈະຕ້ອງເຊື່ອມໂຍງກັບໃບມອບສິດ SEPA Direct Debit ເພື່ອສ້າງໄຟລ໌ XML."
+msgid ""
+"The payment must be linked to a SEPA Direct Debit mandate in order to "
+"generate a Direct Debit XML."
+msgstr "ການຊຳລະເງິນຈະຕ້ອງເຊື່ອມໂຍງກັບໃບມອບສິດ SEPA Direct Debit ເພື່ອສ້າງໄຟລ໌ XML."
 
 #. module: account_sepa_direct_debit
-#: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__state
-msgid ""
-"The state this mandate is in. \n"
-"- 'draft' means that this mandate still needs to be confirmed before being usable. \n"
-"- 'active' means that this mandate can be used to pay invoices. \n"
-"- 'closed' designates a mandate that has been marked as not to use anymore without invalidating the previous transactions done with it.- 'revoked' means the mandate has been signaled as fraudulent by the customer. It cannot be used anymore, and should not ever have been. You will probably need to refund the related invoices, if any.\n"
-msgstr ""
-"ສະຖານະຂອງໃບມອບສິດນີ້.\n"
-"- 'ຮ່າງ' ໝາຍຄວາມວ່າໃບມອບສິດນີ້ຍັງຕ້ອງການການຢືນຢັນກ່ອນການໃຊ້ງານ.\n"
-"- 'ໃຊ້ງານຢູ່' ໝາຍຄວາມວ່າໃບມອບສິດນີ້ສາມາດໃຊ້ເພື່ອຊຳລະໃບແຈ້ງໜີ້ໄດ້.\n"
-"- 'ປິດແລ້ວ' ໝາຍເຖິງໃບມອບສິດທີ່ຖືກກຳນົດວ່າບໍ່ໃຫ້ໃຊ້ງານອີກ.\n"
-"- 'ຖືກຖອນສິດ' ໝາຍເຖິງໃບມອບສິດທີ່ຖືກແຈ້ງວ່າບໍ່ຖືກຕ້ອງໂດຍລູກຄ້າ.\n"
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
+msgid "The selected customer is a child of"
+msgstr "ລູກຄ້າທີ່ເລືອກແມ່ນລູກຂອງ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__name
@@ -976,50 +1990,65 @@ msgid "The unique identifier of this mandate."
 msgstr "ລະຫັດລະບຸຕົວຕົນສະເພາະຂອງໃບມອບສິດນີ້."
 
 #. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.view_batch_payment_form_inherit
+msgid "This batch includes payments from mandates with no prior collections:"
+msgstr "ຊຸດນີ້ລວມມີການຊຳລະເງິນຈາກໃບມອບສິດທີ່ບໍ່ເຄີຍມີການເກັບເງິນມາກ່ອນ:"
+
+#. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_report_invoice_document
 msgid ""
 "This invoice will be paid using direct debit and is only\n"
 "                        sent for informative purposes."
-msgstr ""
-"ໃບແຈ້ງໜີ້ນີ້ຈະຖືກຊຳລະໂດຍໃຊ້ການຫັກບັນຊີໂດຍກົງ ແລະ ຖືກສົ່ງໃຫ້ເພື່ອຈຸດປະສົງໃນການແຈ້ງຂໍ້ມູນເທົ່ານັ້ນ."
+msgstr "ໃບແຈ້ງໜີ້ນີ້ຈະຖືກຊຳລະໂດຍໃຊ້ການຫັກບັນຊີໂດຍກົງ ແລະ ຖືກສົ່ງໃຫ້ເພື່ອຈຸດປະສົງໃນການແຈ້ງຂໍ້ມູນເທົ່ານັ້ນ."
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
-msgid "This mandate is only intended for business-to-business transactions. You are not entitled to a refund from your bank after your account has been debited, but you are entitled to request your bank not to debit your account up until the day on which the payment is due."
+msgid ""
+"This mandate is only intended for business-to-business transactions. You are "
+"not entitled to a refund from your bank after your account has been debited, "
+"but you are entitled to request your bank not to debit your account up until "
+"the day on which the payment is due."
 msgstr "ໃບມອບສິດນີ້ແມ່ນເພື່ອໃຊ້ສຳລັບທຸລະກຳລະຫວ່າງທຸລະກິດ (B2B) ເທົ່ານັ້ນ."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
-msgid "To solve that, you should create a mandate for each of the involved customers, valid at the moment of the payment date."
+msgid ""
+"To solve that, you should create a mandate for each of the involved "
+"customers, valid at the moment of the payment date."
 msgstr "ເພື່ອແກ້ໄຂບັນຫານັ້ນ, ທ່ານຄວນສ້າງໃບມອບສິດໃຫ້ລູກຄ້າແຕ່ລະຄົນທີ່ກ່ຽວຂ້ອງ."
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__one_off
-msgid "True if and only if this mandate can be used for only one transaction. It will automatically go from 'active' to 'closed' after its first use in payment if this option is set.\n"
+msgid ""
+"True if and only if this mandate can be used for only one transaction. It "
+"will automatically go from 'active' to 'closed' after its first use in "
+"payment if this option is set.\n"
 msgstr ""
-"ຈະເປັນຈິງຖ້າໃບມອບສິດນີ້ໃຊ້ໄດ້ພຽງແຕ່ທຸລະກຳດຽວ. ມັນຈະປ່ຽນຈາກ 'ໃຊ້ງານຢູ່' ເປັນ 'ປິດແລ້ວ' ໂດຍອັດຕະໂນ"
-"ມັດຫຼັງຈາກການໃຊ້ງານຄັ້ງທຳອິດ.\n"
+"ຈະເປັນຈິງຖ້າໃບມອບສິດນີ້ໃຊ້ໄດ້ພຽງແຕ່ທຸລະກຳດຽວ. ມັນຈະປ່ຽນຈາກ 'ໃຊ້ງານຢູ່' ເປັນ 'ປິດແລ້ວ' "
+"ໂດຍອັດຕະໂນມັດຫຼັງຈາກການໃຊ້ງານຄັ້ງທຳອິດ.\n"
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_payment.py:0
-msgid "Trying to generate a Direct Debit XML file containing payments from another company than that file's creditor."
-msgstr ""
-"ກຳລັງພະຍາຍາມສ້າງໄຟລ໌ XML ທີ່ບັນຈຸການຊຳລະເງິນຈາກບໍລິສັດອື່ນທີ່ບໍ່ແມ່ນເຈົ້າໜີ້ໃນໄຟລ໌."
+msgid ""
+"Trying to generate a Direct Debit XML file containing payments from another "
+"company than that file's creditor."
+msgstr "ກຳລັງພະຍາຍາມສ້າງໄຟລ໌ XML ທີ່ບັນຈຸການຊຳລະເງິນຈາກບໍລິສັດອື່ນທີ່ບໍ່ແມ່ນເຈົ້າໜີ້ໃນໄຟລ໌."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_payment.py:0
-msgid "Trying to generate a Direct Debit XML for payments coming from another payment method than SEPA Direct Debit."
-msgstr ""
-"ກຳລັງພະຍາຍາມສ້າງ XML ສຳລັບການຊຳລະເງິນທີ່ມາຈາກວິທີການອື່ນທີ່ບໍ່ແມ່ນ SEPA Direct Debit."
+msgid ""
+"Trying to generate a Direct Debit XML for payments coming from another "
+"payment method than SEPA Direct Debit."
+msgstr "ກຳລັງພະຍາຍາມສ້າງ XML ສຳລັບການຊຳລະເງິນທີ່ມາຈາກວິທີການອື່ນທີ່ບໍ່ແມ່ນ SEPA Direct Debit."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_payment.py:0
-#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
-msgid "Trying to register a payment on a mandate belonging to a different partner."
+msgid ""
+"Trying to register a payment on a mandate belonging to a different partner."
 msgstr "ກຳລັງພະຍາຍາມລົງທະບຽນການຊຳລະເງິນໃນໃບມອບສິດທີ່ເປັນຂອງຄູ່ຄ້າຄົນອື່ນ."
 
 #. module: account_sepa_direct_debit
@@ -1029,12 +2058,14 @@ msgstr "ປະເພດກິດຈະກຳທີ່ຍົກເວັ້ນໃ
 
 #. module: account_sepa_direct_debit
 #. odoo-python
-#: code:addons/account_sepa_direct_debit/models/account_invoice.py:0
-msgid "Unable to post payment %(payment)r due to no usable mandate being available at date %(date)s for partner %(partner)r. Please create one before encoding a SEPA Direct Debit payment."
-msgstr ""
-"ບໍ່ສາມາດລົງບັນຊີການຊຳລະເງິນ %(payment)r ໄດ້ ເນື່ອງຈາກບໍ່ມີໜັງສືມອບສິດທີ່ສາມາດນຳໃຊ້ໄດ້ໃນວັນທີ %"
-"(date)s ສຳລັບຄູ່ຄ້າ %(partner)r. ກະລຸນາສ້າງໜັງສືມອບສິດກ່ອນການບັນທຶກການຊຳລະເງິນແບບ SEPA "
-"Direct Debit."
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Under B2B SDD Scheme, the customer must be a company."
+msgstr "ພາຍໃຕ້ຮູບແບບ B2B SDD, ລູກຄ້າຕ້ອງເປັນບໍລິສັດ."
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields.selection,name:account_sepa_direct_debit.selection__account_journal__debit_sepa_pain_version__pain_008_001_08
+msgid "Updated 2023 (Pain 008.001.08)"
+msgstr "ອັບເດດ 2023 (Pain 008.001.08)"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sepa_direct_debit_mandate_form
@@ -1045,6 +2076,17 @@ msgstr "ຢືນຢັນ"
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
 msgid "Validity"
 msgstr "ຜົນສັກສິດ"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/wizard/sdd_mandate_send.py:0
+msgid "View Partner(s)"
+msgstr "ເບິ່ງຄູ່ຄ້າ"
+
+#. module: account_sepa_direct_debit
+#: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__warnings
+msgid "Warnings"
+msgstr "ຄຳເຕືອນ"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__website_message_ids
@@ -1058,28 +2100,154 @@ msgstr "ປະຫວັດການສື່ສານທາງເວັບໄຊ
 
 #. module: account_sepa_direct_debit
 #. odoo-python
+#: code:addons/account_sepa_direct_debit/wizard/account_payment_register.py:0
+msgid ""
+"You can't pay any of the selected invoices using the SEPA Direct Debit "
+"method, as no valid mandate is available"
+msgstr ""
+"ທ່ານບໍ່ສາມາດຊຳລະໃບແຈ້ງໜີ້ທີ່ເລືອກໂດຍໃຊ້ວິທີ SEPA Direct Debit ໄດ້ ເພາະບໍ່ມີໃບມອບສິດທີ່ໃຊ້ງານໄດ້"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
 #: code:addons/account_sepa_direct_debit/models/res_partner_bank.py:0
-msgid "You cannot delete a bank account linked to an active SEPA Direct Debit mandate."
-msgstr ""
-"ທ່ານບໍ່ສາມາດລຶບບັນຊີທະນາຄານທີ່ເຊື່ອມໂຍງກັບໃບມອບສິດ SEPA Direct Debit ທີ່ຍັງໃຊ້ງານຢູ່ໄດ້."
+msgid ""
+"You cannot delete a bank account linked to an active SEPA Direct Debit "
+"mandate."
+msgstr "ທ່ານບໍ່ສາມາດລຶບບັນຊີທະນາຄານທີ່ເຊື່ອມໂຍງກັບໃບມອບສິດ SEPA Direct Debit ທີ່ຍັງໃຊ້ງານຢູ່ໄດ້."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
-msgid "You cannot generate a SEPA Direct Debit file with a required collection date in the past."
-msgstr "ທ່ານບໍ່ສາມາດສ້າງໄຟລ໌ SEPA Direct Debit ດ້ວຍວັນທີເກັບເງິນທີ່ຜ່ານມາແລ້ວ."
+msgid ""
+"You cannot generate a SEPA Direct Debit file with a required collection date "
+"inferior to the sending day + the minimum pre-notification period of %"
+"(prenot_days)s days.\n"
+"The minimum required date should be %(minimum_date)s."
+msgstr ""
+"ທ່ານບໍ່ສາມາດສ້າງໄຟລ໌ SEPA Direct Debit ດ້ວຍວັນທີເກັບເງິນທີ່ກຳນົດໄວ້ໜ້ອຍກວ່າ ວັນທີສົ່ງ + ໄລຍະເວລາກ"
+"ານແຈ້ງບອກລ່ວງໜ້າຕໍ່າສຸດ %(prenot_days)s ວັນ.\n"
+"ວັນທີຕໍ່າສຸດທີ່ຕ້ອງການຄວນແມ່ນ %(minimum_date)s."
 
 #. module: account_sepa_direct_debit
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/account_batch_payment.py:0
-msgid "Your company must have a creditor identifier in order to issue SEPA Direct Debit payments requests. It can be defined in accounting module's settings."
+msgid ""
+"Your company must have a creditor identifier in order to issue SEPA Direct "
+"Debit payments requests. It can be defined in accounting module's settings."
 msgstr ""
-"ບໍລິສັດຂອງທ່ານຕ້ອງມີລະຫັດລະບຸຕົວຕົນເຈົ້າໜີ້ ເພື່ອອອກຄຳຮ້ອງຂໍການຊຳລະ SEPA Direct Debit. ເຊິ່ງມັນສາມ"
-"າດກຳນົດໄດ້ໃນການຕັ້ງຄ່າຂອງໂມດູນການບັນຊີ."
+"ບໍລິສັດຂອງທ່ານຕ້ອງມີລະຫັດລະບຸຕົວຕົນເຈົ້າໜີ້ ເພື່ອອອກຄຳຮ້ອງຂໍການຊຳລະ SEPA Direct Debit. "
+"ເຊິ່ງມັນສາມາດກຳນົດໄດ້ໃນການຕັ້ງຄ່າຂອງໂມດູນການບັນຊີ."
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
-msgid "to send instructions to your bank to debit your account and (B) your bank to debit your account in accordance with the instructions from"
+msgid ""
+"day(s).\n"
+"                    It will be sent to the debtor's email."
 msgstr ""
-"ເພື່ອສົ່ງຄຳສັ່ງໄປຍັງທະນາຄານຂອງທ່ານເພື່ອຫັກບັນຊີຂອງທ່ານ ແລະ (B) ໃຫ້ທະນາຄານຂອງທ່ານຫັກບັນຊີຕາມຄຳສັ່ງຈ"
-"າກ"
+"ວັນ.\n"
+"                    ມັນຈະຖືກສົ່ງໄປຫາອີເມລຂອງລູກໜີ້."
+
+#. module: account_sepa_direct_debit
+#: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
+msgid ""
+"to send instructions to your bank to debit your account and (B) your bank to "
+"debit your account in accordance with the instructions from"
+msgstr ""
+"ເພື່ອສົ່ງຄຳສັ່ງໄປຍັງທະນາຄານຂອງທ່ານເພື່ອຫັກບັນຊີຂອງທ່ານ ແລະ (B) "
+"ໃຫ້ທະນາຄານຂອງທ່ານຫັກບັນຊີຕາມຄຳສັ່ງຈາກ"
+
+#. module: account_sepa_direct_debit
+#: model:mail.template,subject:account_sepa_direct_debit.email_template_sdd_new_mandate
+msgid "{{ object.partner_id.display_name }} SEPA Direct Debit Mandate"
+msgstr "{{ object.partner_id.display_name }} ໃບມອບສິດການຫັກບັນຊີໂດຍກົງ SEPA"
+
+#~ msgid ""
+#~ "A debtor account is required to validate a SEPA Direct Debit mandate."
+#~ msgstr "ຈຳເປັນຕ້ອງມີບັນຊີລູກໜີ້ ເພື່ອຢືນຢັນໃບມອບສິດ SEPA Direct Debit."
+
+#~ msgid "Date when the company expects to receive the payments of this batch."
+#~ msgstr "ວັນທີທີ່ບໍລິສັດຄາດວ່າຈະໄດ້ຮັບການຊຳລະເງິນຂອງຊຸດນີ້."
+
+#~ msgid "Good news! A valid Sepa Mandate is available."
+#~ msgstr "ຂ່າວດີ! ມີໃບມອບສິດ Sepa ທີ່ໃຊ້ງານໄດ້ຢູ່."
+
+#~ msgid "Journal Item"
+#~ msgstr "ລາຍການບັນຊີ"
+
+#~ msgid ""
+#~ "Journal to use to receive SEPA Direct Debit payments from this mandate."
+#~ msgstr "ສະມຸດບັນຊີທີ່ຈະໃຊ້ເພື່ອຮັບການຊຳລະເງິນ SEPA Direct Debit ຈາກໃບມອບສິດນີ້."
+
+#~ msgid ""
+#~ "Number of Direct Debit payments to be collected for this mandate, that "
+#~ "is, the number of payments that have been generated and posted thanks to "
+#~ "this mandate and still needs their XML file to be generated and sent to "
+#~ "the bank to debit the customer's account."
+#~ msgstr "ຈຳນວນການຊຳລະແບບຫັກບັນຊີທີ່ຈະຖືກເກັບສຳລັບໃບມອບສິດນີ້."
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "ຈຳນວນຂໍ້ຄວາມທີ່ຕ້ອງການການດຳເນີນການ"
+
+#~ msgid ""
+#~ "Only IBAN account numbers can receive SEPA Direct Debit payments. Please "
+#~ "select a journal associated to one."
+#~ msgstr ""
+#~ "ມີແຕ່ເລກບັນຊີ IBAN ເທົ່ານັ້ນທີ່ສາມາດຮັບການຊຳລະແບບ SEPA Direct Debit. "
+#~ "ກະລຸນາເລືອກສະມຸດບັນຊີທີ່ກ່ຽວຂ້ອງ."
+
+#~ msgid ""
+#~ "Only mandates in draft state can be deleted from database when cancelled."
+#~ msgstr "ມີແຕ່ໃບມອບສິດໃນສະຖານະຮ່າງເທົ່ານັ້ນທີ່ສາມາດລຶບອອກຈາກຖານຂໍ້ມູນໄດ້ເມື່ອຖືກຍົກເລີກ."
+
+#~ msgid ""
+#~ "Payments generated for this mandate that have not yet been collected."
+#~ msgstr "ການຊຳລະເງິນທີ່ຖືກສ້າງຂຶ້ນສຳລັບໃບມອບສິດນີ້ທີ່ຍັງບໍ່ທັນໄດ້ເກັບ."
+
+#~ msgid "Payments generated thanks to this mandate."
+#~ msgstr "ການຊຳລະເງິນທີ່ສ້າງຂຶ້ນຍ້ອນໃບມອບສິດນີ້."
+
+#~ msgid "Print"
+#~ msgstr "ພິມ"
+
+#~ msgid "Required collection date"
+#~ msgstr "ວັນທີເກັບເງິນທີ່ກຳນົດ"
+
+#~ msgid "Suitable Journal"
+#~ msgstr "ສະມຸດບັນຊີທີ່ເໝາະສົມ"
+
+#~ msgid ""
+#~ "The mandate will only be used to pay invoices into the\n"
+#~ "                specified time range. If no end date is specified,\n"
+#~ "                you will have to contact us to stop its use."
+#~ msgstr "ໃບມອບສິດນີ້ຈະຖືກໃຊ້ເພື່ອຊຳລະໃບແຈ້ງໜີ້ໃນໄລຍະເວລາທີ່ກຳນົດເທົ່ານັ້ນ."
+
+#~ msgid ""
+#~ "The state this mandate is in. \n"
+#~ "- 'draft' means that this mandate still needs to be confirmed before "
+#~ "being usable. \n"
+#~ "- 'active' means that this mandate can be used to pay invoices. \n"
+#~ "- 'closed' designates a mandate that has been marked as not to use "
+#~ "anymore without invalidating the previous transactions done with it.- "
+#~ "'revoked' means the mandate has been signaled as fraudulent by the "
+#~ "customer. It cannot be used anymore, and should not ever have been. You "
+#~ "will probably need to refund the related invoices, if any.\n"
+#~ msgstr ""
+#~ "ສະຖານະຂອງໃບມອບສິດນີ້.\n"
+#~ "- 'ຮ່າງ' ໝາຍຄວາມວ່າໃບມອບສິດນີ້ຍັງຕ້ອງການການຢືນຢັນກ່ອນການໃຊ້ງານ.\n"
+#~ "- 'ໃຊ້ງານຢູ່' ໝາຍຄວາມວ່າໃບມອບສິດນີ້ສາມາດໃຊ້ເພື່ອຊຳລະໃບແຈ້ງໜີ້ໄດ້.\n"
+#~ "- 'ປິດແລ້ວ' ໝາຍເຖິງໃບມອບສິດທີ່ຖືກກຳນົດວ່າບໍ່ໃຫ້ໃຊ້ງານອີກ.\n"
+#~ "- 'ຖືກຖອນສິດ' ໝາຍເຖິງໃບມອບສິດທີ່ຖືກແຈ້ງວ່າບໍ່ຖືກຕ້ອງໂດຍລູກຄ້າ.\n"
+
+#~ msgid ""
+#~ "Unable to post payment %(payment)r due to no usable mandate being "
+#~ "available at date %(date)s for partner %(partner)r. Please create one "
+#~ "before encoding a SEPA Direct Debit payment."
+#~ msgstr ""
+#~ "ບໍ່ສາມາດລົງບັນຊີການຊຳລະເງິນ %(payment)r ໄດ້ ເນື່ອງຈາກບໍ່ມີໜັງສືມອບສິດທີ່ສາມາດນຳໃຊ້ໄດ້ໃນວັນທີ %"
+#~ "(date)s ສຳລັບຄູ່ຄ້າ %(partner)r. ກະລຸນາສ້າງໜັງສືມອບສິດກ່ອນການບັນທຶກການຊຳລະເງິນແບບ SEPA "
+#~ "Direct Debit."
+
+#~ msgid ""
+#~ "You cannot generate a SEPA Direct Debit file with a required collection "
+#~ "date in the past."
+#~ msgstr "ທ່ານບໍ່ສາມາດສ້າງໄຟລ໌ SEPA Direct Debit ດ້ວຍວັນທີເກັບເງິນທີ່ຜ່ານມາແລ້ວ."

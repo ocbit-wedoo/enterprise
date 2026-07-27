@@ -40,13 +40,15 @@ class AppointmentBookingLine(models.Model):
                                         resource_name_list=', '.join(non_compatible_resources.mapped('name'))))
 
     @api.depends('appointment_resource_id.capacity', 'appointment_resource_id.shareable',
-                 'appointment_type_id.resource_manage_capacity', 'capacity_reserved')
+                 'appointment_type_id.resource_manage_capacity', 'capacity_reserved', 'calendar_event_id.active')
     def _compute_capacity_used(self):
         self.capacity_used = 0
         for line in self:
             if line.capacity_reserved == 0:
                 line.capacity_used = 0
-            elif not line.appointment_resource_id.shareable or not line.appointment_type_id.resource_manage_capacity:
+            elif line.active and (  # No point in adjusting for new resource capacity for archived events.
+                not line.appointment_resource_id.shareable or not line.appointment_type_id.resource_manage_capacity
+            ):
                 line.capacity_used = line.appointment_resource_id.capacity
             else:
                 line.capacity_used = line.capacity_reserved

@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_appraisal_survey
+# * hr_appraisal_survey
 #
 # Translators:
 # Mads Søndergaard, 2024
@@ -9,20 +9,22 @@
 # Martin Trigaux, 2024
 # Mads Søndergaard, 2024
 # Kira Petersen, 2025
-#
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Kira Petersen, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"PO-Revision-Date: 2026-06-23 12:57+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
+"hr_appraisal_survey/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_survey_page_statistics_header
@@ -36,7 +38,7 @@ msgstr "- Feedback anmodet af -"
 #: model:mail.message.subtype,name:hr_appraisal_survey.mt_360_feedback
 #: model:survey.survey,title:hr_appraisal_survey.appraisal_360_feedback_template
 msgid "360 Feedback"
-msgstr "360 Feeback"
+msgstr "360-feeback"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_survey_button_form_view
@@ -94,23 +96,23 @@ msgid ""
 "A new 360 Feedback report has been completed for the appraisal of %"
 "(employee_name)s."
 msgstr ""
-"En ny 360-feedbackrapport for %(employee_name)s evaluering er nu afsluttet."
+"En ny 360-feedbackrapport for evalueringen af %(employee_name)s er nu færdig."
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_1
 msgid "Ability to cope with multidisciplinarity of team"
-msgstr "Evne til at håndtere et holds tværfaglighed"
+msgstr "Evne til at håndtere et teams tværfaglighed"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_6
 msgid "Ability to follow and complete work as instructed"
-msgstr "Evne til at følge og fuldføre arbejde som instrureret"
+msgstr "Evne til at følge instruktioner og fuldføre arbejdet"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_2_5
 msgid "Ability to manage planning resources, risks, budgets and deadlines"
 msgstr ""
-"Evne til at administrere planlægning af ressourcer, risici, budgetter, og "
+"Evne til at administrere planlægning af ressourcer, risici, budgetter og "
 "deadlines"
 
 #. module: hr_appraisal_survey
@@ -129,8 +131,8 @@ msgid ""
 "Adaptability: Ability to adapt oneself to organizational changes while "
 "keeping efficiency"
 msgstr ""
-"Tilpasningsdygtighed: Evne til at tilpasse sig til organisatoriske "
-"ændringer, og bibeholde effektiviteten under."
+"Tilpasningsdygtighed: Evne til at tilpasse sig organisatoriske ændringer og "
+"opretholde effektiviteten"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.actions.act_window,help:hr_appraisal_survey.survey_survey_action_appraisal
@@ -140,7 +142,7 @@ msgstr "Tilføj en ny undersøgelse"
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.appraisal_ask_feedback_view_form
 msgid "Add employees..."
-msgstr "Tilføj medarbejdere..."
+msgstr "Tilføj medarbejdere ..."
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_2_3
@@ -169,8 +171,8 @@ msgid ""
 "An appraisal feedback was requested. Please take time to fill the <a "
 "href=\"%s\" target=\"_blank\">survey</a>"
 msgstr ""
-"Der blev anmodet om feedback vedrørende evaluering. Venligst udfyld <a "
-"href=\"%s\" targeT=\"_blank\">undersøgelsesskemaet</a>"
+"Der er anmodet om feedback i forbindelse med evalueringen. Udfyld venligst "
+"<a href=\"%s\" target=\"_blank\">undersøgelsesskemaet</a>"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_11
@@ -180,7 +182,7 @@ msgstr "Analytisk og syntetisk sind"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__deadline
 msgid "Answer Deadline"
-msgstr "Besvarelse Deadline"
+msgstr "Deadline for besvarelse"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__appraisal_id
@@ -192,7 +194,7 @@ msgstr "Evaluering"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__employee_id
 msgid "Appraisal Employee"
-msgstr "Vurdering medarbejder"
+msgstr "Medarbejderevaluering"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_hr_department__appraisal_survey_template_id
@@ -203,12 +205,12 @@ msgstr "Evalueringsundersøgelse"
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_res_company__appraisal_survey_template_id
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_res_config_settings__appraisal_survey_template_id
 msgid "Appraisal Survey Template"
-msgstr "Vurdering Undersøgelse Skabelon"
+msgstr "Skabelon til evalueringsundersøgelse"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_1_3
 msgid "Appraisal for Period"
-msgstr "Vurdering for perioden"
+msgstr "Evaluering for perioden"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_survey_page_statistics_header
@@ -234,7 +236,7 @@ msgstr "Evalueringsleder-brugere"
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_1_5
 msgid "Appraiser"
-msgstr "Vurderende"
+msgstr "Ansvarshavende for evaluering"
 
 #. module: hr_appraisal_survey
 #. odoo-python
@@ -242,18 +244,18 @@ msgstr "Vurderende"
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.appraisal_ask_feedback_view_form
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_view_form
 msgid "Ask Feedback"
-msgstr "Spørg Tilbagemelding"
+msgstr "Bed om feedback"
 
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_appraisal_ask_feedback
 msgid "Ask Feedback for Appraisal"
-msgstr "Spørg Tilbagemelding om Vurdering"
+msgstr "Bed om feedback til evaluering"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_hr_appraisal__employee_feedback_ids
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.view_hr_appraisal_tree
 msgid "Asked Feedback"
-msgstr "Spurgt Tilbagemelding"
+msgstr "Feedback anmodet"
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_1
@@ -268,7 +270,7 @@ msgstr "Ved begyndelsen af evalueringsperioden"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__attachment_ids
 msgid "Attachments"
-msgstr "Vedhæftede filer"
+msgstr "Vedhæftninger"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__author_id
@@ -278,12 +280,12 @@ msgstr "Forfatter"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__body_has_template_value
 msgid "Body content is the same as the template"
-msgstr "Kropsindholdet er det samme som skabelonen"
+msgstr "Tekstindholdet er det samme som skabelonen"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__can_edit_body
 msgid "Can Edit Body"
-msgstr "Kan Redigere Krop"
+msgstr "Kan redigere brødtekst"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.appraisal_ask_feedback_view_form
@@ -300,7 +302,7 @@ msgstr "Arbejd effektivt sammen med andre for at nå fælles mål"
 msgid ""
 "Communication skills (written & verbally): clearness, concision, exactitude"
 msgstr ""
-"Kommunikationsevner (skriftlig & mundtlig): Tydelighed, kortfattethed, "
+"Kommunikationsevner (skriftlig & mundtlig): tydelighed, kortfattethed, "
 "nøjagtighed"
 
 #. module: hr_appraisal_survey
@@ -311,14 +313,13 @@ msgstr "Virksomheder"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_hr_appraisal__completed_survey_count
 msgid "Completed Survey Count"
-msgstr "Antal gennemførte spørgeundersøgelser"
+msgstr "Antal gennemførte undersøgelser"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_3
 msgid ""
 "Compliance to internal rules and processes (timesheets completion, etc.)"
-msgstr ""
-"Overholdelse af interne regler og processer (timeseddel udførsel, osv.)"
+msgstr "Overholdelse af interne regler og processer (tidsregistrering osv.)"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_360_9
@@ -328,7 +329,7 @@ msgstr "Konklusion"
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__body
@@ -362,7 +363,7 @@ msgid ""
 "(if any), should also be noted at this time"
 msgstr ""
 "Ydelsens vigtige eller kritiske elementer samt behovet for faglig udvikling "
-"(hvis relevant) bør også noteres på dette tidspunkt."
+"(hvis relevant) bør også noteres på dette tidspunkt"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_8
@@ -377,7 +378,7 @@ msgstr "Dato for gennemgang"
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_7
 msgid "Decision making"
-msgstr "Beslutningstagelse"
+msgstr "Beslutningsdygtighed"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.res_config_settings_view_form_hr_appraisal_survey
@@ -387,7 +388,7 @@ msgstr "Standardskabelon"
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_2_2
 msgid "Delegation: Ability to efficiently assign tasks to other people"
-msgstr "Delegation: Evne til effektivt at tildele opgaver til andre"
+msgstr "Delegation: Evne til at delegere opgaver effektivt"
 
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_hr_department
@@ -402,13 +403,13 @@ msgstr "Levede ikke op til standarder og forventninger"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_360_10
 msgid "Do you have any comment to tell him/her in order to improve?"
 msgstr ""
-"Har du råd til ham/hende, der kan hjælpe ham/hende med at forbedre sig?"
+"Har du et råd til ham/hende, der kan hjælpe vedkommende med at forbedre sig?"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_survey_user_input_view_tree
@@ -418,12 +419,12 @@ msgstr "Medarbejder"
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_hr_appraisal
 msgid "Employee Appraisal"
-msgstr "Medarbejder vurdering"
+msgstr "Medarbejderevaluering"
 
 #. module: hr_appraisal_survey
 #: model:survey.survey,title:hr_appraisal_survey.appraisal_feedback_template
 msgid "Employee Appraisal Form"
-msgstr "Medarbejder vurdering formular"
+msgstr "Skema til medarbejderevaluering"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_5
@@ -433,17 +434,17 @@ msgstr "Medarbejderkommentarer"
 #. module: hr_appraisal_survey
 #: model:survey.survey,title:hr_appraisal_survey.opinion_form
 msgid "Employee Opinion Form"
-msgstr "Medarbejder mening formular"
+msgstr "Feedbackformular til medarbejdere"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_3
 msgid "Employee Performance in Key Areas"
-msgstr "Medarbejder præstation i nøgle områder"
+msgstr "Arbejde med fokus på vigtige områder"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_2
 msgid "Enthusiasm & implication toward projects/assignments"
-msgstr "Entusiasme & implikation ift projekter/opgaver"
+msgstr "Engagement og aktiv involvering i projekter og opgaver"
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_3
@@ -460,7 +461,7 @@ msgstr "Feedbackundersøgelser"
 #. odoo-python
 #: code:addons/hr_appraisal_survey/wizard/appraisal_ask_feedback.py:0
 msgid "Fill the feedback form on survey"
-msgstr "Udfyld tilbagemeldingsformularen i undersøgelsen"
+msgstr "Udfyld feedbackformularen i undersøgelsen"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_survey_button_form_view
@@ -470,7 +471,7 @@ msgstr "Gå til evalueringsskemaet"
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_360_5
 msgid "How does it feel to work with the employee? Is he/she ... "
-msgstr "Hvordan er det at arbejde sammen med medarbejderen? Er han/hun ..."
+msgstr "Hvordan er det at arbejde sammen med medarbejderen? Er vedkommende ..."
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.appraisal_360_3_sug5
@@ -485,7 +486,7 @@ msgstr "Jeg er en del af ledelsesteamet."
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.appraisal_360_3_sug4
 msgid "I'm referring to you."
-msgstr "Jeg refererer til dig."
+msgstr "Jeg mener dig."
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__id
@@ -499,7 +500,7 @@ msgid ""
 "employee’s continued career development over the coming year."
 msgstr ""
 "Angiv de faglige, præstationsmæssige eller projektrelaterede mål, du vil "
-"anbefale for medarbejderens videre karriereudvikling i det kommende år."
+"foreslå for medarbejderens videre karriereudvikling det kommende år."
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_5
@@ -509,7 +510,7 @@ msgstr "Initiativ og selvstændighed"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__is_mail_template_editor
 msgid "Is Editor"
-msgstr "Er Redaktør"
+msgstr "Er redaktør"
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_1
@@ -556,13 +557,13 @@ msgid ""
 "Leadership: create a challenging and motivating work environment aligned "
 "with the company's strategy"
 msgstr ""
-"Lederskab: skab et udfordrende og motiverende arbejdsmiljø i "
+"Lederskab: Skab et udfordrende og motiverende arbejdsmiljø i "
 "overensstemmelse med virksomhedens strategi"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_2_4
 msgid "Leadership: sustain subordinates in their professional growth"
-msgstr "Lederskab: oprethold underordnede i deres professionelle udvikling"
+msgstr "Lederskab: Støt medarbejderne i deres professionelle udvikling"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.y_360_5_1
@@ -577,7 +578,7 @@ msgstr "Indlæs skabelon"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__template_id
 msgid "Mail Template"
-msgstr "Mailskabelon"
+msgstr "E-mailskabelon"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.hr_appraisal_view_form
@@ -628,10 +629,10 @@ msgid ""
 "a placeholder expression that provides the appropriate language, e.g. "
 "{{ object.partner_id.lang }}."
 msgstr ""
-"Valgfri oversættelses sprog (ISO kode) til valg ved afsending af en email. "
-"Hvis ikke angivet, vil den engelske udgave blive anvendt. Dette bør "
-"normaltvis være et pladsholder-udtryk der angiver det passende sprog, f.eks. "
-"{{ object.partner_id.lang }}."
+"Valgfrit oversættelsessprog (ISO-kode) kan vælges ved afsendelse af en e-"
+"mail. Hvis intet sprog angives, anvendes den engelske version. Det bør "
+"normalt være et pladsholderudtryk, som angiver det relevante sprog, f.eks. {"
+"{ object.partner_id.lang }}."
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_1
@@ -641,12 +642,12 @@ msgstr "Generelle formål med medarbejdersamtaler"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,help:hr_appraisal_survey.field_survey_user_input__requested_by
 msgid "Partner-related data of the user"
-msgstr "Partner-relaterede data fra brugeren"
+msgstr "Brugerens partner-relaterede data"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_4_2
 msgid "Personal Performance Objectives"
-msgstr "Personlig Præstations Mål"
+msgstr "Individuelle præstationsmål"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_1_2
@@ -656,22 +657,22 @@ msgstr "Jobtitel"
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_4_1
 msgid "Professional Development Objectives"
-msgstr "Professionel Udviklings Mål"
+msgstr "Professionelle udviklingsmål"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_4
 msgid "Professional Development and Performance Plan"
-msgstr "Professionel Udvikling og Præstations Plan"
+msgstr "Plan for professionel udvikling og præstation"
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_4_3
 msgid "Project Objectives"
-msgstr "Projekt mål"
+msgstr "Projektmål"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_12
 msgid "Promptness and attendance record"
-msgstr "Punktlighed og Fremmøde protokol"
+msgstr "Rapport om punktlighed og tilstedeværelse"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.x_360_5_2
@@ -686,7 +687,7 @@ msgstr "Modtagere"
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.y_360_5_7
 msgid "Recognize the contributions of teammates and peers"
-msgstr "Vis anerkendelse for dine holdkammeraters og kollegers bidrag"
+msgstr "Vis anerkendelse for dine kollegers og holdkammeraters bidrag"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__render_model
@@ -724,8 +725,9 @@ msgid ""
 "Results of the bottom-up survey and mitigation actions to face technical, "
 "organizational, structural and/or relational issues"
 msgstr ""
-"Resultater af bottom-up-undersøgelsen og afbødningsaktioner for at imødegå "
-"tekniske, organisatoriske, strukturelle og / eller relationelle problemer"
+"Resultater fra bottom-up-undersøgelsen og de iværksatte tiltag til at "
+"adressere tekniske, organisatoriske, strukturelle og relationelle "
+"problemstillinger"
 
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.appraisal_ask_feedback_view_form
@@ -755,7 +757,7 @@ msgstr "Send"
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,help:hr_appraisal_survey.field_hr_appraisal__survey_ids
 msgid "Sent out surveys"
-msgstr "Sendte undersøgelser"
+msgstr "Send undersøgelser"
 
 #. module: hr_appraisal_survey
 #: model:mail.template,description:hr_appraisal_survey.mail_template_appraisal_ask_feedback
@@ -793,12 +795,12 @@ msgstr "Emne"
 #. module: hr_appraisal_survey
 #: model_terms:ir.ui.view,arch_db:hr_appraisal_survey.appraisal_ask_feedback_view_form
 msgid "Subject..."
-msgstr "Emne..."
+msgstr "Emne ..."
 
 #. module: hr_appraisal_survey
 #: model:survey.question,title:hr_appraisal_survey.appraisal_3_2
 msgid "Supervisors only"
-msgstr "Kun Supervisorer"
+msgstr "Kun ansvarshavende"
 
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_survey_survey
@@ -817,12 +819,12 @@ msgstr "Feedback på undersøgelser"
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_survey_question_answer
 msgid "Survey Label"
-msgstr "Undersøgelse mærkat"
+msgstr "Undersøgelsesmærkat"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_appraisal_ask_feedback__survey_template_id
 msgid "Survey Template"
-msgstr "Undersøgelse Skabelon"
+msgstr "Undersøgelsesskabelon"
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,field_description:hr_appraisal_survey.field_survey_survey__survey_type
@@ -832,7 +834,7 @@ msgstr "Undersøgelsestype"
 #. module: hr_appraisal_survey
 #: model:ir.model,name:hr_appraisal_survey.model_survey_user_input
 msgid "Survey User Input"
-msgstr "Undersøgelse - bruger-input"
+msgstr "Undersøgelse – bruger-input"
 
 #. module: hr_appraisal_survey
 #: model:mail.template,subject:hr_appraisal_survey.mail_template_appraisal_ask_feedback
@@ -845,13 +847,13 @@ msgid ""
 "Team spirit: ability to work efficiently with peers, manage the conflicts "
 "with diplomacy"
 msgstr ""
-"Holds-ånd: Evne til at arbejde effektivt sammen med ligesindede, "
-"administrere konflikter med diplomatik"
+"Teamånd: Stærke samarbejdsevner og kompetence i konstruktiv og diplomatisk "
+"konflikthåndtering"
 
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_10
 msgid "Technical skills regarding to the job requirements"
-msgstr "Tekniske evner i forhold til stillingens krav"
+msgstr "Tekniske kompetencer i overensstemmelse med stillingens krav"
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.survey,description_done:hr_appraisal_survey.appraisal_360_feedback_template
@@ -874,7 +876,7 @@ msgid ""
 "completed review."
 msgstr ""
 "Medarbejderen har mulighed for at tilføje kommentarer eller forklaringer til "
-"de gennemførte vurderinger."
+"de gennemførte evalueringer."
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_1
@@ -898,7 +900,7 @@ msgid ""
 "The following employees do not have any email: \n"
 "%s"
 msgstr ""
-"Følgende medarbejdere har ikke e-mail: \n"
+"Følgende medarbejdere har ingen e-mailadresse: \n"
 "%s"
 
 #. module: hr_appraisal_survey
@@ -908,8 +910,9 @@ msgid ""
 "appraisal. The motivation of the evaluation is explained in the ad hoc "
 "fields."
 msgstr ""
-"Den overordnede indsamler alle oplysninger og integrerer dem i den endelige "
-"vurdering. Begrundelsen for vurderingen uddybes i de særlige kommentarfelter."
+"Den tilsynshavende indsamler alle relevante oplysninger og sammenfatter dem "
+"i den samlede vurdering. Begrundelsen herfor uddybes i de tilhørende "
+"kommentarfelter."
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,help:hr_appraisal_survey.field_hr_department__appraisal_survey_template_id
@@ -934,7 +937,7 @@ msgstr ""
 #. module: hr_appraisal_survey
 #: model:survey.question.answer,value:hr_appraisal_survey.arow_3_1_15
 msgid "Time management: projects/tasks are completed on time"
-msgstr "Tidshåndtering: projekter/opgaver fuldføres til tiden"
+msgstr "Tidshåndtering: Projekter og opgaver gennemføres rettidigt"
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_1
@@ -943,7 +946,7 @@ msgid ""
 "of strengths and opportunities for development"
 msgstr ""
 "At støtte medarbejderne i deres faglige udvikling ved at identificere både "
-"deres styrker og områder med potentiale for forbedring."
+"deres styrker og områder med potentiale for forbedring"
 
 #. module: hr_appraisal_survey
 #: model_terms:survey.question,description:hr_appraisal_survey.appraisal_1
@@ -963,8 +966,8 @@ msgid ""
 "Use the following space to make any comments regarding the above performance "
 "evaluation."
 msgstr ""
-"Brug den følgende plads til at skrive enhver kommentar vedrørende "
-"ovenstående præstations evaluering."
+"Brug nedenstående felt til at tilføje eventuelle kommentarer til ovenstående "
+"præstationsevaluering."
 
 #. module: hr_appraisal_survey
 #: model:ir.model.fields,help:hr_appraisal_survey.field_survey_survey__appraisal_manager_user_ids

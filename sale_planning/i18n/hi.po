@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-03-20 14:23+0000\n"
+"PO-Revision-Date: 2026-06-13 09:24+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
 "sale_planning/hi/>\n"
@@ -21,18 +21,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_planning
 #. odoo-python
 #: code:addons/sale_planning/controllers/main.py:0
 msgid "(%(remaining_hours)s remaining)"
-msgstr ""
+msgstr "(%(remaining_hours)s बचे हुए घंटे)"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_shift_ics_description_inherit
 msgid "<b>Sales Order Item:</b>"
-msgstr ""
+msgstr "<b>सेल्स ऑर्डर आइटम:</b>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_form_inherit_sale_planning
@@ -43,21 +43,26 @@ msgid ""
 "cancellation of the sales order.\" invisible=\"sale_order_state != "
 "'cancel'\"/>"
 msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning\" title=\"The sales "
+"order associated with this shift has been cancelled. We recommend either "
+"updating the sales order item or unscheduling this shift in line with the "
+"cancellation of the sales order.\" invisible=\"sale_order_state != "
+"'cancel'\"/>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.view_order_form_inherit_sale_planning
 msgid "<span class=\"o_stat_text\">Planned</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">प्लान किया गया</span>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_form_inherit_sale_planning
 msgid "<span class=\"o_stat_text\">Sales Order</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">सेल्स ऑर्डर</span>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.view_order_form_inherit_sale_planning
 msgid "<span class=\"o_stat_text\">To Plan</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">प्लान बनाने के लिए</span>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.product_template_form_view_invoice_policy_inherit_sale_planning
@@ -66,6 +71,9 @@ msgid ""
 "                        as\n"
 "                    </span>"
 msgstr ""
+"<span invisible=\"not planning_enabled\" class=\"oe_inline me-2\">\n"
+"                        के रूप में\n"
+"                   </span>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_gantt_inherit_sale_planning
@@ -79,6 +87,8 @@ msgid ""
 "All open shifts and sales orders have already been assigned, or there are no "
 "resources available to take them at this time."
 msgstr ""
+"सभी ओपन शिफ्टें और सेल्स के ऑर्डर पहले ही असाइन कर दिए गए हैं या इस समय उन्हें लेने के लिए "
+"कोई संसाधन उपलब्ध नहीं हैं।"
 
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_slot__allocated_hours
@@ -93,7 +103,7 @@ msgstr "बिल करने योग्य"
 #. module: sale_planning
 #: model:ir.ui.menu,name:sale_planning.sale_planning_menu_schedule_by_sale_order
 msgid "By Sales Order"
-msgstr ""
+msgstr "सेल्स ऑर्डर द्वारा"
 
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_slot__partner_id
@@ -103,7 +113,7 @@ msgstr "साथी"
 #. module: sale_planning
 #: model:product.template,name:sale_planning.developer_product_product_template
 msgid "Developer (Plan services)"
-msgstr ""
+msgstr "डेवलपर (प्लान सर्विस)"
 
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_slot__end_datetime
@@ -113,7 +123,7 @@ msgstr "समाप्ति तिथि"
 #. module: sale_planning
 #: model:planning.role,name:sale_planning.planning_role_tester
 msgid "Functional Tester"
-msgstr ""
+msgstr "फ़ंक्शनल टेस्टर"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.view_order_form_inherit_sale_planning
@@ -123,12 +133,12 @@ msgstr "घंटे"
 #. module: sale_planning
 #: model:product.template,name:sale_planning.technical_maintainance_product_product_template
 msgid "IT Technical Maintenance (Plan services)"
-msgstr ""
+msgstr "आईटी टेक्निकल मेंटनेंस (प्लान सर्विस)"
 
 #. module: sale_planning
 #: model:planning.role,name:sale_planning.planning_role_technician
 msgid "IT Technician"
-msgstr ""
+msgstr "आईटी टेक्नीशियन"
 
 #. module: sale_planning
 #: model:ir.model.fields,help:sale_planning.field_planning_slot__sale_line_plannable
@@ -143,11 +153,17 @@ msgid ""
 "planned.                 You can also manually schedule open shifts for your "
 "Sales Order or assign them to any employee you prefer."
 msgstr ""
+"अगर चालू किया गया है, तो सेल्स ऑर्डर की पुष्टि करते समय चुनी गई भूमिका के लिए एक शिफ्ट "
+"अपने आप जेनरेट हो जाएगी.                 'ऑटो प्लान' फ़ीचर के साथ, सिर्फ़ इस भूमिका "
+"वाले कर्मचारियों को ही इस सर्विस वाले सेल्स ऑर्डर्स के लिए ऑटोमैटिक रूप से शिफ्ट असाइन की "
+"जाएंगी.                 सिस्टम कर्मचारी की उपलब्धता और प्लान किए जाने वाले बाकी समय "
+"का ध्यान रखेगा.                 आप अपने सेल्स ऑर्डर के लिए ओपन शिफ्ट को मैन्युअल रूप से "
+"भी शेड्यूल कर सकते हैं या उन्हें अपनी पसंद के किसी भी कर्मचारी को सौंप सकते हैं।"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_search_inherit_sale_planning
 msgid "My Sales Orders"
-msgstr ""
+msgstr "मेरा सेल्स ऑर्डर"
 
 #. module: sale_planning
 #: model_terms:ir.actions.act_window,help:sale_planning.sale_planning_action_schedule_by_sale_order
@@ -157,7 +173,7 @@ msgstr "कोई शिफ्ट नहीं मिली. आइए, एक �
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_search_inherit_sale_planning
 msgid "Non-Billable"
-msgstr ""
+msgstr "गैर-बिल योग्य"
 
 #. module: sale_planning
 #: model:ir.model.constraint,message:sale_planning.constraint_planning_slot_check_datetimes_set_or_plannable_slot
@@ -165,34 +181,37 @@ msgid ""
 "Only slots linked to a Sales Order with a plannable service can be "
 "unscheduled."
 msgstr ""
+"सिर्फ़ उन स्लॉट को शेड्यूल से हटाया जा सकता है जो किसी प्लान होने वाली सर्विस के सेल्स "
+"ऑर्डर से जुड़े हों।"
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/planning_hooks.js:0
 msgid "Open shifts and sales orders assigned"
-msgstr ""
+msgstr "ओपन शिफ्ट और असाइन किए गए सेल्स ऑर्डर"
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/planning_hooks.js:0
 msgid "Open shifts and sales orders unscheduled"
-msgstr ""
+msgstr "ओपन शिफ्ट और अनशेड्यूल किए गए सेल्स ऑर्डर"
 
 #. module: sale_planning
 #: model_terms:product.template,description:sale_planning.developer_product_product_template
 msgid "Our developer will help you to add new features to your Software."
-msgstr ""
+msgstr "हमारा डेवलपर आपके सॉफ़्टवेयर में नई सुविधाएं जोड़ने में आपकी मदद करेगा।"
 
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_product_product__planning_enabled
 #: model:ir.model.fields,field_description:sale_planning.field_product_template__planning_enabled
 msgid "Plan Services"
-msgstr ""
+msgstr "प्लान सर्विस"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.product_template_form_view_invoice_policy_inherit_sale_planning
 msgid "Plan shifts for your orders for employees who have this role."
 msgstr ""
+"उन कर्मचारियों के लिए अपने ऑर्डर के लिए शिफ्टें प्लान करें जिनके पास यह भूमिका है।"
 
 #. module: sale_planning
 #. odoo-python
@@ -201,6 +220,8 @@ msgid ""
 "Plannable services should be a service product, product\n"
 "%s."
 msgstr ""
+"प्लान की जाने वाली सेवाएं एक सर्विस प्रोडक्ट होनी चाहिए, प्रोडक्ट \n"
+"%s।"
 
 #. module: sale_planning
 #. odoo-python
@@ -233,7 +254,7 @@ msgstr "उत्पाद"
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_analysis_report__role_product_ids
 msgid "Role Product"
-msgstr ""
+msgstr "रोल प्रॉडक्ट"
 
 #. module: sale_planning
 #: model:ir.model,name:sale_planning.model_sale_order
@@ -256,7 +277,7 @@ msgstr "सेल्स ऑर्डर आइटम"
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_shift_ics_description_inherit
 msgid "Sales Order Item:"
-msgstr ""
+msgstr "सेल्स ऑर्डर आइटम:"
 
 #. module: sale_planning
 #: model:ir.model,name:sale_planning.model_sale_order_line
@@ -266,7 +287,7 @@ msgstr "बिक्री आदेश पंक्ति"
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_slot__sale_order_state
 msgid "Sales Order State"
-msgstr ""
+msgstr "सेल्स ऑर्डर की स्थिति"
 
 #. module: sale_planning
 #: model:ir.model.fields,help:sale_planning.field_planning_slot__sale_line_id
@@ -275,11 +296,13 @@ msgid ""
 "are automatically planned, the remaining hours of the sales order item, as "
 "well as the role defined on the service, are taken into account."
 msgstr ""
+"सेल्स ऑर्डर आइटम जिसके लिए यह शिफ्ट की जाएगी. जब सेल्स ऑर्डर ऑटोमैटिक रूप से प्लान होते "
+"हैं, तो सेल्स ऑर्डर आइटम के बचे हुए घंटे और सर्विस पर तय रोल को ध्यान में रखा जाता है।"
 
 #. module: sale_planning
 #: model:ir.actions.act_window,name:sale_planning.sale_planning_action_schedule_by_sale_order
 msgid "Schedule by Sales Order"
-msgstr ""
+msgstr "सेल्स ऑर्डर के अनुसार शेड्यूल करें"
 
 #. module: sale_planning
 #: model_terms:ir.actions.act_window,help:sale_planning.sale_planning_action_schedule_by_sale_order
@@ -303,7 +326,7 @@ msgstr "प्रारंभ दिनांक"
 #. module: sale_planning
 #: model_terms:product.template,description:sale_planning.technical_maintainance_product_product_template
 msgid "Take a rest. We'll do our best."
-msgstr ""
+msgstr "आराम करें. हम अपनी पूरी कोशिश करेंगे।"
 
 #. module: sale_planning
 #. odoo-javascript
@@ -312,25 +335,27 @@ msgid ""
 "There are no hours left to plan, or there are no resources available at the "
 "time."
 msgstr ""
+"प्लान बनाने के लिए कोई समय नहीं बचा है या उस समय कोई रिसोर्स उपलब्ध नहीं हैं।"
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/sale_planning_gantt/sale_planning_gantt_renderer.js:0
 msgid "There are no sales order items to plan."
-msgstr ""
+msgstr "प्लान बनाने के लिए कोई सेल्स ऑर्डर आइटम नहीं हैं।"
 
 #. module: sale_planning
 #. odoo-python
 #: code:addons/sale_planning/models/planning_slot.py:0
 msgid "This Sale Order Item doesn't have a target value of planned hours."
 msgstr ""
+"इस सेल्स ऑर्डर आइटम में प्लान किए गए घंटों का कोई टारगेट वैल्यू नहीं है।"
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/sale_planning_gantt/sale_planning_gantt_renderer.js:0
 msgid ""
 "This resource is not available for this shift during the selected period."
-msgstr ""
+msgstr "यह संसाधन चुनी गई अवधि के दौरान इस शिफ़्ट के लिए उपलब्ध नहीं है।"
 
 #. module: sale_planning
 #. odoo-javascript
@@ -338,7 +363,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_gantt_inherit_sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_view_form_in_gantt_inherit_sale_planning
 msgid "Unschedule"
-msgstr ""
+msgstr "अनशेड्यूल करें"
 
 #. module: sale_planning
 #. odoo-python
@@ -349,13 +374,13 @@ msgstr "प्लानिंग देखें"
 #. module: sale_planning
 #: model:planning.role,name:sale_planning.planning_role_planner
 msgid "Work Planner"
-msgstr ""
+msgstr "वर्क प्लानर"
 
 #. module: sale_planning
 #. odoo-python
 #: code:addons/sale_planning/models/planning_slot.py:0
 msgid "You are attempting to create a slot for a cancelled sales order."
-msgstr ""
+msgstr "आप रद्द किए गए सेल्स ऑर्डर के लिए एक स्लॉट बनाने की कोशिश कर रहे हैं।"
 
 #. module: sale_planning
 #. odoo-python
@@ -365,19 +390,22 @@ msgid ""
 "to shifts in another company.\n"
 "Please transfer shifts %(slots_names)s to the destination company first."
 msgstr ""
+"आप सेल्स ऑर्डर %(order_name)s के लिए कंपनी को अपडेट नहीं कर सकते, क्योंकि यह दूसरी कंपनी "
+"की शिफ्ट से जुड़ा है. \n"
+"कृपया पहले शिफ्ट %(slots_names)s को डेस्टिनेशन कंपनी में ट्रांसफ़र करें।"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_role_view_tree_inherit_sale_planning
 msgid "e.g. Cleaning Services"
-msgstr ""
+msgstr "जैसे, सफाई से जुड़ी सेवाएं"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.product_template_form_view_invoice_policy_inherit_sale_planning
 msgid "e.g. Consultant"
-msgstr ""
+msgstr "जैसे, कंसल्टेंट"
 
 #. module: sale_planning
 #. odoo-python
 #: code:addons/sale_planning/models/sale_order_line.py:0
 msgid "remaining"
-msgstr ""
+msgstr "बचा हुआ"

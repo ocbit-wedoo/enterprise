@@ -11,13 +11,14 @@
 # Lasse L, 2024
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2024, 2025.
 # Chrille Hedberg <hedberg.chrille@gmail.com>, 2025
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-09-19 22:30+0000\n"
-"Last-Translator: Jakob Krabbe <jakob.krabbe@vertel.se>\n"
+"PO-Revision-Date: 2026-06-20 09:35+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "crm_helpdesk/sv/>\n"
 "Language: sv\n"
@@ -25,24 +26,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/helpdesk_ticket_to_lead.py:0
 msgid "An archived ticket cannot be converted into a lead."
-msgstr "Ett arkiverat ärende kan inte konverteras till lead."
+msgstr "Ett arkiverat ärende kan inte omvandlas till ett lead."
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_helpdesk_ticket_to_lead__convert_to
 msgid "Conversion Action"
-msgstr "Konverteringsåtgärd"
+msgstr "Omvandlingsåtgärd"
 
 #. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_helpdesk_ticket_to_lead
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.helpdesk_ticket_to_lead_view_form
 msgid "Convert Ticket to Lead"
-msgstr "Konvertera ärende till kundämne"
+msgstr "Omvandla ärende till lead"
 
 #. module: crm_helpdesk
 #. odoo-python
@@ -50,7 +51,7 @@ msgstr "Konvertera ärende till kundämne"
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.helpdesk_ticket_to_lead_view_form
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.helpdesk_ticket_view_form_inherited
 msgid "Convert to Lead"
-msgstr "Konvertera till kundämne"
+msgstr "Omvandla till leads"
 
 #. module: crm_helpdesk
 #. odoo-python
@@ -58,7 +59,7 @@ msgstr "Konvertera till kundämne"
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.helpdesk_ticket_to_lead_view_form
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.helpdesk_ticket_view_form_inherited
 msgid "Convert to Opportunity"
-msgstr "Konvertera till möjlighet"
+msgstr "Omvandla till möjlighet"
 
 #. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.crm_lead_convert2ticket_action
@@ -70,7 +71,7 @@ msgstr "Omvandla till ärende"
 #. module: crm_helpdesk
 #: model:ir.model.fields.selection,name:crm_helpdesk.selection__helpdesk_ticket_to_lead__convert_to__convert
 msgid "Convert to opportunity"
-msgstr "Konvertera till möjlighet"
+msgstr "Omvandla till möjlighet"
 
 #. module: crm_helpdesk
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.crm_lead_convert2ticket_view_form
@@ -121,7 +122,7 @@ msgstr "Länka inte till en kund"
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_helpdesk_ticket_to_lead__force_assignment
 msgid "Force assignment"
-msgstr "Tvinga uppgift"
+msgstr "Tvinga fram tilldelning"
 
 #. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_helpdesk_ticket
@@ -140,8 +141,8 @@ msgid ""
 "If checked, forces salesman to be updated on updated opportunities even if "
 "already set."
 msgstr ""
-"Om ikryssad tvingas säljaren att uppdatera sig på möjligheten även om den "
-"redan är angiven."
+"Om ikryssad så blir säljaren tvungen att uppdatera sina möjligheter även om "
+"de redan är angivna."
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_crm_lead_convert2ticket__write_uid
@@ -158,30 +159,30 @@ msgstr "Senast uppdaterad den"
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_crm_lead_convert2ticket__lead_id
 msgid "Lead"
-msgstr "Kundämne"
+msgstr "Lead"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/crm_lead_convert2ticket.py:0
 msgid "Lead Converted"
-msgstr "Konverterat kundämne"
+msgstr "Lead omvandlades"
 
 #. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_crm_lead_convert2ticket
 msgid "Lead convert to Ticket"
-msgstr "Kundämne konverterat till ärende"
+msgstr "Lead omvandlas till ärende"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/crm_lead_convert2ticket.py:0
 msgid "Lead converted into ticket %s"
-msgstr ""
+msgstr "Lead omvandlades till ärende %s"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/helpdesk_ticket_to_lead.py:0
 msgid "Lead created"
-msgstr "Kundämne skapad"
+msgstr "Lead skapades"
 
 #. module: crm_helpdesk
 #: model:ir.model.fields.selection,name:crm_helpdesk.selection__helpdesk_ticket_to_lead__action__exist
@@ -203,7 +204,7 @@ msgstr "Relaterad kund"
 #: model:ir.model.fields,field_description:crm_helpdesk.field_helpdesk_ticket_to_lead__team_id
 #: model_terms:ir.ui.view,arch_db:crm_helpdesk.helpdesk_ticket_to_lead_view_form
 msgid "Sales Team"
-msgstr "Säljlag"
+msgstr "Säljteam"
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_helpdesk_ticket_to_lead__user_id
@@ -213,19 +214,19 @@ msgstr "Säljare"
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_crm_lead_convert2ticket__team_id
 msgid "Team"
-msgstr "Lag"
+msgstr "Team"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/helpdesk_ticket_to_lead.py:0
 msgid "This lead has been created from ticket: %s"
-msgstr "Denna lead har skapats från ärende: %s"
+msgstr "Detta lead har skapats från ett ärende: %s"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/helpdesk_ticket_to_lead.py:0
 msgid "This opportunity has been created from ticket: %s"
-msgstr "Denna möjlighet har skapats från ärende: %s"
+msgstr "Denna möjlighet har skapats från ett ärende: %s"
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_helpdesk_ticket_to_lead__ticket_id
@@ -236,10 +237,10 @@ msgstr "Ärende"
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/helpdesk_ticket_to_lead.py:0
 msgid "Ticket Converted"
-msgstr "Konverterat ärende"
+msgstr "Ärende omvandlades"
 
 #. module: crm_helpdesk
 #. odoo-python
 #: code:addons/crm_helpdesk/wizard/crm_lead_convert2ticket.py:0
 msgid "Ticket Created"
-msgstr "Ärendet skapat"
+msgstr "Ärende skapades"

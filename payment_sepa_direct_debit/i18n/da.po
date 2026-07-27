@@ -8,13 +8,14 @@
 # Mads Søndergaard, 2024
 # Martin Trigaux, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2026-05-13 16:56+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:55+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "payment_sepa_direct_debit/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: payment_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:payment_sepa_direct_debit.sepa_state_header
@@ -182,7 +183,7 @@ msgstr "Der blev ikke fundet nogen transaktion, der matcher referencen %s."
 #. module: payment_sepa_direct_debit
 #: model:ir.model,name:payment_sepa_direct_debit.model_account_payment_method
 msgid "Payment Methods"
-msgstr "Betalingsmetoder"
+msgstr "Betalingsformer"
 
 #. module: payment_sepa_direct_debit
 #: model:ir.model,name:payment_sepa_direct_debit.model_payment_provider
@@ -203,7 +204,7 @@ msgstr "Betalingstransaktion"
 #. odoo-javascript
 #: code:addons/payment_sepa_direct_debit/static/src/js/payment_form.js:0
 msgid "Payment processing failed"
-msgstr "Behandlingen af betaling mislykkedes"
+msgstr "Betalingen kunne ikke gennemføres"
 
 #. module: payment_sepa_direct_debit
 #. odoo-python
@@ -214,12 +215,12 @@ msgstr "Begrænset til lande i SEPA-zonen. Forbudte lande: %s"
 #. module: payment_sepa_direct_debit
 #: model:ir.model,name:payment_sepa_direct_debit.model_sdd_mandate
 msgid "SDD Mandate"
-msgstr "SDD Mandat"
+msgstr "SDD-mandat"
 
 #. module: payment_sepa_direct_debit
 #: model:ir.model.fields.selection,name:payment_sepa_direct_debit.selection__payment_provider__custom_mode__sepa_direct_debit
 msgid "SEPA Direct Debit"
-msgstr "SEPA direkte debit"
+msgstr "SEPA Direct Debit"
 
 #. module: payment_sepa_direct_debit
 #: model:account.payment.method,name:payment_sepa_direct_debit.payment_method_sepa_direct_debit
@@ -229,7 +230,7 @@ msgstr "SEPA Direct Debit (udbyder)"
 #. module: payment_sepa_direct_debit
 #: model:ir.model.fields,field_description:payment_sepa_direct_debit.field_payment_token__sdd_mandate_id
 msgid "SEPA Direct Debit Mandate"
-msgstr "SEPA Direkte Debit mandat"
+msgstr "SEPA Direkte Debit-mandat"
 
 #. module: payment_sepa_direct_debit
 #: model:ir.actions.server,name:payment_sepa_direct_debit.cron_auto_confirm_paid_sepa_txs_ir_actions_server

@@ -30,7 +30,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:47+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
 "PO-Revision-Date: 2024-09-25 09:44+0000\n"
 "Last-Translator: Yoram Lavi, 2025\n"
 "Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
@@ -2494,9 +2494,8 @@ msgstr "שעת ההתחלה לא יכולה להיות שלילית."
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
-"The start hour cannot be before the end hour for a one-day shift template."
+"The start hour cannot be after the end hour for a one-day shift template."
 msgstr ""
-"שעת ההתחלה  לא יכולה להיות לפני שעת הסיום  עבור תבנית משמרת של יום אחד."
 
 #. module: planning
 #. odoo-python
@@ -2878,6 +2877,11 @@ msgstr "ל"
 #: model:mail.template,subject:planning.email_template_slot_single
 msgid "{{ ctx.get('mail_subject', '') }} {{ ctx.get('start_datetime' , '') }}"
 msgstr ""
+
+#~ msgid ""
+#~ "The start hour cannot be before the end hour for a one-day shift template."
+#~ msgstr ""
+#~ "שעת ההתחלה  לא יכולה להיות לפני שעת הסיום  עבור תבנית משמרת של יום אחד."
 
 #~ msgid "100"
 #~ msgstr "100"

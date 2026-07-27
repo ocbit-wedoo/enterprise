@@ -133,7 +133,7 @@ class HrAttendance(models.Model):
 
             intervals = unavailable_intervals.get(employee.resource_id.id, [])
             result[employee.id] = [
-                {'start': inv[0], 'stop': inv[1]}
+                {'start': inv[0].astimezone(UTC), 'stop': inv[1].astimezone(UTC)}
                 for inv in intervals
             ]
 

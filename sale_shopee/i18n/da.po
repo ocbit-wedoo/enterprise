@@ -1,25 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_shopee
+# * sale_shopee
 #
 # Translators:
 # lhmflexerp <lhm@flexerp.dk>, 2025
 # Wil Odoo, 2025
 # Kira Petersen, 2025
-#
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-01-19 01:20+0000\n"
-"Last-Translator: Kira Petersen, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"PO-Revision-Date: 2026-06-23 13:21+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
+"sale_shopee/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.order_sync_failure
@@ -49,9 +51,9 @@ msgid ""
 "        "
 msgstr ""
 "<div>\n"
-"                <p>Synkroniseringen af Shopee-ordren med referencenummeret "
-"<t t-out=\"ctx.get('shopee_order_ref') or ''\">REF</t> mislykkedes og kunne "
-"ikke gennemføres.</p>\n"
+"                <p>Synkroniseringen af Shopee-ordren med nummeret <t t-"
+"out=\"ctx.get('shopee_order_ref') or ''\">REF</t> mislykkedes og kunne ikke "
+"gennemføres.</p>\n"
 "                <p>Orden skal annulleres i Shopee, før du kan forsøge en ny "
 "synkronisering.</p>\n"
 "                <p>For at foretage et nyt synkroniseringsforsøg bør du gøre "
@@ -81,8 +83,8 @@ msgid ""
 "shop in the Shopee Account page."
 msgstr ""
 "<strong>Advarsel:</strong>\n"
-"                    Shop-autorisationen er udløbet. Gen-autorisér venligst "
-"butikken i Shopee-kontoens side."
+"                    Godkendelsen af butikken er udløbet. Gå til din Shopee-"
+"konto, og godkend butikken igen."
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -92,8 +94,8 @@ msgid ""
 "shop in the Shopee Account page."
 msgstr ""
 "<strong>Advarsel:</strong>\n"
-"                    Autorisationen af butikken udløber snart. Gå til din "
-"Shopee-konto og genautorisér butikken."
+"                    Godkendelsen af butikken udløber snart. Gå til din "
+"Shopee-konto, og godkend butikken igen."
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.picking_sync_failure
@@ -193,7 +195,7 @@ msgstr ""
 "                <p>Der opstod fejl under synkroniseringen af Shopee-"
 "pakkelabels, og processen blev ikke gennemført.</p>\n"
 "                <p>Ret venligst fejlen, før du forsøger at synkronisere "
-"leveringsordrerne manuelt igen, da der ikke vil blive foretaget yderligere "
+"ordrerne manuelt igen, da der ikke vil blive foretaget yderligere "
 "synkronisering.</p>\n"
 "                <p>Følgende fejl er blevet rapporteret af Shopee: </p>\n"
 "                <table class=\"shopee_table\">\n"
@@ -322,9 +324,9 @@ msgstr ""
 "            <body><div>\n"
 "                <p>Der opstod fejl under synkroniseringen af "
 "lagerbeholdningen for Shopee-butikken\n"
-"                    <b><t t-out=\"ctx.get('shopee_shop') or ''\">REF</t></"
-"b>\n"
-"                    , og processen blev ikke gennemført..</p>\n"
+"                    <b><t t-out=\"ctx.get('shopee_shop') or ''\">REF</t></b>"
+"\n"
+"                    , og processen blev ikke gennemført.</p>\n"
 "                <p>Følgende fejl er blevet rapporteret af Shopee: </p>\n"
 "                <table class=\"shopee_table\">\n"
 "                    <thead>\n"
@@ -336,8 +338,8 @@ msgstr ""
 "                    <tbody>\n"
 "                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
 "as=\"error\">\n"
-"                            <th><t t-out=\"error['item_identifier']\"/></"
-"th>\n"
+"                            <th><t t-out=\"error['item_identifier']\"/></th>"
+"\n"
 "                            <td>\n"
 "                                <t t-if=\"error['message']\" t-"
 "out=\"error['message']\"/>\n"
@@ -358,7 +360,7 @@ msgstr ""
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__api_endpoint
 msgid "API Endpoint"
-msgstr "API-endpoint"
+msgstr "API-slutpunkt"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__access_token
@@ -416,7 +418,7 @@ msgstr "Udvidelse til tilbud (sekundær)"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__company_ids
 msgid "Allowed Company"
-msgstr "Tilladte selskaber"
+msgstr "Tilladt virksomhed"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -502,7 +504,7 @@ msgstr "Annulleret på Shopee"
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_account.py:0
 msgid "Changing API endpoint will reset the authorization of the shops."
-msgstr "At ændre API-endpointet nulstiller butikkernes godkendelse."
+msgstr "At ændre API-slutpunktet nulstiller butikkernes godkendelse."
 
 #. module: sale_shopee
 #. odoo-python
@@ -525,7 +527,7 @@ msgstr "Kontakt"
 #. odoo-python
 #: code:addons/sale_shopee/controllers/onboarding.py:0
 msgid "Could not find Shopee account with id %(account)s"
-msgstr "Shopee-kontoen med ID'et %s kunne ikke findes"
+msgstr "Shopee-kontoen med ID'et %(account)s kunne ikke findes"
 
 #. module: sale_shopee
 #: model:ir.actions.act_window,name:sale_shopee.quick_create_account_action
@@ -564,14 +566,14 @@ msgstr "Standardsalgsteam"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__user_id
 msgid "Default Salesperson"
-msgstr "Standard sælger"
+msgstr "Standardsælger"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__display_name
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__display_name
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_shop__status__error
@@ -597,7 +599,7 @@ msgstr "FBS-lagersted"
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__stock_picking__shopee_label_status__failed
 msgid "Failed"
-msgstr "Fejlet"
+msgstr "Mislykket"
 
 #. module: sale_shopee
 #. odoo-python
@@ -612,8 +614,8 @@ msgstr ""
 "Godkendelsen af butikken mislykkedes pga. følgende fejl:\n"
 "- %(message)s\n"
 "\n"
-"Et af følgende oplysninger kan være forkerte: Partner-ID, Partnernøgle eller "
-"API-endpoint."
+"Et af følgende oplysninger kan være forkerte: partner-ID, partnernøgle eller "
+"API-slutpunkt."
 
 #. module: sale_shopee
 #: model:ir.actions.server,name:sale_shopee.action_fetch_shipping_label
@@ -639,17 +641,18 @@ msgstr "Lynudsalg"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Cross Border Seller"
-msgstr "Forsendelse via grænseoverskridende sælger"
+msgstr ""
+"Fulfilled by Cross Border Seller (Forsendelse via grænseoverskridende sælger)"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Merchant"
-msgstr "Opfyldt af Merchant"
+msgstr "Fulfilled by Merchant"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Shopee"
-msgstr "Forsendelse via Shopee"
+msgstr "Fulfilled by Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__hybrid
@@ -660,7 +663,7 @@ msgstr ""
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__fbm
 msgid "Fulfillment by Merchant"
-msgstr "Opfyldelse af Merchant"
+msgstr "Fulfillment by Merchant"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__fbs
@@ -687,8 +690,8 @@ msgid ""
 "If the sale is locked, you can not modify it anymore. However, you will "
 "still be able to invoice or deliver."
 msgstr ""
-"Hvis salget er låst, kan du ikke længere ændre i den. Du kan dog stadig "
-"levere og fakturere. "
+"Hvis salget er låst, kan du ikke længere redigere den. Du kan dog stadig "
+"levere og fakturere."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_account__company_ids
@@ -719,7 +722,7 @@ msgstr "Seneste synkroniseringsdato for ordrer"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_stock_picking__last_picking_sync_date
 msgid "Last Picking Sync Date"
-msgstr "Seneste synkroniseringsdato for plukning"
+msgstr "Seneste synkroniseringsdato for forsendelse"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__last_shop_status_sync_date
@@ -774,12 +777,12 @@ msgstr "Utilgængelig"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__order_count
 msgid "Order Count"
-msgstr "Ordre antal"
+msgstr "Antal ordrer"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Orders"
-msgstr "Ordre"
+msgstr "Ordrer"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__partner_identifier
@@ -816,7 +819,7 @@ msgstr "Produktreklame"
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_product_product
 msgid "Product Variant"
-msgstr "Varevariant"
+msgstr "Produktvariant"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__stock_picking__shopee_label_status__ready
@@ -831,12 +834,12 @@ msgstr "Klar til forsendelse"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Ready to arrange shipment via Shopee"
-msgstr "Klar til klargørelse af forsendelse via Shopee"
+msgstr "Klar til forsendelsesklargøring via Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__refresh_token
 msgid "Refresh Token"
-msgstr "Opdater token"
+msgstr "Opdatér token"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__refresh_token
@@ -857,8 +860,7 @@ msgstr "Registrér din Shopee-konto"
 #. module: sale_shopee
 #: model_terms:ir.actions.act_window,help:sale_shopee.action_shopee_account_list
 msgid "Register yours to start synchronizing your orders into Odoo."
-msgstr ""
-"Registrer dine, for at påbegynde synkroniseringen af dine ordre ind i Odoo."
+msgstr "Registrér dine for at påbegynde synkroniseringen af dine ordrer i Odoo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__authorization_remaining_days
@@ -878,7 +880,7 @@ msgstr "Salgsordrer"
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_sale_order
 msgid "Sales Order"
-msgstr "Salgsordre"
+msgstr "Salgsordrer"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.quick_create_account_form
@@ -888,12 +890,12 @@ msgstr "Gem og godkend"
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_delivery_status__confirmed
 msgid "Shipment Arranged"
-msgstr "Forsendelse organiseret"
+msgstr "Forsendelse arrangeret"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Shipment arranged via Shopee"
-msgstr "Forsendelse organiseret via Shopee"
+msgstr "Forsendelse arrangeret via Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_delivery_status__done
@@ -915,7 +917,7 @@ msgstr "Pakkelabel ikke klar"
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__shop_id
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_search
 msgid "Shop"
-msgstr "Shop"
+msgstr "Butik"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__shop_count
@@ -974,7 +976,7 @@ msgstr "Shopee-konto"
 #: model:ir.actions.act_window,name:sale_shopee.action_shopee_account_list
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_list
 msgid "Shopee Accounts"
-msgstr "Shopee-konto"
+msgstr "Shopee-konti"
 
 #. module: sale_shopee
 #: model:product.template,name:sale_shopee.default_adjustment_product_product_template
@@ -1057,17 +1059,17 @@ msgstr "Shopee-prisliste %(currency)s"
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__production_brazil
 msgid "Shopee Production Endpoint (Brazil)"
-msgstr "Shopee-produktionsendpoint (Brasilien)"
+msgstr "Shopee-produktionsslutpunkt (Brasilien)"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__production_china
 msgid "Shopee Production Endpoint (China)"
-msgstr "Shopee-produktionsendpoint (Kin)"
+msgstr "Shopee-produktionsslutpunkt (Kina)"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__production_singapore
 msgid "Shopee Production Endpoint (Singapore)"
-msgstr "Shopee-produktionsendpoint (Singapore)"
+msgstr "Shopee-produktionsslutpunkt (Singapore)"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_sale_order__shopee_order_ref
@@ -1083,7 +1085,7 @@ msgstr "Shopee-udsalg"
 #. module: sale_shopee
 #: model:product.template,name:sale_shopee.default_shipping_product_product_template
 msgid "Shopee Shipping"
-msgstr "Shopee-forsendelse"
+msgstr "Forsendelse med Shopee"
 
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_shopee_shop
@@ -1119,12 +1121,12 @@ msgstr "Shopee-status"
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__test
 msgid "Shopee Testing Endpoint"
-msgstr "Shopee-testing-endpoint"
+msgstr "Shopee-testslutpunkt"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__test_china
 msgid "Shopee Testing Endpoint (China)"
-msgstr "Shopee-testing-endpoint (Kina)"
+msgstr "Shopee-testslutpunkt (Kina)"
 
 #. module: sale_shopee
 #. odoo-python
@@ -1214,7 +1216,7 @@ msgstr "Synkronisér lagerbeholdningen"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Sync Orders"
-msgstr "Synkroniser ordre"
+msgstr "Synkronisér ordre"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -1335,6 +1337,7 @@ msgstr ""
 "- Klar til forsendelse: Sælger kan arrangere forsendelsen.\n"
 "- Forsendelse arrangereet: Sælger har oprettet forsendelsen online og "
 "modtaget et trackingnummer fra 3PL.\n"
+"- Forsendelse: Pakken er afleveret til eller afhentet af 3PL.\n"
 "- Annulleret: Ordren er blevet annulleret.\n"
 "- Afhentning mislykkedes: 3PL kunne ikke afhente pakken. Forsendelsen skal "
 "genplanlægges."

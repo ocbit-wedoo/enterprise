@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-05-26 04:51+0000\n"
+"POT-Creation-Date: 2026-06-19 17:50+0000\n"
+"PO-Revision-Date: 2026-06-27 18:32+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "spreadsheet_sale_management/lo/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: spreadsheet_sale_management
 #: model_terms:ir.ui.view,arch_db:spreadsheet_sale_management.sale_order_spreadsheet_view_search
@@ -91,6 +91,11 @@ msgid "Furniture Assembly"
 msgstr "ການປະກອບເຟີນີເຈີ"
 
 #. module: spreadsheet_sale_management
+#: model:ir.model,name:spreadsheet_sale_management.model_ir_http
+msgid "HTTP Routing"
+msgstr "ການກຳນົດເສັ້ນທາງ HTTP"
+
+#. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__id
 msgid "ID"
 msgstr "ໄອດີ"
@@ -140,8 +145,7 @@ msgstr "ການຈັດສົ່ງພາຍໃນທ້ອງຖິ່ນ"
 msgid ""
 "Multiple cells are updating the same field of the same record! Unable to "
 "determine which one to choose: %s"
-msgstr ""
-"ມີຫຼາຍເຊວທີ່ກຳລັງອັບເດດຟີລດຽວກັນຂອງບັນທຶກດຽວກັນ! ບໍ່ສາມາດກຳນົດໄດ້ວ່າຈະເລືອກອັນໃດ: %s"
+msgstr "ມີຫຼາຍເຊວທີ່ກຳລັງອັບເດດຟີລດຽວກັນຂອງບັນທຶກດຽວກັນ! ບໍ່ສາມາດກຳນົດໄດ້ວ່າຈະເລືອກອັນໃດ: %s"
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__name
@@ -279,11 +283,11 @@ msgstr "ຊິງຄ໌ກັບຟີລ"
 #. odoo-javascript
 #: code:addons/spreadsheet_sale_management/static/src/bundle/field_sync/model/field_sync_ui_plugin.js:0
 msgid ""
-"The value of %(cell_reference)s (%(cell_value)s) can't be used for field "
-"\"%(field_name)s\"."
+"The value of %(cell_reference)s (%(cell_value)s) can't be used for field \"%"
+"(field_name)s\"."
 msgstr ""
-"ຄ່າຂອງ %(cell_reference)s (%(cell_value)s) ບໍ່ສາມາດໃຊ້ສຳລັບຟີລ \"%(field_name)s\" ໄ"
-"ດ້."
+"ຄ່າຂອງ %(cell_reference)s (%(cell_value)s) ບໍ່ສາມາດໃຊ້ສຳລັບຟີລ \"%(field_name)s\" "
+"ໄດ້."
 
 #. module: spreadsheet_sale_management
 #: model:ir.model.fields,field_description:spreadsheet_sale_management.field_sale_order_spreadsheet__thumbnail

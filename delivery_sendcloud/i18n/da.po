@@ -8,13 +8,14 @@
 # Martin Trigaux, 2024
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-04-29 19:41+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 14:18+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "delivery_sendcloud/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -142,7 +143,7 @@ msgstr "Annullér"
 #: code:addons/delivery_sendcloud/static/src/views/sendcloud_product_selection_widget.xml:0
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_stock_package_type__package_carrier_type
 msgid "Carrier"
-msgstr "Fragtfirma"
+msgstr "Transportfirma"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -192,7 +193,7 @@ msgstr "Oprettet den"
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
 msgid "Default Package Type"
-msgstr "Standard pakke type"
+msgstr "Standardpakketype"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_default_package_type_id
@@ -207,7 +208,7 @@ msgstr "Levering"
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_shipping_method_sendcloud
 msgid "Delivery Product"
-msgstr "Levering af produkt"
+msgstr "Fragtprodukt"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__sendcloud_shipping_rules
@@ -226,7 +227,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__display_name
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_wizard__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -321,7 +322,7 @@ msgstr "Landekoder skal være angivet for partneren og lagerets land"
 #. odoo-javascript
 #: code:addons/delivery_sendcloud/static/src/views/sendcloud_product_selection_widget.xml:0
 msgid "Max height"
-msgstr "Max højde"
+msgstr "Maks. højde"
 
 #. module: delivery_sendcloud
 #. odoo-javascript
@@ -426,12 +427,12 @@ msgstr "Returnér produkt"
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_wizard__return_products
 msgid "Return Products"
-msgstr "Returner produkter"
+msgstr "Returnér produkter"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__country_id
 msgid "Select the country to be used by this delivery method"
-msgstr "Vælg det land, der skal bruges til denne leveringsmetode"
+msgstr "Vælg det land, som skal anvendes for denne leveringsmetode"
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
@@ -447,7 +448,7 @@ msgstr "SendCloud-forsendelsesmetoder"
 #: model:ir.model.fields.selection,name:delivery_sendcloud.selection__delivery_carrier__delivery_type__sendcloud
 #: model:ir.model.fields.selection,name:delivery_sendcloud.selection__stock_package_type__package_carrier_type__sendcloud
 msgid "Sendcloud"
-msgstr "Sendcloud"
+msgstr "SendCloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__sendcloud_public_key
@@ -520,7 +521,7 @@ msgstr ""
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__country_id
 msgid "Ship From"
-msgstr "Forsendelse fra"
+msgstr "Send fra"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -536,7 +537,7 @@ msgstr "Transportfirmaer"
 #. module: delivery_sendcloud
 #: model:ir.model,name:delivery_sendcloud.model_delivery_carrier
 msgid "Shipping Methods"
-msgstr "Leveringsmetoder"
+msgstr "Forsendelsesmetoder"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__name
@@ -611,8 +612,8 @@ msgid ""
 "missing for the following product(s): \n"
 " %s"
 msgstr ""
-"Den anslåede leveringspris kan ikke beregnes, da vægten for følgende "
-"produkt(er) mangler: \n"
+"Den anslåede leveringspris kan ikke beregnes, da vægten for følgende produkt"
+"(er) mangler: \n"
 " %s"
 
 #. module: delivery_sendcloud

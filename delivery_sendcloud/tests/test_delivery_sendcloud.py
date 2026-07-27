@@ -4,7 +4,7 @@ from unittest.mock import patch, DEFAULT
 import requests
 
 from odoo.exceptions import UserError, ValidationError
-from odoo.tests import Form, TransactionCase
+from odoo.tests import Form, TransactionCase, tagged
 from odoo import Command
 
 from ..models.sendcloud_service import SendCloud
@@ -572,55 +572,6 @@ class TestDeliverySendCloud(TransactionCase):
         with self.assertRaises(UserError):
             picking.open_website_url()
 
-    def test_sendcloud_delivery_with_downpayment(self):
-        """
-        Test validating the delivery of a SO with a downpayment.
-        """
-        basic_tax = self.env['account.tax'].create({
-            'name': 'Basic 15% tax',
-            'amount': 15,
-        })
-        sale_order = self.env['sale.order'].create({
-            'partner_id': self.eu_partner.id,
-            'order_line': [
-                Command.create({
-                    'product_id': self.product_to_ship1.id,
-                    'product_uom_qty': 1.0,
-                    'price_unit': 100,
-                    'tax_id': basic_tax,
-                }),
-            ]
-        })
-        # Create downpayment
-        so_context = {
-            'active_model': 'sale.order',
-            'active_ids': [sale_order.id],
-            'active_id': sale_order.id,
-        }
-        payment_params = {
-            'advance_payment_method': 'fixed',
-            'fixed_amount': 50,
-        }
-        downpayment = self.env['sale.advance.payment.inv'].with_context(so_context).create(payment_params)
-        downpayment.create_invoices()
-        # Downpayment adds 2 SOL
-        self.assertEqual(len(sale_order.order_line), 3)
-
-        wiz_action = sale_order.action_open_delivery_wizard()
-        choose_delivery_carrier = self.env[wiz_action['res_model']].with_context(wiz_action['context']).create({
-            'carrier_id': self.sendcloud.id,
-            'order_id': sale_order.id,
-        })
-        with _mock_sendcloud_call(self.warehouse_id):
-            choose_delivery_carrier.update_price()
-            choose_delivery_carrier.button_confirm()
-            sale_order.action_confirm()
-            self.assertGreater(len(sale_order.picking_ids), 0)
-            picking = sale_order.picking_ids[0]
-            picking.action_assign()
-            picking._action_done()
-            self.assertTrue(picking.sendcloud_parcel_ref)
-
     def test_customs_information_1(self):
         '''
         Ensure freight charges are sent to Sendcloud only for the first confirmed picking.
@@ -767,3 +718,51 @@ class TestDeliverySendCloud(TransactionCase):
         with patch.object(SendCloud, '_send_request', side_effect=patched_send_request, autospec=True):
             with _mock_sendcloud_call(self.warehouse_id):
                 choose_delivery_carrier.update_price()
+
+
+@tagged('post_install', '-at_install')
+class TestDeliverySendCloudPostInstall(TestDeliverySendCloud):
+
+    def test_sendcloud_delivery_with_downpayment(self):
+        """
+        Test validating the delivery of a SO with a downpayment.
+        """
+        sale_order = self.env['sale.order'].create({
+            'partner_id': self.eu_partner.id,
+            'order_line': [
+                Command.create({
+                    'product_id': self.product_to_ship1.id,
+                    'product_uom_qty': 1.0,
+                    'price_unit': 100,
+                }),
+            ]
+        })
+        # Create downpayment
+        so_context = {
+            'active_model': 'sale.order',
+            'active_ids': [sale_order.id],
+            'active_id': sale_order.id,
+        }
+        payment_params = {
+            'advance_payment_method': 'fixed',
+            'fixed_amount': 50,
+        }
+        downpayment = self.env['sale.advance.payment.inv'].with_context(so_context).create(payment_params)
+        downpayment.create_invoices()
+        # Downpayment adds 2 SOL
+        self.assertEqual(len(sale_order.order_line), 3)
+
+        wiz_action = sale_order.action_open_delivery_wizard()
+        choose_delivery_carrier = self.env[wiz_action['res_model']].with_context(wiz_action['context']).create({
+            'carrier_id': self.sendcloud.id,
+            'order_id': sale_order.id,
+        })
+        with _mock_sendcloud_call(self.warehouse_id):
+            choose_delivery_carrier.update_price()
+            choose_delivery_carrier.button_confirm()
+            sale_order.action_confirm()
+            self.assertGreater(len(sale_order.picking_ids), 0)
+            picking = sale_order.picking_ids[0]
+            picking.action_assign()
+            picking._action_done()
+            self.assertTrue(picking.sendcloud_parcel_ref)

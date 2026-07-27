@@ -203,6 +203,46 @@ class TestRentalKits(TestRentalCommon):
         pickup_wizard.apply()
         self.assertEqual(rental.order_line.qty_delivered, 1)
 
+    def test_kit_bom_created_after_picking_creation(self):
+        """
+        With rental transfer enabled confirm a rental order for a product without a BOM
+        add a kit BOM for it and validate the rental transfers.
+        """
+        rental_product = self.component_1
+        rental_product.rent_ok = True
+        rental_order = self.env['sale.order'].with_context(in_rental_app=True).create({
+            'partner_id': self.cust1.id,
+            'rental_start_date': self.rental_start_date,
+            'rental_return_date': self.rental_return_date,
+            'order_line': [Command.create({
+                'product_id': rental_product.id,
+                'product_uom_qty': 1,
+            })],
+        })
+        rental_order.action_confirm()
+        self.env['mrp.bom'].create({
+            'product_tmpl_id': rental_product.product_tmpl_id.id,
+            'product_id': rental_product.id,
+            'product_qty': 1.0,
+            'type': 'phantom',
+            'bom_line_ids': [Command.create({
+                'product_id': self.component_2.id,
+                'product_qty': 1,
+            })],
+        })
+        # invalidate the record to be considered as a kit
+        rental_product.invalidate_recordset()
+        delivery = rental_order.picking_ids[0]
+        self.assertEqual(delivery.move_ids.product_id, rental_product)
+        # try to validate which will explode the kit moves
+        delivery.button_validate()
+        self.assertEqual(delivery.move_ids.product_id, self.component_2)
+        delivery.move_ids.quantity = 1.0
+        delivery.button_validate()
+        self.assertRecordValues(delivery.move_ids, [
+            {'product_id': self.component_2.id, 'state': 'done'}
+        ])
+
     def test_kit_multipick_flow(self):
         """
         Test that confirming a rental order with a kit product whose components

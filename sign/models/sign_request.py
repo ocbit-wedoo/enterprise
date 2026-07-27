@@ -790,10 +790,10 @@ class SignRequest(models.Model):
             new_pdf = PdfFileWriter()
 
             for p in range(0, old_pdf.getNumPages()):
-                page = old_pdf.getPage(p)
+                new_pdf.addPage(old_pdf.getPage(p))
+                page = new_pdf.getPage(-1)
                 page.mergePage(item_pdf.getPage(p))
-                new_pdf.addPage(page)
-                new_pdf.getPage(-1).compressContentStreams()
+                page.compressContentStreams()
                 # Preserve page indirect object identity so internal PDF references remain valid.
                 ref = page.indirect_reference if hasattr(page, "indirect_reference") else None
                 if ref:

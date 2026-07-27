@@ -7,13 +7,14 @@
 #
 # Yana Bystrytska <yana.bystrytska@erp.co.ua>, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-04-16 16:54+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-13 09:26+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
 "sale_planning/uk/>\n"
 "Language: uk\n"
@@ -24,7 +25,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_planning
 #. odoo-python
@@ -35,7 +36,7 @@ msgstr "(%(remaining_hours)s залишилося)"
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_shift_ics_description_inherit
 msgid "<b>Sales Order Item:</b>"
-msgstr ""
+msgstr "<b>Елемент замовлення на продаж:</b>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_form_inherit_sale_planning
@@ -46,6 +47,11 @@ msgid ""
 "cancellation of the sales order.\" invisible=\"sale_order_state != "
 "'cancel'\"/>"
 msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning\" title=\"Замовлення "
+"на продаж, пов'язане з цією зміною, скасовано. Ми рекомендуємо або оновити "
+"позицію замовлення на продаж, або скасувати цю зміну відповідно до "
+"скасування замовлення на продаж.\" invisible=\"sale_order_state != "
+"'cancel'\"/>"
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.view_order_form_inherit_sale_planning
@@ -181,18 +187,20 @@ msgid ""
 "Only slots linked to a Sales Order with a plannable service can be "
 "unscheduled."
 msgstr ""
+"Скасувати планування можна лише для слотів, пов'язаних із замовленням на "
+"продаж із плановою послугою."
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/planning_hooks.js:0
 msgid "Open shifts and sales orders assigned"
-msgstr ""
+msgstr "Відкриті зміни та призначені замовлення на продаж"
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/planning_hooks.js:0
 msgid "Open shifts and sales orders unscheduled"
-msgstr ""
+msgstr "Відкриті зміни та незаплановані замовлення на продаж"
 
 #. module: sale_planning
 #: model_terms:product.template,description:sale_planning.developer_product_product_template
@@ -278,7 +286,7 @@ msgstr "Елемент замовлення на продаж"
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_shift_ics_description_inherit
 msgid "Sales Order Item:"
-msgstr ""
+msgstr "Елемент замовлення на продаж:"
 
 #. module: sale_planning
 #: model:ir.model,name:sale_planning.model_sale_order_line
@@ -288,7 +296,7 @@ msgstr "Рядок замовлення"
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_slot__sale_order_state
 msgid "Sales Order State"
-msgstr ""
+msgstr "Статус замовлення на продаж"
 
 #. module: sale_planning
 #: model:ir.model.fields,help:sale_planning.field_planning_slot__sale_line_id
@@ -337,18 +345,22 @@ msgid ""
 "There are no hours left to plan, or there are no resources available at the "
 "time."
 msgstr ""
+"На планування не залишилося годин, або ж на той момент немає доступних "
+"ресурсів."
 
 #. module: sale_planning
 #. odoo-javascript
 #: code:addons/sale_planning/static/src/views/sale_planning_gantt/sale_planning_gantt_renderer.js:0
 msgid "There are no sales order items to plan."
-msgstr ""
+msgstr "Немає позицій замовлення на продаж для планування."
 
 #. module: sale_planning
 #. odoo-python
 #: code:addons/sale_planning/models/planning_slot.py:0
 msgid "This Sale Order Item doesn't have a target value of planned hours."
 msgstr ""
+"Цей елемент замовлення на продаж не має цільового значення запланованих "
+"годин."
 
 #. module: sale_planning
 #. odoo-javascript
@@ -380,7 +392,7 @@ msgstr "Робочий планувальник"
 #. odoo-python
 #: code:addons/sale_planning/models/planning_slot.py:0
 msgid "You are attempting to create a slot for a cancelled sales order."
-msgstr ""
+msgstr "Ви намагаєтеся створити слот для скасованого замовлення на продаж."
 
 #. module: sale_planning
 #. odoo-python
@@ -390,6 +402,9 @@ msgid ""
 "to shifts in another company.\n"
 "Please transfer shifts %(slots_names)s to the destination company first."
 msgstr ""
+"Ви не можете оновити компанію для замовлення на продаж %(order_name)s, "
+"оскільки воно пов'язане зі змінами в іншій компанії.\n"
+"Спочатку перенесіть зміни %(slots_names)s до компанії призначення."
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_role_view_tree_inherit_sale_planning

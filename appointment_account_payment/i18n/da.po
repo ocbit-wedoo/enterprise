@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* appointment_account_payment
+# * appointment_account_payment
 #
 # Translators:
 # Mads Søndergaard, 2024
@@ -11,20 +11,22 @@
 # Ejner Sønniksen <ejner@vkdata.dk>, 2025
 # Wil Odoo, 2025
 # Kira Petersen, 2025
-#
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Kira Petersen, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"PO-Revision-Date: 2026-06-23 14:11+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
+"appointment_account_payment/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment_account_payment
 #. odoo-python
@@ -67,14 +69,13 @@ msgid ""
 "<i class=\"fa fa-pencil-square-o text-warning me-3\"/>Appointment waiting "
 "for payment"
 msgstr ""
-"<i class=\"fa fa-pencil-square-o text-warning me-3\"/>Aftale venter på "
-"betaling"
+"<i class=\"fa fa-pencil-square-o text-warning me-3\"/>Tid venter på betaling"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
 msgid ""
 "<i class=\"fa fa-times-circle text-danger me-3\"/>Appointment Unavailable!"
-msgstr "<i class=\"fa fa-times-circle text-danger me-3\"/>Tid ikke ledig"
+msgstr "<i class=\"fa fa-times-circle text-danger me-3\"/>Tid ikke ledig!"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_type_view_form
@@ -152,17 +153,17 @@ msgstr "Svar"
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_appointment_answer_input
 msgid "Appointment Answer Inputs"
-msgstr "Indtastning af svar vdr. aftaler"
+msgstr "Indtastning af svar vedr. aftaler"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__appointment_answer_input_ids
 msgid "Appointment Answers"
-msgstr "Aftale svar"
+msgstr "Aftalesvar"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__appointment_invite_id
 msgid "Appointment Invite"
-msgstr "Aftaleinvitation"
+msgstr "Invitation til booking af aftale"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__account_move_id
@@ -173,7 +174,7 @@ msgstr "Faktura for aftale"
 #: model:ir.model,name:appointment_account_payment.model_appointment_type
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__appointment_type_id
 msgid "Appointment Type"
-msgstr "Aftale type"
+msgstr "Aftaletype"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__asked_capacity
@@ -198,7 +199,7 @@ msgstr "Bookinggebyrer"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__booking_line_ids
 msgid "Booking Lines"
-msgstr "Booking Linjer"
+msgstr "Bookinglinjer"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__product_id
@@ -208,7 +209,7 @@ msgstr "Bookingprodukt"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_answer_input__calendar_event_id
 msgid "Calendar Event"
-msgstr "Kalender begivenhed"
+msgstr "Kalenderbegivenhed"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking_line__capacity_reserved
@@ -265,7 +266,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__display_name
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking_line__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__duration
@@ -297,7 +298,7 @@ msgstr "Er ikke ledig"
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_account_move
 msgid "Journal Entry"
-msgstr "Journalbilag"
+msgstr "Journalpostering"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__write_uid
@@ -395,7 +396,7 @@ msgstr "Produkt"
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_product_product
 msgid "Product Variant"
-msgstr "Varevariant"
+msgstr "Produktvariant"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,help:appointment_account_payment.field_appointment_type__has_payment_step
@@ -469,13 +470,13 @@ msgid ""
 "The sale price is managed from the product template. Click on the 'Configure "
 "Variants' button to set the extra attribute prices."
 msgstr ""
-"Salgs prisen administreres fra produkt skabelonen. Klik på 'Konfigurer "
-"varianter' knappen, og angiv den ekstra egenskabs priser."
+"Salgsprisen fastsættes via produktskabelonen. Klik på 'Konfigurér varianter' "
+"for at indstille prisændringer baseret på attributter."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "There is nothing to pay."
-msgstr "Der er intet at betale."
+msgstr "Der er ikke noget at betale."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
@@ -531,7 +532,7 @@ msgstr "Det er ikke muligt at slette standardbookingproduktet"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
 msgid "at"
-msgstr "på"
+msgstr "kl."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
@@ -541,7 +542,7 @@ msgstr "eller"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
 msgid "people"
-msgstr "mennesker"
+msgstr "personer"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_info

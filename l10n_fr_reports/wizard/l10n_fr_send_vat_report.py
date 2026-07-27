@@ -217,7 +217,7 @@ class L10nFrSendVatReport(models.TransientModel):
     def _get_address_dict(self, company):
         return {
             'street': company.street[:30],
-            'complement': f"{company.street[30:]} {company.street2}"[:35],
+            'complement': f"{company.street[30:]} {company.street2 or ''}".strip()[:35],
             'postal_code': company.zip[:17],
             'city': company.city[:35],
             'country_code': company.country_id.code,

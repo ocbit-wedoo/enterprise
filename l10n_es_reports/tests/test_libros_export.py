@@ -382,6 +382,52 @@ class TestLibrosExport(TestAccountReportsCommon):
         self.assertEqual(line_vals_list[1]['withholding_type'], 15.0)
         self.assertEqual(line_vals_list[1]['withholding_amount'], 30.0)
 
+    def test_libros_operation_code_17_oss_sale(self):
+        """Customer invoice with an OSS (no_sujeto_loc) tax should produce operation_code '17'."""
+        oss_tag = self.env.ref('l10n_eu_oss.tag_oss', raise_if_not_found=False)
+        if not oss_tag:
+            oss_tag = self.env['account.account.tag'].create({'name': 'OSS', 'applicability': 'taxes'})
+            self.env['ir.model.data'].create({
+                'module': 'l10n_eu_oss',
+                'name': 'tag_oss',
+                'model': 'account.account.tag',
+                'res_id': oss_tag.id,
+            })
+        pt_partner = self.env['res.partner'].create({'name': 'PT Customer', 'country_id': self.env.ref('base.pt').id})
+        oss_tax = self.env['account.tax'].create({
+            'name': '23% PT VAT OSS',
+            'amount': 23.0,
+            'l10n_es_type': 'no_sujeto_loc',
+            'invoice_repartition_line_ids': [
+                Command.create({'repartition_type': 'base', 'tag_ids': oss_tag.ids}),
+                Command.create({'repartition_type': 'tax'}),
+            ],
+            'refund_repartition_line_ids': [
+                Command.create({'repartition_type': 'base'}),
+                Command.create({'repartition_type': 'tax'}),
+            ],
+        })
+        self._create_invoice_one_line(move_type='out_invoice', partner_id=pt_partner, price_unit=1000, tax_ids=oss_tax, post=True, invoice_date=fields.Date.from_string('2019-01-01'))
+        inc_line_vals = self.get_libros_sheet_line_vals()[0]
+        line_vals_list = [inc_line_vals[m][t] for m in inc_line_vals for t in inc_line_vals[m]]
+        self.assertEqual(len(line_vals_list), 1)
+        self.assertEqual(line_vals_list[0]['operation_code'], '17')
+
+    def test_libros_operation_code_09_intracomm_bill(self):
+        """Vendor bill with an intra-community tax (mod_303 casilla 10) should produce operation_code '09'."""
+        company_id = self.company_data['company'].id
+        tax_ic_21 = self.env.ref(f'account.{company_id}_account_tax_template_p_iva21_ic_bc')
+        be_partner = self.env['res.partner'].create({
+            'country_id': self.env.ref('base.be').id,
+            'name': 'Belgian Partner',
+            'vat': 'BE0477472701',
+        })
+        self._create_invoice_one_line(move_type='in_invoice', partner_id=be_partner, price_unit=1000, tax_ids=tax_ic_21, post=True, invoice_date=fields.Date.from_string('2019-01-01'))
+        exp_line_vals = self.get_libros_sheet_line_vals()[1]
+        line_vals_list = [exp_line_vals[m][t] for m in exp_line_vals for t in exp_line_vals[m]]
+        self.assertEqual(len(line_vals_list), 1)
+        self.assertEqual(line_vals_list[0]['operation_code'], '09')
+
     def test_export_libros_de_iva_missing_iae_group(self):
         """Test that RedirectWarning is raised when IAE Group is not configured."""
         # Remove IAE group from company

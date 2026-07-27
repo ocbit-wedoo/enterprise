@@ -2459,6 +2459,120 @@ class TestCFDIInvoice(TestMxEdiCommon):
 
             self._assert_invoice_payment_cfdi(statement_line1.move_id, 'test_foreign_curr_statement_and_invoice_modify_exchange_move')
 
+    def test_statement_line_partially_reconciled_multiple_invoices(self):
+        payment_date = self.frozen_today
+
+        with self.mx_external_setup(payment_date):
+            invoice_1 = self._create_invoice(
+                invoice_line_ids=[Command.create({
+                    'product_id': self.product.id,
+                    'price_unit': 100,  # + tax(16%)
+                })],
+                l10n_mx_edi_payment_policy='PPD',
+            )
+            invoice_2 = self._create_invoice(
+                invoice_line_ids=[Command.create({
+                    'product_id': self.product.id,
+                    'price_unit': 100,  # + tax(16%)
+                })],
+                l10n_mx_edi_payment_policy='PPD',
+            )
+
+            with self.with_mocked_pac_sign_success():
+                invoice_1._l10n_mx_edi_cfdi_invoice_try_send()
+                invoice_2._l10n_mx_edi_cfdi_invoice_try_send()
+
+            st_line = self.env['account.bank.statement.line'].create({
+                'journal_id': self.company_data['default_journal_bank'].id,
+                'amount': 232,
+                'date': payment_date,
+                'payment_ref': 'test'
+            })
+
+            # Reconcile bank transaction with invoice_1
+            wizard = self.env['bank.rec.widget'].with_context(default_st_line_id=st_line.id).new({})
+            receivable_lines = invoice_1.line_ids.filtered(lambda l: l.account_id.account_type == 'asset_receivable')
+            wizard._action_add_new_amls(receivable_lines)
+            wizard._action_validate()
+            self.assertRecordValues(st_line, [{'is_reconciled': False, 'l10n_mx_edi_cfdi_state': False}])
+            self.assertRecordValues(invoice_1, [{'payment_state': 'paid', 'l10n_mx_edi_update_payments_needed': False}])
+            self.assertRecordValues(invoice_2, [{'payment_state': 'not_paid', 'l10n_mx_edi_update_payments_needed': False}])
+            with self.with_mocked_pac_sign_success():
+                invoice_1.l10n_mx_edi_cfdi_invoice_try_update_payments()
+            self.assertRecordValues(st_line, [{'l10n_mx_edi_cfdi_state': False}])
+
+            # Reconcile bank transaction with invoice_1 and invoice_2
+            st_line.action_undo_reconciliation()
+            receivable_lines |= invoice_2.line_ids.filtered(lambda l: l.account_id.account_type == 'asset_receivable')
+            wizard = self.env['bank.rec.widget'].with_context(default_st_line_id=st_line.id).new({})
+            wizard._action_add_new_amls(receivable_lines)
+            wizard._action_validate()
+            self.assertRecordValues(st_line, [{'is_reconciled': True, 'l10n_mx_edi_cfdi_state': False}])
+            self.assertRecordValues(invoice_1, [{'payment_state': 'paid', 'l10n_mx_edi_update_payments_needed': True}])
+            self.assertRecordValues(invoice_2, [{'payment_state': 'paid', 'l10n_mx_edi_update_payments_needed': True}])
+            with self.with_mocked_pac_sign_success():
+                invoice_2.l10n_mx_edi_cfdi_invoice_try_update_payments()
+            self.assertRecordValues(st_line, [{'l10n_mx_edi_cfdi_state': 'sent'}])
+
+    def test_payment_partially_reconciled_multiple_invoices(self):
+        payment_date = self.frozen_today
+        in_payment_state = self.env['account.move']._get_invoice_in_payment_state()
+
+        with self.mx_external_setup(payment_date):
+            invoice_1 = self._create_invoice(
+                invoice_line_ids=[Command.create({
+                    'product_id': self.product.id,
+                    'price_unit': 100,  # + tax(16%)
+                })],
+                l10n_mx_edi_payment_policy='PPD',
+            )
+            invoice_2 = self._create_invoice(
+                invoice_line_ids=[Command.create({
+                    'product_id': self.product.id,
+                    'price_unit': 100,  # + tax(16%)
+                })],
+                l10n_mx_edi_payment_policy='PPD',
+            )
+
+            with self.with_mocked_pac_sign_success():
+                invoice_1._l10n_mx_edi_cfdi_invoice_try_send()
+                invoice_2._l10n_mx_edi_cfdi_invoice_try_send()
+
+            payment = self.env['account.payment'].create({
+                'amount': 232.0,
+                'date': payment_date,
+                'payment_type': 'inbound',
+                'partner_type': 'customer',
+                'partner_id': invoice_1.partner_id.id,
+            })
+            payment.action_post()
+            payment.action_draft()
+            _liquidity_lines, counterpart_lines, _writeoff_lines = payment._seek_for_lines()
+            payment.move_id.line_ids = [
+                Command.update(counterpart_lines.id, {'balance': -116.0}),
+                Command.create({'account_id': counterpart_lines.account_id.id, 'balance': -116.0}),
+            ]
+            payment.action_post()
+            _liquidity_lines, counterpart_lines, _writeoff_lines = payment._seek_for_lines()
+
+            # Reconcile payment with invoice_1
+            (counterpart_lines[0] + invoice_1.line_ids.filtered(lambda l: l.display_type == 'payment_term')).reconcile()
+            self.assertRecordValues(payment, [{'is_reconciled': False, 'l10n_mx_edi_cfdi_state': False}])
+            self.assertRecordValues(invoice_1, [{'payment_state': in_payment_state, 'l10n_mx_edi_update_payments_needed': False}])
+            self.assertRecordValues(invoice_2, [{'payment_state': 'not_paid', 'l10n_mx_edi_update_payments_needed': False}])
+            with self.with_mocked_pac_sign_success():
+                invoice_1.l10n_mx_edi_cfdi_invoice_try_update_payments()
+            self.assertRecordValues(payment, [{'l10n_mx_edi_cfdi_state': False}])
+
+            # Reconcile payment with invoice_2
+            (counterpart_lines[1] + invoice_2.line_ids.filtered(lambda l: l.display_type == 'payment_term')).reconcile()
+            self.assertRecordValues(payment, [{'is_reconciled': True, 'l10n_mx_edi_cfdi_state': False}])
+            self.assertRecordValues(invoice_1, [{'payment_state': in_payment_state, 'l10n_mx_edi_update_payments_needed': True}])
+            self.assertRecordValues(invoice_2, [{'payment_state': in_payment_state, 'l10n_mx_edi_update_payments_needed': True}])
+            with self.with_mocked_pac_sign_success():
+                invoice_2.l10n_mx_edi_cfdi_invoice_try_update_payments()
+            self.assertRecordValues(payment, [{'l10n_mx_edi_cfdi_state': 'sent'}])
+
     def test_sw_finkok_CRP20211_usd_statement_in_mxn_journal_rounded_exchange_rate(self):
         """ Test rounding of exchange rate in payment cfdi of a statement line with foreign currency
         using Finkok, SW, or Solucion Factible does not trigger the CRP20211 error.
@@ -2832,6 +2946,60 @@ class TestCFDIInvoice(TestMxEdiCommon):
             report_values = invoice._l10n_mx_edi_get_extra_invoice_report_values()
             self.assertEqual(report_values['payment_method'], 'PPD')
             self.assertEqual(report_values['payment_way'], '99 - Por definir')
+
+    def test_update_payments_rate(self):
+        """ This tests make sure that the document generated after updating payments show the correct payment amount and exchange rate used """
+        date1 = fields.Date.today()
+        usd = self.setup_other_currency('USD', rates=[(date1, 0.05)])
+
+        bank_journal = self.env['account.journal'].create({
+            'name': 'Bank 123456',
+            'code': 'BNK67',
+            'type': 'bank',
+            'bank_acc_number': '123456',
+            'currency_id': usd.id,
+            'l10n_mx_edi_payment_method_id': self.env.ref('l10n_mx_edi.payment_method_transferencia').id,
+        })
+
+        with self.mx_external_setup(date1):
+            invoice = self._create_invoice(
+                date=date1,
+                currency_id=self.env.ref('base.MXN').id,
+                invoice_line_ids=[
+                    Command.create({
+                        'product_id': self.product.id,
+                        'price_unit': 300.00,
+                        'quantity': 1,
+                        'tax_ids': [],
+                    })],
+                l10n_mx_edi_payment_policy='PPD',
+            )
+            with self.with_mocked_pac_sign_success():
+                invoice._l10n_mx_edi_cfdi_invoice_try_send()
+            self.assertEqual(invoice.l10n_mx_edi_cfdi_state, 'sent', f'Error: {invoice.l10n_mx_edi_document_ids.message}')
+
+            st_line = self.env['account.bank.statement.line'].create({
+                'journal_id': bank_journal.id,
+                'amount': 15.00,
+                'foreign_currency_id': usd.id,
+                'date': date1,
+                'payment_ref': 'test'
+            })
+
+            # Reconcile bank transaction with invoice
+            wizard = self.env['bank.rec.widget'].with_context(default_st_line_id=st_line.id).new({})
+            receivable_line = invoice.line_ids.filtered(lambda l: l.account_id.account_type == 'asset_receivable')
+            wizard._action_add_new_amls(receivable_line)
+            wizard._action_validate()
+            with self.with_mocked_pac_sign_success():
+                invoice.l10n_mx_edi_cfdi_invoice_try_update_payments()
+            document = invoice.l10n_mx_edi_document_ids.filtered(lambda d: d.state == 'payment_sent')[0]
+            xml_tree = self.get_xml_tree_from_string(document.attachment_id.raw)
+            pago = xml_tree.xpath("//*[local-name()='Pago']")
+            self.assertEqual(len(pago), 1)
+            self.assertEqual(pago[0].get('Monto'), '15.00')
+            self.assertEqual(pago[0].get('MonedaP'), 'USD')
+            self.assertEqual(pago[0].get('TipoCambioP'), '20.000000')
 
     def test_cfdi_future_payment(self):
         """

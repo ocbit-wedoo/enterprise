@@ -8,13 +8,14 @@
 # lhmflexerp <lhm@flexerp.dk>, 2024
 # Martin Trigaux, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 18:48+0000\n"
-"PO-Revision-Date: 2026-03-20 14:22+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 14:17+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "delivery_fedex_rest/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
@@ -43,8 +44,8 @@ msgid ""
 "                                <br/>"
 msgstr ""
 "<b>Når din konto er oprettet, skal du gå til fanen \"Mine projekter\" og "
-"oprette et nyt API-projekt. Sørg for at vælge nedenstående indstillinger:</"
-"b>\n"
+"oprette et nyt API-projekt. Sørg for at vælge nedenstående indstillinger:</b>"
+"\n"
 "                                <br/>"
 
 #. module: delivery_fedex_rest
@@ -56,9 +57,10 @@ msgid ""
 "                                <br/>These certifications usually require "
 "that you contact the FedEx support team by email."
 msgstr ""
-"<b>Det sidste trin i oprettelsen af FedEx-forsendelseslabels er "
+"<b>Det sidste trin i oprettelsen af FedEx-fragtetiketter er "
 "certificeringsprocessen. Klik på \"Gå til API-certificering\", og følg de "
-"nødvendige trin for at certificere din konto til oprettelse af labels.</b>\n"
+"nødvendige trin for at certificere din konto til oprettelse af etiketter.</b>"
+"\n"
 "                                <br/>For disse certificeringer skal du som "
 "regel kontakte FedEx’ supportteam via e-mail."
 
@@ -105,7 +107,7 @@ msgstr ""
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__fedex_rest_developer_key
 msgid "API Key"
-msgstr "API nøgle"
+msgstr "API-nøgle"
 
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
@@ -124,13 +126,13 @@ msgid ""
 "Automated return label generation is not supported by FedEx for multi-"
 "package shipments. Please generate the return labels manually."
 msgstr ""
-"Automatisk generering af returlabels understøttes ikke af FedEx ved "
-"forsendelser med flere pakker. Opret venligst returlabels manuelt."
+"Automatisk generering af retursedler understøttes ikke af FedEx ved "
+"forsendelser med flere pakker. Opret venligst retursedler manuelt."
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_stock_package_type__package_carrier_type
 msgid "Carrier"
-msgstr "Fragtfirma"
+msgstr "Transportfirma"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields.selection,name:delivery_fedex_rest.selection__delivery_carrier__fedex_rest_residential_address__check
@@ -255,7 +257,7 @@ msgstr "FedEx-adgangstoken"
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__fedex_rest_account_number
 msgid "FedEx Account Number"
-msgstr "FedEx Kontonummer"
+msgstr "FedEx-kontonummer"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__fedex_rest_droppoff_type
@@ -440,7 +442,7 @@ msgstr "FedEx-kode"
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
 msgid "Fedex Configuration"
-msgstr "Fedex Konfiguration"
+msgstr "FedEx-konfiguration"
 
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
@@ -451,7 +453,7 @@ msgstr "FedEx-udviklerhjemmeside"
 #: model:delivery.carrier,name:delivery_fedex_rest.delivery_carrier_fedex_inter
 #: model:product.template,name:delivery_fedex_rest.product_product_delivery_fedex_inter_product_template
 msgid "Fedex International"
-msgstr "Fedex International"
+msgstr "FedEx International"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__fedex_rest_duty_payment
@@ -466,13 +468,13 @@ msgstr "FedEx-vægtenhed for rest"
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
 msgid "Fedex Tutorial"
-msgstr "Fedex Guide"
+msgstr "FedEx-vejledning"
 
 #. module: delivery_fedex_rest
 #: model:delivery.carrier,name:delivery_fedex_rest.delivery_carrier_fedex_us
 #: model:product.template,name:delivery_fedex_rest.product_product_delivery_fedex_us_product_template
 msgid "Fedex US"
-msgstr "Fedex US"
+msgstr "FedEx US"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,help:delivery_fedex_rest.field_delivery_carrier__fedex_rest_documentation_type
@@ -526,17 +528,17 @@ msgstr "Kilogram"
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__fedex_rest_label_file_type
 msgid "Label File Type"
-msgstr "Filtype for label"
+msgstr "Filtype for etiket"
 
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
 msgid "Label Format"
-msgstr "Mærkat Format"
+msgstr "Etiketformat"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__fedex_rest_label_stock_type
 msgid "Label Size"
-msgstr "Labelstørrelse"
+msgstr "Etiketstørrelse"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields.selection,name:delivery_fedex_rest.selection__delivery_carrier__fedex_rest_residential_address__never
@@ -606,7 +608,7 @@ msgstr "PNG"
 #. module: delivery_fedex_rest
 #: model_terms:ir.ui.view,arch_db:delivery_fedex_rest.view_delivery_carrier_form_with_provider_fedex
 msgid "Package Weight Unit"
-msgstr "Pakke vægtenhed"
+msgstr "Pakkens vægtenhed"
 
 #. module: delivery_fedex_rest
 #. odoo-python
@@ -632,7 +634,7 @@ msgstr "Udskriv PDF"
 #. module: delivery_fedex_rest
 #: model:ir.model,name:delivery_fedex_rest.model_uom_uom
 msgid "Product Unit of Measure"
-msgstr "Vareenhed"
+msgstr "Produktets måleenhed"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,field_description:delivery_fedex_rest.field_delivery_carrier__delivery_type
@@ -659,7 +661,7 @@ msgstr "Levering til hjemmet"
 #. odoo-python
 #: code:addons/delivery_fedex_rest/models/delivery_fedex.py:0
 msgid "Return Label"
-msgstr "Refunderings mærkat"
+msgstr "Returseddel"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields.selection,name:delivery_fedex_rest.selection__delivery_carrier__fedex_rest_label_stock_type__stock_4x6
@@ -731,7 +733,7 @@ msgstr "Forsendelse oprettet i FedEx"
 #. module: delivery_fedex_rest
 #: model:ir.model,name:delivery_fedex_rest.model_delivery_carrier
 msgid "Shipping Methods"
-msgstr "Leveringsmetoder"
+msgstr "Forsendelsesmetoder"
 
 #. module: delivery_fedex_rest
 #. odoo-python
@@ -797,8 +799,8 @@ msgid ""
 "When enabled, the customer will receive email notifications from FedEx about "
 "this shipment (when an email address is configured on the customer)"
 msgstr ""
-"Når denne indstilling er aktiveret, modtager kunden en e-mail fra FedEx om "
-"forsendelsen (hvis der er angivet en e-mailadresse for kunden)"
+"Når denne indstilling er aktiveret, modtager kunden e-mailnotifikationer fra "
+"FedEx om forsendelsen (hvis der er angivet en e-mailadresse for kunden)"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields,help:delivery_fedex_rest.field_delivery_carrier__fedex_rest_override_shipper_vat
@@ -820,7 +822,8 @@ msgstr ""
 #: code:addons/delivery_fedex_rest/models/fedex_request.py:0
 msgid "You must setup a client ID and secret on the carrier first"
 msgstr ""
-"Du skal først oprette et kunde-ID og en kundehemmelighed for leverandøren"
+"Du skal først oprette et kunde-ID og en klienthemmelighed for "
+"transportfirmaet"
 
 #. module: delivery_fedex_rest
 #: model:ir.model.fields.selection,name:delivery_fedex_rest.selection__delivery_carrier__fedex_rest_label_file_type__zplii

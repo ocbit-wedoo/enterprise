@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2026-05-18 19:59+0000\n"
+"PO-Revision-Date: 2026-06-20 09:37+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "delivery_iot/sv/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_iot
 #: model:ir.actions.report,print_report_name:delivery_iot.action_report_shipping_docs
@@ -43,7 +43,7 @@ msgstr ""
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Carrier Labels"
-msgstr ""
+msgstr "Etiketter från transportföretag"
 
 #. module: delivery_iot
 #: model:ir.model.fields,help:delivery_iot.field_choose_delivery_package__available_scale_ids
@@ -52,11 +52,13 @@ msgid ""
 "Choose the scales you want to use for this operation type. Those scales can "
 "be used to weigh the packages created."
 msgstr ""
+"Välj de vågar som du vill använda för den här typen av processer. Vågarna "
+"kan användas för att väga skapade paket."
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Connect Scale"
-msgstr ""
+msgstr "Anslut våg"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_choose_delivery_package
@@ -71,7 +73,7 @@ msgstr "Domännamn"
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Export Documents"
-msgstr ""
+msgstr "Exportera dokument"
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
@@ -123,12 +125,12 @@ msgstr ""
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_choose_delivery_package__manual_measurement
 msgid "Manual Measurement"
-msgstr ""
+msgstr "Manuella mätningar"
 
 #. module: delivery_iot
 #: model:ir.model.fields,help:delivery_iot.field_choose_delivery_package__manual_measurement
 msgid "Manually read the measurement from the device"
-msgstr ""
+msgstr "Läs av mätningar från enheten manuellt"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_iot_device__picking_type_ids
@@ -144,7 +146,7 @@ msgstr "Plocktyp"
 #. odoo-javascript
 #: code:addons/delivery_iot/static/src/field_many2one_iot_scale.xml:0
 msgid "Read weight"
-msgstr ""
+msgstr "Läs av vikt"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_ir_actions_report
@@ -176,12 +178,12 @@ msgstr "Vågar"
 #. module: delivery_iot
 #: model:ir.actions.report,name:delivery_iot.action_report_shipping_docs
 msgid "Shipping Documents"
-msgstr ""
+msgstr "Fraktdokument"
 
 #. module: delivery_iot
 #: model:ir.actions.report,name:delivery_iot.action_report_shipping_labels
 msgid "Shipping Labels"
-msgstr ""
+msgstr "Fraktetiketter"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_stock_picking

@@ -68,6 +68,7 @@ class Task(models.Model):
                     'type': "notification",
                 },
             }
+        super()._onchange_project_id()
 
     def _set_allocated_hours_for_tasks(self):
         super(Task, self.filtered(lambda task: not task.allow_timesheets))._set_allocated_hours_for_tasks()

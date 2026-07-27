@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_payroll_account
+# * hr_payroll_account
 #
 # Translators:
 # Ejner Sønniksen <ejner@vkdata.dk>, 2024
@@ -10,20 +10,22 @@
 # Mads Søndergaard, 2024
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Kira Petersen, 2025
-#
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Kira Petersen, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"PO-Revision-Date: 2026-06-24 15:15+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
+"hr_payroll_account/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_bank_statement_line__payslip_count
@@ -42,12 +44,12 @@ msgid ""
 "                        <span class=\"o_stat_text\" invisible=\"move_state !"
 "= 'cancel'\">Journal Entry <br/>(Canceled)</span>"
 msgstr ""
-"<span class=\"o_stat_text\" invisible=\"move_state != 'draft'\">Journalpost "
-"<br/>(Kladde)</span>\n"
-"                        <span class=\"o_stat_text\" invisible=\"move_state !"
-"= 'posted'\">Journalpost <br/>(Bogført)</span>\n"
-"                        <span class=\"o_stat_text\" invisible=\"move_state !"
-"= 'cancel'\">Journalpost <br/>(Annulleret)</span>"
+"<span class=\"o_stat_text\" invisible=\"move_state != 'draft'\">"
+"Journalpostering <br/>(Kladde)</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"move_state "
+"!= 'posted'\">Journalpostering <br/>(Bogført)</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"move_state "
+"!= 'cancel'\">Journalpostering <br/>(Annulleret)</span>"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.view_move_form_inherit
@@ -57,7 +59,7 @@ msgstr "<span class=\"o_stat_text\">Lønseddel</span>"
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_chart_template
 msgid "Account Chart Template"
-msgstr "Kontoplansskabelon"
+msgstr "Kontoplanskabelon"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -69,25 +71,25 @@ msgstr "Lønopgørelse for husleje"
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_contract_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_salary_rule_view_form
 msgid "Accounting"
-msgstr "Regnskab"
+msgstr "Bogføring"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__move_id
 msgid "Accounting Entry"
-msgstr "Regnskabsposteringer"
+msgstr "Postering"
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "Adjustment Entry"
-msgstr "Justerings indtastning"
+msgstr "Justeringspostering"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_contract__analytic_account_id
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_contract_history__analytic_account_id
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__analytic_account_id
 msgid "Analytic Account"
-msgstr "Analysekonto"
+msgstr "Omkostningssted"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_run_view_form
@@ -122,7 +124,7 @@ msgstr "Virksomheder"
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_contract_history
@@ -133,7 +135,7 @@ msgstr "Kontrakthistorik"
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_run_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_view_form
 msgid "Create Draft Entry"
-msgstr "Opret kladde postering"
+msgstr "Opret kladdepostering"
 
 #. module: hr_payroll_account
 #: model_terms:ir.actions.act_window,help:hr_payroll_account.action_res_partner_bank_account_form
@@ -149,23 +151,23 @@ msgstr "Kreditkonto"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_line__credit_tag_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__credit_tag_ids
 msgid "Credit Tax Grids"
-msgstr "Kreditskatteoversigt"
+msgstr "Kreditskattetabeller"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__date
 msgid "Date Account"
-msgstr "Konto dato"
+msgstr "Kontodato"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__account_debit
 msgid "Debit Account"
-msgstr "Debit konto"
+msgstr "Debitkonto"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_line__debit_tag_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__debit_tag_ids
 msgid "Debit Tax Grids"
-msgstr "Debitskatteoversigt"
+msgstr "Debitskattetabeller"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_contract
@@ -186,7 +188,7 @@ msgid ""
 "but also disable single payment generations."
 msgstr ""
 "Aktivér denne indstilling for at samle alle bogføringslinjer fra samme "
-"periode til én enkelt kontobevægelseslinje. Det anonymiserer "
+"periode i én enkelt kontobevægelseslinje. Det anonymiserer "
 "bogføringsposterne, men betyder samtidig, at individuelle betalinger ikke "
 "længere genereres."
 
@@ -198,7 +200,7 @@ msgid ""
 "salary attachments for instance."
 msgstr ""
 "Aktivér denne indstilling for at opdele bogføringen af denne regel efter "
-"navnet på lønlinjen. Det kan f.eks. være nyttigt ved fradrag og refusioner "
+"navnet på lønlinjen. Det kan f.eks. være nyttigt ved fradrag, refusioner "
 "eller lønindeholdelser."
 
 #. module: hr_payroll_account
@@ -206,13 +208,12 @@ msgstr ""
 msgid ""
 "From here you can manage all bank accounts linked to you and your contacts."
 msgstr ""
-"Herfra kan du administrere alle bankkonti forbundet til dig og dine "
-"kontakter."
+"Herfra kan du administrere alle bankkonti knyttet til dig og dine kontakter."
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payroll_payment_report_wizard
 msgid "HR Payroll Payment Report Wizard"
-msgstr "Guide til betalingsrapporter relateret til lønudbetalinger"
+msgstr "Assistent til betalingsrapporter relateret til lønudbetalinger"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_setup_bank_manual_config__has_alt_bank_account
@@ -248,33 +249,33 @@ msgstr "Journal"
 #: code:addons/hr_payroll_account/models/hr_payslip_run.py:0
 #: model:ir.model,name:hr_payroll_account.model_account_move
 msgid "Journal Entry"
-msgstr "Journalbilag"
+msgstr "Journalpostering"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,help:hr_payroll_account.field_hr_payslip__date
 msgid "Keep empty to use the period of the validation(Payslip) date."
-msgstr "Hold tom for at bruge perioden fra valideringsdatoen (Lønseddel)."
+msgstr "Lad stå tomt for at bruge perioden fra valideringsdatoen (lønseddel)."
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_run__move_id
 msgid "Move"
-msgstr "Bevægelse"
+msgstr "Bogføringspost"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_run__move_state
 msgid "Move State"
-msgstr "Bevægelsesstatus"
+msgstr "Status for bogføringspost"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__not_computed_in_net
 msgid "Not computed in net accountably"
-msgstr "Beregnes ikke i net regnskabsmæssigt"
+msgstr "Indgår ikke i nettoregnskabet"
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "One of the contract for these payslips has no structure type."
-msgstr "En af kontrakterne for disse lønsedler har ingen struktur type."
+msgstr "En af kontrakterne for disse lønsedler har ingen strukturtype."
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_payment_register
@@ -301,7 +302,7 @@ msgstr "Betalinger"
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payslip_run
 msgid "Payslip Batches"
-msgstr "Lønseddel batches"
+msgstr "Lønkørsler"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payslip_line
@@ -312,7 +313,7 @@ msgstr "Lønseddellinje"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_bank_statement_line__payslip_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_move__payslip_ids
 msgid "Payslips"
-msgstr "Lønseddel"
+msgstr "Lønsedler"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -330,7 +331,7 @@ msgstr "Lønninger"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payroll_structure__journal_id
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__journal_id
 msgid "Salary Journal"
-msgstr "Løn journal"
+msgstr "Lønjournal"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_salary_rule
@@ -340,7 +341,7 @@ msgstr "Lønregel"
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payroll_structure
 msgid "Salary Structure"
-msgstr "Løn struktur"
+msgstr "Lønstruktur"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__split_move_lines
@@ -355,8 +356,8 @@ msgid ""
 "into an accounting journal entry.They will be applied on the credit account "
 "line in the journal entry."
 msgstr ""
-"Tags, der er knyttet til denne linje, påvirker regnskabsrapporterne, når de "
-"overføres til en postering. De anvendes på kreditkontolinjen i posteringen."
+"Tags tilknyttet denne linje påvirker regnskabsrapporterne, når de overføres "
+"til posteringen. De anvendes på kreditlinjen i posteringen."
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,help:hr_payroll_account.field_hr_payslip_line__debit_tag_ids
@@ -366,16 +367,15 @@ msgid ""
 "into an accounting journal entry.They will be applied on the debit account "
 "line in the journal entry."
 msgstr ""
-"Tags, der er knyttet til denne linje, påvirker regnskabsrapporterne, når de "
-"overføres til en postering. De anvendes på debitkontolinjen i posteringen."
+"Tags knyttet til denne linje påvirker regnskabsrapporterne ved overførsel "
+"til posteringen. De anvendes på debetlinjen i posteringen."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid ""
 "The Expense Journal \"%s\" has not properly configured the default Account!"
-msgstr ""
-"Udgiftsjournalen \"%s\" har ikke en korrekt konfigureret standardkonto!"
+msgstr "Udgiftsjournalen \"%s\" har ikke en korrekt konfigureret standardkonto!"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -397,10 +397,10 @@ msgid ""
 "the accounting. For example, if you want to display the value of your "
 "representation fees, you can check this field."
 msgstr ""
-"Dette felt lader dig slette værdien for denne regel i \"Samlet løn\" reglen "
-"på regnskabs niveau, for eksplicit at vise værdien af denne regel i "
-"regnskabet. For eksempel, hvis du vil vise værdien på dine "
-"repræsentationsgebyrer, kan du markere dette felt."
+"Dette felt gør det muligt at fjerne værdien for denne regel i \"Nettoløn\"-"
+"reglen på regnskabsniveau, så værdien af denne regel vises eksplicit i "
+"regnskabet. Du kan for eksempel markere feltet, hvis du ønsker at vise "
+"værdien af dine repræsentationsgebyrer."
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.view_partner_bank_form_inherit_hr_payroll_account

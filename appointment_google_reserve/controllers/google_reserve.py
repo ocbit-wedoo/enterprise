@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from werkzeug.exceptions import BadRequest, Forbidden
 
 from odoo.http import Controller, request, route
-from odoo.tools import consteq, email_normalize, hmac
+from odoo.tools import consteq, email_normalize, formataddr, hmac
 
 
 class GoogleReserveController(Controller):
@@ -219,8 +219,9 @@ class GoogleReserveController(Controller):
 
         if booking_lines or staff_user:
             customer_email = email_normalize(user_info['email'])
+            customer_name = ' '.join(filter(None, (user_info.get('given_name'), user_info.get('family_name'))))
             customer = request.env['mail.thread'].sudo()._mail_find_partner_from_emails(
-                [customer_email],
+                [formataddr((customer_name, customer_email)) if customer_email else customer_email],
                 force_create=True
             )
             if customer:

@@ -15,13 +15,14 @@
 # Wil Odoo, 2025
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-03-21 18:31+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:25+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "appointment/da/>\n"
 "Language: da\n"
@@ -29,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -91,19 +92,19 @@ msgstr "%(appointment_name)s med %(partner_name)s"
 #. odoo-python
 #: code:addons/appointment/models/appointment_type.py:0
 msgid "%(attendee_name)s - %(appointment_name)s Booking"
-msgstr "%(attendee_name)s - %(appointment_name)s Booking"
+msgstr "%(attendee_name)s – %(appointment_name)s Booking"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/controllers/calendar_view.py:0
 msgid "%(name)s - Let's meet anytime"
-msgstr "%(name)s - Lad os mødes når som helst"
+msgstr "%(name)s – Vi kan mødes når som helst"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/controllers/calendar_view.py:0
 msgid "%(name)s - My availabilities"
-msgstr "%(name)s - Mine tilgængeligheder"
+msgstr "%(name)s – Mine ledige tider"
 
 #. module: appointment
 #. odoo-python
@@ -116,7 +117,7 @@ msgstr "%s (kopi)"
 #. odoo-python
 #: code:addons/appointment/models/appointment_type.py:0
 msgid "%s - Let's meet"
-msgstr "%s - Lad os mødes"
+msgstr "%s – Lad os mødes"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -127,7 +128,7 @@ msgstr "(Samlet:"
 #. odoo-python
 #: code:addons/appointment/controllers/calendar.py:0
 msgid ", All Day"
-msgstr ", Hele Dagen"
+msgstr ", hele dagen"
 
 #. module: appointment
 #. odoo-javascript
@@ -736,7 +737,8 @@ msgid ""
 "title=\"Create custom questions in backend\"/>Add Custom Questions"
 msgstr ""
 "<i class=\"fa fa-pencil me-2\" role=\"img\" aria-label=\"Edit\" "
-"title=\"Create custom questions in backend\"/>Tilføj brugerspørgsmål"
+"title=\"Create custom questions in backend\"/>Tilføj brugerdefinerede "
+"spørgsmål"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
@@ -769,7 +771,7 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<i class=\"fa fa-times text-danger me-3\"/>Appointment Cancelled"
-msgstr "<i class=\"fa fa-times text-danger me-3\"/>Aftale annulleret"
+msgstr "<i class=\"fa fa-times text-danger me-3\"/>Aftale aflyst"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_details
@@ -820,7 +822,7 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_date
 msgid "<small class=\"text-uppercase text-muted\">Date &amp; time</small>"
-msgstr "<small class=\"text-uppercase text-muted\">Dato &amp; tid</small>"
+msgstr "<small class=\"text-uppercase text-muted\">Dato og tid</small>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_details
@@ -830,12 +832,12 @@ msgstr "<small class=\"text-uppercase text-muted\">Møde detaljer</small>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<small>Add to Google Agenda</small>"
-msgstr "<small>Tilføj til Google Agenda</small>"
+msgstr "<small>Føj til Google Agenda</small>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<small>Add to iCal/Outlook</small>"
-msgstr "<small>Tilføj til iCal/Outlook</small>"
+msgstr "<small>Føj til iCal/Outlook</small>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -931,7 +933,7 @@ msgstr "<span> timer</span>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "<span>Add more details about you</span>"
-msgstr "<span>Tilføj flere detaljer om dig</span>"
+msgstr "<span>Tilføj flere oplysninger om dig</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -946,7 +948,7 @@ msgstr "<span>Online</span>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
 msgid "<span>people</span>"
-msgstr "<span>mennesker</span>"
+msgstr "<span>personer</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -959,8 +961,8 @@ msgid ""
 "                                            seconds before you."
 msgstr ""
 "<strong>Booking mislykkedes!</strong>\n"
-"                                            Det valgte tidsinterval er ikke "
-"længere ledigt.\n"
+"                                            Den valgte tid er ikke længere "
+"ledig.\n"
 "                                            En anden har booket den samme "
 "tid nogle\n"
 "                                            sekunder før dig."
@@ -975,8 +977,7 @@ msgid ""
 "another meeting with us at that date."
 msgstr ""
 "<strong>Booking mislykkedes!</strong>\n"
-"                                            Det valgte tidsinterval er ikke "
-"ledigt.\n"
+"                                            Den valgte tid er ikke ledig.\n"
 "                                            Det ser ud til, at du allerede "
 "har en aftale med os på den dato."
 
@@ -988,7 +989,7 @@ msgstr "<strong>Booket til: </strong>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 msgid "<strong>Contact Information</strong>"
-msgstr "<strong>Kontaktinformation</strong>"
+msgstr "<strong>Kontaktoplysninger</strong>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
@@ -1008,7 +1009,7 @@ msgstr "<strong>Telefon: </strong>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 msgid "<strong>Start Date: </strong>"
-msgstr "<strong>Start dato: </strong>"
+msgstr "<strong>Startdato: </strong>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
@@ -1018,7 +1019,7 @@ msgstr "<strong>Status: </strong>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 msgid "<strong>Stop Date: </strong>"
-msgstr "<strong>Stop Dato: </strong>"
+msgstr "<strong>Slutdato: </strong>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
@@ -1055,12 +1056,12 @@ msgstr ""
 msgid ""
 "A punctual appointment type should be limited between a start and end "
 "datetime."
-msgstr "En punktlig aftale skal være begrænset af en start- og en slutdato."
+msgstr "En enkeltstående aftale skal have et klart start- og sluttidspunkt."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Accept"
-msgstr "Godkend"
+msgstr "Acceptér"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__access_token
@@ -1100,17 +1101,17 @@ msgstr "Aktiviteter"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Aktivitet undtagelse markering"
+msgstr "Markering af undtagelsesaktivitet"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_state
 msgid "Activity State"
-msgstr "Aktivitetstilstand"
+msgstr "Aktivitetsstatus"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "Aktivitetstype ikon"
+msgstr "Aktivitetstypeikon"
 
 #. module: appointment
 #. odoo-javascript
@@ -1125,7 +1126,7 @@ msgstr "Tilføj en mere"
 #: code:addons/appointment/static/src/views/list/list_renderer.js:0
 #: code:addons/appointment/static/src/views/list/list_renderer.xml:0
 msgid "Add Closing Day(s)"
-msgstr "Tilføje lukkedag(e)"
+msgstr "Tilføj lukkedag(e)"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -1136,30 +1137,30 @@ msgstr "Tilføj gæster"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_user
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated_card
 msgid "Add a function here..."
-msgstr "Tilføj en funktion her..."
+msgstr "Tilføj en funktion her ..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_user
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated_card
 msgid "Add a resource description here..."
-msgstr "Tilføj en ressourcebeskrivelse her..."
+msgstr "Tilføj en ressourcebeskrivelse her ..."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/appointment_plugin.js:0
 #: code:addons/appointment/static/src/js/wysiwyg.js:0
 msgid "Add a specific appointment"
-msgstr "Tilføj en specifik aftale."
+msgstr "Tilføj en specifik aftale"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid "Add an intro message here..."
-msgstr "Tilføj en introbesked her..."
+msgstr "Tilføj en introduktionsbesked her ..."
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_manage_leaves
 msgid "Add or remove leaves from appointments"
-msgstr "Tilføj eller fjern ferie/fri fra aftaler"
+msgstr "Tilføj eller fjern fravær/ferie fra aftaler"
 
 #. module: appointment
 #: model:res.groups,name:appointment.group_appointment_manager
@@ -1216,7 +1217,8 @@ msgstr "En aftaletype er nødvendig for at få linket."
 #. odoo-python
 #: code:addons/appointment/models/appointment_slot.py:0
 msgid "An unique type slot should have a start and end datetime"
-msgstr "En entydig tidsblok skal have en start- og slutdato"
+msgstr ""
+"En enkeltstående, unik tidsblok skal have et klart start- og sluttidspunkt"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer__name
@@ -1231,7 +1233,7 @@ msgstr "Svar"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_answer_input_view_tree
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Answer Breakdown"
-msgstr "Svar Opdeling"
+msgstr "Svaroversigt"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_answer_input_view_form
@@ -1266,12 +1268,12 @@ msgstr "Aftale"
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_answer_input
 msgid "Appointment Answer Inputs"
-msgstr "Indtastning af svar vdr. aftaler"
+msgstr "Indtastning af svar vedr. aftaler"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_answer_input_ids
 msgid "Appointment Answers"
-msgstr "Aftale svar"
+msgstr "Aftalesvar"
 
 #. module: appointment
 #: model:mail.message.subtype,description:appointment.mt_calendar_event_booked
@@ -1305,12 +1307,12 @@ msgstr "Aftale annulleret: {{ object.appointment_type_id.name }}"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
 msgid "Appointment Details"
-msgstr "Aftale detaljer"
+msgstr "Oplysninger om aftale"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_duration_formatted
 msgid "Appointment Duration Formatted "
-msgstr "Formateret aftalevarighed"
+msgstr "Aftalevarighed formateret "
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__appointment_duration_formatted
@@ -1321,7 +1323,7 @@ msgstr "Aftalevarighed formateret i ord"
 #. odoo-python
 #: code:addons/appointment/models/appointment_type.py:0
 msgid "Appointment Duration should be higher than 0.00."
-msgstr "Aftalevarighed bør være højere end 0,00."
+msgstr "Aftalevarighed bør være højere end 0:00."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_invite_id
@@ -1331,17 +1333,17 @@ msgstr "Aftaleinvitation"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_search
 msgid "Appointment Invitation Links"
-msgstr "Aftaleinvitationslinks"
+msgstr "Link til booking af aftale"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_tree_invitation
 msgid "Appointment Invitations"
-msgstr "Aftaleinvitationer"
+msgstr "Invitation til booking af aftale"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_invite
 msgid "Appointment Invite"
-msgstr "Aftaleinvitation"
+msgstr "Invitation til booking af aftale"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__meeting_ids
@@ -1361,24 +1363,24 @@ msgstr "Svar på mødespørgsmål"
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_question
 msgid "Appointment Questions"
-msgstr "Aftale spørgsmål"
+msgstr "Aftalespørgsmål"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_resource
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__appointment_resource_id
 msgid "Appointment Resource"
-msgstr "Aftale ressource"
+msgstr "Aftaleressource"
 
 #. module: appointment
 #: model:ir.actions.server,name:appointment.resource_calendar_leaves_action_show_appointment_resources
 msgid "Appointment Resource Leaves"
-msgstr "Aftaleressource ikke tilgængelig"
+msgstr "Aftaleressource ikke ledig"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_resource_ids
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_search
 msgid "Appointment Resources"
-msgstr "Aftale ressourcer"
+msgstr "Aftaleressourcer"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_resource_action
@@ -1386,7 +1388,8 @@ msgid ""
 "Appointment Resources are the places or equipment people can book\n"
 "                (e.g. Tables, Tennis Courts, Meeting Rooms, ...)"
 msgstr ""
-"Aftaleressourcer er de steder eller det udstyr, som kan reserveres\n"
+"Aftaleressourcer omfatter de lokationer eller det udstyr, som kan "
+"reserveres\n"
 "                (f.eks. borde, tennisbaner, mødelokaler osv.)"
 
 #. module: appointment
@@ -1397,7 +1400,7 @@ msgstr "Aftalestatus"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__name
 msgid "Appointment Title"
-msgstr "Aftale titel"
+msgstr "Aftaletitel"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_type
@@ -1409,13 +1412,13 @@ msgstr "Aftale titel"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_tree
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_search
 msgid "Appointment Type"
-msgstr "Aftale type"
+msgstr "Aftaletype"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__appointment_type_ids
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_search
 msgid "Appointment Types"
-msgstr "Aftale typer"
+msgstr "Aftaletyper"
 
 #. module: appointment
 #. odoo-python
@@ -1433,27 +1436,27 @@ msgstr "Aftale aflyst af: %(partners)s"
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Appointment re-booked"
-msgstr "Aftale gen-booket"
+msgstr "Aftale genbooket"
 
 #. module: appointment
 #: model:mail.template,name:appointment.appointment_booked_mail_template
 msgid "Appointment: Appointment Booked"
-msgstr "Aftale: Aftale booket"
+msgstr "Aftale: aftale booket"
 
 #. module: appointment
 #: model:mail.template,name:appointment.appointment_canceled_mail_template
 msgid "Appointment: Appointment Canceled"
-msgstr "Aftale: Aftale annulleret"
+msgstr "Aftale: aftale annulleret"
 
 #. module: appointment
 #: model:mail.template,name:appointment.attendee_invitation_mail_template
 msgid "Appointment: Attendee Invitation"
-msgstr "Aftale: Deltagerinvitation"
+msgstr "Aftale: deltagerinvitation"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_slot
 msgid "Appointment: Time Slot"
-msgstr "Aftale: Tidsrum"
+msgstr "Aftale: tidsblok"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.appointment_type_action
@@ -1497,12 +1500,12 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__resources_choice
 msgid "Assign to"
-msgstr "Tildel til"
+msgstr "Tildel"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__assign_method
 msgid "Assignment Method"
-msgstr "Tildelings Metode"
+msgstr "Tildelingsmetode"
 
 #. module: appointment
 #. odoo-python
@@ -1561,22 +1564,22 @@ msgstr "Avatar"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__avatar_1024
 msgid "Avatar 1024"
-msgstr "Profilikon 1024"
+msgstr "Avatar 1024"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__avatar_128
 msgid "Avatar 128"
-msgstr "Profilikon 128"
+msgstr "Avatar 128"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__avatar_256
 msgid "Avatar 256"
-msgstr "Profilikon 256"
+msgstr "Avatar 256"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__avatar_512
 msgid "Avatar 512"
-msgstr "Profilikon 512"
+msgstr "Avatar 512"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__image_1920
@@ -1598,7 +1601,7 @@ msgstr "Book en ressource"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Book a resource for a specific time slot (e.g. tennis court, etc.)"
-msgstr "Reservér en ressource til en bestemt tidsblok (f.eks. en tennisbane)"
+msgstr "Book en ressource til en bestemt tidsblok (f.eks. en tennisbane)"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__calendar_event__appointment_status__booked
@@ -1626,22 +1629,22 @@ msgstr "Booking"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 msgid "Booking Details"
-msgstr "Booking Detaljer"
+msgstr "Bookingoplysninger"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__booked_mail_template_id
 msgid "Booking Email"
-msgstr "Booking E-mail"
+msgstr "Bookingmail"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__event_stop
 msgid "Booking End"
-msgstr "Booking afslutning"
+msgstr "Booking afsluttet"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__booking_line_ids
 msgid "Booking Lines"
-msgstr "Booking Linjer"
+msgstr "Bookinglinjer"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
@@ -1651,7 +1654,7 @@ msgstr "Bookingnavn"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__event_start
 msgid "Booking Start"
-msgstr "Booking start"
+msgstr "Starttidspunkt for booking"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -1667,13 +1670,13 @@ msgstr "CC til"
 #. module: appointment
 #: model:ir.model,name:appointment.model_calendar_attendee
 msgid "Calendar Attendee Information"
-msgstr "Oplysninger på kalenderdeltagere "
+msgstr "Oplysninger om kalenderdeltagere"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_calendar_event
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer_input__calendar_event_id
 msgid "Calendar Event"
-msgstr "Kalender begivenhed"
+msgstr "Kalenderbegivenhed"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
@@ -1743,7 +1746,7 @@ msgstr "Kategori"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__checkbox
 msgid "Checkboxes (multiple answers)"
-msgstr "Afkrydsnings bokse (flere svar)"
+msgstr "Afkrydsningsfelter (flere svar)"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__calendar_event__appointment_status__attended
@@ -1793,7 +1796,7 @@ msgstr "Konfiguration"
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid "Configure"
-msgstr "Konfigurer"
+msgstr "Konfigurér"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_invite_action
@@ -1820,7 +1823,7 @@ msgstr "Bekræft aftale"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__message_confirmation
 msgid "Confirmation Message"
-msgstr "Bekræftelses besked"
+msgstr "Bekræftelsesmeddelelse"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -1847,7 +1850,7 @@ msgstr "Kontakt"
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Contact Details"
-msgstr "Kontakt detaljer"
+msgstr "Kontaktoplysninger"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_partner_ids
@@ -1970,7 +1973,7 @@ msgstr "Dato"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_progress_bar
 msgid "Date &amp; time"
-msgstr "Dato &amp; tid"
+msgstr "Dato og tid"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
@@ -1979,9 +1982,8 @@ msgstr "Datoer"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
-#, fuzzy
 msgid "Decline"
-msgstr "Afslået"
+msgstr "Afvis"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -2006,13 +2008,12 @@ msgid ""
 "        defining non-recurring time slot (e.g. 10th of April 2021 from 10 to "
 "11 am) from its calendar."
 msgstr ""
-"Definerer tidsbloktypen. Den almindelige tidsbloktype er standard og "
-"anvendes til\n"
+"Definerer tidsbloktypen. Standardtidsbloktypen anvendes til\n"
 "        aftaletyper, der gentages regelmæssigt, for eksempel lægeaftaler.\n"
 "        Engangstypen bruges kun, når en bruger opretter en brugerdefineret "
 "aftaletype for en kunde ved at\n"
-"        angive et enkeltstående tidsrum (f.eks. den 10. april 2021 fra kl. "
-"10 til 11) direkte fra sin kalender."
+"        angive et enkeltstående, unikt tidsrum (f.eks. den 10. april 2021 "
+"fra kl. 10 til 11) direkte fra sin kalender."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__event_videocall_source
@@ -2020,7 +2021,7 @@ msgid ""
 "Defines the type of video call link that will be used for the generated "
 "events. Keep it empty to prevent generating meeting url."
 msgstr ""
-"Definerer typen af videoopkaldslink, der anvendes ved oprettelse af "
+"Definerer typen af link til videoopkald, der anvendes ved oprettelse af "
 "arrangementer. Lad feltet stå tomt for at undgå, at der genereres en møde-"
 "URL."
 
@@ -2038,7 +2039,7 @@ msgstr "Tandpleje"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Describe what you need"
-msgstr "Beskriv hvad du har behov for"
+msgstr "Beskriv, hvad du har behov for"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__description
@@ -2058,8 +2059,8 @@ msgid ""
 "Details<span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-muted "
 "fs-5\"/>"
 msgstr ""
-"Detaljer<span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-muted "
-"fs-5\"/>"
+"Detaljer<span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-muted fs-"
+"5\"/>"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_slot__allday
@@ -2067,7 +2068,7 @@ msgid ""
 "Determine if the slot englobe the whole day, mainly used for unique slot type"
 msgstr ""
 "Angiv, om tidsblokken gælder for hele dagen (bruges primært til "
-"engangstidsblokke)"
+"enkeltstående, unikke tidsblokke)"
 
 #. module: appointment
 #. odoo-javascript
@@ -2089,7 +2090,7 @@ msgstr "Kassér"
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__display_name
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__avatars_display
@@ -2116,7 +2117,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Do you have any dietary preferences or restrictions ?"
-msgstr "Har du nogen kostpræferencer eller begrænsninger?"
+msgstr "Har du specifikke allergier eller kostrestriktioner?"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__select
@@ -2134,27 +2135,29 @@ msgstr "Varighed"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/gantt/gantt_renderer.js:0
 msgid "Edit"
-msgstr "Rediger"
+msgstr "Redigér"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "Email*"
-msgstr "Email*"
+msgstr "E-mail*"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_manage_leaves__leave_end_dt
 msgid "End Date"
-msgstr "Slut dato"
+msgstr "Slutdato"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__end_datetime
 msgid "End Datetime"
-msgstr "Slutdato"
+msgstr "Start- og sluttidspunkt"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_slot__end_datetime
 msgid "End datetime for unique slot type management"
-msgstr "Slutdato og -tidspunkt for administration af engangstidsbloktyper"
+msgstr ""
+"Start- og sluttidspunkt for administration af enkeltstående, unikke "
+"tidsblokke"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__end_hour
@@ -2164,12 +2167,12 @@ msgstr "Sluttid"
 #. module: appointment
 #: model:ir.model,name:appointment.model_calendar_alarm
 msgid "Event Alarm"
-msgstr "Arrangements notifikation"
+msgstr "Notifikation om arrangement"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 msgid "Event Details"
-msgstr "Aftale Detaljer"
+msgstr "Oplysninger om aftale"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -2179,13 +2182,13 @@ msgstr "Hver"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
 msgid "Extra Comments..."
-msgstr "Ekstra kommentarer..."
+msgstr "Yderligere kommentarer ..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form_custom_share
 msgid "Extra Message on Confirmation"
-msgstr "Ekstra besked på bekræftelse"
+msgstr "Yderligere besked ved bekræftelse"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_confirmation
@@ -2200,7 +2203,7 @@ msgstr "Filstreaming-hjælpermodel til controllere"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.portal_my_home_appointment
 msgid "Follow, reschedule or cancel your appointments"
-msgstr "Følg, ændre eller aflys dine bookinger"
+msgstr "Følg, ændr eller aflys dine aftaler"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__message_follower_ids
@@ -2210,7 +2213,7 @@ msgstr "Følgere"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Skrifttype awesome icon f.eks. fa-opgaver"
+msgstr "FontAwesome-ikon, f.eks. fa-opgaver"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -2231,7 +2234,7 @@ msgstr "Fra"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__avatars_display
 msgid "Front-End Display"
-msgstr "Front-end visning"
+msgstr "Front-end-visning"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
@@ -2242,7 +2245,7 @@ msgstr "Fulde navn*"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Get Share Link"
-msgstr "Få del link"
+msgstr "Få del-link"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_invite__suggested_staff_user_ids
@@ -2279,7 +2282,7 @@ msgstr "Gæster"
 #. module: appointment
 #: model:ir.model,name:appointment.model_ir_http
 msgid "HTTP Routing"
-msgstr "HTTP Routing"
+msgstr "HTTP-routing"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__has_message
@@ -2337,18 +2340,19 @@ msgstr "Ikon for uventet aktivitet."
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Hvis afkrydset, kræver nye beskeder din opmærksomhed "
+msgstr "Hvis dette felt er markeret, kræver nye beskeder din opmærksomhed."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_error
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Hvis afkrydset har nogle beskeder en leveringsfejl"
+msgstr ""
+"Hvis dette felt er markeret, indeholder nogle beskeder en leveringsfejl."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "If empty, Odoo will not send emails"
-msgstr "Hvis tomt, sender Odoo ingen e-mails"
+msgstr "Hvis feltet er tomt, sender Odoo ingen e-mails"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_slot__restrict_to_resource_ids
@@ -2375,7 +2379,7 @@ msgid ""
 "be used"
 msgstr ""
 "Hvis feltet er tomt, benyttes den arbejdsplan, som er tilknyttet ressourcen "
-"via virksomheden."
+"via virksomheden"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__booked_mail_template_id
@@ -2383,7 +2387,7 @@ msgid ""
 "If set an email will be sent to the customer when the appointment is booked."
 msgstr ""
 "Hvis denne indstilling er aktiveret, sendes en e-mail til kunden, når "
-"aftalen er booket."
+"aftalen bookes."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__canceled_mail_template_id
@@ -2400,7 +2404,7 @@ msgid ""
 "If the active field is set to False, it will allow you to hide the resource "
 "record without removing it."
 msgstr ""
-"Hvis det aktive felt er sat til Falsk, vil du kunne gemme ressourcen uden at "
+"Hvis det aktive felt er sat til \"falsk\", kan du gemme ressourcen uden at "
 "fjerne den."
 
 #. module: appointment
@@ -2409,8 +2413,8 @@ msgid ""
 "If the active field is set to false, it will allow you to hide the event "
 "alarm information without removing it."
 msgstr ""
-"Hvis det aktive felt er sat til sand, vil det give dig mulighed for at "
-"skjule begivenheds alarmen uden at fjerne den."
+"Hvis det aktive felt er sat til \"falsk\", kan påmindelsen om begivenheden "
+"skjules uden at blive slettet."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__image_1920
@@ -2465,7 +2469,7 @@ msgstr "Introduktionsbesked"
 #: code:addons/appointment/static/src/js/appointment_form.js:0
 #: code:addons/appointment/static/src/js/appointment_validation.js:0
 msgid "Invalid Email"
-msgstr "Ugyldig e-mail."
+msgstr "Ugyldig e-mail"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_invite_ids
@@ -2497,7 +2501,7 @@ msgstr "Er følger"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__is_published
 msgid "Is Published"
-msgstr "Er udgivet"
+msgstr "Er offentliggjort"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -2510,8 +2514,8 @@ msgid ""
 "Keep empty to allow visitors from any country, otherwise you only allow "
 "visitors from selected countries"
 msgstr ""
-"Lad stå tom for at tillade besøgende fra alle lande. Ellers tillader du kun "
-"besøgende fra udvalgte lande"
+"Hvis du lader feltet stå tomt, kan besøgende fra alle lande få adgang. "
+"Udfylder du det, begrænses adgangen til de valgte lande"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer__write_uid
@@ -2565,13 +2569,13 @@ msgstr "Linkgenerator"
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__book_url
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid "Link URL"
-msgstr "Link URL"
+msgstr "Link-URL"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_invite/appointment_invite_copy_close.js:0
 msgid "Link copied to clipboard!"
-msgstr "Link kopieret til udklipsholder."
+msgstr "Link kopieret til udklipsholder!"
 
 #. module: appointment
 #. odoo-javascript
@@ -2629,7 +2633,7 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__question_required
 msgid "Mandatory Answer"
-msgstr "Obligatorisk svar"
+msgstr "Svar påkrævet"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_manual_confirmation
@@ -2681,7 +2685,7 @@ msgstr "Tekst med flere linjer"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Deadline på mine aktiviteter "
+msgstr "Deadline på mine aktiviteter"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_search
@@ -2720,7 +2724,7 @@ msgstr "Standard ved nye aftaler"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_calendar_event_id
 msgid "Next Activity Calendar Event"
-msgstr "Næste aktivitet for kalenderarrangement"
+msgstr "Næste aktivitet i kalenderen"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_date_deadline
@@ -2768,7 +2772,7 @@ msgstr "Deltager udeblev"
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_type_action_custom
 msgid "No Specific Slots Availabilities Shared!"
-msgstr "Ingen ledige tider er delt for de valgte tidsblokke."
+msgstr "Ingen ledige tider er delt for de valgte tidsblokke!"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__appointment_type_info_msg
@@ -2807,7 +2811,7 @@ msgstr "Antal fejl"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Antal meddelelser der kræver handling"
+msgstr "Antal meddelelser, der kræver handling"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_error_counter
@@ -2823,7 +2827,7 @@ msgstr "Antal personer"
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__event_videocall_source__discuss
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Odoo Discuss"
-msgstr "Odoo Discuss"
+msgstr "Odoo Dialog"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_slot__slot_type__unique
@@ -2834,14 +2838,14 @@ msgstr "Engangsaftale"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form_custom_share
 msgid "Online Meeting"
-msgstr "Online Møde"
+msgstr "Onlinemøde"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid ""
 "Only letters, numbers, underscores and dashes are allowed in your links."
 msgstr ""
-"Din links må kun indeholde bogstaver, tal, understregninger og bindestrege."
+"Dine links må kun indeholde bogstaver, tal, understregninger og bindestrege."
 
 #. module: appointment
 #. odoo-python
@@ -2963,7 +2967,7 @@ msgstr "Tid til forudbestilling"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Preview"
-msgstr "Eksempel"
+msgstr "Forhåndsvisning"
 
 #. module: appointment
 #. odoo-javascript
@@ -2975,7 +2979,7 @@ msgstr "Foreslå tidsblokke"
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__punctual
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_search
 msgid "Punctual"
-msgstr "Punktlig"
+msgstr "Fast"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer__question_id
@@ -3025,7 +3029,7 @@ msgstr "Omdirigér URL"
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__recurring
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_search
 msgid "Regular"
-msgstr "Almindelig"
+msgstr "Standard"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__reminder_ids
@@ -3076,7 +3080,7 @@ msgstr "Ressourcebookinger"
 #. module: appointment
 #: model:ir.ui.menu,name:appointment.menu_appointment_resource_leaves
 msgid "Resource Leaves"
-msgstr "Ressourcefravær"
+msgstr "Ressource ikke ledig"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.appointment_resource_action
@@ -3153,7 +3157,7 @@ msgstr "PLANLAGTE"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS leveringsfejl"
+msgstr "Fejl ved SMS-levering"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_slot__weekday__6
@@ -3169,7 +3173,7 @@ msgstr "Gem"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/gantt/gantt_renderer.js:0
 msgid "Save & Close"
-msgstr "Gem & Luk"
+msgstr "Gem og luk"
 
 #. module: appointment
 #. odoo-javascript
@@ -3187,7 +3191,7 @@ msgstr "Gem og kopiér link"
 #: model:ir.ui.menu,name:appointment.menu_appointment_schedule_resources
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Schedule"
-msgstr "Plan"
+msgstr "Planlægge"
 
 #. module: appointment
 #. odoo-python
@@ -3226,7 +3230,7 @@ msgstr "Tidsvindue for planlægning"
 #. odoo-python
 #: code:addons/appointment/controllers/portal.py:0
 msgid "Search in All"
-msgstr "Søg i alle"
+msgstr "Søg i Alle"
 
 #. module: appointment
 #. odoo-python
@@ -3264,7 +3268,7 @@ msgstr "Vælg ressourcer ..."
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__assign_method__time_resource
 msgid "Select Time then User/Resource"
-msgstr "Vælg tidspunkt og derefter person/ressource"
+msgstr "Vælg tidspunkt og derefter bruger/ressource"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__assign_method__time_auto_assign
@@ -3279,7 +3283,7 @@ msgstr "Vælg brugere ..."
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid "Select a date &amp; time"
-msgstr "Vælg en dato &amp; tid"
+msgstr "Vælg dato og tidspunkt"
 
 #. module: appointment
 #. odoo-javascript
@@ -3290,7 +3294,7 @@ msgstr "Vælg et tidspunkt"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
 msgid "Select attendees..."
-msgstr "Vælg deltagere..."
+msgstr "Vælg deltagere ..."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer_input__value_answer_id
@@ -3310,7 +3314,7 @@ msgstr "Udvalg af spørgsmål"
 #. module: appointment
 #: model:mail.template,description:appointment.appointment_canceled_mail_template
 msgid "Sent to all attendees when an appointment is cancelled"
-msgstr "Sendt til alle deltagere når en aftale er aflyst"
+msgstr "Sendt til alle deltagere, når en aftale er aflyst"
 
 #. module: appointment
 #: model:mail.template,description:appointment.appointment_booked_mail_template
@@ -3407,7 +3411,7 @@ msgstr "Fejl i formatet for kort kode"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__short_code_unique_warning
 msgid "Short Code Unique Warning"
-msgstr "Kort kode-engangsadvarsel"
+msgstr "Korte kode skal være unik"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__avatars_display__show
@@ -3422,7 +3426,7 @@ msgstr "Log ind"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__char
 msgid "Single line text"
-msgstr "Enkelt linje tekst"
+msgstr "Tekst med én linje"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__slot_type
@@ -3444,25 +3448,25 @@ msgstr "Beklager,"
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, it is no longer possible to schedule an appointment."
-msgstr "Desværre, det er ikke længere muligt af booke en aftale."
+msgstr "Det er desværre ikke længere muligt af booke en aftale."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, there is not any more availability for the asked capacity."
-msgstr "Desværre, der er ikke flere ledige tider for det ønskede antal."
+msgstr "Der er desværre ikke flere ledige tider til det ønskede antal."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, we have no availability for an appointment."
-msgstr "Beklager, vi har ingen ledige tider."
+msgstr "Vi har desværre ingen ledige tider."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, we have no more slots available for this month."
-msgstr "Beklager, vi har ikke flere ledige tider i denne måned."
+msgstr "Vi beklager, men der er ikke flere ledige tider i denne måned."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__source_resource_ids
@@ -3472,7 +3476,7 @@ msgstr "Kildekombination"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__custom
 msgid "Specific Slots"
-msgstr "Bestemte tidsblokke"
+msgstr "Specifikke tidsblokke"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__specific_resources
@@ -3489,7 +3493,7 @@ msgstr "Personalebookinger"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_manage_leaves__leave_start_dt
 msgid "Start Date"
-msgstr "Start dato"
+msgstr "Startdato"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__start_datetime
@@ -3500,7 +3504,7 @@ msgstr "Startdato/-tidspunkt"
 #: model:ir.model.fields,help:appointment.field_appointment_booking_line__event_start
 msgid "Start date of an event, without time for full days events"
 msgstr ""
-"Start dato på et arrangement, uden at sætte tid, hvis det er et "
+"Startdato på et arrangement, uden klokkeslæt, hvis det er et "
 "heldagsarrangement"
 
 #. module: appointment
@@ -3513,13 +3517,13 @@ msgstr "Startdatoen skal være før slutdatoen."
 #: model:ir.model.fields,help:appointment.field_appointment_slot__start_datetime
 msgid "Start datetime for unique slot type management"
 msgstr ""
-"Startdato og -tidspunkt for administration af enkeltstående, specifikke "
-"tidsblokke "
+"Startdato og -tidspunkt for administration af enkeltstående, unikke "
+"tidsblokke"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__start_hour
 msgid "Starting Hour"
-msgstr "Start time"
+msgstr "Starttidspunkt"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
@@ -3538,15 +3542,15 @@ msgid ""
 "Planned: Future activities."
 msgstr ""
 "Status baseret på aktiviteter\n"
-"Forfaldne: Forfaldsdato er allerede overskredet\n"
-"I dag: Aktivitetsdato er i dag\n"
-"Planlagt: Fremtidige aktiviteter."
+"Forfaldne: Aktivitetens forfaldsdato er overskredet\n"
+"I dag: Aktiviteten er planlagt til i dag\n"
+"Planlagt: Kommende aktiviteter."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_booking_line__event_stop
 msgid "Stop date of an event, without time for full days events"
 msgstr ""
-"Slutdato på et arrangement, uden at sætte tid, hvis det er et "
+"Slutdato på et arrangement, uden klokkeslæt, hvis det er et "
 "heldagsarrangement"
 
 #. module: appointment
@@ -3641,7 +3645,7 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_slot_check_start_and_end_hour
 msgid "The end time must be later than the start time."
-msgstr "Sluttidspunkter skal være efter starttidspunktet."
+msgstr "Sluttidspunktet skal være efter starttidspunktet."
 
 #. module: appointment
 #. odoo-python
@@ -3664,7 +3668,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/appointment/controllers/portal.py:0
 msgid "The field '%s' does not exist in the targeted model"
-msgstr "Feltet '%s' findes ikke i den valgte model."
+msgstr "Feltet '%s' findes ikke i den valgte model"
 
 #. module: appointment
 #. odoo-python
@@ -3698,7 +3702,7 @@ msgid ""
 msgstr ""
 "Sekvensen afgør, om en ressource har højere prioritet end en anden\n"
 "        (f.eks. hvis der er to borde med plads til fire, vælges det bord med "
-"den laveste sekvens først)."
+"den laveste sekvens først)"
 
 #. module: appointment
 #. odoo-javascript
@@ -3714,7 +3718,7 @@ msgstr "Der er i øjeblikket ingen ledige tider"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.portal_my_appointments
 msgid "There is no appointment linked to your account."
-msgstr "Der er ikke nogen aftale forbundet med din konto"
+msgstr "Der er ikke nogen aftale forbundet med din konto."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__shareable
@@ -3775,7 +3779,7 @@ msgid ""
 "This field is used in order to define in which timezone the resources will "
 "work."
 msgstr ""
-"Dette felt bruges til at definere i hvilken tidszone ressourcerne vil "
+"Dette felt bruges til at definere, i hvilken tidszone ressourcerne vil "
 "arbejde."
 
 #. module: appointment
@@ -3799,7 +3803,7 @@ msgstr "Tidszone"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__appointment_tz
 msgid "Timezone where appointment take place"
-msgstr "Tidszone hvor aftale tager sted"
+msgstr "Tidszone, hvor aftale tager sted"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -3871,7 +3875,7 @@ msgstr "Type"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Type af undtagelsesaktivitet registreret "
+msgstr "Type registreret undtagelsesaktivitet."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__on_leave_partner_ids
@@ -3975,7 +3979,7 @@ msgstr "Brugere"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Video Call"
-msgstr "Video Møde"
+msgstr "Videomøde"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__event_videocall_source
@@ -4001,7 +4005,7 @@ msgstr "Beskeder fra hjemmesiden"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__website_message_ids
 msgid "Website communication history"
-msgstr "Hjemmesidens kommunikations historik"
+msgstr "Hjemmesidens kommunikationshistorik"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_slot__weekday__3
@@ -4033,7 +4037,7 @@ msgstr "Arbejdstimer"
 #: code:addons/appointment/static/src/js/appointment_form.js:0
 #: code:addons/appointment/static/src/js/appointment_validation.js:0
 msgid "You cannot invite more than 10 people"
-msgstr "Du kan ikke invitere mere end 10 personer"
+msgstr "Det er ikke muligt at invitere mere end 10 personer"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_details_column
@@ -4054,7 +4058,7 @@ msgstr "Dit valg"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "at"
-msgstr "på"
+msgstr "kl."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4081,7 +4085,7 @@ msgstr "f.eks. \"John Doe – Booking af tennisbane\""
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form_custom_share
 msgid "e.g. \"Technical Demo\""
-msgstr "fx. \"Teknisk demo\""
+msgstr "f.eks. \"Teknisk demo\""
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4107,7 +4111,7 @@ msgstr "f.eks. Lageroptælling og værdiansættelse"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "e.g. John Smith"
-msgstr "fx John Smith"
+msgstr "f.eks. John Smith"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_form
@@ -4118,7 +4122,7 @@ msgstr "f.eks. Tennisbane 1"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "e.g. Vegetarian, Lactose Intolerant, ..."
-msgstr "f.eks. Vegetarisk, laktoseintolerant, ..."
+msgstr "f.eks. Vegetarisk, laktoseintolerant ..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -4184,7 +4188,7 @@ msgstr "eller"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_details
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "people"
-msgstr "mennesker"
+msgstr "personer"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form

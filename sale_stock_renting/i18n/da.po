@@ -9,13 +9,14 @@
 # Martin Trigaux, 2024
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-02-27 05:19+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:46+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "sale_stock_renting/da/>\n"
 "Language: da\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_stock_renting
 #. odoo-python
@@ -64,8 +65,8 @@ msgid ""
 "Amount of time (in hours) during which a product is considered unavailable "
 "prior to renting (preparation time)."
 msgstr ""
-"Mængde tid (i tider) hvori et produkt anses for utilgængelig forud for "
-"udlejning (forberedelses tid)."
+"Tidsrum (angivet i timer), hvor produktet betragtes som utilgængeligt før "
+"udlejning (f.eks. til klargøring)."
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,help:sale_stock_renting.field_res_config_settings__padding_time
@@ -96,7 +97,7 @@ msgstr "Tilgængelige reserverede partier"
 #. odoo-javascript
 #: code:addons/sale_stock_renting/static/src/widgets/qty_at_date_widget.xml:0
 msgid "Available for Rent"
-msgstr "Tilgængelig til Leje"
+msgstr "Tilgængelig til leje"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_res_company
@@ -106,7 +107,7 @@ msgstr "Virksomheder"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: sale_stock_renting
 #: model_terms:ir.ui.view,arch_db:sale_stock_renting.res_config_settings_inherit_view_form
@@ -117,7 +118,7 @@ msgstr "Standardbuffertid"
 #: model:ir.model.fields,help:sale_stock_renting.field_rental_order_wizard_line__tracking
 #: model:ir.model.fields,help:sale_stock_renting.field_sale_order_line__tracking
 msgid "Ensure the traceability of a storable product in your warehouse."
-msgstr "Forsikre sporbarheden af opbevarings produkter i dit lager."
+msgstr "Sikr sporbarhed af de lagerførte produkter på dit lager."
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard__has_lines_missing_stock
@@ -133,17 +134,17 @@ msgstr "Har linjer med sporede produkter"
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_rental_schedule__is_available
 msgid "Is Available"
-msgstr "Er Tilgængelig"
+msgstr "Er tilgængelig"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__is_product_storable
 msgid "Is Product Storable"
-msgstr "Kan produkt opbevares"
+msgstr "Kan produkt lagerføres"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_account_move
 msgid "Journal Entry"
-msgstr "Journalbilag"
+msgstr "Journalpostering"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_account_move_line
@@ -153,17 +154,17 @@ msgstr "Posteringslinje"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_stock_lot
 msgid "Lot/Serial"
-msgstr "Lot/serienummer"
+msgstr "Parti- og serienummer"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_stock_warehouse_orderpoint
 msgid "Minimum Inventory Rule"
-msgstr "Minimum lager regel"
+msgstr "Regel for minimumsbeholdning"
 
 #. module: sale_stock_renting
 #: model_terms:ir.ui.view,arch_db:sale_stock_renting.res_config_settings_inherit_view_form
 msgid "Minimum amount of time between two rentals"
-msgstr "Minimum mængde tid mellem to udlejninger"
+msgstr "Minimumstid mellem to udlejninger"
 
 #. module: sale_stock_renting
 #. odoo-python
@@ -178,42 +179,42 @@ msgstr ""
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_res_config_settings__padding_time
 msgid "Padding"
-msgstr "Padding"
+msgstr "Buffer"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_res_company__padding_time
 msgid "Padding Time"
-msgstr "Polstringstid"
+msgstr "Buffertid"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_rental_order_wizard
 msgid "Pick-up/Return products"
-msgstr "Afhentning/Returnering produkter"
+msgstr "Hent/returnér produkter"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__pickeable_lot_ids
 msgid "Pickeable Lot"
-msgstr "Lot der kan plukkes"
+msgstr "Parti, der kan plukkes"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__pickedup_lot_ids
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_order_line__pickedup_lot_ids
 msgid "Pickedup Lot"
-msgstr "Lot der er afhentet"
+msgstr "Parti, der er afhentet"
 
 #. module: sale_stock_renting
 #. odoo-python
 #: code:addons/sale_stock_renting/wizard/rental_processing.py:0
 msgid "Please specify the serial numbers picked up for the tracked products."
 msgstr ""
-"Vær venlig at specificere serienumrene afhentet for de sporede produkter."
+"Vær venlig at specificere de afhentede serienumre for de sporede produkter."
 
 #. module: sale_stock_renting
 #. odoo-python
 #: code:addons/sale_stock_renting/wizard/rental_processing.py:0
 msgid "Please specify the serial numbers returned for the tracked products."
 msgstr ""
-"Vær venlig at specificere serienumre returneret for de sporede produkter."
+"Vær venlig at specificere de returnerede serienumre for de sporede produkter."
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_product_template
@@ -223,7 +224,7 @@ msgstr "Produkt"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_product_product
 msgid "Product Variant"
-msgstr "Varevariant"
+msgstr "Produktvariant"
 
 #. module: sale_stock_renting
 #. odoo-python
@@ -235,7 +236,7 @@ msgstr "Leje"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_sale_rental_report
 msgid "Rental Analysis Report"
-msgstr "Udlejnings analyse rapport"
+msgstr "Rapport om udlejningsanalyse"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_res_company__rental_loc_id
@@ -245,7 +246,7 @@ msgstr "Udlejningssted"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_sale_rental_schedule
 msgid "Rental Schedule"
-msgstr "Udlejning skema"
+msgstr "Udlejningsskema"
 
 #. module: sale_stock_renting
 #: model_terms:ir.ui.view,arch_db:sale_stock_renting.res_config_settings_inherit_view_form
@@ -261,39 +262,39 @@ msgstr "Udlejningsbevægelse: %(order)s"
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_res_config_settings__group_rental_stock_picking
 msgid "Rental pickings"
-msgstr "Udlejningsplukninger"
+msgstr "Afhentning af lejede produkter"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_rental_order_wizard_line
 msgid "RentalOrderLine transient representation"
-msgstr "Udlejning ordre linje forbigående repræsentation"
+msgstr "RentalOrderLine forbigående repræsentation"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_order_line__reserved_lot_ids
 msgid "Reserved Lot"
-msgstr "Reserveret Lot"
+msgstr "Reserveret parti"
 
 #. module: sale_stock_renting
 #. odoo-javascript
 #: code:addons/sale_stock_renting/static/src/widgets/qty_at_date_widget.xml:0
 msgid "Reserved lots unavailable"
-msgstr "Reserverede partier ikke utilgængelig"
+msgstr "Reserverede partier utilgængelige"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_stock_return_picking
 msgid "Return Picking"
-msgstr "Retur plukning"
+msgstr "Returnér afhentede produkt"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__returnable_lot_ids
 msgid "Returnable Lot"
-msgstr "Returnerbar Lot"
+msgstr "Returnerbart parti"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__returned_lot_ids
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_order_line__returned_lot_ids
 msgid "Returned Lot"
-msgstr "Returneret Lot"
+msgstr "Returneret parti"
 
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_sale_order
@@ -309,7 +310,7 @@ msgstr "Salgsordrelinje"
 #: model:ir.model.fields,field_description:sale_stock_renting.field_product_product__preparation_time
 #: model:ir.model.fields,field_description:sale_stock_renting.field_product_template__preparation_time
 msgid "Security Time"
-msgstr "Sikkerheds tid"
+msgstr "Sikkerhedstid"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_rental_report__lot_id
@@ -328,13 +329,13 @@ msgstr "Serienumre"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_stock_move
 msgid "Stock Move"
-msgstr "Lagerflytning"
+msgstr "Lagerbevægelse"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,help:sale_stock_renting.field_product_product__preparation_time
 #: model:ir.model.fields,help:sale_stock_renting.field_product_template__preparation_time
 msgid "Temporarily make this product unavailable before pickup."
-msgstr "Gør dette produkt midlertidigt utilgængelig til afhentning."
+msgstr "Gør dette produkt midlertidigt utilgængeligt til afhentning."
 
 #. module: sale_stock_renting
 #: model_terms:ir.ui.view,arch_db:sale_stock_renting.rental_schedule_view_gantt_inherit_stock
@@ -348,15 +349,15 @@ msgid ""
 "location is internal because products in rentalare still considered as "
 "company assets."
 msgstr ""
-"Denne teknisk lokation fungere som lager for produkter der i øjeblikket er "
-"udlejet. Denne lokation er intern, fordi udlejede produkter stadig anses som "
+"Denne tekniske lokation fungerer som lager for produkter, der aktuelt er "
+"udlejet. Lokationen er intern, da udlejede produkter stadig betragtes som "
 "virksomhedens aktiver."
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__tracking
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_order_line__tracking
 msgid "Tracking"
-msgstr "Sporing"
+msgstr "Tracking"
 
 #. module: sale_stock_renting
 #. odoo-python
@@ -376,7 +377,7 @@ msgstr "Overfør"
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_sale_order_line__unavailable_lot_ids
 msgid "Unavailable Lot"
-msgstr "Utilgængelig lot"
+msgstr "Utilgængeligt parti"
 
 #. module: sale_stock_renting
 #: model:res.groups,name:sale_stock_renting.group_rental_stock_picking

@@ -3,13 +3,14 @@
 # * hr_payroll_account_iso20022
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-18 19:54+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 11:04+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "hr_payroll_account_iso20022/lo/>\n"
 "Language: lo\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll_account_iso20022
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.view_employee_form
@@ -27,6 +28,12 @@ msgid ""
 "                            <span invisible=\"not is_trusted_bank_account\" class=\"text-success\">Trusted</span>\n"
 "                        </span>"
 msgstr ""
+"<span class=\"d-flex gap-2 w-50\">\n"
+"                            <span invisible=\"is_trusted_bank_account\" "
+"class=\"text-muted\">ບໍ່ໜ້າເຊື່ອຖື</span>\n"
+"                            <span invisible=\"not is_trusted_bank_account\" "
+"class=\"text-success\">ທີ່ໜ້າເຊື່ອຖື</span>\n"
+"                        </span>"
 
 #. module: hr_payroll_account_iso20022
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.view_employee_form
@@ -42,7 +49,7 @@ msgstr "ປຶ້ມບັນຊີທະນາຄານ"
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.hr_payslip_run_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.hr_payslip_view_form
 msgid "Create Payment Report"
-msgstr ""
+msgstr "ສ້າງລາຍງານການຊຳລະເງິນ"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model,name:hr_payroll_account_iso20022.model_hr_employee
@@ -52,48 +59,48 @@ msgstr "ພະນັກງານ"
 #. module: hr_payroll_account_iso20022
 #: model:hr.payroll.dashboard.warning,name:hr_payroll_account_iso20022.hr_payroll_dashboard_warning_employee_invalid_bank_account
 msgid "Employees With Invalid Bank Accounts"
-msgstr ""
+msgstr "ພະນັກງານທີ່ມີບັນຊີທະນາຄານບໍ່ຖືກຕ້ອງ"
 
 #. module: hr_payroll_account_iso20022
 #: model:hr.payroll.dashboard.warning,name:hr_payroll_account_iso20022.hr_payroll_dashboard_warning_employee_no_country
 msgid "Employees Without Any Country"
-msgstr ""
+msgstr "ພະນັກງານທີ່ບໍ່ມີຂໍ້ມູນປະເທດ"
 
 #. module: hr_payroll_account_iso20022
 #: model:hr.payroll.dashboard.warning,name:hr_payroll_account_iso20022.hr_payroll_dashboard_warning_untrusted_bank_accounts
 msgid "Employees with untrusted Bank Account numbers"
-msgstr ""
+msgstr "ພະນັກງານທີ່ມີເລກບັນຊີທະນາຄານທີ່ບໍ່ໜ້າເຊື່ອຖື"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model.fields,field_description:hr_payroll_account_iso20022.field_hr_payroll_payment_report_wizard__export_format
 msgid "Export Format"
-msgstr ""
+msgstr "ຮູບແບບການສົ່ງອອກ"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model,name:hr_payroll_account_iso20022.model_hr_payroll_payment_report_wizard
 msgid "HR Payroll Payment Report Wizard"
-msgstr ""
+msgstr "ຕົວຊ່ວຍສ້າງລາຍງານການຊຳລະເງິນເດືອນ HR"
 
 #. module: hr_payroll_account_iso20022
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.hr_payslip_run_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.hr_payslip_view_form
 msgid "Mark as paid"
-msgstr ""
+msgstr "ໝາຍວ່າຈ່າຍແລ້ວ"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model,name:hr_payroll_account_iso20022.model_hr_payslip
 msgid "Pay Slip"
-msgstr ""
+msgstr "ໃບແຈ້ງຈ່າຍເງິນເດືອນ"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model,name:hr_payroll_account_iso20022.model_hr_payslip_run
 msgid "Payslip Batches"
-msgstr ""
+msgstr "ຊຸດໃບແຈ້ງຈ່າຍເງິນເດືອນ"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model.fields.selection,name:hr_payroll_account_iso20022.selection__hr_payroll_payment_report_wizard__export_format__sepa
 msgid "SEPA"
-msgstr ""
+msgstr "SEPA"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model.fields,field_description:hr_payroll_account_iso20022.field_hr_employee__is_trusted_bank_account
@@ -117,18 +124,18 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_payroll_account_iso20022/wizard/hr_payroll_payment_report_wizard.py:0
 msgid "Some employees (%s) don't have a valid name on the work contact."
-msgstr ""
+msgstr "ພະນັກງານບາງຄົນ (%s) ບໍ່ມີຊື່ທີ່ຖືກຕ້ອງໃນຂໍ້ມູນຕິດຕໍ່ວຽກ."
 
 #. module: hr_payroll_account_iso20022
 #. odoo-python
 #: code:addons/hr_payroll_account_iso20022/wizard/hr_payroll_payment_report_wizard.py:0
 msgid "Some employees (%s) don't have a work contact."
-msgstr ""
+msgstr "ພະນັກງານບາງຄົນ (%s) ບໍ່ມີຂໍ້ມູນຕິດຕໍ່ວຽກ."
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model.fields.selection,name:hr_payroll_account_iso20022.selection__hr_payroll_payment_report_wizard__export_format__iso20022_ch
 msgid "Swiss ISO20022"
-msgstr ""
+msgstr "Swiss ISO20022"
 
 #. module: hr_payroll_account_iso20022
 #. odoo-python
@@ -137,6 +144,8 @@ msgid ""
 "The following employees have invalid bank accounts and could not be trusted:\n"
 "%s"
 msgstr ""
+"ພະນັກງານຕໍ່ໄປນີ້ມີບັນຊີທະນາຄານທີ່ບໍ່ຖືກຕ້ອງ ແລະ ບໍ່ສາມາດເຊື່ອຖືໄດ້:\n"
+"%s"
 
 #. module: hr_payroll_account_iso20022
 #. odoo-python
@@ -145,26 +154,27 @@ msgid ""
 "The journal '%s' requires a proper IBAN account to pay via SEPA. Please "
 "configure it first."
 msgstr ""
+"ປຶ້ມບັນຊີ '%s' ຕ້ອງການບັນຊີ IBAN ທີ່ຖືກຕ້ອງເພື່ອຊຳລະຜ່ານ SEPA. ກະລຸນາກຳນົດຄ່າມັນກ່ອນ."
 
 #. module: hr_payroll_account_iso20022
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.view_employee_form
 msgid "Trust Bank Account"
-msgstr ""
+msgstr "ເຊື່ອຖືບັນຊີທະນາຄານ"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model.fields,field_description:hr_payroll_account_iso20022.field_hr_payslip__iso20022_uetr
 msgid "UETR"
-msgstr ""
+msgstr "UETR"
 
 #. module: hr_payroll_account_iso20022
 #: model:ir.model.fields,help:hr_payroll_account_iso20022.field_hr_payslip__iso20022_uetr
 msgid "Unique end-to-end transaction reference"
-msgstr ""
+msgstr "ລະຫັດອ້າງອີງທຸລະກຳແບບຕົ້ນທາງເຖິງປາຍທາງທີ່ບໍ່ຊ້ຳກັນ"
 
 #. module: hr_payroll_account_iso20022
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account_iso20022.view_employee_form
 msgid "Untrust Bank Account"
-msgstr ""
+msgstr "ຍົກເລີກການເຊື່ອຖືບັນຊີທະນາຄານ"
 
 #. module: hr_payroll_account_iso20022
 #. odoo-python

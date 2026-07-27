@@ -684,10 +684,10 @@ class AccountEdiXmlUBLDian(models.AbstractModel):
     def _export_invoice_constraints(self, move, vals):
         # EXTENDS account.edi.xml.ubl_20
         constraints = super()._export_invoice_constraints(move, vals)
-        now = fields.Datetime.now()
+        now = fields.Datetime.context_timestamp(self.with_context(tz='America/Bogota'), fields.Datetime.now()).date()
         oldest_date = now - timedelta(days=6)
         newest_date = now + timedelta(days=6)
-        if not (oldest_date <= fields.Datetime.to_datetime(move.invoice_date) <= newest_date):
+        if move.invoice_date and not (oldest_date <= move.invoice_date <= newest_date):
             constraints['dian_date'] = self.env._("The issue date can not be older than 6 days or more than 6 days in the future.")
         # required fields on invoice
         if not move.l10n_co_dian_post_time:

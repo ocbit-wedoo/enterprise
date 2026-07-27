@@ -117,7 +117,7 @@ class AccountMove(models.Model):
     l10n_mx_edi_cfdi_origin = fields.Char(
         string="CFDI Origin",
         copy=False,
-        index='btree_not_null',
+        index='trigram',
         help="In some cases like payments, credit notes, debit notes, invoices re-signed or invoices that are redone "
              "due to payment in advance will need this field filled, the format is:\n"
              "Origin Type|UUID1, UUID2, ...., UUIDn.\n"
@@ -554,7 +554,7 @@ class AccountMove(models.Model):
                         move.l10n_mx_edi_invoice_cancellation_reason = doc.cancellation_reason
                         break
 
-    @api.depends('l10n_mx_edi_invoice_document_ids.state')
+    @api.depends('l10n_mx_edi_invoice_document_ids.state', 'reconciled_payment_ids.is_reconciled')
     def _compute_l10n_mx_edi_update_payments_needed(self):
         payments_diff = self._origin\
             .with_context(bin_size=False)\
@@ -1923,7 +1923,15 @@ class AccountMove(models.Model):
                     elif is_payment:
                         pay_results = reconciliation_values[invoice]['payments'][counterpart_move]
                         pay_results['invoice_amount_currency'] += partial[f'{field2}_amount_currency']
-                        pay_results['payment_amount_currency'] += partial[f'{field1}_amount_currency']
+                        stmt_line = counterpart_line.statement_line_id
+                        if stmt_line and stmt_line.currency_id != counterpart_line.currency_id:
+                            result = stmt_line._get_accounting_amounts_and_currencies()
+                            journal_amount = result[2]
+                            company_amount = result[4]
+                            rate = abs(journal_amount) / abs(company_amount) if company_amount else 0.0
+                            pay_results['payment_amount_currency'] += partial[f'{field1}_amount_currency'] * rate
+                        else:
+                            pay_results['payment_amount_currency'] += partial[f'{field1}_amount_currency']
                         pay_results['balance'] += partial.amount
                         pay_results['other_residual'] += other_residual
                         other_residual = 0.0
@@ -1975,7 +1983,11 @@ class AccountMove(models.Model):
             # Only the fully reconciled payments need to be sent.
             pay_rec_lines = payment.line_ids\
                 .filtered(lambda line: line.account_type in ('asset_receivable', 'liability_payable'))
-            if any(not x.reconciled for x in pay_rec_lines):
+            if (
+                any(not x.reconciled for x in pay_rec_lines)
+                or False in payment.line_ids.statement_line_id.mapped('is_reconciled')
+                or False in payment.origin_payment_id.mapped('is_reconciled')
+            ):
                 continue
 
             # The payments must only be sent when all reconciled invoices are sent.

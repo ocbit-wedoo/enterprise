@@ -1,6 +1,7 @@
 from datetime import timedelta
 
 from odoo.addons.test_marketing_automation.tests.common import TestMACommon
+from odoo.exceptions import ValidationError
 from odoo.fields import Datetime
 from odoo.tests import tagged, users
 from odoo.tools import mute_logger
@@ -886,3 +887,64 @@ class TestActivityTriggers(ActivityTriggersCase):
                 sub_activity,
                 strict=False,
             )
+
+    @users('user_marketing_automation')
+    def test_updating_activity_hierarchy(self):
+        """ Test activity hierarchy updates are restricted when traces exist """
+        self._launch_campaign(self.campaign, date_reference=self.date_reference)
+        date_send = self.date_reference + timedelta(hours=1)
+
+        self.assertTrue(self.activity_begin_sms.trace_ids)
+        with self.assertRaises(ValidationError):
+            self.activity_begin_sms.write({
+                "trigger_type": "activity",
+                "parent_id": self.activity_begin_mail,
+            })
+
+        self.assertFalse(self.activity_mail_activity.trace_ids)
+        with self.mock_datetime_and_now(date_send):
+            self.activity_mail_activity.write({
+                "trigger_type": "activity",
+                "parent_id": self.activity_begin_sms,
+            })
+            self.activity_begin_sms.execute()
+        self.assertMarketAutoTraces(
+            [{
+                "records": self.test_records,
+                "status": "scheduled",
+                "fields_values": {
+                    "schedule_date": date_send + timedelta(hours=2),
+                },
+            }],
+            self.activity_mail_activity,
+            strict=True,
+        )
+
+    @users('user_marketing_automation')
+    def test_updating_activity_parent_in_test(self):
+        """ Test activity hierarchy updates with test traces """
+        self.campaign.domain = [(0, '=', 1)]
+        self._launch_campaign(self.campaign, date_reference=self.date_reference)
+
+        self.env['marketing.campaign.test'].create({
+            'campaign_id': self.campaign.id,
+            'res_id': self.test_records[0].id,
+        }).action_launch_test()
+
+        self.assertEqual(len(self.activity_begin_sms.trace_ids), 1)
+        test_trace = self.activity_begin_sms.trace_ids[0]
+        self.assertEqual(test_trace.state, 'scheduled')
+
+        self.activity_begin_sms.write({
+            'trigger_type': 'activity',
+            'parent_id': self.activity_begin_mail,
+        })
+        self.activity_begin_sms.write({
+            'interval_number': 5,
+            'interval_type': 'days',
+        })
+        self.assertTrue(self.activity_begin_sms.require_sync)
+
+        self.campaign.action_update_participants()
+        expected_date = test_trace.participant_id.create_date + timedelta(days=5)
+        self.assertEqual(test_trace.schedule_date, expected_date)

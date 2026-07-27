@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-05-28 12:47+0000\n"
+"PO-Revision-Date: 2026-06-06 10:43+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "sale_renting_sign/lo/>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_renting_sign
 #: model:ir.model.fields,field_description:sale_renting_sign.field_sale_order__sign_request_count
 msgid "# of Signature Requests"
-msgstr ""
+msgstr "ຈຳນວນຄຳຮ້ອງຂໍລາຍເຊັນ"
 
 #. module: sale_renting_sign
 #: model_terms:ir.ui.view,arch_db:sale_renting_sign.rental_sign_wizard_view_form
@@ -58,12 +58,12 @@ msgstr "ສ້າງເມື່ອ"
 #. module: sale_renting_sign
 #: model:ir.model.fields,field_description:sale_renting_sign.field_res_config_settings__rental_sign_tmpl_id
 msgid "Default Document"
-msgstr ""
+msgstr "ເອກະສານເລີ່ມຕົ້ນ"
 
 #. module: sale_renting_sign
 #: model:ir.model.fields,field_description:sale_renting_sign.field_res_company__rental_sign_tmpl_id
 msgid "Default Document Template for Rentals"
-msgstr ""
+msgstr "ແມ່ແບບເອກະສານເລີ່ມຕົ້ນສຳລັບການເຊົ່າ"
 
 #. module: sale_renting_sign
 #: model:ir.model.fields,field_description:sale_renting_sign.field_rental_sign_wizard__display_name
@@ -78,7 +78,7 @@ msgstr "ແມ່ແບບເອກະສານ"
 #. module: sale_renting_sign
 #: model_terms:ir.ui.view,arch_db:sale_renting_sign.rental_order_inherit_rental_sign
 msgid "Document(s) Signed"
-msgstr ""
+msgstr "ເອກະສານທີ່ເຊັນແລ້ວ"
 
 #. module: sale_renting_sign
 #: model:ir.model.fields,field_description:sale_renting_sign.field_rental_sign_wizard__id
@@ -100,12 +100,12 @@ msgstr "ແກ້ໄຂຫຼ້າສຸດເມື່ອ"
 #: model:ir.model.fields,field_description:sale_renting_sign.field_rental_sign_wizard__order_id
 #: model:ir.model.fields,field_description:sale_renting_sign.field_sign_send_request__sale_order_id
 msgid "Sales Order"
-msgstr "ໃບສັ່ງຊື້"
+msgstr "ໃບສັ່ງຂາຍ"
 
 #. module: sale_renting_sign
 #: model:ir.model.fields,help:sale_renting_sign.field_res_config_settings__rental_sign_tmpl_id
 msgid "Set a default document template for all rentals in the current company"
-msgstr ""
+msgstr "ຕັ້ງແມ່ແບບເອກະສານເລີ່ມຕົ້ນສຳລັບການເຊົ່າທັງໝົດໃນບໍລິສັດປັດຈຸບັນ"
 
 #. module: sale_renting_sign
 #: model_terms:ir.ui.view,arch_db:sale_renting_sign.rental_sign_wizard_view_form
@@ -117,12 +117,12 @@ msgstr "ເຊັນເອກະສານ"
 #: model_terms:ir.ui.view,arch_db:sale_renting_sign.rental_order_inherit_rental_sign
 #: model_terms:ir.ui.view,arch_db:sale_renting_sign.rental_sign_wizard_view_form
 msgid "Sign Documents"
-msgstr ""
+msgstr "ເຊັນເອກະສານ"
 
 #. module: sale_renting_sign
 #: model:ir.model,name:sale_renting_sign.model_rental_sign_wizard
 msgid "Sign Documents from a SO"
-msgstr ""
+msgstr "ເຊັນເອກະສານຈາກໃບສັ່ງຂາຍ"
 
 #. module: sale_renting_sign
 #: model:ir.model,name:sale_renting_sign.model_sign_send_request
@@ -146,8 +146,10 @@ msgid ""
 "from a rental order. You should select a template accessible to all Sign "
 "users."
 msgstr ""
+"ແມ່ແບບເອກະສານນີ້ຈະຖືກເລືອກໂດຍເລີ່ມຕົ້ນເມື່ອເຊັນເອກະສານຈາກໃບສັ່ງເຊົ່າ. ທ່ານຄວນເລືອກແມ່ແບບທີ່ຜູ້ໃຊ້ "
+"Sign ທັງໝົດສາມາດເຂົ້າເຖິງໄດ້."
 
 #. module: sale_renting_sign
 #: model_terms:ir.ui.view,arch_db:sale_renting_sign.res_config_settings_view_form
 msgid "Upload Template"
-msgstr ""
+msgstr "ອັບໂຫຼດແມ່ແບບ"

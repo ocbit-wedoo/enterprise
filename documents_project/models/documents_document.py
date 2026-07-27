@@ -158,6 +158,20 @@ class Document(models.Model):
                 projects="\n".join(f"- {project.name}" for project in projects_with_folder),
             ))
 
+    @api.model
+    def _get_gc_clear_bin_domain(self):
+        # Skip folders tied to a project: unlinking one would null the
+        # project's documents_folder_id reference. A ('project_ids', '=', False)
+        # leaf keeps active_test=True on the subquery, so an archived project
+        # stops protecting its folder. Search the folder ids directly, with
+        # active_test=False, to cover archived projects too.
+        project_folders = self.env['project.project'].with_context(
+            active_test=False).search([]).documents_folder_id
+        return expression.AND([
+            super()._get_gc_clear_bin_domain(),
+            [('id', 'not in', project_folders.ids)],
+        ])
+
     @api.constrains('company_id')
     def _check_no_company_on_projects_folder(self):
         if not self.company_id:

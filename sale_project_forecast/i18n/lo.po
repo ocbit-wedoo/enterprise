@@ -3,13 +3,14 @@
 # * sale_project_forecast
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-05-17 06:00+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 11:14+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "sale_project_forecast/lo/>\n"
 "Language: lo\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_project_forecast
 #: model:ir.model.fields,help:sale_project_forecast.field_product_product__planning_enabled
@@ -31,17 +32,22 @@ msgid ""
 "                 You can also manually schedule open shifts for your Sales "
 "Order or assign them to any employee you prefer."
 msgstr ""
+"ຖ້າເປີດໃຊ້ງານ, ກະການເຮັດວຽກຈະຖືກສ້າງຂຶ້ນໂດຍອັດຕະໂນມັດສຳລັບບົດບາດທີ່ເລືອກໄວ້ ເມື່ອມີການຢືນຢັນໃບສັ່ງຂາ"
+"ຍ. ດ້ວຍຄຸນສົມບັດ 'ວາງແຜນອັດຕະໂນມັດ', ຈະມີພຽງແຕ່ພະນັກງານທີ່ມີບົດບາດນີ້ເທົ່ານັ້ນທີ່ຈະຖືກມອບໝາຍກະການເຮັ"
+"ດວຽກໃຫ້ໂດຍອັດຕະໂນມັດ ສຳລັບໃບສັ່ງຂາຍທີ່ມີການບໍລິການນີ້. ລະບົບຈະພິຈາລະນາຈາກຄວາມວ່າງຂອງພະນັກງານ ແ"
+"ລະ ເວລາທີ່ເຫຼືອເພື່ອວາງແຜນ. ທ່ານຍັງສາມາດຈັດຕາຕະລາງກະການເຮັດວຽກທີ່ວ່າງຢູ່ສຳລັບໃບສັ່ງຂາຍຂອງທ່ານດ້ວຍ"
+"ຕົນເອງ ຫຼື ມອບໝາຍໃຫ້ພະນັກງານຄົນໃດກໍໄດ້ທີ່ທ່ານຕ້ອງການ."
 
 #. module: sale_project_forecast
 #: model:ir.model.fields,field_description:sale_project_forecast.field_product_product__planning_enabled
 #: model:ir.model.fields,field_description:sale_project_forecast.field_product_template__planning_enabled
 msgid "Plan Services"
-msgstr ""
+msgstr "ວາງແຜນການບໍລິການ"
 
 #. module: sale_project_forecast
 #: model:ir.model,name:sale_project_forecast.model_planning_slot
 msgid "Planning Shift"
-msgstr ""
+msgstr "ການວາງແຜນກະການເຮັດວຽກ"
 
 #. module: sale_project_forecast
 #: model:ir.model,name:sale_project_forecast.model_product_template
@@ -51,7 +57,7 @@ msgstr "ສິນຄ້າ"
 #. module: sale_project_forecast
 #: model:ir.model.fields,field_description:sale_project_forecast.field_planning_slot__sale_line_id
 msgid "Sales Order Item"
-msgstr ""
+msgstr "ລາຍການໃບສັ່ງຂາຍ"
 
 #. module: sale_project_forecast
 #: model:ir.model,name:sale_project_forecast.model_sale_order_line
@@ -65,3 +71,5 @@ msgid ""
 "are automatically planned, the remaining hours of the sales order item, as "
 "well as the role defined on the service, are taken into account."
 msgstr ""
+"ລາຍການໃບສັ່ງຂາຍທີ່ກະການເຮັດວຽກນີ້ຈະຖືກປະຕິບັດ. ເມື່ອໃບສັ່ງຂາຍຖືກວາງແຜນໂດຍອັດຕະໂນມັດ, ຊົ່ວໂມງທີ່ເຫຼືອ"
+"ຂອງລາຍການໃບສັ່ງຂາຍ, ລວມທັງບົດບາດທີ່ກຳນົດໄວ້ໃນການບໍລິການ ຈະຖືກນຳມາພິຈາລະນາ."

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.3alpha1+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-24 18:15+0000\n"
-"PO-Revision-Date: 2026-05-30 18:20+0000\n"
+"PO-Revision-Date: 2026-06-20 09:25+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_co_dian/es_419/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.report_invoice_document
@@ -249,7 +249,7 @@ msgstr "<strong>Método de Pago</strong>"
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.report_invoice_document
 msgid "<strong>Payment Method</strong>"
-msgstr "<strong>Términos de Pago</strong>"
+msgstr "<strong>Método de pago</strong>"
 
 #. module: l10n_co_dian
 #. odoo-python
@@ -262,7 +262,7 @@ msgstr "Se requiere un tiempo publicado para calcular el CUFE/CUDE/CUDS."
 #: code:addons/l10n_co_dian/models/account_edi_xml_ubl_dian.py:0
 msgid "A technical key on the journal is required to compute the CUFE."
 msgstr ""
-"Es necesario configurar una llave técnica del diario para generar el CUFE."
+"Es necesario configurar una llave técnica en el diario para generar el CUFE."
 
 #. module: l10n_co_dian
 #: model:ir.model.fields.selection,name:l10n_co_dian.selection__account_move__l10n_co_dian_state__invoice_accepted
@@ -482,7 +482,7 @@ msgstr "Creado en"
 #. module: l10n_co_dian
 #: model:mail.template,name:l10n_co_dian.email_template_edi_credit_note
 msgid "Credit Note (DIAN): Sending"
-msgstr "Nota Crédito (DIAN): Envio"
+msgstr "Nota de crédito (DIAN): Enviando"
 
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.report_invoice_document
@@ -584,7 +584,7 @@ msgstr "Eliminar"
 #. odoo-python
 #: code:addons/l10n_co_dian/models/l10n_co_dian_document.py:0
 msgid "Demo mode response"
-msgstr "Respuesta Modo Demo"
+msgstr "Respuesta en modo demo"
 
 #. module: l10n_co_dian
 #: model:ir.model.fields,field_description:l10n_co_dian.field_l10n_co_dian_document__display_name
@@ -632,7 +632,7 @@ msgstr "Error %(code)s al llamar al servidor de la DIAN: %(response)s"
 #. odoo-python
 #: code:addons/l10n_co_dian/models/account_move_send.py:0
 msgid "Error(s) when generating the Attached Document:"
-msgstr "Error(es) al generar el Attached Document:"
+msgstr "Error(es) al generar el documento adjunto:"
 
 #. module: l10n_co_dian
 #. odoo-python
@@ -670,13 +670,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/l10n_co_dian/models/account_edi_xml_ubl_dian.py:0
 msgid "Every exportation product must have a brand."
-msgstr "Todos los productos paa exportación deben de tener una marca."
+msgstr "Todos los productos de exportación deben tener una marca."
 
 #. module: l10n_co_dian
 #. odoo-python
 #: code:addons/l10n_co_dian/models/account_edi_xml_ubl_dian.py:0
 msgid "Every exportation product must have a customs code."
-msgstr "Cada producto de exportación debe tener una marca."
+msgstr "Todos los productos de exportación deben tener un código arancelario."
 
 #. module: l10n_co_dian
 #. odoo-python
@@ -691,8 +691,9 @@ msgid ""
 "Exportation invoices require custom code in all the products, please fill in "
 "this information before validating the invoice"
 msgstr ""
-"Las facturas de exportación requieren de códigos de aduana para todos los "
-"productos, favor de configurar esta información antes de confirmar la factura"
+"Las facturas de exportación requieren que todos los productos cuenten con un "
+"código de partida arancelaria, completa esta información antes de confirmar "
+"la factura"
 
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.report_invoice_document
@@ -702,7 +703,7 @@ msgstr "Factura de venta"
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.view_account_move_form_inherit_l10n_co_dian
 msgid "Fetch Attached Document"
-msgstr "Obtener Attached Document"
+msgstr "Obtener documento adjunto"
 
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.report_invoice_document
@@ -712,7 +713,7 @@ msgstr "Generado por: Software Propio"
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.view_account_move_form_inherit_l10n_co_dian
 msgid "Get Status"
-msgstr "Obtener Estado"
+msgstr "Obtener estado"
 
 #. module: l10n_co_dian
 #: model:ir.model.fields,field_description:l10n_co_dian.field_l10n_co_dian_document__id
@@ -757,13 +758,13 @@ msgstr ""
 #. module: l10n_co_dian
 #: model:mail.template,name:l10n_co_dian.email_template_edi_invoice
 msgid "Invoice (DIAN): Sending"
-msgstr "Factura (DIAN): Envio"
+msgstr "Factura (DIAN): Enviando"
 
 #. module: l10n_co_dian
 #. odoo-python
 #: code:addons/l10n_co_dian/models/l10n_co_dian_document.py:0
 msgid "Invoice is being processed by the DIAN."
-msgstr "La factura esta siendo procesada por la DIAN"
+msgstr "La DIAN está procesando la factura."
 
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.report_invoice_document
@@ -811,7 +812,7 @@ msgstr "L10N Co Dian Documento"
 #: model:ir.model.fields,field_description:l10n_co_dian.field_res_partner__l10n_co_dian_enable_update_data
 #: model:ir.model.fields,field_description:l10n_co_dian.field_res_users__l10n_co_dian_enable_update_data
 msgid "L10N Co Dian Enable Update Data"
-msgstr "L10N Co Dian Activar Actualizacion de Datos"
+msgstr "DIAN - Habilitar actualización de datos"
 
 #. module: l10n_co_dian
 #: model:ir.model.fields,field_description:l10n_co_dian.field_account_bank_statement_line__l10n_co_dian_identifier_type
@@ -885,13 +886,13 @@ msgstr "NIT:"
 #. odoo-python
 #: code:addons/l10n_co_dian/models/account_edi_xml_ubl_dian.py:0
 msgid "No DIAN Operation Mode Matches"
-msgstr "Ningun Modo de Operación DIAN configurado para la operación"
+msgstr "No coinciden los modos de operación de la DIAN"
 
 #. module: l10n_co_dian
 #. odoo-python
 #: code:addons/l10n_co_dian/models/account_edi_xml_ubl_dian.py:0
 msgid "No DIAN certificate is configured on the company."
-msgstr "No hay un certificado digital DIAN configurado en la compañia."
+msgstr "No hay ningún certificado digital DIAN configurado en la empresa."
 
 #. module: l10n_co_dian
 #. odoo-python
@@ -1184,7 +1185,7 @@ msgstr "La factura debitada original no tiene CUFE."
 #. odoo-python
 #: code:addons/l10n_co_dian/models/account_edi_xml_ubl_dian.py:0
 msgid "The software PIN is required to compute the CUDE/CUDS."
-msgstr "Se requiere el PIN de software para calcular el CUDE/CUDS."
+msgstr "El NIP del software es necesario para calcular el CUDE/CUDS."
 
 #. module: l10n_co_dian
 #. odoo-python
@@ -1248,7 +1249,7 @@ msgstr "UBL 2.1"
 #. module: l10n_co_dian
 #: model:ir.model,name:l10n_co_dian.model_account_edi_xml_ubl_dian
 msgid "UBL DIAN Mandate extension"
-msgstr "UBL DIAN extension para mandatos"
+msgstr "UBL DIAN - Extensión para mandatos"
 
 #. module: l10n_co_dian
 #: model_terms:ir.ui.view,arch_db:l10n_co_dian.attached_document

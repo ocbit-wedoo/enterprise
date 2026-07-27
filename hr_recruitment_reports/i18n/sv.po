@@ -10,13 +10,14 @@
 # Anders Wallenquist <anders.wallenquist@vertel.se>, 2024
 # Martin Trigaux, 2024
 # Mikael Åkerberg <mikael.akerberg@mariaakerberg.com>, 2024
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-11-19 09:22+0000\n"
-"Last-Translator: Jakob Krabbe <jakob.krabbe@vertel.se>\n"
+"PO-Revision-Date: 2026-06-23 15:26+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "hr_recruitment_reports/sv/>\n"
 "Language: sv\n"
@@ -24,12 +25,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
 msgid "Analysis"
-msgstr "Analys"
+msgstr "Analyser"
 
 #. module: hr_recruitment_reports
 #. odoo-python
@@ -37,7 +38,7 @@ msgstr "Analys"
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__count
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__applicant_id
 msgid "Applicant"
-msgstr "Sökande"
+msgstr "Kandidat"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_action
@@ -56,13 +57,13 @@ msgstr "Sökandes namn"
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__create_date
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Application Date"
-msgstr ""
+msgstr "Ansökningsdatum"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__archived
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Archived"
-msgstr "Arkiverad"
+msgstr "Arkiverat"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__company_id
@@ -111,18 +112,18 @@ msgstr "Anställd"
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Hired Date"
-msgstr ""
+msgstr "Anställd datum"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__hiring_ratio
 msgid "Hired Ratio"
-msgstr ""
+msgstr "Anställningsandel"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Hiring ratio"
-msgstr ""
+msgstr "Anställningsandel"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__id
@@ -153,7 +154,7 @@ msgstr "Tjänst"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Last 365 Days Applicant"
-msgstr ""
+msgstr "Sökande de senaste 365 dagarna"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__medium_id
@@ -179,7 +180,7 @@ msgstr "Ingen data att visa"
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__process_duration
 msgid "Process Duration"
-msgstr ""
+msgstr "Processers varaktighet"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__user_id
@@ -198,17 +199,17 @@ msgstr "Rekryteringsanalys"
 #. module: hr_recruitment_reports
 #: model:ir.model,name:hr_recruitment_reports.model_hr_recruitment_report
 msgid "Recruitment Analysis Report"
-msgstr ""
+msgstr "Rapport med analyser om rekrytering"
 
 #. module: hr_recruitment_reports
 #: model:ir.model,name:hr_recruitment_reports.model_hr_recruitment_stage_report
 msgid "Recruitment Stage Analysis"
-msgstr "Analys av rekryteringsetappen"
+msgstr "Analyser av rekryteringsetapperna"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__refuse_reason_id
 msgid "Refuse Reason"
-msgstr "Avslag Orsak"
+msgstr "Anledning till avvisande"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__refused
@@ -216,7 +217,7 @@ msgstr "Avslag Orsak"
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__refused
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Refused"
-msgstr "Nekad"
+msgstr "Avvisad"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__source_id
@@ -233,14 +234,14 @@ msgstr "Källa"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_team_view_graph
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_source_pivot
 msgid "Source Analysis"
-msgstr ""
+msgstr "Analyser av källor"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__stage_id
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__stage_id
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Stage"
-msgstr "Läge"
+msgstr "Etapp"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__date_begin
@@ -253,13 +254,13 @@ msgstr "Startdatum"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "State"
-msgstr "Läge"
+msgstr "Status"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_team_action
 #: model:ir.ui.menu,name:hr_recruitment_reports.hr_applicant_report_team_menu
 msgid "Team Performance"
-msgstr ""
+msgstr "Prestanda per team"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_stage_report_action
@@ -282,6 +283,8 @@ msgid ""
 "This report allows you to compare various measures grouped by your sources "
 "of applicants (e.g. LinkedIn, Monster, etc.)."
 msgstr ""
+"Den här rapporten låter dig jämföra flera olika metoder grupperade efter "
+"sökandes källor (t.ex. LinkedIn, Monster, osv.)."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_action
@@ -289,16 +292,20 @@ msgid ""
 "This report allows you to follow the evolution of the number of applicants "
 "and hired employees over time."
 msgstr ""
+"Den här rapporten gör det möjligt att följa utvecklingen när det kommer till "
+"antalet sökande och nyanställningar över tid."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_job_action
 msgid "This report performs analysis on your recruitment."
 msgstr ""
+"Den här rapporten presenterar analyser relaterade till företagets "
+"rekrytering."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
 msgid "Time By Stages"
-msgstr "Tid per Etapp"
+msgstr "Tid per etapp"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_stage_report_job_action
@@ -306,25 +313,25 @@ msgstr "Tid per Etapp"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_pivot
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Time In Stage Analysis"
-msgstr "Tid i Etappen Analys"
+msgstr "Analyser av tid spenderad i varje etapp"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total Hired"
-msgstr ""
+msgstr "Totalt antal nyanställningar"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total Meetings"
-msgstr ""
+msgstr "Totalt antal möten"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total applicants"
-msgstr ""
+msgstr "Totalt antal sökande"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_stage_report_action

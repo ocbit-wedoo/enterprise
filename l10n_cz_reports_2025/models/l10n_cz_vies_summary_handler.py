@@ -50,7 +50,7 @@ class CzechVIESSummaryReportCustomHandler(models.AbstractModel):
         data = {
             'odoo_version': release.version,
             'veta_d': cz_utils.get_veta_d_vals(report, options),
-            'veta_p': cz_utils.get_veta_p_vals(sender_company),
+            'veta_p': cz_utils.get_veta_p_vals(sender_company, is_vies=True),
             'lines': lines,
         }
         xml_content = self.env['ir.qweb']._render('l10n_cz_reports_2025.cz_vies_summary_template', values=data)

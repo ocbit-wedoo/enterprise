@@ -484,9 +484,9 @@ class PosOrder(models.Model):
         # Already checked with RedirectWarning in _check_before_creating_new_session(), but check again to avoid
         # potential ugly traceback.
         if not self.company_id.l10n_br_edi_csc_identifier or not self.company_id.l10n_br_edi_csc_number:
-            raise ValidationError(
+            raise ValidationError(_(
                 "Please configure a CSC ID and CSC number in the Accounting settings."
-            )  # RedirectWarning not supported in POS.
+            ))  # RedirectWarning not supported in POS.
 
         qr_code_content = "|".join(
             [

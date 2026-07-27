@@ -55,17 +55,27 @@ class TestAccountOnlinePaymentBatch(AccountOnlineSynchronizationCommon):
             'payment_ids': [Command.set(payment.ids)],
         })
 
+        self.partner.vat = 'vat'
+        self.partner.contact_address_inline = 'contact_address_inline'
+        batch.journal_id.company_id.vat = 'vat'
+
         data = batch._prepare_payment_data()
 
         self.assertEqual(data, {
             'account_id': self.account_online_account.online_identifier,
             'batch_booking': batch.iso20022_batch_booking,
             'date': fields.Date.to_string(batch.date),
+            'payer_account_number': batch.journal_id.account_online_account_id.account_number,
+            'payer_address': batch.journal_id.company_id.partner_id.contact_address_inline,
+            'payer_name': batch.journal_id.company_id.name,
+            'payer_identification': batch.journal_id.company_id.vat,
             'payment_type': "bulk",
             'payments': [{
                 'amount': 100.0,
                 'account_number': self.partner_bank.sanitized_acc_number,
                 'account_type': 'IBAN',
+                'creditor_address': 'contact_address_inline',
+                'creditor_identification': 'vat',
                 'creditor_name': self.partner.name,
                 'currency': payment.currency_id.display_name,
                 'date': fields.Date.to_string(payment.date),

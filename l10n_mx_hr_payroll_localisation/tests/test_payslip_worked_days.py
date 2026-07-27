@@ -84,3 +84,24 @@ class TestPayrollWorkedDays(TestPayslipBase):
         self.payslip._compute_worked_days_line_ids()
         amount_to_be_paid = sum(line.amount for line in self.payslip.worked_days_line_ids)
         self.assertEqual(amount_to_be_paid, 1920)
+
+    def test_compute_sheets_with_higher_seniority(self):
+        """
+        Ensure that computing a payslip for an employee with more than the maximum
+        defined years in the holiday table does not raise a KeyError.
+        """
+        self.richard_emp.contract_ids[0].write({
+            'date_start': datetime(1985, 1, 1),
+            'wage': 100000
+        })
+        payslip = self.env['hr.payslip'].create({
+            'name': 'Payslip of Richard Quarter',
+            'employee_id': self.richard_emp.id,
+            'contract_id': self.richard_emp.contract_ids[0].id,
+            'struct_id': self.env.ref('l10n_mx_hr_payroll.hr_payroll_structure_mx_employee_salary').id,
+            'date_from': datetime(2026, 1, 1).date(),
+            'date_to': datetime(2026, 2, 1).date(),
+        })
+
+        # This should no longer raise KeyError
+        self.assertTrue(payslip.compute_sheet())

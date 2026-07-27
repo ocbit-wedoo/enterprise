@@ -689,6 +689,7 @@ export default class BarcodePickingModel extends BarcodeModel {
             }
         }
         selectedLine.location_dest_id = this.cache.getRecord('stock.location', id);
+        selectedLine.lastScannedDestination = selectedLine.location_dest_id;
         this._markLineAsDirty(selectedLine);
         this._clearScanData();
         return true;
@@ -946,13 +947,14 @@ export default class BarcodePickingModel extends BarcodeModel {
     }
 
     _needsScanDestinationBeforeValidation() {
-        return (
-            (this.config.restrict_scan_dest_location == "mandatory" ||
-                (this.config.restrict_scan_dest_location == "optional" &&
-                    this.config.barcode_validation_after_dest_location)) &&
-            !this.lastScanned.destLocation &&
-            (this.selectedLine || this.lastScanned.packageId)
-        );
+        if (
+            this.config.restrict_scan_dest_location == "mandatory" ||
+            (this.config.restrict_scan_dest_location == "optional" &&
+                this.config.barcode_validation_after_dest_location)
+        ) {
+            return this.currentState.lines.some((l) => l.wasUpdated && !l.lastScannedDestination);
+        }
+        return false;
     }
 
     async _validate() {

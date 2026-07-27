@@ -4,7 +4,7 @@ import json
 
 from datetime import datetime
 
-from odoo import Command
+from odoo import _, Command
 from odoo.tools import html2plaintext
 
 from urllib.parse import quote
@@ -50,14 +50,14 @@ class UrbanPiperClient:
             return response_json
         except requests.exceptions.ConnectionError as error:
             _logger.warning('Connection Error: %r with the given URL %r', error, access_url)
-            return {'errors': {'timeout': 'Cannot reach the server. Please try again later.'}}
+            return {'errors': {'timeout': _('Cannot reach the server. Please try again later.')}}
         except requests.exceptions.HTTPError as error:
             message = response_json.get("message")
             _logger.warning('HTTPError: %r', message or error)
             return {'errors': {'HTTPError': message or str(error)}}
         except json.decoder.JSONDecodeError as error:
             _logger.warning('JSONDecodeError: %r', error)
-            return {'errors': {'JSONDecodeError': 'Failed to parse server response.'}}
+            return {'errors': {'JSONDecodeError': _('Failed to parse server response.')}}
 
     def configure_webhook(self):
         """
@@ -201,8 +201,9 @@ class UrbanPiperClient:
                 'name': category.with_context(lang="en_US").name,
                 'sort_order': category.sequence,
                 'active': True,
-                'img_url': self._get_public_image_url(category),
             }
+            if img_url := self._get_public_image_url(category):
+                categ_dict['img_url'] = img_url
             if category.parent_id:
                 categ_dict['parent_ref_id'] = str(category.parent_id.id)
             name_translations = category.get_field_translations('name')
@@ -230,9 +231,10 @@ class UrbanPiperClient:
                 'food_type': product.urbanpiper_meal_type,
                 'category_ref_ids': [str(i) for i in product.pos_categ_ids.ids],
                 'recommended': product.is_recommended_on_urbanpiper,
-                'img_url': self._get_public_image_url(product),
                 'available': True,
             }
+            if img_url := self._get_public_image_url(product):
+                item['img_url'] = img_url
             name_translations = product.get_field_translations('name')
             description_translations = product.get_field_translations('public_description')
             translations = []
@@ -425,9 +427,12 @@ class UrbanPiperClient:
         """
         Get public image URL for the given record (product or category).
         Converts webp to jpeg if necessary.
+        Returns False if no image is available for the record.
         """
         base_url = self.config.urbanpiper_webhook_url
         image_data = record.image_1920 if record._name == 'product.template' else record.image_128
+        if not image_data:
+            return False
         attachment = record.env['ir.attachment'].search([
             ('res_model', '=', record._name),
             ('res_id', '=', record.id),

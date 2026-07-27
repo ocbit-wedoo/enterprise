@@ -87,6 +87,13 @@ class AnalyticLine(models.Model):
                 return []
             return get_unavailable_dates(company_calendar._work_intervals_batch(from_datetime, to_datetime)[False])
 
+        def get_current_user_unavailable_dates():
+            employee = self.env.user.employee_id
+            if employee:
+                calendar = employee.resource_calendar_id
+                return get_unavailable_dates(calendar._work_intervals_batch(from_datetime, to_datetime)[False])
+            return False
+
         if groupby == 'employee_id':
             employees = self.env['hr.employee'].browse(set(res_ids))
             availability_intervals_per_resource_id, calendar_work_intervals = employees.resource_id._get_valid_work_intervals(from_datetime, to_datetime)
@@ -108,6 +115,8 @@ class AnalyticLine(models.Model):
                 for resource_id, employee_id in employee_id_per_resource_id.items()
             }
             unavailability_intervals_per_employee_id[False] = company_unavailable_days
+        elif self.env.context.get('get_current_user_unavailable_dates', False):
+            unavailability_intervals_per_employee_id[False] = get_current_user_unavailable_dates()
         else:
             if self.env.user.resource_calendar_id.flexible_hours:
                 unavailability_intervals_per_employee_id[False] = []

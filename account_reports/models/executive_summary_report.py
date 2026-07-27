@@ -12,4 +12,4 @@ class ExecutiveSummaryReport(models.Model):
             raise UserError("NDays expressions of executive summary report don't support the 'group by' feature.")
 
         date_diff = fields.Date.from_string(options['date']['date_to']) - fields.Date.from_string(options['date']['date_from'])
-        return {'result': date_diff.days}
+        return {'result': date_diff.days + 1}

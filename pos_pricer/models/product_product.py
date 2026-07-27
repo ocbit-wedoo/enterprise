@@ -102,7 +102,7 @@ class PricerProductProduct(models.Model):
         variant_tag = ','.join(variants_tags)
 
         self.pricer_display_price = self.compute_prices(on_sale=self.pricer_sale_pricelist_id)
-        
+
         # If multiple suppliers / taxes are set, we only send the first one to Pricer
         supplier_id = self.seller_ids[0] if self.seller_ids else None
         taxes_id = self.product_tmpl_id.taxes_id[0] if self.product_tmpl_id.taxes_id else None
@@ -131,7 +131,7 @@ class PricerProductProduct(models.Model):
         _logger.debug("Data to send to Pricer API for product [%s] %s: %s",str(self.id), self.name, data_to_send)
 
         return data_to_send
-        
+
 
     def write(self, vals):
         """
@@ -153,8 +153,18 @@ class PricerProductProduct(models.Model):
         # We use '._origin' to avoid getting a NewId (as the record is in a transient state) instead of id
         for product in self:
             if product.pricer_sale_pricelist_id:
+                # temporarily patch _origin with dirty values so _get_product_price
+                # uses the latest unsaved values
+                original_lst_price = product._origin.lst_price
+                original_standard_price = product._origin.standard_price
+
                 product._origin.lst_price = product.lst_price
+                product._origin.standard_price = product.standard_price
                 computed_price = product.pricer_sale_pricelist_id._get_product_price(product._origin or product, quantity=1.0)
+
+                product._origin.lst_price = original_lst_price
+                product._origin.standard_price = original_standard_price
+
                 product.on_sale_price = product._origin.on_sale_price = computed_price
             else:
                 product.on_sale_price = 0.0

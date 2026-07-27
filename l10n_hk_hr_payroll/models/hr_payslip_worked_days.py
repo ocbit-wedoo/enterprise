@@ -34,7 +34,11 @@ class HrPayslipWorkedDays(models.Model):
                         ('date_to', '>=', worked_days.l10n_hk_leave_id.date_from),
                         ('state', 'in', ['done', 'paid']),
                     ], limit=1) or worked_days.payslip_id
-                sum_worked_days = worked_days.payslip_id.sum_worked_hours / worked_days.contract_id.resource_calendar_id.hours_per_day
+                calendar = worked_days.contract_id.resource_calendar_id
+                if calendar and calendar.hours_per_day:
+                    sum_worked_days = worked_days.payslip_id.sum_worked_hours / worked_days.contract_id.resource_calendar_id.hours_per_day
+                else:
+                    sum_worked_days = 0
                 daily_wage = worked_days.contract_id.contract_wage / (sum_worked_days or 1)
                 if worked_days.work_entry_type_id.l10n_hk_use_713:
                     daily_wage = max(daily_wage, payslip._get_moving_daily_wage())

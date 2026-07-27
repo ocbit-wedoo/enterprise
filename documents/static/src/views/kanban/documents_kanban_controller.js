@@ -39,6 +39,22 @@ export class DocumentsKanbanController extends DocumentsControllerMixin(KanbanCo
                 }
             }
         });
+
+        /**
+         * Open the trash if not open when an archived document was accessed.
+         */
+        onMounted(() => {
+            if (this.documentService.archivedDocumentRestored) {
+                if (this.env.searchModel.getSelectedFolderId() !== "TRASH") {
+                    const section = this.env.searchModel.getSections()[0];
+                    this.env.searchModel.toggleCategoryValue(section.id, "TRASH");
+                }
+                this.documentService.updateDocumentURL(undefined, [
+                    { data: this.documentService.archivedDocumentRestored },
+                ]);
+                this.documentService.archivedDocumentRestored = undefined;
+            }
+        });
     }
 
     /**

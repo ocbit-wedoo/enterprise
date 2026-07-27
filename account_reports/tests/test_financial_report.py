@@ -482,51 +482,52 @@ class TestFinancialReport(TestAccountReportsCommon):
     def test_financial_report_comparison(self):
         line_id = self._get_basic_line_dict_id_from_report_line_ref('account_reports.account_financial_report_bank_view0')
         options = self._generate_options(self.report, fields.Date.from_string('2019-01-01'), fields.Date.from_string('2019-12-31'))
-        options = self._update_comparison_filter(options, self.report, 'custom', 1, date_to=fields.Date.from_string('2018-12-31'))
-        options['unfolded_lines'] = [line_id]
 
-        lines = self.report._get_lines(options)
+        for period_order in ('descending', 'ascending'):
+            options = self._update_comparison_filter(options, self.report, 'custom', 1, date_to=fields.Date.from_string('2018-12-31'), period_order=period_order)
+            options['unfolded_lines'] = [line_id]
 
-        self.assertColumnPercentComparisonValues(
-            lines,
-            [
-                ('ASSETS',                                      '-80.0%',       'red'),
-                ('Current Assets',                              '27.7%',        'red'),
-                ('Bank and Cash Accounts',                      '10.0%',        'red'),
-                ('code102 account102',                          '0.0%',       'muted'),
-                ('code2 account2',                              '30.0%',        'red'),
-                ('Total Bank and Cash Accounts',                '10.0%',        'red'),
-                ('Receivables',                                 '4.4%',       'green'),
-                ('Current Assets',                              'n/a',        'muted'),
-                ('Prepayments',                                 '44.0%',        'red'),
-                ('Total Current Assets',                        '27.7%',        'red'),
-                ('Plus Fixed Assets',                           'n/a',        'muted'),
-                ('Plus Non-current Assets',                     '20.0%',      'green'),
-                ('Total ASSETS',                                '-80.0%',       'red'),
+            lines = self.report._get_lines(options)
 
-                ('LIABILITIES',                                 'n/a',        'muted'),
-                ('Current Liabilities',                         'n/a',        'muted'),
-                ('Current Liabilities',                         'n/a',        'muted'),
-                ('Payables',                                    'n/a',        'muted'),
-                ('Total Current Liabilities',                   'n/a',        'muted'),
-                ('Plus Non-current Liabilities',                'n/a',        'muted'),
-                ('Total LIABILITIES',                           'n/a',        'muted'),
+            self.assertColumnPercentComparisonValues(
+                lines,
+                [
+                    ('ASSETS',                                      '-80.0%',       'red'),
+                    ('Current Assets',                              '27.7%',        'red'),
+                    ('Bank and Cash Accounts',                      '10.0%',        'red'),
+                    ('code102 account102',                          '0.0%',       'muted'),
+                    ('code2 account2',                              '30.0%',        'red'),
+                    ('Total Bank and Cash Accounts',                '10.0%',        'red'),
+                    ('Receivables',                                 '4.4%',       'green'),
+                    ('Current Assets',                              'n/a',        'muted'),
+                    ('Prepayments',                                 '44.0%',        'red'),
+                    ('Total Current Assets',                        '27.7%',        'red'),
+                    ('Plus Fixed Assets',                           'n/a',        'muted'),
+                    ('Plus Non-current Assets',                     '20.0%',      'green'),
+                    ('Total ASSETS',                                '-80.0%',       'red'),
 
-                ('EQUITY',                                      '0.0%',       'muted'),
-                ('Unallocated Earnings',                        '-320.0%',      'red'),
-                ('Current Year Unallocated Earnings',           '-420.0%',      'red'),
-                ('Previous Years Unallocated Earnings',         'n/a',        'muted'),
-                ('Total Unallocated Earnings',                  '-320.0%',      'red'),
-                ('Retained Earnings',                           'n/a',        'muted'),
-                ('Current Year Retained Earnings',              'n/a',        'muted'),
-                ('Previous Years Retained Earnings',            'n/a',        'muted'),
-                ('Total Retained Earnings',                     'n/a',        'muted'),
-                ('Total EQUITY',                                '0.0%',       'muted'),
+                    ('LIABILITIES',                                 'n/a',        'muted'),
+                    ('Current Liabilities',                         'n/a',        'muted'),
+                    ('Current Liabilities',                         'n/a',        'muted'),
+                    ('Payables',                                    'n/a',        'muted'),
+                    ('Total Current Liabilities',                   'n/a',        'muted'),
+                    ('Plus Non-current Liabilities',                'n/a',        'muted'),
+                    ('Total LIABILITIES',                           'n/a',        'muted'),
 
+                    ('EQUITY',                                      '0.0%',       'muted'),
+                    ('Unallocated Earnings',                        '-320.0%',      'red'),
+                    ('Current Year Unallocated Earnings',           '-420.0%',      'red'),
+                    ('Previous Years Unallocated Earnings',         'n/a',        'muted'),
+                    ('Total Unallocated Earnings',                  '-320.0%',      'red'),
+                    ('Retained Earnings',                           'n/a',        'muted'),
+                    ('Current Year Retained Earnings',              'n/a',        'muted'),
+                    ('Previous Years Retained Earnings',            'n/a',        'muted'),
+                    ('Total Retained Earnings',                     'n/a',        'muted'),
+                    ('Total EQUITY',                                '0.0%',       'muted'),
 
-                ('LIABILITIES + EQUITY',                        '-80.0%',     'green'),
-            ]
-        )
+                    ('LIABILITIES + EQUITY',                        '-80.0%',     'green'),
+                ]
+            )
 
     def test_financial_report_horizontal_group(self):
         line_id = self._get_basic_line_dict_id_from_report_line_ref('account_reports.account_financial_report_receivable0')

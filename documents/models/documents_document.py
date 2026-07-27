@@ -1115,11 +1115,15 @@ class Document(models.Model):
     def get_formview_action(self, access_uid=None):
         """Returns the action used to open a many2one field into the documents view."""
         action = self.env["ir.actions.act_window"]._for_xml_id("documents.document_action")
+        default_folder_id = (
+            "TRASH" if not self.active
+            else self.id if self.type == "folder" else self.folder_id.id
+        )
         context = {
             **self.env.context,
             "no_documents_unique_folder_id": True,
-            "searchpanel_default_folder_id": self.id if self.type == "folder" else self.folder_id.id,
-            "documents_init_document_id": self.id if self.type != "folder" else False,
+            "searchpanel_default_folder_id": default_folder_id,
+            "documents_init_document_id": self.id if self.type != "folder" or not self.active else False,
             "documents_show_default_breadcrumb": True,
         }
         action.update({"context": context, "help": _("Upload a file or drag it here")})

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
 "PO-Revision-Date: 2026-03-30 06:15+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Arabic <https://translate.odoo.com/projects/odoo-18/"
@@ -19,6 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Weblate 5.16.2\n"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+" Extra Info: The scheduled time for the shipment was either not set or was "
+"in the past, so DHL has been sent a planned shipping time of one hour from "
+"now"
+msgstr ""
 
 #. module: delivery_dhl_rest
 #: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__0
@@ -196,8 +205,7 @@ msgstr "مفتاح الواجهة البرمجية لـ DHL مفقود، يرج�
 #. module: delivery_dhl_rest
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
-msgid ""
-"DHL API secret is missing, please modify your delivery method settings."
+msgid "DHL API secret is missing, please modify your delivery method settings."
 msgstr "سر الواجهة البرمجية لـ DHL مفقود، يرجى تعديل إعدادات طريقة التسليم."
 
 #. module: delivery_dhl_rest
@@ -290,14 +298,16 @@ msgstr ""
 #: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_ship_request
 msgid ""
 "Extra data to be sent in the request. It should be JSON-formatted.\n"
-"This functionality is advanced/technical and should only be used if you know what you are doing.\n"
+"This functionality is advanced/technical and should only be used if you know "
+"what you are doing.\n"
 "\n"
 "Example of a valid value: ```\n"
 "\"content\": {\"packages\": {\"description\": \"amazing package\"}}\n"
 "```\n"
 "\n"
 "With the above example, the description of each package will be updated.\n"
-"For more information, please refer to the DHL API documentation: https://developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
+"For more information, please refer to the DHL API documentation: https://"
+"developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
 msgstr ""
 "البيانات الإضافية التي سيتم إرسالها في الطلب. يجب أن تكون بتنسيق JSON.\n"
 "هذه الوظيفة متقدمة/تقنية ويجب استخدامها فقط إذا كنت ملماً بالأمر.\n"
@@ -499,7 +509,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
-"The address of your company warehouse is missing or wrong (Missing field(s) :\n"
+"The address of your company warehouse is missing or wrong (Missing "
+"field(s) :\n"
 " %s)"
 msgstr ""
 "عنوان شركتك/مستودعك غير موجود أو غير صحيح (الحقل (الحقول) المفقودة: \n"
@@ -509,7 +520,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
-"The estimated shipping price cannot be computed because the weight is missing for the following product(s): \n"
+"The estimated shipping price cannot be computed because the weight is "
+"missing for the following product(s): \n"
 " %s"
 msgstr ""
 "تعذر احتساب سعر الشحن لعدم تحديد الوزن للمنتج (المنتجات) التالية: \n"

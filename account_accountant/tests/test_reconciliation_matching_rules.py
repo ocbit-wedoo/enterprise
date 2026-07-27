@@ -1349,28 +1349,3 @@ class TestReconciliationMatchingRules(AccountTestInvoicingCommon):
                     'model': self.rule_1,
                 },
             })
-
-    @freeze_time('2019-01-01')
-    def test_matching_aml_reconciled_statement_line(self):
-        """ Test we won't match new transactions with manual operations
-        from a previously validated match
-        """
-        self.rule_1.write({
-            'match_text_location_label': False,
-            'match_partner_ids': [Command.clear()],
-        })
-
-        st_line = self._create_st_line(amount=500, payment_ref="q", partner_id=self.partner_1.id)
-        wizard = self.env['bank.rec.widget'].with_context(default_st_line_id=st_line.id).new({})
-        line = wizard.line_ids.filtered(lambda x: x.flag == 'auto_balance')
-        wizard._js_action_mount_line_in_edit(line.index)
-        line.account_id = self.company_data['default_account_receivable']
-        line.name = "test123"
-        wizard._line_value_changed_account_id(line)
-        wizard._action_validate()
-        self.assertTrue(wizard.move_id)
-
-        st_line_2 = self._create_st_line(amount=-1000, payment_ref="test123", partner_id=self.partner_1.id)
-        self._check_statement_matching(self.rule_1, {
-            st_line_2: {},
-        })

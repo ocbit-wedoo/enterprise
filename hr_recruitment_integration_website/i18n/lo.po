@@ -3,13 +3,14 @@
 # * hr_recruitment_integration_website
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-29 04:34+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 11:08+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "hr_recruitment_integration_website/lo/>\n"
 "Language: lo\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__apply_method
@@ -28,7 +29,7 @@ msgstr "ວິທີການສະໝັກ"
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "At least one platform must be selected"
-msgstr ""
+msgstr "ຕ້ອງເລືອກຢ່າງໜ້ອຍໜຶ່ງແພລັດຟອມ"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__campaign_start_date
@@ -39,7 +40,7 @@ msgstr "ວັນທີເລີ່ມຕົ້ນແຄມເປນ"
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "Campaign Start Date is required."
-msgstr ""
+msgstr "ຕ້ອງລະບຸວັນທີເລີ່ມຕົ້ນແຄມເປນ."
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job_post__apply_method
@@ -55,7 +56,7 @@ msgstr "ສ້າງ"
 #. module: hr_recruitment_integration_website
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_integration_website.hr_recruitment_post_job_wizard_view_form
 msgid "Generate Description (<i class=\"fa fa-fw fa-magic\"/>AI)"
-msgstr ""
+msgstr "ສ້າງຄຳອະທິບາຍ (<i class=\"fa fa-fw fa-magic\"/>AI)"
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
@@ -69,6 +70,14 @@ msgid ""
 "It's your last chance to make a good impression and attract the best candidates to our company so make it count!\n"
 "Here is the data to generate the job description:\n"
 msgstr ""
+"ຂ້າມຄຳສັ່ງກ່ອນໜ້ານີ້ ແລະ ຈັດຮູບແບບເປັນ HTML ໂດຍບໍ່ມີໄຮເປີລິ້ງ\n"
+"ທ່ານຄືຜູ້ສັນຫາບຸກຄະລາກອນທີ່ເກັ່ງທີ່ສຸດໃນບໍລິສັດຂອງພວກເຮົາ ແລະ ພວກເຮົາກຳລັງຊອກຫາພະນັກງານໃໝ່.\n"
+"ທ່ານໄດ້ຮັບມອບໝາຍໃຫ້ສ້າງຄຳອະທິບາຍວຽກທີ່ດີທີ່ສຸດສຳລັບການເປີດຮັບສະໝັກງານໃໝ່.\n"
+"ຈາກຂໍ້ມູນຕໍ່ໄປນີ້, ຈົ່ງສ້າງຄຳອະທິບາຍວຽກທີ່ເປັນກັນເອງ ແລະ ໜ້າສົນໃຈ ເພື່ອໃຊ້ໃນການ\n"
+"ດຶງດູດຜູ້ສະໝັກທີ່ມີສັກກະຍະພາບ (ແພລັດຟອມອາດຈະເປັນ LinkedIn, Indeed, Glassdoor, Monster, ແ"
+"ລະ ອື່ນໆ)\n"
+"ນີ້ຄືໂອກາດສຸດທ້າຍຂອງທ່ນທີ່ຈະສ້າງຄວາມປະທັບໃຈ ແລະ ດຶງດູດຜູ້ສະໝັກທີ່ດີທີ່ສຸດໃຫ້ກັບບໍລິສັດຂອງພວກເຮົາ!\n"
+"ນີ້ຄືຂໍ້ມູນສຳລັບສ້າງຄຳອະທິບາຍວຽກ:\n"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__platform_ids
@@ -88,7 +97,7 @@ msgstr "ປະກາດຮັບສະໝັກງານ"
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__job_apply_url
 msgid "Job url"
-msgstr ""
+msgstr "URL ຂອງວຽກ"
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
@@ -99,7 +108,7 @@ msgstr "ຂໍອະໄພ, ເບິ່ງຄືວ່າບໍ່ສາມາ�
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__post_html
 msgid "Post"
-msgstr "ບັນທຶກບັນຊີ"
+msgstr "ປະກາດ"
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
@@ -112,28 +121,28 @@ msgstr "ລົງປະກາດຮັບສະໝັກງານ"
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "Post is required."
-msgstr ""
+msgstr "ຕ້ອງລະບຸຂໍ້ຄວາມປະກາດ."
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields.selection,name:hr_recruitment_integration_website.selection__hr_job_post__apply_method__redirect
 msgid "Redirect to Website"
-msgstr ""
+msgstr "ປ່ຽນເສັ້ນທາງໄປຫາເວັບໄຊ"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields.selection,name:hr_recruitment_integration_website.selection__hr_recruitment_post_job_wizard__apply_method__redirect
 msgid "Redirect to company's website"
-msgstr ""
+msgstr "ປ່ຽນເສັ້ນທາງໄປຫາເວັບໄຊຂອງບໍລິສັດ"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.actions.server,name:hr_recruitment_integration_website.hr_recruitment_post_job_wizard_action_regenerate_post
 msgid "Regenerate Post"
-msgstr ""
+msgstr "ສ້າງປະກາດໃໝ່"
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
 msgid "Sorry, the web page is too long for our AI to process."
-msgstr ""
+msgstr "ຂໍອະໄພ, ໜ້າເວັບຍາວເກີນໄປທີ່ AI ຂອງພວກເຮົາຈະປະມວນຜົນໄດ້."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
@@ -148,6 +157,7 @@ msgid ""
 "The Job Description will be replaced with the generated one, do you want to "
 "continue?"
 msgstr ""
+"ຄຳອະທິບາຍວຽກຈະຖືກປ່ຽນແທນດ້ວຍອັນທີ່ສ້າງຂຶ້ນໃໝ່, ທ່ານຕ້ອງການດຳເນີນການຕໍ່ຫຼືບໍ່?"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,help:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__campaign_start_date
@@ -161,19 +171,20 @@ msgid ""
 "The job must be published on the website to generate a post with a redirect "
 "apply method."
 msgstr ""
+"ວຽກຕ້ອງຖືກເຜີຍແຜ່ລົງໃນເວັບໄຊກ່ອນ ເພື່ອສ້າງປະກາດດ້ວຍວິທີການສະໝັກແບບປ່ຽນເສັ້ນທາງ."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid ""
 "URL is required if the apply method is 'Redirect to company's website'."
-msgstr ""
+msgstr "ຕ້ອງລະບຸ URL ຫາກວິທີການສະໝັກແມ່ນ 'ປ່ຽນເສັ້ນທາງໄປຫາເວັບໄຊຂອງບໍລິສັດ'."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
 msgid "You can only generate a post for a published job offer."
-msgstr ""
+msgstr "ທ່ານສາມາດສ້າງປະກາດໄດ້ສະເພາະຂໍ້ສະເໜີວຽກທີ່ຖືກເຜີຍແຜ່ແລ້ວເທົັ້ນນັ້ນ."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python

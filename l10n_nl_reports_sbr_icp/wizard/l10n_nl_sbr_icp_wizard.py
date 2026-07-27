@@ -93,7 +93,7 @@ class L10nNlICPSBRWizard(models.TransientModel):
                 response = delivery_service.aanleveren(
                     berichtsoort='ICP',
                     aanleverkenmerk=aanleverkenmerk,
-                    identiteitBelanghebbende=factory.identiteitType(nummer=self._get_sbr_identifier() or (self.env.company.vat[2:] if self.env.company.vat.startswith('NL') else self.env.company.vat), type='BTW'),
+                    identiteitBelanghebbende=factory.identiteitType(nummer=self._get_sbr_identifier(options), type='BTW'),
                     rolBelanghebbende='Bedrijf',
                     berichtInhoud=factory.berichtInhoudType(mimeType='application/xml', bestandsnaam='ICPReport.xbrl', inhoud=report_file),
                     autorisatieAdres='http://geenausp.nl',

@@ -1,26 +1,29 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_helpdesk
+# * website_helpdesk
 #
 # Translators:
 # Wil Odoo, 2025
 # Jan Zorko, 2025
 # Aleš Pipan, 2025
 #
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Aleš Pipan, 2025\n"
-"Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
+"PO-Revision-Date: 2026-06-23 12:25+0000\n"
+"Last-Translator: Žiga Trček <ziga.trcek@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18/"
+"website_helpdesk/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team
@@ -40,6 +43,9 @@ msgid ""
 "                                            <span "
 "class=\"s_website_form_mark\"> *</span>"
 msgstr ""
+"<span class=\"s_website_form_label_content\">Napišite Vprašanje</span>\n"
+"                                            <span "
+"class=\"s_website_form_mark\"> *</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
@@ -51,7 +57,7 @@ msgstr "<span class=\"s_website_form_label_content\">Priponka</span>"
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.ticket_submit_form
 msgid "<span class=\"s_website_form_label_content\">Company Name</span>"
-msgstr ""
+msgstr "<span class=\"s_website_form_label_content\">Ime Podjetja</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
@@ -61,6 +67,9 @@ msgid ""
 "                                            <span "
 "class=\"s_website_form_mark\"> *</span>"
 msgstr ""
+"<span class=\"s_website_form_label_content\">E-mail Naslov</span>\n"
+"                                            <span "
+"class=\"s_website_form_mark\"> *</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
@@ -70,12 +79,15 @@ msgid ""
 "                                            <span "
 "class=\"s_website_form_mark\"> *</span>"
 msgstr ""
+"<span class=\"s_website_form_label_content\">Polno Ime</span>\n"
+"                                            <span "
+"class=\"s_website_form_mark\"> *</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.ticket_submit_form
 msgid "<span class=\"s_website_form_label_content\">Helpdesk Team</span>"
-msgstr ""
+msgstr "<span class=\"s_website_form_label_content\">Ekipa Za Podporo</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
@@ -85,6 +97,9 @@ msgid ""
 "                                            <span "
 "class=\"s_website_form_mark\"> *</span>"
 msgstr ""
+"<span class=\"s_website_form_label_content\">Zadeva</span>\n"
+"                                            <span "
+"class=\"s_website_form_mark\"> *</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
@@ -96,7 +111,7 @@ msgstr ""
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.navbar
 msgid "<span class=\"text-muted\">Results for</span>"
-msgstr ""
+msgstr "<span class=\"text-600\">Rezultati iskanja za</span>"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.navbar_search_date
@@ -253,7 +268,7 @@ msgstr "Polno ime"
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.ticket_submited
 msgid "Go to Homepage"
-msgstr ""
+msgstr "Pojdi Na Domačo Stran"
 
 #. module: website_helpdesk
 #. odoo-python
@@ -322,7 +337,7 @@ msgstr "Prejšnje leto"
 #. odoo-javascript
 #: code:addons/website_helpdesk/static/src/js/website_helpdesk_form_editor.js:0
 msgid "Message Subject"
-msgstr ""
+msgstr "Zadeva"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.search_results
@@ -349,7 +364,7 @@ msgstr ""
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.ticket_submited
 msgid "Our team will get right on it."
-msgstr ""
+msgstr "Naša ekipa bo pričela z reševanjem kar se da hitro."
 
 #. module: website_helpdesk
 #. odoo-javascript
@@ -386,7 +401,7 @@ msgstr "Seo ime"
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team_form_1
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.ticket_submit_form
 msgid "Submit Ticket"
-msgstr ""
+msgstr "Pošlji Zahtevek"
 
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.team
@@ -492,4 +507,4 @@ msgstr ""
 #. module: website_helpdesk
 #: model_terms:ir.ui.view,arch_db:website_helpdesk.search_results
 msgid "go back to help page"
-msgstr ""
+msgstr "pojdi nazaj na stran za pomoč"

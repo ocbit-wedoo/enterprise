@@ -5,7 +5,7 @@ from datetime import date
 from calendar import monthrange
 
 from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
+from odoo.exceptions import ValidationError, UserError
 from odoo.tools.float_utils import float_round
 
 SWISS_LANGUAGES = ["it_IT", "de_DE", "de_CH", "fr_FR", "fr_CH", "en_EN", "en_US"]
@@ -187,6 +187,14 @@ class HrPayslip(models.Model):
             payslips._compute_l10n_ch_is_code()
             payslips._compute_l10n_ch_lpp_not_insured()
             super().action_refresh_from_work_entries()
+
+    def refund_sheet(self):
+        if any(payslip.struct_id.country_id.code == "CH" for payslip in self):
+            raise UserError(_(
+                "Refunds are not supported for Swiss payroll as only one payslip per month is permitted. "
+                "Please cancel this payslip instead and generate a new one to apply corrections."
+            ))
+        return super().refund_sheet()
 
     def _get_base_local_dict(self):
         res = super()._get_base_local_dict()
@@ -379,15 +387,3 @@ class HrPayslip(models.Model):
             if low <= x <= high:
                 return min_amount, rate
         return 0, 0
-
-    def action_payslip_payment_report(self, export_format='iso20022_ch'):
-        action = super().action_payslip_payment_report()
-        if self.company_id.country_code != 'CH':
-            return action
-        action.update({
-            'context': {
-                **action['context'],
-                'default_export_format': export_format,
-            },
-        })
-        return action

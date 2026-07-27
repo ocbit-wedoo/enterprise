@@ -340,3 +340,22 @@ class TestEdiXmls(TestPeEdiCommon):
         with file_open('l10n_pe_edi/tests/test_files/foreign_customer.xml', 'rb') as expected_invoice_file:
             expected_etree = self.get_xml_tree_from_string(expected_invoice_file.read())
         self.assertXmlTreeEqual(current_etree, expected_etree)
+
+    def test_reversal_cancel_reason_mapping(self):
+        """Test that the cancel and credit reason in the reversal wizard are correctly mapped to the fields in the Peruvian EDI tab."""
+
+        move = self._create_invoice()
+        move.action_post()
+
+        reversal_wizard = self.env['account.move.reversal'].with_context(
+            active_model="account.move",
+            active_ids=move.ids
+        ).create({
+            'reason': 'Test reason',
+            'journal_id': move.journal_id.id,
+            'l10n_pe_edi_refund_reason': '01',
+        })
+        action = reversal_wizard.reverse_moves()
+        reverse_move = self.env['account.move'].browse(action['res_id'])
+        self.assertEqual(reverse_move.l10n_pe_edi_cancel_reason, 'Test reason')
+        self.assertEqual(reverse_move.l10n_pe_edi_refund_reason, '01')

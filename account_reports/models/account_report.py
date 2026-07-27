@@ -1629,7 +1629,7 @@ class AccountReport(models.Model):
     def _init_options_search_bar(self, options, previous_options):
         if self.search_bar:
             options['search_bar'] = True
-            if 'default_filter_accounts' not in self._context and 'filter_search_bar' in previous_options:
+            if 'filter_search_bar' in previous_options:
                 options['filter_search_bar'] = previous_options['filter_search_bar']
 
     ####################################################
@@ -2674,7 +2674,10 @@ class AccountReport(models.Model):
         # Manage growth comparison
         if options.get('column_percent_comparison') == 'growth':
             for line in lines:
-                first_value, second_value = line['columns'][0]['no_format'], line['columns'][1]['no_format']
+                if options['comparison']['period_order'] == 'descending':
+                    first_value, second_value = line['columns'][0]['no_format'], line['columns'][1]['no_format']
+                else:
+                    first_value, second_value = line['columns'][1]['no_format'], line['columns'][0]['no_format']
 
                 green_on_positive = True
                 model, line_id = self._get_model_info_from_id(line['id'])
@@ -5808,7 +5811,7 @@ class AccountReport(models.Model):
                     for prefix_subline in prefix_sublines:
                         prefix_expr_label_result = prefix_expression_totals_by_group.setdefault(column_data['column_group_key'], {})
                         prefix_expr_label_result.setdefault(column_data['expression_label'], 0)
-                        prefix_expr_label_result[column_data['expression_label']] += (prefix_subline['columns'][column_index]['no_format'] or 0)
+                        prefix_expr_label_result[column_data['expression_label']] += (prefix_subline['columns'][column_index].get('no_format') or 0)
 
             column_values = []
             for column in options['columns']:
@@ -7392,8 +7395,14 @@ class AccountReportLine(models.Model):
             # Growth comparison column.
             if options.get('column_percent_comparison') == 'growth':
                 compared_expression = self.expression_ids.filtered(lambda expr: expr.label == group_line_dict['columns'][0]['expression_label'])
+
+                if options['comparison']['period_order'] == 'descending':
+                    first_value, second_value = group_line_dict['columns'][0]['no_format'], group_line_dict['columns'][1]['no_format']
+                else:
+                    first_value, second_value = group_line_dict['columns'][1]['no_format'], group_line_dict['columns'][0]['no_format']
+
                 group_line_dict['column_percent_comparison_data'] = self.report_id._compute_column_percent_comparison_data(
-                    options, group_line_dict['columns'][0]['no_format'], group_line_dict['columns'][1]['no_format'], green_on_positive=compared_expression.green_on_positive)
+                    options, first_value, second_value, green_on_positive=compared_expression.green_on_positive)
             # Manage budget comparison
             elif options.get('column_percent_comparison') == 'budget':
                 self.report_id._set_budget_column_comparisons(options, group_line_dict)

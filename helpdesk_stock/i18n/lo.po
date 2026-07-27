@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-29 20:06+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 10:36+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "helpdesk_stock/lo/>\n"
 "Language: lo\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_stock_return_picking__partner_id
@@ -28,7 +28,7 @@ msgstr "ຄຸ່ຄ້າ"
 #. module: helpdesk_stock
 #: model_terms:ir.ui.view,arch_db:helpdesk_stock.view_stock_return_picking_form_inherit_helpdesk_stock
 msgid "Delivery to Return"
-msgstr ""
+msgstr "ການຈັດສົ່ງເພື່ອສົ່ງຄືນ"
 
 #. module: helpdesk_stock
 #: model:ir.model.fields,help:helpdesk_stock.field_helpdesk_ticket__tracking
@@ -38,7 +38,7 @@ msgstr "ຮັບປະກັນການຕິດຕາມສິນຄ້າທ
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_helpdesk_ticket__has_partner_picking
 msgid "Has Partner Picking"
-msgstr ""
+msgstr "ມີການເບີກສິນຄ້າຂອງຄູ່ຄ້າ"
 
 #. module: helpdesk_stock
 #: model:ir.model,name:helpdesk_stock.model_helpdesk_ticket
@@ -68,6 +68,8 @@ msgid ""
 "Product this ticket is about. If selected, only the sales orders, deliveries"
 " and invoices including this product will be visible."
 msgstr ""
+"ສິນຄ້າທີ່ກ່ຽວຂ້ອງກັບທິກເກັດນີ້. ຫາກເລືອກ, ຈະສະແດງສະເພາະໃບສັ່ງຂາຍ, ການຈັດສົ່ງ ແລະ ໃບແຈ້ງໜີ້ທີ່ມີສິນຄ້ານີ້"
+"ເທົ່ານັ້ນ."
 
 #. module: helpdesk_stock
 #: model_terms:ir.ui.view,arch_db:helpdesk_stock.helpdesk_ticket_view_form_inherit_stock_user
@@ -78,19 +80,19 @@ msgstr "ສົ່ງຄືນ"
 #. odoo-python
 #: code:addons/helpdesk_stock/models/stock_picking.py:0
 msgid "Return %(status)s"
-msgstr ""
+msgstr "ສົ່ງຄືນ %(status)s"
 
 #. module: helpdesk_stock
 #. odoo-python
 #: code:addons/helpdesk_stock/models/helpdesk_ticket.py:0
 #: model:ir.model.fields,field_description:helpdesk_stock.field_helpdesk_ticket__picking_ids
 msgid "Return Orders"
-msgstr ""
+msgstr "ລາຍການສົ່ງຄືນ"
 
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_helpdesk_ticket__pickings_count
 msgid "Return Orders Count"
-msgstr ""
+msgstr "ຈຳນວນລາຍການສົ່ງຄືນ"
 
 #. module: helpdesk_stock
 #: model:ir.model,name:helpdesk_stock.model_stock_return_picking
@@ -110,22 +112,22 @@ msgstr "ການວິເຄາະສະຖານະ SLA"
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_stock_return_picking__sale_order_id
 msgid "Sales Order"
-msgstr "ໃບສັ່ງຊື້"
+msgstr "ໃບສັ່ງຂາຍ"
 
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_stock_return_picking__suitable_picking_ids
 msgid "Suitable Picking"
-msgstr ""
+msgstr "ການເບີກສິນຄ້າທີ່ເໝາະສົມ"
 
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_stock_return_picking__suitable_sale_order_ids
 msgid "Suitable Sale Order"
-msgstr ""
+msgstr "ໃບສັ່ງຂາຍທີ່ເໝາະສົມ"
 
 #. module: helpdesk_stock
 #: model:ir.model.fields,field_description:helpdesk_stock.field_stock_return_picking__ticket_id
 msgid "Ticket"
-msgstr "ປີກີ້"
+msgstr "ທິກເກັດ"
 
 #. module: helpdesk_stock
 #: model:ir.model,name:helpdesk_stock.model_helpdesk_ticket_report_analysis
@@ -140,4 +142,4 @@ msgstr "ການຕິດຕາມ"
 #. module: helpdesk_stock
 #: model:ir.model,name:helpdesk_stock.model_stock_picking
 msgid "Transfer"
-msgstr "ໂອນ"
+msgstr "ການໂອນ"

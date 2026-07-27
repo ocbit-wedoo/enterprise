@@ -8,13 +8,14 @@
 # Martin Trigaux, 2024
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:57+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "project_enterprise/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: project_enterprise
 #. odoo-python
@@ -36,8 +37,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" title=\"Dependency "
 "warning\"/>"
 msgstr ""
-"<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" title=\"Dependency "
-"warning\"/>"
+"<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" title=\"Advarsel om "
+"afhængigheder\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_sharing_project_task_view_kanban_inherited
@@ -60,7 +61,8 @@ msgstr "<i class=\"fa fa-long-arrow-right\" title=\"Arrow\"/>"
 msgid ""
 "<i class=\"fa fa-random me-2\" role=\"img\" title=\"Planning overlap\"/>"
 msgstr ""
-"<i class=\"fa fa-random me-2\" role=\"img\" title=\"Planning overlap\"/>"
+"<i class=\"fa fa-random me-2\" role=\"img\" title=\"Overlap i "
+"planlægningen\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
@@ -274,12 +276,12 @@ msgstr "Opgave"
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_project_task_recurrence
 msgid "Task Recurrence"
-msgstr "Opgave Gentagelse"
+msgstr "Opgavegentagelse"
 
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_report_project_task_user
 msgid "Tasks Analysis"
-msgstr "Opgave analyse"
+msgstr "Opgaveanalyse"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_conflict_task_project_enterprise
@@ -297,7 +299,7 @@ msgstr "Opgaverne for de kommende perioder er planlagt uden problemer."
 #: code:addons/project_enterprise/models/project_task.py:0
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_conflict_task_project_enterprise
 msgid "Tasks in Conflict"
-msgstr "Opgaver der konflikter"
+msgstr "Opgaver i konflikt"
 
 #. module: project_enterprise
 #: model:ir.model.constraint,message:project_enterprise.constraint_project_task_planned_dates_check
@@ -343,7 +345,7 @@ msgstr ""
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.res_config_settings_view_form
 msgid "Timesheets"
-msgstr "Timesedler"
+msgstr "Tidsregistreringer"
 
 #. module: project_enterprise
 #. odoo-javascript
@@ -355,7 +357,7 @@ msgstr "Ikke tildelt"
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
 msgid "Unschedule"
-msgstr "Ikke planlagt"
+msgstr "Annullér planlægning"
 
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_res_users

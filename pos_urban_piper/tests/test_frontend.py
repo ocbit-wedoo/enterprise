@@ -1,3 +1,7 @@
+# Part of Odoo. See LICENSE file for full copyright and licensing details.
+
+import base64
+
 import odoo.tests
 from odoo import Command
 from odoo.addons.website.tools import MockRequest
@@ -41,12 +45,15 @@ class TestPosUrbanPiperCommon(TestPointOfSaleHttpCommon):
         cls.MockRequest = staticmethod(MockRequest)
 
     def _test_order_json(self, data):
-        taxes = data['product_id'].taxes_id.compute_all(
-            data['product_id'].list_price, data['product_id'].currency_id, data['quantity']
+        product = data['product_id']
+        tax_types = product.taxes_id.flatten_taxes_hierarchy().mapped('price_include')
+        taxes = product.taxes_id.compute_all(
+            product.list_price, product.currency_id, data['quantity']
         )
-        unit_price = data['product_id'].taxes_id.compute_all(
-            data['product_id'].list_price, data['product_id'].currency_id, 1
-        )['total_excluded']
+        unit_prices = product.taxes_id.compute_all(
+            product.list_price, product.currency_id, 1
+        )
+        unit_price = unit_prices['total_included'] if tax_types and tax_types[0] else unit_prices['total_excluded']
         price_with_tax = taxes['total_included']
         price_without_tax = taxes['total_excluded']
         delivery_datetime = data['delivery_datetime']
@@ -69,10 +76,10 @@ class TestPosUrbanPiperCommon(TestPointOfSaleHttpCommon):
             "order": {
                 "next_states": ["Acknowledged", "Food Ready", "Dispatched", "Completed", "Cancelled"],
                 "items": [{
-                    "food_type": data['product_id'].urbanpiper_meal_type,
+                    "food_type": product.urbanpiper_meal_type,
                     "total": price_without_tax,
                     "id": 1111111,
-                    "title": data['product_id'].name,
+                    "title": product.name,
                     "total_with_tax": price_with_tax,
                     "discounts": [],
                     "tags": [],
@@ -305,6 +312,31 @@ class TestFrontend(TestPosUrbanPiperCommon):
         self.assertEqual(order.lines[2].tax_ids.id, False)
         self.assertEqual(order.lines[3].tax_ids.id, self.tax_15.id)
 
+    def test_inclusive_tax_type_with_normal_order_line(self):
+        self.tax_15 = self.env['account.tax'].create({
+            'name': '15% VAT Inclusive',
+            'amount': 15,
+            'amount_type': 'percent',
+            'price_include_override': 'tax_included',
+        })
+        self.product_1.taxes_id = [(6, 0, self.tax_15.ids)]
+        self.urban_piper_config.open_ui()
+        with MockRequest(self.env):
+            self.make_test_order({
+                'product_id': self.product_1,
+                'quantity': 2,
+                'delivery_instruction': 'Leave at door',
+                'delivery_provider_id': self.env.ref('pos_urban_piper.pos_delivery_provider_justeat'),
+                'delivery_identifier': "order_inclusive_tax",
+                'config_id': self.urban_piper_config,
+            })
+        order = self.env['pos.order'].search([('delivery_identifier', '=', 'order_inclusive_tax')])
+        line = order.lines[0]
+        self.assertEqual(line.tax_ids.id, self.tax_15.id)
+        self.assertAlmostEqual(line.price_unit, 100.0, places=2)
+        self.assertAlmostEqual(line.price_subtotal, 173.91, places=2)
+        self.assertAlmostEqual(line.price_subtotal_incl, 200.0, places=2)
+
     def test_charges_sent_to_urbanpiper(self):
         up = UrbanPiperClient(self.urban_piper_config)
         delivery_charge_product = self.env.ref('pos_urban_piper.product_delivery_charges')
@@ -341,3 +373,26 @@ class TestFrontend(TestPosUrbanPiperCommon):
         self.assertEqual(len(prep_line), 1)
         self.assertEqual(prep_line.product_quantity, 1)
         self.assertEqual(prep_line.product_cancelled, 1)
+
+    def test_category_image_url_payload(self):
+        self.urban_piper_config.urbanpiper_webhook_url = 'http://localhost:8069'
+        category = self.env['pos.category'].create({'name': 'Test Category', 'sequence': 21})
+        up = UrbanPiperClient(self.urban_piper_config)
+        category_data = up._prepare_categories_data(category)
+
+        self.assertEqual(len(category_data), 1)
+        self.assertEqual(category_data[0]['name'], 'Test Category')
+        self.assertEqual(category_data[0]['sort_order'], 21)
+        self.assertFalse('img_url' in category_data[0])
+
+        image = """<svg height='180' width='180'>
+            <rect width="180" height="180" style="fill: #FF5F1F;" />
+            <text fill='#EEE' font-size='96' text-anchor='middle' x='90' y='125'>P</text>
+        </svg>"""
+        category.image_128 = base64.b64encode(image.encode()).decode()
+        category_data = up._prepare_categories_data(category)
+
+        self.assertEqual(len(category_data), 1)
+        self.assertEqual(category_data[0]['name'], 'Test Category')
+        self.assertTrue('img_url' in category_data[0])
+        self.assertIn('http://localhost:8069/web/image/', category_data[0]['img_url'])

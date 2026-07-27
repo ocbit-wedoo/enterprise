@@ -19,9 +19,6 @@ registry.category("web_tour.tours").add("FiskalyTour", {
             FloorScreen.clickTable("5"),
             ProductScreen.clickPartnerButton(),
             ProductScreen.clickCustomer("AA Test Partner"),
-            // Customer without street name or a zip code is not allowed
-            Dialog.confirm(),
-            ProductScreen.clickCustomer("A powerful PoS man!"),
             ProductScreen.addOrderline("Coca-Cola", "1", "3"),
             ProductScreen.clickOrderButton(),
             Chrome.waitRequest(),

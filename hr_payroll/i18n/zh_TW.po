@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:45+0000\n"
-"PO-Revision-Date: 2026-05-15 11:25+0000\n"
+"PO-Revision-Date: 2026-06-13 09:15+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-18/hr_payroll/zh_Hant/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll
 #. odoo-python
@@ -571,7 +571,7 @@ msgstr "補助"
 #. module: hr_payroll
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_salary_rule__condition_select__none
 msgid "Always True"
-msgstr "總為真"
+msgstr "永遠是"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_edit_payslip_line__amount
@@ -730,7 +730,7 @@ msgstr "結構中的可用性"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip_input_type__available_in_attachments
 msgid "Available in adjustments"
-msgstr ""
+msgstr "調整項目可用"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_payslip_input_type_view_search
@@ -1262,12 +1262,12 @@ msgstr "建立一個新合約"
 #. module: hr_payroll
 #: model_terms:ir.actions.act_window,help:hr_payroll.action_salary_rule_form
 msgid "Create a new salary rule"
-msgstr "新增工資規則"
+msgstr "新增薪酬規則"
 
 #. module: hr_payroll
 #: model_terms:ir.actions.act_window,help:hr_payroll.hr_rule_parameter_action
 msgid "Create a new salary rule parameter"
-msgstr "新增工資規則參數"
+msgstr "新增薪酬規則參數"
 
 #. module: hr_payroll
 #: model_terms:ir.actions.act_window,help:hr_payroll.action_view_hr_payroll_structure_list_form
@@ -1564,7 +1564,7 @@ msgstr "說明"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__disabled
 msgid "Disabled"
-msgstr "停用"
+msgstr "殘疾"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_payroll_edit_payslip_lines_form_wizard
@@ -2082,7 +2082,7 @@ msgstr "生成工資單"
 #: code:addons/hr_payroll/models/hr_payslip.py:0
 #: code:addons/hr_payroll/models/hr_payslip_run.py:0
 msgid "Generate a Payment Report"
-msgstr ""
+msgstr "產生付款報告"
 
 #. module: hr_payroll
 #: model:ir.actions.server,name:hr_payroll.action_generate_payslips_from_work_entries
@@ -2873,13 +2873,13 @@ msgstr "對於以下項目，找不到代碼為「%(code)s」的規則參數。�
 #. odoo-python
 #: code:addons/hr_payroll/models/hr_payslip.py:0
 msgid "No running contract over payslip period"
-msgstr ""
+msgstr "工資單期間內無生效合約"
 
 #. module: hr_payroll
 #. odoo-python
 #: code:addons/hr_payroll/models/hr_payslip.py:0
 msgid "Non-recurring performance-related benefits"
-msgstr ""
+msgstr "非經常性績效掛鈎福利"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__is_non_resident
@@ -3848,7 +3848,7 @@ msgstr "規則"
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_salary_attachment__state__open
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_attachment_view_form
 msgid "Running"
-msgstr "執行中"
+msgstr "生效中"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__sim_card
@@ -3919,7 +3919,7 @@ msgstr "薪酬計算"
 #. module: hr_payroll
 #: model:ir.model,name:hr_payroll.model_hr_salary_rule
 msgid "Salary Rule"
-msgstr "薪酬制度"
+msgstr "薪酬規則"
 
 #. module: hr_payroll
 #: model:ir.actions.act_window,name:hr_payroll.action_hr_salary_rule_category
@@ -3939,17 +3939,17 @@ msgstr "薪酬規則類別"
 #: model:ir.model,name:hr_payroll.model_hr_rule_parameter
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_rule_parameter_view_form
 msgid "Salary Rule Parameter"
-msgstr "工資規則參數"
+msgstr "薪酬規則參數"
 
 #. module: hr_payroll
 #: model:ir.model,name:hr_payroll.model_hr_rule_parameter_value
 msgid "Salary Rule Parameter Value"
-msgstr "工資規則參數值"
+msgstr "薪酬規則參數值"
 
 #. module: hr_payroll
 #: model:ir.actions.act_window,name:hr_payroll.hr_rule_parameter_action
 msgid "Salary Rule Parameters"
-msgstr "工資規則參數"
+msgstr "薪酬規則參數"
 
 #. module: hr_payroll
 #: model:ir.actions.act_window,name:hr_payroll.action_salary_rule_form
@@ -4348,6 +4348,8 @@ msgid ""
 "The following %(model_name)s are missing a %(field_name)s:\n"
 "    • %(names)s"
 msgstr ""
+"以下 %(model_name)s 缺漏 %(field_name)s 欄位：\n"
+"    • %(names)s"
 
 #. module: hr_payroll
 #. odoo-python
@@ -4366,6 +4368,8 @@ msgid ""
 "The following payslips company differs from the batch's company:\n"
 "%s"
 msgstr ""
+"以下工資單的公司，與批次的公司不同：\n"
+"%s"
 
 #. module: hr_payroll
 #. odoo-python
@@ -4536,7 +4540,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_payroll/wizard/hr_payroll_payslips_by_employees.py:0
 msgid "Time intervals to look for:%s"
-msgstr "需要尋找的時間間隔： %s"
+msgstr "相關時間段：%s"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_headcount__date_to
@@ -4756,7 +4760,7 @@ msgstr "版本"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_rule__appears_on_employee_cost_dashboard
 msgid "View on Employer Cost Dashboard"
-msgstr "在僱主成本Dashboard查看"
+msgstr "在僱主成本 Dashboard 顯示"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_rule__appears_on_payroll_report

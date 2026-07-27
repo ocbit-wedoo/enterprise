@@ -15,13 +15,14 @@
 # Sanne Kristensen <sanne@vkdata.dk>, 2025
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:44+0000\n"
-"PO-Revision-Date: 2026-05-17 06:00+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 14:06+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "web_studio/da/>\n"
 "Language: da\n"
@@ -29,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: web_studio
 #. odoo-python
@@ -56,16 +57,15 @@ msgstr ""
 "                <p class=\"o_view_nocontent_smiling_face\">\n"
 "                    Dette er din nye handling.\n"
 "                </p>\n"
-"                <p>Per standard indeholder den en liste og en formular "
-"visning, og muligvis\n"
-"                    andre slags visninger, afhængig af de indstillinger du "
+"                <p>Den indeholder som standard en liste og en "
+"formularvisning og muligvis\n"
+"                    andre typer visninger, afhængig af de indstillinger du "
 "vælger for din model.\n"
 "                </p>\n"
 "                <p>\n"
-"                    Du kan begynde tilpasning af disse skærme ved at klikke "
-"på Studio ikonet øverst\n"
-"                    oppe i højre hjørne (du kan også tilpasse denne her "
-"hjælpe besked der.)\n"
+"                    Du kan tilpasse disse skærme ved at klikke på Studio-"
+"ikonet i øverste\n"
+"                    højre hjørne (der kan du også redigere denne besked.)\n"
 "                </p>\n"
 "            "
 
@@ -137,28 +137,28 @@ msgid ""
 "%(user_name)s has set approval rights from %(previous_approvers)s to %"
 "(next_approvers)s"
 msgstr ""
-"%(user_name)s har ændret godkendelsesrettighederne fra %"
-"(previous_approvers)s til %(next_approvers)s"
+"%(user_name)s har ændret godkendelsesrettighederne fra %(previous_approvers)"
+"s til %(next_approvers)s"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/studio_approval.py:0
 msgid "%(user_name)s revoked their delegation to %(revoked_users)s"
 msgstr ""
-"%(user_name)s har trukket overførselsrettighederne givet til %"
-"(revoked_users)s tilbage"
+"%(user_name)s har trukket overførselsrettighederne givet til %(revoked_users)"
+"s tilbage"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/controllers/report.py:0
 msgid "%s Report"
-msgstr "%s Rapport"
+msgstr "%s rapport"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/studio_export_model.py:0
 msgid "%s record(s)"
-msgstr "%s datasæt"
+msgstr "%s post(er)"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_rule_kanban_view
@@ -177,7 +177,7 @@ msgid ""
 "            "
 msgstr ""
 "<p class=\"o_view_nocontent_smiling_face\">\n"
-"                Tilføj en ny adgangskontrol liste\n"
+"                Tilføj en ny adgangskontrolliste\n"
 "            </p>\n"
 "            "
 
@@ -185,30 +185,28 @@ msgstr ""
 #: model_terms:web_tour.tour,rainbow_man_message:web_studio.web_studio_new_app_tour
 msgid "<span><b>Good job!</b> You went through all steps of this tour.</span>"
 msgstr ""
-"<span><b>Godt arbejde!</b> Du gennemgik samtlige trin for denne rundvisning."
-"</span>"
+"<span><b>Godt klaret!</b> Du har gennemført alle trin i rundvisningen.</span>"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/view_editor_model.js:0
 msgid "A field with the same name already exists."
-msgstr "Et felt med samme navn eksisterer allerede."
+msgstr "Der findes allerede et felt med dette navn."
 
 #. module: web_studio
 #: model:ir.model.constraint,message:web_studio.constraint_studio_approval_entry_uniq_combination
 msgid "A rule can only be approved/rejected once per record."
-msgstr "En regel kan kun godkendes/afvises én gang per datasæt."
+msgstr "En regel kan kun godkendes/afvises én gang pr. post."
 
 #. module: web_studio
 #: model:ir.model.constraint,message:web_studio.constraint_studio_approval_rule_method_or_action_together
 msgid "A rule must apply to an action or a method (but not both)."
-msgstr ""
-"En regel skal anvendes på en handling eller en metode (men ikke begge)."
+msgstr "En regel gælder enten for en handling eller en metode (men ikke begge)."
 
 #. module: web_studio
 #: model:ir.model.constraint,message:web_studio.constraint_studio_approval_rule_method_or_action_not_null
 msgid "A rule must apply to an action or a method."
-msgstr "En regel skal anvendes på en handling eller en metode."
+msgstr "En regel gælder enten for en handling eller en metode."
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_ir_model__abstract
@@ -225,7 +223,7 @@ msgstr "Adgangskontrol"
 #. odoo-python
 #: code:addons/web_studio/controllers/main.py:0
 msgid "Access Control Lists"
-msgstr "Adgangskontrol lister"
+msgstr "Adgangskontrollister"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_res_groups
@@ -236,13 +234,13 @@ msgstr "Adgangsgrupper"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/pivot/pivot_editor_sidebar.xml:0
 msgid "Access records from cell"
-msgstr "Adgang til datasæt fra celle"
+msgstr "Adgang til poster fra celle"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/graph/graph_editor_sidebar.xml:0
 msgid "Access records from graph"
-msgstr "Adgang til datasæt fra diagram"
+msgstr "Adgang til poster fra diagram"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_mail_activity_type__category
@@ -261,7 +259,7 @@ msgstr "Handling påkrævet"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_actions_act_window
 msgid "Action Window"
-msgstr "Handlings vindue"
+msgstr "Handlingsvindue"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_actions_act_window_view
@@ -303,8 +301,8 @@ msgid ""
 "Actions may trigger specific behavior like opening calendar view or "
 "automatically mark as done when a document is uploaded"
 msgstr ""
-"Handlinger kan afvikle bestemte opførelser så som åbning af kalender visning "
-"eller automatisk markering som når et dokument uploades"
+"Handlinger kan udføre bestemte opgaver, såsom at åbne kalendervisning eller "
+"automatisk markere et dokument ved upload"
 
 #. module: web_studio
 #. odoo-javascript
@@ -339,7 +337,7 @@ msgstr "Aktivitetstype"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.js:0
 msgid "Activity view unavailable on this model"
-msgstr "Aktivitets visning utilgængelig for denne model"
+msgstr "Aktivitetsvisning utilgængelig for denne model"
 
 #. module: web_studio
 #. odoo-javascript
@@ -351,13 +349,13 @@ msgstr "Tilføj"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/chatter_container.xml:0
 msgid "Add Chatter Widget"
-msgstr "Tilføj Chatter widget"
+msgstr "Tilføj chatter-widget"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_renderer/form_editor_renderer_components.js:0
 msgid "Add Picture"
-msgstr "Tilføj Billede"
+msgstr "Tilføj billede"
 
 #. module: web_studio
 #. odoo-javascript
@@ -376,7 +374,7 @@ msgstr "Tilføj en knap"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_renderer/form_editor_renderer_components.js:0
 msgid "Add a pipeline status bar"
-msgstr "Tilføj en pipeline statusbar"
+msgstr "Tilføj en pipeline-statusbar"
 
 #. module: web_studio
 #. odoo-javascript
@@ -400,7 +398,7 @@ msgstr "Tilføj en avatar"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Add details to your records with an embedded list view"
-msgstr "Føj oplysninger til dine datasæt med en indlejret listevisning"
+msgstr "Føj oplysninger til dine poster med en indlejret listevisning"
 
 #. module: web_studio
 #. odoo-javascript
@@ -412,13 +410,13 @@ msgstr "Tilføj ny værdi"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/list/list_editor_sidebar/list_editor_sidebar.js:0
 msgid "Add record at the bottom"
-msgstr "Tilføj datasæt i bunden"
+msgstr "Tilføj post i bunden"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/list/list_editor_sidebar/list_editor_sidebar.js:0
 msgid "Add record on top"
-msgstr "Tilføj datasæt øverst"
+msgstr "Tilføj post øverst"
 
 #. module: web_studio
 #. odoo-javascript
@@ -435,7 +433,7 @@ msgstr "Yderligere eksportdata"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/map/map_editor_sidebar.xml:0
 msgid "Additional Fields"
-msgstr "Yderligere Felter"
+msgstr "Yderligere felter"
 
 #. module: web_studio
 #: model_terms:ir.actions.act_window,help:web_studio.action_models_to_export
@@ -482,9 +480,7 @@ msgstr ""
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid ""
 "All set? You are just one click away from <b>generating your first app</b>."
-msgstr ""
-"Alt klar? Du er blot ét klik væk fra at <b>oprette din første applikation</"
-"b>."
+msgstr "Er du klar? Du er blot ét klik fra at <b>oprette din første app</b>."
 
 #. module: web_studio
 #. odoo-javascript
@@ -520,12 +516,12 @@ msgstr "Godkendelse"
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_entry_search_view
 msgid "Approval Entries"
-msgstr "Godkendelse Indtastninger"
+msgstr "Godkendelsesindtastninger"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__approval_group_id
 msgid "Approval Group"
-msgstr "Godkendelse Gruppe"
+msgstr "Godkendelsesgruppe"
 
 #. module: web_studio
 #. odoo-javascript
@@ -538,7 +534,7 @@ msgstr "Godkendelsesrækkefølge"
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_request__rule_id
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule_delegate__approval_rule_id
 msgid "Approval Rule"
-msgstr "Godkendelse Regel"
+msgstr "Godkendelsesregel"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_studio_approval_rule_approver
@@ -553,7 +549,7 @@ msgstr "Delegat for godkendelsesregel"
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_rule_button_configuration_search_view
 msgid "Approval Rules"
-msgstr "Godkendelse Regler"
+msgstr "Godkendelsesregler"
 
 #. module: web_studio
 #. odoo-javascript
@@ -572,7 +568,8 @@ msgstr "Godkendelser %(model_name)s"
 #: code:addons/web_studio/models/studio_approval.py:0
 msgid "Approvals can only be done on a method or an action, not both."
 msgstr ""
-"Godkendelser kan kun udføres på en metode eller en handling, ikke begge."
+"Godkendelser kan kun udføres på enten en metode eller en handling, ikke "
+"begge."
 
 #. module: web_studio
 #. odoo-python
@@ -601,7 +598,7 @@ msgstr "Godkendt <i class=\"fa fa-thumbs-up text-success\"/>"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/approval/approval_infos.xml:0
 msgid "Approved on"
-msgstr "Godkendt på den"
+msgstr "Godkendt den"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_entry__user_id
@@ -632,7 +629,7 @@ msgstr "Godkendere"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Archive deprecated records"
-msgstr "Arkiver udfasede datasæt"
+msgstr "Arkivér forældede poster"
 
 #. module: web_studio
 #. odoo-python
@@ -652,19 +649,19 @@ msgstr "Arkivering"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.js:0
 msgid "Are you sure you want to remove the selection values?"
-msgstr "Er du sikker på du vil fjerne de valgte værdier?"
+msgstr "Er du sikker på, du vil fjerne de valgte værdier?"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/sidebar_properties_toolbox/sidebar_properties_toolbox.js:0
 msgid "Are you sure you want to remove this %s from the view?"
-msgstr "Er du sikker på du vil fjerne dette %s fra visningen?"
+msgstr "Er du sikker på, du vil fjerne %s fra visningen?"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/navbar/home_menu_customizer/home_menu_customizer.js:0
 msgid "Are you sure you want to reset the background image?"
-msgstr "Er du sikker på du vil nulstille baggrundsbilledet?"
+msgstr "Er du sikker på, du vil nulstille baggrundsbilledet?"
 
 #. module: web_studio
 #. odoo-javascript
@@ -673,8 +670,8 @@ msgid ""
 "Are you sure you want to restore the default view?\r\n"
 "All customization done with studio on this view will be lost."
 msgstr ""
-"Er du sikker på du vil genoprette standard visningen?\n"
-"Alle tilpasninger udført med studio på denne visning vil gå tabt."
+"Er du sikker på, du vil genoprette standardvisningen?\n"
+"Alle tilpasninger udført med Studio på denne visning vil gå tabt."
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard_data__is_demo_data
@@ -695,19 +692,19 @@ msgstr "Stigende"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Assign a responsible to each record"
-msgstr "Tildel en ansvarlig for hvert datasæt"
+msgstr "Tildel en ansvarlig for hver post"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Assign dates and visualize records in a calendar"
-msgstr "Fastsæt datoer og visualiser datasæt i en kalender"
+msgstr "Fastsæt datoer og visualisér poster i en kalender"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Attach a picture to a record"
-msgstr "Vedhæft et billede til datasættet"
+msgstr "Vedhæft et billede til en post"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__message_attachment_count
@@ -717,13 +714,13 @@ msgstr "Antal vedhæftninger"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_model__include_attachment
 msgid "Attachments"
-msgstr "Vedhæftede filer"
+msgstr "Vedhæftninger"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/search/search_editor.xml:0
 msgid "Autocompletion Fields"
-msgstr "Autofuldførings felter"
+msgstr "Felter med automatisk udfyldning"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_base_automation
@@ -793,7 +790,7 @@ msgstr "Fed"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/views/kanban_report/new_report_dialog.js:0
 msgid "Business header/footer"
-msgstr "Forretnings sidehoved-/fod"
+msgstr "Forretningens sidehoved og sidefod"
 
 #. module: web_studio
 #. odoo-javascript
@@ -891,7 +888,7 @@ msgstr "Annullér"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Categorize records with custom tags"
-msgstr "Kategoriser datasæt med tilpassede tags"
+msgstr "Kategorisér poster med tilpassede tags"
 
 #. module: web_studio
 #. odoo-javascript
@@ -920,7 +917,7 @@ msgstr "Afkrydsningsfelt"
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_ir_model_data__studio
 msgid "Checked if it has been edited with Studio."
-msgstr "Afkrydset hvis det er redigeret med Studio."
+msgstr "Afkrydset, hvis det er redigeret med Studio."
 
 #. module: web_studio
 #. odoo-javascript
@@ -938,19 +935,19 @@ msgstr "Vælg et navn til menuen"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/cohort/cohort_editor.js:0
 msgid "Churn"
-msgstr "Churn"
+msgstr "Kundefrafald"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/class_attribute/class_attribute.xml:0
 msgid "Class"
-msgstr "Class"
+msgstr "Klasse"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid "Click to edit messaging features on your model."
-msgstr "Klik for at redigere besked funktioner på din model."
+msgstr "Klik for at redigere beskedfunktioner på din model."
 
 #. module: web_studio
 #. odoo-javascript
@@ -971,7 +968,7 @@ msgstr "Luk"
 #: code:addons/web_studio/static/src/client_action/editor/editor_menu/editor_menu.js:0
 #: code:addons/web_studio/static/src/studio_service.js:0
 msgid "Cohort"
-msgstr "Gruppe"
+msgstr "Kohorte"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1029,7 +1026,7 @@ msgstr "Betinget"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__conditional
 msgid "Conditional Rule"
-msgstr "Betinget Regel"
+msgstr "Betinget regel"
 
 #. module: web_studio
 #. odoo-python
@@ -1042,7 +1039,7 @@ msgstr "Konfiguration"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/new_model_item/new_model_item.xml:0
 msgid "Configure Model"
-msgstr "Konfigurer Model"
+msgstr "Konfigurér model"
 
 #. module: web_studio
 #: model_terms:ir.actions.act_window,help:web_studio.action_models_to_export
@@ -1051,7 +1048,7 @@ msgid ""
 "configuration information or demo data."
 msgstr ""
 "Konfigurér yderligere modeller, der skal eksporteres med Studio, såsom "
-"datasæt, der indeholder konfigurationsoplysninger eller demodata."
+"poster, der indeholder konfigurationsoplysninger eller demodata."
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_studio_export_wizard
@@ -1094,19 +1091,19 @@ msgstr "Kontakt"
 #: code:addons/web_studio/static/src/client_action/editor/new_view_dialogs/map_new_view_dialog.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/map/map_editor_sidebar.xml:0
 msgid "Contact Field"
-msgstr "Kontakt Felt"
+msgstr "Kontaktfelt"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/new_view_dialogs/map_new_view_dialog.js:0
 msgid "Contact Field Required"
-msgstr "Kontakt Felt Påkrævet"
+msgstr "Kontaktfelt påkrævet"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Contact details"
-msgstr "Kontakt detaljer"
+msgstr "Kontaktoplysninger"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1119,9 +1116,7 @@ msgstr "Kontekst"
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid ""
 "Continue to configure some typical behaviors for your new type of object."
-msgstr ""
-"Fortsæt for at konfigurere nogle typiske opførsel for din nye type af "
-"objekter."
+msgstr "Fortsæt for at konfiguere standardhandlinger for din nye objekttype."
 
 #. module: web_studio
 #. odoo-javascript
@@ -1139,13 +1134,13 @@ msgstr "Opret menu"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/new_model_item/new_model_item.js:0
 msgid "Create Model"
-msgstr "Opret Model"
+msgstr "Opret model"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/new_model_item/new_model_item.xml:0
 msgid "Create a new Model"
-msgstr "Opret en ny Model"
+msgstr "Opret en ny model"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1153,8 +1148,8 @@ msgstr "Opret en ny Model"
 msgid ""
 "Create your <b>selection values</b> (e.g.: Romance, Polar, Fantasy, etc.)"
 msgstr ""
-"Opret dine egne <b>udvælgelses værdier</b> (f.eks.: Romantik, Polar, "
-"Fantasi, osv.)"
+"Opret dine egne <b>udvælgelsesværdier</b> (f.eks.: Romantik, Polar, Fantasi "
+"osv.)"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1166,7 +1161,7 @@ msgstr "Opret din app"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/app_creator/app_creator.xml:0
 msgid "Create your app"
-msgstr "Lav din app"
+msgstr "Opret din app"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1209,7 +1204,7 @@ msgstr "Oprettet den"
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.js:0
 msgid "Creating this type of view is not currently supported in Studio."
 msgstr ""
-"Oprettelsen af denne type visning understøttes ikke i øjeblikket af Studio."
+"Oprettelsen af denne visningstype understøttes i øjeblikket ikke af Studio."
 
 #. module: web_studio
 #. odoo-python
@@ -1227,33 +1222,33 @@ msgstr "Nuværende model:"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_menu.py:0
 msgid "Custom Configuration"
-msgstr "Tilpas Konfiguration"
+msgstr "Tilpas konfiguration"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_base_module_uninstall__custom_fields
 msgid "Custom Fields"
-msgstr "Tilpasset felter"
+msgstr "Tilpassede felter"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_base_module_uninstall__custom_models
 msgid "Custom Models"
-msgstr "Tilpasset modeller"
+msgstr "Tilpassede modeller"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_base_module_uninstall__custom_reports
 msgid "Custom Reports"
-msgstr "Tilpasset rapporter"
+msgstr "Tilpassede rapporter"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Custom Sorting"
-msgstr "Tilpas Sortering"
+msgstr "Tilpas sortering"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_base_module_uninstall__custom_views
 msgid "Custom Views"
-msgstr "Tilpasset visninger"
+msgstr "Tilpassede visninger"
 
 #. module: web_studio
 #. odoo-python
@@ -1264,27 +1259,27 @@ msgstr "Tilpassede feltnavne kan ikke indeholde dobbelte understregninger."
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_base_module_uninstall_studio
 msgid "Custom fields:"
-msgstr "Tilpasset felter:"
+msgstr "Tilpassede felter:"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_base_module_uninstall_studio
 msgid "Custom models:"
-msgstr "Tilpasset modeller:"
+msgstr "Tilpassede modeller:"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_base_module_uninstall_studio
 msgid "Custom reports:"
-msgstr "Tilpasset rapporter:"
+msgstr "Tilpassede rapporter:"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_base_module_uninstall_studio
 msgid "Custom views:"
-msgstr "Tilpasset visninger:"
+msgstr "Tilpassede visninger:"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_base_module_uninstall_studio
 msgid "Customization made with Studio will be permanently lost"
-msgstr "Tilpasninger udført med Studio vil blive slettet permanent"
+msgstr "Tilpasninger udført med Studio slettes permanent"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1305,7 +1300,7 @@ msgstr "Dato"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Date & Calendar"
-msgstr "Dato & Kalender"
+msgstr "Dato og kalender"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule_approver__date_to
@@ -1316,13 +1311,13 @@ msgstr "Dato til"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Date range & Gantt"
-msgstr "Dato interval & Gantt"
+msgstr "Datointerval og Gantt"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/components/view_fields.js:0
 msgid "Datetime"
-msgstr "Datetime"
+msgstr "Dato/klokkeslæt"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1335,7 +1330,7 @@ msgstr "Dag"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.xml:0
 msgid "Day Precision"
-msgstr "Dag præcision"
+msgstr "Præcisering af dag"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1353,7 +1348,7 @@ msgstr "Standardvisning %(view_type)s for %(model)s"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/calendar/calendar_editor_sidebar.xml:0
 msgid "Default Display Mode"
-msgstr "Standard visnings tilstand"
+msgstr "Standardvisningstilstand"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard__default_export_data
@@ -1378,7 +1373,7 @@ msgstr "Gruppér som standard efter"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.xml:0
 msgid "Default Scale"
-msgstr "Standard skala"
+msgstr "Standardskala"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1404,12 +1399,12 @@ msgstr "Standardvisning"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Define start/end dates and visualize records in a Gantt chart"
-msgstr "Definer start/slut datoer og visualiser datasæt i en Gantt oversigt"
+msgstr "Definér start-/slutdatoer, og visualisér poster i et Gantt-diagram"
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_export_model__updatable
 msgid "Defines if the records would be updated during a module update."
-msgstr "Angiv, om datasættet skal opdateres sammen med modellen."
+msgstr "Angiv, om posten skal opdateres sammen med modellen."
 
 #. module: web_studio
 #. odoo-javascript
@@ -1422,7 +1417,7 @@ msgstr "Angiver den rækkefølge, godkendelserne bliver anmodet i."
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/calendar/calendar_editor_sidebar.xml:0
 msgid "Delay Field"
-msgstr "Forsinkelse felt"
+msgstr "Forsinkelsesfelt"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_rule_form_view
@@ -1516,7 +1511,7 @@ msgstr "Visningstilstand"
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard__display_name
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard_data__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1563,14 +1558,14 @@ msgstr "Udført"
 msgid ""
 "Drag & drop <b>another field</b>. Let's try with a <i>selection field</i>."
 msgstr ""
-"Træk og slip <b>et andet felt</b>. Lad os prøve med et <i>udvælgelsesfelt</"
-"i>."
+"Træk og slip <b>et andet felt</b>. Lad os prøve med et <i>udvælgelsesfelt</i>"
+"."
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/app_menu_editor/app_menu_editor.xml:0
 msgid "Drag a menu to the right to create a sub-menu"
-msgstr "Træk en menu til højre for at oprette en undermenu"
+msgstr "Træk en menu til højre for at oprette en hierarkisk menu"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1593,7 +1588,7 @@ msgstr "Dynamisk tabel"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "Edit"
-msgstr "Rediger"
+msgstr "Redigér"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1605,7 +1600,7 @@ msgstr "Redigér %s visning"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/studio_home_menu/icon_creator_dialog/icon_creator_dialog.xml:0
 msgid "Edit Application Icon"
-msgstr "Rediger applikations ikon"
+msgstr "Redigér appikon"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1623,13 +1618,13 @@ msgstr "Redigér menu"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
 msgid "Edit Values"
-msgstr "Rediger værdier"
+msgstr "Redigér værdier"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/app_menu_editor/app_menu_editor.xml:0
 msgid "Edit selection"
-msgstr "Rediger valg"
+msgstr "Redigér valg"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1644,9 +1639,8 @@ msgid ""
 "Editing a built-in file through this editor is not advised, as it will "
 "prevent it from being updated during future App upgrades."
 msgstr ""
-"Redigering af en indbygget fil via dette redigeringsværktøj er ikke "
-"tilrådet, eftersom det vil forhindre det fra at blive opdateret under "
-"fremtidige applikation opdateringer."
+"Det anbefales ikke at redigere en indbygget fil med dette værktøj, da det "
+"vil forhindre filen i at blive opdateret ved fremtidige appopdateringer."
 
 #. module: web_studio
 #. odoo-javascript
@@ -1664,7 +1658,7 @@ msgstr "E-mail"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_sidebar/properties/chatter_properties/chatter_properties.xml:0
 msgid "Email Alias"
-msgstr "E-mail alias"
+msgstr "E-mailalias"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_mail_template
@@ -1680,26 +1674,26 @@ msgstr "E-mail-tråd"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.xml:0
 msgid "Empty List Message"
-msgstr "Tom liste besked"
+msgstr "Tom listemeddelelse"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/list/list_editor_sidebar/list_editor_sidebar.xml:0
 msgid "Enable Mass Editing"
-msgstr "Aktiver Masse Redigering"
+msgstr "Aktivér masseredigering"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/map/map_editor_sidebar.xml:0
 msgid "Enable Routing"
-msgstr "Aktiver Rute"
+msgstr "Aktivér routing"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/ir_model.py:0
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "End Date"
-msgstr "Slut dato"
+msgstr "Slutdato"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__entry_ids
@@ -1744,7 +1738,7 @@ msgstr "Eksisterende felter"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/menu_creator/menu_creator.js:0
 msgid "Existing Model"
-msgstr "Eksisterende Model"
+msgstr "Eksisterende model"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1752,7 +1746,7 @@ msgstr "Eksisterende Model"
 #: model_terms:ir.ui.view,arch_db:web_studio.models_to_export_list
 #: model_terms:ir.ui.view,arch_db:web_studio.view_studio_export_wizard
 msgid "Export"
-msgstr "Eksporter"
+msgstr "Eksportér"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1770,7 +1764,7 @@ msgstr "Eksternt ID"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_sidebar/properties/button_properties/rainbow_effect.xml:0
 msgid "Fadeout Speed"
-msgstr "Fadeout hastighed"
+msgstr "Fadeouthastighed"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1796,7 +1790,7 @@ msgstr "Felt"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/field_configuration/selection_content_dialog.xml:0
 msgid "Field Properties"
-msgstr "Felt egenskaber"
+msgstr "Feltegenskaber"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1840,7 +1834,7 @@ msgstr "Filter"
 #: code:addons/web_studio/controllers/main.py:0
 #: code:addons/web_studio/static/src/client_action/editor/editor_menu/editor_menu.js:0
 msgid "Filter Rules"
-msgstr "Filtrer regler"
+msgstr "Filterregler"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1902,7 +1896,7 @@ msgstr "Forbyd synlighed for grupper"
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_rule_delegate_approvers
 msgid "Forever"
-msgstr "For evigt"
+msgstr "For altid"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1921,7 +1915,7 @@ msgstr "Format"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/cohort/cohort_editor.js:0
 msgid "Forward"
-msgstr "Fremad"
+msgstr "Videresend"
 
 #. module: web_studio
 #. odoo-python
@@ -1952,7 +1946,7 @@ msgstr "Generér %s visning"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Get contact, phone and email fields on records"
-msgstr "Indhent kontakt, telefon og email felter i datasæt"
+msgstr "Indlæs kontakt-, telefon- og e-mailfelter i poster"
 
 #. module: web_studio
 #. odoo-javascript
@@ -1971,8 +1965,8 @@ msgstr "Fortsæt, du er næsten færdig!"
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid "Good job! To add more <b>fields</b>, come back to the <i>Add tab</i>."
 msgstr ""
-"Godt arbejde! For at tilføje flere <b>felter</b>, kom tilbage til <i>Tilføj "
-"fanen</i>."
+"Godt klaret! For at tilføje flere <b>felter</b>, gå tilbage til fanen <i>"
+"Tilføj</i>."
 
 #. module: web_studio
 #. odoo-python
@@ -1987,13 +1981,13 @@ msgstr "Giv godkendelse"
 #: code:addons/web_studio/static/src/client_action/editor/editor_menu/editor_menu.js:0
 #: code:addons/web_studio/static/src/studio_service.js:0
 msgid "Graph"
-msgstr "Graf"
+msgstr "Diagram"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_sidebar/properties/button_properties/rainbow_effect.xml:0
 msgid "Great !"
-msgstr "Fantastisk !"
+msgstr "Fantastisk!"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2028,7 +2022,7 @@ msgstr "HTML"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_http
 msgid "HTTP Routing"
-msgstr "HTTP Routing"
+msgstr "HTTP-routing"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2061,7 +2055,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
 msgid "Help Tooltip"
-msgstr "Hjælp værktøjstip"
+msgstr "Hjælpeværktøj"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2070,32 +2064,32 @@ msgid ""
 "Here, you can <b>name</b> your field (e.g. Book reference, ISBN, Internal "
 "Note, etc.)."
 msgstr ""
-"Her kan du <b>navngive</b> dit felt (f.eks. Bogreference, ISBN, internt "
-"notat, osv.)."
+"Her kan du <b>navngive</b> dit felt (f.eks. bognummer, ISBN, internt notat "
+"osv.)."
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/map/map_editor_sidebar.xml:0
 msgid "Hide Address"
-msgstr "Skjul Adresse"
+msgstr "Skjul adresse"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/map/map_editor_sidebar.xml:0
 msgid "Hide Name"
-msgstr "Skjul Navn"
+msgstr "Skjul navn"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.js:0
 msgid "Hide by default"
-msgstr "Gem per standard"
+msgstr "Gem pr. standard"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/ir_model.py:0
 msgid "High Priority"
-msgstr "Høj Prioritet"
+msgstr "Høj prioritet"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2106,7 +2100,7 @@ msgstr "Fremhæv farvefelt"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_res_company__background_image
 msgid "Home Menu Background Image"
-msgstr "Hjemme menu baggrundsbillede"
+msgstr "Startmenuens baggrundsbillede"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2119,14 +2113,16 @@ msgstr "Time"
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid "How do you want to <b>name</b> your app? Library, Academy, …?"
 msgstr ""
-"Hvordan vil du <b>navngive</b> din applikation? Bibliotek, Akademi, ...?"
+"Hvordan vil du <b>navngive</b> din app? F.eks. bibliotek, akademi eller "
+"noget andet?"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid "How do you want to name your first <b>menu</b>? My books, My courses?"
 msgstr ""
-"Hvordan vil du navngive din første <b>menu</b>? Mine bøger, Mine kurser?"
+"Hvordan vil du navngive din første <b>menu</b>? F.eks. mine bøger, mine "
+"kurser?"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2134,8 +2130,8 @@ msgstr ""
 msgid ""
 "I bet you can <b>build an app</b> in 5 minutes. Ready for the challenge?"
 msgstr ""
-"Jeg vil vædde med at du kan <b>bygge en app</b> på 5 minutter. Klar til "
-"udfordringen?"
+"Jeg vil vædde med, at du kan <b>bygge en app</b> på 5 minutter. Tager du "
+"udfordringen op?"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_entry__id
@@ -2164,13 +2160,14 @@ msgstr "Ikon"
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Hvis afkrydset, kræver nye beskeder din opmærksomhed "
+msgstr "Hvis dette felt er markeret, kræver nye beskeder din opmærksomhed."
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__message_has_error
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Hvis afkrydset har nogle beskeder en leveringsfejl"
+msgstr ""
+"Hvis dette felt er markeret, indeholder nogle beskeder en leveringsfejl."
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_export_model__include_attachment
@@ -2178,8 +2175,8 @@ msgid ""
 "If set, the attachments related to the exported records will be included in "
 "the export."
 msgstr ""
-"Hvis denne indstilling aktiveres, inkluderes vedhæftninger til eksporterede "
-"poster i eksporten."
+"Hvis denne indstilling er aktiveret, inkluderes vedhæftninger til "
+"eksporterede poster i eksporten."
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_export_model__is_demo_data
@@ -2187,15 +2184,15 @@ msgid ""
 "If set, the exported records will be considered as demo data during the "
 "import."
 msgstr ""
-"Hvis denne indstilling er aktiveret, behandles de eksporterede datasæt som "
+"Hvis denne indstilling er aktiveret, behandles de eksporterede poster som "
 "demodata ved import."
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__domain
 msgid "If set, the rule will only apply on records that match the domain."
 msgstr ""
-"Hvis angivet vil reglen kun anvendes på datasæt som stemmer overens med "
-"domænet."
+"Hvis denne indstilling er aktiveret, anvendes reglen kun på poster, som "
+"stemmer overens med domænet."
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__exclusive_user
@@ -2203,8 +2200,8 @@ msgid ""
 "If set, the user who approves this rule will not be able to approve other "
 "rules for the same record"
 msgstr ""
-"Hvis angivet vil brugeren der godkender denne regel ikke være i stand til at "
-"godkende andre regler for det samme datasæt"
+"Hvis denne indstilling er aktiveret, vil brugeren, der godkender denne regel "
+"ikke være i stand til at godkende andre regler for den samme post"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2213,9 +2210,8 @@ msgid ""
 "If you discard the current edits, all unsaved changes will be lost. You can "
 "cancel to return to edit mode."
 msgstr ""
-"Hvis du kassere de nuværende redigeringer, vil alle ændringer der ikke er "
-"gemte gå tabt. Du kan annullere for at vende tilbage til redigerings "
-"tilstand."
+"Hvis du kasserer de nuværende ikke-gemte redigeringer, vil de gå tabt. Du "
+"kan annullere for at vende tilbage til redigeringstilstand."
 
 #. module: web_studio
 #. odoo-python
@@ -2224,7 +2220,7 @@ msgid ""
 "If you don't want to create a new model, an existing model should be "
 "selected."
 msgstr ""
-"Hvis du ikke vil oprette en ny model, bør en eksisterende model være valgt."
+"Hvis du ikke vil oprette en ny model, skal du vælge en eksisterende model."
 
 #. module: web_studio
 #. odoo-javascript
@@ -2238,13 +2234,13 @@ msgstr "Billede"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/navbar/home_menu_customizer/home_menu_customizer.xml:0
 msgid "Import"
-msgstr "Importer"
+msgstr "Importér"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/ir_model.py:0
 msgid "In Progress"
-msgstr "I gang"
+msgstr "Behandles"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard__include_additional_data
@@ -2268,8 +2264,8 @@ msgid ""
 "Indicates that this menu was created by Studio to hold configuration sub-"
 "menus"
 msgstr ""
-"Indikerer at denne menu blev oprettet via Studio, til at indeholde "
-"konfigurations undermenuer"
+"Indikerer, at menuen er oprettet via Studio til at indeholde hierarkiske "
+"konfigurationsmenuer"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2293,13 +2289,13 @@ msgstr "Indsæt en tabel baseret på et relationsfelt."
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/report_editor/report_editor_wysiwyg/qweb_table_plugin.js:0
 msgid "Insert left"
-msgstr "Indsæt venstre"
+msgstr "Indsæt til venstre"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/report_editor/report_editor_wysiwyg/qweb_table_plugin.js:0
 msgid "Insert right"
-msgstr "Indsæt højre"
+msgstr "Indsæt til højre"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2323,7 +2319,7 @@ msgstr "Interval"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "Invalid studio_approval %s in button"
-msgstr "Ugyldig studio_approval %s i knap"
+msgstr "Ugyldig studio_approval %s på knap"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2350,7 +2346,7 @@ msgstr "Er Studio"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.xml:0
 msgid "Is default view"
-msgstr "Er standard visning"
+msgstr "Er standardvisning"
 
 #. module: web_studio
 #. odoo-python
@@ -2374,7 +2370,7 @@ msgstr "Kanban-farve"
 #. odoo-python
 #: code:addons/web_studio/models/ir_model.py:0
 msgid "Kanban State"
-msgstr "Kanban status"
+msgstr "Kanban-status"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2388,7 +2384,7 @@ msgstr "Kanban status"
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/field_configuration/selection_content_dialog.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.xml:0
 msgid "Label"
-msgstr "Tekst"
+msgstr "Mærkat"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2452,7 +2448,7 @@ msgstr ""
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.xml:0
 #: code:addons/web_studio/static/src/client_action/report_editor/report_editor_wysiwyg/report_editor_wysiwyg.xml:0
 msgid "Limit visibility to groups"
-msgstr "Begræns synlighed til grupper"
+msgstr "Begræns synlighed for grupper"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2470,7 +2466,7 @@ msgstr "Linjer"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_request__mail_activity_id
 msgid "Linked Activity"
-msgstr "Forbundet aktivitet"
+msgstr "Tilknyttet aktivitet"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2483,7 +2479,7 @@ msgstr "Liste"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Manually sort records in the list view"
-msgstr "Sorter manuelt datasæt fra listevisningen"
+msgstr "Sortér manuelt poster fra listevisningen"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2525,7 +2521,7 @@ msgstr "Mål"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/cohort/cohort_editor_sidebar.xml:0
 msgid "Measure Field"
-msgstr "Måling felt"
+msgstr "Værdifelt"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2588,7 +2584,7 @@ msgstr "Metode: %s"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/views/kanban_report/new_report_dialog.js:0
 msgid "Minimal header/footer"
-msgstr "Minimal sidehoved-/fod"
+msgstr "Minimal sidehoved/sidefod"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2612,22 +2608,22 @@ msgstr "Model"
 #. odoo-python
 #: code:addons/web_studio/wizard/studio_export_wizard.py:0
 msgid "Model '%s' should not contain records with the same ID."
-msgstr "Model '%s' bør ikke indeholde datasæt med samme ID."
+msgstr "Model '%s' bør ikke indeholde poster med samme ID."
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_model_access
 msgid "Model Access"
-msgstr "Model adgang"
+msgstr "Adgang til model"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_model_data
 msgid "Model Data"
-msgstr "Model data"
+msgstr "Modeldata"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard_data__model_name
 msgid "Model Description"
-msgstr "Model beskrivelse"
+msgstr "Modelbeskrivelse"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_entry__model
@@ -2640,7 +2636,7 @@ msgstr "Modelnavn"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/editor/new_model_item/new_model_item.xml:0
 msgid "Model name"
-msgstr "Model"
+msgstr "Modelnavn"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_model
@@ -2661,7 +2657,7 @@ msgstr "Modul"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_base_module_uninstall
 msgid "Module Uninstall"
-msgstr "Modul afinstallér"
+msgstr "Fjern modul"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2692,7 +2688,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.xml:0
 msgid "Month Precision"
-msgstr "Måned præcision"
+msgstr "Præcisering af måned"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2708,19 +2704,19 @@ msgstr "Flere"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/components/view_fields.js:0
 msgid "Multiline Text"
-msgstr "Multilinje tekst"
+msgstr "Multilinjetekst"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.js:0
 msgid "Multiple records views"
-msgstr "Flere datasætvisninger"
+msgstr "Visning med flere poster"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "My %s"
-msgstr "Min %s"
+msgstr "Mine %s"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2737,7 +2733,7 @@ msgstr "Mine indtastninger"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/report_editor/report_editor.xml:0
 msgid "N/A"
-msgstr "- Ikke angivet -"
+msgstr "Ikke relevant"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2771,7 +2767,7 @@ msgstr "Ny app"
 #. odoo-python
 #: code:addons/web_studio/models/studio_approval.py:0
 msgid "New Approval Entry"
-msgstr "Ny Godkendelse"
+msgstr "Ny godkendelsesindtastning"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2808,7 +2804,7 @@ msgstr "Ny menu"
 #: code:addons/web_studio/static/src/client_action/editor/new_model_item/new_model_item.xml:0
 #: code:addons/web_studio/static/src/client_action/menu_creator/menu_creator.js:0
 msgid "New Model"
-msgstr "Ny Model"
+msgstr "Ny model"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2849,20 +2845,19 @@ msgstr "Ingen aggregering"
 #. odoo-python
 #: code:addons/web_studio/models/studio_approval.py:0
 msgid "No approval found for this rule, record and user combination."
-msgstr ""
-"Ingen godkendelse fundet for denne regel, datasæt, og bruger kombination."
+msgstr "Ingen godkendelse fundet for reglen, posten eller brugerkombinationen."
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/views/kanban_report/new_report_dialog.js:0
 msgid "No header/footer"
-msgstr "Ingen sidehoved-/fod"
+msgstr "Ingen sidehoved/sidefod"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/interactive_editor.js:0
 msgid "No related many2one fields found"
-msgstr "Ingen relateret many2one felter fundet"
+msgstr "Ingen relaterede many2one-felter fundet"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2893,7 +2888,7 @@ msgstr "Nu må du stå på egne ben. Nyd dine <b>superkræfter</b>."
 #. odoo-javascript
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid "Now, customize your icon. Make it yours."
-msgstr "Nu, tilpas dit ikon. Gør det til dit eget."
+msgstr "Tilpas nu dit ikon, og gør det til dit eget."
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__message_needaction_counter
@@ -2913,7 +2908,7 @@ msgstr "Antal fejl"
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Antal meddelelser der kræver handling"
+msgstr "Antal meddelelser, der kræver handling"
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__message_has_error_counter
@@ -2945,14 +2940,14 @@ msgid ""
 "Only groups with an external ID can be used here. Please choose another "
 "group or assign manually an external ID to this group."
 msgstr ""
-"Kun grupper med en ekstern ID kan bruges her. vælg venligst en anden gruppe "
-"eller tildel en ekstern ID til denne gruppe manuelt."
+"Kun grupper med et eksternt ID kan bruges her. Vælg venligst en anden "
+"gruppe, eller tildel et eksternt ID til denne gruppe manuelt."
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/kanban/kanban_editor_sidebar/kanban_editor_sidebar.xml:0
 msgid "Open Record On Click"
-msgstr "Åbn datasæt med et klik"
+msgstr "Åbn post med et klik"
 
 #. module: web_studio
 #. odoo-javascript
@@ -2984,12 +2979,12 @@ msgstr "Ordre"
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.act_report_xml_view_kanban
 msgid "PDF file"
-msgstr "PDF fil"
+msgstr "PDF-fil"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_report_paperformat
 msgid "Paper Format Config"
-msgstr "Papirformat konfiguration"
+msgstr "Papirformatkonfiguration"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3001,7 +2996,7 @@ msgstr "Papirformat"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/menu_creator/menu_creator.js:0
 msgid "Parent Menu"
-msgstr "Overordnet menu"
+msgstr "Hovedmenu"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3013,7 +3008,7 @@ msgstr "Overordnet visning (inherit_id)"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "Partner"
-msgstr "Kontakt"
+msgstr "Partner"
 
 #. module: web_studio
 #. odoo-python
@@ -3037,7 +3032,7 @@ msgstr "Kage"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Pipeline stages"
-msgstr "Pipeline stadier"
+msgstr "Pipeline-faser"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3112,7 +3107,7 @@ msgid ""
 "Private methods cannot be restricted (since they cannot be called remotely, "
 "this would be useless)."
 msgstr ""
-"Private metoder kan ikke begrænses (siden de ikke kan kaldes udefra, ville "
+"Private metoder kan ikke begrænses (da de ikke kan hentes udefra, ville "
 "dette være nyttesløst)."
 
 #. module: web_studio
@@ -3125,7 +3120,7 @@ msgstr "Egenskaber"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.js:0
 msgid "Quarter Hour"
-msgstr "Kvarter Time"
+msgstr "Kvarter"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3133,7 +3128,7 @@ msgstr "Kvarter Time"
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/kanban/kanban_editor_sidebar/kanban_editor_sidebar.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/kanban_legacy/kanban_editor_sidebar_legacy/kanban_editor_sidebar_legacy.xml:0
 msgid "Quick Create"
-msgstr "Opret hurtigt"
+msgstr "Hurtig oprettelse"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3156,7 +3151,7 @@ msgstr "Regnbueeffekt"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_sidebar/properties/button_properties/rainbow_effect.xml:0
 msgid "Rainbow Man"
-msgstr "Regnbue mand"
+msgstr "Regnbueansigt"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__rating_ids
@@ -3178,23 +3173,23 @@ msgstr "Klar"
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_entry_form_view
 msgid "Record"
-msgstr "Datasæt"
+msgstr "Post"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_entry__res_id
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_request__res_id
 msgid "Record ID"
-msgstr "Datasæt ID"
+msgstr "Post-ID"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard_data__name
 msgid "Record Name"
-msgstr "Datasæt Navn"
+msgstr "Navn på post"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_model__records_count
 msgid "Records"
-msgstr "Datasæt"
+msgstr "Poster"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3228,7 +3223,7 @@ msgstr "Afvist <i class=\"fa fa-thumbs-down text-danger\"/>"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/approval/approval_infos.xml:0
 msgid "Rejected on"
-msgstr "Afvist på den"
+msgstr "Afvist den"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3263,7 +3258,7 @@ msgstr "Fjern markering"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_actions_report
 msgid "Report Action"
-msgstr "Rapporter handling"
+msgstr "Rapportér handling"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3312,13 +3307,13 @@ msgstr "Obligatorisk"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_export_wizard_data__res_id
 msgid "Res"
-msgstr "Res"
+msgstr "Ansvarlig"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/navbar/home_menu_customizer/home_menu_customizer.xml:0
 msgid "Reset Default Background"
-msgstr "Nultil standard baggrund"
+msgstr "Nultil standardbaggrund"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3334,7 +3329,7 @@ msgstr "Nulstil visning"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_reset_view_arch_wizard
 msgid "Reset View Architecture Wizard"
-msgstr "Nulstil visningsarkitektur guide"
+msgstr "Nulstil visningsarkitektur assistent"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3355,19 +3350,19 @@ msgstr "Ansvarlig"
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/sidebar_view_toolbox/sidebar_view_toolbox.xml:0
 msgid "Restore Default View"
-msgstr "Nulstil standard visning"
+msgstr "Nulstil standardvisning"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Restrict a record to a specific company"
-msgstr "Begræns et datasæt til en specifik virksomhed"
+msgstr "Begræns en post til en specifik virksomhed"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/cohort/cohort_editor.js:0
 msgid "Retention"
-msgstr "Tilbageholdelse"
+msgstr "Fastholdelse"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3406,9 +3401,8 @@ msgid ""
 "Rules with existing entries cannot be deleted since it would delete existing "
 "approval entries. You should archive the rule instead."
 msgstr ""
-"Regler med eksisterende indtastninger kan ikke slettes, siden det ville "
-"slette eksisterende godkendelses indtastninger. Du bør arkiver reglen i "
-"stedet."
+"Regler med eksisterende indtastninger kan ikke slettes, da det ville slette "
+"eksisterende godkendelsesindtastninger. Du bør i stedet arkivere reglen."
 
 #. module: web_studio
 #. odoo-python
@@ -3417,9 +3411,9 @@ msgid ""
 "Rules with existing entries cannot be modified since it would break existing "
 "approval entries. You should archive the rule and create a new one instead."
 msgstr ""
-"Regler med eksisterende indtastninger kan ikke redigeres, siden det ville "
-"ødelægge eksisterende godkendelses indtastninger. Du bør arkivere reglen og "
-"oprette en ny i stedet."
+"Regler med eksisterende indtastninger kan ikke redigeres, da det ville "
+"ødelægge eksisterende godkendelsesindtastninger. Du bør i stedet arkivere "
+"reglen og oprette en ny."
 
 #. module: web_studio
 #. odoo-javascript
@@ -3430,7 +3424,7 @@ msgstr "Udfør en serverhandling"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS leveringsfejl"
+msgstr "Fejl ved SMS-levering"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3481,7 +3475,7 @@ msgstr "Søg"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/components/view_fields.xml:0
 msgid "Search..."
-msgstr "Søg..."
+msgstr "Søg ..."
 
 #. module: web_studio
 #. odoo-javascript
@@ -3534,8 +3528,8 @@ msgstr "Vælg gruppe"
 #: code:addons/web_studio/static/src/client_action/editor/new_view_dialogs/map_new_view_dialog.xml:0
 msgid "Select the contact field to use to get the coordinates of your records."
 msgstr ""
-"Vælg kontakt feltet som skal anvendes til at indhente koordinaterne fra dine "
-"datasæt."
+"Vælg kontaktfeltet, som skal anvendes til at indhente koordinaterne fra dine "
+"poster."
 
 #. module: web_studio
 #. odoo-javascript
@@ -3559,7 +3553,7 @@ msgstr "Vælg brugere ..."
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/components/view_fields.js:0
 msgid "Selection"
-msgstr "Udvælgelse"
+msgstr "Udvalg"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3589,7 +3583,7 @@ msgstr "Sekvens"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_ir_actions_server
 msgid "Server Action"
-msgstr "Server handling"
+msgstr "Serverhandling"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3607,7 +3601,7 @@ msgstr "Angiv coverbillede"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Set a price or cost on records"
-msgstr "Angiv en pris eller omkostning i datasæt"
+msgstr "Fastsæt en pris eller omkostning for poster"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3616,14 +3610,14 @@ msgid ""
 "Set an <b>email alias</b>. Then, try to send an email to this address; it "
 "will create a document automatically for you. Pretty cool, huh?"
 msgstr ""
-"Angiv et<b>email alias</b>. Prøv derefter at sende en email til denne "
-"adresse; det vil automatisk oprette et dokument for dig. Sejt, ik?"
+"Angiv et<b>e-mailalias</b>. Prøv derefter at sende en e-mail til denne "
+"adresse; det opretter automatisk et dokument for dig. Sejt, ik?"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/sidebar_view_toolbox/sidebar_view_toolbox.xml:0
 msgid "Show Invisible Elements"
-msgstr "Vis Usynlige Elementer"
+msgstr "Vis usynlige elementer"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3635,7 +3629,7 @@ msgstr "Vis sporing"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/properties/field_properties/field_properties.js:0
 msgid "Show by default"
-msgstr "Vis per standard"
+msgstr "Vis pr. standard"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3647,7 +3641,7 @@ msgstr "Vis i udskriftsmenu"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/list/list_editor_sidebar/list_editor_sidebar.xml:0
 msgid "Show link to record"
-msgstr "Vis link til datasæt"
+msgstr "Vis link til post"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3659,7 +3653,7 @@ msgstr "Sidepanel"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/components/view_fields.js:0
 msgid "Signature"
-msgstr "Signatur"
+msgstr "Underskrift"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3682,8 +3676,8 @@ msgid ""
 "Some records were skipped because approvals were missing "
 "to                                    proceed with your request: "
 msgstr ""
-"Nogle datasæt blev sprunget over, fordi der mangler godkendelser for at "
-"kunne                                    fortsætte med din anmodning: "
+"Nogle poster blev sprunget over, fordi der mangler godkendelser for at kunne"
+"                                    fortsætte med din anmodning: "
 
 #. module: web_studio
 #. odoo-javascript
@@ -3691,13 +3685,13 @@ msgstr ""
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/kanban_legacy/kanban_editor_sidebar_legacy/kanban_editor_sidebar_legacy.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/list/list_editor_sidebar/list_editor_sidebar.xml:0
 msgid "Sort By"
-msgstr "Sorter efter"
+msgstr "Sortér efter"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/map/map_editor_sidebar.xml:0
 msgid "Sort by"
-msgstr "Sorter efter"
+msgstr "Sortér efter"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3715,7 +3709,7 @@ msgstr "Sparse"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/interactive_editor/field_configuration/selection_content_dialog.xml:0
 msgid "Specify all possible values"
-msgstr "Specificer samtlige mulige værdier"
+msgstr "Angiv alle mulige værdier"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3734,20 +3728,20 @@ msgstr "Fase"
 #. odoo-python
 #: code:addons/web_studio/models/ir_model.py:0
 msgid "Stage Name"
-msgstr "Fase navn"
+msgstr "Fasenavn"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "Stage and visualize records in a custom pipeline"
-msgstr "Iscenesæt og visualiser datasæt i en tilpasset pipeline"
+msgstr "Iscenesæt og visualisér poster i en tilpasset pipeline"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/models/ir_model.py:0
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "Start Date"
-msgstr "Start dato"
+msgstr "Startdato"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3756,7 +3750,7 @@ msgstr "Start dato"
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/cohort/cohort_editor_sidebar.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.xml:0
 msgid "Start Date Field"
-msgstr "Startdato felt"
+msgstr "Felt til startdato"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_studio_approval_rule__notification_order
@@ -3817,7 +3811,7 @@ msgstr "Trin 9"
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/cohort/cohort_editor_sidebar.xml:0
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.xml:0
 msgid "Stop Date Field"
-msgstr "Slutdato felt"
+msgstr "Felt til slutdato"
 
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_ir_model_data__studio
@@ -3828,19 +3822,19 @@ msgstr "Studio"
 #. module: web_studio
 #: model:ir.actions.client,name:web_studio.action_web_studio_app_creator
 msgid "Studio App Creator"
-msgstr "Studio applikation opretter"
+msgstr "Oprettelse af Studio-app"
 
 #. module: web_studio
 #: model:ir.actions.act_window,name:web_studio.studio_approval_entry_action
 #: model:ir.ui.menu,name:web_studio.menu_studio_approval_entry
 msgid "Studio Approval Entries"
-msgstr "Studio Godkendelsesposter"
+msgstr "Studio-godkendelsesposter"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_studio_approval_entry
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_entry_form_view
 msgid "Studio Approval Entry"
-msgstr "Studio Godkendelsespost"
+msgstr "Studio-godkendelsespost"
 
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_studio_approval_request
@@ -3851,7 +3845,7 @@ msgstr "Studio-godkendelsesanmodning"
 #: model:ir.model,name:web_studio.model_studio_approval_rule
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_approval_rule_form_view
 msgid "Studio Approval Rule"
-msgstr "Studio Godkendelses Regel"
+msgstr "Studio-godkendelsesregel"
 
 #. module: web_studio
 #: model:ir.actions.act_window,name:web_studio.studio_approval_rule_action
@@ -3862,12 +3856,12 @@ msgstr "Studio-godkendelsesregler"
 #. module: web_studio
 #: model:ir.model.fields,field_description:web_studio.field_ir_ui_menu__is_studio_configuration
 msgid "Studio Configuration Menu"
-msgstr "Studio Konfigurationsmenu"
+msgstr "Studio-konfigurationsmenu"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.studio_customizations_filter
 msgid "Studio Customizations"
-msgstr "Studio brugertilpasninger"
+msgstr "Studio-tilpasninger"
 
 #. module: web_studio
 #: model_terms:ir.ui.view,arch_db:web_studio.view_studio_export_wizard
@@ -3906,7 +3900,7 @@ msgstr "Assistent til Studio-eksport"
 #. module: web_studio
 #: model:ir.model,name:web_studio.model_studio_mixin
 msgid "Studio Mixin"
-msgstr "Studio Mixin"
+msgstr "Studio-mixin"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3952,7 +3946,7 @@ msgstr "Teknisk navn"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "Template '%s' not found"
-msgstr "Skabelon '%s' ikke fudnet"
+msgstr "Skabelon '%s' ikke fundet"
 
 #. module: web_studio
 #. odoo-javascript
@@ -3964,13 +3958,13 @@ msgstr "Tekst"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/app_creator/app_creator.xml:0
 msgid "The fastest way to create a web application."
-msgstr "Den hurtigste måde at oprette en web applikation."
+msgstr "Den hurtigste måde at oprette en webapp."
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/controllers/main.py:0
 msgid "The field %s does not exist."
-msgstr "Feltet %s eksisterer ikke."
+msgstr "Feltet %s findes ikke."
 
 #. module: web_studio
 #. odoo-javascript
@@ -3982,13 +3976,13 @@ msgstr "Følgende felter er på nuværende tidspunkt ikke inkluderet i visningen
 #. odoo-python
 #: code:addons/web_studio/controllers/main.py:0
 msgid "The icon has not a correct format"
-msgstr "Ikonet har ikke en korrekt format"
+msgstr "Ikonet er ikke i et korrekte format"
 
 #. module: web_studio
 #. odoo-python
 #: code:addons/web_studio/controllers/main.py:0
 msgid "The icon is not linked to an attachment"
-msgstr "Ikonet er ikke forbundet til en vedhæftning"
+msgstr "Ikonet er ikke tilknyttet en vedhæftning"
 
 #. module: web_studio
 #. odoo-python
@@ -4006,7 +4000,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/web_studio/controllers/main.py:0
 msgid "The model %s does not exist."
-msgstr "Modellen %s eksisterer ikke."
+msgstr "Modellen %s findes ikke."
 
 #. module: web_studio
 #. odoo-python
@@ -4030,7 +4024,8 @@ msgstr "Operationstypen \"%s\" er ikke understøttet"
 #. odoo-python
 #: code:addons/web_studio/controllers/main.py:0
 msgid "The related field of a button has to be a many2one to %s."
-msgstr "Det relaterede felt tilhørende en knap har for mange many2one til %s."
+msgstr ""
+"Knappens tilknyttede felt indeholder for mange many2one-relationer til %s."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4058,8 +4053,8 @@ msgid ""
 "The requested change caused an error in the view. It could be because a "
 "field was deleted, but still used somewhere else."
 msgstr ""
-"Den anmodede ændring har forårsaget en fejl i visningen. Det kunne være "
-"fordi et felt blev slettet, men stadig bruges andetsteds."
+"Den anmodede ændring har forårsaget en fejl i visningen. Dette kan ske, hvis "
+"et felt er blevet slettet, men stadig bruges andre steder."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4079,8 +4074,8 @@ msgid ""
 "The user who approves this step will not be able to approve other steps for "
 "the same record."
 msgstr ""
-"Den bruger, som godkender dette trin, kan ikke godkende andre trin for samme "
-"datasæt."
+"Den bruger, som godkender dette trin, kan ikke godkende andre trin for den "
+"samme post."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4097,9 +4092,9 @@ msgid ""
 "trying to save.\n"
 "Are you sure you want to remove the selection values of those records?"
 msgstr ""
-"Der er %s datasæt der gør brug af valgte værdier som ikke er listet i dem, "
+"Der er %s poster, der gør brug af valgte værdier, som ikke er opført i dem, "
 "du forsøger at gemme.\n"
-"Er du sikker på du vil fjerne de valgte værdier fra de datasæt?"
+"Er du sikker på, at du vil fjerne de valgte værdier fra de poster?"
 
 #. module: web_studio
 #. odoo-python
@@ -4116,8 +4111,8 @@ msgid ""
 "There is no record on which this report can be previewed. Create at least "
 "one record to preview the report."
 msgstr ""
-"Der findes ingen datasæt, som denne rapport kan vises med som eksempel. "
-"Opret mindst ét datasæt for at forhåndsvise rapporten."
+"Der findes ingen post, som denne rapport kan vises med som eksempel. Opret "
+"mindst én post for at forhåndsvise rapporten."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4171,7 +4166,7 @@ msgid ""
 msgstr ""
 "Denne godkendelse, eller den du allerede har indgivet, begrænser dig til én "
 "enkelt godkendelse for denne handling.\n"
-"En anden bruger påkrævet for yderligere godkendelse af denne handling."
+"En anden bruger er påkrævet for yderligere godkendelse af denne handling."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4180,8 +4175,8 @@ msgid ""
 "This could also be due to the absence of a real record to render the report "
 "with."
 msgstr ""
-"Dette kan også skyldes, at der ikke findes et ægte datasæt, som rapporten "
-"kan udarbejdes ud fra."
+"Dette kan også skyldes, at der ikke findes en ægte post, som rapporten kan "
+"udarbejdes ud fra."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4199,7 +4194,7 @@ msgstr "Denne model eksporteres allerede."
 #: code:addons/web_studio/static/src/client_action/view_editor/view_editor_model.js:0
 msgid "This operation caused an error, probably because a xpath was broken"
 msgstr ""
-"Denne drift forårsagede en fejl, formentlig fordi en xpath blev ødelagt"
+"Denne handling forårsagede en fejl, formentlig fordi en xpath blev ødelagt"
 
 #. module: web_studio
 #. odoo-python
@@ -4243,7 +4238,7 @@ msgstr "Dagens aktiviteter"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/systray_item/systray_item.xml:0
 msgid "Toggle Studio"
-msgstr "(De)aktiver Studio"
+msgstr "(De)aktivér Studio"
 
 #. module: web_studio
 #. odoo-python
@@ -4261,7 +4256,7 @@ msgstr "Type"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "Type down your notes here..."
-msgstr "Nedfæld dine noter her..."
+msgstr "Nedfæld dine noter her ..."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4311,13 +4306,13 @@ msgstr "Bruger"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/model_configurator/model_configurator.js:0
 msgid "User assignment"
-msgstr "Bruger tildeling"
+msgstr "Brugertildeling"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/approval/studio_approval.xml:0
 msgid "User avatar placeholder"
-msgstr "Bruger avatar pladsholder"
+msgstr "Brugeravatarens pladsholder"
 
 #. module: web_studio
 #. odoo-javascript
@@ -4403,7 +4398,7 @@ msgstr "Beskeder fra hjemmesiden"
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__website_message_ids
 msgid "Website communication history"
-msgstr "Hjemmesidens kommunikations historik"
+msgstr "Hjemmesidens kommunikationshistorik"
 
 #. module: web_studio
 #. odoo-javascript
@@ -4422,7 +4417,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/gantt/gantt_editor_sidebar.xml:0
 msgid "Week Precision"
-msgstr "Uge præcision"
+msgstr "Præcisering af uge"
 
 #. module: web_studio
 #. odoo-javascript
@@ -4434,7 +4429,7 @@ msgstr "Velkommen til"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/js/tours/web_studio_tour.js:0
 msgid "What about a <b>Kanban view</b>?"
-msgstr "Hvad med en <b>Kanban visning</b>?"
+msgstr "Hvad med en <b>Kanban-visning</b>?"
 
 #. module: web_studio
 #. odoo-javascript
@@ -4446,12 +4441,12 @@ msgstr "Hvad knappen skal kunne"
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/list/list_editor_sidebar/list_editor_sidebar.xml:0
 msgid "When Creating Record"
-msgstr "Ved oprettelse af datasæt"
+msgstr "Ved oprettelse af poster"
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_studio_approval_rule__can_validate
 msgid "Whether the rule can be approved by the current user"
-msgstr "Hvorvidt reglen kan godkendes af den nuværende bruger"
+msgstr "Om reglen kan godkendes af den nuværende bruger"
 
 #. module: web_studio
 #: model:ir.model.fields,help:web_studio.field_ir_model__abstract
@@ -4527,7 +4522,7 @@ msgstr ""
 #: code:addons/web_studio/static/src/client_action/action_editor/action_editor.js:0
 msgid "You cannot deactivate this view as it is the last one active."
 msgstr ""
-"Du kan ikke deaktivere denne visning eftersom det er den sidste som er aktiv."
+"Du kan ikke deaktivere denne visning, da det er den sidste som er aktiv."
 
 #. module: web_studio
 #. odoo-javascript
@@ -4545,7 +4540,7 @@ msgstr "Du skal først oprette et many2many felt i formular visningen."
 #. odoo-python
 #: code:addons/web_studio/models/studio_approval.py:0
 msgid "You just like to break things, don't you?"
-msgstr "Du kan bare li' at ødelægge ting, ka' du ik'?"
+msgstr "Du kan bare lide at ødelægge ting, kan du ik'?"
 
 #. module: web_studio
 #. odoo-python
@@ -4593,13 +4588,13 @@ msgstr "eller"
 #. odoo-python
 #: code:addons/web_studio/models/ir_ui_view.py:0
 msgid "studio_approval attribute can only be set in form views"
-msgstr "studio_approval egenskab kan kun angives i formular visninger"
+msgstr "studio_approval-attribut kan kun angives i formularvisninger"
 
 #. module: web_studio
 #. odoo-javascript
 #: code:addons/web_studio/static/src/client_action/view_editor/editors/form/form_editor_sidebar/properties/chatter_properties/chatter_properties.xml:0
 msgid "test email"
-msgstr "test email"
+msgstr "test-e-mail"
 
 #. module: web_studio
 #. odoo-python

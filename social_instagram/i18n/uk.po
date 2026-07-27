@@ -4,15 +4,15 @@
 #
 # Translators:
 # Wil Odoo, 2024
-# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024, 2026.
 # Yana Bystrytska <yana.bystrytska@erp.co.ua>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 18:49+0000\n"
-"PO-Revision-Date: 2026-03-30 06:14+0000\n"
-"Last-Translator: Yana Bystrytska <yana.bystrytska@erp.co.ua>\n"
+"PO-Revision-Date: 2026-06-23 09:08+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
 "social_instagram/uk/>\n"
 "Language: uk\n"
@@ -23,7 +23,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -37,6 +37,9 @@ msgid ""
 "- Check permissions: Your site's robots.txt might be blocking Instagram from "
 "accessing the media folder (make sure /social_instagram is not blocked)."
 msgstr ""
+"- Перевірте дозволи: файл robots.txt вашого сайту може блокувати доступ "
+"Instagram до папки медіа (переконайтеся, що /social_instagram не заблоковано)"
+"."
 
 #. module: social_instagram
 #. odoo-python
@@ -45,6 +48,7 @@ msgid ""
 "- Check your connection: Your server may be offline or temporarily "
 "unreachable."
 msgstr ""
+"- Перевірте з’єднання: ваш сервер може бути офлайн або тимчасово недоступний."
 
 #. module: social_instagram
 #. odoo-python
@@ -53,6 +57,9 @@ msgid ""
 "- Check your file: Ensure it isn't corrupted and is from 320 to 1440 pixels "
 "wide, 8MB maximum, aspect ratio between 4:5 and 1.91:1."
 msgstr ""
+"- Перевірте свій файл: переконайтеся, що він не пошкоджений, має розмір від "
+"320 до 1440 пікселів завширшки, максимум 8 МБ, а співвідношення сторін – від "
+"4:5 до 1,91:1."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -70,6 +77,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
 "                At least one image is required when posting on Instagram."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
+"                Для публікації в Instagram потрібне хоча б одне зображення."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -77,6 +86,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
 "                You can only post up to 10 images at once."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
+"                Ви можете опублікувати лише до 10 зображень одночасно."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -85,6 +96,9 @@ msgid ""
 "                Your image appears to be corrupted, please try loading it "
 "again."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
+"                Ваше зображення, схоже, пошкоджене, спробуйте завантажити "
+"його ще раз."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.social_stream_post_view_kanban
@@ -121,7 +135,7 @@ msgstr "Секрет додатка"
 #. odoo-python
 #: code:addons/social_instagram/models/social_post.py:0
 msgid "At least one image is required when posting on Instagram."
-msgstr ""
+msgstr "Для публікації в Instagram потрібне хоча б одне зображення."
 
 #. module: social_instagram
 #. odoo-javascript
@@ -173,7 +187,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__has_instagram_account
 #: model:ir.model.fields,field_description:social_instagram.field_social_post_template__has_instagram_account
 msgid "Has Instagram Account"
-msgstr ""
+msgstr "Є обліковий запис Instagram"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.social_post_template_view_form
@@ -255,7 +269,7 @@ msgstr "ID автора Instagram Facebook"
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__instagram_image_ids
 #: model:ir.model.fields,field_description:social_instagram.field_social_post_template__instagram_image_ids
 msgid "Instagram Images"
-msgstr ""
+msgstr "Зображення Instagram"
 
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_social_stream_post__instagram_likes_count
@@ -266,7 +280,7 @@ msgstr "Лайки Instagram"
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__instagram_message
 #: model:ir.model.fields,field_description:social_instagram.field_social_post_template__instagram_message
 msgid "Instagram Message"
-msgstr ""
+msgstr "Повідомлення Instagram"
 
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_social_live_post__instagram_post_id
@@ -326,6 +340,8 @@ msgstr ""
 msgid ""
 "Please specify either a Instagram Message or upload some Instagram Images."
 msgstr ""
+"Будь ласка, вкажіть повідомлення з Instagram або завантажте кілька зображень "
+"з Instagram."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -385,7 +401,7 @@ msgstr ""
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "The following images are not in the correct format (jpg/jpeg)."
-msgstr ""
+msgstr "Наведені нижче зображення мають неправильний формат (jpg/jpeg)."
 
 #. module: social_instagram
 #. odoo-python
@@ -395,11 +411,14 @@ msgid ""
 "\n"
 "%(images)s"
 msgstr ""
+"Наведені нижче зображення мають неправильний формат (jpg/jpeg).\n"
+"\n"
+"%(images)s"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "The following images do not meet the"
-msgstr ""
+msgstr "Наведені нижче зображення не відповідають вимогам"
 
 #. module: social_instagram
 #. odoo-python
@@ -410,18 +429,22 @@ msgid ""
 "\n"
 "%(images)s"
 msgstr ""
+"Наведені нижче зображення не відповідають необхідному співвідношенню сторін "
+"(від 1,91:1 до 4:5).\n"
+"\n"
+"%(images)s"
 
 #. module: social_instagram
 #. odoo-python
 #: code:addons/social_instagram/models/social_live_post.py:0
 msgid "The media container expired."
-msgstr ""
+msgstr "Термін дії медіаконтейнера закінчився."
 
 #. module: social_instagram
 #. odoo-python
 #: code:addons/social_instagram/models/social_live_post.py:0
 msgid "The media container failed to process."
-msgstr ""
+msgstr "Не вдалося обробити медіаконтейнер."
 
 #. module: social_instagram
 #. odoo-python
@@ -454,18 +477,20 @@ msgid ""
 "Used to make comparisons when we need to restrict some features to a "
 "specific media ('facebook', 'x', ...)."
 msgstr ""
+"Використовується для порівнянь, коли нам потрібно обмежити деякі функції "
+"певним медіафайлом («facebook», «x» тощо)."
 
 #. module: social_instagram
 #: model:ir.model.fields,help:social_instagram.field_social_post__instagram_image_ids
 #: model:ir.model.fields,help:social_instagram.field_social_post_template__instagram_image_ids
 msgid "Will attach images to your posts."
-msgstr ""
+msgstr "До ваших постів додаватиму зображення."
 
 #. module: social_instagram
 #. odoo-python
 #: code:addons/social_instagram/models/social_post.py:0
 msgid "You can only post up to 10 images at once."
-msgstr ""
+msgstr "Ви можете опублікувати лише до 10 зображень одночасно."
 
 #. module: social_instagram
 #. odoo-python
@@ -496,9 +521,9 @@ msgstr "Схоже, ваше зображення пошкоджене, спро
 #: code:addons/social_instagram/models/social_live_post.py:0
 msgid ""
 "Your media didn't go through. This is usually caused by one of the following:"
-msgstr ""
+msgstr "Ваш носій не пройшов. Зазвичай це спричинено однією з наступних причин:"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "required aspect ratio"
-msgstr ""
+msgstr "необхідне співвідношення сторін"

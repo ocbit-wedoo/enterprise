@@ -232,50 +232,76 @@ registry.category("web_tour.tours").add('test_internal_picking_from_scratch', { 
     }
 ]});
 
-registry.category("web_tour.tours").add('test_internal_picking_from_scratch_with_package', {  steps: () => [
-    // Creates a first internal transfert (Section 1 -> Section 2).
-    { trigger: '.o_stock_barcode_main_menu', run: 'scan WHINT' },
-    // Scans product1 and put it in P00001, then do the same for product2.
-    { trigger: '.o_barcode_client_action', run: 'scan product1' },
-    { trigger: '.o_barcode_line.o_selected', run: 'scan P00001' },
-    // Scans the destination.
-    { trigger: '.o_barcode_line .result-package', run: 'scan LOC-01-02-00' },
-    { trigger: '.o_barcode_line:not(.o_selected)', run: 'scan product2' },
-    { trigger: '.o_barcode_line[data-barcode="product2"].o_selected', run: 'scan P00001' },
-    { // Scans the destination.
-        trigger: '.o_barcode_line[data-barcode="product2"] .result-package', run: 'scan LOC-01-02-00',
-    },
-    { // Validates the internal picking.
-        trigger: '.o_barcode_line[data-barcode="product2"] .o_line_destination_location',
-        run: 'scan OBTVALI',
-    },
-    {
-        trigger: '.o_notification_bar.bg-success',
-        run: "click",
-    },
-    {
-        trigger: '.o_notification button.o_notification_close',
-        run: "click",
-    },
-
-    // Creates a second internal transfert (WH/Stock -> WH/Stock).
-    { trigger: '.o_stock_barcode_main_menu', run: 'scan WHINT' },
-    { trigger: '.o_barcode_client_action', run: () => helper.assertLinesCount(0) },
-    // Scans a package with some quants and checks lines was created for its content.
-    { trigger: '.o_barcode_client_action', run: 'scan P00002' },
-    {
-        trigger: '.o_barcode_line[data-barcode="product1"] + .o_barcode_line[data-barcode="product2"]',
-        run: () => {
-            helper.assertLinesCount(2);
-            helper.assertLineQty(0, "1");
-            helper.assertLineQty(1, "2");
+registry.category("web_tour.tours").add("test_internal_picking_from_scratch_with_package", {
+    steps: () => [
+        // Creates a first internal transfert (Stock -> Section 2).
+        { trigger: ".o_stock_barcode_main_menu", run: "scan WHINT" },
+        // Scans product1 and put it in P00001, then do the same for product2.
+        { trigger: ".o_barcode_client_action", run: "scan product1" },
+        { trigger: ".o_barcode_line.o_selected", run: "scan P00001" },
+        { trigger: ".o_barcode_line:contains(P00001)", run: "scan product2" },
+        { trigger: ".o_barcode_line[data-barcode='product2'].o_selected", run: "scan P00001" },
+        {
+            content: "Scans the destination",
+            trigger: ".o_barcode_line[data-barcode='product2'] .result-package",
+            run: "scan LOC-01-02-00",
         },
-    },
-    // Scans the destination location and validate the transfert.
-    { trigger: '.o_barcode_line.o_selected + .o_barcode_line.o_selected', run: 'scan LOC-01-02-00' },
-    { trigger: '.o_barcode_line:not(.o_selected)', run: 'scan OBTVALI' },
-    { trigger: '.o_notification_bar.bg-success'},
-]});
+        {
+            content: "Validates the internal transfer",
+            trigger: ".o_barcode_line[data-barcode='product2'] .o_line_destination_location",
+            run: "scan OBTVALI",
+        },
+        {
+            trigger: ".o_notification_bar.bg-success",
+            run: "click",
+        },
+        {
+            trigger: ".o_notification button.o_notification_close",
+            run: "click",
+        },
+        // Creates a second internal transfert (WH/Stock -> WH/Stock).
+        { trigger: ".o_stock_barcode_main_menu", run: "scan WHINT" },
+        { trigger: ".o_barcode_client_action", run: () => helper.assertLinesCount(0) },
+        // Scans a package with some quants and checks lines was created for its content.
+        { trigger: ".o_barcode_client_action", run: "scan P00002" },
+        {
+            trigger:
+                ".o_barcode_line[data-barcode='product1'] + .o_barcode_line[data-barcode='product2']",
+            run: () => {
+                helper.assertLinesCount(2);
+                helper.assertLineQty(0, "1");
+                helper.assertLineQty(1, "2");
+            },
+        },
+        { trigger: ".o_barcode_client_action", run: "scan product1" },
+        {
+            trigger:
+                ".o_barcode_line[data-barcode=product1] + .o_barcode_line[data-barcode=product2] + .o_barcode_line[data-barcode=product1]",
+            run: () => {
+                const [line1, line2, line3] = helper.getLines();
+                helper.assert(line1.querySelector(".package").innerText, "P00002");
+                helper.assert(line2.querySelector(".package").innerText, "P00002");
+                helper.assert(line3.querySelector(".package"), null);
+            },
+        },
+        { trigger: ".o_barcode_client_action", run: "scan 76543210" },
+        { trigger: ".o_barcode_line:contains('Battle Droid')", run: "scan productlot1" },
+        {
+            content: "Check that the owner was prefilled when unambiguous",
+            trigger: ".o_barcode_line[data-barcode=productlot1]",
+            run: () => {
+                const [line1, line2, line3, line4, line5] = helper.getLines();
+                helper.assert(line1.querySelector(".o_line_owner"), null);
+                helper.assert(line2.querySelector(".o_line_owner"), null);
+                helper.assert(line3.querySelector(".o_line_owner"), null);
+                helper.assert(line4.querySelector(".o_line_owner").innerText, "Azure Interior");
+                helper.assert(line5.querySelector(".o_line_owner"), null);
+            },
+        },
+        { trigger: ".o_barcode_client_action", run: "scan LOC-01-02-00" },
+        ...stepUtils.validateBarcodeOperation(),
+    ],
+});
 
 registry.category("web_tour.tours").add("test_internal_pack_in_same_package", {
     steps: () => [
@@ -6156,6 +6182,45 @@ registry.category("web_tour.tours").add("test_no_validate_no_dest_package", {
         run: () => {
             helper.assertErrorMessage("Destination location must be scanned");
         },
+    },
+    {
+        trigger: ".o_notification_close",
+        run: "click",
+    },
+    // Add an additional line, delete it and then check we still can't validate the operation.
+    {
+        trigger: ".o_barcode_client_action",
+        run: "scan product1"
+    },
+    {
+        trigger: ".o_barcode_line[data-barcode='product1'] .o_delete_line",
+        run: "click",
+    },
+    {
+        trigger: ".btn.o_validate_page",
+        run: "click",
+    },
+    {
+        trigger: ".o_notification_bar.bg-danger",
+        run: () => {
+            helper.assertErrorMessage("Destination location must be scanned");
+        },
+    },
+    // Finally, scan a destination and thus check we can validate the operation.
+    {
+        trigger: ".o_barcode_line",
+        run: "click",
+    },
+    {
+        trigger: ".o_barcode_line.o_selected",
+        run: "scan LOC-01-02-00",
+    },
+    {
+        trigger: ".btn.o_validate_page",
+        run: "click",
+    },
+    {
+        trigger: ".o_stock_barcode_list_kanban_view",
     },
 ]});
 

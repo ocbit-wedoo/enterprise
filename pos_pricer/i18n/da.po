@@ -8,13 +8,14 @@
 # Sanne Kristensen <sanne@vkdata.dk>, 2025
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-11-17 14:18+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:28+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "pos_pricer/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_pricer
 #: model:ir.model.constraint,message:pos_pricer.constraint_pricer_tag_name_unique
@@ -32,7 +33,7 @@ msgstr "Et Pricer-tag med dette stregkode-id findes allerede"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__pricer_store_id
 msgid "Associated Pricer Store"
-msgstr "Tilknyttet Pricer Butik"
+msgstr "Tilknyttet Pricer-butik"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__product_id
@@ -57,7 +58,7 @@ msgstr "Kontakt"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_or_update_products_url
 msgid "Create Or Update Products Url"
-msgstr "Opret eller opdater produkters URL"
+msgstr "Opret eller opdatér produkters URL"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_uid
@@ -80,19 +81,19 @@ msgstr "Dato og tidspunkt for sidste synkronisering med Pricer"
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__display_name
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: pos_pricer
 #. odoo-python
 #: code:addons/pos_pricer/models/pricer_store.py:0
 msgid "Error: %(status_code)s - %(message)s"
-msgstr "Fejl: %(status_code)s - %(message)s"
+msgstr "Fejl: %(status_code)s – %(message)s"
 
 #. module: pos_pricer
 #. odoo-python
 #: code:addons/pos_pricer/models/pricer_store.py:0
 msgid "Error: check Pricer credentials"
-msgstr "Fejl: tjek Pricer legitimationsoplysninger"
+msgstr "Fejl: Tjek Pricer-legitimationsoplysninger"
 
 #. module: pos_pricer
 #. odoo-python
@@ -125,7 +126,7 @@ msgstr ""
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_tag__name
 msgid "It is recommended to use a barcode scanner for input"
-msgstr "Det anbefales at bruge en stregkode scanner til indtastning"
+msgstr "Det anbefales at bruge en stregkodescanner til indtastning"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__last_update_datetime
@@ -152,7 +153,7 @@ msgstr "Sidst opdateret den"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__link_tags_url
 msgid "Link Tags Url"
-msgstr "Link Tags Url"
+msgstr "Link til URL-tags"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_login
@@ -173,7 +174,7 @@ msgstr "Rabatpris"
 #. module: pos_pricer
 #: model:ir.actions.server,name:pos_pricer.pricer_sync_cron_ir_actions_server
 msgid "POS Pricer: tags update synchronization "
-msgstr "POS Pricer: tags opdateringssynkronisering"
+msgstr "POS Pricer: synkronisering af tag-opdatering "
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_password
@@ -183,7 +184,7 @@ msgstr "Adgangskode til din Pricer-konto"
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_pos_config
 msgid "Point of Sale Configuration"
-msgstr "POS konfiguration"
+msgstr "POS-konfiguration"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_product_product__on_sale_price
@@ -199,17 +200,17 @@ msgstr "Pricer"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_display_price
 msgid "Pricer Display Price"
-msgstr "Pricer Vis pris"
+msgstr "Pricer-prisvisning"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_login
 msgid "Pricer Login"
-msgstr "Pricer Login"
+msgstr "Pricer-login"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_password
 msgid "Pricer Password"
-msgstr "Pricer Adgangskode"
+msgstr "Pricer-adgangskode"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_product_to_create_or_update
@@ -219,7 +220,7 @@ msgstr "Pricer-produkt til oprettelse eller opdatering"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__pricer_product_to_link
 msgid "Pricer Product To Link"
-msgstr "Pricer Produkt Til Link"
+msgstr "Knyt Pricer-produkt til"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_sale_pricelist_id
@@ -231,12 +232,12 @@ msgstr "Pricer-udsalgsprisliste"
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_form_view
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
 msgid "Pricer Store"
-msgstr "Pricer Butik"
+msgstr "Pricer-butik"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_store_identifier
 msgid "Pricer Store ID"
-msgstr "Pricer butiks-id"
+msgstr "Pricer-butiks-ID"
 
 #. module: pos_pricer
 #. odoo-python
@@ -245,51 +246,51 @@ msgid ""
 "Pricer Store ID must only contain lowercase a-z, 0-9 or '-' and not start "
 "with '-'"
 msgstr ""
-"Pricer butiks-id må kun indeholde små bogstaver a-z, 0-9 eller '-' og må "
+"Pricer-butiks-ID må kun indeholde små bogstaver a-z, 0-9 eller '-' og må "
 "ikke starte med '-'"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__name
 msgid "Pricer Store name in Odoo database"
-msgstr "Pricer Butiksnavn i Odoo database"
+msgstr "Pricer-butiksnavn i Odoo-database"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_pricer_store
 msgid "Pricer Store regrouping pricer tags"
-msgstr "Pricer Butik omgrupperer prismærker"
+msgstr "Pricer-butik omgrupperer prisskilte"
 
 #. module: pos_pricer
 #: model:ir.actions.act_window,name:pos_pricer.action_open_pricer_stores
 #: model:ir.ui.menu,name:pos_pricer.menu_pos_pricer_stores
 msgid "Pricer Stores"
-msgstr "Pricer butikker"
+msgstr "Pricer-butikker"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__name
 msgid "Pricer Tag Barcode ID"
-msgstr "Pricer Tag Stregkode ID"
+msgstr "Pricer-taggets stregkode-ID"
 
 #. module: pos_pricer
 #: model:ir.actions.act_window,name:pos_pricer.action_open_pricer_tags
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_tag_ids
 #: model:ir.ui.menu,name:pos_pricer.menu_pos_pricer_tags
 msgid "Pricer Tags"
-msgstr "Pricer Tags"
+msgstr "Pricer-tags"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_tenant_name
 msgid "Pricer Tenant Name"
-msgstr "Pricer Lejers navn"
+msgstr "Pricer-ejernavn"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_pricer_tag
 msgid "Pricer electronic tag"
-msgstr "Pricer elektronisk mærke"
+msgstr "Pricer-elektronisk tag"
 
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_tag_view_list
 msgid "Pricer tag"
-msgstr "Pricer tag"
+msgstr "Pricer-tag"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__dummy_tag_barcode
@@ -299,7 +300,7 @@ msgstr "Pricer-tag-stregkode"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_tag_ids
 msgid "Pricer tags ids"
-msgstr "Pricer tags id'er"
+msgstr "Pricer-tags-ID'er"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_product_template
@@ -315,7 +316,7 @@ msgstr "Produkt '%s' fundet"
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_product_product
 msgid "Product Variant"
-msgstr "Varevariant"
+msgstr "Produktvariant"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__dummy_prod_barcode
@@ -335,12 +336,12 @@ msgstr "Hurtig parring"
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__dummy_tag_barcode
 msgid "Scan the Pricer tag barcode here"
-msgstr "Scan Pricer-tag-stregkoden her"
+msgstr "Scan Pricer-taggets stregkode her"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__dummy_prod_barcode
 msgid "Scan the product barcode here"
-msgstr "Scan produktets stregkode er"
+msgstr "Scan produktets stregkode her"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__last_update_status_message
@@ -350,7 +351,7 @@ msgstr "Statusmeddelelse for sidste synkronisering med Pricer"
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_stock_move
 msgid "Stock Move"
-msgstr "Lagerflytning"
+msgstr "Lagerbevægelse"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__name
@@ -360,7 +361,7 @@ msgstr "Butiksnavn"
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_product_supplierinfo
 msgid "Supplier Pricelist"
-msgstr "Leverandør prisliste"
+msgstr "Leverandørens prisliste"
 
 #. module: pos_pricer
 #. odoo-javascript
@@ -387,7 +388,7 @@ msgid ""
 "Tag id should be a 17 characters string composed of a letter followed by 16 "
 "digits"
 msgstr ""
-"Tag-id skal være en streng på 17 tegn sammensat af et bogstav efterfulgt af "
+"Tag-ID skal være en streng på 17 tegn sammensat af et bogstav efterfulgt af "
 "16 cifre"
 
 #. module: pos_pricer
@@ -400,7 +401,7 @@ msgstr "Skat"
 msgid ""
 "This pricelist will be used to set sales on Pricer tags for this product"
 msgstr ""
-"Prislisten bruges til at fastsætte priserne på prismærkerne for dette produkt"
+"Prislisten bruges til at bestemme priserne på prisskiltene for dette produkt"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_tag__pricer_store_id
@@ -409,8 +410,8 @@ msgid ""
 "This product will be linked to and displayed on the Pricer tags of the store "
 "selected here"
 msgstr ""
-"Dette produkt vil blive linket til og vist på Pricer-mærkerne i den butik, "
-"der er valgt her"
+"Produktet bliver knyttet til og vist på Pricer-mærkerne i den butik, der er "
+"valgt her"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_product_product__pricer_tag_ids
@@ -418,13 +419,13 @@ msgid ""
 "This product will be linked to and displayed on the Pricer tags with ids "
 "listed here. It is recommended to use a barcode scanner"
 msgstr ""
-"Dette produkt vil blive linket til og vist på Pricer-tags med id'er anført "
-"her. Det anbefales at bruge en stregkode scanner"
+"Produktet bliver knyttet til og vist på Pricer-tags med de ID'er, der er "
+"angivet her. Det anbefales at bruge en stregkodescanner"
 
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
 msgid "Update all tags"
-msgstr "Opdater alle tags"
+msgstr "Opdatér alle tags"
 
 #. module: pos_pricer
 #. odoo-python
@@ -435,9 +436,9 @@ msgstr "Opdatering sendt til Pricer"
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
 msgid "Update tags"
-msgstr "Opdater tags"
+msgstr "Opdatér tags"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_tenant_name
 msgid "Your company identifier at Pricer"
-msgstr "Din virksomheds identifikator hos Pricer"
+msgstr "Din virksomhedsidentifikator hos Pricer"

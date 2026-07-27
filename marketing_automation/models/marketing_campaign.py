@@ -11,6 +11,7 @@ from odoo import api, fields, models, tools, _
 from odoo.fields import Datetime
 from odoo.exceptions import ValidationError, AccessError
 from odoo.tools import convert
+from odoo.tools.misc import OrderedSet
 
 
 class MarketingCampaign(models.Model):
@@ -344,10 +345,6 @@ class MarketingCampaign(models.Model):
 
         :return: new participants to the campaign
         """
-        def _uniquify_list(seq):
-            seen = set()
-            return [x for x in seq if x not in seen and not seen.add(x)]
-
         participants = self.env['marketing.participant']
         now = self.env.cr.now()
         # auto-commit except in testing mode
@@ -360,13 +357,13 @@ class MarketingCampaign(models.Model):
             RecordModel = self.env[campaign.model_name].with_context(lang=user_id.lang)
 
             # Fetch existing participants
-            participants_data = participants.search_read([('campaign_id', '=', campaign.id)], ['res_id'])
-            existing_rec_ids = _uniquify_list([live_participant['res_id'] for live_participant in participants_data])
+            campaign_participants = participants.search_fetch([('campaign_id', '=', campaign.id)], ['res_id'])
+            existing_rec_ids = OrderedSet(campaign_participants.mapped('res_id'))
 
             record_domain = literal_eval(campaign.domain or "[]")
-            db_rec_ids = _uniquify_list(RecordModel.search(record_domain).ids)
+            db_rec_ids = OrderedSet(RecordModel.search(record_domain).ids)
             to_create = [rid for rid in db_rec_ids if rid not in existing_rec_ids]  # keep ordered IDs
-            to_remove = set(existing_rec_ids) - set(db_rec_ids)
+            to_remove = existing_rec_ids - db_rec_ids
             unique_field = campaign.unique_field_id.sudo()
             if unique_field.name != 'id':
                 without_duplicates = []
@@ -535,6 +532,7 @@ for record in records:
                         'module': module,
                         'model': model_name,
                         'res_id': created_record.id,
+                        'noupdate': True,
                     })
 
     # --------------------------------------

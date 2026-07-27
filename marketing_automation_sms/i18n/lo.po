@@ -3,13 +3,14 @@
 # * marketing_automation_sms
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-26 04:50+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 10:12+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "marketing_automation_sms/lo/>\n"
 "Language: lo\n"
@@ -17,22 +18,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_activity_summary_template_sms
 msgid "\" <strong>bounced</strong>,"
-msgstr ""
+msgstr "\" <strong>ຕີກັບ</strong>,"
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_activity_summary_template_sms
 msgid "\" gets clicked,"
-msgstr ""
+msgstr "\" ຖືກຄລິກ,"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields,field_description:marketing_automation_sms.field_marketing_campaign__mailing_sms_count
 msgid "# SMS Mailings"
-msgstr ""
+msgstr "ຈຳນວນການສົ່ງ SMS"
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_campaign_view_form
@@ -61,6 +62,15 @@ msgid ""
 "                    <i data-trigger-type=\"sms_not_click\" class=\"fa fa-hand-pointer-o o_ma_text_rejected o_add_child_activity text-danger\" title=\"Not Clicked\" role=\"img\" aria-label=\"Not Clicked\"/>\n"
 "                    <i data-trigger-type=\"sms_bounce\" class=\"fa fa fa-exclamation-circle o_ma_text_rejected o_add_child_activity text-danger\" title=\"Bounced\" role=\"img\" aria-label=\"Bounced\"/>"
 msgstr ""
+"<i data-trigger-type=\"sms_click\" class=\"fa fa-hand-pointer-o "
+"o_ma_text_processed o_add_child_activity text-success\" title=\"ຄລິກແລ້ວ\" "
+"role=\"img\" aria-label=\"ຄລິກແລ້ວ\"/>\n"
+"                    <i data-trigger-type=\"sms_not_click\" class=\"fa fa-"
+"hand-pointer-o o_ma_text_rejected o_add_child_activity text-danger\" "
+"title=\"ບໍ່ໄດ້ຄລິກ\" role=\"img\" aria-label=\"ບໍ່ໄດ້ຄລິກ\"/>\n"
+"                    <i data-trigger-type=\"sms_bounce\" class=\"fa fa fa-"
+"exclamation-circle o_ma_text_rejected o_add_child_activity text-danger\" "
+"title=\"ຕີກັບ\" role=\"img\" aria-label=\"ຕີກັບ\"/>"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields,field_description:marketing_automation_sms.field_marketing_activity__activity_type
@@ -76,7 +86,7 @@ msgstr "ຄລິກແລ້ວ"
 #. odoo-python
 #: code:addons/marketing_automation_sms/models/marketing_activity.py:0
 msgid "Exception in SMS Marketing: %s"
-msgstr ""
+msgstr "ຂໍ້ຜິດພາດໃນການຕະຫຼາດ SMS: %s"
 
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_sms_tracker
@@ -86,12 +96,12 @@ msgstr "ເຊື່ອມຕໍ່ SMS ກັບໂມເດວຕິດຕາ�
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_mailing_trace
 msgid "Mailing Statistics"
-msgstr "ສະຖິຕິການສົ່ງເມລ"
+msgstr "ສະຖິຕິການສົ່ງ"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields,field_description:marketing_automation_sms.field_marketing_activity__mass_mailing_id_mailing_type
 msgid "Mailing Type"
-msgstr "ປະເພດການສົ່ງເມລ"
+msgstr "ປະເພດການສົ່ງ"
 
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_marketing_activity
@@ -102,7 +112,7 @@ msgstr "ກິດຈະກຳການຕະຫຼາດ"
 #. module: marketing_automation_sms
 #: model:ir.actions.act_window,name:marketing_automation_sms.mail_mass_mailing_action_marketing_automation_sms
 msgid "Marketing Automation SMS"
-msgstr ""
+msgstr "SMS ການຕະຫຼາດອັດຕະໂນມັດ"
 
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_marketing_campaign
@@ -112,12 +122,12 @@ msgstr "ແຄມເປນການຕະຫຼາດ"
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_marketing_trace
 msgid "Marketing Trace"
-msgstr "ການຕິດຕາມການຕະຫຼາດ"
+msgstr "ຮ່ອງຮອຍການຕະຫຼາດ"
 
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_mailing_mailing
 msgid "Mass Mailing"
-msgstr "ການສົ່ງເມລຈຳນວນຫຼາຍ"
+msgstr "ການສົ່ງຂໍ້ຄວາມຈຳນວນຫຼາຍ"
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_campaign_view_form
@@ -128,13 +138,13 @@ msgstr "ເປີດແລ້ວ"
 #. odoo-python
 #: code:addons/marketing_automation_sms/models/marketing_trace.py:0
 msgid "Parent activity SMS bounced"
-msgstr ""
+msgstr "SMS ຂອງກິດຈະກຳຫຼັກຕີກັບ"
 
 #. module: marketing_automation_sms
 #. odoo-python
 #: code:addons/marketing_automation_sms/models/marketing_trace.py:0
 msgid "Parent activity SMS clicked"
-msgstr ""
+msgstr "SMS ຂອງກິດຈະກຳຫຼັກຖືກຄລິກ"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields.selection,name:marketing_automation_sms.selection__marketing_activity__activity_type__sms
@@ -154,7 +164,7 @@ msgstr "ເນື້ອໃນ SMS"
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.mailing_mailing_view_form_marketing_activity
 msgid "SMS Options"
-msgstr ""
+msgstr "ຕົວເລືອກ SMS"
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_campaign_view_form
@@ -170,29 +180,29 @@ msgstr "ແບບຟອມ SMS"
 #. odoo-python
 #: code:addons/marketing_automation_sms/models/marketing_activity.py:0
 msgid "SMS cancelled"
-msgstr ""
+msgstr "SMS ຖືກຍົກເລີກ"
 
 #. module: marketing_automation_sms
 #. odoo-python
 #: code:addons/marketing_automation_sms/models/mailing_trace.py:0
 #: code:addons/marketing_automation_sms/models/marketing_activity.py:0
 msgid "SMS failed"
-msgstr ""
+msgstr "SMS ລົ້ມເຫຼວ"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields.selection,name:marketing_automation_sms.selection__marketing_activity__trigger_type__sms_bounce
 msgid "SMS: bounced"
-msgstr ""
+msgstr "SMS: ຕີກັບ"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields.selection,name:marketing_automation_sms.selection__marketing_activity__trigger_type__sms_click
 msgid "SMS: clicked"
-msgstr ""
+msgstr "SMS: ຄລິກແລ້ວ"
 
 #. module: marketing_automation_sms
 #: model:ir.model.fields.selection,name:marketing_automation_sms.selection__marketing_activity__trigger_type__sms_not_click
 msgid "SMS: not clicked"
-msgstr ""
+msgstr "SMS: ບໍ່ໄດ້ຄລິກ"
 
 #. module: marketing_automation_sms
 #: model:ir.model,name:marketing_automation_sms.model_sms_composer
@@ -226,7 +236,7 @@ msgstr "ປະເພດຕົວເປີດໃຊ້ງານ"
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_activity_summary_template_sms
 msgid "after the <strong>SMS text message</strong> sent by the Activity \""
-msgstr ""
+msgstr "ຫຼັງຈາກ <strong>ຂໍ້ຄວາມ SMS</strong> ຖືກສົ່ງໂດຍກິດຈະກຳ \""
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_activity_summary_template_sms
@@ -234,10 +244,12 @@ msgid ""
 "after the Participant <strong>clicked</strong>,<br/>on any link included in "
 "the <strong>SMS text message</strong> sent by the Activity \""
 msgstr ""
+"ຫຼັງຈາກຜູ້ເຂົ້າຮ່ວມ <strong>ຄລິກ</strong>,<br/>ໃນລິ້ງໃດໜຶ່ງທີ່ຢູ່ໃນ <strong>ຂໍ້ຄວາມ SMS</"
+"strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
 
 #. module: marketing_automation_sms
 #: model_terms:ir.ui.view,arch_db:marketing_automation_sms.marketing_activity_summary_template_sms
 msgid ""
 "if no link included in the <strong>SMS text message</strong> sent by the "
 "Activity \""
-msgstr ""
+msgstr "ຖ້າບໍ່ມີລິ້ງໃດໆ ຢູ່ໃນ <strong>ຂໍ້ຄວາມ SMS</strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""

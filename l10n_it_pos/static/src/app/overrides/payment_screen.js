@@ -22,4 +22,8 @@ patch(PaymentScreen.prototype, {
             return super.shouldDownloadInvoice(...arguments);
         }
     },
+
+    get autoPrint() {
+        return isFiscalPrinterActive(this.pos.config) || super.autoPrint;
+    },
 });

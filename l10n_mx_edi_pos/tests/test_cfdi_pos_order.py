@@ -243,6 +243,57 @@ class TestCFDIPosOrder(TestMxEdiPosCommon, TestPointOfSaleHttpCommon):
                 'state': 'invoice_sent',
             }])
 
+            gi_document = order.l10n_mx_edi_document_ids.filtered(lambda d: d.state == 'ginvoice_sent')
+            with self.with_mocked_pac_cancel_success():
+                self.env['l10n_mx_edi.invoice.cancel']\
+                    .with_context(gi_document.action_request_cancel()['context'])\
+                    .create({'cancellation_reason': '02'})\
+                    .action_cancel_invoice()
+            self.assertRecordValues(refund, [{'l10n_mx_edi_cfdi_state': False}])
+
+            with self.with_mocked_pac_sign_success():
+                self.env['l10n_mx_edi.global_invoice.create']\
+                    .with_context(order.l10n_mx_edi_action_create_global_invoice()['context'])\
+                    .create({})\
+                    .action_create_global_invoice()
+            self.assertRecordValues(order + refund, [
+                {'l10n_mx_edi_cfdi_state': 'global_sent'},
+                {'l10n_mx_edi_cfdi_state': 'global_sent'},
+            ])
+
+            # Create a second refund against the new global invoice, then simulate the SAT
+            # cron picking up a manual SAT-portal cancellation of that GI. The cascade must
+            # also cover this entry path, not only the Odoo cancellation wizard.
+            with self.with_pos_session(), self.with_mocked_pac_sign_success():
+                refund2 = self._create_order({
+                    'pos_order_lines_ui_args': [
+                        {
+                            'product': self.product,
+                            'quantity': -2.0,
+                            'refunded_orderline_id': order.lines[0].id,
+                        },
+                    ],
+                    'payments': [(self.bank_pm1, -2320.0)],
+                })
+            self.assertRecordValues(refund2, [{'l10n_mx_edi_cfdi_state': 'sent'}])
+
+            gi_document = order.l10n_mx_edi_document_ids\
+                .filtered(lambda d: d.state == 'ginvoice_sent' and d.sat_state != 'skip')
+            with self.with_mocked_pac_cancel_success():
+                gi_document._update_document_sat_state('cancelled')
+            self.assertRecordValues(refund2, [{'l10n_mx_edi_cfdi_state': False}])
+
+            with self.with_mocked_pac_sign_success():
+                self.env['l10n_mx_edi.global_invoice.create']\
+                    .with_context(order.l10n_mx_edi_action_create_global_invoice()['context'])\
+                    .create({})\
+                    .action_create_global_invoice()
+            self.assertRecordValues(order + refund + refund2, [
+                {'l10n_mx_edi_cfdi_state': 'global_sent'},
+                {'l10n_mx_edi_cfdi_state': 'global_sent'},
+                {'l10n_mx_edi_cfdi_state': 'global_sent'},
+            ])
+
     def test_global_invoice_documents(self):
         with self.mx_external_setup(self.frozen_today), self.with_pos_session() as _session:
             order1 = self._create_order({

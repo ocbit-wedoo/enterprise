@@ -627,9 +627,7 @@ class ShareRoute(http.Controller):
         is_internal_user = request.env.user._is_internal()
 
         document_ids = []
-        AttachmentSudo = request.env['ir.attachment'] \
-            .sudo(not is_internal_user) \
-            .with_context(image_no_postprocess=True)
+        AttachmentSudo = request.env["ir.attachment"].sudo().with_context(image_no_postprocess=True)
 
         if document_sudo.type == 'binary':
             attachment_sudo = AttachmentSudo._from_request_file(

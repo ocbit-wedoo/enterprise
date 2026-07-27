@@ -6,13 +6,14 @@
 # Wil Odoo, 2025
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-02-27 05:17+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:48+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "delivery_usps_rest/da/>\n"
 "Language: da\n"
@@ -20,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__usps_domestic_rating_indicator__3d
@@ -90,7 +91,7 @@ msgstr "CRID"
 #. module: delivery_usps_rest
 #: model:ir.model.fields,field_description:delivery_usps_rest.field_stock_package_type__package_carrier_type
 msgid "Carrier"
-msgstr "Fragtfirma"
+msgstr "Transportfirma"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__usps_rest_content_type__commercial_sample
@@ -102,7 +103,7 @@ msgstr "Vareprøver"
 #: code:addons/delivery_usps_rest/models/usps_request.py:0
 msgid "Company phone number is invalid. Please insert a US phone number."
 msgstr ""
-"Virksomheds telefonnummeret er ikke gyldigt. Indtast venligst et Amerikansk "
+"Virksomhedens telefonnummer er ikke gyldigt. Indtast venligst et amerikansk "
 "telefonnummer."
 
 #. module: delivery_usps_rest
@@ -179,7 +180,7 @@ msgstr "Dokument"
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__usps_delivery_nature__domestic
 msgid "Domestic"
-msgstr "Indenlandsk"
+msgstr "Indenlands"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields,field_description:delivery_usps_rest.field_delivery_carrier__usps_domestic_rating_indicator
@@ -369,7 +370,7 @@ msgstr "LS – Lille pose til fast pris"
 #. module: delivery_usps_rest
 #: model_terms:ir.ui.view,arch_db:delivery_usps_rest.view_delivery_carrier_form_with_provider_usps
 msgid "Label Format"
-msgstr "Mærkat Format"
+msgstr "Etiketformat"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__usps_processing_category__letters
@@ -389,7 +390,7 @@ msgstr "MID"
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__usps_processing_category__machinable
 msgid "Machinable"
-msgstr "Maskinbearbejdeligt"
+msgstr "Kan bearbejdes maskinelt"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields,field_description:delivery_usps_rest.field_delivery_carrier__usps_manifest_mid
@@ -521,7 +522,7 @@ msgstr "Kontrollér på USPS’ hjemmeside, hvilken kategori din pakke tilhører
 #. odoo-python
 #: code:addons/delivery_usps_rest/models/usps_request.py:0
 msgid "Please enter a valid ZIP code in recipient address"
-msgstr "Indtast venligst et gyldigt postnummer på modtageradressen"
+msgstr "Indtast venligst et gyldigt postnummer i modtageradressen"
 
 #. module: delivery_usps_rest
 #. odoo-python
@@ -533,7 +534,7 @@ msgstr "Indtast venligst et gyldigt postnummer i din virksomhedsadresse"
 #. odoo-python
 #: code:addons/delivery_usps_rest/models/usps_request.py:0
 msgid "Please provide at least one item to ship."
-msgstr "Vælg venligst et produkt at sende."
+msgstr "Vælg mindst ét produkt til forsendelse."
 
 #. module: delivery_usps_rest
 #. odoo-python
@@ -652,7 +653,7 @@ msgstr "Forsendelsen med sporingsnummeret %(tracking_ref)s er blevet annulleret"
 #. module: delivery_usps_rest
 #: model:ir.model,name:delivery_usps_rest.model_delivery_carrier
 msgid "Shipping Methods"
-msgstr "Leveringsmetoder"
+msgstr "Forsendelsesmetoder"
 
 #. module: delivery_usps_rest
 #: model:ir.model,name:delivery_usps_rest.model_stock_package_type
@@ -671,7 +672,7 @@ msgid ""
 "The address of your company is missing or wrong (Missing field(s) :  \n"
 " %s)"
 msgstr ""
-"Din virksomheds adresse mangler eller er forkert (Manglende felt(er) :  \n"
+"Din virksomhedsadresse mangler eller er forkert (Manglende felt(er):  \n"
 " %s)"
 
 #. module: delivery_usps_rest
@@ -703,7 +704,7 @@ msgid ""
 "The recipient address is missing or wrong (Missing field(s) :  \n"
 " %s)"
 msgstr ""
-"Modtageradressen mangler eller er forkert (Manglende felt(er) :  \n"
+"Modtageradressen mangler eller er forkert (Manglende felt(er):  \n"
 " %s)"
 
 #. module: delivery_usps_rest
@@ -719,7 +720,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_usps_rest/models/delivery_usps.py:0
 msgid "Tracking Number:"
-msgstr "Sporings nummer:"
+msgstr "Sporingsnummer:"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__delivery_type__usps_rest
@@ -745,7 +746,7 @@ msgstr "USPS-adgangstoken"
 #. module: delivery_usps_rest
 #: model_terms:ir.ui.view,arch_db:delivery_usps_rest.view_delivery_carrier_form_with_provider_usps
 msgid "USPS Configuration"
-msgstr "USPS Konfiguration"
+msgstr "USPS-konfiguration"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields.selection,name:delivery_usps_rest.selection__delivery_carrier__usps_domestic_service__usps_connect_local
@@ -827,7 +828,7 @@ msgstr ""
 #. module: delivery_usps_rest
 #: model:ir.model.fields,field_description:delivery_usps_rest.field_delivery_carrier__usps_rest_label_file_type
 msgid "USPS Label File Type"
-msgstr "USPS-etiketfiltype"
+msgstr "Filtype for USPS-etiketter"
 
 #. module: delivery_usps_rest
 #: model:ir.model.fields,field_description:delivery_usps_rest.field_delivery_carrier__usps_label_size

@@ -10,20 +10,21 @@
 # Mads Søndergaard, 2024
 # Mads Søndergaard, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-04-17 16:21+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:00+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/iot/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
@@ -74,7 +75,7 @@ msgstr ""
 #. module: iot
 #: model:ir.model,name:iot.model_add_iot_box
 msgid "Add IoT Box wizard"
-msgstr "Tilføj IoT boks guide"
+msgstr "Assistent til tilføjelse af IoT-boks"
 
 #. module: iot
 #. odoo-javascript
@@ -85,17 +86,17 @@ msgstr "Er du sikker på, at du vil genstarte Odoo på IoT-boksen?"
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_box__drivers_auto_update
 msgid "Automatic drivers update"
-msgstr "Automatisk driver opdatering"
+msgstr "Automatisk driveropdatering"
 
 #. module: iot
 #: model:ir.model.fields,help:iot.field_iot_box__drivers_auto_update
 msgid "Automatically update drivers when the IoT Box boots"
-msgstr "Automatisk driver opdatering når IoT boksen starter"
+msgstr "Automatisk driveropdatering, når IoT-boksen starter"
 
 #. module: iot
 #: model:ir.model.fields.selection,name:iot.selection__iot_device__type__scanner
 msgid "Barcode Scanner"
-msgstr "Stregkode scanner"
+msgstr "Stregkodescanner"
 
 #. module: iot
 #: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__bluetooth
@@ -117,7 +118,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/iot/static/src/views/iot_device_form.js:0
 msgid "Check if the device is still connected"
-msgstr "Tjek om enheden stadig er forbundet"
+msgstr "Kontrollér om enheden stadig er forbundet"
 
 #. module: iot
 #. odoo-javascript
@@ -173,7 +174,7 @@ msgstr "Konfiguration"
 #: model_terms:ir.ui.view,arch_db:iot.iot_box_view_kanban
 #: model_terms:ir.ui.view,arch_db:iot.iot_box_view_list
 msgid "Connect"
-msgstr "Forbind"
+msgstr "Tilslut"
 
 #. module: iot
 #: model:ir.actions.act_window,name:iot.action_add_iot_box
@@ -197,7 +198,7 @@ msgstr "Forbindelse til IoT boks slog fejl"
 #. odoo-javascript
 #: code:addons/iot/static/src/views/iot_device_form.js:0
 msgid "Connection to device failed"
-msgstr "Forbindelse til enhed slog fejl"
+msgstr "Forbindelsen til enheden mislykkedes"
 
 #. module: iot
 #. odoo-javascript
@@ -271,18 +272,18 @@ msgstr "Vis enhed"
 #: model:ir.model.fields,field_description:iot.field_iot_keyboard_layout__display_name
 #: model:ir.model.fields,field_description:iot.field_select_printers_wizard__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_device__display_url
 msgid "Display URL"
-msgstr "Skærm URL"
+msgstr "Vis URL"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_box__ip
 #: model:ir.model.fields,field_description:iot.field_iot_device__iot_ip
 msgid "Domain Address"
-msgstr "Domæne adresse"
+msgstr "Domæneadresse"
 
 #. module: iot
 #. odoo-javascript
@@ -311,7 +312,7 @@ msgstr "Kun Firefox: Klik på Godkend Sikkerheds Undtagelse"
 #. module: iot
 #: model:ir.model.fields.selection,name:iot.selection__iot_device__type__fiscal_data_module
 msgid "Fiscal Data Module"
-msgstr "Finans data modul"
+msgstr "Modul til finansielle data"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.iot_device_search
@@ -335,7 +336,7 @@ msgstr "ID"
 #. module: iot
 #: model:ir.model,name:iot.model_iot_device
 msgid "IOT Device"
-msgstr "IoT Enhed"
+msgstr "IoT-enhed"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_device__identifier
@@ -365,7 +366,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:iot.field_iot_box__version
 #: model_terms:ir.ui.view,arch_db:iot.iot_box_view_form
 msgid "Image Version"
-msgstr "Billede version"
+msgstr "Billedversion"
 
 #. module: iot
 #: model:ir.ui.menu,name:iot.iot_menu_root
@@ -377,7 +378,7 @@ msgstr "IoT"
 #: model:ir.model.fields,field_description:iot.field_iot_device__iot_id
 #: model_terms:ir.ui.view,arch_db:iot.iot_device_search
 msgid "IoT Box"
-msgstr "IoT Boks"
+msgstr "IoT-boks"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_box__ip_url
@@ -388,22 +389,22 @@ msgstr "IoT Boks Hjemmeside"
 #: model:ir.actions.act_window,name:iot.iot_box_action
 #: model:ir.ui.menu,name:iot.iot_box_menu_action
 msgid "IoT Boxes"
-msgstr "IoT Bokse"
+msgstr "IoT-bokse"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.iot_device_search
 msgid "IoT Device"
-msgstr "IoT Enhed"
+msgstr "IoT-enhed"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_ir_actions_report__device_ids
 msgid "IoT Devices"
-msgstr "IoT enheder"
+msgstr "IoT-enheder"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_device__is_scanner
 msgid "Is Scanner"
-msgstr "Er Scanner"
+msgstr "Er scanner"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_box__is_websocket_active
@@ -419,7 +420,7 @@ msgstr "Tastetur"
 #: model:ir.model,name:iot.model_iot_keyboard_layout
 #: model:ir.model.fields,field_description:iot.field_iot_device__keyboard_layout
 msgid "Keyboard Layout"
-msgstr "Tastetur Layout"
+msgstr "Tastaturlayout"
 
 #. module: iot
 #: model:ir.model.fields.selection,name:iot.selection__iot_device__subtype__label_printer
@@ -429,7 +430,7 @@ msgstr "Etiketprinter"
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.iot_device_view_form
 msgid "Last Sent Value"
-msgstr "Sidst sendt værdi"
+msgstr "Sidst sendte værdi"
 
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_add_iot_box__write_uid
@@ -463,7 +464,7 @@ msgstr "Layout"
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_device__manual_measurement
 msgid "Manual Measurement"
-msgstr "Manuel Måling"
+msgstr "Manuel måling"
 
 #. module: iot
 #: model:ir.model.fields,help:iot.field_iot_device__manual_measurement
@@ -625,12 +626,12 @@ msgstr "Udskrivning af kvittering"
 #. module: iot
 #: model:ir.model,name:iot.model_ir_actions_report
 msgid "Report Action"
-msgstr "Rapporter handling"
+msgstr "Rapportér handling"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.act_report_xml_view_tree_iot
 msgid "Report xml"
-msgstr "Rapport xml"
+msgstr "Rapport i XML"
 
 #. module: iot
 #: model:ir.ui.menu,name:iot.iot_settings_menu_action
@@ -653,7 +654,7 @@ msgstr "Rapporter med tilknyttede printere"
 #: code:addons/iot/static/src/client_action/delete_local_storage.xml:0
 #: model:ir.ui.menu,name:iot.iot_clear_selected_devices
 msgid "Reset Linked Printers"
-msgstr "Nulstil forbundne printere"
+msgstr "Nulstil tilknyttede printere"
 
 #. module: iot
 #. odoo-javascript
@@ -676,7 +677,7 @@ msgstr "Genstarter"
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.view_select_printers_wizard
 msgid "Sales Details"
-msgstr "Salgsdetaljer"
+msgstr "Salgsoplysninger"
 
 #. module: iot
 #: model:ir.model.fields.selection,name:iot.selection__iot_device__type__scale
@@ -771,7 +772,7 @@ msgstr "Der er ingen enhed forbundet med denne IoT Boks"
 #. module: iot
 #: model_terms:ir.actions.act_window,help:iot.iot_device_action
 msgid "There is no device connected to your IoT Boxes"
-msgstr "Der er ingen enhed forbundet med dine IoT bokse"
+msgstr "Der er ingen enhed forbundet med dine IoT-bokse"
 
 #. module: iot
 #. odoo-javascript
@@ -792,7 +793,7 @@ msgstr "Type"
 #. module: iot
 #: model:ir.model.fields,help:iot.field_iot_device__connection
 msgid "Type of connection."
-msgstr "Forbindelsestype"
+msgstr "Forbindelsestype."
 
 #. module: iot
 #: model:ir.model.fields,help:iot.field_iot_device__type
@@ -805,8 +806,8 @@ msgid ""
 "URL of the page that will be displayed by the device, leave empty to use the "
 "customer facing display of the POS."
 msgstr ""
-"URL på siden der vil blive vist af enheden, lad være tom eller brug skærmen "
-"der vender mod kunden til fremvisning af PoS'en."
+"Angiv URL'en for den side, der skal vises på enheden, eller lad feltet stå "
+"tomt for at bruge skærmen, der vender mod kunden, til visning af POS'en."
 
 #. module: iot
 #: model:ir.model.fields.selection,name:iot.selection__iot_device__connection__direct
@@ -847,13 +848,13 @@ msgid ""
 "When setting a device here, the report will be printed through this device "
 "on the IoT Box"
 msgstr ""
-"Ved angivelse af en enhed her, vil rapporten blive printet gennem denne "
-"enhed på IoT boksen"
+"Hvis du vælger en enhed her, vil rapporten blive udskrevet via denne enhed "
+"på IoT-boksen"
 
 #. module: iot
 #: model_terms:ir.actions.act_window,help:iot.iot_box_action
 msgid "connect"
-msgstr "forbind"
+msgstr "tilslut"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
@@ -868,7 +869,7 @@ msgstr "reset.linked.printers"
 #. module: iot
 #: model_terms:ir.actions.act_window,help:iot.iot_box_action
 msgid "to add an IoT Box."
-msgstr "for at tilføje en IoT boks."
+msgstr "for at tilføje en IoT-boks."
 
 #. module: iot
 #: model:ir.model,name:iot.model_ir_websocket

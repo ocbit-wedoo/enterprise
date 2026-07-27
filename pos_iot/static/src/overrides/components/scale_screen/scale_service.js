@@ -1,5 +1,6 @@
 import { PosScaleService } from "@point_of_sale/app/screens/scale_screen/scale_service";
 import { patch } from "@web/core/utils/patch";
+import { _t } from "@web/core/l10n/translation";
 
 patch(PosScaleService.prototype, {
     get _scaleDevice() {
@@ -50,10 +51,17 @@ patch(PosScaleService.prototype, {
     },
 
     _handleScaleMessage(data) {
-        if (data.status.status === "error" || data.status === "error") {
-            throw new Error(`Cannot weigh product - ${data.status.message_body}`);
-        } else {
+        if (data.status.status === "error") {
+            throw new Error(
+                _t("Cannot weigh product – %(msg)s", {
+                    msg: data.status.message_body,
+                })
+            );
+        } else if (data.status.status === "connected" || data.status === "success") {
             return data.value || data.result || 0;
         }
+        // else, do nothing to avoid data.status === "error"
+        // corresponding to timeout because weight did not change
+        return this.weight;
     },
 });

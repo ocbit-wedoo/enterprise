@@ -7,13 +7,14 @@
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Martin Trigaux, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2025-11-08 16:53+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:24+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "website_generator/da/>\n"
 "Language: da\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: website_generator
 #: model:mail.template,body_html:website_generator.email_template_website_scrapped
@@ -42,11 +43,10 @@ msgstr ""
 "<div>\n"
 "            <p><b>Gode nyheder!</b> Din hjemmesideomlægning er fuldført – "
 "din nye, integrerede Odoo-hjemmeside er nu online.</p>\n"
-"            <p>Se din nye hjemmeside her: <a t-att-"
-"href=\"ctx.get('website_url')\"><t t-out=\"ctx.get('website_url')\"/></a></"
-"p>\n"
-"            <p>Tak, fordi du valgte Odoo til integrationen af din hjemmeside!"
-"</p>\n"
+"            <p>Se din nye hjemmeside her: <a t-att-href=\"ctx.get"
+"('website_url')\"><t t-out=\"ctx.get('website_url')\"/></a></p>\n"
+"            <p>Tak, fordi du valgte Odoo til integrationen af din "
+"hjemmeside!</p>\n"
 "            <p>Med venlig hilsen</p>\n"
 "            <br/>\n"
 "            <p>Odoo - Det bedste open source-hjemmesideværktøj.</p>\n"
@@ -56,7 +56,7 @@ msgstr ""
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__additional_urls
 msgid "Additional URLs"
-msgstr "Yderligere URL'er"
+msgstr "Yderligere webadresser"
 
 #. module: website_generator
 #. odoo-python
@@ -74,14 +74,14 @@ msgstr "Vedhæftet fil blev ikke fundet"
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Banned url"
-msgstr "Banlyst url"
+msgstr "Blokeret webadresse"
 
 #. module: website_generator
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Could not fetch result, invalid output uuid or result expired"
 msgstr ""
-"Resultatet kunne ikke hentes, ugyldig output uuid eller resultatet er udløbet"
+"Resultatet kunne ikke hentes. UUID’en er ugyldig, eller resultatet er udløbet"
 
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__create_uid
@@ -96,13 +96,13 @@ msgstr "Oprettet den"
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: website_generator
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Done, website generated"
-msgstr "Færdig, hjemmeside genereret"
+msgstr "Færdig, hjemmesiden er genereret"
 
 #. module: website_generator
 #. odoo-javascript
@@ -125,7 +125,7 @@ msgstr "Funktioner"
 #. module: website_generator
 #: model:ir.model,name:website_generator.model_ir_http
 msgid "HTTP Routing"
-msgstr "HTTP Routing"
+msgstr "HTTP-routing"
 
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__id
@@ -160,7 +160,7 @@ msgstr "Importér din hjemmeside."
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Invalid dbuuid"
-msgstr "Ugyldig dbuuid"
+msgstr "Ugyldig database-UUID"
 
 #. module: website_generator
 #. odoo-python
@@ -172,13 +172,13 @@ msgstr "Ugyldige importprodukter"
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Invalid token"
-msgstr "Ugyldig Token"
+msgstr "Ugyldigt token"
 
 #. module: website_generator
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Invalid url"
-msgstr "Ugyldig url"
+msgstr "Ugyldig webadresse"
 
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__write_uid
@@ -238,7 +238,7 @@ msgstr "Behandler"
 #. odoo-python
 #: code:addons/website_generator/models/generator.py:0
 msgid "Request is still processing, result not available yet"
-msgstr "Anmodningen behandles stadig, resultatet er endnu ikke tilgængeligt."
+msgstr "Anmodningen behandles stadig, resultatet er endnu ikke tilgængeligt"
 
 #. module: website_generator
 #. odoo-python
@@ -250,7 +250,7 @@ msgstr "Serveren er i øjeblikket under vedligeholdelse. Prøv igen senere"
 #. odoo-javascript
 #: code:addons/website_generator/static/src/client_actions/generator_wait/generator.xml:0
 msgid "Something went wrong"
-msgstr "Noget gik galt"
+msgstr "Der opstod en fejl"
 
 #. module: website_generator
 #. odoo-javascript
@@ -266,7 +266,7 @@ msgstr "Status"
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__status_message
 msgid "Status Message"
-msgstr "Status besked"
+msgstr "Statusmeddelelse"
 
 #. module: website_generator
 #. odoo-python
@@ -302,12 +302,12 @@ msgstr "Det kan tage nogle minutter."
 #. odoo-python
 #: code:addons/website_generator/models/page.py:0
 msgid "Top Menu for Website %s"
-msgstr "Top menu for hjemmeside %s"
+msgstr "Hjemmesidens hovedmenu %s"
 
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__target_url
 msgid "URL to scrape"
-msgstr "URL til scrape"
+msgstr "Webadresse, der skal læses"
 
 #. module: website_generator
 #: model:ir.model.fields,field_description:website_generator.field_website_generator_request__version
@@ -347,17 +347,17 @@ msgstr "Hjemmeside"
 #. module: website_generator
 #: model:ir.actions.client,name:website_generator.website_generator_screen
 msgid "Website Generator"
-msgstr "Hjemmeside generator"
+msgstr "Hjemmesidegenerator"
 
 #. module: website_generator
 #: model:ir.actions.server,name:website_generator.action_convert_scraping_request_ICP
 msgid "Website Generator After Install"
-msgstr "Hjemmeside generator efter installation"
+msgstr "Hjemmesidegenerator efter installation"
 
 #. module: website_generator
 #: model:ir.model,name:website_generator.model_website_generator_request
 msgid "Website Generator Request"
-msgstr "Hjemmeside generator anmodning"
+msgstr "Anmodning om hjemmesidegenerator"
 
 #. module: website_generator
 #: model:ir.actions.server,name:website_generator.cron_get_result_ir_actions_server
@@ -373,7 +373,7 @@ msgstr "Hjemmeside læst"
 #. odoo-javascript
 #: code:addons/website_generator/static/src/client_actions/configurator/configurator.xml:0
 msgid "Website URL"
-msgstr "Hjemmeside URL"
+msgstr "Webadresse"
 
 #. module: website_generator
 #. odoo-python
@@ -402,7 +402,7 @@ msgstr "Du vil være i stand til at oprette dine sider senere."
 #. module: website_generator
 #: model:mail.template,subject:website_generator.email_template_website_scrapped
 msgid "Your Odoo Website is Ready!"
-msgstr "Din Odoo hjemmeside er klar!"
+msgstr "Din Odoo-hjemmeside er klar!"
 
 #. module: website_generator
 #. odoo-javascript

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 19:07+0000\n"
-"PO-Revision-Date: 2026-04-10 19:07+0000\n"
+"POT-Creation-Date: 2026-06-19 18:02+0000\n"
+"PO-Revision-Date: 2026-06-19 18:02+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -3201,6 +3201,15 @@ msgstr ""
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll.selection__hr_employee__l10n_ch_religious_denomination__reformedevangelical
 msgid "Reformed Evangelical"
+msgstr ""
+
+#. module: l10n_ch_hr_payroll
+#. odoo-python
+#: code:addons/l10n_ch_hr_payroll/models/hr_payslip.py:0
+msgid ""
+"Refunds are not supported for Swiss payroll as only one payslip per month is"
+" permitted. Please cancel this payslip instead and generate a new one to "
+"apply corrections."
 msgstr ""
 
 #. module: l10n_ch_hr_payroll

@@ -56,7 +56,7 @@
                                 <t t-foreach="o.sudo().request_item_ids" t-as="sri">
                                     <tr>
                                         <td><span t-field="sri.partner_id.name">John Smith</span></td>
-                                        <td><span t-field="sri.partner_id.email">john@example.com</span></td>
+                                        <td><span t-field="sri.signer_email">john@example.com</span></td>
                                         <td class="text-center">
                                             <t t-if="sri.access_via_link or sri.partner_id.user_id != False">
                                                 <i class="fa fa-check-square-o"/>

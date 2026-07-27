@@ -209,3 +209,21 @@ test("file sharing via link with multiple subfolders", async function () {
     expect(`.o_search_panel_label[data-tooltip="Folder 4"]`).toHaveCount(1);
     expect.verifySteps(["touch 2"]);
 });
+
+test("global click exits edit mode", async function () {
+    onRpc("/documents/touch/<access_token>", () => ({}));
+    const serverData = getDocumentsTestServerData();
+    await makeDocumentsMockEnv({ serverData });
+    await mountView({
+        type: "list",
+        resModel: "documents.document",
+        arch: basicDocumentsListArch,
+        searchViewArch: getEnrichedSearchArch(),
+    });
+    await contains("td.o_list_record_selector").click();
+    await contains('td.o_list_many2one[name="partner_id"]').click();
+    await contains("div.o_list_renderer.o_documents_view.o_renderer_with_searchpanel").click();
+    expect(".o_list_button_save").toHaveCount(0);
+    expect(".o_list_button_discard").toHaveCount(0);
+    expect(".o_data_row_selected").toHaveCount(0);
+});

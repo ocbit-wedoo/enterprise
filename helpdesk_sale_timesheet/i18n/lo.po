@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.saas~18+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-16 16:02+0000\n"
-"PO-Revision-Date: 2026-05-28 12:45+0000\n"
+"PO-Revision-Date: 2026-06-06 10:20+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "helpdesk_sale_timesheet/lo/>\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: helpdesk_sale_timesheet
 #: model:helpdesk.sla,name:helpdesk_sale_timesheet.helpdesk_sla_4
 msgid "4 hours to finish"
-msgstr ""
+msgstr "4 ຊົ່ວໂມງເພື່ອເຮັດໃຫ້ສຳເລັດ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_account_analytic_line
@@ -58,7 +58,7 @@ msgstr "ຈຳນວນມື້ທີ່ໃຊ້"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Days:"
-msgstr ""
+msgstr "ມື້:"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
@@ -68,7 +68,7 @@ msgstr "ຄຳອະທິບາຍ"
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_account_analytic_line__display_sol
 msgid "Display Sol"
-msgstr ""
+msgstr "ສະແດງລາຍການໃບສັ່ງຂາຍ"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
@@ -108,7 +108,7 @@ msgstr "ຊົ່ວໂມງທີ່ໃຊ້ໄປ"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Hours:"
-msgstr ""
+msgstr "ຊົ່ວໂມງ:"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_sale_timesheet
@@ -138,17 +138,17 @@ msgstr "ໂຄງການທີ່ໃບບັນທຶກເວລາຂອງ
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__project_sale_order_id
 msgid "Project's sale order"
-msgstr "ໃບສັ່ງຊື້ຂອງໂຄງການ"
+msgstr "ໃບສັ່ງຂາຍຂອງໂຄງການ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__sale_order_id
 msgid "Ref. Sales Order"
-msgstr ""
+msgstr "ອ້າງອີງ ໃບສັ່ງຂາຍ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__use_helpdesk_sale_timesheet
 msgid "Reinvoicing Timesheet activated on Team"
-msgstr ""
+msgstr "ເປີດນຳໃຊ້ການອອກໃບແຈ້ງໜີ້ຄືນຈາກໃບບັນທຶກເວລາໃນທີມ"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_sale_timesheet
@@ -158,7 +158,7 @@ msgstr "ຈຳນວນມື້ຄົງເຫຼືອໃນໃບສັ່ງ
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Remaining Days on SO:"
-msgstr ""
+msgstr "ມື້ຄົງເຫຼືອໃນໃບສັ່ງຂາຍ:"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__remaining_hours_available
@@ -174,7 +174,7 @@ msgstr "ຊົ່ວໂມງຄົງເຫຼືອໃນໃບສັ່ງຂ
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Remaining Hours on SO:"
-msgstr ""
+msgstr "ຊົ່ວໂມງຄົງເຫຼືອໃນໃບສັ່ງຂາຍ:"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_product_product__sla_id
@@ -187,6 +187,7 @@ msgstr "ນະໂຍບາຍ SLA"
 #: model:ir.model.fields,help:helpdesk_sale_timesheet.field_product_template__sla_id
 msgid "SLA Policy that will automatically apply to the tickets linked to a sales order item containing this service."
 msgstr ""
+"ນະໂຍບາຍ SLA ທີ່ຈະຖືກນຳໃຊ້ໂດຍອັດຕະໂນມັດກັບທິກເກັດທີ່ເຊື່ອມໂຍງກັບລາຍການໃບສັ່ງຂາຍທີ່ມີການບໍລິການນີ້."
 
 #. module: helpdesk_sale_timesheet
 #. odoo-python
@@ -195,14 +196,14 @@ msgstr ""
 #: model:ir.model,name:helpdesk_sale_timesheet.model_sale_order
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_sale_timesheet
 msgid "Sales Order"
-msgstr "ໃບສັ່ງຊື້"
+msgstr "ໃບສັ່ງຂາຍ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__sale_line_id
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_search_inherit_helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Sales Order Item"
-msgstr "ລາຍການໃບສັ່ງຊື້"
+msgstr "ລາຍການໃບສັ່ງຂາຍ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,help:helpdesk_sale_timesheet.field_helpdesk_ticket__sale_line_id
@@ -212,11 +213,15 @@ msgid ""
 "Remove the sales order item in order to make this ticket non-billable.\n"
 "You can also change or remove the sales order item of each timesheet entry individually."
 msgstr ""
+"ລາຍການໃບສັ່ງຂາຍທີ່ຈະເພີ່ມເວລາທີ່ໃຊ້ໃນທິກເກັດນີ້ເຂົ້າໄປເພື່ອອອກໃບແຈ້ງໜີ້ໃຫ້ລູກຄ້າ.\n"
+"ໂດຍຄ່າເລີ່ມຕົ້ນ, ລາຍການໃບສັ່ງຂາຍແບບຊຳລະລ່ວງໜ້າຫຼ້າສຸດທີ່ມີເວລາຄົງເຫຼືອຈະຖືກເລືອກ.\n"
+"ລຶບລາຍການໃບສັ່ງຂາຍອອກເພື່ອເຮັດໃຫ້ທິກເກັດນີ້ບໍ່ສາມາດເກັບເງິນໄດ້.\n"
+"ທ່ານຍັງສາມາດປ່ຽນ ຫຼື ລຶບລາຍການໃບສັ່ງຂາຍຂອງແຕ່ລະລາຍການບັນທຶກເວລາແຍກຕ່າງຫາກໄດ້."
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_sla__sale_line_ids
 msgid "Sales Order Items"
-msgstr "ລາຍການໃບສັ່ງຊື້"
+msgstr "ລາຍການໃບສັ່ງຂາຍ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,help:helpdesk_sale_timesheet.field_helpdesk_ticket__project_sale_order_id
@@ -231,17 +236,17 @@ msgstr "ໃຊ້ໄປແລ້ວ"
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_sale_order__ticket_count
 msgid "Ticket Count"
-msgstr "ຈຳນວນປີ້"
+msgstr "ຈຳນວນທິກເກັດ"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.sale_order_form_inherit_helpdesk_sale
 msgid "Tickets"
-msgstr "ປີ້"
+msgstr "ທິກເກັດ"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_search_inherit_helpdesk_sale_timesheet
 msgid "Tickets in Overtime"
-msgstr ""
+msgstr "ທິກເກັດທີ່ເກີນເວລາ"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet

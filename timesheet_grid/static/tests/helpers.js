@@ -138,7 +138,7 @@ export class TimesheetGridSetupHelper {
 
     async setupTimesheetGrid() {
         const pyEnv = await startServer();
-        const [employeeId11, employeeId7, employeeId23, employeeId12] = pyEnv[
+        const employeeIds = pyEnv[
             "hr.employee.public"
         ].create([
             {
@@ -154,6 +154,7 @@ export class TimesheetGridSetupHelper {
                 name: "Toad",
             },
         ]);
+        const [employeeId11, employeeId7, employeeId23, employeeId12] = employeeIds;
 
         const [projectId31, projectId142] = pyEnv["project.project"].create([
             { display_name: "P1", allow_timesheets: true },
@@ -318,6 +319,6 @@ export class TimesheetGridSetupHelper {
                     `,
             },
         };
-        return { pyEnv, serverData };
+        return { employeeIds, pyEnv, serverData };
     }
 }

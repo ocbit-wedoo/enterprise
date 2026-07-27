@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-22 17:52+0000\n"
-"PO-Revision-Date: 2026-04-29 20:05+0000\n"
+"PO-Revision-Date: 2026-06-27 18:32+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovak <https://translate.odoo.com/projects/odoo-18/documents/"
 "sk/>\n"
@@ -21,9 +21,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
-">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
-"X-Generator: Weblate 5.17\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && "
+"n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: documents
 #. odoo-javascript
@@ -41,7 +41,7 @@ msgstr "%s (kópia)"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "%s (remaining pages)"
-msgstr ""
+msgstr "%s (zvyšné stránky)"
 
 #. module: documents
 #. odoo-javascript
@@ -65,7 +65,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "%s documents have been moved."
-msgstr ""
+msgstr "%s dokumenty boli presunuté."
 
 #. module: documents
 #. odoo-javascript
@@ -113,7 +113,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "%s shortcuts have been created."
-msgstr ""
+msgstr "%s vytvorené skratky."
 
 #. module: documents
 #: model_terms:digest.tip,tip_description:documents.digest_tip_documents_0
@@ -167,7 +167,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "<b>Select</b> this page to continue."
-msgstr ""
+msgstr "Pre pokračovanie <b>vyberte</b> tuto stránku."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_page_layout
@@ -177,28 +177,29 @@ msgstr "<br/>Prinášané"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "<i class=\"fa fa-download fa-fw\"/> Download All"
-msgstr ""
+msgstr "<i class=\"fa fa-download fa-fw\"/> Stiahnuť všetko"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "<i class=\"fa fa-download fa-fw\"/> Download file"
-msgstr ""
+msgstr "<i class=\"fa fa-download fa-fw\"/> Stiahnuť súbor"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "<i class=\"fa fa-external-link me-2\" title=\"This is a shortcut\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-external-link me-2\" title=\"Toto je skratka\"/>"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid ""
 "<i class=\"fa fa-external-link text-gray-500\" title=\"This is a shortcut\"/>"
 msgstr ""
+"<i class=\"fa fa-external-link text-gray-500\" title=\"Toto je skratka\"/>"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "<i class=\"fa fa-eye\"/> Preview file"
-msgstr ""
+msgstr "<i class=\"fa fa-eye\"/> Náhľad súboru"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form
@@ -217,7 +218,7 @@ msgstr "<i class=\"fa fa-upload\"/>  Nahrať"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "<i class=\"fa fa-upload\"/> Replace file"
-msgstr ""
+msgstr "<i class=\"fa fa-upload\"/> Nahradiť súbor"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_document_res_partner_view
@@ -591,22 +592,23 @@ msgstr ""
 #: code:addons/documents/models/documents_document.py:0
 msgid "A destination is required when creating multiple shortcuts at once."
 msgstr ""
+"Pri vytváraní viacerých skratiek naraz je potrebné zadať cieľovú destináciu."
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_folder_id_not_id
 msgid "A folder cannot be included in itself"
-msgstr ""
+msgstr "Zložka nemôže byť zahrnutá sama v sebe"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_shortcut_document_id_not_id
 msgid "A shortcut cannot point to itself"
-msgstr ""
+msgstr "Skratka nemôže odkazovať na seba samú"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "A shortcut has been created."
-msgstr ""
+msgstr "Bola vytvorená skratka."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form
@@ -629,7 +631,7 @@ msgstr "Prístupový token"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.portal_my_home_documents
 msgid "Access all your documents"
-msgstr ""
+msgstr "Prístup ku všetkým vašim dokumentom"
 
 #. module: documents
 #. odoo-python
@@ -641,13 +643,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Access to Automations"
-msgstr ""
+msgstr "Prístup k automatizáciám"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "Access to Server Actions"
-msgstr ""
+msgstr "Prístup k akciám servera"
 
 #. module: documents
 #. odoo-python
@@ -658,12 +660,12 @@ msgstr ""
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_document_token_unique
 msgid "Access tokens already used."
-msgstr ""
+msgstr "Prístupové tokeny už boli použité."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_url
 msgid "Access url"
-msgstr ""
+msgstr "URL prístupu"
 
 #. module: documents
 #. odoo-javascript
@@ -682,7 +684,7 @@ msgstr "Potrebná akcia"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_pin_actions.xml:0
 msgid "Actions on Select"
-msgstr ""
+msgstr "Akcie pri výbere"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__active
@@ -737,7 +739,7 @@ msgstr "Typy aktivít"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "Activity assigned to"
-msgstr ""
+msgstr "Aktivita pridelená"
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_activity_plan_action_document
@@ -764,7 +766,7 @@ msgstr "Pridať"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_pin_actions.xml:0
 msgid "Add Custom Action"
-msgstr ""
+msgstr "Pridať vlastnú akciu"
 
 #. module: documents
 #. odoo-javascript
@@ -775,7 +777,7 @@ msgstr "Pridať súbor"
 #. module: documents
 #: model:ir.actions.act_window,name:documents.action_folder_form
 msgid "Add Folder"
-msgstr ""
+msgstr "Pridať zložku"
 
 #. module: documents
 #: model:ir.actions.server,name:documents.ir_actions_server_tag_add_bill
@@ -802,7 +804,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "Add an alias tag..."
-msgstr ""
+msgstr "Pridať alias štítok..."
 
 #. module: documents
 #. odoo-javascript
@@ -826,19 +828,19 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_item_shortcut.js:0
 msgid "Add shortcut"
-msgstr ""
+msgstr "Pridať skratku"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_item_star.js:0
 msgid "Add star"
-msgstr ""
+msgstr "Pridať hviezdičku"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Additional documents you have access to."
-msgstr ""
+msgstr "Ďalšie dokumenty, ku ktorým máte prístup."
 
 #. module: documents
 #: model:res.groups,name:documents.group_documents_manager
@@ -888,7 +890,7 @@ msgstr "Stav aliasu"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__alias_tag_ids
 msgid "Alias Tags"
-msgstr ""
+msgstr "Aliasové štítky"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_status
@@ -917,13 +919,13 @@ msgstr ""
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_ids
 msgid "Allowed Access"
-msgstr ""
+msgstr "Povolený prístup"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Already linked Documents: %s"
-msgstr ""
+msgstr "Už prepojené dokumenty: %s"
 
 #. module: documents
 #: model_terms:digest.tip,tip_description:documents.digest_tip_documents_0
@@ -1002,7 +1004,7 @@ msgstr "Naozaj chcete odstrániť túto stránku?"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_manage_versions_panel/documents_manage_versions_panel.js:0
 msgid "Are you sure you want to delete this attachment?"
-msgstr ""
+msgstr "Naozaj chcete odstrániť túto prílohu?"
 
 #. module: documents
 #. odoo-javascript
@@ -1068,7 +1070,7 @@ msgstr "Pridať v ponuke tlače"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__available_embedded_actions_ids
 msgid "Available Embedded Actions"
-msgstr ""
+msgstr "Dostupné vložené akcie"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_bill
@@ -1089,7 +1091,7 @@ msgstr "brožúry"
 #. module: documents
 #: model:ir.model.fields,help:documents.field_mail_activity_type__folder_id
 msgid "By defining a folder, the upload activities will generate a document"
-msgstr ""
+msgstr "Vytvorením priečinka sa pri nahrávaní vytvorí dokument"
 
 #. module: documents
 #: model:res.groups,comment:documents.group_documents_manager
@@ -1097,6 +1099,8 @@ msgid ""
 "Can configure folders, manage access rights, and oversee all documents "
 "within their areas."
 msgstr ""
+"Môžu konfigurovať zložky, spravovať prístupové práva a dohliadať na všetky "
+"dokumenty vo svojich oblastiach."
 
 #. module: documents
 #: model:res.groups,comment:documents.group_documents_user
@@ -1112,7 +1116,7 @@ msgstr "Zrušené"
 #. odoo-python
 #: code:addons/documents/models/documents_access.py:0
 msgid "Cannot invite this member."
-msgstr ""
+msgstr "Totoho člena nemožno pozvať."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__checksum
@@ -1128,7 +1132,7 @@ msgstr "Podradené"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Choose a record to link"
-msgstr ""
+msgstr "Vyberte záznam, na ktorý chcete odkazovať"
 
 #. module: documents
 #. odoo-javascript
@@ -1141,13 +1145,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Click on a card to <b>select the document</b>."
-msgstr ""
+msgstr "Pre <b>výber dokumentu</b> kliknite na kartu."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Click on a thumbnail to <b>preview the document</b>."
-msgstr ""
+msgstr "Kliknutím na miniatúru <b>zobrazíte dokument</b>."
 
 #. module: documents
 #. odoo-javascript
@@ -1156,17 +1160,19 @@ msgid ""
 "Click on the <b>page separator</b>: we don't want to split these two pages "
 "as they belong to the same document."
 msgstr ""
+"Kliknite na <b>oddeľovač stránok</b>: nechceme tieto dve stránky rozdeľovať, "
+"pretože patria do toho istého dokumentu."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Click the cross to <b>exit preview</b>."
-msgstr ""
+msgstr "Kliknutím na krížik <b>opustíte náhľad</b>."
 
 #. module: documents
 #: model:ir.model.fields.selection,name:documents.selection__documents_document__thumbnail_status__client_generated
 msgid "Client Generated"
-msgstr ""
+msgstr "Vytvorené klientom"
 
 #. module: documents
 #. odoo-javascript
@@ -1180,13 +1186,13 @@ msgstr "Zatvoriť"
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Close (Esc)"
-msgstr ""
+msgstr "Zatvoriť (Esc)"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.xml:0
 msgid "Close split tools"
-msgstr ""
+msgstr "Zatvoriť nástroje na rozdelenie"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_tag__color
@@ -1197,7 +1203,7 @@ msgstr "Farba"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Common roots for all company users."
-msgstr ""
+msgstr "Spoločné základy pre všetkých užívateľov v spoločnosti."
 
 #. module: documents
 #: model:ir.model,name:documents.model_res_company
@@ -1239,7 +1245,7 @@ msgstr "Kontakt"
 #: code:addons/documents/static/src/core/document_service.js:0
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Contact your Administrator to get access if needed."
-msgstr ""
+msgstr "V prípade potreby kontaktujte svojho správcu, aby vám poskytol prístup."
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_contracts
@@ -1262,7 +1268,7 @@ msgstr "Skopírovať odkaz"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Copy Links"
-msgstr ""
+msgstr "Kopírovať odkazy"
 
 #. module: documents
 #: model:ir.actions.server,name:documents.ir_actions_server_create_activity
@@ -1273,12 +1279,12 @@ msgstr "Vytvoriť aktivitu"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Create Shortcut"
-msgstr ""
+msgstr "Vytvoriť skratku"
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_activity_plan_action_document
 msgid "Create a Document Activity Plan"
-msgstr ""
+msgstr "Vytvorte plán aktivít pre dokument"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__create_activity_option
@@ -1289,7 +1295,7 @@ msgstr "Vytvoriť novú aktivitu"
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Create a new document for the remaining page."
-msgstr ""
+msgstr "Vytvorte nový dokument pre zostávajúcu stránku."
 
 #. module: documents
 #. odoo-javascript
@@ -1329,7 +1335,7 @@ msgstr "Dátum vytvorenia"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_manage_versions_panel/documents_manage_versions_panel.xml:0
 msgid "Current Version"
-msgstr ""
+msgstr "Aktuálna verzia"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__alias_bounced_content
@@ -1351,7 +1357,7 @@ msgstr "Predvolené hodnoty"
 #: model:ir.model.fields,help:documents.field_documents_document__deletion_delay
 #: model:ir.model.fields,help:documents.field_res_config_settings__deletion_delay
 msgid "Delay after permanent deletion of the document in the trash (days)"
-msgstr ""
+msgstr "Oneskorenie po trvalom vymazaní dokumentu v koši (dni)"
 
 #. module: documents
 #. odoo-javascript
@@ -1368,28 +1374,28 @@ msgstr "Zmazať"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Delete focused or selected pages"
-msgstr ""
+msgstr "Odstrániť zobrazené alebo vybrané stránky"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Delete permanently"
-msgstr ""
+msgstr "Trvalo odstrániť"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_res_config_settings__deletion_delay
 msgid "Deletion Delay"
-msgstr ""
+msgstr "Oneskorenie vymazania"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__deletion_delay
 msgid "Deletion delay"
-msgstr ""
+msgstr "Oneskorenie vymazania"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.res_config_settings_view_form
 msgid "Deletion delay (days)"
-msgstr ""
+msgstr "Oneskorenie vymazania (dni)"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_deprecated
@@ -1413,7 +1419,7 @@ msgstr "Zrušiť"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Discoverable"
-msgstr ""
+msgstr "Objaviteľné"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_access__display_name
@@ -1430,6 +1436,7 @@ msgstr "Zobrazovaný názov"
 #: code:addons/documents/static/src/owl/components/pdf_exit_dialog/pdf_exit_dialog.xml:0
 msgid "Do you want to exit without saving or gather pages into one document ?"
 msgstr ""
+"Chcete ukončiť bez uloženia alebo zozbierať stránky do jedného dokumentu?"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_document
@@ -1443,7 +1450,7 @@ msgstr "Dokument"
 #. module: documents
 #: model:ir.model,name:documents.model_documents_access
 msgid "Document / Partner"
-msgstr ""
+msgstr "Dokument / Partner"
 
 #. module: documents
 #. odoo-javascript
@@ -1472,12 +1479,12 @@ msgstr "Názov dokumentu"
 #. module: documents
 #: model:ir.actions.act_window,name:documents.mail_activity_plan_action_document
 msgid "Document Plans"
-msgstr ""
+msgstr "Plány dokumentov"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_redirect
 msgid "Document Redirect"
-msgstr ""
+msgstr "Presmerovanie dokumentu"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_request_wizard
@@ -1488,45 +1495,46 @@ msgstr "Vlastník dokumentu"
 #: model:mail.template,subject:documents.mail_template_document_request
 msgid "Document Request {{ object.name != False and ': '+ object.name or '' }}"
 msgstr ""
+"Žiadosť o dokument {{ object.name != False and ': '+ object.name or '' }}"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 #: code:addons/documents/models/mail_activity.py:0
 msgid "Document Request: %(name)s Uploaded by: %(user)s"
-msgstr ""
+msgstr "Žiadosť o dokument: %(name)s Nahral: %(user)s"
 
 #. module: documents
 #: model:mail.template,name:documents.mail_template_document_request_reminder
 msgid "Document Request: Reminder"
-msgstr ""
+msgstr "Žiadosť o dokument: Pripomienka"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__document_token
 msgid "Document Token"
-msgstr ""
+msgstr "Token dokumentu"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/kanban/documents_kanban_model.js:0
 msgid "Document not found or inaccessible."
-msgstr ""
+msgstr "Dokument nebol nájdený alebo je nedostupný."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "Document preview"
-msgstr ""
+msgstr "Náhľad dokumentu"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/controllers/documents.py:0
 msgid "Document uploaded by %(user)s"
-msgstr ""
+msgstr "Dokument nahral %(user)s"
 
 #. module: documents
 #: model:mail.template,name:documents.mail_template_document_request
 msgid "Document: Document Request"
-msgstr ""
+msgstr "Dokument: Žiadosť o dokument"
 
 #. module: documents
 #. odoo-javascript
@@ -1554,7 +1562,7 @@ msgstr "Dokumenty"
 #. module: documents
 #: model:ir.model,name:documents.model_documents_link_to_record_wizard
 msgid "Documents Link to Record"
-msgstr ""
+msgstr "Dokumenty - odkaz na záznam"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_mixin
@@ -1571,18 +1579,18 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.js:0
 msgid "Documents moved to trash will show up here"
-msgstr ""
+msgstr "Dokumenty presunuté do koša sa zobrazia tu"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.js:0
 msgid "Documents shared with you will appear here"
-msgstr ""
+msgstr "Dokumenty, ktoré sú s vami zdieľané, sa zobrazia tu"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_unlink_mixin
 msgid "Documents unlink mixin"
-msgstr ""
+msgstr "Mixin pre zrušenie prepojenia dokumentu"
 
 #. module: documents
 #. odoo-javascript
@@ -1613,17 +1621,17 @@ msgstr ""
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "Download all files"
-msgstr ""
+msgstr "Stiahnuť všetky súbory"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "Download file"
-msgstr ""
+msgstr "Stiahnuť súbor"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "Download folder as zip"
-msgstr ""
+msgstr "Stiahnuť zložku ako zip"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
@@ -1706,7 +1714,7 @@ msgstr "E-mail doména, napr. 'example.com' in 'odoo@example.com'"
 #. module: documents
 #: model:ir.actions.act_window,name:documents.mail_alias_action
 msgid "Email links"
-msgstr ""
+msgstr "Odkazy v e-mailoch"
 
 #. module: documents
 #. odoo-javascript
@@ -1720,25 +1728,25 @@ msgstr "Chyba"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Escape Preview/Deselect/Exit"
-msgstr ""
+msgstr "Ukončiť náhľad/Zrušiť výber/Ukončiť"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_exit_dialog/pdf_exit_dialog.xml:0
 msgid "Exit Split Tools"
-msgstr ""
+msgstr "Ukončiť nástroje na rozdelenie"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_exit_dialog/pdf_exit_dialog.xml:0
 msgid "Exit without saving"
-msgstr ""
+msgstr "Ukončiť bez uloženia"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_partner_access.xml:0
 msgid "Exp:"
-msgstr ""
+msgstr "Platnosť:"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_expense
@@ -1760,7 +1768,7 @@ msgstr "Export"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "Extra comments..."
-msgstr ""
+msgstr "Ďalšie poznámky..."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__favorited_ids
@@ -1789,7 +1797,7 @@ msgstr "Obsah súboru (nespracovaný)"
 #: model:ir.model.fields,field_description:documents.field_documents_document__file_extension
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
 msgid "File Extension"
-msgstr ""
+msgstr "Prípona súboru"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__file_size
@@ -1815,13 +1823,13 @@ msgstr "Centralizácia súborov"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.folder_deletion_form
 msgid "Files will be sent to trash and deleted forever after"
-msgstr ""
+msgstr "Súbory budú presunuté do koša a natrvalo vymazané po"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/form/folder_form_controller.js:0
 msgid "Files will be sent to trash and deleted forever after %s days."
-msgstr ""
+msgstr "Súbory budú presunuté do koša a natrvalo vymazané po %s dňoch."
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_financial
@@ -1837,25 +1845,25 @@ msgstr "Fiškálne"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Focus first page of next group"
-msgstr ""
+msgstr "Zamerať sa na prvú stránku nasledujúcej skupiny"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Focus first page of previous group"
-msgstr ""
+msgstr "Zamerať sa na prvú stránku predchádzajúcej skupiny"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Focus next page"
-msgstr ""
+msgstr "Zamerať sa na ďalšiu stránku"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Focus previous page"
-msgstr ""
+msgstr "Zamerať sa na predchádzajúcu stránku"
 
 #. module: documents
 #. odoo-javascript
@@ -1895,7 +1903,7 @@ msgstr "Úžasná ikona fronty napr. fa-tasks"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_exit_dialog/pdf_exit_dialog.xml:0
 msgid "Gather in one document"
-msgstr ""
+msgstr "Zozbierať do jedného dokumentu"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form_details
@@ -1911,7 +1919,7 @@ msgstr ""
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.format_file_size
 msgid "GiB"
-msgstr ""
+msgstr "GiB"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
@@ -1934,11 +1942,13 @@ msgid ""
 "Has full control over all document settings, folders, and user rights across "
 "the application."
 msgstr ""
+"Má plnú kontrolu nad všetkými nastaveniami dokumentov, zložkami a "
+"užívateľskými právami v celej aplikácii."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
 msgid "Hide shortcuts"
-msgstr ""
+msgstr "Skryť skratky"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__previous_attachment_ids
@@ -1981,6 +1991,10 @@ msgid ""
 "to view it. If \"False\", access with the link also given to all who can "
 "access the parent folder."
 msgstr ""
+"Ak je nastavené na „True“, dokument budú môcť zobraziť len osoby, ktorým bol "
+"udelený priamy prístup k tomuto dokumentu. Ak je nastavené na „False“, "
+"prístup prostredníctvom odkazu budú mať aj všetci, ktorí majú prístup k "
+"nadradenej zložke."
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__message_needaction
@@ -2011,7 +2025,7 @@ msgstr "Obrázky"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Impossible to delete folders used by other applications."
-msgstr ""
+msgstr "Nie je možné odstrániť priečinky používané inými aplikáciami."
 
 #. module: documents
 #. odoo-python
@@ -2027,7 +2041,7 @@ msgstr "V"
 #. module: documents
 #: model:ir.model.fields.selection,name:documents.selection__documents_document__thumbnail_status__restricted
 msgid "Inaccessible"
-msgstr ""
+msgstr "Neprístupné"
 
 #. module: documents
 #. odoo-python
@@ -2044,6 +2058,8 @@ msgid ""
 "Incorrect values. Use one of the following for the following fields: %"
 "(hints)s.)"
 msgstr ""
+"Nesprávne hodnoty. V nasledujúcich poliach použite jednu z nasledujúcich "
+"možností: %(hints)s.)"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__index_content
@@ -2054,13 +2070,13 @@ msgstr "Indexovaný obsah"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_item_details.js:0
 msgid "Info & Tags"
-msgstr ""
+msgstr "Informácie a štítky"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Info & tags"
-msgstr ""
+msgstr "Informácie a štítky"
 
 #. module: documents
 #. odoo-javascript
@@ -2077,7 +2093,7 @@ msgstr "Interní používatelia"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_internal
 msgid "Internal Users Rights"
-msgstr ""
+msgstr "Práva interných užívateľov"
 
 #. module: documents
 #. odoo-javascript
@@ -2095,7 +2111,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Invalid folder id"
-msgstr ""
+msgstr "Neplatné ID priečinka"
 
 #. module: documents
 #. odoo-javascript
@@ -2108,12 +2124,12 @@ msgstr "Neplatná operácia"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Invalid role."
-msgstr ""
+msgstr "Neplatná rola."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__is_editable_attachment
 msgid "Is Editable Attachment"
-msgstr ""
+msgstr "Je upraviteľná príloha"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__is_favorited
@@ -2146,12 +2162,16 @@ msgid ""
 "these items, you must restore the following including folders instead:\n"
 "- %(folders_list)s"
 msgstr ""
+"Položky, ktoré chcete obnoviť, sú v archivovaných zložkách. Ak chcete tieto "
+"položky obnoviť, musíte namiesto toho obnoviť nasledujúce zložky vrátane "
+"zložiek:\n"
+"- %(folders_list)s"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Items in trash will be deleted forever after %s days."
-msgstr ""
+msgstr "Položky v koši budú po %s dňoch natrvalo vymazané."
 
 #. module: documents
 #. odoo-javascript
@@ -2168,7 +2188,7 @@ msgstr "Poskytovateľ KPI"
 #: model:ir.model.fields,field_description:documents.field_documents_access__last_access_date
 #: model:ir.model.fields,field_description:documents.field_documents_document__last_access_date_group
 msgid "Last Accessed On"
-msgstr ""
+msgstr "Naposledy prístupované"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__write_uid
@@ -2198,24 +2218,26 @@ msgid ""
 "Let's move this document to Finance<br/> <i>Tips: actions can be tailored to "
 "your process, according to the folder.</i>"
 msgstr ""
+"Presuňme tento dokument do zložky Finance<br/> <i>Tipy: akcie je možné "
+"prispôsobiť vášmu procesu podľa zložky.</i>"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Let's process documents in this folder.<br/>"
-msgstr ""
+msgstr "Spracujme dokumenty v tejto zložke.<br/>"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Let's process these bills: send to Finance folder."
-msgstr ""
+msgstr "Spracujme tieto faktúry: pošlite ich do zložky Financie."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Let's process this document, coming from our scanner."
-msgstr ""
+msgstr "Spracujme tento dokument, ktorý pochádza z nášho skenera."
 
 #. module: documents
 #. odoo-javascript
@@ -2228,12 +2250,12 @@ msgstr "Link"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__is_access_via_link_hidden
 msgid "Link Access Hidden"
-msgstr ""
+msgstr "Prístup k odkazu skrytý"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_via_link
 msgid "Link Access Rights"
-msgstr ""
+msgstr "Práva na prístup k odkazom"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__url
@@ -2262,7 +2284,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.js:0
 msgid "Links copied to clipboard!"
-msgstr ""
+msgstr "Odkazy skopírované do schránky!"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__alias_incoming_local
@@ -2307,19 +2329,19 @@ msgstr "Odhlásiť sa"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Mail: %s"
-msgstr ""
+msgstr "E-mail: %s"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Manage Versions"
-msgstr ""
+msgstr "Správa verzií"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_manage_versions_panel/documents_manage_versions_panel.js:0
 msgid "Manage Versions of \"%s\""
-msgstr ""
+msgstr "Spravovať verzie „%s “"
 
 #. module: documents
 #: model:ir.actions.server,name:documents.ir_actions_server_remove_activities
@@ -2330,7 +2352,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Merge PDFs"
-msgstr ""
+msgstr "Zlúčiť PDF súbory"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_request_wizard__activity_note
@@ -2350,7 +2372,7 @@ msgstr "Správy"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.format_file_size
 msgid "MiB"
-msgstr ""
+msgstr "MiB"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__mimetype
@@ -2361,7 +2383,7 @@ msgstr "Napodobniť typ"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Missing documents reference."
-msgstr ""
+msgstr "Chýbajúce odkazy na dokumenty."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_link_to_record_wizard__model_id
@@ -2390,7 +2412,7 @@ msgstr "Viac"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.xml:0
 msgid "Move this page to trash"
-msgstr ""
+msgstr "Presunúť túto stránku do koša"
 
 #. module: documents
 #. odoo-javascript
@@ -2406,13 +2428,13 @@ msgstr "Presunúť do koša"
 #: code:addons/documents/static/src/views/hooks.js:0
 #: model_terms:ir.ui.view,arch_db:documents.folder_deletion_form
 msgid "Move to trash"
-msgstr ""
+msgstr "Presunúť do koša"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/form/folder_form_controller.js:0
 msgid "Move to trash?"
-msgstr ""
+msgstr "Presunúť do koša?"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form
@@ -2424,7 +2446,7 @@ msgstr ""
 #: code:addons/documents/models/documents_document.py:0
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "Must have the link to access"
-msgstr ""
+msgstr "Musí obsahovať odkaz na prístup"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
@@ -2448,12 +2470,12 @@ msgstr "Moje dokumenty"
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.js:0
 #: code:addons/documents/static/src/views/kanban/documents_kanban_record.js:0
 msgid "My Drive"
-msgstr ""
+msgstr "Moje uložisko"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_access_role_or_last_access_date
 msgid "NULL roles must have a set last_access_date"
-msgstr ""
+msgstr "Role NULL musia mať nastavené last_access_date"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__name
@@ -2472,7 +2494,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_model_mixin.js:0
 msgid "Name cannot be empty."
-msgstr ""
+msgstr "Názov nemôže byť prázdny."
 
 #. module: documents
 #. odoo-javascript
@@ -2484,19 +2506,19 @@ msgstr "Nové"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "New File"
-msgstr ""
+msgstr "Nový súbor"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_search_panel.xml:0
 msgid "New Folder"
-msgstr ""
+msgstr "Nová zložka"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "New Group"
-msgstr ""
+msgstr "Nová skupina"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__activity_calendar_event_id
@@ -2533,13 +2555,13 @@ msgstr "Nenašli sa žiadne typy aktivít. Poďme si jeden vytvoriť!"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.xml:0
 msgid "No alias configured"
-msgstr ""
+msgstr "Žiadny nakonfigurovaný alias"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "No document has been selected"
-msgstr ""
+msgstr "Nebol vybraný žiadny dokument"
 
 #. module: documents
 #. odoo-javascript
@@ -2551,18 +2573,18 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_access_settings.js:0
 msgid "No one on the internet can access"
-msgstr ""
+msgstr "Nikto na internete nemá prístup"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/ir_actions_server.py:0
 msgid "No server actions found for Documents!"
-msgstr ""
+msgstr "Pre dokumenty neboli nájdené žiadne akcie servera!"
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_alias_action
 msgid "No shared links"
-msgstr ""
+msgstr "Žiadne zdieľané odkazy"
 
 #. module: documents
 #: model:ir.model.fields.selection,name:documents.selection__documents_document__access_internal__none
@@ -2593,7 +2615,7 @@ msgstr "Nie je pripojený"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "Not set"
-msgstr ""
+msgstr "Nenastavené"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__create_activity_note
@@ -2635,7 +2657,7 @@ msgstr "Odoo Logo"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Odoo Studio - Customize workflows in minutes"
-msgstr ""
+msgstr "Odoo Studio – Prispôsobte si pracovné postupy za pár minút"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_page_layout
@@ -2651,31 +2673,31 @@ msgstr "Staršie"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Only Documents Managers can create in company folder."
-msgstr ""
+msgstr "V zložke spoločnosti môžu vytvárať dokumenty iba Správcovia dokumentov."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Only Documents Managers can set aliases."
-msgstr ""
+msgstr "Aliasy môžu nastavovať iba Správcovia dokumentov."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Only Documents managers can set an alias."
-msgstr ""
+msgstr "Alias môžu nastaviť len Správcovia dokumentov."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_model_mixin.js:0
 msgid "Only current page items can be dragged."
-msgstr ""
+msgstr "Presúvať sa dajú len položky na aktuálnej stránke."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_access_settings.js:0
 msgid "Only people with access can open with the link"
-msgstr ""
+msgstr "Link môžu otvoriť len osoby s prístupom"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
@@ -2697,7 +2719,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Open the actions menu"
-msgstr ""
+msgstr "Otvoriť ponuku akcií"
 
 #. module: documents
 #. odoo-javascript
@@ -2712,6 +2734,8 @@ msgid ""
 "Operation not supported. Please use \"Move to Trash\" / `action_archive` "
 "instead."
 msgstr ""
+"Operácia nie je podporovaná. Použite namiesto toho „Presunúť do koša“ / "
+"`action_archive`."
 
 #. module: documents
 #. odoo-python
@@ -2719,6 +2743,8 @@ msgstr ""
 msgid ""
 "Operation not supported. Please use \"Restore\" / `action_unarchive` instead."
 msgstr ""
+"Operácia nie je podporovaná. Použite namiesto toho „Obnoviť“ / "
+"`action_unarchive`."
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_force_thread_id
@@ -2741,7 +2767,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.xml:0
 msgid "Or send emails to"
-msgstr ""
+msgstr "Alebo pošlite e-maily na"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_other
@@ -2814,7 +2840,7 @@ msgstr "Partner"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_partner_access.xml:0
 msgid "People with access"
-msgstr ""
+msgstr "Ľudia s prístupom"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__is_pinned_folder
@@ -2827,6 +2853,8 @@ msgid ""
 "Please login or contact the person that shared this link for more "
 "information."
 msgstr ""
+"Pre viac informácií sa prosím prihláste alebo kontaktujte osobu, ktorá tento "
+"odkaz zdieľala."
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_contact
@@ -2857,7 +2885,7 @@ msgstr "Prezentácie"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "Preview files"
-msgstr ""
+msgstr "Náhľad súborov"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_project
@@ -2868,7 +2896,7 @@ msgstr "Projekt"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Put in %s"
-msgstr ""
+msgstr "Vložiť do %s"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__rating_ids
@@ -2885,13 +2913,13 @@ msgstr "Nedávny"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.js:0
 msgid "Recently accessed Documents will show up here"
-msgstr ""
+msgstr "Tu sa zobrazí zoznam naposledy otvorených dokumentov"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Recently accessed documents."
-msgstr ""
+msgstr "Nedávno otvorené dokumenty."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_link_to_record_wizard__resource_ref
@@ -2907,13 +2935,13 @@ msgstr "Zaznamenať ID vlákna"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Remaining Pages"
-msgstr ""
+msgstr "Zostávajúce stránky"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/activity/documents_activity_controller.js:0
 msgid "Reminder emails have been sent."
-msgstr ""
+msgstr "Boli odoslané pripomienkové e-maily."
 
 #. module: documents
 #: model:mail.template,subject:documents.mail_template_document_request_reminder
@@ -2921,12 +2949,14 @@ msgid ""
 "Reminder to upload your document{{ object.name and ' : ' + object.name or "
 "'' }}"
 msgstr ""
+"Pripomienka na nahratie vášho dokumentu{{ object.name and ' : ' + "
+"object.name or '' }}"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_remove_partner_button.xml:0
 msgid "Remove Access"
-msgstr ""
+msgstr "Odstrániť prístup"
 
 #. module: documents
 #. odoo-javascript
@@ -2953,7 +2983,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_item_star.js:0
 msgid "Remove star"
-msgstr ""
+msgstr "Odstrániť hviezdičku"
 
 #. module: documents
 #. odoo-javascript
@@ -2979,7 +3009,7 @@ msgstr "Vyžiadajte aktivitu"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "Request To"
-msgstr ""
+msgstr "Žiadosť o"
 
 #. module: documents
 #. odoo-javascript
@@ -3012,7 +3042,7 @@ msgstr "Požadované dokumenty"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__requestee_partner_id
 msgid "Requestee Partner"
-msgstr ""
+msgstr "Partner, ktorý podal žiadosť"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__res_model_name
@@ -3064,13 +3094,13 @@ msgstr "Obmedzené"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Restricted Folder"
-msgstr ""
+msgstr "Obmedzená zložka"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_permission_panel.xml:0
 msgid "Revert changes"
-msgstr ""
+msgstr "Vrátiť zmeny"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_access__role
@@ -3117,50 +3147,50 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.js:0
 msgid "Select a folder to upload a document"
-msgstr ""
+msgstr "Vyberte priečinok na nahratie dokumentu"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/kanban/documents_kanban_renderer.js:0
 #: code:addons/documents/static/src/views/list/documents_list_renderer.js:0
 msgid "Select all"
-msgstr ""
+msgstr "Vybrať všetko"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Select focused page"
-msgstr ""
+msgstr "Vyberte konkrétnu stránku"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Select next page"
-msgstr ""
+msgstr "Vyberte ďalšiu stránku"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Select next pages of the group"
-msgstr ""
+msgstr "Vyberte ďalšie stránky skupiny"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Select previous page"
-msgstr ""
+msgstr "Vyberte predchádzajúcu stránku"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Select previous pages of the group"
-msgstr ""
+msgstr "Vyberte predchádzajúce stránky skupiny"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Select/Deselect all pages"
-msgstr ""
+msgstr "Vybrať/Zrušiť výber všetkých stránok"
 
 #. module: documents
 #. odoo-javascript
@@ -3173,12 +3203,12 @@ msgstr "Poslať"
 #: code:addons/documents/static/src/js/tours/documents.js:0
 #: model:ir.actions.server,name:documents.ir_actions_server_send_to_finance
 msgid "Send To Finance"
-msgstr ""
+msgstr "Odoslať do Financie"
 
 #. module: documents
 #: model:mail.template,description:documents.mail_template_document_request
 msgid "Sent to partner when requesting a document from them"
-msgstr ""
+msgstr "Odoslané partnerovi pri žiadosti o dokument"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_tag__sequence
@@ -3213,6 +3243,8 @@ msgid ""
 "Set reminders in activities to notify users who didn't upload their "
 "requested document"
 msgstr ""
+"Nastavte pripomienky v aktivitách, aby ste upozornili užívateľov, ktorí "
+"nenahrali požadovaný dokument"
 
 #. module: documents
 #: model:ir.actions.act_window,name:documents.configuration_action
@@ -3235,7 +3267,7 @@ msgstr "Zdieľať"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_permission_panel.js:0
 msgid "Share: %(documentName)s"
-msgstr ""
+msgstr "Zdieľať: %(documentName)s"
 
 #. module: documents
 #. odoo-javascript
@@ -3244,7 +3276,7 @@ msgstr ""
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.js:0
 #: code:addons/documents/static/src/views/kanban/documents_kanban_record.js:0
 msgid "Shared with me"
-msgstr ""
+msgstr "Zdieľané so mnou"
 
 #. module: documents
 #. odoo-javascript
@@ -3274,7 +3306,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Shortcuts cannot change target document."
-msgstr ""
+msgstr "Skratky nemôžu meniť cieľový dokument."
 
 #. module: documents
 #. odoo-python
@@ -3291,7 +3323,7 @@ msgstr "Veľkosť:"
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "Some files could not be uploaded (max size: %s)."
-msgstr ""
+msgstr "Niektoré súbory sa nepodarilo nahrať (maximálna veľkosť: %s)."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__shortcut_document_id
@@ -3316,20 +3348,20 @@ msgstr "Rozdeliť"
 #: code:addons/documents/static/src/js/tours/documents.js:0
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Split PDF"
-msgstr ""
+msgstr "Rozdeliť PDF"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "Split all white pages"
-msgstr ""
+msgstr "Rozdeliť všetky prázdne stránky"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.xml:0
 msgid "Split selected pages"
-msgstr ""
+msgstr "Rozdeliť vybrané stránky"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
@@ -3353,7 +3385,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_exit_dialog/pdf_exit_dialog.xml:0
 msgid "Stay here"
-msgstr ""
+msgstr "Zostať tu"
 
 #. module: documents
 #: model:ir.ui.menu,name:documents.structure
@@ -3368,7 +3400,7 @@ msgstr "Zhrnutie"
 #. module: documents
 #: model:res.groups,name:documents.group_documents_system
 msgid "System Administrator"
-msgstr ""
+msgstr "Správca systému"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_tag
@@ -3385,7 +3417,7 @@ msgstr "Názov tagu"
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_tag_tag_name_unique
 msgid "Tag name already used"
-msgstr ""
+msgstr "Názov štítku je už použitý"
 
 #. module: documents
 #. odoo-javascript
@@ -3405,25 +3437,25 @@ msgstr "Text"
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_tag__tooltip
 msgid "Text shown when hovering on this tag"
-msgstr ""
+msgstr "Text zobrazený pri nabehnutí kurzora na tento štítok"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_res_config_settings_check_deletion_delay
 msgid "The deletion delay should be positive."
-msgstr ""
+msgstr "Oneskorenie vymazania by malo byť kladné."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/web/error_dialog/error_dialog_patch.js:0
 #: code:addons/documents/static/src/web/error_dialog/error_dialog_patch.xml:0
 msgid "The document URL has been copied to your clipboard."
-msgstr ""
+msgstr "URL dokumentu bola skopírovaná do schránky."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "The document has been moved."
-msgstr ""
+msgstr "Dokument bol presunutý."
 
 #. module: documents
 #. odoo-python
@@ -3432,6 +3464,8 @@ msgid ""
 "The following documents can't have alias: \n"
 "- %(records)s"
 msgstr ""
+"Nasledujúce dokumenty nemôžu mať alias: \n"
+"- %(records)s"
 
 #. module: documents
 #. odoo-python
@@ -3446,18 +3480,19 @@ msgstr ""
 #: code:addons/documents/models/documents_document.py:0
 msgid "The following documents/shortcuts have a company mismatch: \n"
 msgstr ""
+"Nasledujúce dokumenty/skratky obsahujú nesúlad v priradenej spoločnosti: \n"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "The following documents/shortcuts have a type mismatch: \n"
-msgstr ""
+msgstr "Nasledujúce dokumenty/skratky majú nezhodu typov: \n"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "The following shortcuts cannot be set as documents parents: \n"
-msgstr ""
+msgstr "Nasledujúce skratky nemožno nastaviť ako nadradené dokumenty: \n"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_model_id
@@ -3484,6 +3519,8 @@ msgstr ""
 #: code:addons/documents/models/documents_document.py:0
 msgid "There are no records to link this document. Create one first."
 msgstr ""
+"Neexistujú žiadne záznamy, ktoré by bolo možné prepojiť s týmto dokumentom. "
+"Najprv nejaký vytvorte."
 
 #. module: documents
 #: model:ir.model.fields.selection,name:documents.selection__documents_document__last_access_date_group__1_month
@@ -3499,7 +3536,7 @@ msgstr "Tento týždeň"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "This action does not exist."
-msgstr ""
+msgstr "Táto akcia neexistuje."
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_attachment_unique
@@ -3509,7 +3546,7 @@ msgstr "Táto príloha už je dokumentom"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.not_available
 msgid "This document does not exist or is not publicly available."
-msgstr ""
+msgstr "Tento dokument neexistuje alebo nie je verejne dostupný."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_request_page
@@ -3524,42 +3561,42 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "This document has been restored."
-msgstr ""
+msgstr "Tento dokument bol obnovený."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid ""
 "This file has been sent to the trash and will be deleted forever on the %s"
-msgstr ""
+msgstr "Tento súbor bol presunutý do koša a bude natrvalo vymazaný dňa %s"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "This folder does not exist or is not accessible."
-msgstr ""
+msgstr "Táto zložka neexistuje alebo nie je dostupná."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "This is a folder"
-msgstr ""
+msgstr "Toto je zložka"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_search_panel.xml:0
 msgid "This is a shortcut"
-msgstr ""
+msgstr "Toto je skratka"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "This is a shortcut - Click to access source document"
-msgstr ""
+msgstr "Toto je skratka – kliknutím otvoríte zdrojový dokument"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_access_unique_document_access_partner
 msgid "This partner is already set on this document."
-msgstr ""
+msgstr "Tento partner je už nastavený pre tento dokument."
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_activity_type_action_document
@@ -3578,18 +3615,19 @@ msgstr "MIniatúra"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__thumbnail_status
 msgid "Thumbnail Status"
-msgstr ""
+msgstr "Stav miniatúry"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.xml:0
 msgid "Tip: configure your scanner to send all documents to this address."
 msgstr ""
+"Tip: Nastavte svoj skener tak, aby všetky dokumenty posielal na túto adresu."
 
 #. module: documents
 #: model:digest.tip,name:documents.digest_tip_documents_0
 msgid "Tip: Become a paperless company"
-msgstr ""
+msgstr "Tip: Staňte sa bezpapierovou spoločnosťou"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_to_validate
@@ -3610,7 +3648,7 @@ msgstr "Dnes"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/kanban/documents_kanban_renderer.js:0
 msgid "Toggle favorite"
-msgstr ""
+msgstr "Prepnúť obľúbené"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_tag__tooltip
@@ -3627,12 +3665,12 @@ msgstr "Smeti"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.res_config_settings_view_form
 msgid "Trash Management"
-msgstr ""
+msgstr "Správa koša"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__is_editable_attachment
 msgid "True if we can edit the link attachment."
-msgstr ""
+msgstr "Pravda, ak môžeme upravovať prílohu odkazu."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__type
@@ -3656,18 +3694,18 @@ msgstr "URL"
 #: code:addons/documents/models/documents_document.py:0
 msgid ""
 "URL %s does not seem complete, as it does not begin with http(s):// or ftp://"
-msgstr ""
+msgstr "URL %s sa nezdá byť úplná, keďže nezačína http(s):// alebo ftp://"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__url_preview_image
 msgid "URL Preview Image"
-msgstr ""
+msgstr "Náhľad obrázku URL"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Unavailable action."
-msgstr ""
+msgstr "Nedostupná akcia."
 
 #. module: documents
 #. odoo-javascript
@@ -3696,12 +3734,14 @@ msgid ""
 "Upload <span class=\"fw-normal\">a file or</span> drag <span class=\"fw-"
 "normal\">it here.</span>"
 msgstr ""
+"Nahrajte<span class=\"fw-normal\"> súbor </span>alebo ho pretiahnite <span "
+"class=\"fw-normal\">sem.</span>"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_manage_versions_panel/documents_manage_versions_panel.xml:0
 msgid "Upload New Version"
-msgstr ""
+msgstr "Nahrať novú verziu"
 
 #. module: documents
 #. odoo-python
@@ -3713,13 +3753,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/mail_activity.py:0
 msgid "Upload file request"
-msgstr ""
+msgstr "Žiadosť o nahratie súboru"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_type_icon/documents_type_icon.xml:0
 msgid "Upload the requested file"
-msgstr ""
+msgstr "Nahrať požadovaný súbor"
 
 #. module: documents
 #: model:ir.model,name:documents.model_res_users
@@ -3757,6 +3797,9 @@ msgid ""
 "                    If you delete the most recent version, the previous one "
 "is automatically restored as the current one."
 msgstr ""
+"Verzie sa zobrazujú v poradí, v akom boli nahrané do Dokumentov.\n"
+"                    Ak vymažete najnovšiu verziu, predchádzajúca verzia sa "
+"automaticky obnoví ako aktuálna."
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_videos
@@ -3785,6 +3828,7 @@ msgstr "Prehliadač"
 msgid ""
 "Want to become a <b>paperless company</b>? Let's discover Odoo Documents."
 msgstr ""
+"Chcete sa stať <b>bezpapierovou spoločnosťou</b>? Objavte Odoo Dokumenty."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__website_message_ids
@@ -3806,7 +3850,7 @@ msgstr "Týždne"
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_exit_dialog/pdf_exit_dialog.xml:0
 msgid "What do you want to do with the remaining pages ?"
-msgstr ""
+msgstr "Čo chcete urobiť so zostávajúcimi stránkami?"
 
 #. module: documents
 #: model_terms:web_tour.tour,rainbow_man_message:documents.documents_tour
@@ -3814,6 +3858,8 @@ msgid ""
 "Wow... 6 documents processed in a few seconds, You're good.<br>The tour is "
 "complete. Try uploading your own documents now."
 msgstr ""
+"Páni... 6 dokumentov spracovaných za pár sekúnd, ide vám to skvele.<br>"
+"Prehliadka je ukončená. Skús teraz nahrať svoje vlastné dokumenty."
 
 #. module: documents
 #. odoo-javascript
@@ -3825,31 +3871,31 @@ msgstr "Vy"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You are not allowed to (un)archive documents."
-msgstr ""
+msgstr "Nemáte povolené (od)archivovať dokumenty."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You are not allowed to change ownerships of documents you do not own."
-msgstr ""
+msgstr "Nemáte povolené meniť vlastníctvo dokumentov, ktoré nevlastníte."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You are not allowed to execute embedded actions."
-msgstr ""
+msgstr "Nemáte povolené vykonávať vložené akcie."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You are not allowed to move (some of) these documents."
-msgstr ""
+msgstr "Nemáte povolené presúvať (niektoré z) týchto dokumentov."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You are not allowed to pin/unpin embedded Actions."
-msgstr ""
+msgstr "Vložené akcie nie je možné pripnúť ani odpripnúť."
 
 #. module: documents
 #. odoo-python
@@ -3861,7 +3907,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You are not allowed to write in this folder."
-msgstr ""
+msgstr "Do tohto priečinka nemáte oprávnenie zapisovať."
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__attachment_type
@@ -3876,25 +3922,28 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_pin_actions.js:0
 msgid "You can not pin actions for that folder."
-msgstr ""
+msgstr "Pre túto zložku nemôžete pripnúť žiadne akcie."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You can not update the access of a shortcut, update its target instead."
 msgstr ""
+"Prístup k skratke nemožno aktualizovať, namiesto toho aktualizujte jej cieľ."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You can't access that folder_id."
-msgstr ""
+msgstr "Nemáte prístup k zložke s folder_id."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_search_panel.js:0
 msgid "You can't create shortcuts in or move documents to this special folder."
 msgstr ""
+"V tejto špeciálnej zložke nemôžete vytvárať skratky ani do nej presúvať "
+"dokumenty."
 
 #. module: documents
 #. odoo-python
@@ -3906,25 +3955,25 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You cannot change the owner of documents you do not own."
-msgstr ""
+msgstr "Nemôžete zmeniť vlastníka dokumentov, ktoré nevlastníte."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_tag.py:0
 msgid "You cannot delete tags used in server actions."
-msgstr ""
+msgstr "Štíty použité v akciách servera nemožno odstrániť."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You cannot delete this attachment."
-msgstr ""
+msgstr "Túto prílohu nemôžete vymazať."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You cannot duplicate document(s) in the Trash."
-msgstr ""
+msgstr "Dokumenty v koši nie je možné duplikovať."
 
 #. module: documents
 #. odoo-javascript
@@ -3942,13 +3991,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You cannot pin an action on that document."
-msgstr ""
+msgstr "K tomuto dokumentu nemôžete priradiť žiadnu akciu."
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You cannot pin that type of action."
-msgstr ""
+msgstr "Tento typ akcie nemôžete priradiť."
 
 #. module: documents
 #. odoo-javascript
@@ -3966,7 +4015,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "You do not have sufficient access rights to delete these documents."
-msgstr ""
+msgstr "Nemáte dostatočné prístupové práva na vymazanie týchto dokumentov."
 
 #. module: documents
 #. odoo-javascript
@@ -3993,13 +4042,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Your individual space."
-msgstr ""
+msgstr "Váš osobný priestor."
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.js:0
 msgid "Your personal space"
-msgstr ""
+msgstr "Váš osobný priestor"
 
 #. module: documents
 #. odoo-javascript
@@ -4011,12 +4060,12 @@ msgstr "alias"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.format_file_size
 msgid "bytes"
-msgstr ""
+msgstr "bajtov"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.folder_deletion_form
 msgid "days."
-msgstr ""
+msgstr "dní."
 
 #. module: documents
 #. odoo-javascript
@@ -4038,22 +4087,22 @@ msgstr "napr. porediskutovať návrh"
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form_new_folder
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form_rename
 msgid "e.g. Finance"
-msgstr ""
+msgstr "napr. Financie"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "e.g. Missing Expense"
-msgstr ""
+msgstr "napr. Chýbajúce výdavky"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.tag_view_form
 msgid "e.g. To Validate"
-msgstr ""
+msgstr "napr. Na overenie"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_upload_url_view
 msgid "e.g. https://www.youtube.com/watch?v=CP96yVnXNrY"
-msgstr ""
+msgstr "napr. https://www.youtube.com/watch?v=CP96yVnXNrY"
 
 #. module: documents
 #. odoo-javascript
@@ -4065,7 +4114,7 @@ msgstr "napr. mojaspolocnost.sk"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "files"
-msgstr ""
+msgstr "súbory"
 
 #. module: documents
 #. odoo-javascript
@@ -4076,12 +4125,12 @@ msgstr ""
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "folders,"
-msgstr ""
+msgstr "zložky,"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_link_to_record_wizard__is_readonly_model
 msgid "is_readonly_model"
-msgstr ""
+msgstr "is_readonly_model"
 
 #. module: documents
 #. odoo-javascript
@@ -4093,18 +4142,18 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "items,"
-msgstr ""
+msgstr "položky,"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.format_file_size
 msgid "kiB"
-msgstr ""
+msgstr "kiB"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_page/pdf_page.xml:0
 msgid "select"
-msgstr ""
+msgstr "vybrať"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.mail_template_document_share
@@ -4135,7 +4184,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "status code: %(status)s, message: %(message)s"
-msgstr ""
+msgstr "kód stavu: %(status)s, správa: %(message)s"
 
 #. module: documents
 #. odoo-javascript
@@ -4155,6 +4204,8 @@ msgid ""
 "•\n"
 "                                        <b>URL</b>"
 msgstr ""
+"•\n"
+"                                        <b>URL</b>"
 
 #~ msgid "2024"
 #~ msgstr "2024"

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 17:48+0000\n"
-"PO-Revision-Date: 2026-05-28 12:48+0000\n"
+"PO-Revision-Date: 2026-06-20 09:22+0000\n"
 "Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18/"
 "account_reports/id/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_reports
 #. odoo-javascript
@@ -573,8 +573,8 @@ msgid ""
 "All selected companies or branches do not share the same Tax ID. Please "
 "check the Tax ID of the selected companies."
 msgstr ""
-"Semua perusahaan atau cabang yang dipilih tidak memiliki Pajak ID yang sama. "
-"Mohon periksa Pajak ID dari perusahaan terpilih"
+"Semua perusahaan atau cabang yang dipilih tidak memiliki ID Pajak yang sama. "
+"Mohon periksa ID Pajak dari perusahaan yang dipilih."
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.account_financial_report_ec_sales_amount
@@ -632,7 +632,7 @@ msgstr "Analitik"
 #: model:ir.model.fields,field_description:account_reports.field_account_analytic_line__analytic_coverage
 #: model:ir.model.fields,field_description:account_reports.field_account_move_line__analytic_coverage
 msgid "Analytic Coverage"
-msgstr ""
+msgstr "Cakupan Analitik"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report__filter_analytic_groupby
@@ -655,7 +655,7 @@ msgstr "Simulasi Analitik"
 #: code:addons/account_reports/static/src/components/account_report/header/header.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_main_table_header
 msgid "Analytic coverage"
-msgstr ""
+msgstr "Cakupan analitik"
 
 #. module: account_reports
 #. odoo-javascript
@@ -887,7 +887,7 @@ msgstr "CSV"
 #. odoo-python
 #: code:addons/account_reports/models/account_general_ledger.py:0
 msgid "CSV export only works with one column group"
-msgstr ""
+msgstr "Ekspor CSV hanya berfungsi dengan satu grup kolom"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1312,7 +1312,7 @@ msgstr "Terbaru"
 #: model:account.report.line,name:account_reports.account_financial_report_current_assets0
 #: model:account.report.line,name:account_reports.account_financial_report_current_assets_view0
 msgid "Current Assets"
-msgstr "Aktiva Terkini"
+msgstr "Aktiva Lancar"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_current_liabilities0
@@ -2611,7 +2611,7 @@ msgstr "Metode '%(method_name)s' harus dimulai dengan awalan '%(prefix)s'."
 #. module: account_reports
 #: model:account.report.line,name:account_reports.misc_operations
 msgid "Misc. operations"
-msgstr "Misc. operation"
+msgstr "Operasi lain-lain"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__mode
@@ -3439,7 +3439,7 @@ msgstr "Cari ..."
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_form
 msgid "Sections"
-msgstr "Bagian-Bagian"
+msgstr "Bagian"
 
 #. module: account_reports
 #. odoo-python
@@ -4083,9 +4083,9 @@ msgid ""
 "using different currencies,\n"
 "        which can lead the report to be unbalanced."
 msgstr ""
-"Laporan ini menggunakan metode konversi CTA untuk menkonsolidasi lebih dari "
-"satu perusahaan menggunakan mata uang yang berbeda-beda,\n"
-"        yang dapat berujung ke laporan yang tidak seimbang."
+"Laporan ini menggunakan metode konversi CTA untuk mengonsolidasi beberapa "
+"perusahaan menggunakan mata uang berbeda-beda,\n"
+"        dan hal ini dapat menyebabkan laporan tidak seimbang."
 
 #. module: account_reports
 #. odoo-python
@@ -4618,7 +4618,7 @@ msgstr "unit pajak [%s]"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "that are not established abroad."
-msgstr "yang tidak didirikan diluar negeri"
+msgstr "yang tidak didirikan di luar negeri."
 
 #. module: account_reports
 #. odoo-javascript

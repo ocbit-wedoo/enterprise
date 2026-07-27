@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
+"POT-Creation-Date: 2026-06-19 17:45+0000\n"
 "PO-Revision-Date: 2026-02-07 10:29+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
@@ -82,6 +82,17 @@ msgstr "以下にアカウントを作成"
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
 msgid "Create an app"
 msgstr "アプリを作成"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"Detected a problem when validating delivery %(delivery_name)s. Invoicing "
+"address of the commercial invoice has been defaulted to %(ship_to_partner)s "
+"instead of %(sold_to_partner)s to avoid the following error from UPS: \"The "
+"Sold To party's country code must be the same as the Ship To party's country "
+"code with the exception of Canada and satellite countries.\""
+msgstr ""
 
 #. module: delivery_ups_rest
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
@@ -171,15 +182,16 @@ msgid ""
 "(step2) and Client ID + Client Secret (step 8). Also ensure you use correct "
 "dimensions and weight unit for your country"
 msgstr ""
-"アカウント番号(ステップ2)とClient ID + Client Secret(ステップ8)を使用して、od"
-"ooでUPSの配送方法を作成します。また、あなたの国の正しい寸法と重量単位を使用し"
-"ていることを確認して下さい。"
+"アカウント番号(ステップ2)とClient ID + Client Secret(ステップ8)を使用して、"
+"odooでUPSの配送方法を作成します。また、あなたの国の正しい寸法と重量単位を使用"
+"していることを確認して下さい。"
 
 #. module: delivery_ups_rest
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
 msgid ""
 "Now open your app, you'll have your <b>Client ID</b> and <b>Client Secret</b>"
-msgstr "アプリを開けると、<b>Client ID</b>と <b>Client Secret</b>を入手できます。"
+msgstr ""
+"アプリを開けると、<b>Client ID</b>と <b>Client Secret</b>を入手できます。"
 
 #. module: delivery_ups_rest
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form

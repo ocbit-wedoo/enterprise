@@ -166,21 +166,44 @@ class SaleOrder(models.Model):
             if so.subscription_state == '7_upsell' and so.subscription_id.pricelist_id.currency_id != so.pricelist_id.currency_id:
                 raise ValidationError(_('You cannot upsell a subscription using a different currency.'))
 
+    def _is_exempt_from_subscription_plan_check(self):
+        """Return True if this order is exempt from subscription plan validation.
+
+        Exempt cases:
+        - Draft or cancelled orders: plan is not required yet.
+        - Upsell orders (7_upsell): plan is inherited from the parent subscription.
+        - Legacy orders created before the sale.subscription/sale.order merge.
+        """
+        self.ensure_one()
+        return (
+            self.state in ['draft', 'cancel']
+            or self.subscription_state == '7_upsell'
+            or (self.subscription_id and not self.subscription_state)
+        )
+
+    def _check_recurring_plan_mismatch(self, has_recurring_product):
+        """Raise a UserError if there is a mismatch between recurring products and the
+        subscription plan on this order.
+
+        Does not check for exempt states — the caller is responsible for calling
+        :meth:`_is_exempt_from_subscription_plan_check` first.
+
+        :param bool has_recurring_product: True when the order contains or will contain
+            at least one recurring product.
+        """
+        self.ensure_one()
+        if has_recurring_product and not self.plan_id:
+            raise UserError(_('Please add a recurring plan on the subscription or remove the recurring product.'))
+        if self.plan_id and not has_recurring_product:
+            raise UserError(_('Please add a recurring product in the subscription or remove the recurring plan.'))
+
     @api.constrains('plan_id', 'state', 'order_line')
     def _constraint_subscription_plan(self):
         recurring_product_orders = self.order_line.filtered(lambda l: l.product_id.recurring_invoice).order_id
         for so in self:
-            if so.state in ['draft', 'cancel'] or so.subscription_state == '7_upsell':
+            if so._is_exempt_from_subscription_plan_check():
                 continue
-            if so.subscription_id and not so.subscription_state:
-                # so created before merge sale.subscription into sale.order upgrade.
-                # This is the so that created the sale.subscription records.
-                continue
-
-            if so.has_recurring_line and not so.plan_id:
-                raise UserError(_('Please add a recurring plan on the subscription or remove the recurring product.'))
-            if so.plan_id and not so.has_recurring_line:
-                raise UserError(_('Please add a recurring product in the subscription or remove the recurring plan.'))
+            so._check_recurring_plan_mismatch(so in recurring_product_orders)
 
     @api.constrains('subscription_state', 'state')
     def _constraint_canceled_subscription(self):
@@ -1206,6 +1229,26 @@ class SaleOrder(models.Model):
                     if order.partner_id.is_company:
                         partners_to_update |= order.partner_id.child_ids
                     partners_to_update.sudo().write({'user_id': subscription_user.id})
+
+    def _update_order_line_info(self, product_id, quantity, **kwargs):
+        """
+        Override to validate subscription plan when adding products via catalog view.
+        This prevents bypassing the subscription plan validation that occurs when manually
+        adding products and saving.
+        """
+        product = self.env['product.product'].browse(product_id)
+        if product.recurring_invoice and not self._is_exempt_from_subscription_plan_check():
+            # The product being added is not yet in self.order_line, so compute whether
+            # the order will have a recurring product after this catalog operation.
+            # Exclude the current product_id to avoid double-counting an existing line.
+            has_other_recurring = any(
+                line.product_id.recurring_invoice
+                for line in self.order_line
+                if line.product_id.id != product_id
+            )
+            will_have_recurring = has_other_recurring or quantity > 0
+            self._check_recurring_plan_mismatch(will_have_recurring)
+        return super()._update_order_line_info(product_id, quantity, **kwargs)
 
     ####################
     # Invoicing Methods #

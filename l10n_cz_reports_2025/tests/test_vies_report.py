@@ -10,6 +10,7 @@ class CzechVIESReportTest(CzechReportsCommon):
     @freeze_time('2019-12-31')
     def setUp(self):
         super().setUp()
+        self.env.company.partner_id.city = 'Prague'
         self.env['account.move'].create({
             'invoice_date': '2019-11-12',
             'taxable_supply_date': '2019-11-12',
@@ -122,7 +123,7 @@ class CzechVIESReportTest(CzechReportsCommon):
             <Pisemnost nazevSW="Odoo SA" verzeSW="{release.version}">
             <DPHSHV verzePis="02.01">
                 <VetaD shvies_forma="N" dokument="SHV" k_uladis="DPH" mesic="11" rok="2019"/>
-                <VetaP typ_ds="P" zkrobchjm="company_1_data" c_pracufo="2001" c_ufo="451" dic="12345679" email="info@company.czexample.com"/>
+                <VetaP typ_ds="P" zkrobchjm="company_1_data" c_pracufo="2001" c_ufo="451" dic="12345679" naz_obce="PRAGUE"/>
                 <VetaR k_stat="FR" c_vat="23334175221" k_pln_eu="0" pln_pocet="2" pln_hodnota="260"/>
                 <VetaR k_stat="FR" c_vat="23334175221" k_pln_eu="1" pln_pocet="3" pln_hodnota="300"/>
                 <VetaR k_stat="FR" c_vat="23334175221" k_pln_eu="2" pln_pocet="1" pln_hodnota="60"/>
@@ -140,17 +141,38 @@ class CzechVIESReportTest(CzechReportsCommon):
         )
 
     @freeze_time('2019-12-31')
-    def test_cz_vies_report_custom_options_export(self):
+    def test_cz_vies_report_custom_options_export_person(self):
         report = self.env.ref('l10n_cz_reports_2025.vies_summary_report')
         options = self._generate_options(report, date_from='2018-07-01', date_to='2018-09-30')
         self.env.company.partner_id.company_type = 'person'
+        self.env.company.partner_id.name = 'Michel Jean'
 
         generated_xml = self.env['l10n_cz.vies.summary.report.handler'].export_to_xml(options)['file_content']
         expected_xml = f"""
             <Pisemnost nazevSW="Odoo SA" verzeSW="{release.version}">
             <DPHSHV verzePis="02.01">
                 <VetaD shvies_forma="N" dokument="SHV" k_uladis="DPH" ctvrt="3" rok="2018"/>
-                <VetaP typ_ds="F" zkrobchjm="company_1_data" c_pracufo="2001" c_ufo="451" dic="12345679" email="info@company.czexample.com"/>
+                <VetaP typ_ds="F" zkrobchjm="Michel Jean" c_pracufo="2001" c_ufo="451" dic="12345679" zast_jmeno="Michel" zast_prijmeni="Jean" naz_obce="PRAGUE"/>
+            </DPHSHV>
+            </Pisemnost>
+        """
+        self.assertXmlTreeEqual(
+            self.get_xml_tree_from_string(generated_xml),
+            self.get_xml_tree_from_string(expected_xml),
+        )
+
+    @freeze_time('2019-12-31')
+    def test_cz_vies_report_custom_options_export_company(self):
+        report = self.env.ref('l10n_cz_reports_2025.vies_summary_report')
+        options = self._generate_options(report, date_from='2018-07-01', date_to='2018-09-30')
+        self.env.company.partner_id.company_registry = '25099213'
+
+        generated_xml = self.env['l10n_cz.vies.summary.report.handler'].export_to_xml(options)['file_content']
+        expected_xml = f"""
+            <Pisemnost nazevSW="Odoo SA" verzeSW="{release.version}">
+            <DPHSHV verzePis="02.01">
+                <VetaD shvies_forma="N" dokument="SHV" k_uladis="DPH" ctvrt="3" rok="2018"/>
+                <VetaP typ_ds="P" c_pracufo="2001" c_ufo="451" dic="12345679" naz_obce="PRAGUE" zast_ic="25099213" zkrobchjm="company_1_data"/>
             </DPHSHV>
             </Pisemnost>
         """

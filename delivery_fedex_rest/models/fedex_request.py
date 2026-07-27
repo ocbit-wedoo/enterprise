@@ -282,6 +282,7 @@ class FedexRequest:
                 'units': self.weight_units,
                 'value': self.carrier._fedex_rest_convert_weight(package.weight)
             },
+            'customerReferences': [],
         }
         if int(package.dimension['length']) or int(package.dimension['width']) or int(package.dimension['height']):
             # FedEx will raise a warning when mixing imperial and metric units (MIXED.MEASURING.UNITS.INCLUDED).
@@ -306,11 +307,16 @@ class FedexRequest:
         description = ', '.join([c.product_id.name for c in package.commodities])
         res['itemDescription'] = description[:50]
         res['itemDescriptionForClearance'] = description
+        if package.picking_id:
+            res['customerReferences'].append({
+                'customerReferenceType': 'CUSTOMER_REFERENCE',
+                'value': package.picking_id.name,
+            })
         if order_no:
-            res['customerReferences'] = [{
+            res['customerReferences'].append({
                 'customerReferenceType': 'P_O_NUMBER',
                 'value': order_no
-            }]
+            })
         return res
 
     def _get_commodities_info(self, commodity, currency):

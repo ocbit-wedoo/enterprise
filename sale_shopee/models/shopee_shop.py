@@ -656,6 +656,11 @@ class ShopeeShop(models.Model):
                 ('name', '=ilike', state_name),  # shopee can return a state name in capital letters
                 ('country_id', '=', country.id),
             ], limit=1)
+        shopee_buyer_ref_field, shopee_buyer_identifier = (
+            ("shopee_buyer_identifier", shopee_buyer_identifier)
+            if not shopee_buyer_identifier or shopee_buyer_identifier < 2**31
+            else ("ref", f"Shopee-Buyer-{shopee_buyer_identifier}")
+        )
         partner_vals = {
             'street': street,
             'street2': street2,
@@ -666,7 +671,7 @@ class ShopeeShop(models.Model):
             'phone': phone,
             'customer_rank': 1,
             'company_id': self.company_id.id,
-            'shopee_buyer_identifier': shopee_buyer_identifier,
+            shopee_buyer_ref_field: shopee_buyer_identifier,
         }
 
         # The contact partner is searched based on all the personal information and only if the
@@ -680,7 +685,7 @@ class ShopeeShop(models.Model):
             *self.env['product.pricelist']._check_company_domain(self.company_id),
             ('type', '=', 'contact'),
             ('name', '=', buyer_name),
-            ('shopee_buyer_identifier', '=', shopee_buyer_identifier),
+            (shopee_buyer_ref_field, "=", shopee_buyer_identifier),
         ], limit=1) if shopee_buyer_identifier else None  # Don't match random partners.
         if not contact:
             contact_name = buyer_name or _("Shopee Customer #%(order_no)s", order_no=shopee_order_ref)

@@ -31,3 +31,12 @@ class PosConfig(models.Model):
         domain=[('type', '=', 'sale')],
         default=_default_l10n_co_edi_final_consumer_invoices_journal,
     )
+
+    def get_limited_partners_loading(self):
+        partner_ids = super().get_limited_partners_loading()
+        final_consumer = self.env.ref('l10n_co_edi.consumidor_final_customer', raise_if_not_found=False)
+
+        if final_consumer and (final_consumer.id,) not in partner_ids:
+            partner_ids.append((final_consumer.id,))
+
+        return partner_ids

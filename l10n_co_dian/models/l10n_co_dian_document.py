@@ -96,7 +96,7 @@ class L10nCoDianDocument(models.Model):
             'identifier': 'DEMO' if move.company_id.l10n_co_dian_demo_mode else root.find('.//{*}UUID').text,
             'state': state,
             # naive local colombian datetime
-            'datetime': fields.datetime.now() if move.company_id.l10n_co_dian_demo_mode else fields.datetime.fromisoformat(root.find('.//{*}SigningTime').text).replace(tzinfo=None),
+            'datetime': fields.Datetime.context_timestamp(self.with_context(tz='America/Bogota'), fields.Datetime.now()).replace(tzinfo=None) if move.company_id.l10n_co_dian_demo_mode else fields.datetime.fromisoformat(root.find('.//{*}SigningTime').text).replace(tzinfo=None),
             'test_environment': move.company_id.l10n_co_dian_test_environment,
             'certification_process': move.company_id.l10n_co_dian_certification_process,
             **kwargs,

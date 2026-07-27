@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_amazon
+# * sale_amazon
 #
 # Translators:
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
@@ -9,20 +9,22 @@
 # Martin Trigaux, 2024
 # Mads Søndergaard, 2025
 # Kira Petersen, 2025
-#
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Kira Petersen, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"PO-Revision-Date: 2026-06-23 13:56+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
+"sale_amazon/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_amazon
 #: model:mail.template,body_html:sale_amazon.order_sync_failure
@@ -52,7 +54,7 @@ msgid ""
 "        "
 msgstr ""
 "<div>\n"
-"            <p>Synkroniseringen af Amazon-ordren med referencenummeret <t t-"
+"            <p>Synkroniseringen af Amazon-ordren med nummeret <t t-"
 "out=\"ctx.get('amazon_order_ref') or ''\">REF</t> mislykkedes og kunne ikke "
 "gennemføres.</p>\n"
 "            <p>Ordren skal annulleres i SellerCentral, før du kan forsøge en "
@@ -173,16 +175,16 @@ msgstr ""
 "                }\n"
 "            </style>\n"
 "            <body><div>\n"
-"                <p>Synkroniseringen af leveringsordrerne mislykkedes og "
-"kunne ikke gennemføres.</p>\n"
+"                <p>Synkroniseringen af ordrerne mislykkedes og kunne ikke "
+"gennemføres.</p>\n"
 "                <p>Ret venligst fejlen, før du forsøger at synkronisere "
-"leveringsordrerne manuelt igen, da der ikke vil blive foretaget yderligere "
+"ordrerne manuelt igen, da der ikke vil blive foretaget yderligere "
 "synkronisering.</p>\n"
 "                <p>Følgende fejl er blevet rapporteret af Amazon: </p>\n"
 "                <table class=\"amz_table\">\n"
 "                    <thead>\n"
 "                        <tr>\n"
-"                            <th>Ordrereference</th>\n"
+"                            <th>Ordrenummer</th>\n"
 "                            <th>Besked</th>\n"
 "                        </tr>\n"
 "                    </thead>\n"
@@ -339,7 +341,7 @@ msgstr ""
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__api_ref
 msgid "API Identifier"
-msgstr "API Identifikation"
+msgstr "API-identifikation"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__account_id
@@ -377,14 +379,14 @@ msgstr ""
 #: model:ir.model,name:sale_amazon.model_amazon_account
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
 msgid "Amazon Account"
-msgstr "Amazon konto"
+msgstr "Amazon-konto"
 
 #. module: sale_amazon
 #: model:ir.actions.act_window,name:sale_amazon.list_amazon_account_action
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_tree
 #: model_terms:ir.ui.view,arch_db:sale_amazon.res_config_settings_view_form
 msgid "Amazon Accounts"
-msgstr "Amazon konti"
+msgstr "Amazon-konti"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_res_partner__amazon_email
@@ -396,61 +398,61 @@ msgstr "Amazon email"
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__amazon_feed_ref
 #: model:ir.model.fields,field_description:sale_amazon.field_stock_picking__amazon_feed_ref
 msgid "Amazon Feed Reference"
-msgstr "Amazon-feedreference"
+msgstr "Amazon-feednummer"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_sale_order_line__amazon_item_ref
 msgid "Amazon Item Ref"
-msgstr "Amazon-varereference"
+msgstr "Amazon-varenummer"
 
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_amazon_marketplace
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_marketplace_view_form
 msgid "Amazon Marketplace"
-msgstr "Amazon markedsplads"
+msgstr "Amazon-markedsplads"
 
 #. module: sale_amazon
 #: model:ir.actions.act_window,name:sale_amazon.list_amazon_marketplace_action
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_marketplace_view_tree
 #: model_terms:ir.ui.view,arch_db:sale_amazon.res_config_settings_view_form
 msgid "Amazon Marketplaces"
-msgstr "Amazon markedspladser"
+msgstr "Amazon-markedspladser"
 
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_amazon_offer
 #: model:ir.model.fields,field_description:sale_amazon.field_sale_order_line__amazon_offer_id
 msgid "Amazon Offer"
-msgstr "Amazon tilbud"
+msgstr "Amazon-tilbud"
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_offer_view_tree
 msgid "Amazon Offers"
-msgstr "Amazon tilbud"
+msgstr "Amazon-tilbud"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__amazon_order_ref
 msgid "Amazon Order Reference"
-msgstr "Amazon-ordrereference"
+msgstr "Amazon-ordrenummer"
 
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_amazon_recover_order_wizard
 msgid "Amazon Recover Order Wizard"
-msgstr "Guide til gendannelse af Amazon-ordre"
+msgstr "Assistent til genoprettelse af Amazon-ordre"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_sale_order__amazon_order_ref
 msgid "Amazon Reference"
-msgstr "Amazon-reference"
+msgstr "Amazon-nummer"
 
 #. module: sale_amazon
 #: model:product.template,name:sale_amazon.default_product_product_template
 msgid "Amazon Sale"
-msgstr "Amazon salg"
+msgstr "Amazon-salg"
 
 #. module: sale_amazon
 #: model:product.template,name:sale_amazon.shipping_product_product_template
 msgid "Amazon Shipping"
-msgstr "Amazon fragt"
+msgstr "Amazon-fragt"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__amazon_sync_status
@@ -461,13 +463,13 @@ msgstr "Amazon-synkroniseringsstatus"
 #. module: sale_amazon
 #: model_terms:ir.actions.act_window,help:sale_amazon.list_amazon_account_action
 msgid "Amazon accounts correspond to Amazon Seller Central accounts."
-msgstr "Amazon konti svarer til Amazon forhandler central konti."
+msgstr "Amazon-konti svarer til Amazon-konti i \"Seller Central\"."
 
 #. module: sale_amazon
 #. odoo-python
 #: code:addons/sale_amazon/models/amazon_marketplace.py:0
 msgid "Amazon marketplaces cannot be deleted."
-msgstr "Amazon markedspladser kan ikke slettes."
+msgstr "Amazon-markedspladser kan ikke slettes."
 
 #. module: sale_amazon
 #. odoo-python
@@ -483,9 +485,9 @@ msgid ""
 "Since the current carrier doesn't automatically provide a tracking "
 "reference, you need to set one manually."
 msgstr ""
-"Amazon kræver, at hver levering er knyttet til en trackingreference. Da det "
-"nuværende fragtfirma ikke automatisk tilføjer en sådan, skal du angive den "
-"manuelt."
+"Amazon kræver, at hver levering er knyttet til et trackingnummer. Da det "
+"nuværende transportfirma ikke automatisk tilføjer et sådant, skal du angive "
+"det manuelt."
 
 #. module: sale_amazon
 #. odoo-python
@@ -494,8 +496,8 @@ msgid ""
 "Amazon requires that a tracking reference is provided with each delivery. "
 "You need to assign a carrier to this delivery."
 msgstr ""
-"Amazon kræver, at hver levering er knyttet til en trackingreference. Tildel "
-"et fragtfirma til denne levering."
+"Amazon kræver, at hver levering er knyttet til et trackingnummer. Tildel et "
+"transportfirma til denne levering."
 
 #. module: sale_amazon
 #: model:amazon.marketplace,name:sale_amazon.marketplace_AE
@@ -610,7 +612,7 @@ msgstr "Amazon: Synkronisering af tilgængeligt lager til tilbud mislykkedes"
 #. module: sale_amazon
 #: model:mail.template,name:sale_amazon.picking_sync_failure
 msgid "Amazon: Delivery Order Synchronization Failure"
-msgstr "Amazon: Synkronisering af leveringsordren mislykkedes"
+msgstr "Amazon: Synkronisering af ordren mislykkedes"
 
 #. module: sale_amazon
 #: model:mail.template,name:sale_amazon.order_sync_failure
@@ -625,7 +627,7 @@ msgstr "Amazon: synkronisering af tilgængeligt lager"
 #. module: sale_amazon
 #: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_pickings_ir_actions_server
 msgid "Amazon: sync delivery orders"
-msgstr "Amazon: synkronisering af leveringsordrer"
+msgstr "Amazon: synkronisering af ordrer"
 
 #. module: sale_amazon
 #: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_feeds_ir_actions_server
@@ -635,7 +637,7 @@ msgstr "Amazon: synkronisering af feeds"
 #. module: sale_amazon
 #: model:ir.actions.server,name:sale_amazon.ir_cron_sync_amazon_orders_ir_actions_server
 msgid "Amazon: sync orders"
-msgstr "Amazon: synkroniser ordre"
+msgstr "Amazon: synkronisering af ordrer"
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.authorization_error
@@ -666,7 +668,7 @@ msgstr "Virksomhed"
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_res_partner
@@ -729,7 +731,7 @@ msgstr "Kortoplysninger"
 #: code:addons/sale_amazon/models/res_config_settings.py:0
 #: model_terms:ir.ui.view,arch_db:sale_amazon.res_config_settings_view_form
 msgid "Default Products"
-msgstr "Standrard produkter"
+msgstr "Standardprodukter"
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.recover_order_wizard_form
@@ -742,7 +744,7 @@ msgstr "Kassér"
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_offer__display_name
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_recover_order_wizard__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: sale_amazon
 #: model:ir.model.fields.selection,name:sale_amazon.selection__amazon_offer__amazon_sync_status__done
@@ -781,27 +783,27 @@ msgstr "Fjernøsten"
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
 msgid "Fulfilled by Amazon"
-msgstr "Opfyldt af Amazon"
+msgstr "Fulfilled by Amazon (FBA)"
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
 msgid "Fulfilled by Merchant"
-msgstr "Opfyldt af Merchant"
+msgstr "Fulfilled by Merchant (FBM)"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_sale_order__amazon_channel
 msgid "Fulfillment Channel"
-msgstr "Opfyldelses kanal"
+msgstr "Opfyldelsesmetode"
 
 #. module: sale_amazon
 #: model:ir.model.fields.selection,name:sale_amazon.selection__sale_order__amazon_channel__fba
 msgid "Fulfillment by Amazon"
-msgstr "Opfyldelse af Amazon"
+msgstr "Fulfillment by Amazon"
 
 #. module: sale_amazon
 #: model:ir.model.fields.selection,name:sale_amazon.selection__sale_order__amazon_channel__fbm
 msgid "Fulfillment by Merchant"
-msgstr "Opfyldelse af Merchant"
+msgstr "Fulfillment by Merchant"
 
 #. module: sale_amazon
 #. odoo-python
@@ -810,13 +812,13 @@ msgid ""
 "Gift message:\n"
 "%s"
 msgstr ""
-"Gave besked:\n"
+"Gavebesked:\n"
 "%s"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__base_marketplace_id
 msgid "Home Marketplace"
-msgstr "Den oprindelige markedsplads"
+msgstr "Oprindelige markedsplads"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__id
@@ -831,7 +833,7 @@ msgstr "ID"
 msgid ""
 "If made inactive, this account will no longer be synchronized with Amazon."
 msgstr ""
-"Hvis du deaktiverer kontoen, synkroniseres den ikke længere med Amazon."
+"Hvis du deaktiverer denne konto, synkroniseres den ikke længere med Amazon."
 
 #. module: sale_amazon
 #. odoo-python
@@ -842,12 +844,11 @@ msgid ""
 "If the date is set in the future, orders placed on this Amazon Account "
 "between the previous and the new date will not be synchronized with Odoo."
 msgstr ""
-"Hvis datoen er sat til at være i fortiden, kan ordre placeret på denne "
-"Amazon konto, før den første synkronisering af modulet, blive synkroniseret "
-"med Odoo.\n"
-"Hvis datoen er sat til at være i fremtiden, vil ordre placeret på denne "
-"Amazon konto mellem den forrige og nye dato, ikke blive synkroniseret med "
-"Odoo."
+"Hvis datoen sættes til en dato i fortiden, kan ordrer placeret på denne "
+"Amazon-konto før modulets første synkronisering blive synkroniseret med "
+"Odoo.\n"
+"Hvis datoen derimod sættes til en dato i fremtiden, vil ordrer afgivet "
+"mellem den tidligere og den nye dato ikke blive synkroniseret med Odoo."
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_order_view_form
@@ -856,7 +857,7 @@ msgid ""
 "still be able to invoice or deliver."
 msgstr ""
 "Hvis salget er låst, kan du ikke længere ændre i den. Du kan dog stadig "
-"levere og fakturere. "
+"levere og fakturere."
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
@@ -967,7 +968,7 @@ msgstr "Nordamerika"
 #: model:ir.model.fields,field_description:sale_amazon.field_product_product__offer_count
 #: model:ir.model.fields,field_description:sale_amazon.field_product_template__offer_count
 msgid "Offer Count"
-msgstr "Tilbud antal"
+msgstr "Antal tilbud"
 
 #. module: sale_amazon
 #. odoo-python
@@ -990,7 +991,7 @@ msgstr "Kun tilgængelige markedspladser kan vælges"
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__order_count
 msgid "Order Count"
-msgstr "Ordre antal"
+msgstr "Antal ordrer"
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
@@ -1002,7 +1003,7 @@ msgstr "Ordre opfølgning"
 #: code:addons/sale_amazon/models/amazon_account.py:0
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
 msgid "Orders"
-msgstr "Ordre"
+msgstr "Ordrer"
 
 #. module: sale_amazon
 #: model:ir.model.fields.selection,name:sale_amazon.selection__stock_picking__amazon_sync_status__pending
@@ -1029,7 +1030,7 @@ msgstr "Produktskabelon"
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_product_product
 msgid "Product Variant"
-msgstr "Varevariant"
+msgstr "Produktvariant"
 
 #. module: sale_amazon
 #. odoo-python
@@ -1039,8 +1040,8 @@ msgid ""
 "the same package. Operations related to the product %s were not all "
 "confirmed at once."
 msgstr ""
-"Produkter leveret til Amazon kunder skal have deres respektive dele i samme "
-"pakke. Alle operationer relateret til produktet %s blev ikke bekræftet "
+"Alle dele af produkter, der leveres til Amazon-kunder, skal sendes samlet i "
+"én pakke. De tilknyttede operationer for produktet %s blev ikke bekræftet "
 "samtidigt."
 
 #. module: sale_amazon
@@ -1054,7 +1055,7 @@ msgstr "Genoprettelse"
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
 #: model_terms:ir.ui.view,arch_db:sale_amazon.recover_order_wizard_form
 msgid "Recover Order"
-msgstr "Gendan ordre"
+msgstr "Genopret ordre"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__region
@@ -1064,13 +1065,12 @@ msgstr "Region"
 #. module: sale_amazon
 #: model_terms:ir.actions.act_window,help:sale_amazon.list_amazon_account_action
 msgid "Register your Amazon account"
-msgstr "Registrer din Amazon konto"
+msgstr "Registrér din Amazon-konto"
 
 #. module: sale_amazon
 #: model_terms:ir.actions.act_window,help:sale_amazon.list_amazon_account_action
 msgid "Register yours to start synchronizing your orders into Odoo."
-msgstr ""
-"Registrer dine, for at påbegynde synkroniseringen af dine ordre ind i Odoo."
+msgstr "Registrér dine for at påbegynde synkroniseringen af dine ordrer i Odoo."
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__restricted_data_token
@@ -1095,7 +1095,7 @@ msgstr "SKU"
 #. module: sale_amazon
 #: model:ir.model.constraint,message:sale_amazon.constraint_amazon_offer_unique_sku
 msgid "SKU must be unique for a given account."
-msgstr "SKU skal være unik for en given konto."
+msgstr "SKU skal være unik for den pågældende konto."
 
 #. module: sale_amazon
 #: model:ir.model,name:sale_amazon.model_sale_order
@@ -1163,7 +1163,7 @@ msgstr "Synkronisér FBM-lagerbeholdning"
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
 msgid "Sync Feeds Status"
-msgstr "Synkronisér feedsstatus"
+msgstr "Synkronisér feedstatus"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__active_marketplace_ids
@@ -1174,30 +1174,29 @@ msgstr "Synkroniser markedspladser"
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.amazon_account_view_form
 msgid "Sync Orders"
-msgstr "Synkroniser ordre"
+msgstr "Synkronisér ordrer"
 
 #. module: sale_amazon
 #: model:mail.template,subject:sale_amazon.inventory_sync_failure
 msgid "Synchronization of Amazon Stock has failed"
-msgstr "Synkroniseringen af Amazon-lager mislykkedes"
+msgstr "Synkronisering af Amazon-lager mislykkedes"
 
 #. module: sale_amazon
 #: model:mail.template,subject:sale_amazon.order_sync_failure
 msgid ""
 "Synchronization of Amazon order {{ ctx.get('amazon_order_ref') }} has failed"
 msgstr ""
-"Synkroniseringen af Amazon-ordre {{ ctx.get('amazon_order_ref') }} "
-"mislykkedes"
+"Synkronisering af Amazon-ordre {{ ctx.get('amazon_order_ref') }} mislykkedes"
 
 #. module: sale_amazon
 #: model:mail.template,subject:sale_amazon.picking_sync_failure
 msgid "Synchronization of delivery orders has failed"
-msgstr "Synkroniseringen af leveringsordrer mislykkedes"
+msgstr "Synkronisering af ordrer mislykkedes"
 
 #. module: sale_amazon
 #: model_terms:ir.ui.view,arch_db:sale_amazon.picking_view_form
 msgid "Synchronization with Amazon failed"
-msgstr "Synkroniseringen med Amazon mislykkedes"
+msgstr "Synkronisering med Amazon mislykkedes"
 
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_account__synchronize_inventory
@@ -1212,13 +1211,13 @@ msgstr "Synkroniseret med Amazon"
 #. module: sale_amazon
 #: model:ir.model.fields,field_description:sale_amazon.field_amazon_marketplace__tax_included
 msgid "Tax Included"
-msgstr "Moms Inkluderet"
+msgstr "Moms inkluderet"
 
 #. module: sale_amazon
 #. odoo-python
 #: code:addons/sale_amazon/wizards/recover_order_wizard.py:0
 msgid "The Amazon order reference must be in 3-7-7 format."
-msgstr "Amazon-ordrereferencen skal være i 3-7-7-format."
+msgstr "Amazon-ordrenummer skal være i 3-7-7-format."
 
 #. module: sale_amazon
 #. odoo-python
@@ -1227,7 +1226,7 @@ msgid ""
 "The Amazon order with reference %(ref)s was not recovered because its "
 "currency was missing from the Amazon order data."
 msgstr ""
-"Amazon-ordren med referencen %(ref)s kunne ikke genopretttes, fordi valutaen "
+"Amazon-ordren med nummeret %(ref)s kunne ikke genopretttes, fordi valutaen "
 "manglede i ordredataene."
 
 #. module: sale_amazon
@@ -1238,9 +1237,8 @@ msgid ""
 "(%(status)s) is not eligible for synchronization for its fulfillment channel "
 "(%(channel)s)."
 msgstr ""
-"Amazon-ordren med referencen %(ref)s kunne ikke genoprettes, fordi dens "
-"status %(status)s ikke tillader synkronisering via opfyldelsesmetoden (%"
-"(channel)s)."
+"Amazon-ordren med nummeret %(ref)s kunne ikke genoprettes, fordi dens status "
+"%(status)s ikke tillader synkronisering via opfyldelsesmetoden (%(channel)s)."
 
 #. module: sale_amazon
 #: model:ir.model.fields,help:sale_amazon.field_amazon_marketplace__region
@@ -1269,7 +1267,7 @@ msgstr "Ordrenummeret, som Amazon har angivet."
 #. module: sale_amazon
 #: model:ir.model.fields,help:sale_amazon.field_amazon_account__team_id
 msgid "The Sales Team assigned to Amazon orders for reporting"
-msgstr "Salgsholdet tildelt Amazon ordre for rapportering"
+msgstr "Salgsteamet tildelt Amazon-ordrer til rapportering"
 
 #. module: sale_amazon
 #: model:ir.model.fields,help:sale_amazon.field_amazon_offer__sku
@@ -1280,7 +1278,7 @@ msgstr "Lagerbeholdningsenheden."
 #. odoo-python
 #: code:addons/sale_amazon/utils.py:0
 msgid "The communication with the API failed."
-msgstr "Kommunikation med API'en mislykkedes."
+msgstr "Kommunikation med API'et mislykkedes."
 
 #. module: sale_amazon
 #. odoo-python
@@ -1312,7 +1310,7 @@ msgid ""
 "whose status has not changed since this date will not be created nor updated "
 "in Odoo."
 msgstr ""
-"Den sidste synkroniserings dato for ordre placeret på denne konto. Ordre "
+"Den sidste synkroniseringsdato for ordrer afgivet på denne konto. Ordrer, "
 "hvis status ikke har ændret sig siden denne dato, vil ikke blive oprettet "
 "eller opdateret i Odoo."
 
@@ -1373,7 +1371,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/sale_amazon/models/amazon_account.py:0
 msgid "The order was not found on this account's marketplaces."
-msgstr "Ordren blev ikke fundet på denne kontos markedsplads."
+msgstr "Ordren blev ikke fundet på denne kontos markedspladser."
 
 #. module: sale_amazon
 #. odoo-python
@@ -1385,8 +1383,8 @@ msgstr "Det indtastede nummer stemmer ikke overens med nogen Amazon-ordrer."
 #: model:ir.model.fields,help:sale_amazon.field_amazon_recover_order_wizard__amazon_order_ref
 msgid "The reference to the Amazon order to recover, in 3-7-7 format"
 msgstr ""
-"Nummeret på den Amazon-ordre, der skal genoprettes, skal være i formatet "
-"3-7-7."
+"Nummeret på den Amazon-ordre, der skal genoprettes, skal være i formatet 3-7-"
+"7."
 
 #. module: sale_amazon
 #. odoo-python
@@ -1394,8 +1392,7 @@ msgstr ""
 msgid ""
 "The sales order of this delivery order is not linked to an Amazon account."
 msgstr ""
-"Salgsordren, der er knyttet til leveringsordren, er ikke tilknyttet en "
-"Amazon-konto."
+"Salgsordren, der er knyttet til ordren, er ikke tilknyttet en Amazon-konto."
 
 #. module: sale_amazon
 #: model:ir.model.fields,help:sale_amazon.field_amazon_offer__account_id
@@ -1428,11 +1425,11 @@ msgid ""
 "- Done: The delivery details have been processed.\n"
 "- Error: The synchronization of the delivery order failed."
 msgstr ""
-"Synkroniseringsstatus for leveringsordre til Amazon:\n"
-"- Afventer: Leveringsordren er bekræftet og vil snart blive synkroniseret.\n"
+"Synkroniseringsstatus for ordre til Amazon:\n"
+"- Afventer: Ordren er bekræftet og vil snart blive synkroniseret.\n"
 "- Behandles: Leveringsoplysningerne er sendt og er under behandling.\n"
 "- Gennemført: Leveringsoplysningerne er blevet behandlet.\n"
-"- Fejl: Synkroniseringen af leveringsordren mislykkedes."
+"- Fejl: Synkroniseringen af ordren mislykkedes."
 
 #. module: sale_amazon
 #: model:ir.model.fields,help:sale_amazon.field_amazon_offer__amazon_sync_status
@@ -1450,7 +1447,7 @@ msgid ""
 "The synchronization with Amazon failed. Amazon gave us this information "
 "about the problem:"
 msgstr ""
-"Synkroniseringen med Amazon mislykkedes. Amazon har oplyst følgende om "
+"Synkronisering med Amazon mislykkedes. Amazon har oplyst følgende om "
 "problemet:"
 
 #. module: sale_amazon
@@ -1461,20 +1458,18 @@ msgstr "Kontoens brugerdefinerede navn."
 #. module: sale_amazon
 #: model:ir.model.constraint,message:sale_amazon.constraint_amazon_marketplace_unique_api_ref
 msgid "There can only exist one marketplace for a given API Identifier."
-msgstr "Der kan kun eksistere én markedsplads for en given API ID."
+msgstr "Et API-ID kan kun være knyttet til én markedsplads."
 
 #. module: sale_amazon
 #: model:ir.model.constraint,message:sale_amazon.constraint_sale_order_unique_amazon_order_ref
 msgid "There can only exist one sale order for a given Amazon Order Reference."
-msgstr ""
-"Der kan kun eksistere én salgsordre for en given Amazon Ordrereference."
+msgstr "Én salgsordre kan kun være knyttet til ét Amazon-ordrenummer."
 
 #. module: sale_amazon
 #: model:ir.model.constraint,message:sale_amazon.constraint_sale_order_line_unique_amazon_item_ref
 msgid ""
 "There can only exist one sale order line for a given Amazon Item Reference."
-msgstr ""
-"Der kan kun eksistere én salgsordre linje for en given Amazon vare reference."
+msgstr "Én salgsordrelinje kan kun være knyttet til et Amazon-varenummer."
 
 #. module: sale_amazon
 #. odoo-python
@@ -1574,7 +1569,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/sale_amazon/models/amazon_account.py:0
 msgid "[%(gift_wrap_code)s] Gift Wrapping Charges for %(product)s"
-msgstr "[%(gift_wrap_code)s] Gave indpaknings gebyrer for %(product)s"
+msgstr "[%(gift_wrap_code)s] Gaveindpakningsgebyrer for %(product)s"
 
 #. module: sale_amazon
 #. odoo-python

@@ -190,6 +190,7 @@ export class TimesheetGridDataPoint extends GridDataPoint {
             }
         }
         return super._fetchUnavailabilityDays({
+            ...args,
             res_ids: employeeIds,
             groupby: groupByEmployee ? "employee_id" : "",
         });

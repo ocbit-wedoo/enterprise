@@ -55,7 +55,7 @@ class AccountMoveLine(models.Model):
                  - The second one contains the field values to insert into the SELECT clause of the same query, in the same order
                    as in the first element of the returned tuple.
         """
-        line_fields = self.env['account.move.line'].fields_get()
+        line_fields = self.env['account.move.line'].fields_get(attributes=["translate"])
         self.env.cr.execute("SELECT column_name FROM information_schema.columns WHERE table_name='account_move_line'")
         stored_fields = {f[0] for f in self.env.cr.fetchall() if f[0] in line_fields}
 

@@ -13,14 +13,14 @@
 # Mads Søndergaard, 2025
 # Sammi Iversen <sammi@vkdata.dk>, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
-# "Kira Petersen François (peti)" <peti@odoo.com>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-12-31 10:24+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:53+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "account_asset/da/>\n"
 "Language: da\n"
@@ -28,22 +28,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__total_depreciation_entries_count
 msgid "# Depreciation Entries"
-msgstr "# Afskrivnings posteringer"
+msgstr "# Afskrivningsposteringer"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__gross_increase_count
 msgid "# Gross Increases"
-msgstr "# Bruttoforhøjelser"
+msgstr "# Bruttoforøgelser"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__depreciation_entries_count
 msgid "# Posted Depreciation Entries"
-msgstr "# Posterede afskrivnings posteringer"
+msgstr "# Bogførte afskrivningsposteringer"
 
 #. module: account_asset
 #. odoo-python
@@ -61,7 +61,7 @@ msgstr "%(asset)s: Salg"
 #. odoo-python
 #: code:addons/account_asset/models/account_assets_report.py:0
 msgid "%(months)s m"
-msgstr "%(months)s m"
+msgstr "%(months)s måneder"
 
 #. module: account_asset
 #. odoo-python
@@ -73,7 +73,7 @@ msgstr "%(move_line)s (%(current)s af %(total)s)"
 #. odoo-python
 #: code:addons/account_asset/models/account_assets_report.py:0
 msgid "%(years)s y"
-msgstr "%(years)s y"
+msgstr "%(years)s år"
 
 #. module: account_asset
 #. odoo-python
@@ -101,7 +101,7 @@ msgstr "%s: Afskrivelse"
 #. odoo-python
 #: code:addons/account_asset/models/account_assets_report.py:0
 msgid "(No %s)"
-msgstr "(Nr %s)"
+msgstr "(Nr. %s)"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
@@ -159,13 +159,14 @@ msgstr "Et dokument knyttet til %(move_line_name)s er blevet slettet: %(link)s"
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "A document linked to this move has been deleted: %s"
-msgstr "Et dokument, der er knyttet til denne flytning, er blevet slettet: %s"
+msgstr ""
+"Et dokument, der er knyttet til denne bogføringspost, er blevet slettet: %s"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/wizard/asset_modify.py:0
 msgid "A gross increase has been created: %(link)s"
-msgstr "En bruttoforhøjelse er blevet oprettet: %(link)s"
+msgstr "En bruttoforøgelse er blevet oprettet: %(link)s"
 
 #. module: account_asset
 #. odoo-python
@@ -197,7 +198,8 @@ msgstr ""
 #: model:ir.model.fields,help:account_asset.field_account_asset__account_depreciation_id
 msgid "Account used in the depreciation entries, to decrease the asset value."
 msgstr ""
-"Konto, der anvendes i afskrivningsposterne, for at reducere aktivværdien."
+"Konto, der anvendes i afskrivningsposteringerne, for at reducere "
+"aktivværdien."
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__account_depreciation_expense_id
@@ -205,45 +207,43 @@ msgid ""
 "Account used in the periodical entries, to record a part of the asset as "
 "expense."
 msgstr ""
-"Konto, der anvendes i periodiske poster, til registrering af en del af "
+"Konto, der anvendes i periodiske posteringer til registrering af en del af "
 "anlægsaktiv som omkostning."
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__account_asset_id
 msgid "Account used to record the purchase of the asset at its original price."
-msgstr ""
-"Konto bruges til at registrere køb af anlægsaktiv til dets oprindelige pris."
+msgstr "Konto til registrering af køb af anlægsaktiv til dets oprindelige pris."
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__gain_account_id
 msgid "Account used to write the journal item in case of gain"
-msgstr "Konto der bruges til at postere journal aktivet, i tilfælde af gevinst"
+msgstr "Konto, der anvendes til at bogføre journalposten ved gevinst"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_res_company__gain_account_id
 msgid ""
 "Account used to write the journal item in case of gain while selling an asset"
 msgstr ""
-"Konto som bruges til at postere journal aktivet, i tilfælde af gevinst ved "
-"salg af et aktiv"
+"Konto, der anvendes til at bogføre journalposten ved gevinst ved salg af et "
+"aktiv"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__loss_account_id
 msgid "Account used to write the journal item in case of loss"
-msgstr "Konto der bruges til at postere et journal aktiv, i tilfælde af tab"
+msgstr "Konto, der anvendes til at bogføre journalposten ved tab"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_res_company__loss_account_id
 msgid ""
 "Account used to write the journal item in case of loss while selling an asset"
 msgstr ""
-"Konto der bruges til at postere et journal aktiv, i tilfælde af tab ved salg "
-"af et aktiv"
+"Konto, der anvendes til at bogføre journalposten ved tab ved salg af et aktiv"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Accounting"
-msgstr "Regnskab"
+msgstr "Bogføring"
 
 #. module: account_asset
 #: model:ir.model,name:account_asset.model_account_report
@@ -280,17 +280,17 @@ msgstr "Aktiviteter"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Aktivitet undtagelse markering"
+msgstr "Markering af undtagelsesaktivitet"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__activity_state
 msgid "Activity State"
-msgstr "Aktivitetstilstand"
+msgstr "Aktivitetsstatus"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__activity_type_icon
 msgid "Activity Type Icon"
-msgstr "Aktivitetstype ikon"
+msgstr "Aktivitetstypeikon"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.asset_modify_form
@@ -315,17 +315,19 @@ msgstr "Alle linjer bør være fra samme virksomhed"
 #: code:addons/account_asset/models/account_asset.py:0
 #: code:addons/account_asset/models/account_move.py:0
 msgid "All the lines should be posted"
-msgstr "Alle linjer bør være posteret"
+msgstr "Alle linjer bør være bogført"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__already_depreciated_amount_import
 msgid "Already Depreciated Amount Import"
-msgstr "Allerede Forældet Mængde Import"
+msgstr "Importerede beløb allerede forældet"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__parent_id
 msgid "An asset has a parent when it is the result of gaining value"
-msgstr "Et aktiv har en den nedarver fra, når resultatet er en gevinst i værdi"
+msgstr ""
+"Et aktiv har et overordnet element, som det nedarver, når det er resultatet "
+"af en værdiforøgelse"
 
 #. module: account_asset
 #. odoo-python
@@ -339,19 +341,19 @@ msgid ""
 "An asset wil be created for each asset model when this account is used on a "
 "vendor bill or a refund"
 msgstr ""
-"Et aktiv oprettes for hver aktivmodel, når denne konto anvendes som "
+"Et aktiv oprettes for hver aktivmodel, når denne konto bruges til en "
 "leverandørfaktura eller en refundering"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/wizard/asset_modify.py:0
 msgid "An asset will be created for the value increase of the asset. <br/>"
-msgstr "Et aktiv oprettes for dets værdiforøgelse. <br/>"
+msgstr "Et aktiv oprettes for hver værdiforøgelse. <br/>"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__analytic_distribution
 msgid "Analytic Distribution"
-msgstr "Analytisk fordeling"
+msgstr "Omkostningsfordeling"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__analytic_precision
@@ -405,7 +407,7 @@ msgstr "Aktivgruppe"
 #: model:ir.model.fields,field_description:account_asset.field_account_bank_statement_line__asset_id_display_name
 #: model:ir.model.fields,field_description:account_asset.field_account_move__asset_id_display_name
 msgid "Asset Id Display Name"
-msgstr "Aktiv ID Visningsnavn"
+msgstr "Aktivt ID-visningsnavn"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__asset_lifetime_days
@@ -419,12 +421,12 @@ msgstr "Aktivets levetid i dage"
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_form_asset_inherit
 msgid "Asset Model"
-msgstr "Aktiv model"
+msgstr "Aktivmodel"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Asset Model name"
-msgstr "Aktiv modelnavn"
+msgstr "Aktivmodellens navn"
 
 #. module: account_asset
 #: model:ir.actions.act_window,name:account_asset.action_account_asset_model_form
@@ -442,23 +444,23 @@ msgstr "Aktivets bogføringstype"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__name
 msgid "Asset Name"
-msgstr "Navn på aktiv"
+msgstr "Aktivets navn"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__asset_paused_days
 msgid "Asset Paused Days"
-msgstr "Aktivets dage med pause"
+msgstr "Aktivetsdage sat på pause"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_bank_statement_line__asset_value_change
 #: model:ir.model.fields,field_description:account_asset.field_account_move__asset_value_change
 msgid "Asset Value Change"
-msgstr "Aktiv værdi ændring"
+msgstr "Aktivets værdiændring"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Asset Values"
-msgstr "Aktiv værdier"
+msgstr "Aktivværdier"
 
 #. module: account_asset
 #. odoo-python
@@ -506,7 +508,7 @@ msgstr "Aktiv(er)"
 #. module: account_asset
 #: model:ir.model,name:account_asset.model_account_asset
 msgid "Asset/Revenue Recognition"
-msgstr "Aktiv/omsætning anerkendelse"
+msgstr "Bogføring af aktiv/omsætning"
 
 #. module: account_asset
 #. odoo-python
@@ -522,7 +524,7 @@ msgstr "Aktiver"
 #. module: account_asset
 #: model:ir.model,name:account_asset.model_account_asset_report_handler
 msgid "Assets Report Custom Handler"
-msgstr "Tilpasset håndtering af rapport over aktiver"
+msgstr "Tilpasset aktiverapportering"
 
 #. module: account_asset
 #: model:ir.ui.menu,name:account_asset.menu_finance_config_assets
@@ -532,12 +534,12 @@ msgstr "Aktiver og omsætning"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
 msgid "Assets in closed state"
-msgstr "Lukkede aktiver"
+msgstr "Aktiver i lukket tilstand"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
 msgid "Assets in draft and open states"
-msgstr "Aktiver med status kladde og åben"
+msgstr "Aktiver i kladde- og åben tilstand"
 
 #. module: account_asset
 #. odoo-python
@@ -546,7 +548,7 @@ msgid ""
 "Atleast one asset (%s) couldn't be set as running because it lacks any "
 "required information"
 msgstr ""
-"Mindst et aktiv (%s) kunne ikke angives som kørende, fordi nødvendige "
+"Mindst ét aktiv (%s) kunne ikke markeres som kørende, da nødvendige "
 "oplysninger mangler"
 
 #. module: account_asset
@@ -557,7 +559,7 @@ msgstr "Antal vedhæftninger"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_form_asset_inherit
 msgid "Automate Asset"
-msgstr "Automatiser aktiv"
+msgstr "Automatisér aktiv"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_form_asset_inherit
@@ -579,7 +581,7 @@ msgstr "Fakturaer"
 #: code:addons/account_asset/models/account_assets_report.py:0
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__book_value
 msgid "Book Value"
-msgstr "Bog værdi"
+msgstr "Bogført værdi"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_account__can_create_asset
@@ -610,7 +612,7 @@ msgstr "Kendetegn"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__children_ids
 msgid "Children"
-msgstr "Underkonti"
+msgstr "Underordnede"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__method
@@ -621,12 +623,11 @@ msgid ""
 "  * Declining then Straight Line: Like Declining but with a minimum "
 "depreciation value equal to the straight line value."
 msgstr ""
-"Vælg den metode, der skal anvendes til at beregne beløbet på "
-"afskrivningslinjer.\n"
-"  * Lineær: Beregnet på baggrund af: bruttoværdi / varighed\n"
-"  * Aftagende: Beregnet på baggrund af: restværdi * faldende faktor\n"
-"  * Aftagende, så lineær linje: Som aftagende, men med en "
-"minimumsafskrivningsværdi lig med værdien af den lineære linje."
+"Vælg metode til beregning af afskrivningslinjer:\n"
+"  * Lineær: Beregnes som bruttoværdi / varighed.\n"
+"  * Aftagende: Beregnes som restværdi * faldende faktor.\n"
+"  * Aftagende med minimum: Beregnes som aftagende, men med en "
+"minimumsafskrivning svarende til den lineære metode."
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__state__close
@@ -687,7 +688,7 @@ msgstr "Antal tilknyttede aktiver"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__country_code
 msgid "Country Code"
-msgstr "Lande kode"
+msgstr "Landekode"
 
 #. module: account_asset
 #: model:ir.actions.server,name:account_asset.action_account_aml_to_asset
@@ -699,7 +700,7 @@ msgstr "Opret aktiv"
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_account__create_asset__validate
 msgid "Create and validate"
-msgstr "Opret og godkend"
+msgstr "Opret og validér"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_account__create_asset__draft
@@ -745,7 +746,7 @@ msgstr "Valuta"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
 msgid "Current"
-msgstr "Aktuel"
+msgstr "Nuværende"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
@@ -773,41 +774,41 @@ msgstr "Startdato for afskrivningen"
 #. odoo-python
 #: code:addons/account_asset/models/account_assets_report.py:0
 msgid "Dec. then Straight"
-msgstr "Nedadgående derefter Lige"
+msgstr "Aftagende, derefter lineær"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_assets_report.py:0
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__method__degressive
 msgid "Declining"
-msgstr "Nedadgående"
+msgstr "Aftagende"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__method_progress_factor
 msgid "Declining Factor"
-msgstr "Nedadgående Faktor"
+msgstr "Aftagende faktor"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__method__degressive_then_linear
 msgid "Declining then Straight Line"
-msgstr "Nedadgående derefter Lige Linje"
+msgstr "Aftagende, derefter lineær linje"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__value_residual
 msgid "Depreciable Amount"
-msgstr "Afskrivelig mængde"
+msgstr "Afskrivningsbeløb"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__value_residual
 #: model:ir.model.fields,field_description:account_asset.field_account_bank_statement_line__asset_remaining_value
 #: model:ir.model.fields,field_description:account_asset.field_account_move__asset_remaining_value
 msgid "Depreciable Value"
-msgstr "Afskrivelig værdi"
+msgstr "Afskrivningsberettiget værdi"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Depreciated Amount"
-msgstr "Forældet Mængde"
+msgstr "Afskrevet beløb"
 
 #. module: account_asset
 #. odoo-python
@@ -824,17 +825,17 @@ msgstr "Afskrivning"
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__account_depreciation_id
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_model_search
 msgid "Depreciation Account"
-msgstr "Afskrivelses konto"
+msgstr "Afskrivningskonto"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Depreciation Board"
-msgstr "Afskrivningskort"
+msgstr "Afskrivningsoversigt"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Depreciation Date"
-msgstr "Afskrivnings dato"
+msgstr "Afskrivningsdato"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__depreciation_move_ids
@@ -864,64 +865,64 @@ msgstr "Afskrivningsoversigt redigeret %s"
 #. odoo-python
 #: code:addons/account_asset/models/account_move.py:0
 msgid "Depreciation entry %(name)s posted (%(value)s)"
-msgstr "Afskrivelse postering %(name)s blev posteret (%(value)s)"
+msgstr "Afskrivningspostering %(name)s er bogført (%(value)s)"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_move.py:0
 msgid "Depreciation entry %(name)s reversed (%(value)s)"
-msgstr "Afskrivelse postering %(name)s blev tilbagekaldt (%(value)s)"
+msgstr "Afskrivningspostering %(name)s blev tilbageført (%(value)s)"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__display_account_asset_id
 msgid "Display Account Asset"
-msgstr "Vis konto aktiv"
+msgstr "Vis kontoaktiv"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__display_name
 #: model:ir.model.fields,field_description:account_asset.field_account_asset_group__display_name
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_move__asset_move_type__disposal
 msgid "Disposal"
-msgstr "Disponibel"
+msgstr "Afhændelse"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__disposal_date
 msgid "Disposal Date"
-msgstr "Disponibel dato"
+msgstr "Afhændelsesdato"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "Disposal Move"
-msgstr "Bortskaffelsespost"
+msgstr "Bogføringspost for afhændelse"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "Disposal Moves"
-msgstr "Bortskaffelsesposter"
+msgstr "Bogføringsposter for afhændelse"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/wizard/asset_modify.py:0
 #: model_terms:ir.ui.view,arch_db:account_asset.asset_modify_form
 msgid "Dispose"
-msgstr "Disponer"
+msgstr "Afhænde"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__distribution_analytic_account_ids
 msgid "Distribution Analytic Account"
-msgstr "Distribution analysekonto"
+msgstr "Fordeling af omkostningssted"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__state__draft
 msgid "Draft"
-msgstr "Udkast"
+msgstr "Kladde"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_bank_statement_line__draft_asset_exists
@@ -947,7 +948,7 @@ msgstr "Varighed/sats"
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__account_depreciation_expense_id
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_model_search
 msgid "Expense Account"
-msgstr "Vareforbrugskonto"
+msgstr "Udgiftskonto"
 
 #. module: account_asset
 #: model:account.report.column,name:account_asset.assets_report_first_depreciation
@@ -958,7 +959,7 @@ msgstr "Først afskrivelse"
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__account_asset_id
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_model_search
 msgid "Fixed Asset Account"
-msgstr "Fast aktiv konto"
+msgstr "Anlægskonto"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__message_follower_ids
@@ -973,12 +974,12 @@ msgstr "Følgere (partnere)"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__activity_type_icon
 msgid "Font awesome icon e.g. fa-tasks"
-msgstr "Skrifttype awesome icon f.eks. fa-opgaver"
+msgstr "FontAwesome-ikon, f.eks. fa-opgaver"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_account__form_view_ref
 msgid "Form View Ref"
-msgstr "Formula visning ref"
+msgstr "Formularvisningsreference"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
@@ -994,7 +995,7 @@ msgstr "Gevinst"
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__gain_account_id
 #: model:ir.model.fields,field_description:account_asset.field_res_company__gain_account_id
 msgid "Gain Account"
-msgstr "Gevinst konto"
+msgstr "Gevinstkonto"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__gain_or_loss
@@ -1004,7 +1005,7 @@ msgstr "Gevinst eller tab"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__gain_value
 msgid "Gain Value"
-msgstr "Gevinst værdi"
+msgstr "Gevinstværdi"
 
 #. module: account_asset
 #. odoo-python
@@ -1021,7 +1022,7 @@ msgstr "Bruttoforøgelseskonto"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__gross_increase_value
 msgid "Gross Increase Value"
-msgstr "Bruttoforøgelse værdi"
+msgstr "Bruttoforøgelsesværdi"
 
 #. module: account_asset
 #. odoo-javascript
@@ -1039,7 +1040,7 @@ msgstr "Gruppér efter aktivgruppe"
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_model_search
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
 msgid "Group By..."
-msgstr "Gruppér efter..."
+msgstr "Gruppér efter ..."
 
 #. module: account_asset
 #. odoo-javascript
@@ -1078,13 +1079,14 @@ msgstr "Ikon for uventet aktivitet."
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Hvis afkrydset, kræver nye beskeder din opmærksomhed "
+msgstr "Hvis dette felt er markeret, kræver nye beskeder din opmærksomhed."
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__message_has_error
 #: model:ir.model.fields,help:account_asset.field_account_asset__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Hvis afkrydset har nogle beskeder en leveringsfejl"
+msgstr ""
+"Hvis dette felt er markeret, indeholder nogle beskeder en leveringsfejl."
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__already_depreciated_amount_import
@@ -1093,9 +1095,10 @@ msgid ""
 "to have the right depreciation table report. This is the value that was "
 "already depreciated with entries not computed from this model"
 msgstr ""
-"I tilfælde af en import fra anden software, skal du muligvis bruge dette "
-"felt til at få den korrekte forældelses tabel rapport. Dette er den værdi "
-"der allerede var forældet med posteringer ikke udregnet fra denne model"
+"Ved import fra andet software kan det være nødvendigt at bruge dette felt "
+"for at få den korrekte afskrivningstabel-rapport. Værdien angiver det beløb, "
+"der allerede er afskrevet via posteringer, som ikke er beregnet ud fra denne "
+"model"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__informational_text
@@ -1116,7 +1119,7 @@ msgstr "Er følger"
 #: model:ir.model.fields,help:account_asset.field_account_asset__salvage_value
 #: model:ir.model.fields,help:account_asset.field_account_asset__salvage_value_pct
 msgid "It is the amount you plan to have that you cannot depreciate."
-msgstr "Det er det beløb, du planlægger at få, du ikke kan afskrive."
+msgstr "Det er det beløb, du forventer at modtage, som du ikke kan afskrive."
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__journal_id
@@ -1128,13 +1131,13 @@ msgstr "Journal"
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "Journal Entries"
-msgstr "Journalbilag"
+msgstr "Journalposteringer"
 
 #. module: account_asset
 #: model:ir.model,name:account_asset.model_account_move
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Journal Entry"
-msgstr "Journalbilag"
+msgstr "Journalpostering"
 
 #. module: account_asset
 #: model:ir.model,name:account_asset.model_account_move_line
@@ -1155,8 +1158,8 @@ msgid ""
 "Journal Items of %(account)s should have a label in order to generate an "
 "asset"
 msgstr ""
-"Journal aktiver på %(account)s bør have et mærkat, for at kunne generere et "
-"aktiv"
+"Journalposter på %(account)s skal markeres tilsvarende for at kunne danne "
+"grundlag for oprettelsen af et aktiv"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__write_uid
@@ -1175,7 +1178,7 @@ msgstr "Sidst opdateret den"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
 msgid "Late Activities"
-msgstr "Overskredet aktiviteter"
+msgstr "Forfaldne aktiviteter"
 
 #. module: account_asset
 #. odoo-python
@@ -1202,7 +1205,7 @@ msgstr "Tabskonto"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_form_asset_inherit
 msgid "Manage Items"
-msgstr "Administrer Genstande"
+msgstr "Administrér poster"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__message_has_error
@@ -1235,7 +1238,7 @@ msgstr "Modelegenskaber"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.asset_modify_form
 msgid "Modify"
-msgstr "Rediger"
+msgstr "Redigér"
 
 #. module: account_asset
 #. odoo-python
@@ -1243,12 +1246,12 @@ msgstr "Rediger"
 #: model:ir.model,name:account_asset.model_asset_modify
 #: model_terms:ir.ui.view,arch_db:account_asset.asset_modify_form
 msgid "Modify Asset"
-msgstr "Rediger aktiv"
+msgstr "Redigér aktiv"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Modify Depreciation"
-msgstr "Rediger afskrivning"
+msgstr "Redigér afskrivning"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__method_period__1
@@ -1259,7 +1262,7 @@ msgstr "Måneder"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_account__multiple_assets_per_line
 msgid "Multiple Assets per Line"
-msgstr "Flere Aktiver per Linje"
+msgstr "Flere aktiver pr. linje"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_account__multiple_assets_per_line
@@ -1267,13 +1270,13 @@ msgid ""
 "Multiple asset items will be generated depending on the bill line quantity "
 "instead of 1 global asset."
 msgstr ""
-"Flere aktiver vil blive generet afhængig af regningslinje mængden i stedet "
-"for 1 global aktiv."
+"Flere aktiver vil blive genereret afhængigt af antallet af fakturalinjer i "
+"stedet for ét samlet aktiv."
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Deadline på mine aktiviteter "
+msgstr "Deadline på mine aktiviteter"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset_group__name
@@ -1298,17 +1301,17 @@ msgstr "Nettoresultatet af gevinst eller tab ved salg af et aktiv"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__value_residual
 msgid "New residual amount for the asset"
-msgstr "Ny restmængde for aktivet"
+msgstr "Aktivets nye restværdi"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__salvage_value
 msgid "New salvage amount for the asset"
-msgstr "Nyt bjærgningsbeløb for aktivet"
+msgstr "Aktivets nye afhændelsesværdi"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__activity_calendar_event_id
 msgid "Next Activity Calendar Event"
-msgstr "Næste aktivitet for kalenderarrangement"
+msgstr "Næste aktivitet i kalenderen"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__activity_date_deadline
@@ -1351,12 +1354,12 @@ msgstr "Skatteværdi, der ikke er fradragsberettiget"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__salvage_value
 msgid "Not Depreciable Amount"
-msgstr "Ikke afskrivelig mængde"
+msgstr "Ikke-afskrivningsberettiget beløb"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__salvage_value
 msgid "Not Depreciable Value"
-msgstr "Ikke afskrivelig værdi"
+msgstr "Ikke-afskrivningsberettiget værdi"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__salvage_value_pct
@@ -1387,7 +1390,7 @@ msgstr "Antal måneder i en periode"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__gross_increase_count
 msgid "Number of assets made to increase the value of the asset"
-msgstr "Antal af aktiver der er sat til at forøge værdien på aktivet"
+msgstr "Antal aktiver, der er anvendt til at øge aktivets værdi"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_bank_statement_line__asset_number_days
@@ -1398,7 +1401,7 @@ msgstr "Antal dage"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__total_depreciation_entries_count
 msgid "Number of depreciation entries (posted or not)"
-msgstr "Antal af afskrivelses posteringer (posteret eller ej)"
+msgstr "Antal afskrivningsposteringer (bogførte eller ej)"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__message_has_error_counter
@@ -1408,7 +1411,7 @@ msgstr "Antal fejl"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Antal meddelelser der kræver handling"
+msgstr "Antal meddelelser, der kræver handling"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__message_has_error_counter
@@ -1430,7 +1433,7 @@ msgstr "Åben aktiv"
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__original_value
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_kanban
 msgid "Original Value"
-msgstr "Original værdi"
+msgstr "Oprindelige værdi"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__parent_id
@@ -1459,7 +1462,7 @@ msgstr "Proratadato sat på pause"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_model_tree
 msgid "Period length"
-msgstr "Periode længde"
+msgstr "Periodelængde"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_move__asset_move_type__positive_revaluation
@@ -1469,7 +1472,7 @@ msgstr "Positiv revaluering"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Posted Entries"
-msgstr "Posteret posteringer"
+msgstr "Bogførte posteringer"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__asset_properties
@@ -1480,7 +1483,7 @@ msgstr "Egenskaber"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__prorata_date
 msgid "Prorata Date"
-msgstr "Prorata dato"
+msgstr "Proratadato"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_move__asset_move_type__purchase
@@ -1514,7 +1517,7 @@ msgstr "Tilknyttet indkøbsværdi"
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "Reset to running"
-msgstr "Nulstil til kørende"
+msgstr "Nulstil til aktiv"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__activity_user_id
@@ -1531,7 +1534,7 @@ msgstr "Genoptag"
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
 msgid "Resume Depreciation"
-msgstr "Genoptag afskrivelse"
+msgstr "Genoptag afskrivning"
 
 #. module: account_asset
 #. odoo-python
@@ -1540,8 +1543,7 @@ msgid ""
 "Reverse the depreciation entries posted in the future in order to modify the "
 "depreciation"
 msgstr ""
-"Tilbagefør afskrivelses posteringer posteret i fremtiden, for at modificerer "
-"afskrivningen"
+"Tilbagefør fremtidige afskrivningsposteringer for at redigere afskrivningen"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__state__open
@@ -1551,7 +1553,7 @@ msgstr "Kører"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS leveringsfejl"
+msgstr "Fejl ved SMS-levering"
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_move__asset_move_type__sale
@@ -1572,7 +1574,7 @@ msgstr "Gem model"
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_asset_modify__select_invoice_line_id
 msgid "Select Invoice Line"
-msgstr "Vælg faktura linje"
+msgstr "Vælg fakturalinje"
 
 #. module: account_asset
 #. odoo-python
@@ -1631,14 +1633,14 @@ msgid ""
 "Planned: Future activities."
 msgstr ""
 "Status baseret på aktiviteter\n"
-"Forfaldne: Forfaldsdato er allerede overskredet\n"
-"I dag: Aktivitetsdato er i dag\n"
-"Planlagt: Fremtidige aktiviteter."
+"Forfaldne: Aktivitetens forfaldsdato er overskredet\n"
+"I dag: Aktiviteten er planlagt til i dag\n"
+"Planlagt: Kommende aktiviteter."
 
 #. module: account_asset
 #: model:ir.model.fields.selection,name:account_asset.selection__account_asset__method__linear
 msgid "Straight Line"
-msgstr "Lige Linje"
+msgstr "Lineær linje"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__book_value
@@ -1646,8 +1648,8 @@ msgid ""
 "Sum of the depreciable value, the salvage value and the book value of all "
 "value increase items"
 msgstr ""
-"Summen af afskrivelses værdien, bjærgnings værdien, og bog værdien for alle "
-"værdi forøgende aktiver"
+"Summen af afskrivningsværdien, afhændelsesværdien og bogført værdi for alle "
+"værdiforøgende poster"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__country_code
@@ -1667,14 +1669,14 @@ msgid ""
 "(move_count)s cancelled %(word)s:"
 msgstr ""
 "Kontoen %(exp_acc)s er blevet krediteret af %(exp_delta)s, mens kontoen %"
-"(dep_acc)s er blevet debiteret af %(dep_delta)s. Det svarer til %"
-"(move_count)s annullerede %(word)s:"
+"(dep_acc)s er blevet debiteret af %(dep_delta)s. Det svarer til %(move_count)"
+"s annullerede %(word)s:"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__method_period
 #: model:ir.model.fields,help:account_asset.field_asset_modify__method_period
 msgid "The amount of time between two depreciations"
-msgstr "Tid mellem to afskrivelser"
+msgstr "Tid mellem to afskrivninger"
 
 #. module: account_asset
 #. odoo-python
@@ -1691,12 +1693,12 @@ msgstr ""
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__asset_id
 msgid "The asset to be modified by this wizard"
-msgstr "Aktivet der skal modificeres af denne guide"
+msgstr "Aktivet, der skal modificeres af denne assistent"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__children_ids
 msgid "The children are the gains in value of this asset"
-msgstr "Nedarvingerne er forøgelsen i værdi for dette aktiv"
+msgstr "Nedarvingerne udgør værdiøgningen for dette aktiv"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__invoice_ids
@@ -1704,24 +1706,24 @@ msgid ""
 "The disposal invoice is needed in order to generate the closing journal "
 "entry."
 msgstr ""
-"Bortskaffelses fakturaen skal bruges, for at oprette en afsluttende journal "
-"postering."
+"Afhændelsesfakturaen skal anvendes for at oprette en afsluttende "
+"journalpostering."
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__method_number
 msgid "The number of depreciations needed to depreciate your asset"
-msgstr "Antallet af afskrivninger der er nødvendigt for at afskrive dit aktiv"
+msgstr "Antallet af afskrivninger, der kræves for at afskrive aktivet"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "The remaining value on the last depreciation line must be 0"
-msgstr "Den tilbageværende værdi på den sidste afskrivnings linje skal være 0"
+msgstr "Den resterende værdi på den sidste afskrivningspost skal være 0"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_asset_modify__invoice_line_ids
 msgid "There are multiple lines that could be the related to this asset"
-msgstr "Der er flere linjer, der kunne være relateret til dette aktiv."
+msgstr "Der er flere linjer, som muligvis er relateret til dette aktiv"
 
 #. module: account_asset
 #. odoo-python
@@ -1737,7 +1739,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_asset/static/src/components/move_reversed/move_reversed.xml:0
 msgid "This move has been reversed"
-msgstr "Denne bevægelse er blevet tilbageført"
+msgstr "Denne bogføringspost er blevet tilbageført"
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_search
@@ -1759,7 +1761,7 @@ msgstr "Samlet afskrivningsværdi"
 #. odoo-python
 #: code:addons/account_asset/models/account_move.py:0
 msgid "Turn as an asset"
-msgstr "Vend som et aktiv"
+msgstr "Omdan som et aktiv"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__account_type
@@ -1769,7 +1771,7 @@ msgstr "Kontotypen"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Type af undtagelsesaktivitet registreret "
+msgstr "Type registreret undtagelsesaktivitet."
 
 #. module: account_asset
 #: model_terms:ir.ui.view,arch_db:account_asset.view_account_asset_form
@@ -1780,13 +1782,13 @@ msgstr "Værdi ved import"
 #. odoo-python
 #: code:addons/account_asset/wizard/asset_modify.py:0
 msgid "Value decrease for: %(asset)s"
-msgstr "Værdi sænkning for: %(asset)s"
+msgstr "Værdiforringelse for: %(asset)s"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/wizard/asset_modify.py:0
 msgid "Value increase for: %(asset)s"
-msgstr "Værdi forøgelse for: %(asset)s"
+msgstr "Værdiforøgelse for: %(asset)s"
 
 #. module: account_asset
 #: model:ir.model.fields,field_description:account_asset.field_account_asset__warning_count_assets
@@ -1807,7 +1809,7 @@ msgstr "Beskeder fra hjemmesiden"
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__website_message_ids
 msgid "Website communication history"
-msgstr "Hjemmesidens kommunikations historik"
+msgstr "Hjemmesidens kommunikationshistorik"
 
 #. module: account_asset
 #: model:ir.model.fields,help:account_asset.field_account_asset__state
@@ -1871,7 +1873,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "You cannot archive a record that is not closed"
-msgstr "Du kan ikke arkivere et datasæt der ikke er lukket"
+msgstr "Du kan ikke arkivere en post, der ikke er lukket"
 
 #. module: account_asset
 #. odoo-python
@@ -1881,8 +1883,8 @@ msgid ""
 "You cannot automate the journal entry for an asset that has a running gross "
 "increase. Please use 'Dispose' on the increase(s)."
 msgstr ""
-"Du kan ikke automatisere journalføringen for et aktiv, der har en løbende "
-"bruttostigning. Brug 'Bortskaf' i stigningen."
+"Du kan ikke automatisere bogføringen for et aktiv, der har en løbende "
+"bruttoforhøjelse. Brug 'Afhænd' på forhøjelsen/forhøjelserne."
 
 #. module: account_asset
 #. odoo-python
@@ -1892,13 +1894,13 @@ msgid ""
 "account or with a null amount"
 msgstr ""
 "Du kan ikke oprette et aktiv fra linjer der indeholder kredit eller debit på "
-"kontoen, eller med en nul-mængde."
+"kontoen, eller med en nul-mængde"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "You cannot delete a document that is in %s state."
-msgstr "Du kan ikke slette et dokument, der er i %s fase."
+msgstr "Du kan ikke slette et dokument, der har status %s."
 
 #. module: account_asset
 #. odoo-python
@@ -1908,9 +1910,9 @@ msgid ""
 "You should either confirm the asset, then, sell or dispose of it, or cancel "
 "the linked journal entries."
 msgstr ""
-"Du kan ikke slette et aktiv som er forbundet til posteringer.\n"
-"Du bør enten bekræfte aktivet, og derefter sælge eller bortskaffe den, eller "
-"annullere de forbundne journalpostering."
+"Du kan ikke slette et aktiv, som er tilknyttet bogførte posteringer. \n"
+"Du bør enten bekræfte aktivet og derefter sælge eller bortskaffe det eller "
+"annullere de tilknyttede journalposteringer."
 
 #. module: account_asset
 #. odoo-python
@@ -1971,13 +1973,13 @@ msgstr "f.eks. bærbar iBook"
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "entries"
-msgstr "poster"
+msgstr "posteringer"
 
 #. module: account_asset
 #. odoo-python
 #: code:addons/account_asset/models/account_asset.py:0
 msgid "entry"
-msgstr "indtastning"
+msgstr "postering"
 
 #. module: account_asset
 #. odoo-python

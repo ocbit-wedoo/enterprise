@@ -8,13 +8,14 @@
 # Martin Trigaux, 2024
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2025-12-31 11:45+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:44+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "account_disallowed_expenses/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_disallowed_expenses
 #: model:ir.model,name:account_disallowed_expenses.model_account_account
@@ -38,7 +39,7 @@ msgstr "Aktiv"
 #. module: account_disallowed_expenses
 #: model_terms:ir.actions.act_window,help:account_disallowed_expenses.action_account_disallowed_expenses_category_list
 msgid "Add a Disallowed Expenses Category"
-msgstr "Tilføj en Ikke-tilladt Udgifts Kategori"
+msgstr "Tilføj en kategori for uautoriserede udgifter"
 
 #. module: account_disallowed_expenses
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_rate__category_id
@@ -77,7 +78,7 @@ msgstr "Oprettet den"
 #. module: account_disallowed_expenses
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_category__current_rate
 msgid "Current Rate"
-msgstr "Aktuel kurs"
+msgstr "Nuværende sats"
 
 #. module: account_disallowed_expenses
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_rate__rate
@@ -93,7 +94,7 @@ msgstr "Ikke-tilladt Mængde"
 #: model:ir.ui.menu,name:account_disallowed_expenses.menu_action_account_report_de
 #: model_terms:ir.ui.view,arch_db:account_disallowed_expenses.view_account_form
 msgid "Disallowed Expenses"
-msgstr "Ikke tilladte Udgifter"
+msgstr "Uautoriserede udgifter"
 
 #. module: account_disallowed_expenses
 #: model:ir.actions.act_window,name:account_disallowed_expenses.action_account_disallowed_expenses_category_list
@@ -105,7 +106,7 @@ msgstr "Ikke-tilladt Udgiftskategorier"
 #: model:ir.model,name:account_disallowed_expenses.model_account_disallowed_expenses_category
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_account__disallowed_expenses_category_id
 msgid "Disallowed Expenses Category"
-msgstr "Ikke-tilladte Udgifts Kategori"
+msgstr "Kategori for uautoriserede udgifter"
 
 #. module: account_disallowed_expenses
 #: model:ir.model,name:account_disallowed_expenses.model_account_disallowed_expenses_report_handler
@@ -115,13 +116,13 @@ msgstr "Tilpasset håndtering af uautoriserede udgifter"
 #. module: account_disallowed_expenses
 #: model:ir.model,name:account_disallowed_expenses.model_account_disallowed_expenses_rate
 msgid "Disallowed Expenses Rate"
-msgstr "Ikke Tilladte Udgifts Rate"
+msgstr "Sats for uautoriserede udgifter"
 
 #. module: account_disallowed_expenses
 #: model:account.report,name:account_disallowed_expenses.disallowed_expenses_report
 #: model:ir.actions.client,name:account_disallowed_expenses.action_account_report_de
 msgid "Disallowed Expenses Report"
-msgstr "Ikke-tilladt Udgifts Rapport"
+msgstr "Rapport over uautoriserede udgifter"
 
 #. module: account_disallowed_expenses
 #: model:ir.model.constraint,message:account_disallowed_expenses.constraint_account_disallowed_expenses_category_unique_code
@@ -132,13 +133,13 @@ msgstr "Kategorikoden for uautoriserede udgifter skal være unik."
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_category__display_name
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_rate__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: account_disallowed_expenses
 #. odoo-python
 #: code:addons/account_disallowed_expenses/report/account_disallowed_expenses_report.py:0
 msgid "General Ledger"
-msgstr "Regnskab"
+msgstr "Hovedbog"
 
 #. module: account_disallowed_expenses
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_category__id
@@ -173,18 +174,18 @@ msgstr "Navn"
 #. odoo-python
 #: code:addons/account_disallowed_expenses/models/account_disallowed_expenses.py:0
 msgid "No Rate"
-msgstr "Ingen Sats"
+msgstr "Ingen sats"
 
 #. module: account_disallowed_expenses
 #: model:account.report.column,name:account_disallowed_expenses.disallowed_expenses_report_rate
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_category__rate_ids
 msgid "Rate"
-msgstr "Rate"
+msgstr "Sats"
 
 #. module: account_disallowed_expenses
 #: model_terms:ir.ui.view,arch_db:account_disallowed_expenses.view_account_disallowed_expenses_category_form
 msgid "Rates"
-msgstr "Rater"
+msgstr "Satser"
 
 #. module: account_disallowed_expenses
 #: model_terms:ir.ui.view,arch_db:account_disallowed_expenses.view_account_disallowed_expenses_category_form
@@ -200,12 +201,14 @@ msgstr "Angiv satser"
 #. module: account_disallowed_expenses
 #: model:ir.model.fields,help:account_disallowed_expenses.field_account_disallowed_expenses_category__active
 msgid "Set active to false to hide the category without removing it."
-msgstr "Sæt aktiv til falsk for at skjule kategorien uden at fjerne den."
+msgstr ""
+"Hvis det aktive felt er sat til \"falsk\", kan du skjule kategorien uden at "
+"fjerne den."
 
 #. module: account_disallowed_expenses
 #: model:ir.model.fields,field_description:account_disallowed_expenses.field_account_disallowed_expenses_rate__date_from
 msgid "Start Date"
-msgstr "Start dato"
+msgstr "Startdato"
 
 #. module: account_disallowed_expenses
 #. odoo-javascript

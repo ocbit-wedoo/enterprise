@@ -35,6 +35,10 @@ async function getDevicesFromIds(orm, stored_content) {
     ]);
 }
 
+function printSuccess(notification, name) {
+    notification.add(_t("Successfully printed on %s", name), { type: "success" });
+}
+
 /**
  * Send the report to the IoT device using longpolling
  * @param env The environment
@@ -62,7 +66,17 @@ async function longpolling(env, orm, args, stored_device_ids) {
         env.services.notification.add(_t("Sending to printer %s...", name), { type: "info" });
 
         const iotDevice = new DeviceController(env.services.iot_longpolling, { iot_ip: ip, identifier });
-        await iotDevice.action({ iot_idempotent_id, document, print_id: uuid }, longpollingHasFallback);
+        iotDevice.addListener((result) => {
+            if (result.status === "success") {
+                printSuccess(env.services.notification, name);
+            }
+        });
+        try {
+            await iotDevice.action({ iot_idempotent_id, document, print_id: uuid }, longpollingHasFallback);
+        } catch (e) {
+            iotDevice.removeListener();
+            throw e;
+        }
     }
 }
 

@@ -124,10 +124,19 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
             fill_header(sheet_val, 'Inmueble', ('Situación', 'Referencia Catastral'))
             fill_header(sheet_val, 'Referencia Externa')
 
+    def _l10n_es_libros_get_operation_code(self, line):
+        taxes = line.move_id.invoice_line_ids.tax_ids.flatten_taxes_hierarchy()
+        if line.move_id.is_sale_document(include_receipts=True):
+            return taxes._l10n_es_get_regime_code()
+        mod_303_10 = self.env.ref('l10n_es.mod_303_casilla_10_balance')._get_matching_tags()
+        mod_303_11 = self.env.ref('l10n_es.mod_303_casilla_11_balance')._get_matching_tags()
+        if taxes.repartition_line_ids.tag_ids & (mod_303_10 + mod_303_11):
+            return '09'
+        return '01'
+
     def _l10n_es_libros_get_common_line_vals(self, line, tax):
         iae_group = self.env.company.l10n_es_reports_iae_group
         partner = line.partner_id
-        exempt_reason = line.move_id.invoice_line_ids.tax_ids.filtered(lambda t: t.l10n_es_exempt_reason == 'E2')
         sign = -1 if line.move_id.is_sale_document(include_receipts=True) else 1
 
         delivery_date = line.move_id.delivery_date
@@ -150,7 +159,7 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
             'date_transaction': format_date(self.env, delivery_date,
                                             date_format='dd/MM/yyyy') if delivery_date and delivery_date != line.invoice_date else '',
             'partner_name': partner.name,
-            'operation_code': '02' if exempt_reason else '01',
+            'operation_code': self._l10n_es_libros_get_operation_code(line),
             'total_amount': line.balance * sign,
             'base_amount': line.balance * sign,
             'tax_rate': 0,

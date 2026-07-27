@@ -225,7 +225,6 @@ class AccountReconcileModel(models.Model):
         assert self.rule_type == 'invoice_matching'
         self.env['account.move'].flush_model()
         self.env['account.move.line'].flush_model()
-        self.env['account.bank.statement.line'].flush_model()
 
         aml_domain = self._get_invoice_matching_amls_domain(st_line, partner)
         query = self.env['account.move.line']._where_calc(aml_domain)

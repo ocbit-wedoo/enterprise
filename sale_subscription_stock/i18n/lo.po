@@ -3,13 +3,14 @@
 # * sale_subscription_stock
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-05-29 20:06+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 09:29+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "sale_subscription_stock/lo/>\n"
 "Language: lo\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_subscription_stock
 #. odoo-python
@@ -27,22 +28,25 @@ msgid ""
 "subscription. To ensure your delivery is processed, please trigger it "
 "manually by using the \"Subscription: Generate delivery\" action."
 msgstr ""
+"ຂໍ້ຜິດພາດຂອງລະບົບໄດ້ຂັດຂວາງການສ້າງໃບສົ່ງສິນຄ້າແບບອັດຕະໂນມັດສຳລັບການສະໝັກສະມາຊິກນີ້. ເພື່ອຮັບປະກັນວ່າ"
+"ການຈັດສົ່ງຂອງທ່ານໄດ້ຮັບການປະມວນຜົນ, ກະລຸນາກະຕຸ້ນມັນດ້ວຍຕົນເອງໂດຍການໃຊ້ຄຳສັ່ງ \"ການສະໝັກສະມາຊິ"
+"ກ: ສ້າງການຈັດສົ່ງ\"."
 
 #. module: sale_subscription_stock
 #. odoo-python
 #: code:addons/sale_subscription_stock/models/sale_order.py:0
 msgid "Delivery creation failed"
-msgstr ""
+msgstr "ການສ້າງການຈັດສົ່ງລົ້ມເຫຼວ"
 
 #. module: sale_subscription_stock
 #: model:product.template,name:sale_subscription_stock.product_recurring_detergent_product_template
 msgid "Detergent (SUB)"
-msgstr ""
+msgstr "ນ້ຳຢາຊັກຟອກ (SUB)"
 
 #. module: sale_subscription_stock
 #: model:ir.model.fields,field_description:sale_subscription_stock.field_sale_order__display_recurring_stock_delivery_warning
 msgid "Display Recurring Stock Delivery Warning"
-msgstr ""
+msgstr "ສະແດງຄຳເຕືອນການຈັດສົ່ງສິນຄ້າຄົງຄັງແບບຊ້ຳຄືນ"
 
 #. module: sale_subscription_stock
 #: model_terms:ir.ui.view,arch_db:sale_subscription_stock.product_template_form_view
@@ -50,12 +54,13 @@ msgid ""
 "Recurring order with this product will be invoiced at the beginning of the "
 "period."
 msgstr ""
+"ໃບສັ່ງຊື້ແບບຊ້ຳຄືນທີ່ມີສິນຄ້ານີ້ຈະຖືກອອກໃບແຈ້ງໜີ້ໃນຕອນເລີ່ມຕົ້ນຂອງຮອບວຽນ."
 
 #. module: sale_subscription_stock
 #: model_terms:ir.ui.view,arch_db:sale_subscription_stock.product_template_form_view
 msgid ""
 "Recurring order with this product will be invoiced at the end of the period."
-msgstr ""
+msgstr "ໃບສັ່ງຊື້ແບບຊ້ຳຄືນທີ່ມີສິນຄ້ານີ້ຈະຖືກອອກໃບແຈ້ງໜີ້ໃນຕອນທ້າຍຂອງຮອບວຽນ."
 
 #. module: sale_subscription_stock
 #: model:ir.model,name:sale_subscription_stock.model_stock_return_picking_line
@@ -80,7 +85,7 @@ msgstr "ລາຍງານການເຕີມສິນຄ້າຄົງຄັ
 #. module: sale_subscription_stock
 #: model:ir.actions.server,name:sale_subscription_stock.action_compute_price_bom_product
 msgid "Subscription: Generate delivery"
-msgstr ""
+msgstr "ການສະໝັກສະມາຊິກ: ສ້າງການຈັດສົ່ງ"
 
 #. module: sale_subscription_stock
 #. odoo-javascript
@@ -94,6 +99,8 @@ msgid ""
 "The delivery order of the recurring product(s) will be created soon. If another delivery order exists,\n"
 "                    recurring product will be added to it automatically."
 msgstr ""
+"ໃບສົ່ງສິນຄ້າຂອງສິນຄ້າແບບຊ້ຳຄືນຈະຖືກສ້າງຂຶ້ນໃນໄວໆນີ້. ຫາກມີໃບສົ່ງສິນຄ້າອື່ນທີ່ມີຢູ່ແລ້ວ, ສິນຄ້າແບບຊ້ຳຄືນຈະຖືກເ"
+"ພີ່ມເຂົ້າໃສ່ໂດຍອັດຕະໂນມັດ."
 
 #. module: sale_subscription_stock
 #: model:ir.model,name:sale_subscription_stock.model_stock_picking

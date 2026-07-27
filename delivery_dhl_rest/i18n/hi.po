@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
 "PO-Revision-Date: 2026-05-06 21:39+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
@@ -18,6 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.17\n"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+" Extra Info: The scheduled time for the shipment was either not set or was "
+"in the past, so DHL has been sent a planned shipping time of one hour from "
+"now"
+msgstr ""
 
 #. module: delivery_dhl_rest
 #: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__0
@@ -152,8 +161,7 @@ msgstr "कैरियर"
 #. module: delivery_dhl_rest
 #: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_dutiable
 msgid "Check this if your package is dutiable."
-msgstr ""
-"अगर आपके पैकेज पर कोई सीमा शुल्क (कस्टम ड्यूटी) लगता है, तो आप इस विकल्प को चुनें।"
+msgstr "अगर आपके पैकेज पर कोई सीमा शुल्क (कस्टम ड्यूटी) लगता है, तो आप इस विकल्प को चुनें।"
 
 #. module: delivery_dhl_rest
 #. odoo-python
@@ -196,8 +204,7 @@ msgstr ""
 #. module: delivery_dhl_rest
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
-msgid ""
-"DHL API secret is missing, please modify your delivery method settings."
+msgid "DHL API secret is missing, please modify your delivery method settings."
 msgstr ""
 
 #. module: delivery_dhl_rest
@@ -232,8 +239,7 @@ msgstr "DHL प्रॉडक्ट"
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
 "DHL account number is missing, please modify your delivery method settings."
-msgstr ""
-"DHL खाता नंबर मौजूद नहीं है, कृपया अपनी डिलीवरी के तरीके की सेटिंग बदलें।"
+msgstr "DHL खाता नंबर मौजूद नहीं है, कृपया अपनी डिलीवरी के तरीके की सेटिंग बदलें।"
 
 #. module: delivery_dhl_rest
 #: model:ir.model.fields,field_description:delivery_dhl_rest.field_delivery_carrier__dhl_default_package_type_id
@@ -291,14 +297,16 @@ msgstr ""
 #: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_ship_request
 msgid ""
 "Extra data to be sent in the request. It should be JSON-formatted.\n"
-"This functionality is advanced/technical and should only be used if you know what you are doing.\n"
+"This functionality is advanced/technical and should only be used if you know "
+"what you are doing.\n"
 "\n"
 "Example of a valid value: ```\n"
 "\"content\": {\"packages\": {\"description\": \"amazing package\"}}\n"
 "```\n"
 "\n"
 "With the above example, the description of each package will be updated.\n"
-"For more information, please refer to the DHL API documentation: https://developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
+"For more information, please refer to the DHL API documentation: https://"
+"developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
 msgstr ""
 "अनुरोध में भेजे जाने वाले अतिरिक्त डेटा. यह JSON-फ़ॉर्मैट में होना चाहिए.\n"
 "यह फंक्शन एडवांस/टेक्निकल है और इसका उपयोग सिर्फ़ तभी किया जाना चाहिए जब आप जानते हों "
@@ -499,7 +507,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
-"The address of your company warehouse is missing or wrong (Missing field(s) :\n"
+"The address of your company warehouse is missing or wrong (Missing "
+"field(s) :\n"
 " %s)"
 msgstr ""
 "आपकी कंपनी के वेयरहाउस का पता मौजूद नहीं है या गलत है (ये फ़ील्ड मौजूद नहीं हैं:\n"
@@ -509,7 +518,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
-"The estimated shipping price cannot be computed because the weight is missing for the following product(s): \n"
+"The estimated shipping price cannot be computed because the weight is "
+"missing for the following product(s): \n"
 " %s"
 msgstr ""
 "अनुमानित शिपिंग कीमत की गणना नहीं की जा सकती, क्योंकि निम्नलिखित प्रॉडक्ट (प्रॉडक्ट्स) "
@@ -522,8 +532,7 @@ msgstr ""
 msgid ""
 "The package cannot be created because the total weight of the products in "
 "the picking is 0.0 %s"
-msgstr ""
-"पैकेज नहीं बनाया जा सकता, क्योंकि पिकिंग में प्रॉडक्ट का कुल वज़न 0.0 %s है"
+msgstr "पैकेज नहीं बनाया जा सकता, क्योंकि पिकिंग में प्रॉडक्ट का कुल वज़न 0.0 %s है"
 
 #. module: delivery_dhl_rest
 #. odoo-python

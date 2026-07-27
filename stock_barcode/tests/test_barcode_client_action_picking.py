@@ -119,17 +119,24 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
         the products (product1 and product2), scans a existing empty package to
         assign it as the result package, and finally scans the destination (shelf2).
         Checks the dest location is correctly set on the lines.
+
+        Additionally check that the package and owner are prefilled if unique.
         """
         self.clean_access_rights()
         grp_pack = self.env.ref('stock.group_tracking_lot')
+        grp_owner = self.env.ref('stock.group_tracking_owner')
         grp_multi_loc = self.env.ref('stock.group_stock_multi_locations')
-        self.env.user.write({'groups_id': [(4, grp_multi_loc.id, 0), (4, grp_pack.id, 0)]})
+        self.env.user.write({'groups_id': [(4, grp_multi_loc.id, 0), (4, grp_pack.id, 0), (4, grp_owner.id, 0)]})
         self.picking_type_internal.active = True
         # Creates a new package and add some quants.
         package2 = self.env['stock.quant.package'].create({'name': 'P00002'})
-        self.env['stock.quant']._update_available_quantity(self.product1, self.stock_location, 1, package_id=package2)
-        self.env['stock.quant']._update_available_quantity(self.product2, self.stock_location, 2, package_id=package2)
-        self.assertEqual(package2.location_id.id, self.stock_location.id)
+        self.env['stock.quant']._update_available_quantity(self.product1, self.stock_location, 2, package_id=package2)
+        self.env['stock.quant']._update_available_quantity(self.product2, self.stock_location, 3, package_id=package2)
+        self.assertEqual(package2.location_id, self.stock_location)
+        (self.product_tln_gtn8 | self.productlot1).tracking = 'none'
+        self.env['stock.quant']._update_available_quantity(self.product_tln_gtn8, self.stock_location, 2, owner_id=self.owner)
+        self.env['stock.quant']._update_available_quantity(self.productlot1, self.stock_location, 1, owner_id=self.owner)
+        self.env['stock.quant']._update_available_quantity(self.productlot1, self.stock_location, 2, owner_id=self.owner.copy())
 
         self.start_tour("/odoo/barcode", 'test_internal_picking_from_scratch_with_package', login='admin')
 
@@ -144,6 +151,11 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
         self.assertRecordValues(package2.quant_ids, [
             {'product_id': self.product1.id, 'quantity': 1, 'location_id': self.shelf2.id},
             {'product_id': self.product2.id, 'quantity': 2, 'location_id': self.shelf2.id},
+        ])
+
+        self.assertRecordValues(self.product_tln_gtn8.stock_quant_ids, [
+            {'quantity': 1.0, 'location_id': self.stock_location.id, 'owner_id': self.owner.id},
+            {'quantity': 1.0, 'location_id': self.shelf2.id, 'owner_id': self.owner.id},
         ])
 
     def test_internal_pack_in_same_package(self):
@@ -4468,23 +4480,22 @@ class TestPickingBarcodeClientAction(TestBarcodeClientAction):
         self.start_tour(url, 'test_uom_update_picking_tour', login='admin', timeout=180)
 
     def test_no_validate_no_dest_package(self):
+        """Ensures that the user can't validate an operation if scanning a destination
+        is mandatory for each scanned product and no destination was scanned."""
         self.clean_access_rights()
         grp_multi_loc = self.env.ref('stock.group_stock_multi_locations')
         grp_pack = self.env.ref('stock.group_tracking_lot')
-        self.env.user.write({'groups_id': [(4, grp_pack.id, 0), (4, grp_multi_loc.id, 0)]})
-        picking_type = self.env.ref('stock.picking_type_internal')
-        picking_type.write({
+        self.env.user.groups_id += grp_pack | grp_multi_loc
+        self.picking_type_internal.write({
             'restrict_scan_source_location': 'mandatory',
             'restrict_scan_dest_location': 'mandatory',
             'active': True,
         })
         pack1 = self.env['stock.quant.package'].create({
-                'name': 'Pack1',
-            })
+            'name': 'Pack1',
+        })
         self.env['stock.quant']._update_available_quantity(self.product2, self.stock_location, 5, package_id=pack1)
-        action_id = self.env.ref('stock_barcode.stock_barcode_action_main_menu')
-        url = "/web#action=" + str(action_id.id)
-        self.start_tour(url, 'test_no_validate_no_dest_package', login='admin')
+        self.start_tour('/odoo/barcode', 'test_no_validate_no_dest_package', login='admin')
 
     def test_scan_package_with_different_uom(self):
         self.clean_access_rights()

@@ -164,7 +164,7 @@ class AccountBatchPayment(models.Model):
         payments = []
         for payment in self.payment_ids:
             country_code = payment.partner_bank_id.sanitized_acc_number[:2]
-            payments.append({
+            payment_data = {
                 "amount": payment.amount,
                 "account_number": payment.partner_bank_id.sanitized_acc_number,
                 "account_type": "IBAN",
@@ -174,17 +174,33 @@ class AccountBatchPayment(models.Model):
                 "reference": payment.memo,
                 "structured_reference": is_valid_structured_reference_for_country(payment.memo, country_code),
                 "end_to_end_id": payment.end_to_end_id,
-            })
+            }
 
-        return {
+            if vat := payment.partner_id.vat:
+                payment_data['creditor_identification'] = vat
+            if address := payment.partner_id.contact_address_inline:
+                payment_data['creditor_address'] = address
+
+            payments.append(payment_data)
+
+        data = {
             "account_id": self.journal_id.account_online_account_id.online_identifier,
             "batch_booking": self.iso20022_batch_booking,
             "date": fields.Date.to_string(self.date),
+            "payer_account_number": self.journal_id.account_online_account_id.account_number,
+            "payer_name": self.journal_id.company_id.name,
             "payment_type": "bulk",
             "payments": payments,
             "provider_data": self.journal_id.account_online_link_id.provider_data,
             "reference": self.name,
         }
+
+        if vat := self.journal_id.company_id.vat:
+            data['payer_identification'] = vat
+        if address := self.journal_id.company_id.partner_id.contact_address_inline:
+            data['payer_address'] = address
+
+        return data
 
     def _get_payment_vals(self, payment):
         return {**super()._get_payment_vals(payment), 'end_to_end_id': payment.end_to_end_id}

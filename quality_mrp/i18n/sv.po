@@ -11,13 +11,14 @@
 # Mikael Åkerberg <mikael.akerberg@mariaakerberg.com>, 2024
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2025-11-17 14:21+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 09:38+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "quality_mrp/sv/>\n"
 "Language: sv\n"
@@ -25,32 +26,32 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: quality_mrp
 #: model_terms:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
 msgid "<span class=\"o_stat_text text-danger\">Quality Checks</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text text-danger\">Kvalitetskontroller</span>"
 
 #. module: quality_mrp
 #: model_terms:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
 msgid "<span class=\"o_stat_text text-success\">Quality Checks</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text text-success\">Kvalitetskontroller</span>"
 
 #. module: quality_mrp
 #: model_terms:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
 msgid "<span class=\"o_stat_text\">Quality Alerts</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Kvalitetsvarningar</span>"
 
 #. module: quality_mrp
 #: model_terms:ir.ui.view,arch_db:quality_mrp.mrp_production_view_form_inherit_quality
 msgid "<span class=\"o_stat_text\">Quality Checks</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Kvalitetskontroller</span>"
 
 #. module: quality_mrp
 #: model_terms:ir.ui.view,arch_db:quality_mrp.worksheet_page
 msgid "<strong>Manufacturing Order: </strong>"
-msgstr ""
+msgstr "<strong>Produktionsorder: </strong>"
 
 #. module: quality_mrp
 #: model:ir.model.fields,field_description:quality_mrp.field_mrp_production__quality_alert_ids
@@ -74,7 +75,7 @@ msgstr ""
 #: model:ir.model,name:quality_mrp.model_mrp_production
 #: model:ir.model.fields,field_description:quality_mrp.field_quality_check_on_demand__production_id
 msgid "Manufacturing Order"
-msgstr "Tillverkningsorder"
+msgstr "Produktionsorder"
 
 #. module: quality_mrp
 #. odoo-python
@@ -85,13 +86,13 @@ msgstr ""
 #. module: quality_mrp
 #: model:ir.model,name:quality_mrp.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr "Produktflyttar (lagerflyttsrad)"
+msgstr "Produktförflyttningar (rad i lagerförflyttning)"
 
 #. module: quality_mrp
 #: model:ir.model.fields,field_description:quality_mrp.field_quality_alert__production_id
 #: model:ir.model.fields,field_description:quality_mrp.field_quality_check__production_id
 msgid "Production Order"
-msgstr "Tillverkningsorder"
+msgstr "Produktionsorder"
 
 #. module: quality_mrp
 #: model:ir.model,name:quality_mrp.model_quality_alert
@@ -113,12 +114,12 @@ msgstr "Kvalitetskontroll"
 #. module: quality_mrp
 #: model:ir.model.fields,field_description:quality_mrp.field_mrp_production__quality_check_fail
 msgid "Quality Check Fail"
-msgstr "Kvalitetskontroll misslyckad"
+msgstr "Icke-godkänd kvalitetskontroll"
 
 #. module: quality_mrp
 #: model:ir.model.fields,field_description:quality_mrp.field_mrp_production__quality_check_todo
 msgid "Quality Check Todo"
-msgstr "Kvalitetskontroll Todo"
+msgstr "Kvalitetskontroll att-göra"
 
 #. module: quality_mrp
 #: model:ir.actions.act_window,name:quality_mrp.quality_check_action_mo
@@ -134,7 +135,7 @@ msgstr "Kvalitetskontrollpunkt"
 #. module: quality_mrp
 #: model:ir.model,name:quality_mrp.model_stock_move
 msgid "Stock Move"
-msgstr "Lagerflytt"
+msgstr "Lagerflyttning"
 
 #. module: quality_mrp
 #. odoo-python
@@ -145,7 +146,7 @@ msgstr "Varning"
 #. module: quality_mrp
 #: model:ir.model,name:quality_mrp.model_quality_check_wizard
 msgid "Wizard for Quality Check Pop Up"
-msgstr ""
+msgstr "Verktygsguide för popup-fönster vid kvalitetskontroller"
 
 #. module: quality_mrp
 #: model:ir.model,name:quality_mrp.model_quality_check_on_demand
@@ -173,4 +174,4 @@ msgstr ""
 #. odoo-python
 #: code:addons/quality_mrp/models/mrp_production.py:0
 msgid "You still need to do the quality checks!"
-msgstr "Du måste fortfarande göra kvalitetskontroller!"
+msgstr "Det finns fortfarande kvalitetskontroller kvar att genomföra!"

@@ -195,3 +195,12 @@ class TestSwedishIsoBBANCreditTransfer(TestSwedishIsoCreditTransfer):
         self.assertEqual(self.swedish_partner_bank.acc_type, 'bban_se')
         self.swedish_partner_bank.acc_number = '99603406872188'
         self.assertEqual(self.swedish_partner_bank.acc_type, 'bban_se')
+
+    @freeze_time('2024-03-04')
+    def test_swedish_iso_pain_09_xml(self):
+        batch = self.generate_iso20022_batch_payment(self.swedish_partner)
+        sct_doc = self.get_sct_doc_from_batch(batch)
+        xml_file_path = file_path('l10n_se_bban/tests/data/pain.001.001.09.se.xml')
+        expected_tree = etree.parse(xml_file_path)
+
+        self.assertXmlTreeEqual(sct_doc, expected_tree.getroot())

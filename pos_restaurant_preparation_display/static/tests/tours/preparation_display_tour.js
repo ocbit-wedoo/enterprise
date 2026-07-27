@@ -10,8 +10,16 @@ import * as ProductScreenResto from "@pos_restaurant/../tests/tours/utils/produc
 import * as PreparationDisplay from "@pos_restaurant_preparation_display/../tests/tours/utils/preparation_display_util";
 import * as Numpad from "@point_of_sale/../tests/tours/utils/numpad_util";
 import { inLeftSide } from "@point_of_sale/../tests/tours/utils/common";
-const ProductScreen = { ...ProductScreenPos, ...ProductScreenResto, ...PreparationDisplay };
 import { registry } from "@web/core/registry";
+const ProductScreen = { ...ProductScreenPos, ...ProductScreenResto, ...PreparationDisplay };
+
+function clickOrderButton() {
+    return [
+        ProductScreen.clickOrderButton(),
+        Chrome.waitRequest(),
+        ProductScreen.orderlinesHaveNoChange(),
+    ].flat();
+}
 
 registry.category("web_tour.tours").add("PreparationDisplayTourResto", {
     steps: () =>
@@ -26,7 +34,7 @@ registry.category("web_tour.tours").add("PreparationDisplayTourResto", {
             ProductScreen.clickDisplayedProduct("Water"),
             ProductScreen.orderlineIsToOrder("Water"),
             ProductScreen.orderlineIsToOrder("Coca-Cola"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickPayButton(),
             PaymentScreen.clickPaymentMethod("Cash"),
@@ -40,7 +48,7 @@ registry.category("web_tour.tours").add("PreparationDisplayTourResto", {
             ProductScreen.orderBtnIsPresent(),
             ProductScreen.clickDisplayedProduct("Coca-Cola"),
             ProductScreen.orderlineIsToOrder("Coca-Cola"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickPayButton(),
             PaymentScreen.clickPaymentMethod("Cash"),
@@ -58,13 +66,13 @@ registry.category("web_tour.tours").add("PreparationDisplayTourResto", {
             ProductScreen.orderlineIsToOrder("Coca-Cola"),
             ProductScreen.orderlineIsToOrder("Water"),
             ProductScreen.orderlineIsToOrder("Minute Maid"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.selectedOrderlineHas("Minute Maid", "1.00"),
             ProductScreen.clickNumpad("⌫"),
             ProductScreen.selectedOrderlineHas("Minute Maid", "0.00"),
             ProductScreen.orderlineIsToOrder("Minute Maid"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickPayButton(),
             PaymentScreen.clickPaymentMethod("Cash"),
@@ -85,11 +93,11 @@ registry.category("web_tour.tours").add("PreparationDisplayTourInternalNotes", {
             ProductScreen.orderlineIsToOrder("Coca-Cola"),
             ProductScreen.clickDisplayedProduct("water"),
             ProductScreen.addInternalNote("Test Internal Notes water", "Note"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickInternalNoteButton(),
             Dialog.cancel(),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             Order.hasLine({
                 productName: "Coca-Cola",
@@ -114,13 +122,11 @@ registry.category("web_tour.tours").add("PreparationDisplayTourResto2", {
             ProductScreen.orderBtnIsPresent(),
             ProductScreen.clickDisplayedProduct("Coca-Cola"),
             ProductScreen.orderlineIsToOrder("Coca-Cola"),
-            ProductScreen.clickOrderButton(),
-            Chrome.waitRequest(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickDisplayedProduct("Coca-Cola"),
             ProductScreen.orderlineIsToOrder("Coca-Cola"),
-            ProductScreen.clickOrderButton(),
-            Chrome.waitRequest(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             Chrome.clickPlanButton(),
         ].flat(),
@@ -135,7 +141,7 @@ registry.category("web_tour.tours").add("PreparationDisplayCancelOrderTour", {
             ProductScreen.orderBtnIsPresent(),
             ProductScreen.clickDisplayedProduct("Test Food"),
             ProductScreen.orderlineIsToOrder("Test Food"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickReview(),
             ProductScreen.clickControlButton("Cancel Order"),
@@ -157,10 +163,10 @@ registry.category("web_tour.tours").add("PreparationDisplayTourSkipChange", {
             ProductScreen.doubleClickLine("Coca-Cola"),
             ProductScreen.clickDisplayedProduct("Coca-Cola"),
             ProductScreen.clickDisplayedProduct("Water"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickDisplayedProduct("Minute Maid"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
         ].flat(),
 });
@@ -193,11 +199,11 @@ registry.category("web_tour.tours").add("PreparationDisplayPaymentNotCancelDispl
             FloorScreen.clickTable("5"),
             ProductScreen.addOrderline("Coca-Cola", "2"),
             ProductScreen.addInternalNote("To Serve"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.addOrderline("Coca-Cola", "2"),
             ProductScreen.addInternalNote("To Serve"),
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             ProductScreen.orderlinesHaveNoChange(),
             ProductScreen.clickNumpad("⌫"),
             ProductScreen.clickNumpad("1"),
@@ -209,7 +215,7 @@ registry.category("web_tour.tours").add("PreparationDisplayPaymentNotCancelDispl
             {
                 trigger: ".submit-order:contains(-1)",
             },
-            ProductScreen.clickOrderButton(),
+            clickOrderButton(),
             Order.hasLine({
                 productName: "Coca-Cola",
                 quantity: 2,
@@ -228,14 +234,6 @@ registry.category("web_tour.tours").add("PreparationDisplayPaymentNotCancelDispl
             Chrome.endTour(),
         ].flat(),
 });
-
-function clickOrderButton() {
-    return [
-        ProductScreen.clickOrderButton(),
-        Chrome.waitRequest(),
-        ProductScreen.orderlinesHaveNoChange(),
-    ].flat();
-}
 
 registry.category("web_tour.tours").add("test_update_internal_note_of_order", {
     steps: () =>

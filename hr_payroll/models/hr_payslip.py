@@ -50,7 +50,7 @@ class HrPayslip(models.Model):
         string='Reference', copy=False)
     employee_id = fields.Many2one(
         'hr.employee', string='Employee', required=True,
-        domain="['|', ('company_id', '=', False), ('company_id', '=', company_id), '|', ('active', '=', True), ('active', '=', False)]")
+        domain="['|', ('company_id', '=', False), ('company_id', 'child_of', company_id), '|', ('active', '=', True), ('active', '=', False)]")
     image_128 = fields.Image(related='employee_id.image_128')
     image_1920 = fields.Image(related='employee_id.image_1920')
     avatar_128 = fields.Image(related='employee_id.avatar_128')
@@ -410,9 +410,9 @@ class HrPayslip(models.Model):
             # NOTE: Since we combine multiple attachments on one input line, it's not possible to compute
             #  how much per attachment needs to be taken record_payment will consume monthly payments (child_support) before other attachments
             for slip in self.filtered(lambda r: r.salary_attachment_ids):
-                for deduction_codes, attachments in slip.salary_attachment_ids.grouped(lambda x: x.other_input_type_id.code).items():
+                for deduction_code, attachments in slip.salary_attachment_ids.grouped(lambda x: x.other_input_type_id.code).items():
                     # Use the amount from the computed value in the payslip lines not the input
-                    salary_lines = slip.line_ids.filtered(lambda r: r.code in deduction_codes)
+                    salary_lines = slip.line_ids.filtered(lambda r: r.code == deduction_code)
                     if not attachments or not salary_lines:
                         continue
                     slip._record_attachment_payment(attachments, salary_lines)

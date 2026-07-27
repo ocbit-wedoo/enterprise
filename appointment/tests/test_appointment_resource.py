@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import psycopg2.errors
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
@@ -8,6 +9,7 @@ from odoo import Command
 from odoo.addons.appointment.tests.common import AppointmentCommon
 from odoo.exceptions import ValidationError
 from odoo.tests import Form, tagged, users, warmup
+from odoo.tools import mute_logger
 
 
 @tagged('appointment_resources', 'post_install', '-at_install')
@@ -57,6 +59,36 @@ class AppointmentResource(AppointmentCommon):
             'capacity': 1,
             'name': 'Resource 3',
         }])
+
+    @users('apt_manager')
+    def test_appointment_capacity_used_updated_on_cancel(self):
+        start = datetime(2026, 2, 14, 15, 0, 0)
+        booking = self._create_meetings(
+            self.env.user,
+            [(start, start + timedelta(hours=1), False)],
+            self.appointment_manage_capacity.id,
+            meeting_values={
+                'booking_line_ids': [(0, 0, {
+                    'appointment_resource_id': self.resource_1.id,
+                    'capacity_reserved': 3,
+                })],
+            }
+        )[0]
+        booking_line = booking.booking_line_ids
+
+        with mute_logger('odoo.sql_db'), self.assertRaises(psycopg2.errors.CheckViolation):
+            self.resource_1.capacity = 2
+        self.assertEqual(booking_line.capacity_used, 3, "The capacity used should be 3, the full resource capacity, for active bookings")
+        self.assertEqual(booking_line.capacity_reserved, 3, "The capacity reserved should be 3 for active bookings")
+
+        booking.action_archive()
+
+        self.assertEqual(booking_line.capacity_used, 3, "The capacity used should match the capacity reserved for archived bookings")
+        self.assertEqual(booking_line.capacity_reserved, 3, "The capacity reserved should be kept for archived bookings")
+        # check we can now reduce it past the previously reserved capacity.
+        self.resource_1.capacity = 2
+
+        self.assertEqual(booking_line.capacity_used, booking_line.capacity_reserved, "Capacity used and reserved should be equal for archived bookings")
 
     @users('apt_manager')
     def test_appointment_resource_default_appointment_type(self):

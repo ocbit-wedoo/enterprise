@@ -664,27 +664,18 @@ class ResPartner(models.Model):
         return invoice_online_payment and payment_method_available
 
     def _compute_has_moves(self):
-        query = self.env['res.partner']._search([('id', 'in', self.ids)])
-        account_move_query = self.env["account.move"]._search(
-            [
-                ("company_id", "in", self.env.companies.ids),
-                "|",
-                ("partner_id", "=", SQL.identifier(query.table, "id")),
-                "|",
-                ("partner_shipping_id", "=", SQL.identifier(query.table, "id")),
-                ("commercial_partner_id", "=", SQL.identifier(query.table, "id")),
-            ]
-        )
-        result = dict(self.env.execute_query(query.select(
-            "id",
-            SQL(
-                "EXISTS (%s) AS has_moves",
-                account_move_query.subselect(SQL.identifier(account_move_query.table, "id")),
-            ),
-        )))
+        field_names = ['partner_id', 'partner_shipping_id', 'commercial_partner_id']
+        partner_ids = {row[0] for row in self.env.execute_query(SQL("\nUNION ").join(
+            [self.env['account.move']._search(
+                [('company_id', 'in', self.env.companies.ids), (name, 'in', self.ids)]
+            ).subselect('account_move.' + name) for name in field_names] +
+            [self.env['account.move.line']._search(
+                [('company_id', 'in', self.env.companies.ids), ('partner_id', 'in', self.ids)]
+            ).subselect('account_move_line.partner_id')]
+        ))}
 
         for partner in self:
-            partner.has_moves = result.get(partner.id, False)
+            partner.has_moves = partner.id in partner_ids
 
     def _get_followup_report_pdf(self, options):
         """

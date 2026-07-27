@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-03-13 23:32+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-06-13 09:18+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/planning/"
 "hi/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: planning
 #. odoo-python
@@ -924,7 +924,7 @@ msgstr "इसके बाद की सभी शिफ़्ट हटा द
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "Allocated Hours"
-msgstr ""
+msgstr "आवंटित किए हुए घंटे"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
@@ -2701,8 +2701,8 @@ msgstr "शुरुआत का समय माइनस में नही�
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
-"The start hour cannot be before the end hour for a one-day shift template."
-msgstr "एक-दिवसीय शिफ़्ट टेम्प्लेट के लिए, शुरुआती समय, समाप्ति समय से पहले नहीं हो सकता।"
+"The start hour cannot be after the end hour for a one-day shift template."
+msgstr ""
 
 #. module: planning
 #. odoo-python
@@ -3098,6 +3098,11 @@ msgstr " "
 #: model:mail.template,subject:planning.email_template_slot_single
 msgid "{{ ctx.get('mail_subject', '') }} {{ ctx.get('start_datetime' , '') }}"
 msgstr ""
+
+#~ msgid ""
+#~ "The start hour cannot be before the end hour for a one-day shift template."
+#~ msgstr ""
+#~ "एक-दिवसीय शिफ़्ट टेम्प्लेट के लिए, शुरुआती समय, समाप्ति समय से पहले नहीं हो सकता।"
 
 #~ msgid "15"
 #~ msgstr "15"

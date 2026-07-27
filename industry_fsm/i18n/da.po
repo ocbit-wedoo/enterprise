@@ -11,13 +11,14 @@
 # Mads Søndergaard, 2024
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-04-11 09:06+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 14:17+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "industry_fsm/da/>\n"
 "Language: da\n"
@@ -25,12 +26,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__nbr
 msgid "# of Tasks"
-msgstr "Antal opgaver"
+msgstr "# opgaver"
 
 #. module: industry_fsm
 #. odoo-python
@@ -108,12 +109,12 @@ msgid ""
 "        "
 msgstr ""
 "<p>\n"
-"                Kære <t t-out=\"object.partner_id.name or "
-"'Customer'\">kunde</t>,<br/><br/>\n"
-"                Vedhæftet finder du feltrapporten for vores arbejde på "
-"stedet. <br/><br/>\n"
-"                Du er velkommen til at kontakte os, hvis du har spørgsmål."
-"<br/><br/>\n"
+"                Kære <t t-out=\"object.partner_id.name or 'Customer'\">"
+"kunde</t><br/><br/>\n"
+"                Vedhæftet finder du den udkørende service-rapport for vores "
+"arbejde på stedet. <br/><br/>\n"
+"                Du er velkommen til at kontakte os, hvis du har "
+"spørgsmål.<br/><br/>\n"
 "                Med venlig hilsen<br/><br/>\n"
 "            </p>\n"
 "        "
@@ -149,9 +150,9 @@ msgstr ""
 "10px;                             color: #fff;                             "
 "text-transform: uppercase;                             text-align: "
 "center;                             font-weight: bold; line-height: "
-"20px;                             transform: "
-"rotate(45deg);                             width: 100px; height: auto; "
-"display: block;                             background: "
+"20px;                             transform: rotate(45deg)"
+";                             width: 100px; height: auto; display: "
+"block;                             background: "
 "green;                             position: "
 "absolute;                             top: 19px; right: -21px; left: "
 "auto;                             padding: 0;\">\n"
@@ -162,8 +163,7 @@ msgstr ""
 #: model_terms:web_tour.tour,rainbow_man_message:industry_fsm.industry_fsm_tour
 msgid "<span><b>Good job!</b> You went through all steps of this tour.</span>"
 msgstr ""
-"<span><b>Godt arbejde!</b> Du gennemgik samtlige trin for denne rundvisning."
-"</span>"
+"<span><b>Godt klaret!</b> Du har gennemført alle trin i rundvisningen.</span>"
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.worksheet_custom_page
@@ -262,12 +262,12 @@ msgstr "Efter lokation"
 #. module: industry_fsm
 #: model:ir.ui.menu,name:industry_fsm.project_task_menu_planning_by_project_fsm
 msgid "By Project"
-msgstr "Af projekt"
+msgstr "Efter projekt"
 
 #. module: industry_fsm
 #: model:ir.ui.menu,name:industry_fsm.project_task_menu_planning_by_user_fsm
 msgid "By User"
-msgstr "Af bruger"
+msgstr "Efter bruger"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__partner_city
@@ -298,7 +298,7 @@ msgstr "Virksomhed"
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: industry_fsm
 #: model:ir.ui.menu,name:industry_fsm.fsm_menu_settings
@@ -374,7 +374,7 @@ msgid ""
 "Create projects to organize your tasks and define a different workflow for "
 "each project."
 msgstr ""
-"Opret projekter til at organisere dine opgaver og angiv forskellige "
+"Opret projekter til at organisere dine opgaver, og angiv forskellige "
 "workflows for hvert projekt."
 
 #. module: industry_fsm
@@ -404,13 +404,13 @@ msgstr "Kunde forhåndsvisning"
 #. module: industry_fsm
 #: model:ir.ui.menu,name:industry_fsm.fsm_menu_reporting_customer_ratings
 msgid "Customer Ratings"
-msgstr "Kundebedømmelse "
+msgstr "Kundebedømmelser"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__partner_state_id
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__partner_state_id
 msgid "Customer State"
-msgstr "Kunde stat"
+msgstr "Kundens stat"
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.worksheet_custom_page
@@ -454,7 +454,7 @@ msgstr "Kassér"
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task_stop_timers_wizard_line__display_name
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: industry_fsm
 #: model:ir.model.fields,help:industry_fsm.field_project_project__is_fsm
@@ -463,7 +463,8 @@ msgid ""
 "Display tasks in the Field Service module and allow planning with start/end "
 "dates."
 msgstr ""
-"Vis sager i felt service modulet, og tillad planlægning med start/slutdatoer."
+"Vis opgaver i udkørende service-modulet, og tillad planlægning med start/"
+"slutdatoer."
 
 #. module: industry_fsm
 #. odoo-python
@@ -479,7 +480,7 @@ msgstr "E-mail sendt, når der klikkes på \"Send rapport\" i en opgave"
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__date_end
 msgid "Ending Date"
-msgstr "Slut dato"
+msgstr "Slutdato"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_res_config_settings__group_industry_fsm_quotations
@@ -489,7 +490,7 @@ msgstr "Ekstra tilbud"
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_report_project_task_user_fsm
 msgid "FSM Tasks Analysis"
-msgstr "FSM Sags analyse"
+msgstr "Analyse af opgaver for udkørende service"
 
 #. module: industry_fsm
 #. odoo-python
@@ -502,7 +503,7 @@ msgstr "FSM Sags analyse"
 #: model_terms:ir.ui.view,arch_db:industry_fsm.project_view_form_inherit
 #: model_terms:ir.ui.view,arch_db:industry_fsm.res_config_settings_view_form
 msgid "Field Service"
-msgstr "Felt tjeneste"
+msgstr "Udkørende service"
 
 #. module: industry_fsm
 #: model:ir.actions.report,name:industry_fsm.task_custom_report
@@ -533,7 +534,7 @@ msgstr "Udkørende service: Opgave planlagt"
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_action_fsm_map
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_action_fsm_map2
 msgid "Find here your itinerary for today's tasks."
-msgstr "Her finder du din plan for dagens opgaver."
+msgstr "Her finder du rejseruten for dagens opgaver."
 
 #. module: industry_fsm
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_action_fsm
@@ -576,19 +577,19 @@ msgstr "ID"
 #. module: industry_fsm
 #: model:project.task.type,name:industry_fsm.planning_project_stage_2
 msgid "In Progress"
-msgstr "I gang"
+msgstr "Behandles"
 
 #. module: industry_fsm
 #. odoo-python
 #: code:addons/industry_fsm/controllers/portal.py:0
 msgid "Invalid Task."
-msgstr "Ugyldig sag."
+msgstr "Ugyldig opgave."
 
 #. module: industry_fsm
 #. odoo-python
 #: code:addons/industry_fsm/controllers/portal.py:0
 msgid "Invalid signature data."
-msgstr "Ugyldig signatur data."
+msgstr "Ugyldige underskriftsdata."
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__message_is_follower
@@ -611,8 +612,8 @@ msgid ""
 "Keep track of the products used for your tasks, and invoice your time and "
 "material to your customers"
 msgstr ""
-"Hold styr på produkterne, der er anvendt på dine opgaver, og fakturér din "
-"tid og materialer til dine kunder"
+"Hold styr på de produkter, der bruges på dine opgaver, og fakturér både tid "
+"og materialer til dine kunder"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__rating_last_value
@@ -639,7 +640,7 @@ msgstr "Sidst opdateret den"
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.project_task_view_search_fsm
 msgid "Late Activities"
-msgstr "Overskredet aktiviteter"
+msgstr "Forfaldne aktiviteter"
 
 #. module: industry_fsm
 #. odoo-javascript
@@ -676,7 +677,7 @@ msgstr "Administrér SMV'er"
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.project_view_form_inherit
 msgid "Manage tasks in the Field Service module"
-msgstr "Planlæg opgaver i Felt Tjeneste modulet"
+msgstr "Planlæg opgaver i udkørende service-modulet"
 
 #. module: industry_fsm
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_fsm_map
@@ -743,7 +744,7 @@ msgstr "Mine opgaver i mobil serveraktion"
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.view_partner_address_form_industry_fsm
 msgid "Navigate To"
-msgstr "Naviger Til"
+msgstr "Navigér til"
 
 #. module: industry_fsm
 #. odoo-python
@@ -764,7 +765,7 @@ msgstr "Fandt ikke noget projekt. Lad os oprette et!"
 #. module: industry_fsm
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_type_action_fsm
 msgid "No stages found. Let's create one!"
-msgstr "Ingen stadier fundet. Lad os oprette en!"
+msgstr "Ingen faser fundet. Lad os oprette en!"
 
 #. module: industry_fsm
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_action_all_fsm
@@ -788,7 +789,7 @@ msgstr "Ingen opgaver fundet. Lad os oprette en!"
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__overtime
 msgid "Overtime"
-msgstr "Overtid"
+msgstr "Overarbejde"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__parent_id
@@ -830,7 +831,7 @@ msgstr "Planlægning på server efter lokation"
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_fsm_planning_groupby_project
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_fsm_planning_groupby_project2
 msgid "Planning by Project"
-msgstr "Planlæggelse per Projekt"
+msgstr "Planlægning efter projekt"
 
 #. module: industry_fsm
 #: model:ir.actions.server,name:industry_fsm.project_task_fsm_planning_groupby_project_server_action
@@ -841,7 +842,7 @@ msgstr "Planlægning efter projektserverhandling"
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_fsm_planning_groupby_user
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_fsm_planning_groupby_user2
 msgid "Planning by User"
-msgstr "Planlæggelse per Bruger"
+msgstr "Planlægning efter bruger"
 
 #. module: industry_fsm
 #: model:ir.actions.server,name:industry_fsm.project_task_fsm_planning_groupby_user_server_action
@@ -888,7 +889,7 @@ msgstr ""
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_ir_actions_report
 msgid "Report Action"
-msgstr "Rapporter handling"
+msgstr "Rapportér handling"
 
 #. module: industry_fsm
 #: model:ir.ui.menu,name:industry_fsm.fsm_menu_reporting
@@ -905,7 +906,7 @@ msgstr "Rapportering"
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_action_to_schedule_fsm
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_action_to_schedule_fsm2
 msgid "Schedule your tasks and assign them to your workers."
-msgstr "Planlæg dine opgaver og tildel dem til dine ansatte."
+msgstr "Planlæg dine opgaver, og tildel dem til dine ansatte."
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.report_project_task_user_fsm_view_search
@@ -935,14 +936,14 @@ msgid ""
 "Set this template on a project's stage to automate email when tasks reach "
 "stages"
 msgstr ""
-"Angiv denne skabelon på et projekts fase for at automatisere email, når "
-"opgaver når faser"
+"Knyt denne skabelon til en projekts fase for at automatisere e-mails, når "
+"opgaver når denne fase"
 
 #. module: industry_fsm
 #: model:ir.actions.act_window,name:industry_fsm.res_config_settings_action_fsm
 #: model:ir.ui.menu,name:industry_fsm.fsm_menu_settings_res_config
 msgid "Settings"
-msgstr "Opsætning"
+msgstr "Indstillinger"
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.project_task_view_search_fsm
@@ -958,14 +959,14 @@ msgstr "Underskriv udkørende service-rapport"
 #: model_terms:ir.ui.view,arch_db:industry_fsm.portal_task_sign_modal
 #: model_terms:ir.ui.view,arch_db:industry_fsm.view_task_form2_inherit
 msgid "Sign Report"
-msgstr "Undskriv rapport"
+msgstr "Underskriv rapport"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__worksheet_signature
 #: model_terms:ir.ui.view,arch_db:industry_fsm.portal_my_task
 #: model_terms:ir.ui.view,arch_db:industry_fsm.worksheet_custom_page
 msgid "Signature"
-msgstr "Signatur"
+msgstr "Underskrift"
 
 #. module: industry_fsm
 #. odoo-python
@@ -981,7 +982,7 @@ msgstr "Underskrevet af"
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__user_skill_ids
 msgid "Skills"
-msgstr "Færdigheder"
+msgstr "Kompetencer"
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.view_task_stop_timer_wizard_form
@@ -1006,7 +1007,7 @@ msgstr "Faser"
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.project_task_view_search_fsm
 msgid "Start Date"
-msgstr "Start dato"
+msgstr "Startdato"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__planned_date_begin
@@ -1028,7 +1029,7 @@ msgstr "Stop <b>timeren</b>, når du er færdig."
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__partner_street
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__partner_street
 msgid "Street"
-msgstr "Vej"
+msgstr "Gade"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__partner_street2
@@ -1039,7 +1040,7 @@ msgstr "Gade2"
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.report_project_task_user_fsm_view_tree
 msgid "Sum of Effective Hours"
-msgstr "Sum af effektive timer"
+msgstr "Sum af faktiske timer"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__tag_ids
@@ -1062,12 +1063,12 @@ msgstr "Opgaveafhængigheder"
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__fsm_done
 msgid "Task Done"
-msgstr "Sag færdiggjort"
+msgstr "Opgave udført"
 
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_project_task_recurrence
 msgid "Task Recurrence"
-msgstr "Opgave Gentagelse"
+msgstr "Opgavegentagelse"
 
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_project_task_type
@@ -1077,7 +1078,7 @@ msgstr "Opgavefase"
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_report_industry_fsm_worksheet_custom
 msgid "Task Worksheet Custom Report"
-msgstr "Sag arbejdsseddel tilpasset rapport"
+msgstr "Rapport om tilpasset arbejdsseddel pr. opgave"
 
 #. module: industry_fsm
 #: model:ir.model,name:industry_fsm.model_project_task_stop_timers_wizard
@@ -1103,7 +1104,7 @@ msgstr "Opgaver"
 #: model:ir.ui.menu,name:industry_fsm.fsm_menu_reporting_task_analysis
 #: model_terms:ir.ui.view,arch_db:industry_fsm.report_project_task_user_fsm_view_tree
 msgid "Tasks Analysis"
-msgstr "Opgave analyse"
+msgstr "Opgaveanalyse"
 
 #. module: industry_fsm
 #. odoo-python
@@ -1125,7 +1126,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/industry_fsm/controllers/portal.py:0
 msgid "The worksheet is not in a state requiring customer signature."
-msgstr "Arbejdssedlen er ikke i en tilstand der påkræver kundens signatur."
+msgstr "Arbejdssedlen er ikke i en tilstand, hvor kundens signatur er påkrævet."
 
 #. module: industry_fsm
 #. odoo-python
@@ -1192,19 +1193,19 @@ msgstr "Timer stoppede den: %(date)s %(time)s"
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.timesheet_view_form
 msgid "Timesheet"
-msgstr "Timeseddel"
+msgstr "Tidsregistrering"
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.worksheet_custom_page
 msgid "Timesheets"
-msgstr "Timesedler"
+msgstr "Tidsregistreringer"
 
 #. module: industry_fsm
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_to_schedule_fsm
 #: model:ir.actions.act_window,name:industry_fsm.project_task_action_to_schedule_fsm2
 #: model:ir.ui.menu,name:industry_fsm.fsm_menu_all_tasks_schedule
 msgid "To Schedule"
-msgstr "At skemalægge"
+msgstr "At planlægge"
 
 #. module: industry_fsm
 #: model:ir.actions.server,name:industry_fsm.project_task_to_schedule_fsm_server_action
@@ -1251,7 +1252,7 @@ msgstr "Dagens aktiviteter"
 #. module: industry_fsm
 #: model_terms:ir.actions.act_window,help:industry_fsm.project_task_type_action_fsm
 msgid "Track the progress of your tasks from their creation to their closing."
-msgstr "Spor fremgangen på dine opgaver fra oprettelse til udførsel."
+msgstr "Følg fremdriften på dine opgaver fra oprettelse til afslutning."
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.project_task_view_search_fsm
@@ -1271,7 +1272,7 @@ msgstr "Se rute"
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task_stop_timers_wizard_line__wizard_id
 msgid "Wizard"
-msgstr "Guide"
+msgstr "Assistent"
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.worksheet_custom_page
@@ -1291,17 +1292,17 @@ msgstr "Arbejdsdage til lukning"
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__working_hours_open
 msgid "Working Hours to Assign"
-msgstr "Arbejdstimer til at tildele"
+msgstr "Arbejdstimer til tildeling"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__working_hours_close
 msgid "Working Hours to Close"
-msgstr "Arbejdstimer til at lukke"
+msgstr "Arbejdstimer til lukning"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_res_config_settings__module_industry_fsm_report
 msgid "Worksheet Templates"
-msgstr "Arbejdsseddel skabeloner"
+msgstr "Arbejdsseddelskabeloner"
 
 #. module: industry_fsm
 #: model:mail.template,subject:industry_fsm.mail_template_data_intervention_details
@@ -1314,17 +1315,17 @@ msgid ""
 "lang_code=object.partner_id.lang) or '' }}"
 msgstr ""
 "Din opgave på stedet er planlagt {{ object.planned_date_begin and "
-"object.date_deadline and 'from the ' + "
-"format_datetime(object.planned_date_begin, tz=object.partner_id.tz, "
-"lang_code=object.partner_id.lang) + ' to the ' + "
-"format_datetime(object.date_deadline, tz=object.partner_id.tz, "
+"object.date_deadline and 'from the ' + format_datetime"
+"(object.planned_date_begin, tz=object.partner_id.tz, "
+"lang_code=object.partner_id.lang) + ' to the ' + format_datetime"
+"(object.date_deadline, tz=object.partner_id.tz, "
 "lang_code=object.partner_id.lang) or '' }}"
 
 #. module: industry_fsm
 #: model:ir.model.fields,field_description:industry_fsm.field_project_task__partner_zip
 #: model:ir.model.fields,field_description:industry_fsm.field_report_project_task_user_fsm__partner_zip
 msgid "ZIP"
-msgstr "Post nr."
+msgstr "Postnr."
 
 #. module: industry_fsm
 #: model_terms:ir.ui.view,arch_db:industry_fsm.quick_create_task_form_fsm_inherited

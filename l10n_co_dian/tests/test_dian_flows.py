@@ -312,11 +312,11 @@ class TestDianFlows(TestCoDianCommon):
 
     def test_invoice_date_constraints_dian(self):
         """Test that invoices date older than 6 days or more than 6 days ahead trigger the constraint."""
-        now = fields.Datetime.now()
+        bogota_today = fields.Date.context_today(self.env.user.with_context(tz='America/Bogota'))
 
-        valid_invoice = self._create_move(invoice_date=now - timedelta(days=6))
+        valid_invoice = self._create_move(invoice_date=bogota_today - timedelta(days=6))
         self._mock_send_and_print(move=valid_invoice, response_file='SendBillSync_warnings.xml')
 
-        invalid_invoice = self._create_move(invoice_date=now - timedelta(days=7))
+        invalid_invoice = self._create_move(invoice_date=bogota_today - timedelta(days=7))
         with self.assertRaisesRegex(UserError, "The issue date can not be older than 6 days or more than 6 days in the future."):
             self._mock_send_and_print(move=invalid_invoice, response_file='SendBillSync_warnings.xml')

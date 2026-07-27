@@ -18,13 +18,14 @@
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
 # Mikael Akerberg <mikael.akerberg@mariaakerberg.com>, 2025.
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 18:51+0000\n"
-"PO-Revision-Date: 2026-03-13 23:32+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-22 09:09+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "hr_expense_extract/sv/>\n"
 "Language: sv\n"
@@ -32,15 +33,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_expense_extract
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "<b>Wasting time recording your receipts?</b> Let’s try a better way."
 msgstr ""
-"<b> Slösar du tid på att registrera dina kvitton? </b> Låt oss prova ett "
-"bättre sätt."
+"<b> Spenderar du mycket tid på att redovisa kvitton? </b> Prova en annan "
+"metod."
 
 #. module: hr_expense_extract
 #: model_terms:web_tour.tour,rainbow_man_message:hr_expense_extract.hr_expense_extract_tour
@@ -48,6 +49,8 @@ msgid ""
 "<span><b>Congratulations</b>, you are now an expert of Expenses.\n"
 "        </span>"
 msgstr ""
+"<span><b>Grattis</b>, du är nu en expert på Utgifter.\n"
+"        </span>"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_needaction
@@ -72,7 +75,7 @@ msgstr "Tillgänglig betalningsmetod"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_can_show_send_button
 msgid "Can show the ocr send button"
-msgstr "Kan visa knappen Skicka OCR igen"
+msgstr "Kan visa knappen Skicka OCR"
 
 #. module: hr_expense_extract
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.expense_sample_register_view_form
@@ -136,7 +139,7 @@ msgstr "Digitalisera dokument"
 #. module: hr_expense_extract
 #: model:ir.model.fields.selection,name:hr_expense_extract.selection__res_company__expense_extract_show_ocr_option_selection__manual_send
 msgid "Digitize on demand only"
-msgstr "Digitalisering endast på begäran"
+msgstr "Digitalisera endast vid behov"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_expense_sample_receipt__display_name
@@ -158,17 +161,17 @@ msgstr "Felmeddelande"
 #: model:ir.model,name:hr_expense_extract.model_hr_expense
 #: model:ir.model.fields,field_description:hr_expense_extract.field_expense_sample_register__sheet_id
 msgid "Expense"
-msgstr "Kostnader"
+msgstr "Utgift"
 
 #. module: hr_expense_extract
 #: model:ir.actions.server,name:hr_expense_extract.ir_cron_update_ocr_status_ir_actions_server
 msgid "Expense OCR: Update All Status"
-msgstr "Utgifter OCR: Uppdatera all status"
+msgstr "OCR för utgifter: Uppdatera status för alla"
 
 #. module: hr_expense_extract
 #: model:ir.actions.server,name:hr_expense_extract.ir_cron_ocr_validate_ir_actions_server
 msgid "Expense OCR: Validate Expenses"
-msgstr "OCR för utlägg: Validera utlägg"
+msgstr "OCR för utgifter: Validera utgifter"
 
 #. module: hr_expense_extract
 #: model:ir.model,name:hr_expense_extract.model_hr_expense_sheet
@@ -183,12 +186,12 @@ msgstr "Uppdelning av utgifter"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_res_config_settings__expense_extract_show_ocr_option_selection
 msgid "Expense processing option"
-msgstr "Alternativ för hantering av utlägg"
+msgstr "Alternativ för hantering av utgifter"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__sample
 msgid "Expenses created from sample receipt"
-msgstr ""
+msgstr "Utgifter som skapats från exempelkvittot"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_state_processed
@@ -198,7 +201,7 @@ msgstr "Hämtningsstatus behandlad"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_state
 msgid "Extract state"
-msgstr "Extraheringsläge"
+msgstr "Hämtningsstatus"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_status
@@ -213,7 +216,7 @@ msgstr "Följare"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_partner_ids
 msgid "Followers (Partners)"
-msgstr "Följare (kontakter)"
+msgstr "Följare (Partners)"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__has_message
@@ -244,13 +247,13 @@ msgstr "ID-nummer för förfrågan till IAP-OCR"
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Om markerat, nya meddelanden kräver din uppmärksamhet."
+msgstr "Om ikryssad, så finns det nya meddelanden som kräver din uppmärksamhet."
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_has_error
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Om markerad, några meddelanden har leveransfel."
+msgstr "Om ikryssad, så finns det meddelanden med leveransfel."
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_is_follower
@@ -319,7 +322,7 @@ msgstr "Memo"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_has_error
 msgid "Message Delivery error"
-msgstr "Meddelande leveransfel"
+msgstr "Leveransfel för meddelanden"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_ids
@@ -339,7 +342,7 @@ msgstr "Antal fel"
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Antal meddelanden som kräver åtgärd"
+msgstr "Antal meddelanden som kräver åtgärder"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_has_error_counter
@@ -364,7 +367,7 @@ msgstr "Betalningsmetod"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__rating_ids
 msgid "Ratings"
-msgstr "Betyg"
+msgstr "Omdömen"
 
 #. module: hr_expense_extract
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.expense_sample_register_view_form
@@ -385,71 +388,71 @@ msgstr "Registrera exempel på betalningar"
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Report this expense to your manager for validation."
-msgstr "Rapportera denna kostnad till din chef för godkännande."
+msgstr "Rapportera den här utgiften till din chef för validering."
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS leveransfel"
+msgstr "Leveransfel för SMS"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__sample
 msgid "Sample"
-msgstr "Prov"
+msgstr "Exempel"
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/wizard/expense_sample_receipt.py:0
 msgid "Sample Employee"
-msgstr "Exempel på anställd"
+msgstr "Exempelanställd"
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/wizard/expense_sample_receipt.py:0
 msgid "Sample Receipt: %s"
-msgstr "Exempel på kvitto: %s"
+msgstr "Exempelkvitto: %s"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_res_company__expense_extract_show_ocr_option_selection
 msgid "Send mode on expense attachments"
-msgstr "Skicka-läge för bilagor till utlägg"
+msgstr "Läge för att skicka utgiftsbilagor"
 
 #. module: hr_expense_extract
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.expense_sample_receipt_view_form
 msgid "Try Expense Digitization"
-msgstr ""
+msgstr "Prova på digitalisering av utgifter"
 
 #. module: hr_expense_extract
 #: model:ir.actions.act_window,name:hr_expense_extract.action_expense_sample_receipt
 msgid "Try Sample Receipt"
-msgstr "Försök med exempelkvitto"
+msgstr "Prova på med ett exempelkvitto"
 
 #. module: hr_expense_extract
 #: model:ir.model,name:hr_expense_extract.model_expense_sample_receipt
 msgid "Try Sample Receipts"
-msgstr "Försök med exempelkvitton"
+msgstr "Prova på med exempelkvitton"
 
 #. module: hr_expense_extract
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Try the AI with a sample receipt."
-msgstr "Testa AI med ett exempelkvitton."
+msgstr "Prova på AI-funktionen med ett exempelkvitto."
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "Upload or drop an expense receipt"
-msgstr "Ladda upp eller släpp ett utläggskvitto"
+msgstr "Ladda upp eller släpp ett kvitto på en utgift"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__website_message_ids
 msgid "Website Messages"
-msgstr "Webbplatsmeddelanden"
+msgstr "Hemsidesmeddelanden"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__website_message_ids
 msgid "Website communication history"
-msgstr "Webbplatsens kommunikationshistorik"
+msgstr "Hemsidans kommunikationshistorik"
 
 #. module: hr_expense_extract
 #. odoo-python
@@ -461,16 +464,16 @@ msgstr "Du kan inte blanda provutgifter och vanliga utgifter."
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "You cannot send a expense that is not in draft state!"
-msgstr "Du kan inte skicka en kostnad som inte är utkast!"
+msgstr "En utgift som ska skickas in måste vara i form av ett utkast!"
 
 #. module: hr_expense_extract
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Your manager will have to approve (or refuse) your expense reports."
-msgstr "Din chef måste godkänna (eller avslå) dina utläggsrapporter."
+msgstr "Din chef måste validera (eller avvisa) dina utgiftsrapporter."
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "try a sample receipt"
-msgstr ""
+msgstr "prova på ett exempelkvitto"

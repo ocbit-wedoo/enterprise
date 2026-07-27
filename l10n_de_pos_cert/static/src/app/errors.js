@@ -7,7 +7,10 @@ import { AlertDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 export class TaxError extends Error {
     constructor(product) {
         super(
-            `The tax for the product '${product.display_name}' with id ${product.id} is not allowed.`
+            _t("The tax for the product '%(productName)s' with id %(productId)s is not allowed.", {
+                productName: product.display_name,
+                productId: product.id,
+            })
         );
     }
 }
