@@ -23,9 +23,8 @@ class AccountPayment(models.Model):
                 if get_lang(self.env).code.startswith('en'):
                     check_amount = check_amount.replace('And ', '').replace(',', '')
                 if amount_company_currency % 1 > 0:
-                    # If there are decimals, we write them as x/100
-                    decimal_places = pay.currency_id.decimal_places
-                    amount = float_repr(float_round(amount_company_currency, decimal_places), decimal_places)
+                    # If there are decimals, we write them as xx/100, max 2 decimals
+                    amount = float_repr(float_round(amount_company_currency, 2), 2)
                     check_amount += f' and {amount.split(".")[1].ljust(2, "0")}/100'
                 else:
                     check_amount += ' ONLY'

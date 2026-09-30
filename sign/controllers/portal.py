@@ -23,7 +23,7 @@ class CustomerPortal(portal.CustomerPortal):
         if 'to_sign_count' in counters:
             partner_id = request.env.user.partner_id
             values['to_sign_count'] = request.env['sign.request.item'].sudo().search_count([
-                ('partner_id', '=', partner_id.id), ('sign_request_id.state', '=', 'sent'), ('is_mail_sent', '=', True),
+                ('partner_id', '=', partner_id.id), ('sign_request_id.state', '=', 'sent'), ('state', '=', 'sent'), ('is_mail_sent', '=', True),
             ])
         if 'sign_count' in counters:
             partner_id = request.env.user.partner_id

@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 19:07+0000\n"
-"PO-Revision-Date: 2026-04-15 09:55+0000\n"
+"POT-Creation-Date: 2026-06-19 18:02+0000\n"
+"PO-Revision-Date: 2026-09-18 06:35+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18-l10n/"
 "l10n_ch_hr_payroll/de/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,help:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line__solution_number
@@ -78,7 +78,7 @@ msgstr ""
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll.selection__l10n_ch_accident_insurance_line__solution_number__1
 msgid "1 - Occupational and Non-Occupational Insured, with deductions"
-msgstr "1 - Versicherte mit und ohne Berufstätigkeit, mit Abzügen"
+msgstr "1 - Gegen Berufs- und Nichtberufsunfälle versichert, mit Abzügen"
 
 #. module: l10n_ch_hr_payroll
 #: model:hr.salary.rule.category,name:l10n_ch_hr_payroll.hr_salary_rule_category_thirteen_month
@@ -98,13 +98,12 @@ msgstr "14. Monat"
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll.selection__l10n_ch_accident_insurance_line__solution_number__2
 msgid "2 - Occupational and Non-Occupational Insured, without deductions"
-msgstr "2 - Versicherte mit und ohne Berufstätigkeit, ohne Abzüge"
+msgstr "2 - Gegen Berufs- und Nichtberufsunfälle versichert, ohne Abzüge"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll.selection__l10n_ch_accident_insurance_line__solution_number__3
 msgid "3 - Only Occupational Insured, without deductions (< 8 weekly hours)"
-msgstr ""
-"3 - Nur Versicherte mit Berufstätigkeit, ohne Abzüge (< 8 Stunden pro Woche)"
+msgstr "3 - Nur Berufsunfallversicherung, ohne Abzüge (< 8 Stunden pro Woche)"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_hr_salary_rule__l10n_ch_5_cents_rounding
@@ -348,7 +347,7 @@ msgstr "ALV-Grenzen"
 #. module: l10n_ch_hr_payroll
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll.l10n_ch_employees_compl_ac
 msgid "ACC"
-msgstr "UVG"
+msgstr "Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll
 #. odoo-python
@@ -356,18 +355,18 @@ msgstr "UVG"
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll.l10n_ch_employees_acc_salary
 #: model:hr.salary.rule.category,name:l10n_ch_hr_payroll.hr_salary_rule_category_acc_salary
 msgid "ACC Salary"
-msgstr "UVG: Gehalt"
+msgstr "Lohn für die Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll.l10n_ch_employees_acc_salary_max
 #: model:hr.salary.rule.category,name:l10n_ch_hr_payroll.hr_salary_rule_category_acc_threshold
 msgid "ACC Salary Maximum"
-msgstr "UVG: Gehaltsgrenze"
+msgstr "Höchstlohn für die Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll.l10n_ch_social_insurance_view_form
 msgid "ACC Thresholds"
-msgstr "UVG-Grenzen"
+msgstr "Schwellenwerte für die Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll.report_individual_account
@@ -808,7 +807,7 @@ msgstr "Tage in der Schweiz"
 #. module: l10n_ch_hr_payroll
 #: model:ir.actions.act_window,name:l10n_ch_hr_payroll.action_l10n_ch_compensation_fund
 msgid "CP Family"
-msgstr "CP Familie"
+msgstr "Familienausgleichskasse (FAK)"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_ch_yearly_report__caf_institution_ids
@@ -1142,12 +1141,12 @@ msgstr "BVG-Versicherung des Unternehmens"
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line_rate__employer_non_occupational_part
 msgid "Company Non Occupational Part"
-msgstr "Unternehmen: nicht berufstätiger Anteil"
+msgstr "Arbeitgeberanteil für Nichtberufsunfälle"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line_rate__employer_occupational_part
 msgid "Company Occupational Part"
-msgstr "Unternehmen: berufstätiger Anteil"
+msgstr "Arbeitgeberanteil für Berufsunfälle"
 
 #. module: l10n_ch_hr_payroll
 #: model:hr.salary.rule.category,name:l10n_ch_hr_payroll.hr_salary_rule_category_comp_part
@@ -1164,7 +1163,7 @@ msgstr "Rate des Unternehmens (%)"
 #. module: l10n_ch_hr_payroll
 #: model:ir.ui.menu,name:l10n_ch_hr_payroll.menu_l10n_ch_compensation_fund
 msgid "Compensation Funds"
-msgstr "Ausgleichskasse"
+msgstr "Familienausgleichskasse"
 
 #. module: l10n_ch_hr_payroll
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll.l10n_ch_employees_employer_lpp_compensation
@@ -2319,7 +2318,7 @@ msgstr "L10N Ch: AHV/ALV-Grenze"
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_social_insurance__l10n_ch_avs_acc_threshold_ids
 msgid "L10N Ch Avs Acc Threshold"
-msgstr "L10N Ch: AHV/UVG-Grenze"
+msgstr "Schwellenwert für die AHV/Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_social_insurance__l10n_ch_avs_rente_ids
@@ -2942,7 +2941,7 @@ msgstr "Keine ALV-Höchstsätze für Datum %s gefunden"
 #. odoo-python
 #: code:addons/l10n_ch_hr_payroll/models/l10n_ch_social_insurance.py:0
 msgid "No ACC threshold rates found for date %s"
-msgstr "Keine UVG-Höchstsätze für Datum %s gefunden"
+msgstr "Keine Höchstsätze für die Zusatz-ALV für Datum %s gefunden"
 
 #. module: l10n_ch_hr_payroll
 #. odoo-python
@@ -3008,17 +3007,17 @@ msgstr ""
 #. module: l10n_ch_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll.l10n_ch_accident_insurance_line_view_form
 msgid "Non-occupational"
-msgstr "Nicht berufstätig"
+msgstr "Nichtberufsunfall"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line_rate__non_occupational_female_rate
 msgid "Non-occupational Female Rate (%)"
-msgstr "Quote der nicht berufstätigen Frauen (%)"
+msgstr "Satz für Nichtberufsunfälle für Frauen (%)"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line_rate__non_occupational_male_rate
 msgid "Non-occupational Male Rate (%)"
-msgstr "Quote der nicht berufstätigen Männer (%)"
+msgstr "Satz für Nichtberufsunfälle für Männer (%)"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_hr_contract__l10n_ch_lpp_not_insured
@@ -3061,17 +3060,17 @@ msgstr "Beschäftigungsquote anderer Arbeitnehmer"
 #. module: l10n_ch_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll.l10n_ch_accident_insurance_line_view_form
 msgid "Occupational"
-msgstr "Berufstätig"
+msgstr "Berufsunfall"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line_rate__occupational_female_rate
 msgid "Occupational Female Rate (%)"
-msgstr "Quote der berufstätigen Frauen (%)"
+msgstr "Satz für Berufsunfälle für Frauen (%)"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll.field_l10n_ch_accident_insurance_line_rate__occupational_male_rate
 msgid "Occupational Male Rate (%)"
-msgstr "Quote der berufstätigen Männer (%)"
+msgstr "Satz für Berufsunfälle für Männer (%)"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll.selection__l10n_ch_is_report__month__10
@@ -3387,6 +3386,19 @@ msgstr "Bezugszeitraum"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll.selection__hr_employee__l10n_ch_religious_denomination__reformedevangelical
 msgid "Reformed Evangelical"
 msgstr "Evangelisch-reformiert"
+
+#. module: l10n_ch_hr_payroll
+#. odoo-python
+#: code:addons/l10n_ch_hr_payroll/models/hr_payslip.py:0
+msgid ""
+"Refunds are not supported for Swiss payroll as only one payslip per month is "
+"permitted. Please cancel this payslip instead and generate a new one to "
+"apply corrections."
+msgstr ""
+"Rückerstattungen werden für die Schweizer Personalabrechnung nicht "
+"unterstützt, da pro Monat nur eine Personalabrechnung zulässig ist. Bitte "
+"stornieren Sie stattdessen diese Personalabrechnung und erstellen Sie eine "
+"neue, um Korrekturen vorzunehmen."
 
 #. module: l10n_ch_hr_payroll
 #. odoo-python
@@ -3777,7 +3789,7 @@ msgstr "Schweiz: ALV: Schwellenwert für Satz"
 #. module: l10n_ch_hr_payroll
 #: model:ir.model,name:l10n_ch_hr_payroll.model_l10n_ch_social_insurance_avs_acc_threshold
 msgid "Swiss: ACC: Rate Threshold"
-msgstr "Schweiz: UVG: Schwellenwert für Satz"
+msgstr "Schweiz: Zusatz-ALV: Schwellenwert für Beitragssatz"
 
 #. module: l10n_ch_hr_payroll
 #: model:ir.model,name:l10n_ch_hr_payroll.model_l10n_ch_additional_accident_insurance_line_rate

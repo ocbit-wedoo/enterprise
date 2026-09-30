@@ -6,13 +6,14 @@
 # Wil Odoo, 2024
 #
 # Yana Bystrytska <yana.bystrytska@erp.co.ua>, 2026.
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-03-30 06:13+0000\n"
-"Last-Translator: Yana Bystrytska <yana.bystrytska@erp.co.ua>\n"
+"PO-Revision-Date: 2026-06-23 09:04+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
 "social_crm/uk/>\n"
 "Language: uk\n"
@@ -23,7 +24,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_description
@@ -43,8 +44,8 @@ msgid ""
 "invisible=\"use_leads\">Opportunities</span>"
 msgstr ""
 "<span class=\"o_stat_text\" invisible=\"not use_leads\">Ліди</span>\n"
-"                        <span class=\"o_stat_text\" "
-"invisible=\"use_leads\">Нагоди</span>"
+"                        <span class=\"o_stat_text\" invisible=\"use_leads\">"
+"Нагоди</span>"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_view_form
@@ -172,7 +173,7 @@ msgstr "Датачас публікації"
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__post_image_urls
 msgid "Post Images URLs"
-msgstr ""
+msgstr "URL зображень публікації"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__post_link
@@ -203,7 +204,7 @@ msgstr "Публікація в соцмережах"
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_description
 msgid "Social Post Image {{image_url_index}}"
-msgstr ""
+msgstr "Зображення публікації в соцмережах {{image_url_index}}"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__social_stream_post_id

@@ -30,13 +30,15 @@ export function _getLineOrFail (lineOrIndex, errorClue="No line found") {
  */
 export function _prepareSelector(selector, description) {
     const { barcode, selected, completed } = description;
+    const dataPackage = description.package;
     if (selected !== undefined) {
         selector += selected ? ".o_selected" : ":not(.o_selected)";
     }
     if (completed !== undefined) {
         selector += completed ? ".o_line_completed" : ":not(.o_line_completed)";
     }
-    selector += barcode ? `[data-barcode="${barcode}"]`: "";
+    selector += barcode ? `[data-barcode="${barcode}"]` : "";
+    selector += dataPackage ? `[data-package="${dataPackage}"]` : "";
     description.selector = selector;
     return selector;
 }

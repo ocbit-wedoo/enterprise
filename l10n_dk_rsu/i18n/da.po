@@ -3,13 +3,14 @@
 # * l10n_dk_rsu
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~16.4+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 19:01+0000\n"
-"PO-Revision-Date: 2025-11-07 22:22+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-31 12:15+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18-l10n/"
 "l10n_dk_rsu/da/>\n"
 "Language: da\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_dk_rsu
 #: model:ir.model.fields,help:l10n_dk_rsu.field_l10n_dk_rsu_tax_report_calendar_wizard__description
@@ -28,7 +29,7 @@ msgstr "En beskrivelse af deklarationstypen"
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "An error has occurred when trying to verify your subscription."
-msgstr ""
+msgstr "Der opstod en fejl under forsøget på at bekræfte dit abonnement."
 
 #. module: l10n_dk_rsu
 #: model_terms:ir.ui.view,arch_db:l10n_dk_rsu.l10n_dk_reports_rsu_tax_report_receipt_wizard_form
@@ -120,7 +121,7 @@ msgstr "Vis navn"
 #. module: l10n_dk_rsu
 #: model_terms:ir.ui.view,arch_db:l10n_dk_rsu.l10n_dk_reports_rsu_tax_report_receipt_wizard_form
 msgid "Download PDF"
-msgstr ""
+msgstr "Download PDF"
 
 #. module: l10n_dk_rsu
 #: model:ir.model.fields,field_description:l10n_dk_rsu.field_l10n_dk_rsu_tax_report_submit_draft_wizard__due_date
@@ -167,12 +168,12 @@ msgstr "Med det samme"
 #. module: l10n_dk_rsu
 #: model:ir.model.fields,field_description:l10n_dk_rsu.field_l10n_dk_rsu_tax_report_receipt_wizard__is_receipt_received
 msgid "Is Receipt Received"
-msgstr ""
+msgstr "Er kvittering modtaget"
 
 #. module: l10n_dk_rsu
 #: model:ir.model.fields,field_description:l10n_dk_rsu.field_l10n_dk_rsu_tax_report_receipt_wizard__is_report_approved
 msgid "Is Report Approved"
-msgstr ""
+msgstr "Er rapport godkendt"
 
 #. module: l10n_dk_rsu
 #: model:ir.model,name:l10n_dk_rsu.model_l10n_dk_rsu_tax_report_submit_draft_wizard
@@ -218,12 +219,14 @@ msgstr "Månedlig"
 #: code:addons/l10n_dk_rsu/wizard/tax_report_wizard.py:0
 msgid "No company registry associated with your company. Please define one."
 msgstr ""
+"Der er ikke registreret et firma tilknyttet din virksomhed. Opret venligst "
+"et."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "No receipt, the provisional VAT return has been rejected."
-msgstr ""
+msgstr "Ingen kvittering, den foreløbige momsangivelse er blevet afvist."
 
 #. module: l10n_dk_rsu
 #: model:ir.model.fields.selection,name:l10n_dk_rsu.selection__l10n_dk_rsu_tax_report_submit_draft_wizard__frequency_code__0
@@ -274,14 +277,14 @@ msgstr "Periode Startdato"
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Please upgrade the Danish Localization - RSU module."
-msgstr ""
+msgstr "Opgradér venligst RSU-modulet for dansk lokalisering."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/wizard/tax_report_wizard.py:0
 msgid ""
 "Please use a Period starting date different than your Period ending date!"
-msgstr ""
+msgstr "Startdatoen for perioden må ikke være den samme som slutdatoen!"
 
 #. module: l10n_dk_rsu
 #: model:ir.model.fields.selection,name:l10n_dk_rsu.selection__l10n_dk_rsu_tax_report_submit_draft_wizard__frequency_code__8
@@ -295,12 +298,14 @@ msgid ""
 "RSU is not delegated by the legal entity (See Onboard Legal Entities: "
 "https://skat.dk/erhverv/moms/momsregnskab)."
 msgstr ""
+"RSU er ikke delegeret af den juridiske enhed (se Onboard Legal Entities: "
+"https://skat.dk/erhverv/moms/momsregnskab)."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Receipt does not exist."
-msgstr ""
+msgstr "Kvitteringen findes ikke."
 
 #. module: l10n_dk_rsu
 #: model_terms:ir.ui.view,arch_db:l10n_dk_rsu.l10n_dk_reports_rsu_tax_report_receipt_wizard_form
@@ -317,7 +322,7 @@ msgstr "Rapport"
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Search period cannot span more than 2 years."
-msgstr ""
+msgstr "Søgeperioden kan ikke strække sig over mere end 2 år."
 
 #. module: l10n_dk_rsu
 #: model_terms:ir.ui.view,arch_db:l10n_dk_rsu.l10n_dk_reports_rsu_tax_report_calendar_wizard_form
@@ -347,18 +352,20 @@ msgid ""
 "Something went wrong:\n"
 "%s"
 msgstr ""
+"Der opstod en fejl:\n"
+"%s"
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Something went wrong: Service error - %s"
-msgstr ""
+msgstr "Der opstod en fejl: Servicefejl – %s"
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/wizard/tax_report_wizard.py:0
 msgid "Sorry, something went wrong: %s"
-msgstr ""
+msgstr "Beklager, der opstod en fejl: %s"
 
 #. module: l10n_dk_rsu
 #: model:ir.model.fields,field_description:l10n_dk_rsu.field_l10n_dk_rsu_tax_report_submit_draft_wizard__start_date
@@ -374,7 +381,7 @@ msgstr "Indsend udkast"
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Tax Report RSU Calendar"
-msgstr ""
+msgstr "RSU-kalender for skatteopgørelse"
 
 #. module: l10n_dk_rsu
 #. odoo-python
@@ -392,37 +399,37 @@ msgstr "Skatterapport RSU Indsend udkast"
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "The VAT period has not ended."
-msgstr ""
+msgstr "Momsperioden er ikke afsluttet."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "The VAT period is more than 3 years old."
-msgstr ""
+msgstr "Momsperioden er mere end 3 år gammel."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "The VAT period is not open."
-msgstr ""
+msgstr "Momsperioden er ikke åben."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "The VAT statement draft does not exist."
-msgstr ""
+msgstr "Kladden til momsopgørelsen findes ikke."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "The VAT statement draft has not been approved."
-msgstr ""
+msgstr "Kladden til momsopgørelsen er ikke blevet godkendt."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/wizard/tax_report_wizard.py:0
 msgid "The information entered give an empty result"
-msgstr ""
+msgstr "De indtastede oplysninger giver intet resultat"
 
 #. module: l10n_dk_rsu
 #. odoo-python
@@ -431,18 +438,20 @@ msgid ""
 "The information entered or your information's (Company registry) give an "
 "empty result"
 msgstr ""
+"De indtastede oplysninger eller dine oplysninger (virksomhedsregister) giver "
+"intet resultat"
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/wizard/tax_report_wizard.py:0
 msgid "The receipt has not been received."
-msgstr ""
+msgstr "Kvitteringen er ikke modtaget."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "The search start date is later than the search end date."
-msgstr ""
+msgstr "Startdatoen for søgningen er senere end slutdatoen."
 
 #. module: l10n_dk_rsu
 #. odoo-python
@@ -491,22 +500,22 @@ msgstr "Årligt"
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "You do not have an Odoo enterprise subscription."
-msgstr ""
+msgstr "Du har ikke et Odoo Enterprise-abonnement."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Your database is not used for a production environment."
-msgstr ""
+msgstr "Din database bruges ikke til et produktionsmiljø."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Your database is not yet activated."
-msgstr ""
+msgstr "Din database er endnu ikke aktiveret."
 
 #. module: l10n_dk_rsu
 #. odoo-python
 #: code:addons/l10n_dk_rsu/models/tax_report.py:0
 msgid "Your database uuid does not exist."
-msgstr ""
+msgstr "Din database-uuid findes ikke."

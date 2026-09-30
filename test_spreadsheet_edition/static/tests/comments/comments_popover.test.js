@@ -1,5 +1,5 @@
 import { expect, test, getFixture } from "@odoo/hoot";
-import { hover, waitFor, press } from "@odoo/hoot-dom";
+import { click, hover, waitFor, press, queryOne } from "@odoo/hoot-dom";
 import { animationFrame } from "@odoo/hoot-mock";
 import { helpers, registries, stores } from "@odoo/o-spreadsheet";
 import { selectCell } from "@spreadsheet/../tests/helpers/commands";
@@ -95,6 +95,26 @@ test("Send messages from the popover", async () => {
     threadIds = model.getters.getCellThreads(model.getters.getActivePosition());
     expect(threadIds).toEqual([{ threadId: 1, isResolved: false }]);
     expect(".o-mail-Message").toHaveCount(2);
+});
+
+test("Clicking a link in a comment should not be prevented", async () => {
+    const { model, pyEnv } = await setupWithThreads();
+    const sheetId = model.getters.getActiveSheetId();
+    await createThread(model, pyEnv, { sheetId, ...toCartesian("A2") }, [
+        `<a href="http://example.com">a link</a>`,
+    ]);
+    selectCell(model, "A2");
+    await waitFor(".o-thread-popover .o-mail-Message");
+
+    const popover = queryOne(".o-thread-popover");
+    popover.addEventListener("click", (ev) => {
+        expect.step("link_clicked");
+        expect(ev.defaultPrevented).toBe(false);
+        ev.preventDefault();
+    });
+    const link = queryOne(".o-thread-popover .o-mail-Message a");
+    await click(link);
+    expect.verifySteps(["link_clicked"]);
 });
 
 test("Open side panel from thread popover", async () => {

@@ -1534,6 +1534,10 @@ registry.category("web_tour.tours").add("test_barcode_batch_partial_receipt_leav
             trigger: '.o_barcode_line:contains(product1)',
             run: 'scan product1',
         },
+        {
+            trigger: '.o_barcode_line:contains(picking_receipt_1):contains(product1) .qty-done:contains("1")',
+            run() {},
+        },
         // Scan the product twice for picking_receipt_2
         {
             trigger: '.o_barcode_line:contains(picking_receipt_2):contains(product1)',

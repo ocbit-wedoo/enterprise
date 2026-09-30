@@ -3,13 +3,14 @@
 # * l10n_mx_edi_pos
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.1alpha1+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 19:03+0000\n"
-"PO-Revision-Date: 2025-11-07 22:23+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-27 02:59+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_mx_edi_pos/es_419/>\n"
 "Language: es_419\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_mx_edi_pos
 #: model:ir.model.fields.selection,name:l10n_mx_edi_pos.selection__pos_order__l10n_mx_edi_usage__g01
@@ -180,8 +181,8 @@ msgid ""
 "will show 'Unidentified'."
 msgstr ""
 "Indica la forma en que se pagó o se pagará la factura. Las opciones pueden "
-"ser: efectivo, cheque nominal, tarjeta de crédito, etc. Deje en blanco si no "
-"conoce el método de pago y el XML mostrará 'No identificado'."
+"ser: efectivo, cheque nominativo, tarjeta de crédito, etc. Déjalo vacío si "
+"no conoces el método de pago y el XML mostrará 'No identificado'."
 
 #. module: l10n_mx_edi_pos
 #. odoo-javascript
@@ -336,7 +337,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/l10n_mx_edi_pos/static/src/overrides/components/ticket_screen/ticket_screen.js:0
 msgid "Refund Amount Exceeds Original Order"
-msgstr ""
+msgstr "El monto del reembolso excede la orden original"
 
 #. module: l10n_mx_edi_pos
 #: model_terms:ir.ui.view,arch_db:l10n_mx_edi_pos.pos_order_form_inherit_l10n_mx_edi
@@ -431,6 +432,8 @@ msgid ""
 "The refund amount exceeds the original order total. You are probably "
 "forgetting to include a discount."
 msgstr ""
+"El monto de reembolso excede el total de la orden original. Quizá estás "
+"olvidando incluir un descuento."
 
 #. module: l10n_mx_edi_pos
 #: model:ir.model.fields.selection,name:l10n_mx_edi_pos.selection__pos_order__l10n_mx_edi_usage__i03
@@ -485,13 +488,14 @@ msgstr "Solo puede procesar órdenes que comparten la misma empresa."
 #. odoo-python
 #: code:addons/l10n_mx_edi_pos/models/pos_order.py:0
 msgid "You can only process orders sharing the same currency."
-msgstr ""
+msgstr "Solo puedes procesar órdenes que estén en la misma moneda."
 
 #. module: l10n_mx_edi_pos
 #. odoo-python
 #: code:addons/l10n_mx_edi_pos/models/pos_order.py:0
 msgid "You cannot create a global invoice as your company is not Mexican."
 msgstr ""
+"No puedes crear una factura global debido a que tu empresa no es mexicana."
 
 #. module: l10n_mx_edi_pos
 #. odoo-python
@@ -500,6 +504,8 @@ msgid ""
 "You cannot create a global invoice for POS orders that use different "
 "journals with different issuing addresses."
 msgstr ""
+"No puedes crear una factura global para órdenes del PdV que usen diferentes "
+"diarios con diferentes direcciones de emisor."
 
 #. module: l10n_mx_edi_pos
 #. odoo-python
@@ -507,3 +513,5 @@ msgstr ""
 msgid ""
 "You cannot invoice this refund since the related order is not invoiced yet."
 msgstr ""
+"No puedes facturar este reembolso porque el pedido relacionado aún no se ha "
+"facturado."

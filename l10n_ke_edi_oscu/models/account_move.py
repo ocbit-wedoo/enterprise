@@ -227,6 +227,8 @@ class AccountMove(models.Model):
         tax_details = self._prepare_invoice_aggregated_taxes()
         line_items = self._l10n_ke_oscu_get_json_from_lines(tax_details)
         tax_codes, tax_rates, taxable_amounts, tax_amounts = self._get_taxes_data(line_items)
+        total_taxable_amount = sum(taxable_amounts.values())
+        total_tax_amount = sum(tax_amounts.values())
 
         content = {
             'invcNo':           '',                                        # KRA Invoice Number (set at the point of sending)
@@ -243,9 +245,9 @@ class AccountMove(models.Model):
             **taxable_amounts,
             **tax_amounts,
             **tax_rates,
-            'totTaxblAmt':      json_float_round(tax_details['base_amount'], 2),
-            'totTaxAmt':        json_float_round(tax_details['tax_amount'], 2),
-            'totAmt':           json_float_round(abs(self.amount_total_signed), 2),
+            'totTaxblAmt':      json_float_round(total_taxable_amount, 2),
+            'totTaxAmt':        json_float_round(total_tax_amount, 2),
+            'totAmt':           json_float_round(total_taxable_amount + total_tax_amount, 2),
             'totItemCnt':       len(line_items),                           # Total Item count
             'itemList':         line_items,
             **self.company_id._l10n_ke_get_user_dict(self.create_uid, self.write_uid),
@@ -548,23 +550,28 @@ class AccountMove(models.Model):
 
         content = self._l10n_ke_oscu_json_from_move()
 
+        sequence = self._l10n_ke_get_invoice_sequence()
         try:
-            self.l10n_ke_oscu_invoice_number = content['invcNo'] = self.l10n_ke_oscu_invoice_number or self._l10n_ke_get_invoice_sequence().next_by_id()
+            content['invcNo'] = self.l10n_ke_oscu_invoice_number or sequence.next_by_id()
         except LockNotAvailable:
             raise UserError(_("Another user is already sending this invoice.")) from None
 
         error, data, _date = company._l10n_ke_call_etims('saveTrnsSalesOsdc', content)
         if not error:
             self.write({
+                'l10n_ke_oscu_invoice_number': content['invcNo'],
                 'l10n_ke_oscu_receipt_number': data['curRcptNo'],
                 'l10n_ke_oscu_signature': data['rcptSign'],
                 'l10n_ke_oscu_datetime': parse_etims_datetime(data['sdcDateTime']),
                 'l10n_ke_oscu_internal_data': data['intrlData'],
                 'l10n_ke_control_unit': company.l10n_ke_control_unit,
             })
-        elif error['code'] != 'TIM':
+        elif error['code'] == 'TIM':
+            self.l10n_ke_oscu_invoice_number = content['invcNo']
+        else:
             # In order not to rollback, but just to avoid consuming the invoice number
-            self._l10n_ke_get_invoice_sequence().number_next -= 1
+            if not self.l10n_ke_oscu_invoice_number:
+                sequence.number_next -= 1
             self.l10n_ke_oscu_invoice_number = False
         return content, error
 

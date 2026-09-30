@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* mrp_plm
+# * mrp_plm
 #
 # Translators:
 # zakariya moradi, 2025
@@ -9,19 +9,22 @@
 # Dynamic Business Group, 2025
 # ebrahim khorami, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: ebrahim khorami, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-09-02 16:07+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/mrp_plm/"
+"fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__document_count
@@ -33,13 +36,14 @@ msgstr "تعداد پیوستها"
 #: model:ir.model.fields,field_description:mrp_plm.field_product_product__eco_count
 #: model:ir.model.fields,field_description:mrp_plm.field_product_template__eco_count
 msgid "# ECOs"
-msgstr ""
+msgstr "تعداد درخواست تغییر مهندسی"
 
 #. module: mrp_plm
 #. odoo-python
 #: code:addons/mrp_plm/models/mrp_eco.py:0
 msgid "%(approval_name)s %(approver_name)s %(approval_status)s this ECO"
 msgstr ""
+"%(approval_name)s %(approver_name)s %(approval_status)s سفارش اصلاح محصول"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_type_dashboard_view_kanban
@@ -47,6 +51,8 @@ msgid ""
 "<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"Domain alias\" "
 "title=\"Domain alias\"/>&amp;nbsp;"
 msgstr ""
+"<i class=\"fa fa-envelope-o\" role=\"img\" aria-label=\"Domain alias\" "
+"title=\"نام مستعار دامنه\"/>&amp;nbsp;"
 
 #. module: mrp_plm
 #. odoo-python
@@ -71,12 +77,12 @@ msgstr ""
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_plm_production_form_view
 msgid "<span class=\"o_stat_text\">ECO(S)</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">ECO</span>"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "<span class=\"o_stat_text\">Revision</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">نسخه</span>"
 
 #. module: mrp_plm
 #: model:ir.model.fields,help:mrp_plm.field_mrp_eco_type__alias_defaults
@@ -91,7 +97,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mrp_plm/models/mrp_eco.py:0
 msgid "A user cannot be assigned more than once to the same stage"
-msgstr ""
+msgstr "یک کاربر را نمی‌توان بیش از یکبار به یک مرحله اختصاص داد"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__message_needaction
@@ -224,7 +230,7 @@ msgstr "اعمال تغییرات"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Apply Rebase"
-msgstr ""
+msgstr "اعمال Rebase"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__type
@@ -333,12 +339,12 @@ msgstr "گزارش نمای کلی فهرست مواد"
 #. module: mrp_plm
 #: model:mrp.eco.type,name:mrp_plm.ecotype_bom_update
 msgid "BOM Updates"
-msgstr ""
+msgstr "به‌روزرسانی‌های BOM"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_routing_change__upd_time_mode_batch
 msgid "Batch count Change"
-msgstr ""
+msgstr "تغییر تعداد دسته"
 
 #. module: mrp_plm
 #: model:ir.model,name:mrp_plm.model_mrp_bom
@@ -394,7 +400,7 @@ msgstr "مرحله مسدود کردن"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_bom_change__byproduct_id
 msgid "BoM By-Product"
-msgstr ""
+msgstr "محصول جانبی لیست مواد"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_bom_change__bom_line_id
@@ -404,7 +410,7 @@ msgstr "سطر صورت مواد اولیه"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__bom_rebase_ids
 msgid "BoM Rebase"
-msgstr ""
+msgstr "به‌روزرسانی اصلاحات BoM"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__new_bom_revision
@@ -415,7 +421,7 @@ msgstr "بازبینی صورت مواد اولیه"
 #. odoo-python
 #: code:addons/mrp_plm/models/mrp_production.py:0
 msgid "BoM Suggestions from %(mo_name)s"
-msgstr ""
+msgstr "پیشنهادات لیست مواد از %(mo_name)s"
 
 #. module: mrp_plm
 #. odoo-javascript
@@ -432,7 +438,7 @@ msgstr "صورت مواد اولیه:"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "By-Product Changes"
-msgstr ""
+msgstr "تغییرات محصول جانبی"
 
 #. module: mrp_plm
 #: model:ir.model,name:mrp_plm.model_mrp_bom_byproduct
@@ -456,6 +462,7 @@ msgid ""
 "Cannot create an ECO if the Manufacturing Order doesn't use a Bill of "
 "Materials"
 msgstr ""
+"اگر سفارش تولید از لیست مواد استفاده نمی‌کند، امکان ایجاد ECO وجود ندارد."
 
 #. module: mrp_plm
 #: model:ir.ui.menu,name:mrp_plm.menu_mrp_plm_changes
@@ -465,7 +472,7 @@ msgstr "تغییرات"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Changes made in previous eco"
-msgstr ""
+msgstr "تغییرات ایجاد شده در درخواست قبلی"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
@@ -513,12 +520,12 @@ msgstr "شرکت"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Component Changes"
-msgstr ""
+msgstr "تغییرات اجزاء"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Component Rebase"
-msgstr ""
+msgstr "به‌روزرسانی اصلاحات اجزاء"
 
 #. module: mrp_plm
 #: model:ir.ui.menu,name:mrp_plm.menu_mrp_plm_configuration
@@ -546,7 +553,7 @@ msgstr "مصرف شده در عملیات"
 #. module: mrp_plm
 #: model:ir.actions.server,name:mrp_plm.action_production_order_create_eco
 msgid "Create ECO"
-msgstr ""
+msgstr "ایجاد ECO"
 
 #. module: mrp_plm
 #: model_terms:ir.actions.act_window,help:mrp_plm.mrp_eco_stage_action
@@ -666,7 +673,7 @@ msgstr "انجام شده"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_approval__eco_id
 msgid "ECO"
-msgstr ""
+msgstr "سفارش اصلاح محصول (ECO)"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_graph
@@ -693,12 +700,12 @@ msgstr "تغییرات صورت مواد اولیه ECO"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__bom_change_ids_on_byproduct
 msgid "ECO BoM Changes - By-Product"
-msgstr ""
+msgstr "تغییرات لیست مواد ECO - محصول جانبی"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__bom_change_ids_on_line
 msgid "ECO BoM Changes - Component"
-msgstr ""
+msgstr "تغییرات لیست مواد ECO - اجزاء"
 
 #. module: mrp_plm
 #: model:ir.model,name:mrp_plm.model_mrp_eco_bom_change
@@ -708,7 +715,7 @@ msgstr "تغییرات صورت مواد اولیه ECO"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_bom_change__eco_rebase_id
 msgid "ECO Rebase"
-msgstr ""
+msgstr "به‌روزرسانی اصلاحات ECO"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__routing_change_ids
@@ -758,7 +765,7 @@ msgstr "ECO اعمال شود"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_bom_view_form_inherit_plm
 msgid "ECO(s)"
-msgstr ""
+msgstr "ECO"
 
 #. module: mrp_plm
 #. odoo-javascript
@@ -776,13 +783,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mrp_plm.product_template_view_form_inherit_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.report_mrp_bom_inherit_mrp_plm
 msgid "ECOs"
-msgstr ""
+msgstr "سفارش اصلاح محصول"
 
 #. module: mrp_plm
 #. odoo-python
 #: code:addons/mrp_plm/models/mrp_eco.py:0
 msgid "Eco"
-msgstr ""
+msgstr "سفارش اصلاح محصول (ECO)"
 
 #. module: mrp_plm
 #. odoo-python
@@ -793,7 +800,7 @@ msgstr "صورت مواد اولیه Eco"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_production__eco_count
 msgid "Eco Count"
-msgstr ""
+msgstr "تعداد ECO"
 
 #. module: mrp_plm
 #: model:ir.model,name:mrp_plm.model_mrp_eco_routing_change
@@ -1008,6 +1015,8 @@ msgid ""
 "If unchecked, the version of the product/BoM will remain unchanged once the "
 "ECO is applied"
 msgstr ""
+"اگر فعال نباشد، نسخه محصول/لیست مواد (BoM) پس از اعمال تغییرات ECO تغییر "
+"نخواهد کرد"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_bom__image_128
@@ -1176,12 +1185,12 @@ msgstr "پیام ها"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_routing_change__upd_time_mode
 msgid "Mode Change"
-msgstr ""
+msgstr "تغییر حالت"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_tag_view_search
 msgid "Mrp Eco Tags"
-msgstr ""
+msgstr "برچسب‌های Eco"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__my_activity_date_deadline
@@ -1331,12 +1340,12 @@ msgstr "پس از اعمال تغییرات، ECO ها به این مرحله م
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Open Component"
-msgstr ""
+msgstr "ورود به جزء"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Open Operation"
-msgstr ""
+msgstr "ورود به عملیات"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_routing_change__operation_name
@@ -1351,7 +1360,7 @@ msgstr "تغییرات عملیات"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_routing_change__operation_id
 msgid "Operation Id"
-msgstr ""
+msgstr "شناسه عملیات"
 
 #. module: mrp_plm
 #. odoo-python
@@ -1378,12 +1387,12 @@ msgstr "پیوست اصلی"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_product_document__origin_res_model
 msgid "Origin Model"
-msgstr ""
+msgstr "مدل اصلی"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_product_document__origin_res_name
 msgid "Origin Name"
-msgstr ""
+msgstr "نام اصلی"
 
 #. module: mrp_plm
 #: model:ir.model.fields,help:mrp_plm.field_mrp_eco__legend_blocked
@@ -1484,7 +1493,7 @@ msgstr "تغییرات ECO قبلی"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Previous Eco Component Changes"
-msgstr ""
+msgstr "تغییرات ECO قبلی اجزا"
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_bom_change__old_uom_id
@@ -1575,12 +1584,14 @@ msgstr "آماده"
 #: model:ir.model.fields.selection,name:mrp_plm.selection__mrp_eco__state__rebase
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_search
 msgid "Rebase"
-msgstr ""
+msgstr "پایه ریزی مجدد"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "Rebase new revision of BoM with previous eco bom and old bom changes."
 msgstr ""
+"نسخه جدید BoM را با تغییرات قبلی لیست مواد و درخواست‌های تغییر مجددا پایه "
+"گذاری کنید."
 
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco_type__alias_force_thread_id
@@ -1733,7 +1744,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/mrp_plm/models/mrp_eco.py:0
 msgid "Successfully Rebased!"
-msgstr ""
+msgstr "با موفقیت Rebase شد!"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
@@ -1884,7 +1895,7 @@ msgstr "به روز رسانی"
 #. module: mrp_plm
 #: model:ir.model.fields,field_description:mrp_plm.field_mrp_eco__will_update_version
 msgid "Update Version"
-msgstr ""
+msgstr "به‌روزرسانی نسخه"
 
 #. module: mrp_plm
 #: model:res.groups,name:mrp_plm.group_plm_user
@@ -1997,7 +2008,7 @@ msgstr "نام مستعار"
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_view_form
 msgid "e.g. Awesome Product 2.0"
-msgstr ""
+msgstr "مثال: محصول 2.0"
 
 #. module: mrp_plm
 #: model_terms:ir.ui.view,arch_db:mrp_plm.mrp_eco_stage_view_form

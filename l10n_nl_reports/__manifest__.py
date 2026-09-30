@@ -1,8 +1,6 @@
 # -*- encoding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-# Copyright (c) 2009 Veritos - Jan Verlaan - www.veritos.nl
-
 #
 #    Deze module werkt in OpenERP 5.0.0 (en waarschijnlijk hoger).
 #    Deze module werkt niet in OpenERP versie 4 en lager.
@@ -71,8 +69,6 @@
     'description': """
 Accounting reports for Netherlands
     """,
-    'author': 'Veritos - Jan Verlaan',
-    'website': 'http://www.veritos.nl',
     'depends': ['l10n_nl', 'account_reports'],
     'data': [
         'data/account_financial_report_profit_loss.xml',

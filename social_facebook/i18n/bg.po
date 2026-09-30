@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* social_facebook
+# * social_facebook
 #
 # Translators:
 # Petko Karamotchev, 2024
@@ -8,58 +8,60 @@
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # aleksandar ivanov, 2024
 # Veselina Slavkova, 2024
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Veselina Slavkova, 2024\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-08 17:09+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"social_facebook/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
 msgid "<b class=\"d-block mb-2\">Facebook Page</b>"
-msgstr ""
+msgstr "<b class=\"d-block mb-2\">Facebook страница</b>"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-comments me-1\" title=\"Коментари\"/>"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_live_post__facebook_post_id
 msgid "Actual Facebook ID of the post"
-msgstr ""
+msgstr "Действителен Facebook ID на публикацията"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/models/social_stream_post.py:0
 msgid "An error occurred."
-msgstr ""
+msgstr "Възникна грешка."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.res_config_settings_view_form
 msgid "App ID"
-msgstr ""
+msgstr "App ID"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.res_config_settings_view_form
 msgid "App Secret"
-msgstr ""
+msgstr "App Secret"
 
 #. module: social_facebook
 #. odoo-javascript
 #: code:addons/social_facebook/static/src/xml/social_facebook_templates.xml:0
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "Author Image"
-msgstr ""
+msgstr "Изображение на автора"
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_res_config_settings__facebook_use_own_account
@@ -67,6 +69,8 @@ msgid ""
 "Check this if you want to use your personal Facebook Developer Account "
 "instead of the provided one."
 msgstr ""
+"Отметнете това, ако искате да използвате личния си Facebook Developer акаунт "
+"вместо предоставения."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_comments_count
@@ -82,7 +86,7 @@ msgstr "Конфигурационни настройки"
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__display_facebook_preview
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__display_facebook_preview
 msgid "Display Facebook Preview"
-msgstr ""
+msgstr "Показване на Facebook визуализация"
 
 #. module: social_facebook
 #: model:ir.model.fields.selection,name:social_facebook.selection__social_media__media_type__facebook
@@ -94,50 +98,50 @@ msgstr "Facebook"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_account__facebook_access_token
 msgid "Facebook Access Token"
-msgstr ""
+msgstr "Facebook токен за достъп"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_account__facebook_account_id
 msgid "Facebook Account ID"
-msgstr ""
+msgstr "Facebook ID на профила"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_res_config_settings__facebook_app_id
 msgid "Facebook App ID"
-msgstr ""
+msgstr "Facebook App ID"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_res_config_settings__facebook_client_secret
 msgid "Facebook App Secret"
-msgstr ""
+msgstr "Facebook App Secret"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_author_id
 msgid "Facebook Author ID"
-msgstr ""
+msgstr "Facebook ID на автора"
 
 #. module: social_facebook
 #. odoo-javascript
 #: code:addons/social_facebook/static/src/js/stream_post_kanban_record.js:0
 msgid "Facebook Comments"
-msgstr ""
+msgstr "Facebook коментари"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.res_config_settings_view_form
 msgid "Facebook Developer Account"
-msgstr ""
+msgstr "Facebook Developer акаунт"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__facebook_image_ids
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__facebook_image_ids
 msgid "Facebook Images"
-msgstr ""
+msgstr "Facebook изображения"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__facebook_message
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__facebook_message
 msgid "Facebook Message"
-msgstr ""
+msgstr "Facebook съобщение"
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_account__facebook_access_token
@@ -147,6 +151,10 @@ msgid ""
 "            It's used to authenticate requests when posting to or reading "
 "information from this account."
 msgstr ""
+"Токен за достъп до Facebook страница, предоставен от Facebook API; той "
+"никога не трябва да се задава ръчно.\n"
+"            Използва се за удостоверяване на заявки при публикуване или "
+"четене на информация от този профил."
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_account__facebook_account_id
@@ -154,35 +162,38 @@ msgid ""
 "Facebook Page ID provided by the Facebook API, this should never be set "
 "manually."
 msgstr ""
+"ID на Facebook страница, предоставено от Facebook API; то никога не трябва "
+"да се задава ръчно."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_post_id
 msgid "Facebook Post ID"
-msgstr ""
+msgstr "Facebook ID на публикацията"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__facebook_preview
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__facebook_preview
 msgid "Facebook Preview"
-msgstr ""
+msgstr "Facebook визуализация"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Facebook did not provide a valid access token or it may have expired."
 msgstr ""
+"Facebook не предостави валиден токен за достъп или той може да е изтекъл."
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Facebook did not provide a valid access token."
-msgstr ""
+msgstr "Facebook не предостави валиден токен за достъп."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__has_facebook_account
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__has_facebook_account
 msgid "Has Facebook Account"
-msgstr ""
+msgstr "Има Facebook профил"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_post_template_view_form
@@ -192,7 +203,7 @@ msgstr "Изображения"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_is_event_post
 msgid "Is event post"
-msgstr ""
+msgstr "Е публикация за събитие"
 
 #. module: social_facebook
 #. odoo-javascript
@@ -219,12 +230,12 @@ msgstr "Съобщение"
 #. module: social_facebook
 #: model:social.stream.type,name:social_facebook.stream_type_page_mentions
 msgid "Page Mentions"
-msgstr ""
+msgstr "Споменавания на страницата"
 
 #. module: social_facebook
 #: model:social.stream.type,name:social_facebook.stream_type_page_posts
 msgid "Page Posts"
-msgstr ""
+msgstr "Публикации на страницата"
 
 #. module: social_facebook
 #. odoo-python
@@ -232,6 +243,7 @@ msgstr ""
 msgid ""
 "Please specify either a Facebook Message or upload some Facebook Images."
 msgstr ""
+"Моля, посочете Facebook съобщение или качете няколко Facebook изображения."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
@@ -245,6 +257,8 @@ msgid ""
 "Post not found. It could be because the post has been deleted on the Social "
 "Platform."
 msgstr ""
+"Публикацията не е намерена. Възможно е тя да е била изтрита в социалната "
+"платформа."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
@@ -254,18 +268,18 @@ msgstr "Публикувано от страницата във Фейсбук �
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_reach
 msgid "Reach"
-msgstr ""
+msgstr "Обхват"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_reactions_count
 msgid "Reactions Count"
-msgstr ""
+msgstr "Брой реакции"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Read More about Facebook Pages"
-msgstr ""
+msgstr "Прочетете повече за Facebook страниците"
 
 #. module: social_facebook
 #. odoo-javascript
@@ -273,7 +287,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_shares_count
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "Shares"
-msgstr ""
+msgstr "Дялове"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_account
@@ -314,7 +328,7 @@ msgstr "Публикация на стрийм в социалните меди�
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Unauthorized. Please contact your administrator. "
-msgstr ""
+msgstr "Неоторизиран достъп. Моля, свържете се с вашия администратор. "
 
 #. module: social_facebook
 #. odoo-python
@@ -325,7 +339,7 @@ msgstr "Неизвестен"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_res_config_settings__facebook_use_own_account
 msgid "Use your own Facebook Account"
-msgstr ""
+msgstr "Използвайте собствен Facebook профил"
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_media__media_type
@@ -339,7 +353,7 @@ msgstr ""
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_user_likes
 msgid "User Likes"
-msgstr ""
+msgstr "Харесвания от потребители"
 
 #. module: social_facebook
 #. odoo-javascript
@@ -356,12 +370,14 @@ msgid ""
 "We could not upload your image, try reducing its size and posting it again "
 "(error: %s)."
 msgstr ""
+"Не успяхме да качим вашето изображение, опитайте да намалите размера му и да "
+"го публикувате отново (грешка: %s)."
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_post__facebook_image_ids
 #: model:ir.model.fields,help:social_facebook.field_social_post_template__facebook_image_ids
 msgid "Will attach images to your posts."
-msgstr ""
+msgstr "Ще прикачва изображения към публикациите ви."
 
 #. module: social_facebook
 #. odoo-python
@@ -376,13 +392,16 @@ msgid ""
 "You need to be the manager of a Facebook Page to post with Odoo Social.\n"
 " Please create one and make sure it is linked to your account."
 msgstr ""
+"Трябва да сте мениджър на Facebook страница, за да публикувате с Odoo "
+"Social.\n"
+" Моля, създайте такава и се уверете, че е свързана с вашия профил."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "added an event"
-msgstr ""
+msgstr "добави събитие"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
 msgid "• <i class=\"fa fa-globe\"/>"
-msgstr ""
+msgstr "• <i class=\"fa fa-globe\"/>"

@@ -7,13 +7,14 @@
 # Marta Wacławek, 2025
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Marta (wacm)" <wacm@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-11-17 14:14+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-04 16:56+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "hr_recruitment_integration_website/pl/>\n"
 "Language: pl\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__apply_method
@@ -34,7 +35,7 @@ msgstr "Zastosuj metodę"
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "At least one platform must be selected"
-msgstr ""
+msgstr "Należy wybrać co najmniej jedną platformę"
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_recruitment_post_job_wizard__campaign_start_date
@@ -45,7 +46,7 @@ msgstr "Data rozpoczęcia kampanii "
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "Campaign Start Date is required."
-msgstr ""
+msgstr "Data rozpoczęcia kampanii jest obowiązkowa."
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields,field_description:hr_recruitment_integration_website.field_hr_job_post__apply_method
@@ -134,7 +135,7 @@ msgstr "Opublikuj ofertę"
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "Post is required."
-msgstr ""
+msgstr "Post jest obowiązkowy."
 
 #. module: hr_recruitment_integration_website
 #: model:ir.model.fields.selection,name:hr_recruitment_integration_website.selection__hr_job_post__apply_method__redirect
@@ -187,18 +188,22 @@ msgid ""
 "The job must be published on the website to generate a post with a redirect "
 "apply method."
 msgstr ""
+"Ogłoszenie o pracę musi zostać opublikowane na Stronie internetowej, aby "
+"wygenerować wpis z metodą przekierowania do aplikacji."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/wizard/hr_recruitment_post_job.py:0
 msgid "URL is required if the apply method is 'Redirect to company's website'."
 msgstr ""
+"Adres URL jest wymagany, jeśli metodą zastosowania jest „Przekierowanie na "
+"Stronę internetową firmy”."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python
 #: code:addons/hr_recruitment_integration_website/models/hr_job.py:0
 msgid "You can only generate a post for a published job offer."
-msgstr ""
+msgstr "Możesz wygenerować ogłoszenie tylko dla opublikowanej oferty pracy."
 
 #. module: hr_recruitment_integration_website
 #. odoo-python

@@ -1,26 +1,29 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_sale_subscription
+# * website_sale_subscription
 #
 # Translators:
 # Wil Odoo, 2024
 # Martin Trigaux, 2025
 # Aleš Pipan, 2025
 #
+# Žiga Trček <ziga.trcek@implex.si>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Aleš Pipan, 2025\n"
-"Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
+"PO-Revision-Date: 2026-06-23 13:07+0000\n"
+"Last-Translator: Žiga Trček <ziga.trcek@implex.si>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18/"
+"website_sale_subscription/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: website_sale_subscription
 #: model_terms:ir.ui.view,arch_db:website_sale_subscription.accordion_subscription_item
@@ -54,19 +57,21 @@ msgid ""
 "This subscription is not compatible with the one(s) already in your cart.\n"
 "                Please order them separately or empty your cart."
 msgstr ""
+"Ta naročnina ni združljiva z enim al več artikli v vaši košarici.\n"
+"                Prosimo, naročite artikle posebej ali pa izpraznite košarico."
 
 #. module: website_sale_subscription
 #. odoo-python
 #: code:addons/website_sale_subscription/models/product_template.py:0
 msgid ""
 "You cannot have an optional product that has a no common pricing's plan."
-msgstr ""
+msgstr "Ni mogoče imeti izbirnega opcijskega izdelka, ki nima privzete cene."
 
 #. module: website_sale_subscription
 #. odoo-python
 #: code:addons/website_sale_subscription/models/sale_order.py:0
 msgid "You cannot mix different subscription plans in the same order."
-msgstr ""
+msgstr "Ni mogoče imeti več naročniških tipov v enem naročilu."
 
 #. module: website_sale_subscription
 #. odoo-python

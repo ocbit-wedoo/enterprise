@@ -223,7 +223,7 @@ class WhatsAppMessage(WhatsAppFullCase, MockIncomingWhatsApp):
                     },
                     channel_values={
                         'channel_type': 'whatsapp',
-                        'name': mobile_number,
+                        'name': exp_mobile_nbr_formatted,
                         'wa_account_id': self.whatsapp_account,
                         'whatsapp_number': mobile_number,
                         'whatsapp_partner_id': new_partner,
@@ -240,7 +240,7 @@ class WhatsAppMessage(WhatsAppFullCase, MockIncomingWhatsApp):
                         'message_type': 'whatsapp_message',
                         'model': 'discuss.channel',
                         'partner_ids': self.env['res.partner'],
-                        'record_name': mobile_number,  # probably due to channel name
+                        'record_name': exp_mobile_nbr_formatted,  # channel name
                         'subtype_id': self.env.ref('mail.mt_comment'),
                     },
                 )

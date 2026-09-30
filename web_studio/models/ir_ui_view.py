@@ -13,7 +13,7 @@ import uuid
 import random
 
 from odoo import api, models, _
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
 
 from odoo.addons.web_studio.controllers.report import get_report_view_copy
 
@@ -618,7 +618,11 @@ class View(models.Model):
             _id += 1
 
         # replaces root_view.get_combined_arch() because we need an edited arch with the DIFF_KEY attributes
-        new_view_arch = self.apply_inheritance_specs(deepcopy(old_view_arch), etree.fromstring(self.arch, parser))
+        try:
+            new_view_arch = self.apply_inheritance_specs(deepcopy(old_view_arch), etree.fromstring(self.arch, parser))
+        except ValueError as e:
+            # Convert so edit_view() can fall back gracefully instead of crashing.
+            raise ValidationError(str(e)) from e
 
         new_view_tree = etree.Element('data')
         new_view_tree.append(new_view_arch)

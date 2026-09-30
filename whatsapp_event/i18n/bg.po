@@ -1,31 +1,33 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* whatsapp_event
+# * whatsapp_event
 #
 # Translators:
 # Георги Пехливанов <sonaris@gmail.com>, 2024
 # Martin Trigaux, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Venelin Stoykov, 2024
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Venelin Stoykov, 2024\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-07-29 17:10+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"whatsapp_event/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: whatsapp_event
 #: model:ir.model.fields,field_description:whatsapp_event.field_event_registration__date_tz
 msgid "Display Timezone"
-msgstr ""
+msgstr "Часова зона за показване"
 
 #. module: whatsapp_event
 #: model:ir.model,name:whatsapp_event.model_event_mail
@@ -43,11 +45,13 @@ msgid ""
 "Indicates the timezone in which the event dates/times will be displayed on "
 "the website."
 msgstr ""
+"Указва часовата зона, в която датите/часовете на събитието ще се показват на "
+"уебсайта."
 
 #. module: whatsapp_event
 #: model:ir.model,name:whatsapp_event.model_event_type_mail
 msgid "Mail Scheduling on Event Category"
-msgstr ""
+msgstr "Планиране на поща по категория на събитие"
 
 #. module: whatsapp_event
 #: model:ir.model,name:whatsapp_event.model_event_mail_registration
@@ -77,10 +81,10 @@ msgstr "WhatsApp"
 #. module: whatsapp_event
 #: model:ir.model,name:whatsapp_event.model_whatsapp_template
 msgid "WhatsApp Template"
-msgstr ""
+msgstr "WhatsApp шаблон"
 
 #. module: whatsapp_event
 #. odoo-python
 #: code:addons/whatsapp_event/models/event_mail.py:0
 msgid "Whatsapp Templates in Events must have a phone field set."
-msgstr ""
+msgstr "WhatsApp шаблоните в събития трябва да имат зададено поле за телефон."

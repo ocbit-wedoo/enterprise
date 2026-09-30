@@ -1,27 +1,15 @@
-$margin-right: 15px;
-
 .o-spreadsheet-templates-dialog {
     max-height: 90vh;
     overflow: auto;
 
     .o_searchview {
-        height: 24px;
         width: 50%;
         margin-left: auto;
-        margin-right: $margin-right;
+        margin-right: $o-spreadsheet-dialog-margin-right;
         border-right: 1px solid $border-color !important;
 
         &:focus-within {
             border-right-color: $input-focus-border-color !important;
-        }
-    }
-
-    .o-pager {
-        height: 30px;
-        display: flex;
-
-        nav {
-            margin: auto $margin-right auto auto;
         }
     }
 }

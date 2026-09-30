@@ -248,3 +248,13 @@ registry.category("web_tour.tours").add("test_quality_check_packages_lots_tour",
         { trigger: '.o_notification_bar.bg-success' },
     ],
 });
+
+registry.category("web_tour.tours").add("test_operation_quality_check_kept_on_partial_barcode_exit", {
+    steps: () => [
+        // Receive 1 of the 2 units, then leave with the back button.
+        { trigger: '.o_barcode_client_action', run: "scan product1" },
+        { trigger: '.o_barcode_line span.qty-done:contains(1)' },
+        { trigger: 'header.o_barcode_header button.o_exit', run: 'click' },
+        { trigger: '.o_stock_barcode_main_menu' },
+    ],
+});

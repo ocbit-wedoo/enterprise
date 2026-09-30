@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2026-05-16 18:31+0000\n"
+"PO-Revision-Date: 2026-07-25 17:29+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "delivery_fedex/bg/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -41,11 +41,12 @@ msgid ""
 "<br/>According to your needs, you will need to contact different "
 "certifications:"
 msgstr ""
+"<br/>Според вашите нужди ще трябва да се свържете с различни сертификации:"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "<span class=\"o_form_label\">Package Length Unit</span>"
-msgstr ""
+msgstr "<span class=\"o_form_label\">Мерна единица за дължина на пакета</span>"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -54,6 +55,9 @@ msgid ""
 "                                <span invisible=\"fedex_weight_unit != "
 "'LB'\">IN</span>"
 msgstr ""
+"<span invisible=\"fedex_weight_unit != 'KG'\">СМ</span>\n"
+"                                <span invisible=\"fedex_weight_unit != "
+"'LB'\">ИНЧА</span>"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -88,7 +92,7 @@ msgstr "Процес по сертифициране"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_document_stock_type
 msgid "Commercial Invoice Type"
-msgstr ""
+msgstr "Тип на търговската фактура"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_droppoff_type__drop_box
@@ -103,7 +107,7 @@ msgstr "Ключ за разработчици"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Duties paid by"
-msgstr ""
+msgstr "Митата платени от"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_label_file_type__epl2
@@ -123,22 +127,22 @@ msgstr ""
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Extra Data"
-msgstr ""
+msgstr "Допълнителни данни"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_extra_data_rate_request
 msgid "Extra data for rate (legacy)"
-msgstr ""
+msgstr "Допълнителни данни за тарифа (наследено)"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_extra_data_return_request
 msgid "Extra data for return (legacy)"
-msgstr ""
+msgstr "Допълнителни данни за връщане (наследено)"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_extra_data_ship_request
 msgid "Extra data for ship (legacy)"
-msgstr ""
+msgstr "Допълнителни данни за изпращане (наследено)"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_label_file_type
@@ -158,22 +162,22 @@ msgstr "FEDEX_2_DAY_AM"
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_3_day_freight
 msgid "FEDEX_3_DAY_FREIGHT"
-msgstr ""
+msgstr "FEDEX_3_DAY_FREIGHT"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_economy_select
 msgid "FEDEX_ECONOMY_SELECT"
-msgstr ""
+msgstr "FEDEX_ECONOMY_SELECT"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_express_saver
 msgid "FEDEX_EXPRESS_SAVER"
-msgstr ""
+msgstr "FEDEX_EXPRESS_SAVER"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_first
 msgid "FEDEX_FIRST"
-msgstr ""
+msgstr "FEDEX_FIRST"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_ground
@@ -183,62 +187,62 @@ msgstr "FEDEX_GROUND"
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_international_connect_plus
 msgid "FEDEX_INTERNATIONAL_CONNECT_PLUS"
-msgstr ""
+msgstr "FEDEX_INTERNATIONAL_CONNECT_PLUS"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_international_priority
 msgid "FEDEX_INTERNATIONAL_PRIORITY"
-msgstr ""
+msgstr "FEDEX_INTERNATIONAL_PRIORITY"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_international_priority_express
 msgid "FEDEX_INTERNATIONAL_PRIORITY_EXPRESS"
-msgstr ""
+msgstr "FEDEX_INTERNATIONAL_PRIORITY_EXPRESS"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_next_day_afternoon
 msgid "FEDEX_NEXT_DAY_AFTERNOON"
-msgstr ""
+msgstr "FEDEX_NEXT_DAY_AFTERNOON"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_next_day_early_morning
 msgid "FEDEX_NEXT_DAY_EARLY_MORNING"
-msgstr ""
+msgstr "FEDEX_NEXT_DAY_EARLY_MORNING"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_next_day_end_of_day
 msgid "FEDEX_NEXT_DAY_END_OF_DAY"
-msgstr ""
+msgstr "FEDEX_NEXT_DAY_END_OF_DAY"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_next_day_mid_morning
 msgid "FEDEX_NEXT_DAY_MID_MORNING"
-msgstr ""
+msgstr "FEDEX_NEXT_DAY_MID_MORNING"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_priority
 msgid "FEDEX_PRIORITY"
-msgstr ""
+msgstr "FEDEX_PRIORITY"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_priority_express
 msgid "FEDEX_PRIORITY_EXPRESS"
-msgstr ""
+msgstr "FEDEX_PRIORITY_EXPRESS"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_priority_express_freight
 msgid "FEDEX_PRIORITY_EXPRESS_FREIGHT"
-msgstr ""
+msgstr "FEDEX_PRIORITY_EXPRESS_FREIGHT"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_priority_freight
 msgid "FEDEX_PRIORITY_FREIGHT"
-msgstr ""
+msgstr "FEDEX_PRIORITY_FREIGHT"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_regional_economy
 msgid "FEDEX_REGIONAL_ECONOMY"
-msgstr ""
+msgstr "FEDEX_REGIONAL_ECONOMY"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__first_overnight
@@ -249,17 +253,17 @@ msgstr "FIRST_OVERNIGHT"
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__delivery_type__fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__stock_package_type__package_carrier_type__fedex
 msgid "FedEx (Legacy)"
-msgstr ""
+msgstr "FedEx (наследено)"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_account_number
 msgid "FedEx Legacy Account Number"
-msgstr ""
+msgstr "Наследен номер на акаунт във FedEx"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_saturday_delivery
 msgid "FedEx Saturday Delivery"
-msgstr ""
+msgstr "Доставка от FedEx в събота"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -275,17 +279,17 @@ msgstr "Fedex конфигурация"
 #. odoo-python
 #: code:addons/delivery_fedex/models/delivery_fedex.py:0
 msgid "Fedex Documents"
-msgstr ""
+msgstr "Документи на FedEx"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_droppoff_type
 msgid "Fedex Drop-Off Type"
-msgstr ""
+msgstr "Тип на предаване във FedEx"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_duty_payment
 msgid "Fedex Duty Payment"
-msgstr ""
+msgstr "Плащане на мита във FedEx"
 
 #. module: delivery_fedex
 #: model:delivery.carrier,name:delivery_fedex.delivery_carrier_fedex_inter
@@ -296,7 +300,7 @@ msgstr "Fedex международен"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_default_package_type_id
 msgid "Fedex Package Type"
-msgstr ""
+msgstr "Тип пакет на FedEx"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_service_type
@@ -343,7 +347,7 @@ msgstr "INTERNATIONAL_PRIORITY"
 #. odoo-python
 #: code:addons/delivery_fedex/models/delivery_fedex.py:0
 msgid "Invalid syntax for FedEx extra data."
-msgstr ""
+msgstr "Невалиден синтаксис за допълнителните данни на FedEx."
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_weight_unit__kg
@@ -358,12 +362,12 @@ msgstr "Фунтове"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Label Format"
-msgstr ""
+msgstr "Формат на етикета"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_label_stock_type
 msgid "Label Type"
-msgstr ""
+msgstr "Тип на етикета"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_meter_number
@@ -390,7 +394,7 @@ msgstr "PAPER_4X6"
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_document_stock_type__paper_4x6_75
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_label_stock_type__paper_4x6_75
 msgid "PAPER_4X6.75"
-msgstr ""
+msgstr "PAPER_4X6.75"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_document_stock_type__paper_4x8
@@ -523,7 +527,7 @@ msgstr "STOCK_4X8"
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_document_stock_type__stock_4x9
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_label_stock_type__stock_4x9
 msgid "STOCK_4X9"
-msgstr ""
+msgstr "STOCK_4X9"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_document_stock_type__stock_4x9_leading_doc_tab
@@ -545,7 +549,7 @@ msgstr "Доставка в Събота"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Screenshot"
-msgstr ""
+msgstr "Екранна снимка"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_duty_payment__sender
@@ -556,7 +560,7 @@ msgstr "Подател"
 #. odoo-python
 #: code:addons/delivery_fedex/models/delivery_fedex.py:0
 msgid "Shipment #%s has been cancelled"
-msgstr ""
+msgstr "Пратка №%s беше отменена"
 
 #. module: delivery_fedex
 #. odoo-python
@@ -602,7 +606,7 @@ msgstr "Стандартни услуги "
 #. module: delivery_fedex
 #: model:ir.model,name:delivery_fedex.model_stock_package_type
 msgid "Stock package type"
-msgstr ""
+msgstr "Тип на пакета за съхранение"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,help:delivery_fedex.field_delivery_carrier__fedex_extra_data_rate_request
@@ -623,6 +627,19 @@ msgid ""
 "More info on https://www.fedex.com/en-us/developer/web-services/"
 "process.html#documentation"
 msgstr ""
+"Допълнителните данни във FedEx са организирани като вътрешността на json "
+"файл.\n"
+"Тази функционалност е разширена/техническа и трябва да се използва само ако "
+"знаете какво правите.\n"
+"\n"
+"Пример за валидна стойност: ```\n"
+"\"ShipmentDetails\": {\"Pieces\": {\"Piece\": {\"AdditionalInformation\": "
+"\"extra info\"}}}\n"
+"```\n"
+"\n"
+"С горния пример, AdditionalInformation на всяко парче ще бъде обновено.\n"
+"Повече информация на https://www.fedex.com/en-us/developer/web-services/"
+"process.html#documentation"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex

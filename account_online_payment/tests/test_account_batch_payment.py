@@ -1,4 +1,5 @@
 from odoo import Command, fields
+from odoo.exceptions import UserError
 from odoo.tests import tagged, patch
 from odoo.addons.account.tools.structured_reference import is_valid_structured_reference_for_country
 from odoo.addons.account_online_synchronization.tests.common import AccountOnlineSynchronizationCommon
@@ -55,17 +56,29 @@ class TestAccountOnlinePaymentBatch(AccountOnlineSynchronizationCommon):
             'payment_ids': [Command.set(payment.ids)],
         })
 
+        self.partner.vat = 'vat'
+        self.partner.contact_address_inline = 'contact_address_inline'
+        batch.journal_id.company_id.vat = 'vat'
+
         data = batch._prepare_payment_data()
 
         self.assertEqual(data, {
             'account_id': self.account_online_account.online_identifier,
             'batch_booking': batch.iso20022_batch_booking,
             'date': fields.Date.to_string(batch.date),
+            'payer_account_number': batch.journal_id.account_online_account_id.account_number,
+            'payer_account_type': 'iban',
+            'payer_account_holder_name': 'company_1_data',
+            'payer_address': batch.journal_id.company_id.partner_id.contact_address_inline,
+            'payer_name': batch.journal_id.company_id.name,
+            'payer_identification': batch.journal_id.company_id.vat,
             'payment_type': "bulk",
             'payments': [{
                 'amount': 100.0,
                 'account_number': self.partner_bank.sanitized_acc_number,
                 'account_type': 'IBAN',
+                'creditor_address': 'contact_address_inline',
+                'creditor_identification': 'vat',
                 'creditor_name': self.partner.name,
                 'currency': payment.currency_id.display_name,
                 'date': fields.Date.to_string(payment.date),
@@ -77,3 +90,72 @@ class TestAccountOnlinePaymentBatch(AccountOnlineSynchronizationCommon):
             'reference': batch.name,
         })
         mock.assert_called_once_with(payment.memo, 'BE')
+
+    @patch('odoo.addons.account_online_synchronization.models.account_online.AccountOnlineLink._get_institution_data')
+    def test_payment_limit(self, patched_institution_data):
+        patched_institution_data.return_value = {
+            'payment_institution': {
+                'institution_payment_max_amount_limit': 10000,
+                'institution_payment_instructions_limit': 10,
+            },
+        }
+
+        # Valid case
+        payments = self.env['account.payment'].create([{
+            'partner_id': self.partner.id,
+            'partner_bank_id': self.partner_bank.id,
+            'amount': 100.0,
+            'payment_type': 'outbound',
+            'journal_id': self.euro_bank_journal.id,
+            'payment_method_line_id': self.sepa_method_line.id,
+        } for _ in range(5)])
+        payments.action_post()
+
+        batch_500 = self.env['account.batch.payment'].create({
+            'batch_type': 'outbound',
+            'journal_id': self.euro_bank_journal.id,
+            'payment_ids': [Command.set(payments.ids)],
+        })
+
+        batch_500.journal_id.account_online_account_id._check_payment_limit_exceeded(batch_500)
+        patched_institution_data.assert_called_once()
+
+        # Max amount exceeded on batch
+        payments = self.env['account.payment'].create([{
+            'partner_id': self.partner.id,
+            'partner_bank_id': self.partner_bank.id,
+            'amount': 3000.0,
+            'payment_type': 'outbound',
+            'journal_id': self.euro_bank_journal.id,
+            'payment_method_line_id': self.sepa_method_line.id,
+        } for _ in range(5)])
+        payments.action_post()
+
+        batch_15000 = self.env['account.batch.payment'].create({
+            'batch_type': 'outbound',
+            'journal_id': self.euro_bank_journal.id,
+            'payment_ids': [Command.set(payments.ids)],
+        })
+        with self.assertRaises(UserError):
+            batch_15000.validate_batch()
+            patched_institution_data.assert_called_once()
+
+        # Max number of payments exceeded
+        payments = self.env['account.payment'].create([{
+            'partner_id': self.partner.id,
+            'partner_bank_id': self.partner_bank.id,
+            'amount': 50.0,
+            'payment_type': 'outbound',
+            'journal_id': self.euro_bank_journal.id,
+            'payment_method_line_id': self.sepa_method_line.id,
+        } for _ in range(20)])
+        payments.action_post()
+
+        batch_1000 = self.env['account.batch.payment'].create({
+            'batch_type': 'outbound',
+            'journal_id': self.euro_bank_journal.id,
+            'payment_ids': [Command.set(payments.ids)],
+        })
+        with self.assertRaises(UserError):
+            batch_1000.validate_batch()
+            patched_institution_data.assert_called_once()

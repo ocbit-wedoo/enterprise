@@ -154,6 +154,35 @@ class TestReports(L10nInTestAccountGstReportsCommon):
         gstr1_json = gstr1_report._get_gstr1_json()
         self.assertDictEqual(gstr1_json, self._read_mock_json('gstr1_sez_zero_rated_expected_response.json'))
 
+    def test_gstr1_foreign_currency_invoice_value(self):
+        """Test that invoice Value in GSTR1 B2B is exported in company currency (INR), not invoice currency."""
+        foreign_currency = self.other_currency
+        self.env['res.currency.rate'].create({
+            'currency_id': foreign_currency.id,
+            'name': self.test_date,
+            'rate': 0.01,
+            'company_id': self.company_data['company'].id,
+        })
+
+        inv = self.init_invoice(
+            'out_invoice',
+            products=self.product_a,
+            invoice_date=self.test_date,
+            taxes=self.comp_igst_18,
+            company=self.company_data['company'],
+            partner=self.partner_b,
+            currency=foreign_currency,
+            post=False,
+        )
+        inv.write({
+            'l10n_in_gst_treatment': 'special_economic_zone',
+        })
+        inv.action_post()
+
+        gstr1_report = self._create_gstr_report()
+        gstr1_json = gstr1_report._get_gstr1_json()
+        self.assertDictEqual(gstr1_json, self._read_mock_json('gstr1_sez_foreign_currency_test.json'))
+
     def test_hsn_schema_change_gstr1_json(self):
         self._setup_moves(self._create_credit_note, invoice_date=HSN_CHANGE_TEST_DATE)
         gstr1_report = self._create_gstr_report(

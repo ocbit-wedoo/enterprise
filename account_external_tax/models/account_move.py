@@ -12,7 +12,9 @@ class AccountMove(models.Model):
         because it uses the percentage amount on the tax which will always be 1%. This sets the correct totals using
         account.move.line fields set by `_set_external_taxes()`. """
         super()._compute_tax_totals()
-        for move in self.filtered(lambda move: move.is_tax_computed_externally and move.tax_totals):
+        for move in self.filtered(lambda move: move.is_tax_computed_externally and
+                                               move.tax_totals and
+                                               move.move_type in ('out_invoice', 'out_refund')):
             lines = move.invoice_line_ids.filtered(lambda l: l.display_type == 'product')
             tax_totals = move.tax_totals
             subtotal = tax_totals['subtotals'] and tax_totals['subtotals'][0] or {}

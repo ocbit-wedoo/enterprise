@@ -1,31 +1,34 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* project_enterprise
+# * project_enterprise
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 # Hanna Kheradroosta, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Hanna Kheradroosta, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-12 16:37+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"project_enterprise/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: project_enterprise
 #. odoo-python
 #: code:addons/project_enterprise/models/project_task.py:0
 msgid "%(partner)s has %(amount)s tasks at the same time."
-msgstr ""
+msgstr "%(partner)s همزمان دارای %(amount)s وظیفه است."
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form
@@ -33,6 +36,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" title=\"Dependency "
 "warning\"/>"
 msgstr ""
+"<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" title=\"اخطار "
+"وابستگی\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_sharing_project_task_view_kanban_inherited
@@ -46,13 +51,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_project_view_gantt
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
 msgid "<i class=\"fa fa-long-arrow-right\" title=\"Arrow\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-long-arrow-right\" title=\"فلش\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form
 msgid ""
 "<i class=\"fa fa-random me-2\" role=\"img\" title=\"Planning overlap\"/>"
 msgstr ""
+"<i class=\"fa fa-random me-2\" role=\"img\" title=\"همپوشانی در "
+"برنامه‌ریزی\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
@@ -90,7 +97,7 @@ msgstr ""
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.portal_my_task
 msgid "<strong>Planned Date:</strong>"
-msgstr ""
+msgstr "<strong>تاریخ برنامه‌ریزی شده:</strong>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_project_view_gantt
@@ -118,12 +125,12 @@ msgstr "محول شده به"
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/view_dialogs/select_auto_plan_create_dialog.xml:0
 msgid "Auto Plan"
-msgstr ""
+msgstr "برنامه‌ریزی خودکار"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form
 msgid "Check it out <i class=\"oi oi-chevron-right ms-2\"/>"
-msgstr ""
+msgstr "بررسی کنید <i class=\"oi oi-chevron-right ms-2\"/>"
 
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__partner_id
@@ -155,6 +162,8 @@ msgid ""
 "One parameter is missing to use this method. You should give a start and end "
 "dates."
 msgstr ""
+"برای استفاده از این متد یک پارامتر وجود ندارد. باید تاریخ‌های آغاز و پایان را "
+"مشخص کنید."
 
 #. module: project_enterprise
 #. odoo-python
@@ -183,7 +192,7 @@ msgstr "تاریخ برنامه ریزی شده"
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__planned_date_start
 msgid "Planned Date Start"
-msgstr ""
+msgstr "تاریخ شروع برنامه‌ریزی"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_project_view_gantt
@@ -208,13 +217,13 @@ msgstr "پروژه"
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/milestones_popover.xml:0
 msgid "Project due"
-msgstr ""
+msgstr "سررسید پروژه"
 
 #. module: project_enterprise
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/milestones_popover.xml:0
 msgid "Project start"
-msgstr ""
+msgstr "شروع پروژه"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form_in_gantt
@@ -225,7 +234,7 @@ msgstr "ذخیره"
 #. odoo-python
 #: code:addons/project_enterprise/models/project_task.py:0
 msgid "Some tasks were planned after their initial deadline."
-msgstr ""
+msgstr "بعضی از وظیفه‌ها برای بعد از موعد سررسید اولیه‌شان برنامه‌ریزی شدند."
 
 #. module: project_enterprise
 #. odoo-python
@@ -235,6 +244,9 @@ msgid ""
 "limited availability of the assignees. The planned dates for these tasks may "
 "not align with their allocated hours."
 msgstr ""
+"چند وظیفه به صورت همزمان برنامه‌ریزی شدند، که با توجه به محدودیت دسترسی به "
+"محول شده‌ها باعث ایجاد تناقض می‌شود. ممکن است تاریخ برنامه‌ریزی شده برای این "
+"وظیفه‌ها مطابق با ساعات تخصیص یافته نباشد."
 
 #. module: project_enterprise
 #. odoo-python
@@ -243,6 +255,8 @@ msgid ""
 "Some tasks weren't planned because the closest available starting date was "
 "too far ahead in the future"
 msgstr ""
+"بعضی از وظایف برنامه‌ریزی نشدند چون نزدیک‌ترین تاریخ شروع قابل استفاده آنها در "
+"آینده بسیار دور بود"
 
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__planned_date_begin
@@ -274,7 +288,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/task_gantt_renderer.js:0
 msgid "Tasks have been successfully scheduled for the upcoming periods."
-msgstr ""
+msgstr "وظایف با موفقیت برای بازه‌های زمانی آینده زمان‌بندی شدند."
 
 #. module: project_enterprise
 #. odoo-python
@@ -287,6 +301,7 @@ msgstr "تداخل در وظایف"
 #: model:ir.model.constraint,message:project_enterprise.constraint_project_task_planned_dates_check
 msgid "The planned start date must be before the planned end date."
 msgstr ""
+"تاریخ برنامه‌ریزی شده شروع باید پیش از تاریخ برنامه‌ریزی شده پایان باشد."
 
 #. module: project_enterprise
 #. odoo-python
@@ -295,12 +310,14 @@ msgid ""
 "The tasks could not be rescheduled due to the assignees' lack of "
 "availability at this time."
 msgstr ""
+"به دلیل عدم دسترسی به وظایف محوله در حال حاضر، امکان تغییر زمان انجام آنها "
+"وجود نداشت."
 
 #. module: project_enterprise
 #. odoo-python
 #: code:addons/project_enterprise/models/project_task.py:0
 msgid "This Progress Bar is not implemented."
-msgstr ""
+msgstr "این نوار وضعیت پیاده‌سازی نشده است."
 
 #. module: project_enterprise
 #. odoo-python
@@ -309,6 +326,8 @@ msgid ""
 "This task cannot be planned before the following tasks on which it depends: %"
 "(task_list)s"
 msgstr ""
+"این وظیفه را نمی‌توان قبل از وظیفه‌های بعدی که به آن وابسته است برنامه‌ریزی "
+"کرد: %(task_list)s"
 
 #. module: project_enterprise
 #. odoo-python
@@ -317,6 +336,8 @@ msgid ""
 "This user isn't expected to have any tasks assigned during this period "
 "because they don't have any running contract."
 msgstr ""
+"انتظار نمی‌رودکه این کاربر برای این بازه زمانی دارای وظیفه برنامه‌ریزی شده باشد"
+"، چون دارای قرارداد جاری نیستند."
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.res_config_settings_view_form
@@ -333,7 +354,7 @@ msgstr "محول نشده"
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
 msgid "Unschedule"
-msgstr ""
+msgstr "لغو برنامه‌ریزی"
 
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_res_users
@@ -344,7 +365,7 @@ msgstr "کاربر"
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/project_task_map/project_task_map_renderer.xml:0
 msgid "View customer locations for your tasks"
-msgstr ""
+msgstr "مشاهده مکان مشتری برای وظیفه‌ها"
 
 #. module: project_enterprise
 #. odoo-javascript

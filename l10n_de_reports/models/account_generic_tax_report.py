@@ -51,7 +51,7 @@ class GermanTaxReportCustomHandler(models.AbstractModel):
         periodicity = options['tax_periodicity']['periodicity']
         if periodicity == 'monthly':
             template_context['period'] = date_to.strftime("%m")
-        elif periodicity == 'quarterly':
+        elif periodicity == 'trimester':
             month_end = int(date_to.month)
             if month_end % 3 != 0:
                 raise ValueError('Quarter not supported')

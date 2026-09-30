@@ -50,7 +50,7 @@ class HrPayslip(models.Model):
         string='Reference', copy=False)
     employee_id = fields.Many2one(
         'hr.employee', string='Employee', required=True,
-        domain="['|', ('company_id', '=', False), ('company_id', '=', company_id), '|', ('active', '=', True), ('active', '=', False)]")
+        domain="['|', ('company_id', '=', False), ('company_id', 'child_of', company_id), '|', ('active', '=', True), ('active', '=', False)]")
     image_128 = fields.Image(related='employee_id.image_128')
     image_1920 = fields.Image(related='employee_id.image_1920')
     avatar_128 = fields.Image(related='employee_id.avatar_128')
@@ -180,6 +180,8 @@ class HrPayslip(models.Model):
     @api.depends('contract_id', 'struct_id')
     def _compute_date_from(self):
         for payslip in self:
+            if payslip.date_from:
+                continue
             if self.env.context.get('default_date_from'):
                 payslip.date_from = self.env.context.get('default_date_from')
             else:
@@ -410,9 +412,9 @@ class HrPayslip(models.Model):
             # NOTE: Since we combine multiple attachments on one input line, it's not possible to compute
             #  how much per attachment needs to be taken record_payment will consume monthly payments (child_support) before other attachments
             for slip in self.filtered(lambda r: r.salary_attachment_ids):
-                for deduction_codes, attachments in slip.salary_attachment_ids.grouped(lambda x: x.other_input_type_id.code).items():
+                for deduction_code, attachments in slip.salary_attachment_ids.grouped(lambda x: x.other_input_type_id.code).items():
                     # Use the amount from the computed value in the payslip lines not the input
-                    salary_lines = slip.line_ids.filtered(lambda r: r.code in deduction_codes)
+                    salary_lines = slip.line_ids.filtered(lambda r: r.code == deduction_code)
                     if not attachments or not salary_lines:
                         continue
                     slip._record_attachment_payment(attachments, salary_lines)
@@ -1166,11 +1168,12 @@ class HrPayslip(models.Model):
     def _compute_worked_days_line_ids(self):
         if not self or self.env.context.get('salary_simulation'):
             return
+        # Reset worked days before filtering valid slips to clear lines on structures without worked days
+        self.update({'worked_days_line_ids': [(5, 0, 0)]})
+
         valid_slips = self.filtered(lambda p: p.employee_id and p.date_from and p.date_to and p.contract_id and p.struct_id and p.struct_id.use_worked_day_lines)
         if not valid_slips:
             return
-        # Make sure to reset invalid payslip's worked days line
-        self.update({'worked_days_line_ids': [(5, 0, 0)]})
         # Ensure work entries are generated for all contracts
         generate_from = min(p.date_from for p in valid_slips) + relativedelta(days=-1)
         generate_to = max(p.date_to for p in valid_slips) + relativedelta(days=1)

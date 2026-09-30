@@ -128,16 +128,23 @@ class HelpdeskSLAStatus(models.Model):
         freeze_stages = self.sla_id.exclude_stage_ids.ids
         tracking_lines = self.ticket_id.message_ids.tracking_value_ids.filtered(lambda tv: tv.field_id == field_stage).sorted(key="create_date")
 
-        if not tracking_lines:
-            return 0
-
         old_time = self.ticket_id.create_date
         for tracking_line in tracking_lines:
             if tracking_line.old_value_integer in freeze_stages:
                 # We must use get_work_hours_count to compute real waiting hours (as the deadline computation is also based on calendar)
                 hours_freezed += working_calendar.get_work_hours_count(old_time, tracking_line.create_date)
             old_time = tracking_line.create_date
-        if tracking_lines[-1].new_value_integer in freeze_stages:
-            # the last tracking line is not yet created
+
+        # The tracking value of the ongoing stage change does not exist yet, so
+        # the stage being left is taken from the pending tracking values, then
+        # from the last tracking value when the pending one is not available.
+        pending = self.env.cr.precommit.data.get(f'mail.tracking.{self.ticket_id._name}', {}).get(self.ticket_id.id)
+        if pending and pending.get('stage_id'):
+            current_stage_id = pending['stage_id'].id
+        elif tracking_lines:
+            current_stage_id = tracking_lines[-1].new_value_integer
+        else:
+            current_stage_id = self.ticket_id.stage_id.id
+        if current_stage_id in freeze_stages:
             hours_freezed += working_calendar.get_work_hours_count(old_time, fields.Datetime.now())
         return hours_freezed

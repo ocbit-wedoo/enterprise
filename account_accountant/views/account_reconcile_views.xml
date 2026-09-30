@@ -26,7 +26,7 @@
                 <field name="reconcile_model_id"/>
                 <separator/>
                 <filter string="Unreconciled"
-                        domain="[('account_id.reconcile', '=', True), '|', ('matching_number', '=', False), ('matching_number', '=like', 'P%')]"
+                        domain="[('balance', '!=', 0), ('account_id.reconcile', '=', True), '|', ('matching_number', '=', False), ('matching_number', '=like', 'P%')]"
                         name="reconcilable_account"
                         help="Journal items where the account allows reconciliation no matter the residual amount"
                 />

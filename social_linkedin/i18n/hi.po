@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-02-14 09:17+0000\n"
+"PO-Revision-Date: 2026-07-10 16:27+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
 "social_linkedin/hi/>\n"
@@ -20,56 +20,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.linkedin_preview
 msgid "<b>LinkedIn Post</b>"
-msgstr ""
+msgstr "<b>LinkedIn पोस्ट</b>"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-thumbs-up me-1\" title=\"Likes\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-thumbs-up me-1\" title=\"Likes\"/>"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_live_post__linkedin_post_id
 msgid "Actual LinkedIn ID of the post"
-msgstr ""
+msgstr "पोस्ट की वास्तविक LinkedIn आईडी"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_account.py:0
 msgid "An error occurred when fetching your pages data: “%s”."
-msgstr ""
+msgstr "आपके पेजों का डेटा प्राप्त करते समय कोई गड़बड़ी हुई: \"%s\"।"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_account.py:0
 msgid "An error occurred when fetching your pages: “%s”."
-msgstr ""
+msgstr "आपका पेज प्राप्त करते समय कोई गड़बड़ी हुई: \"%s\"।"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_res_config_settings__linkedin_app_id
 msgid "App ID"
-msgstr ""
+msgstr "ऐप आईडी"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_res_config_settings__linkedin_client_secret
 msgid "App Secret"
-msgstr ""
+msgstr "ऐप सीक्रेट"
 
 #. module: social_linkedin
 #. odoo-javascript
 #: code:addons/social_linkedin/static/src/xml/social_linkedin_templates.xml:0
 #: model_terms:ir.ui.view,arch_db:social_linkedin.social_stream_post_view_kanban
 msgid "Author Image"
-msgstr ""
+msgstr "लेखक की इमेज"
 
 #. module: social_linkedin
 #: model:ir.model.fields,help:social_linkedin.field_res_config_settings__linkedin_use_own_account
@@ -77,6 +77,8 @@ msgid ""
 "Check this if you want to use your personal LinkedIn Developer Account "
 "instead of the provided one."
 msgstr ""
+"अगर आप दिए गए खाते के बजाय अपना व्यक्तिगत LinkedIn डेवलपर खाता उपयोग करना चाहते हैं, "
+"तो इसे चुनें।"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_res_config_settings
@@ -87,31 +89,31 @@ msgstr "कॉन्फ़िगरेशन सेटिंग"
 #. odoo-python
 #: code:addons/social_linkedin/models/social_stream_post.py:0
 msgid "Could not like / dislike this comment."
-msgstr ""
+msgstr "इस टिप्पणी को पसंद / नापसंद नहीं किया जा सकता।"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_stream_post.py:0
 msgid "Couldn't delete the post: “%s”."
-msgstr ""
+msgstr "पोस्ट को हटाया नहीं जा सका: \"%s\"।"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_stream_post.py:0
 msgid "Couldn't update the post: “%s”."
-msgstr ""
+msgstr "पोस्ट अपडेट नहीं हो सकी: \"%s\"।"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post__display_linkedin_preview
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post_template__display_linkedin_preview
 msgid "Display LinkedIn Preview"
-msgstr ""
+msgstr "LinkedIn प्रीव्यू दिखाएं"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_stream_post.py:0
 msgid "Failed to post the comment: “%(error_description)s”"
-msgstr ""
+msgstr "टिप्पणी पोस्ट करने में असफल: \"%(error_description)s\""
 
 #. module: social_linkedin
 #. odoo-python
@@ -120,12 +122,14 @@ msgid ""
 "Failed to retrieve the post. It might have been deleted or you may not have "
 "permission to view it."
 msgstr ""
+"पोस्ट प्राप्त करने में विफल रहा. हो सकता है कि उसे हटा दिया गया हो या आपके पास उसे देखने "
+"की अनुमति न हो।"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post__has_linkedin_account
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post_template__has_linkedin_account
 msgid "Has LinkedIn Account"
-msgstr ""
+msgstr "LinkedIn खाता है"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.social_post_template_view_form
@@ -136,7 +140,7 @@ msgstr "इमेज"
 #. odoo-javascript
 #: code:addons/social_linkedin/static/src/xml/social_linkedin_templates.xml:0
 msgid "Likes"
-msgstr ""
+msgstr "लाइक"
 
 #. module: social_linkedin
 #: model:ir.model.fields.selection,name:social_linkedin.selection__social_media__media_type__linkedin
@@ -148,89 +152,89 @@ msgstr "LinkedIn"
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_account__linkedin_account_id
 msgid "LinkedIn Account ID"
-msgstr ""
+msgstr "LinkedIn अकाउंट आईडी"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_account__linkedin_account_urn
 #: model:ir.model.fields,help:social_linkedin.field_social_account__linkedin_account_urn
 msgid "LinkedIn Account URN"
-msgstr ""
+msgstr "LinkedIn अकाउंट URN"
 
 #. module: social_linkedin
 #. odoo-javascript
 #: code:addons/social_linkedin/static/src/js/stream_post_kanban_record.js:0
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_comments_count
 msgid "LinkedIn Comments"
-msgstr ""
+msgstr "LinkedIn पर कमेंट"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post__linkedin_image_ids
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post_template__linkedin_image_ids
 msgid "LinkedIn Images"
-msgstr ""
+msgstr "LinkedIn इमेज"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_likes_count
 msgid "LinkedIn Likes"
-msgstr ""
+msgstr "LinkedIn लाइक"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post__linkedin_message
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post_template__linkedin_message
 msgid "LinkedIn Message"
-msgstr ""
+msgstr "LinkedIn मैसेज"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post__linkedin_preview
 #: model:ir.model.fields,field_description:social_linkedin.field_social_post_template__linkedin_preview
 msgid "LinkedIn Preview"
-msgstr ""
+msgstr "LinkedIn प्रीव्यू"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_author_vanity_name
 msgid "LinkedIn Vanity Name"
-msgstr ""
+msgstr "LinkedIn वैनिटी का नाम"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_account__linkedin_access_token
 msgid "LinkedIn access token"
-msgstr ""
+msgstr "LinkedIn ऐक्सेस टोकन"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_author_id
 msgid "LinkedIn author ID"
-msgstr ""
+msgstr "LinkedIn लेखक आईडी"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_author_urn
 msgid "LinkedIn author URN"
-msgstr ""
+msgstr "LinkedIn लेखक URN"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_author_image_url
 msgid "LinkedIn author image URL"
-msgstr ""
+msgstr "LinkedIn लेखक की इमेज का यूआरएल"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/controllers/main.py:0
 msgid "LinkedIn did not provide a valid access token."
-msgstr ""
+msgstr "LinkedIn ने एक मान्य ऐक्सेस टोकन प्रदान नहीं किया।"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_stream_post__linkedin_post_urn
 msgid "LinkedIn post URN"
-msgstr ""
+msgstr "LinkedIn पोस्ट URN"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.res_config_settings_view_form
 msgid "Linkedin Developer Account"
-msgstr ""
+msgstr "LinkedIn डेवलपर खाता"
 
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_social_media__media_type
 msgid "Media Type"
-msgstr ""
+msgstr "मीडिया टाइप"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.social_post_template_view_form
@@ -242,12 +246,12 @@ msgstr "मैसेज"
 #: code:addons/social_linkedin/models/social_post_template.py:0
 msgid ""
 "Please specify either a LinkedIn Message or upload some LinkedIn Images."
-msgstr ""
+msgstr "कृपया या तो एक LinkedIn मैसेज तय करें या कुछ LinkedIn इमेज अपलोड करें।"
 
 #. module: social_linkedin
 #: model_terms:ir.ui.view,arch_db:social_linkedin.linkedin_preview
 msgid "Post Image"
-msgstr ""
+msgstr "इमेज पोस्ट करें"
 
 #. module: social_linkedin
 #: model:social.stream.type,name:social_linkedin.stream_type_linkedin_company_post
@@ -258,17 +262,17 @@ msgstr "पोस्ट"
 #. odoo-python
 #: code:addons/social_linkedin/models/social_account.py:0
 msgid "Read More about Business Accounts"
-msgstr ""
+msgstr "बिज़नेस अकाउंट के बारे में और पढ़ें"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_account
 msgid "Social Account"
-msgstr ""
+msgstr "सोशल अकाउंट"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_live_post
 msgid "Social Live Post"
-msgstr ""
+msgstr "सोशल लाइव पोस्ट"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_media
@@ -278,27 +282,27 @@ msgstr "सोशल मीडिया"
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_post
 msgid "Social Post"
-msgstr ""
+msgstr "सोशल पोस्ट"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_post_template
 msgid "Social Post Template"
-msgstr ""
+msgstr "सोशल पोस्ट टेम्पलेट"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_stream
 msgid "Social Stream"
-msgstr ""
+msgstr "सोशल स्ट्रीम"
 
 #. module: social_linkedin
 #: model:ir.model,name:social_linkedin.model_social_stream_post
 msgid "Social Stream Post"
-msgstr ""
+msgstr "सोशल स्ट्रीम पोस्ट"
 
 #. module: social_linkedin
 #: model:ir.model.fields,help:social_linkedin.field_social_account__linkedin_access_token
 msgid "The access token is used to perform request to the REST API"
-msgstr ""
+msgstr "ऐक्सेस टोकन का उपयोग REST API को अनुरोध करने के लिए किया जाता है"
 
 #. module: social_linkedin
 #. odoo-python
@@ -307,18 +311,20 @@ msgid ""
 "The url that this service requested returned an error. Please contact the "
 "author of the app."
 msgstr ""
+"इस सर्विस ने जिस यूआरएल का अनुरोध किया था, उसने गड़बड़ी का मैसेज दिखाया है. कृपया ऐप के "
+"डेवलपर से संपर्क करें।"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/controllers/main.py:0
 msgid "There was a authentication issue during your request."
-msgstr ""
+msgstr "आपकी अनुरोध के दौरान प्रमाणीकरण में कोई समस्या हुई।"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/controllers/main.py:0
 msgid "Unauthorized. Please contact your administrator."
-msgstr ""
+msgstr "अनधिकृत. कृपया अपने एडमिन से संपर्क करें।"
 
 #. module: social_linkedin
 #. odoo-python
@@ -330,7 +336,7 @@ msgstr "अज्ञात"
 #. module: social_linkedin
 #: model:ir.model.fields,field_description:social_linkedin.field_res_config_settings__linkedin_use_own_account
 msgid "Use your own LinkedIn Account"
-msgstr ""
+msgstr "अपना खुद का LinkedIn खाता उपयोग करें"
 
 #. module: social_linkedin
 #: model:ir.model.fields,help:social_linkedin.field_social_media__media_type
@@ -338,11 +344,13 @@ msgid ""
 "Used to make comparisons when we need to restrict some features to a "
 "specific media ('facebook', 'x', ...)."
 msgstr ""
+"इसका उपयोग तुलना करने के लिए किया जाता है जब हमें कुछ फीचर्स को किसी खास मीडिया "
+"('facebook', 'x', ...) तक सीमित करने की आवश्यकता होती है।"
 
 #. module: social_linkedin
 #: model:ir.model.fields,help:social_linkedin.field_social_stream_post__linkedin_author_vanity_name
 msgid "Vanity name, used to generate a link to the author"
-msgstr ""
+msgstr "वैनिटी नाम, जिसका उपयोग लेखक का लिंक बनाने के लिए किया जाता है"
 
 #. module: social_linkedin
 #. odoo-python
@@ -351,6 +359,8 @@ msgid ""
 "We could not upload your image, try reducing its size and posting it again "
 "(error: Failed during upload registering)."
 msgstr ""
+"हम आपकी इमेज अपलोड नहीं कर सके, कृपया इसका आकार कम करके इसे फिर से पोस्ट करें (गड़बड़ी: "
+"अपलोड के दौरान रजिस्टर नहीं किया जा सका)।"
 
 #. module: social_linkedin
 #. odoo-python
@@ -358,24 +368,25 @@ msgstr ""
 msgid ""
 "We could not upload your image, try reducing its size and posting it again."
 msgstr ""
+"हम आपकी इमेज अपलोड नहीं कर सके, कृपया इसका आकार कम करके इसे फिर से पोस्ट करें।"
 
 #. module: social_linkedin
 #: model:ir.model.fields,help:social_linkedin.field_social_post__linkedin_image_ids
 #: model:ir.model.fields,help:social_linkedin.field_social_post_template__linkedin_image_ids
 msgid "Will attach images to your posts."
-msgstr ""
+msgstr "आपकी पोस्ट में इमेज अटैच करेंगी।"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_stream.py:0
 msgid "Wrong stream type for \"%s\""
-msgstr ""
+msgstr "\"%s\" के लिए गलत स्ट्रीम टाइप"
 
 #. module: social_linkedin
 #. odoo-python
 #: code:addons/social_linkedin/models/social_media.py:0
 msgid "You don't have an active subscription. Please buy one here: %s"
-msgstr ""
+msgstr "आपका कोई ऐक्टिव सब्सक्रिप्शन नहीं है. कृपया यहां एक खरीदें: %s"
 
 #. module: social_linkedin
 #. odoo-python
@@ -384,6 +395,8 @@ msgid ""
 "You need a Business Account to post on LinkedIn with Odoo Social.\n"
 " Please create one and make sure it is linked to your account"
 msgstr ""
+"Odoo सोशल के साथ LinkedIn पर पोस्ट करने के लिए आपको एक बिज़नेस अकाउंट की ज़रूरत है.\n"
+" कृपया एक बनाएं और सुनिश्चित करें कि यह आपके खाते से जुड़ा हो"
 
 #. module: social_linkedin
 #. odoo-python

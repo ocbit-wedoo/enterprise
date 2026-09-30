@@ -430,22 +430,22 @@ export default class BarcodeMRPModel extends BarcodePickingModel {
 
     _defaultLocation() {
         const locId = this.displayByProduct ? this.record.production_location_id : this.record.location_src_id
-        return this.cache.getRecord('stock.location', locId);
+        return this.cache.getRecord('stock.location', locId, false);
     }
 
     _defaultDestLocation() {
         const locId = this.displayByProduct ? this.record.location_dest_id : this.record.production_location_id
-        return this.cache.getRecord('stock.location', locId);
+        return this.cache.getRecord('stock.location', locId, false);
     }
 
     _getNewLineDefaultContext() {
         return {
             default_company_id: this.record.company_id,
-            default_location_id: this._defaultLocation().id,
-            default_location_dest_id: this._defaultDestLocation().id,
+            default_location_id: this._defaultLocation()?.id,
+            default_location_dest_id: this._defaultDestLocation()?.id,
             default_production_id: this.resId,
             default_qty_done: 0,
-            final_product_id: this.record.product_id.id,
+            final_product_id: this.record.product_id?.id,
             newByProduct: this.displayByProduct,
         };
     }

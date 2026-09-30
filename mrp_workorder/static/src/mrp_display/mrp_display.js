@@ -79,6 +79,7 @@ export class MrpDisplay extends Component {
             canLoadSamples: false,
             offset: 0,
             limit: this.props.action?.context?.limit || 40,
+            actionPending: false,
         });
         this.recordCacheIds = [];
 
@@ -125,6 +126,9 @@ export class MrpDisplay extends Component {
                     ...workcenters,
                 ];
                 return workcenters
+            },
+            setActionPending: () => {
+                this.state.actionPending = true;
             },
         });
         this.useEmployee = useConnectedEmployee("mrp_display", this.props.context, this.actionService, this.dialogService);
@@ -367,8 +371,8 @@ export class MrpDisplay extends Component {
 
         // Sort records already in cache by their position in this cache.
         recordsAlreadyInCache.sort((rec1, rec2) => {
-            const index1 = this.recordCacheIds.indexOf(rec1.id);
-            const index2 = this.recordCacheIds.indexOf(rec2.id);
+            const index1 = this.recordCacheIds.indexOf(rec1.resId);
+            const index2 = this.recordCacheIds.indexOf(rec2.resId);
             return index1 - index2;
         });
 

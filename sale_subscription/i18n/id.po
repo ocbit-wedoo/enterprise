@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-03 18:51+0000\n"
-"PO-Revision-Date: 2026-05-19 10:53+0000\n"
+"PO-Revision-Date: 2026-09-23 05:34+0000\n"
 "Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18/"
 "sale_subscription/id/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: sale_subscription
 #. odoo-python
@@ -304,9 +304,9 @@ msgstr ""
 "                    <tbody>\n"
 "                        <tr><td t-if=\"not "
 "object.company_id.uses_default_logo\">\n"
-"                            <a href=\"/\"><img t-attf-src=\"/logo.png?"
-"company={{ object.company_id.id }}\" style=\"vertical-align:baseline;max-"
-"width:100px;\"/></a>\n"
+"                            <a href=\"/\"><img t-attf-src=\"/"
+"logo.png?company={{ object.company_id.id }}\" style=\"vertical-"
+"align:baseline;max-width:100px;\"/></a>\n"
 "                        </td><td style=\"text-align:right;vertical-"
 "align:middle;\">\n"
 "                                Survei Kepuasan\n"
@@ -322,9 +322,9 @@ msgstr ""
 "layanan kami terkait dengan langganan Anda \"<strong t-out=\"object.name or "
 "''\">Layanan Office Cleaning\"</strong>\"\n"
 "                               yang ditugaskan ke <strong t-"
-"out=\"object._rating_get_operator().name or ''\">Mitchell Admin</strong>.</"
-"p>\n"
-"                            <p>Kami menghargai feedback Anda. Feedback Anda "
+"out=\"object._rating_get_operator().name or ''\">Mitchell Admin</strong>.</p>"
+"\n"
+"                            <p>Kami menghargai feedback Anda. Masukan Anda "
 "membantu kami berkembang secara terus menerus.</p>\n"
 "                        </td></tr>\n"
 "                        <tr><td style=\"padding:10px 20px\">\n"
@@ -337,8 +337,8 @@ msgstr ""
 "                                            Beritahu kami apa yang Anda "
 "rasakan mengenai layanan kami:\n"
 "                                        </h2>\n"
-"                                        <div style=\"text-color: "
-"#888888\">(klik salah satu emoji)</div>\n"
+"                                        <div style=\"text-color: #888888\">"
+"(klik salah satu emoji)</div>\n"
 "                                    </td>\n"
 "                                </tr>\n"
 "                                <tr>\n"
@@ -347,23 +347,23 @@ msgstr ""
 "align:center;\">\n"
 "                                            <tr>\n"
 "                                                <td>\n"
-"                                                    <a t-attf-href=\"/rate/"
-"{{ access_token }}/5\">\n"
+"                                                    <a t-attf-href=\"/rate/{"
+"{ access_token }}/5\">\n"
 "                                                        <img "
 "alt=\"Satisfied\" src=\"/rating/static/src/img/rating_5.png\" "
 "title=\"Satisfied\"/>\n"
 "                                                    </a>\n"
 "                                                </td>\n"
 "                                                <td>\n"
-"                                                    <a t-attf-href=\"/rate/"
-"{{ access_token }}/3\">\n"
+"                                                    <a t-attf-href=\"/rate/{"
+"{ access_token }}/3\">\n"
 "                                                        <img alt=\"Okay\" "
 "src=\"/rating/static/src/img/rating_3.png\" title=\"Okay\"/>\n"
 "                                                    </a>\n"
 "                                                </td>\n"
 "                                                <td>\n"
-"                                                    <a t-attf-href=\"/rate/"
-"{{ access_token }}/1\">\n"
+"                                                    <a t-attf-href=\"/rate/{"
+"{ access_token }}/1\">\n"
 "                                                        <img "
 "alt=\"Dissatisfied\" src=\"/rating/static/src/img/rating_1.png\" "
 "title=\"Dissatisfied\"/>\n"
@@ -389,8 +389,8 @@ msgstr ""
 "target=\"_blank\" href=\"https://www.odoo.com/app/subscriptions\" "
 "style=\"color:#875A7B;text-decoration:none;\">Langganan Odoo</a> untuk <a t-"
 "att-href=\"object.company_id.website\" style=\"color:#875A7B;text-"
-"decoration:none;\" t-out=\"object.company_id.name or ''\">PerusahaanAnda</"
-"a></p>\n"
+"decoration:none;\" t-out=\"object.company_id.name or ''\">PerusahaanAnda</a>"
+"</p>\n"
 "                        </td></tr>\n"
 "                    </tbody>\n"
 "                </table>\n"
@@ -1295,7 +1295,7 @@ msgstr "Aktivitas"
 #: model:ir.actions.act_window,name:sale_subscription.mail_activity_plan_action_subscription
 #: model:ir.ui.menu,name:sale_subscription.mail_activity_plan_menu_config_subscription
 msgid "Activity Plans"
-msgstr "Rencana-Rencana Kegiatan"
+msgstr "Rencana Aktivitas"
 
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order_alert__activity_type_id
@@ -1582,7 +1582,7 @@ msgstr "Nama Peraturan Otomatisasi"
 #: model:ir.ui.menu,name:sale_subscription.menu_sale_subscription_alert
 #: model_terms:ir.ui.view,arch_db:sale_subscription.sale_subscription_alert_view_tree
 msgid "Automation Rules"
-msgstr "Peraturan-Peraturan Otomatisasi"
+msgstr "Peraturan Otomatisasi"
 
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order__rating_avg
@@ -2321,7 +2321,7 @@ msgstr "Akan Datang"
 #. module: sale_subscription
 #: model_terms:ir.ui.view,arch_db:sale_subscription.sale_subscription_view_search
 msgid "Future Activities"
-msgstr "Kegiatan - Kegiatan Mendatang"
+msgstr "Aktivitas Mendatang"
 
 #. module: sale_subscription
 #: model:ir.model,name:sale_subscription.model_payment_link_wizard
@@ -2727,7 +2727,7 @@ msgstr "Terakhir kali saat kita mengirim pengingat pembayaran"
 #. module: sale_subscription
 #: model_terms:ir.ui.view,arch_db:sale_subscription.sale_subscription_view_search
 msgid "Late Activities"
-msgstr "Aktivitas terakhir"
+msgstr "Aktivitas Terlambat"
 
 #. module: sale_subscription
 #: model_terms:ir.ui.view,arch_db:sale_subscription.sale_subscription_view_kanban
@@ -3541,28 +3541,28 @@ msgstr "Penawaran Terkirim"
 #: model:ir.model,name:sale_subscription.model_sale_order_template
 #: model_terms:ir.ui.view,arch_db:sale_subscription.sale_subscription_view_tree
 msgid "Quotation Template"
-msgstr "Kutipan Template"
+msgstr "Template Penawaran"
 
 #. module: sale_subscription
 #: model:ir.model,name:sale_subscription.model_sale_order_template_line
 msgid "Quotation Template Line"
-msgstr "Baris Templat Quotation"
+msgstr "Baris Template Penawaran"
 
 #. module: sale_subscription
 #: model:ir.model,name:sale_subscription.model_sale_order_template_option
 msgid "Quotation Template Option"
-msgstr "Opsi Templat Quotation"
+msgstr "Opsi Template Penawaran"
 
 #. module: sale_subscription
 #: model_terms:ir.ui.view,arch_db:sale_subscription.sale_order_digest
 msgid "Quotation Template:"
-msgstr "Templat Quotation:"
+msgstr "Template Penawaran:"
 
 #. module: sale_subscription
 #: model:ir.actions.act_window,name:sale_subscription.sale_subscription_template_action
 #: model:ir.ui.menu,name:sale_subscription.menu_template_of_subscription
 msgid "Quotation Templates"
-msgstr "Kutipan template"
+msgstr "Template Penawaran"
 
 #. module: sale_subscription
 #: model:ir.actions.act_window,name:sale_subscription.sale_subscription_action_quotes
@@ -3580,7 +3580,7 @@ msgstr "Menilai Rata-Rata Teks"
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order__rating_last_feedback
 msgid "Rating Last Feedback"
-msgstr "Nilai Feedback Terakhir"
+msgstr "Nilai Masukan Terakhir"
 
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order__rating_last_image
@@ -3678,7 +3678,7 @@ msgstr "Rencana Berulang:"
 #: model:ir.actions.act_window,name:sale_subscription.sale_subscription_plan_action
 #: model:ir.ui.menu,name:sale_subscription.menu_sale_subscription_plans
 msgid "Recurring Plans"
-msgstr "Rencana-Rencana Berulang"
+msgstr "Rencana Berulang"
 
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_subscription_pricing__price
@@ -4121,13 +4121,13 @@ msgstr "Sumber"
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order_alert__product_ids
 msgid "Specific Products"
-msgstr "Produk-Produk Spesifik"
+msgstr "Produk Spesifik"
 
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order_alert__activity_user_ids
 #: model:ir.model.fields.selection,name:sale_subscription.selection__sale_order_alert__activity_user__users
 msgid "Specific Users"
-msgstr "User-User Spesifik"
+msgstr "User Spesifik"
 
 #. module: sale_subscription
 #: model:ir.model.fields,field_description:sale_subscription.field_sale_order_alert__subscription_state

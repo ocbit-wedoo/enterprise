@@ -1,3 +1,5 @@
+import re
+
 from odoo import api, Command, fields, models, _
 from odoo.tools import cleanup_xml_node, float_repr, float_compare, format_date
 from odoo.exceptions import ValidationError, UserError
@@ -115,6 +117,8 @@ LINES_CODE_NOT_FILLED_IF_0 = {
     'box_I6_base', 'box_22A', 'box_P1_base', 'box_P1_taxe', 'box_P2_base', 'box_P2_taxe',
 }
 
+BIC_REGEX = re.compile(r'[A-Z0-9]{8}|[A-Z0-9]{11}')
+
 
 class L10nFRSendVatReportBankAccountLine(models.TransientModel):
     _name = 'l10n_fr_reports.send.vat.report.bank.account.line'
@@ -147,10 +151,29 @@ class L10nFRSendVatReportBankAccountLine(models.TransientModel):
     vat_amount = fields.Monetary()
     is_wrongly_configured = fields.Boolean(compute="_compute_is_wrongly_configured")
 
-    @api.depends('account_number', 'bank_bic')
+    @api.depends('account_number', 'bank_bic', 'bank_partner_id')
     def _compute_is_wrongly_configured(self):
         for line in self:
-            line.is_wrongly_configured = line.bank_partner_id and (not line.bank_bic or not line.account_number)
+            line.is_wrongly_configured = line.bank_partner_id and not line._check_bank_account_line()
+
+    def _check_bank_account_line(self):
+        self.ensure_one()
+
+        iban = (self.account_number or '').replace(' ', '')
+        bic = (self.bank_bic or '').replace(' ', '')
+        return self._validate_iban(iban) and BIC_REGEX.fullmatch(bic)
+
+    @api.model
+    def _validate_iban(self, iban):
+        # Move the four initial characters to the end of the string
+        temp_iban = iban[4:] + iban[:4]
+
+        # Replace each letter with two digit (A = 10, b = 11, ...)
+        replaced_iban = ""
+        for i in temp_iban:
+            replaced_iban += i if i.isnumeric() else str(ord(i.upper()) - 55)
+        # Take the whole and apply modulo 97, it should be 1
+        return int(replaced_iban) % 97 == 1
 
 
 class L10nFrSendVatReport(models.TransientModel):
@@ -217,7 +240,7 @@ class L10nFrSendVatReport(models.TransientModel):
     def _get_address_dict(self, company):
         return {
             'street': company.street[:30],
-            'complement': f"{company.street[30:]} {company.street2}"[:35],
+            'complement': f"{company.street[30:]} {company.street2 or ''}".strip()[:35],
             'postal_code': company.zip[:17],
             'city': company.city[:35],
             'country_code': company.country_id.code,
@@ -318,15 +341,17 @@ class L10nFrSendVatReport(models.TransientModel):
         # Assume Emitor = Writer -> omit the emitor
         writer = sender_company.account_representative_id or sender_company
         debtor = sender_company
+        writer_siret = writer.siret.replace(" ", "")
+        debtor_siret = debtor.siret.replace(" ", "")
         writer_vals = {
-            'siret': writer.siret,
+            'siret': writer_siret,
             'designation': "CEC_EDI_TVA",
             'designation_cont_1': writer.name[:35],  # "raison sociale"
             'designation_cont_2': writer.name[35:70],  # "raison sociale"
             'address': self._get_address_dict(writer),
         }
         debtor_vals = {
-            'identifier': debtor.siret and debtor.siret[:9],  # siren
+            'identifier': debtor_siret and debtor_siret[:9],  # siren
             'designation': debtor.name[:35],  # "raison sociale"
             'address': self._get_address_dict(debtor),
             'rof': "TVA1",  # "référence obligation fiscale"
@@ -348,7 +373,7 @@ class L10nFrSendVatReport(models.TransientModel):
         identif_vals = [
             {
                 'id': 'AA',
-                'identifier': debtor.siret and debtor.siret[:9],
+                'identifier': debtor_siret and debtor_siret[:9],
                 'designation': debtor.display_name[:35],
                 'address': self._get_address_dict(debtor),
             },
@@ -382,12 +407,12 @@ class L10nFrSendVatReport(models.TransientModel):
                 'recipients': [{'designation': self.recipient}],
                 # T-IDENTIF form
                 'identif': {
-                    'millesime': "25",
+                    'millesime': "26",
                     'zones': identif_vals,
                 },
                 # 3310CA3
                 'form': {
-                    'millesime': "25",
+                    'millesime': "26",
                     'name': "3310CA3",
                     'zones': edi_values,
                 }
@@ -541,17 +566,19 @@ class L10nFrSendVatReport(models.TransientModel):
                 'recipients': [{'designation': self.recipient}],
                 # T-IDENTIF form
                 'identif': {
-                    'millesime': "25",
+                    'millesime': "26",
                     'zones': identif_vals,
                 },
                 # 3519
                 'form': {
-                    'millesime': "25",
+                    'millesime': "26",
                     'name': "3519",
                     'zones': [{
                         'id': 'AA',
                         'iban': bank_account_line.account_number.replace(' ', ''),
                         'bic': bank_account_line.bank_bic.replace(' ', ''),
+                        'holder_name': bank_account_line.bank_partner_id.acc_holder_name[:35],
+                        'holder_name_2': bank_account_line.bank_partner_id.acc_holder_name[35:70],
                     }, {
                         'id': 'FK',
                         'value': 'X'

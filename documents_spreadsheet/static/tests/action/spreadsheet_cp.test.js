@@ -151,7 +151,7 @@ test("Freeze&Share spreadsheet from control panel", async function () {
             expect(url).toBe("https://localhost:8069/odoo/documents/accessTokenMyspreadsheet");
         },
     });
-    await createSpreadsheet({
+    const { model: modelBis } = await createSpreadsheet({
         serverData,
         spreadsheetId,
         mockRPC: async function (route, args) {
@@ -175,11 +175,21 @@ test("Freeze&Share spreadsheet from control panel", async function () {
             }
         },
     });
+    const dispatched = [];
+    const oldDispatch = modelBis.dispatch;
+    patchWithCleanup(modelBis, {
+        dispatch: (command, args) => {
+            dispatched.push(command);
+            return oldDispatch(command, args);
+        },
+    });
+
     expect(target.querySelector(".spreadsheet_share_dropdown")).toBe(null);
     await contains("button:contains(Freeze and share)").click();
 
     await contains(".o_clipboard_button", { timeout: 1500 }).click();
     expect.verifySteps(["spreadsheet_shared", "permission_panel_data", "Document url copied"]);
+    expect(dispatched).toInclude("LOG_DATASOURCE_EXPORT");
 });
 
 test("Share spreadsheet from control panel", async function () {

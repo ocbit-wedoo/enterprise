@@ -171,7 +171,7 @@ class TestCFDIInvoiceWorkflow(TestMxEdiCommon):
 
         # Sat.
         with freeze_time('2017-04-01'), self.with_mocked_sat_call(lambda _x: 'valid'):
-            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(extra_domain=[('move_id.company_id', '=', self.env.company.id)])
+            invoice.l10n_mx_edi_cfdi_try_sat()
         sent_doc_values2['sat_state'] = 'valid'
         cancel_doc_values['sat_state'] = 'valid'
         self.assertRecordValues(invoice.l10n_mx_edi_invoice_document_ids.sorted(), [
@@ -385,7 +385,7 @@ class TestCFDIInvoiceWorkflow(TestMxEdiCommon):
         self.assertRecordValues(invoice, [{'l10n_mx_edi_cfdi_state': 'cancel'}])
 
         with freeze_time('2017-07-12'), self.with_mocked_sat_call(lambda x: 'cancelled' if x.move_id == invoice else 'valid'):
-            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(extra_domain=[('move_id.company_id', '=', self.env.company.id)])
+            invoice.l10n_mx_edi_cfdi_try_sat()
         cancel_doc_values2['sat_state'] = 'cancelled'
         payment2_doc_values1['sat_state'] = 'valid'
         payment1_doc_values1['sat_state'] = 'valid'
@@ -1584,9 +1584,7 @@ class TestCFDIInvoiceWorkflow(TestMxEdiCommon):
         self.assertRecordValues(invoices, [{'l10n_mx_edi_update_sat_needed': True}] * 2)
 
         with self.with_mocked_sat_call(lambda _x: 'valid'):
-            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(
-                extra_domain=[('id', '=', invoices.l10n_mx_edi_invoice_document_ids.id)]
-            )
+            invoices[0].l10n_mx_edi_cfdi_try_sat()
         sent_doc_values1['sat_state'] = 'valid'
         self.assertRecordValues(invoices.l10n_mx_edi_invoice_document_ids, [sent_doc_values1])
 
@@ -2088,7 +2086,10 @@ class TestCFDIInvoiceWorkflow(TestMxEdiCommon):
         self.assertEqual(new_invoice.line_ids[1].name, 'note')
 
     def test_cron_update_sat_state_write_date(self):
-        """ Test that the sat_state is updated always when using the cron. """
+        """ Test that the sat_state write_date is updated on every cron run,
+        retriggering within 4h skips recently checked documents, and vendor
+        bills older than 7 days are excluded.
+        """
 
         @contextmanager
         def freeze_now(ref_datetime):
@@ -2119,33 +2120,184 @@ class TestCFDIInvoiceWorkflow(TestMxEdiCommon):
             {'state': 'invoice_sent', 'write_date': ref_datetime_minus_2, 'sat_state': 'not_defined'},
         ])
 
+        # Step 1: Run batch_size=1 where sat_state doesn't change (returns 'not_defined').
+        # doc_2 (oldest create_date) is processed. write_date must update even if sat_state is unchanged.
         ref_datetime_plus_1 = ref_datetime + timedelta(days=1)
-        with freeze_now(ref_datetime_plus_1), self.with_mocked_sat_call(lambda _x: 'valid'):
+        with freeze_now(ref_datetime_plus_1), self.with_mocked_sat_call(lambda _x: 'not_defined'):
             self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(batch_size=1, extra_domain=[('id', 'in', (doc_1 + doc_2).ids)])
             doc_1.invalidate_recordset()
             doc_2.invalidate_recordset()
         self.assertRecordValues(doc_1 + doc_2, [
             {'state': 'invoice_sent', 'write_date': ref_datetime_minus_1, 'sat_state': 'not_defined'},
-            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_1, 'sat_state': 'valid'},
+            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_1, 'sat_state': 'not_defined'},
         ])
 
-        ref_datetime_plus_2 = ref_datetime + timedelta(days=2)
-        with freeze_now(ref_datetime_plus_2), self.with_mocked_sat_call(lambda _x: 'valid'):
+        cron = self.env.ref('l10n_mx_edi.ir_cron_update_pac_status_invoice')
+        cron_trigger = self.env['ir.cron.trigger'].search([
+            ('cron_id', '=', cron.id)
+        ])
+        self.assertEqual(
+            cron_trigger.call_at,
+            ref_datetime_plus_1,
+            "The cron hasn't been retriggered for the remaining invoice !"
+        )
+
+        # Step 2: Immediate retrigger (1 minute later, < 4 hours).
+        # doc_2 was updated 1m ago, so it must be skipped by write_date <= now - 4h filter.
+        # doc_1 is processed instead.
+        ref_datetime_plus_1_1m = ref_datetime_plus_1 + timedelta(minutes=1)
+        with freeze_now(ref_datetime_plus_1_1m), self.with_mocked_sat_call(lambda _x: 'valid'):
             self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(batch_size=1, extra_domain=[('id', 'in', (doc_1 + doc_2).ids)])
             doc_1.invalidate_recordset()
             doc_2.invalidate_recordset()
         self.assertRecordValues(doc_1 + doc_2, [
-            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_2, 'sat_state': 'valid'},
-            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_1, 'sat_state': 'valid'},
+            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_1_1m, 'sat_state': 'valid'},
+            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_1, 'sat_state': 'not_defined'},
         ])
 
-        # last day will not update nothing because they are valid (sat_state not in valid)
-        ref_datetime_plus_3 = ref_datetime + timedelta(days=3)
-        with freeze_now(ref_datetime_plus_3), self.with_mocked_sat_call(lambda _x: 'valid'):
+        # Step 3: Retrigger again 2 minutes later (< 4 hours).
+        # doc_2 is skipped (< 4h since write_date), doc_1 is skipped (sat_state is 'valid').
+        # No documents are fetched, so no cron retrigger occurs.
+        cron_trigger.unlink()
+        ref_datetime_plus_1_2m = ref_datetime_plus_1 + timedelta(minutes=2)
+        with freeze_now(ref_datetime_plus_1_2m), self.with_mocked_sat_call(lambda _x: 'valid'):
             self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(batch_size=1, extra_domain=[('id', 'in', (doc_1 + doc_2).ids)])
-            doc_1.invalidate_recordset()
+        new_cron_trigger = self.env['ir.cron.trigger'].search([('cron_id', '=', cron.id)])
+        self.assertFalse(new_cron_trigger, "The cron should not retrigger when no remaining documents match domain")
+
+        # Step 4: After > 4 hours (5 hours later), doc_2's write_date is > 4h ago, so it becomes eligible again.
+        ref_datetime_plus_1_5h = ref_datetime_plus_1 + timedelta(hours=5)
+        with freeze_now(ref_datetime_plus_1_5h), self.with_mocked_sat_call(lambda _x: 'valid'):
+            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(batch_size=1, extra_domain=[('id', 'in', (doc_1 + doc_2).ids)])
             doc_2.invalidate_recordset()
-        self.assertRecordValues(doc_1 + doc_2, [
-            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_2, 'sat_state': 'valid'},
-            {'state': 'invoice_sent', 'write_date': ref_datetime_plus_1, 'sat_state': 'valid'},
-        ])
+        self.assertEqual(doc_2.sat_state, 'valid')
+        self.assertEqual(doc_2.write_date, ref_datetime_plus_1_5h)
+
+        # Step 5: Test vendor bill (invoice_received) 7-day cutoff vs customer invoice 60-day cutoff
+        ref_datetime_minus_10 = ref_datetime - timedelta(days=10)
+        with freeze_now(ref_datetime_minus_10):
+            vendor_bill_doc = self.env['l10n_mx_edi.document'].create({
+                'state': 'invoice_received',
+                'sat_state': 'not_defined',
+                'datetime': ref_datetime_minus_10,
+                'move_id': self._create_invoice().id,
+            })
+            customer_inv_doc = self.env['l10n_mx_edi.document'].create({
+                'state': 'invoice_sent',
+                'sat_state': 'not_defined',
+                'datetime': ref_datetime_minus_10,
+                'move_id': self._create_invoice().id,
+            })
+
+        ref_datetime_check = ref_datetime + timedelta(days=10)
+        with freeze_now(ref_datetime_check), self.with_mocked_sat_call(lambda _x: 'valid'):
+            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(
+                extra_domain=[('id', 'in', (vendor_bill_doc + customer_inv_doc).ids)]
+            )
+            vendor_bill_doc.invalidate_recordset()
+            customer_inv_doc.invalidate_recordset()
+
+        # Vendor bill created 20 days prior to check date (> 7 days) is NOT updated
+        self.assertEqual(vendor_bill_doc.sat_state, 'not_defined')
+        # Customer invoice created 20 days prior to check date (<= 60 days) IS updated
+        self.assertEqual(customer_inv_doc.sat_state, 'valid')
+
+        # Step 6: Test vendor bill write_date re-check threshold (12 hours) vs customer invoice (4 hours)
+        ref_datetime_vb_create = ref_datetime - timedelta(days=2)
+        with freeze_now(ref_datetime_vb_create):
+            vendor_bill_recent = self.env['l10n_mx_edi.document'].create({
+                'state': 'invoice_received',
+                'sat_state': 'not_defined',
+                'datetime': ref_datetime_vb_create,
+                'move_id': self._create_invoice().id,
+            })
+            customer_inv_recent = self.env['l10n_mx_edi.document'].create({
+                'state': 'invoice_sent',
+                'sat_state': 'not_defined',
+                'datetime': ref_datetime_vb_create,
+                'move_id': self._create_invoice().id,
+            })
+
+        # Initial check at ref_datetime: both are processed and write_date becomes ref_datetime
+        ref_datetime_vb_run = ref_datetime
+        with freeze_now(ref_datetime_vb_run), self.with_mocked_sat_call(lambda _x: 'not_defined'):
+            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(
+                extra_domain=[('id', 'in', (vendor_bill_recent + customer_inv_recent).ids)]
+            )
+            vendor_bill_recent.invalidate_recordset()
+            customer_inv_recent.invalidate_recordset()
+        self.assertEqual(vendor_bill_recent.write_date, ref_datetime_vb_run)
+        self.assertEqual(customer_inv_recent.write_date, ref_datetime_vb_run)
+
+        # 5 hours later: customer invoice IS re-checked (> 4h), vendor bill IS NOT re-checked (< 12h)
+        ref_datetime_5h_later = ref_datetime_vb_run + timedelta(hours=5)
+        with freeze_now(ref_datetime_5h_later), self.with_mocked_sat_call(lambda _x: 'valid'):
+            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(
+                extra_domain=[('id', 'in', (vendor_bill_recent + customer_inv_recent).ids)]
+            )
+            vendor_bill_recent.invalidate_recordset()
+            customer_inv_recent.invalidate_recordset()
+
+        self.assertEqual(customer_inv_recent.sat_state, 'valid')
+        self.assertEqual(vendor_bill_recent.sat_state, 'not_defined')
+
+        # 13 hours later (> 12h): vendor bill IS now re-checked
+        ref_datetime_13h_later = ref_datetime_vb_run + timedelta(hours=13)
+        with freeze_now(ref_datetime_13h_later), self.with_mocked_sat_call(lambda _x: 'valid'):
+            self.env['l10n_mx_edi.document']._fetch_and_update_sat_status(
+                extra_domain=[('id', 'in', (vendor_bill_recent + customer_inv_recent).ids)]
+            )
+            vendor_bill_recent.invalidate_recordset()
+
+        self.assertEqual(vendor_bill_recent.sat_state, 'valid')
+
+    def test_payment_cfdi_with_leaked_default_type_context(self):
+        """Test CFDI payment document creation with leaked context (default_type) from account.journal
+        Requires documents_account to be installed (skipped otherwise).
+        """
+        if self.env['ir.module.module']._get('documents_account').state != 'installed':
+            self.skipTest("documents_account is not installed")
+
+        # Journal-folder sync is needed so the CFDI attachment creation triggers document creation
+        bank_journal = self.company_data['default_journal_bank']
+        folder = self.env['documents.document'].sudo().create({'name': 'Test Folder', 'type': 'folder'})
+        if setting := self.env['documents.account.folder.setting'].sudo().search([
+            ('journal_id', '=', bank_journal.id),
+            ('company_id', '=', self.env.company.id)], limit=1):
+            setting.folder_id = folder
+        else:
+            self.env['documents.account.folder.setting'].sudo().create({
+                'folder_id': folder.id,
+                'journal_id': bank_journal.id
+                })
+        if hasattr(self.env.company, 'documents_account_settings'):
+            self.env.company.documents_account_settings = True
+
+        invoice = self._create_invoice()
+        with freeze_time('2017-01-07'), self.with_mocked_pac_sign_success():
+            invoice._l10n_mx_edi_cfdi_invoice_try_send()
+
+        self.env['account.payment.register']\
+            .with_context(active_model='account.move', active_ids=invoice.ids)\
+            .create({
+                'payment_date': '2017-06-01',
+                'amount': 1160.0,
+                'journal_id': bank_journal.id,
+            })\
+            ._create_payments()
+
+        # Sign the payment CFDI with `default_type='sale'` context
+        with freeze_time('2017-06-02'), self.with_mocked_pac_sign_success():
+            invoice.with_context(default_type='sale').l10n_mx_edi_cfdi_invoice_try_update_payments()
+
+        payment_doc = invoice.l10n_mx_edi_invoice_document_ids.filtered(lambda d: d.state == 'payment_sent')
+        self.assertTrue(payment_doc, "Payment CFDI document should have been created")
+
+        cfdi_attachment = payment_doc.attachment_id
+        self.assertTrue(cfdi_attachment, "Payment CFDI attachment should exist")
+        doc = self.env['documents.document'].search([('attachment_id', '=', cfdi_attachment.id)])
+        self.assertTrue(doc, "A documents.document should have been created for the CFDI attachment")
+        self.assertEqual(
+            doc.type, 'binary',
+            "Document type should be 'binary', not the leaked 'sale' value from the accounting context",
+        )

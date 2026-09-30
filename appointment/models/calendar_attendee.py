@@ -41,3 +41,8 @@ class Attendee(models.Model):
     def _should_notify_attendee(self):
         """ Notify all attendees for meeting linked to appointment type """
         return self.event_id.appointment_type_id or super()._should_notify_attendee()
+
+    def get_base_url(self):
+        if self.event_id:
+            return self.event_id.get_base_url()
+        return super().get_base_url()

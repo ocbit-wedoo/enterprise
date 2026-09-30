@@ -7,6 +7,7 @@ import re
 from odoo import models, fields, api, _
 from odoo.addons.l10n_co_dian import xml_utils
 from odoo.exceptions import UserError
+from odoo.tools.sql import column_exists, create_column
 from odoo.fields import datetime
 
 DESCRIPTION_CREDIT_CODE = [
@@ -67,6 +68,18 @@ class AccountMove(models.Model):
         compute="_compute_l10n_co_dian_identifier_type",
     )
     l10n_co_dian_is_enabled = fields.Boolean(compute="_compute_l10n_co_dian_is_enabled")
+
+    def _auto_init(self):
+        """
+        Create all compute-stored fields here to avoid MemoryError when initializing on large databases.
+        """
+        if not column_exists(self.env.cr, 'account_move', 'l10n_co_dian_state'):
+            create_column(self.env.cr, 'account_move', 'l10n_co_dian_state', 'varchar')
+
+        if not column_exists(self.env.cr, 'account_move', 'l10n_co_edi_cufe_cude_ref'):
+            create_column(self.env.cr, 'account_move', 'l10n_co_edi_cufe_cude_ref', 'varchar')
+
+        return super()._auto_init()
 
     # -------------------------------------------------------------------------
     # Compute

@@ -43,3 +43,17 @@ class HrContract(models.Model):
                 contract.l10n_lu_meal_voucher_employer_cost = min(contract_employer_contribution, maximum_employer_contribution)
             else:
                 contract.l10n_lu_meal_voucher_employer_cost = 0
+
+    def _get_l10n_lu_indexed_wage(self, date=None):
+        self.ensure_one()
+        date = date or fields.Date.today()
+
+        index_at_signature = self.l10n_lu_index_on_contract_signature
+        index_at_date = self.env['hr.rule.parameter']._get_parameter_from_code(
+            'l10n_lu_index', date=date, raise_if_not_found=False
+        )
+        wage = self.wage if self.wage_type == 'monthly' else self.hourly_wage
+
+        if index_at_signature and index_at_date:
+            return wage / index_at_signature * index_at_date
+        return wage

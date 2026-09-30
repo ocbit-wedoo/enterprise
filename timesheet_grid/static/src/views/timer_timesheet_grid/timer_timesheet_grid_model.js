@@ -156,6 +156,13 @@ export class TimerTimesheetGridDataPoint extends TimesheetGridDataPoint {
         }
         this.data.stepTimer = stepTimer;
     }
+
+    _fetchUnavailabilityDays(args = {}) {
+        return super._fetchUnavailabilityDays({
+            context: { get_current_user_unavailable_dates: true },
+            ...args,
+        });
+    }
 }
 
 export class TimerTimesheetGridModel extends TimesheetGridModel {

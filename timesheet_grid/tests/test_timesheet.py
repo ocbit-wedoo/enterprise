@@ -253,6 +253,7 @@ class TestTimesheetValidation(TestCommonTimesheet, MockEmail):
 
     def test_working_hours_for_employees(self):
         company = self.env['res.company'].create({'name': 'My_Company'})
+        uom_day = self.env.ref('uom.product_uom_day')
         employee = self.env['hr.employee'].with_company(company).create({
             'name': 'Juste Leblanc',
             'user_id': self.user_manager.id,
@@ -264,6 +265,17 @@ class TestTimesheetValidation(TestCommonTimesheet, MockEmail):
 
         working_hours = employee.get_timesheet_and_working_hours('2021-12-01', '2021-12-31')
         self.assertEqual(working_hours[employee.id]['working_hours'], 184.0, "Number of hours should be 23d * 8h/d = 184h")
+
+        # Switch timesheet encoding to days and simulate a translated UoM
+        # to ensure day detection does not rely on translated names.
+        company.timesheet_encode_uom_id = uom_day.id
+        self.env['res.lang']._activate_lang('fr_FR')
+        uom_day.with_context(lang='fr_FR').name = 'Jours'
+
+        working_hours = employee.with_context(lang='fr_FR').get_timesheet_and_working_hours_for_employees('2021-12-01', '2021-12-31')
+        self.assertEqual(working_hours[employee.id]['units_to_work'], 23, "Number of days should be 184h / 8h per day = 23d")
+
+        company.timesheet_encode_uom_id = self.env.ref('uom.product_uom_hour').id
 
         # Create a user in the second company and link it to the employee created above
         user = self.env['res.users'].with_company(company).create({

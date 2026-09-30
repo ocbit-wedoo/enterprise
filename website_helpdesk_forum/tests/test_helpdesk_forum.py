@@ -2,6 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo.fields import Command
+from odoo.tests import HttpCase, tagged
 from odoo.tests import Form
 
 from odoo.addons.helpdesk.tests.common import HelpdeskCommon
@@ -91,3 +92,37 @@ class TestHelpdeskForum(HelpdeskCommon, TestForumCommon):
         } for index, forum_value in enumerate(forum_posts) for _ in range(index+1)])
 
         self.assertEqual(self.test_team.top_forum_posts, forum_posts[6:1:-1], 'The top posts should be the ones with the most votes, in this case the last 5 from last to first')
+
+
+@tagged('-at_install', 'post_install')
+class TestHelpdeskForumFrontend(HttpCase):
+
+    def test_helpdesk_forums_page_multiple_forums(self):
+        """
+        A helpdesk team with several linked forums should render its forums
+        listing page.
+        """
+        first_forum, second_forum = self.env['forum.forum'].create([
+            {
+                'name': 'First Forum',
+                'privacy': 'public',
+            },
+            {
+                'name': 'Second Forum',
+                'privacy': 'public',
+            }
+        ])
+
+        helpdesk_team = self.env['helpdesk.team'].create({
+            'name': 'Test Team',
+            'website_forum_ids': [Command.set((first_forum | second_forum).ids)],
+            'website_published': True,
+        })
+
+        response = self.url_open(url=f"/helpdesk/{self.env['ir.http']._slug(helpdesk_team)}/forums")
+        self.assertEqual(
+            response.status_code, 200,
+            'Forums listing page should render successfully for a team with multiple forums.'
+        )
+        self.assertIn(first_forum.name, response.text)
+        self.assertIn(second_forum.name, response.text)

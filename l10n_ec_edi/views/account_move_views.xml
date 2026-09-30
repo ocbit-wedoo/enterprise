@@ -93,6 +93,7 @@
                 <!-- Reimbursement Lines  -->
                 <xpath expr="//page[@id='invoice_tab']" position="after">
                     <page name="client_reimbursement_data"
+                          groups="account.group_account_invoice,account.group_account_readonly"
                           invisible="l10n_latam_document_type_id_code not in ['01', '03'] or move_type != 'in_invoice'"
                           string="Reimbursement Lines">
                         <div class="mb8" invisible="state != 'draft'">

@@ -633,6 +633,9 @@ class DMFAOccupation(DMFANode):
             if wd.work_entry_type_id.dmfa_code != '-1' and wd.work_entry_type_id.code not in ['OUT', 'LEAVE300', 'LEAVE510', 'MEDIC01']:
                 services_by_dmfa_code[wd.work_entry_type_id.dmfa_code] |= wd
         skip_remun = all(dmfa_code in ['30', '50', '52'] for dmfa_code in services_by_dmfa_code.keys())
+        # Do not skip remun if there is some remunerations not linked to worked days (PFA, etc)
+        # Backport of odoo/enterprise#106689
+        skip_remun = skip_remun and not any(p.basic_wage and p.struct_id.code in ['CP200TERM', 'CP200HOLN', 'CP200HOLN1', 'CP200THIRTEEN'] for p in self.payslips)
         return (DMFAService.init_multi([(wds,) for wds in services_by_dmfa_code.values()]), skip_remun)
 
     def _prepare_remunerations(self):

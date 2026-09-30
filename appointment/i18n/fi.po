@@ -39,7 +39,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-05-07 12:14+0000\n"
+"PO-Revision-Date: 2026-08-21 14:09+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "appointment/fi/>\n"
@@ -48,7 +48,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -2431,7 +2431,7 @@ msgstr "Luo päätöspäivät"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_type_action_helper/appointment_type_action_helper.xml:0
 msgid "Create a Schedule from scratch or use one of our templates:"
-msgstr "Luo aikataulu tyhjästä tai käytä yhtä malleistamme:"
+msgstr "Luo aikataulu tyhjästä tai käytä yhtä mallipohjistamme:"
 
 #. module: appointment
 #. odoo-javascript
@@ -2549,12 +2549,11 @@ msgid ""
 "        defining non-recurring time slot (e.g. 10th of April 2021 from 10 to "
 "11 am) from its calendar."
 msgstr ""
-"Määrittää aikalohkon tyypin. Tavallinen aikalohko on oletustyyppi, jota "
-"käytetään seuraavissa tapauksissa\n"
-"        ajanvaraustyyppiin, jota käytetään toistuvasti, kuten "
-"lääkäriajanvaraukseen.\n"
-"        Kertatyyppiä käytetään vain, kun käyttäjä luo asiakkaalle mukautetun "
-"ajanvaraustyypin\n"
+"Määrittää varattavan ajan tyypin. Tavallinen aika on oletustyyppi, jota "
+"käytetään\n"
+"        lääkärikäyntien tapaisissa toistuvissa ajanvaraustyypeissä.\n"
+"        Kertaluontoista tyyppiä käytetään vain, jos käyttäjä luo asiakkaalle "
+"räätälöidyn ajanvaraustyypin\n"
 "        määrittelemällä kertaluonteisen ajan (esim. 10. huhtikuuta 2021 klo "
 "10-11) kalenteristaan."
 
@@ -2812,7 +2811,7 @@ msgstr "Ryhmittely"
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Guest usage is limited to 10 customers for performance reason."
-msgstr "Vieraskäyttö on rajoitettu 10 asiakkaaseen suorituskyvyn vuoksi."
+msgstr "Vieraskäyttö on rajoitettu 10 asiakkaaseen suorituskykysyistä."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
@@ -3485,7 +3484,7 @@ msgstr "Valitse käytettävyytesi"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__placeholder
 msgid "Placeholder"
-msgstr "Paikanpitäjä"
+msgstr "Paikkamerkki"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -3752,7 +3751,7 @@ msgstr "Aikataulu perustuu"
 #: code:addons/appointment/static/src/appointment_plugin.js:0
 #: code:addons/appointment/static/src/js/wysiwyg.js:0
 msgid "Schedule an Appointment"
-msgstr "Aikatauluta tapaaminen"
+msgstr "Varaa aika"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__min_schedule_hours
@@ -4003,7 +4002,7 @@ msgstr "Valitettavasti pyydettyä kapasiteettia ei ole enää saatavilla."
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, we have no availability for an appointment."
-msgstr "Pahoittelut, vapaita aikoja ei ole."
+msgstr "Pahoittelut, meillä ei ole tällä hetkellä vapaita aikoja."
 
 #. module: appointment
 #. odoo-javascript
@@ -4019,7 +4018,7 @@ msgstr "Lähdeyhdistelmä"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__custom
 msgid "Specific Slots"
-msgstr "Erityiset aikalohkot"
+msgstr "Tietyt ajat"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__specific_resources
@@ -4176,7 +4175,7 @@ msgid ""
 "The configuration has changed and synchronization is not possible anymore. "
 "Please reload the page."
 msgstr ""
-"Konfiguraatio on muuttunut, eikä synkronointi ole enää mahdollista. Lataa "
+"Asetukset ovat muuttuneet, eikä synkronointi ole enää mahdollista. Lataa "
 "sivu uudelleen."
 
 #. module: appointment
@@ -4584,7 +4583,7 @@ msgstr "Oma tapaamisesi"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_sync_button/appointment_sync_button.js:0
 msgid "Your calendar is already configured and was successfully synchronized."
-msgstr "Kalenterisi on jo määritetty ja synkronointi onnistui."
+msgstr "Kalenterisi on jo määritetty sekä onnistuneesti synkronoitu."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_user
@@ -4697,7 +4696,7 @@ msgstr "ei ole aikoja varattavaksi."
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "has no more slots available for this month."
-msgstr "ei ole aikoja tässä kuussa."
+msgstr "ei enää aikoja tässä kuussa."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated

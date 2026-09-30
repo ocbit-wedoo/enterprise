@@ -69,6 +69,11 @@ class StockMove(models.Model):
         for qc in self.picking_id.sudo().check_ids:
             if qc.quality_state != 'none':
                 continue
+            if qc.measure_on == 'operation':
+                # Operation check covers the whole transfer: unlink only if all its moves are canceled.
+                if all(move.state == 'cancel' for move in qc.picking_id.move_ids):
+                    to_unlink |= qc
+                continue
             if (qc.picking_id, qc.product_id) not in is_product_canceled:
                 for move in qc.picking_id.move_ids:
                     is_product_canceled[(move.picking_id, move.product_id)] &= move.state == 'cancel'

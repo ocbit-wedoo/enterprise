@@ -179,3 +179,28 @@ class TestDianPosUbl(TestL10nCoEdiPosCommon):
             self.get_xml_tree_from_string(credit_note_xml),
             self.get_xml_tree_from_string(expected_invoice_xml),
         )
+
+    @freeze_time('2025-03-01')
+    def test_60_multiple_payments_change(self):
+        """
+        Tests that even if we have some change to give back, the xml sent will have
+        the correct values in the total prepaid for an order.
+        """
+        pos_order_ui_data = {
+            'pos_order_lines_ui_args': [(self.product_a, 2)],
+            'payments': [
+                (self.default_pos_payment_method, 100.0),
+                (self.default_pos_payment_method, 2400.0),
+                (self.default_pos_payment_method, -120.0)
+            ],
+        }
+        order = self._create_and_send_order(
+            pos_order_ui_data=pos_order_ui_data,
+            response_file_name='SendTestSetAsync.xml'
+        )
+        pos_order_xml = self.env['pos.edi.xml.ubl_dian']._export_pos_order(order)[0]
+        tree = self.get_xml_tree_from_string(pos_order_xml)
+        prepaid_payments = tree.xpath("//*[local-name()='PrepaidPayment']")
+        self.assertEqual(len(prepaid_payments), 1)
+        paid_amount = prepaid_payments[0].xpath(".//*[local-name()='PaidAmount']/text()")[0]
+        self.assertEqual(paid_amount, '2380.00')

@@ -582,12 +582,13 @@ class SignRequest(models.Model):
         notification_template = 'mail.mail_notification_light'
         if self.env.ref('sign.sign_mail_notification_light', raise_if_not_found=False):
             notification_template = 'sign.sign_mail_notification_light'
-        self.env['sign.request']._message_send_mail(
+        self._message_send_mail(
             body, notification_template,
             {'record_name': self.reference},
             {
                 'model_description': _('Signature'),
-                'company': self.communication_company_id or self.create_uid.company_id
+                'company': self.communication_company_id or self.create_uid.company_id,
+                'partner': partner,
             },
             {'email_from': self.create_uid.email_formatted,
              'author_id': self.create_uid.partner_id.id,
@@ -746,6 +747,7 @@ class SignRequest(models.Model):
                         lines = value.split('\n')
                         y = (1-item.posY)
                         for line in lines:
+                            line = reshape_text(line)
                             empty_space = width * item.width - can.stringWidth(line, font, font_size)
                             x_shift = 0
                             if item.alignment == 'center':
@@ -753,7 +755,6 @@ class SignRequest(models.Model):
                             elif item.alignment == 'right':
                                 x_shift = empty_space
                             y -= normalFontSize * 0.9
-                            line = reshape_text(line)
                             can.drawString(width * item.posX + x_shift, height * y, line)
                             y -= normalFontSize * 0.1
 
@@ -790,10 +791,10 @@ class SignRequest(models.Model):
             new_pdf = PdfFileWriter()
 
             for p in range(0, old_pdf.getNumPages()):
-                page = old_pdf.getPage(p)
+                new_pdf.addPage(old_pdf.getPage(p))
+                page = new_pdf.getPage(-1)
                 page.mergePage(item_pdf.getPage(p))
-                new_pdf.addPage(page)
-                new_pdf.getPage(-1).compressContentStreams()
+                page.compressContentStreams()
                 # Preserve page indirect object identity so internal PDF references remain valid.
                 ref = page.indirect_reference if hasattr(page, "indirect_reference") else None
                 if ref:
@@ -859,6 +860,8 @@ class SignRequest(models.Model):
         default_lang = get_lang(self.env, lang_code=kwargs.get('lang')).code
         lang = kwargs.get('lang', default_lang)
         sign_request = self.with_context(lang=lang)
+        model_description = notif_values.get('model_description')
+        partner = notif_values.get('partner')
 
         # the notif layout wrapping expects a mail.message record, but we don't want
         # to actually create the record
@@ -870,7 +873,19 @@ class SignRequest(models.Model):
             minimal_qcontext=True
         )
         body_html = sign_request.env['mail.render.mixin']._replace_local_links(body_html)
-
+        if partner and len(partner.user_ids) == 1 and partner.user_ids.notification_type == "inbox":
+            self.message_notify(
+                subject=mail_values.get("subject"),
+                body=body,
+                partner_ids=partner.ids,
+                record_name=self.subject,
+                email_layout_xmlid='mail.mail_notification_layout',
+                model_description=model_description,
+                mail_auto_delete=False,
+                attachment_ids=mail_values.get("attachment_ids"),
+                author_id=self.create_uid.partner_id.id,
+                email_from=mail_values.get("email_from"),
+            )
         mail_values['reply_to'] = mail_values.get('email_from')
         mail = sign_request.env['mail.mail'].sudo().create(dict(body_html=body_html, **mail_values))
         if force_send:
@@ -992,6 +1007,9 @@ class SignRequestItem(models.Model):
             if new_sign_user:
                 activity_ids = set(request_items_reassigned.sign_request_id.activity_search(['mail.mail_activity_data_todo'], user_id=new_sign_user.id).mapped('res_id'))
                 request_items_reassigned.sign_request_id.filtered(lambda sr: sr.id not in activity_ids)._schedule_activity(new_sign_user)
+
+        if vals.get('signer_email') and not self.env.user.has_group('sign.group_sign_manager') and self.env.user != self.create_uid:
+            raise UserError(_("You cannot change the email of a signatory"))
 
         res = super(SignRequestItem, self).write(vals)
 

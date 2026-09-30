@@ -172,7 +172,7 @@ class HrPayslip(models.Model):
                 continue
             payslip.l10n_au_salary_sacrifice_other = payslip.contract_id.l10n_au_salary_sacrifice_other
 
-    @api.depends("employee_id")
+    @api.depends("employee_id.l10n_au_income_stream_type")
     def _compute_income_stream_type(self):
         for payslip in self:
             payslip.l10n_au_income_stream_type = payslip.employee_id.l10n_au_income_stream_type
@@ -342,6 +342,7 @@ class HrPayslip(models.Model):
         self.env.add_to_compute(self._fields['l10n_au_extra_compulsory_super'], self)
         self.env.add_to_compute(self._fields['l10n_au_salary_sacrifice_superannuation'], self)
         self.env.add_to_compute(self._fields['l10n_au_salary_sacrifice_other'], self)
+        self.env.add_to_compute(self._fields['l10n_au_income_stream_type'], self)
         return super().compute_sheet()
 
     def action_refresh_from_work_entries(self):

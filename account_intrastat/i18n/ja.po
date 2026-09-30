@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 17:48+0000\n"
-"PO-Revision-Date: 2026-05-19 10:41+0000\n"
+"PO-Revision-Date: 2026-08-14 04:13+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "account_intrastat/ja/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -141,7 +141,7 @@ msgstr "コモディティー国"
 #. module: account_intrastat
 #: model:ir.model,name:account_intrastat.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: account_intrastat
 #: model:account.report.column,name:account_intrastat.intrastat_report_column_country_code
@@ -301,7 +301,7 @@ msgstr "Intrastat取引コード"
 #. odoo-python
 #: code:addons/account_intrastat/models/product.py:0
 msgid "Invalid Intrastat Code"
-msgstr ""
+msgstr "無効なIntrastatコード"
 
 #. module: account_intrastat
 #. odoo-python
@@ -365,6 +365,8 @@ msgid ""
 "Note that the selected commodity code is invalid based on its start or "
 "expiry date. You can still select it."
 msgstr ""
+"選択されたプロダクトコードは、開始日または有効期限が基準となって無効となって"
+"います。それでも選択することは可能です。"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -504,6 +506,8 @@ msgid ""
 "The product template has no products/variants. At least one variant is "
 "required to set the Intrastat values."
 msgstr ""
+"このプロダクトテンプレートにはプロダクトやバリアントが含まれていません。"
+"Intrastatの値を設定するには、少なくとも1つのバリアントが必要です。"
 
 #. module: account_intrastat
 #. odoo-javascript

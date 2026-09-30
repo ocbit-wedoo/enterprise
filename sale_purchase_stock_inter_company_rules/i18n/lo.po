@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-05-28 12:46+0000\n"
+"PO-Revision-Date: 2026-06-06 11:10+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "sale_purchase_stock_inter_company_rules/lo/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model,name:sale_purchase_stock_inter_company_rules.model_res_company
@@ -38,6 +38,7 @@ msgid ""
 "Configure correct warehouse for company(%s) from Menu: "
 "Settings/Users/Companies"
 msgstr ""
+"ຕັ້ງຄ່າສາງເຄື່ອງໃຫ້ຖືກຕ້ອງສຳລັບບໍລິສັດ(%s) ຈາກ ເມນູ: ການຕັ້ງຄ່າ/ຜູ້ໃຊ້/ບໍລິສັດ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model.fields,help:sale_purchase_stock_inter_company_rules.field_res_company__intercompany_receipt_type_id
@@ -46,6 +47,7 @@ msgid ""
 "Default Operation type to set on Receipts that will be created for inter-"
 "company transfers"
 msgstr ""
+"ປະເພດການດຳເນີນງານເລີ່ມຕົ້ນທີ່ຈະຕັ້ງໃສ່ ໃບຮັບເຄື່ອງ ທີ່ຈະຖືກສ້າງຂຶ້ນສຳລັບການໂອນຍ້າຍລະຫວ່າງບໍລິສັດ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model.fields,help:sale_purchase_stock_inter_company_rules.field_res_company__intercompany_warehouse_id
@@ -54,55 +56,56 @@ msgid ""
 "Default value to set on Purchase(Sales) Orders that will be created based on"
 " Sale(Purchase) Orders made to this company"
 msgstr ""
+"ຄ່າເລີ່ມຕົ້ນທີ່ຈະຕັ້ງໃສ່ ໃບສັ່ງຊື້(ໃບສັ່ງຂາຍ) ທີ່ຈະຖືກສ້າງຂຶ້ນຕາມ ໃບສັ່ງຂາຍ(ໃບສັ່ງຊື້) ທີ່ເຮັດກັບບໍລິສັດນີ້"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model,name:sale_purchase_stock_inter_company_rules.model_purchase_order
 msgid "Purchase Order"
-msgstr "ການສັ່ງຊື້"
+msgstr "ໃບສັ່ງຊື້"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model.fields,field_description:sale_purchase_stock_inter_company_rules.field_res_company__intercompany_receipt_type_id
 #: model:ir.model.fields,field_description:sale_purchase_stock_inter_company_rules.field_res_config_settings__intercompany_receipt_type_id
 msgid "Receipt Operation Type"
-msgstr ""
+msgstr "ປະເພດການດຳເນີນງານການຮັບເຄື່ອງ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model,name:sale_purchase_stock_inter_company_rules.model_sale_order
 msgid "Sales Order"
-msgstr "ໃບສັ່ງຊື້"
+msgstr "ໃບສັ່ງຂາຍ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model,name:sale_purchase_stock_inter_company_rules.model_sale_order_line
 msgid "Sales Order Line"
-msgstr "ລາຍການສິນຄ້າທີ່ສັ່ງຊື້"
+msgstr "ລາຍການໃບສັ່ງຂາຍ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model.fields,field_description:sale_purchase_stock_inter_company_rules.field_res_company__intercompany_sync_delivery_receipt
 #: model:ir.model.fields,field_description:sale_purchase_stock_inter_company_rules.field_res_config_settings__intercompany_sync_delivery_receipt
 msgid "Synchronize Deliveries to your Receipts"
-msgstr ""
+msgstr "ຊິງໂຄຣໄນ ການຈັດສົ່ງ ໃຫ້ກົງກັບ ການຮັບເຄື່ອງ ຂອງທ່ານ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model,name:sale_purchase_stock_inter_company_rules.model_stock_picking
 msgid "Transfer"
-msgstr "ໂອນ"
+msgstr "ການໂອນ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model_terms:ir.ui.view,arch_db:sale_purchase_stock_inter_company_rules.res_config_settings_view_form
 msgid "Use Operation"
-msgstr ""
+msgstr "ໃຊ້ການດຳເນີນງານ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model_terms:ir.ui.view,arch_db:sale_purchase_stock_inter_company_rules.res_config_settings_view_form
 msgid "Use Warehouse"
-msgstr ""
+msgstr "ໃຊ້ສາງເຄື່ອງ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model.fields,field_description:sale_purchase_stock_inter_company_rules.field_res_company__intercompany_warehouse_id
 msgid "Warehouse"
-msgstr ""
+msgstr "ສາງເຄື່ອງ"
 
 #. module: sale_purchase_stock_inter_company_rules
 #: model:ir.model.fields,field_description:sale_purchase_stock_inter_company_rules.field_res_config_settings__intercompany_warehouse_id
 msgid "Warehouse For Purchase Orders"
-msgstr ""
+msgstr "ສາງເຄື່ອງສຳລັບໃບສັ່ງຊື້"

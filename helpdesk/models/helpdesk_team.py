@@ -577,6 +577,14 @@ class HelpdeskTeam(models.Model):
         return {alias.alias_name for alias in existing_aliases}
 
     # ------------------------------------------------------------
+    # Mail Thread
+    # ------------------------------------------------------------
+
+    def message_subscribe(self, partner_ids=None, subtype_ids=None):
+        self.check_access('write')
+        return super().message_subscribe(partner_ids=partner_ids, subtype_ids=subtype_ids)
+
+    # ------------------------------------------------------------
     # Business Methods
     # ------------------------------------------------------------
 
@@ -744,7 +752,10 @@ class HelpdeskTeam(models.Model):
         return action
 
     def action_view_ticket(self):
-        action = self.env["ir.actions.actions"]._for_xml_id("helpdesk.helpdesk_ticket_action_team")
+        action = self.env["ir.actions.actions"].with_context(
+            active_model=self._name,
+            active_id=self.id,
+        )._for_xml_id("helpdesk.helpdesk_ticket_action_team")
         action['display_name'] = self.name
         return action
 

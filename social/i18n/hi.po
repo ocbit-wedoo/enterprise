@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-05-17 05:59+0000\n"
+"PO-Revision-Date: 2026-07-05 17:09+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/social/hi/>"
 "\n"
@@ -25,50 +25,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__accounts_count
 msgid "# Accounts"
-msgstr ""
+msgstr "# खाता"
 
 #. module: social
 #. odoo-python
 #: code:addons/social/models/social_post.py:0
 msgid "%(media_name)s (max %(max_chars)s chars)"
-msgstr ""
+msgstr "%(media_name)s (अधिकतम %(max_chars)s कैरेक्टर)"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid ", you must first link a social media."
-msgstr ""
+msgstr ", आपको पहले एक सोशल मीडिया से लिंक करना होगा।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_http_error_view
 msgid "<b>An error occurred while trying to link your account</b>"
-msgstr ""
+msgstr "<b>आपके खाते को लिंक करने की कोशिश करते समय कोई गड़बड़ी हुई</b>"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
 msgid "<i class=\"fa fa-calendar me-1 small fw-bold\" title=\"Calendar\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-calendar me-1 small fw-bold\" title=\"Calendar\"/>"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
 msgid ""
 "<i class=\"fa fa-calendar-check-o me-1 small fw-bold\" title=\"Calendar\"/>"
 msgstr ""
+"<i class=\"fa fa-calendar-check-o me-1 small fw-bold\" title=\"Calendar\"/>"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_form
 msgid "<i class=\"fa fa-globe ms-1\" title=\"See the post\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-globe ms-1\" title=\"See the post\"/>"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_http_error_view
 msgid "<i class=\"oi oi-arrow-left\"/> Go back to Odoo"
-msgstr ""
+msgstr "<i class=\"oi oi-arrow-left\"/> Odoo पर वापस जाएं"
 
 #. module: social
 #: model_terms:web_tour.tour,rainbow_man_message:social.social_tour
@@ -76,6 +77,7 @@ msgid ""
 "<strong>Congrats! Come back in a few minutes to check your statistics.</"
 "strong>"
 msgstr ""
+"<strong>बधाई हो! अपने आंकड़ें देखने के लिए कुछ मिनटों में वापस आएं.</strong>"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_needaction
@@ -117,37 +119,37 @@ msgstr "जोड़ना"
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form
 msgid "Add Post"
-msgstr ""
+msgstr "पोस्ट जोड़ें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Add Stream"
-msgstr ""
+msgstr "स्ट्रीम जोड़ें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/add_stream_modal.js:0
 #: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
 msgid "Add a Stream"
-msgstr ""
+msgstr "एक स्ट्रीम जोड़ें"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream_post
 msgid "Add a stream"
-msgstr ""
+msgstr "एक स्ट्रीम जोड़ें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Add an image"
-msgstr ""
+msgstr "एक इमेज जोड़ें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "All Companies"
-msgstr ""
+msgstr "सभी कंपनियां"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_utm_campaign__social_post_ids
@@ -157,7 +159,7 @@ msgstr "सोशल मीडिया से जुड़ी हुई सभ�
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__account_allowed_ids
 msgid "Allowed Accounts"
-msgstr ""
+msgstr "ऐसे खाते जिनको अनुमति मिली है"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_account_view_search
@@ -168,18 +170,18 @@ msgstr "संग्रहीत किया गया"
 #: model:ir.model.fields,field_description:social.field_social_post__has_active_accounts
 #: model:ir.model.fields,field_description:social.field_social_post_template__has_active_accounts
 msgid "Are Accounts Available?"
-msgstr ""
+msgstr "क्या खाते उपलब्ध हैं?"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__image_ids
 #: model:ir.model.fields,field_description:social.field_social_post_template__image_ids
 msgid "Attach Images"
-msgstr ""
+msgstr "इमेज अटैच करें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_live_post__image_ids
 msgid "Attached Images"
-msgstr ""
+msgstr "अटैच की गई इमेज"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_attachment_count
@@ -192,42 +194,43 @@ msgstr "अटैचमेंट काउंट"
 #: code:addons/social/static/src/xml/social_templates.xml:0
 #: model:ir.model.fields,field_description:social.field_social_account__audience
 msgid "Audience"
-msgstr ""
+msgstr "ऑडियंस"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__audience_trend
 msgid "Audience Trend"
-msgstr ""
+msgstr "ऑडियंस ट्रेंड"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__author_link
 msgid "Author Link"
-msgstr ""
+msgstr "लेखक का लिंक"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__author_name
 msgid "Author Name"
-msgstr ""
+msgstr "लेखक का नाम"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_stream_post__author_link
 msgid "Author link to the external social.media (ex: link to the X Account)."
-msgstr ""
+msgstr "लेखक का बाहरी सोशल मीडिया से लिंक (जैसे: X अकाउंट का लिंक)।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Before posting, links will be converted to be trackable."
 msgstr ""
+"पोस्ट करने से पहले, लिंक को ट्रैक करने योग्य बनाने के लिए बदल दिया जाएगा।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_search
 msgid "By Stream"
-msgstr ""
+msgstr "स्ट्रीम द्वारा"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__csrf_token
 msgid "CSRF Token"
-msgstr ""
+msgstr "CSRF टोकन"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__calendar_date
@@ -255,11 +258,13 @@ msgid ""
 "Campaigns are used to centralize your marketing efforts and track their "
 "results."
 msgstr ""
+"अपनी मार्केटिंग को एक ही जगह से मैनेज करने और उसका रिजल्ट देखने के लिए कैंपेन का इस्तेमाल "
+"किया जाता है।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__can_link_accounts
 msgid "Can link accounts?"
-msgstr ""
+msgstr "क्या खाते लिंक किए जा सकते हैं?"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_form
@@ -270,13 +275,13 @@ msgstr "रद्द"
 #. odoo-javascript
 #: code:addons/social/static/src/js/tours/social.js:0
 msgid "Choose which <b>account</b> you would like to link first."
-msgstr ""
+msgstr "चुनें कि सबसे पहले आप कौन सा <b>खाता</b> लिंक करना चाहेंगे।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Click to refresh."
-msgstr ""
+msgstr "रीफ्रेश करने के लिए क्लिक करें।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_form
@@ -286,13 +291,13 @@ msgstr "क्लिक"
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
 msgid "Clicks:"
-msgstr ""
+msgstr "क्लिक:"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Comment Image"
-msgstr ""
+msgstr "कमेंट इमेज"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__company_id
@@ -320,7 +325,7 @@ msgstr "कॉन्फ़िगरेशन"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Connecting Problem"
-msgstr ""
+msgstr "कनेक्ट करने में समस्या"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__social_account_handle
@@ -328,6 +333,8 @@ msgid ""
 "Contains the social media handle of the person that created this account. "
 "E.g: '@odoo.official' for the 'Odoo' X account"
 msgstr ""
+"इसमें उस व्यक्ति का सोशल मीडिया हैंडल शामिल है जिसने यह खाता बनाया है. उदाहरण के लिए: "
+"'Odoo' X खाते के लिए '@odoo.official'"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_live_post__message
@@ -335,16 +342,19 @@ msgid ""
 "Content of the social post message that is post-processed (links are "
 "shortened, UTMs, ...)"
 msgstr ""
+"सोशल पोस्ट मैसेज का कॉन्टेंट जिसे पोस्ट-प्रोसेस किया गया है (लिंक छोटे किए गए हैं, UTMs, "
+"...)"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_media__has_streams
 msgid "Controls if social streams are handled on this social media."
 msgstr ""
+"यह कंट्रोल करता है कि इस सोशल मीडिया पर सोशल स्ट्रीम को संभाला जाए या नहीं।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_media__can_link_accounts
 msgid "Controls if we can link accounts or not."
-msgstr ""
+msgstr "कंट्रोल करता है कि हम खातों को लिंक कर सकते हैं या नहीं।"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_view_utm_campaigns
@@ -354,7 +364,7 @@ msgstr "कैंपेन बनाएं"
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_post
 msgid "Create a Post"
-msgstr ""
+msgstr "एक पोस्ट बनाएं"
 
 #. module: social
 #. odoo-python
@@ -363,6 +373,8 @@ msgid ""
 "Create other accounts for %(media_names)s for this company or ask %"
 "(company_names)s to share their accounts"
 msgstr ""
+"इस कंपनी के लिए %(media_names)s के अन्य अकाउंट बनाएं या %(company_names)s से उनके "
+"अकाउंट शेयर करने के लिए कहें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__create_uid
@@ -396,11 +408,13 @@ msgid ""
 "Defines whether this account has Audience/Engagements/Stories stats.\n"
 "        Account with stats are displayed on the dashboard."
 msgstr ""
+"तय करता है कि इस खाते में ऑडियंस/एंगेजमेंट/स्टोरीज़ के आंकड़े हैं या नहीं.\n"
+"        जिन खातों में आंकड़े होते हैं, वे डैशबोर्ड पर दिखते हैं।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__has_trends
 msgid "Defines whether this account has statistics tends or not."
-msgstr ""
+msgstr "यह तय करता है कि इस अकाउंट के आंकड़े दिखेंगे या नहीं।"
 
 #. module: social
 #. odoo-javascript
@@ -414,18 +428,18 @@ msgstr "हटाएं"
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_comment.js:0
 msgid "Delete Comment"
-msgstr ""
+msgstr "टिप्पणी हटाएं"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_comments.js:0
 msgid "Delete Post"
-msgstr ""
+msgstr "पोस्ट हटाएं"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
 msgid "Demo Mode"
-msgstr ""
+msgstr "डेमो मोड"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__media_description
@@ -447,7 +461,7 @@ msgstr "खारिज करें"
 #: model:ir.model.fields,field_description:social.field_social_post__display_message
 #: model:ir.model.fields,field_description:social.field_social_post_template__display_message
 msgid "Display Message"
-msgstr ""
+msgstr "मैसेज दिखाएं"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__display_name
@@ -466,13 +480,13 @@ msgstr "डिस्प्ले नाम"
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_comment.js:0
 msgid "Do you really want to delete this %s?"
-msgstr ""
+msgstr "क्या आप वाकई में इस %s को हटाना चाहते हैं?"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_comments.js:0
 msgid "Do you really want to delete this Post ?"
-msgstr ""
+msgstr "क्या आप वाकई में इस पोस्ट को हटाना चाहते हैं?"
 
 #. module: social
 #: model:ir.model.fields.selection,name:social.selection__social_post__state__draft
@@ -486,6 +500,8 @@ msgid ""
 "Due to length restrictions, the following posts cannot be posted:\n"
 " %s"
 msgstr ""
+"ज़्यादा लंबे होने के कारण ये पोस्ट पब्लिश नहीं हो सकते:\n"
+" %s"
 
 #. module: social
 #. odoo-javascript
@@ -497,12 +513,12 @@ msgstr "संपादित"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Edit Your Post"
-msgstr ""
+msgstr "अपनी पोस्ट में बदलाव करें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_res_config_settings__module_social_demo
 msgid "Enable Demo Mode"
-msgstr ""
+msgstr "डेमो मोड चालू करें"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
@@ -522,17 +538,17 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_form
 #: model_terms:ir.ui.view,arch_db:social.utm_campaign_view_form
 msgid "Engagement"
-msgstr ""
+msgstr "इंगैजमेंट"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__engagement_trend
 msgid "Engagement Trend"
-msgstr ""
+msgstr "इंगैजमेंट ट्रेंड"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
 msgid "Engagement:"
-msgstr ""
+msgstr "इंगैजमेंट:"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__utm_medium_id
@@ -540,6 +556,8 @@ msgid ""
 "Every time an account is created, a utm.medium is also created and linked to "
 "the account"
 msgstr ""
+"हर बार जब कोई खाता बनाया जाता है, तो एक utm.medium भी बनाया जाता है और उसे खाते "
+"से जोड़ दिया जाता है"
 
 #. module: social
 #: model:ir.model.fields.selection,name:social.selection__social_live_post__state__failed
@@ -563,12 +581,12 @@ msgstr "फ़ीड"
 #: code:addons/social/models/social_post.py:0
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_form
 msgid "Feed Posts"
-msgstr ""
+msgstr "फ़ीड पोस्ट"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__stream_posts_count
 msgid "Feed Posts Count"
-msgstr ""
+msgstr "फ़ीड पोस्ट की संख्या"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_follower_ids
@@ -590,18 +608,18 @@ msgstr "फॉन्ट के बेहतरीन आइकॉन जैस�
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__formatted_published_date
 msgid "Formatted Published Date"
-msgstr ""
+msgstr "फॉर्मेट की गई प्रकाशन तारीख"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__audience
 msgid ""
 "General audience of the Social Account (Page Likes, Account Follows, ...)."
-msgstr ""
+msgstr "सोशल अकाउंट के सामान्य दर्शक (पेज लाइक, अकाउंट फॉलो, ...)।"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream
 msgid "Go to the"
-msgstr ""
+msgstr "पर जाएं"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_account_view_search
@@ -614,18 +632,18 @@ msgstr "इन्होंने ग्रुप किया"
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__social_account_handle
 msgid "Handle / Short Name"
-msgstr ""
+msgstr "हैंडल / छोटा नाम"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/tours/social.js:0
 msgid "Happy with the result? Let's post it!"
-msgstr ""
+msgstr "नतीजों से खुश हैं? इसे पोस्ट करें!"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__has_account_stats
 msgid "Has Account Stats"
-msgstr ""
+msgstr "खातों के आंकड़ें हैं"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__has_message
@@ -636,7 +654,7 @@ msgstr "मैसेज है"
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__has_trends
 msgid "Has Trends?"
-msgstr ""
+msgstr "ट्रेंड्स हैं?"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__is_hatched
@@ -695,29 +713,29 @@ msgstr "इमेज यूआरएल"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Image Url"
-msgstr ""
+msgstr "इमेज यूआरएल"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__image_urls
 #: model:ir.model.fields,field_description:social.field_social_post_template__image_urls
 msgid "Images URLs"
-msgstr ""
+msgstr "इमेज के यूआरएल"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_stream_post__stream_post_image_ids
 msgid "Images that were shared with this post."
-msgstr ""
+msgstr "इस पोस्ट के साथ शेयर की गई इमेज।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Insights"
-msgstr ""
+msgstr "इनसाइट्स"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__is_author
 msgid "Is Author"
-msgstr ""
+msgstr "लेखक है"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_is_follower
@@ -732,12 +750,14 @@ msgid ""
 "It appears there is an issue with the Social Media link, click here to link "
 "the account again"
 msgstr ""
+"ऐसा लगता है कि सोशल मीडिया लिंक में कोई समस्या है, खाते को फिर से लिंक करने के लिए यहां "
+"क्लिक करें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
 msgid "It will appear in the Feed once it has posts to display."
-msgstr ""
+msgstr "यह फ़ीड में तब दिखाई देगा जब इसमें दिखाने के लिए पोस्ट होंगी।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__write_uid
@@ -769,53 +789,53 @@ msgstr "आखिरी बार अपडेट हुआ"
 #. odoo-javascript
 #: code:addons/social/static/src/js/tours/social.js:0
 msgid "Let's <b>connect</b> to Facebook, LinkedIn or X."
-msgstr ""
+msgstr "Facebook, LinkedIn या X से <b>कनेक्ट</b> करें।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/tours/social.js:0
 msgid "Let's create your own <b>social media</b> dashboard."
-msgstr ""
+msgstr "आइए, अपना खुद का <b>सोशल मीडिया</b> डैशबोर्ड बनाएं।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/tours/social.js:0
 msgid "Let's start posting."
-msgstr ""
+msgstr "पोस्ट करना शुरू करते हैं।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Like"
-msgstr ""
+msgstr "पसंद"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Likes"
-msgstr ""
+msgstr "लाइक"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__link_description
 msgid "Link Description"
-msgstr ""
+msgstr "लिंक का विवरण"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 #: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_kanban
 msgid "Link Image"
-msgstr ""
+msgstr "लिंक इमेज"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__link_image_url
 msgid "Link Image URL"
-msgstr ""
+msgstr "लिंक इमेज का यूआरएल"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__link_title
 msgid "Link Title"
-msgstr ""
+msgstr "लिंक का टाइटल"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__link_url
@@ -826,17 +846,17 @@ msgstr "यूआरएल लिंक करें"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Link a new account"
-msgstr ""
+msgstr "नया खाता लिंक करें"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_media_view_kanban
 msgid "Link account"
-msgstr ""
+msgstr "खाते को लिंक करें"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_account
 msgid "Link an Account"
-msgstr ""
+msgstr "खाता लिंक करें"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__company_id
@@ -847,47 +867,49 @@ msgid ""
 "Link an account to a company to restrict its usage or keep empty to let all "
 "companies use it."
 msgstr ""
+"किसी कंपनी के उपयोग को प्रतिबंधित करने के लिए एक खाते को उससे लिंक करें या सभी कंपनियों "
+"को इसका उपयोग करने देने के लिए इसे खाली रखें।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_live_post__live_post_link
 msgid "Link of the live post on the target media."
-msgstr ""
+msgstr "टारगेट मीडिया पर लाइव पोस्ट का लिंक।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Link social accounts"
-msgstr ""
+msgstr "सोशल अकाउंट लिंक करें"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__stats_link
 msgid "Link to the external Social Account statistics"
-msgstr ""
+msgstr "बाहरी सोशल अकाउंट आंकड़ों का लिंक"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__is_media_disconnected
 msgid "Link with external Social Media is broken"
-msgstr ""
+msgstr "बाहरी सोशल मीडिया के साथ लिंक टूटा हुआ है"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__account_allowed_ids
 msgid "List of the accounts which can be selected for this post."
-msgstr ""
+msgstr "इस पोस्ट के लिए चुने जा सकने वाले खातों की सूची।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__live_posts_by_media
 msgid "Live Posts by Social Media"
-msgstr ""
+msgstr "सोशल मीडिया के ज़रिए लाइव पोस्ट"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Load more comments..."
-msgstr ""
+msgstr "ज़्यादा कमेंट लोड करें..।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__max_post_length
 msgid "Max Post Length"
-msgstr ""
+msgstr "पोस्ट की अधिकतम लंबाई"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_live_post__media_type
@@ -900,13 +922,13 @@ msgstr "मीडिया"
 #: model:ir.model.fields,field_description:social.field_social_post__media_count
 #: model:ir.model.fields,field_description:social.field_social_post_template__media_count
 msgid "Media Count"
-msgstr ""
+msgstr "मीडिया की संख्या"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__media_type
 #: model:ir.model.fields,field_description:social.field_social_media__media_type
 msgid "Media Type"
-msgstr ""
+msgstr "मीडिया टाइप"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_live_post__message
@@ -926,13 +948,14 @@ msgstr "मैसेज डिलीवरी में गड़बड़ी"
 #. odoo-python
 #: code:addons/social/models/social_post.py:0
 msgid "Message posted"
-msgstr ""
+msgstr "मैसेज पोस्ट किया गया"
 
 #. module: social
 #. odoo-python
 #: code:addons/social/models/social_post.py:0
 msgid "Message posted partially. These are the ones that couldn't be posted:%s"
 msgstr ""
+"मैसेज आंशिक रूप से पोस्ट किया गया. ये वे हैं जिन्हें पोस्ट नहीं किया जा सका:%s"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_ids
@@ -948,6 +971,10 @@ msgid ""
 "        A 'Posting' state is also available for those that are sent through "
 "batching (like push notifications)."
 msgstr ""
+"अधिकांश social.live.posts सीधे 'तैयार' से 'पोस्ट किया गया' या 'पोस्ट नहीं हुआ' स्थिति "
+"में चले जाते हैं, क्योंकि वे थर्ड-पार्टी API को किए गए एक सिंगल कॉल का परिणाम होते हैं.\n"
+"        जो पोस्ट बैचिंग (जैसे पुश नोटिफ़िकेशन) के माध्यम से भेजे जाते हैं, उनके लिए एक 'पोस्ट "
+"किया जा रहा है' स्थिति भी उपलब्ध है।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__my_activity_date_deadline
@@ -957,12 +984,12 @@ msgstr "मेरी गतिविधि की डेडलाइन"
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_search
 msgid "My Posts"
-msgstr ""
+msgstr "मेरी पोस्ट"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_search
 msgid "My Streams"
-msgstr ""
+msgstr "मेरे स्ट्रीम"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__name
@@ -979,13 +1006,13 @@ msgstr "नाम"
 #: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "New Post"
-msgstr ""
+msgstr "नई पोस्ट"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "New content available"
-msgstr ""
+msgstr "नया कॉन्टेंट उपलब्ध है"
 
 #. module: social
 #. odoo-javascript
@@ -1016,29 +1043,30 @@ msgstr "अगली गतिविधि का प्रकार"
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_account
 msgid "No Social Account yet!"
-msgstr ""
+msgstr "अभी कोई सोशल अकाउंट नहीं!"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream
 msgid "No Social Streams yet!"
-msgstr ""
+msgstr "अभी कोई सोशल स्ट्रीम नहीं है!"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream_post
 msgid "No Stream added yet!"
-msgstr ""
+msgstr "अभी तक कोई स्ट्रीम नहीं जोड़ा गया है!"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "No comments yet."
-msgstr ""
+msgstr "अभी तक कोई टिप्पणी नहीं है।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
 msgid "No social accounts configured, please contact your administrator."
 msgstr ""
+"कोई सोशल अकाउंट कॉन्फ़िगर नहीं किया गया है, कृपया अपने एडमिन से संपर्क करें।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_needaction_counter
@@ -1050,12 +1078,12 @@ msgstr "कार्रवाई की संख्या"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Number of Followers of your channel"
-msgstr ""
+msgstr "आपके चैनल के फ़ॉलोअर की संख्या"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__click_count
 msgid "Number of clicks"
-msgstr ""
+msgstr "क्लिक की संख्या"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__message_has_error_counter
@@ -1085,17 +1113,17 @@ msgstr "ऐसे मैसेज की संख्या जिनमें �
 #: model:ir.model.fields,help:social.field_social_live_post__engagement
 #: model:ir.model.fields,help:social.field_social_post__engagement
 msgid "Number of people engagements with the post (Likes, comments...)"
-msgstr ""
+msgstr "पोस्ट के साथ लोगों के इंगैजमेंट की संख्या (लाइक, कमेंट...)"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__engagement
 msgid "Number of people engagements with your posts (Likes, Comments, ...)."
-msgstr ""
+msgstr "आपकी पोस्ट के साथ लोगों के इंगैजमेंट की संख्या (लाइक, कमेंट्स, ...)।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__stories
 msgid "Number of stories created from your posts (Shares, Reposts, ...)."
-msgstr ""
+msgstr "आपकी पोस्ट से बनाई गई स्टोरी की संख्या (शेयर, रीपोस्ट, ...)।"
 
 #. module: social
 #. odoo-javascript
@@ -1104,6 +1132,7 @@ msgid ""
 "Number of times people have engaged with your posts (likes, comments, "
 "shares,...)"
 msgstr ""
+"लोगों द्वारा आपके पोस्ट के साथ इंटरैक्ट (लाइक, कमेंट, शेयर,...) करने की संख्या"
 
 #. module: social
 #. odoo-javascript
@@ -1112,40 +1141,43 @@ msgid ""
 "Number of times people who have engaged with your channel have created "
 "stories on their friends' or followers' feed (Shares, Reposts...)"
 msgstr ""
+"आपके चैनल से जुड़ने वाले लोगों द्वारा अपने दोस्तों या फ़ॉलोअर्स के फ़ीड पर स्टोरीज़ (शेयर, "
+"रीपोस्ट...) बनाने की संख्या"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Or add"
-msgstr ""
+msgstr "या जोड़ें"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__audience_trend
 msgid "Percentage of increase/decrease of the audience over a defined period."
-msgstr ""
+msgstr "निर्धारित अवधि के दौरान दर्शकों में वृद्धि/कमी का प्रतिशत।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__engagement_trend
 msgid ""
 "Percentage of increase/decrease of the engagement over a defined period."
-msgstr ""
+msgstr "एक तय अवधि के दौरान दर्शकों में वृद्धि/कमी का प्रतिशत।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__stories_trend
 msgid "Percentage of increase/decrease of the stories over a defined period."
-msgstr ""
+msgstr "निर्धारित अवधि के दौरान स्टोरीज़ में वृद्धि/कमी का प्रतिशत।"
 
 #. module: social
 #. odoo-python
 #: code:addons/social/models/social_post.py:0
 msgid "Please specify at least one account to post into (for post ID(s) %s)."
 msgstr ""
+"कृपया पोस्ट करने के लिए कम से कम एक खाता तय करें (पोस्ट आईडी के लिए %s)।"
 
 #. module: social
 #. odoo-python
 #: code:addons/social/models/social_post_template.py:0
 msgid "Please specify either a message or upload some images."
-msgstr ""
+msgstr "कृपया या तो एक मैसेज लिखें या कुछ तस्वीरें अपलोड करें।"
 
 #. module: social
 #. odoo-python
@@ -1161,7 +1193,7 @@ msgstr "पोस्ट करें"
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_kanban
 #: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_kanban
 msgid "Post Image"
-msgstr ""
+msgstr "इमेज पोस्ट करें"
 
 #. module: social
 #. odoo-javascript
@@ -1170,19 +1202,19 @@ msgstr ""
 #: code:addons/social/static/src/js/stream_post_comments.js:0
 #: code:addons/social/static/src/js/stream_post_kanban_renderer.js:0
 msgid "Post Images"
-msgstr ""
+msgstr "इमेज पोस्ट करें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_live_post__live_post_link
 #: model:ir.model.fields,field_description:social.field_social_stream_post__post_link
 msgid "Post Link"
-msgstr ""
+msgstr "लिंक पोस्ट करें"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_search
 #: model_terms:ir.ui.view,arch_db:social.social_stream_post_view_search
 msgid "Post Message"
-msgstr ""
+msgstr "मैसेज पोस्ट करें"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_form
@@ -1195,11 +1227,12 @@ msgid ""
 "Post link to the external social.media (ex: link to the actual Facebook "
 "Post)."
 msgstr ""
+"बाहरी सोशल मीडिया पर लिंक पोस्ट करें (जैसे: वास्तविक Facebook पोस्ट का लिंक)।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Post on"
-msgstr ""
+msgstr "पोस्ट करें"
 
 #. module: social
 #: model:ir.model.fields.selection,name:social.selection__social_live_post__state__posted
@@ -1211,7 +1244,7 @@ msgstr "पोस्ट किया गया"
 #: model:ir.model.fields.selection,name:social.selection__social_live_post__state__posting
 #: model:ir.model.fields.selection,name:social.selection__social_post__state__posting
 msgid "Posting"
-msgstr ""
+msgstr "पोस्ट किया जा रहा है"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream__stream_post_ids
@@ -1225,29 +1258,31 @@ msgstr "पोस्ट"
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__live_post_ids
 msgid "Posts By Account"
-msgstr ""
+msgstr "खाते के ज़रिए पोस्ट"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Posts Preview"
-msgstr ""
+msgstr "पोस्ट का प्रीव्यू"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Press Enter to edit. Press Shift+Enter to insert a Line Break."
 msgstr ""
+"बदलाव करने के लिए Enter दबाएं. लाइन ब्रेक डालने के लिए Shift+Enter दबाएं।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Press Enter to post. Press Shift+Enter to insert a Line Break."
 msgstr ""
+"पोस्ट करने के लिए Enter दबाएं. लाइन ब्रेक डालने के लिए Shift+Enter दबाएं।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Preview your post"
-msgstr ""
+msgstr "अपनी पोस्ट का प्रीव्यू करें"
 
 #. module: social
 #. odoo-javascript
@@ -1258,22 +1293,22 @@ msgstr "पिछला"
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__post_method
 msgid "Publish your post immediately or schedule it at a later time."
-msgstr ""
+msgstr "अपनी पोस्ट तुरंत प्रकाशित करें या इसे बाद के समय के लिए शेड्यूल करें।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_search
 msgid "Published By"
-msgstr ""
+msgstr "इन्होंने पब्लिश किया"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__published_date
 msgid "Published Date"
-msgstr ""
+msgstr "पब्लिश करने की तारीख"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__published_date
 msgid "Published date"
-msgstr ""
+msgstr "पब्लिश करने की तारीख"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__rating_ids
@@ -1289,17 +1324,17 @@ msgstr "तैयार"
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__media_type
 msgid "Related Social Media"
-msgstr ""
+msgstr "संबंधित सोशल मीडिया"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__media_id
 msgid "Related Social Media (Facebook, X, ...)."
-msgstr ""
+msgstr "संबंधित सोशल मीडिया (Facebook, X, ...)।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__account_id
 msgid "Related social Account"
-msgstr ""
+msgstr "संबंधित सोशल अकाउंट"
 
 #. module: social
 #. odoo-javascript
@@ -1332,7 +1367,7 @@ msgstr "शेड्यूल बनाने की सुविधा"
 #. module: social
 #: model:ir.model.fields.selection,name:social.selection__social_post__post_method__scheduled
 msgid "Schedule later"
-msgstr ""
+msgstr "बाद में शेड्यूल करें"
 
 #. module: social
 #: model:ir.model.fields.selection,name:social.selection__social_post__state__scheduled
@@ -1351,6 +1386,7 @@ msgid ""
 "Selected accounts (%(account_list)s) do not match the selected company (%"
 "(company)s)"
 msgstr ""
+"चुने गए खाते (%(account_list)s) चुनी गई कंपनी (%(company)s) से मेल नहीं खाते हैं"
 
 #. module: social
 #: model:ir.model.fields.selection,name:social.selection__social_post__post_method__now
@@ -1366,12 +1402,16 @@ msgstr "अनुक्रम"
 #: model:ir.model.fields,help:social.field_social_stream__sequence
 msgid "Sequence used to order streams (mainly for the 'Feed' kanban view)"
 msgstr ""
+"स्ट्रीम को क्रम से करने के लिए उपयोग किया जाने वाला सीक्वेंस (मुख्य रूप से 'फ़ीड' कानबान व्यू "
+"के लिए)"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_media__max_post_length
 msgid ""
 "Set a maximum number of characters can be posted in post. 0 for no limit."
 msgstr ""
+"पोस्ट में पोस्ट किए जा सकने वाले वर्णों की अधिकतम संख्या निर्धारित करें. 0 का मतलब है कि "
+"कोई सीमा नहीं है।"
 
 #. module: social
 #: model:ir.actions.act_window,name:social.action_social_global_settings
@@ -1385,7 +1425,7 @@ msgstr "कॉन्फ़िगरेशन"
 #: model:ir.model.fields,field_description:social.field_social_stream__account_id
 #: model_terms:ir.ui.view,arch_db:social.social_account_view_form
 msgid "Social Account"
-msgstr ""
+msgstr "सोशल अकाउंट"
 
 #. module: social
 #: model:ir.actions.act_window,name:social.action_social_account
@@ -1395,17 +1435,17 @@ msgstr ""
 #: model:ir.ui.menu,name:social.menu_social_account
 #: model_terms:ir.ui.view,arch_db:social.social_account_view_list
 msgid "Social Accounts"
-msgstr ""
+msgstr "सोशल अकाउंट"
 
 #. module: social
 #: model:ir.model,name:social.model_social_live_post
 msgid "Social Live Post"
-msgstr ""
+msgstr "सोशल लाइव पोस्ट"
 
 #. module: social
 #: model:res.groups,name:social.group_social_manager
 msgid "Social Manager"
-msgstr ""
+msgstr "सोशल मैनेजर"
 
 #. module: social
 #: model:ir.ui.menu,name:social.menu_social_global
@@ -1437,65 +1477,65 @@ msgstr "सोशल मीडिया पोस्ट"
 #: model:ir.model.fields,field_description:social.field_social_live_post__post_id
 #: model_terms:ir.ui.view,arch_db:social.social_live_post_view_form
 msgid "Social Post"
-msgstr ""
+msgstr "सोशल पोस्ट"
 
 #. module: social
 #: model:ir.model,name:social.model_social_post_template
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Social Post Template"
-msgstr ""
+msgstr "सोशल पोस्ट टेम्पलेट"
 
 #. module: social
 #: model:ir.actions.act_window,name:social.social_post_template_action
 msgid "Social Post Templates"
-msgstr ""
+msgstr "सोशल पोस्ट टेम्प्लेट"
 
 #. module: social
 #: model:ir.actions.act_window,name:social.action_social_post
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_calendar
 #: model_terms:ir.ui.view,arch_db:social.social_post_view_pivot
 msgid "Social Posts"
-msgstr ""
+msgstr "सोशल पोस्ट"
 
 #. module: social
 #: model:ir.model,name:social.model_social_stream
 #: model:ir.model.fields,field_description:social.field_social_stream_post__stream_id
 #: model_terms:ir.ui.view,arch_db:social.social_stream_view_form
 msgid "Social Stream"
-msgstr ""
+msgstr "सोशल स्ट्रीम"
 
 #. module: social
 #: model:ir.model,name:social.model_social_stream_post
 #: model:ir.model,name:social.model_social_stream_type
 msgid "Social Stream Post"
-msgstr ""
+msgstr "सोशल स्ट्रीम पोस्ट"
 
 #. module: social
 #: model:ir.model,name:social.model_social_stream_post_image
 msgid "Social Stream Post Image Attachment"
-msgstr ""
+msgstr "सोशल स्ट्रीम पोस्ट इमेज अटैचमेंट"
 
 #. module: social
 #: model:ir.actions.act_window,name:social.action_social_stream
 #: model:ir.ui.menu,name:social.menu_social_stream
 msgid "Social Streams"
-msgstr ""
+msgstr "सोशल स्ट्रीम"
 
 #. module: social
 #: model:res.groups,name:social.group_social_user
 msgid "Social User"
-msgstr ""
+msgstr "सोशल यूज़र"
 
 #. module: social
 #: model:ir.actions.server,name:social.ir_cron_post_scheduled_ir_actions_server
 msgid "Social: Publish Scheduled Posts"
-msgstr ""
+msgstr "सोशल: शेड्यूल की गई पोस्ट पब्लिश करें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_comments_reply.js:0
 msgid "Something went wrong while posting the comment."
-msgstr ""
+msgstr "टिप्पणी पोस्ट करते समय कुछ गलत हो गया।"
 
 #. module: social
 #. odoo-javascript
@@ -1504,6 +1544,8 @@ msgid ""
 "Sorry, you're not allowed to re-link this account, please contact your "
 "administrator."
 msgstr ""
+"माफ करें, आपको इस खाते को फिर से लिंक करने की अनुमति नहीं है, कृपया अपने एडमिन से संपर्क करें"
+"।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__source_id
@@ -1516,23 +1558,25 @@ msgid ""
 "Special technical field that holds a dict containing the live posts names by "
 "media ids (used for kanban view)."
 msgstr ""
+"एक खास टेक्निकल फ़ील्ड जो मीडिया आईडी के अनुसार लाइव पोस्ट के नामों वाली एक डिक्ट "
+"(dict) रखता है (कानबन व्यू के लिए उपयोग किया जाता है)।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/fields/social_post_split_per_media.xml:0
 msgid "Split Per Media"
-msgstr ""
+msgstr "हर मीडिया के हिसाब बांटें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__is_split_per_media
 #: model:ir.model.fields,field_description:social.field_social_post_template__is_split_per_media
 msgid "Split Per Network"
-msgstr ""
+msgstr "नेटवर्क के हिसाब से बांटें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__stats_link
 msgid "Stats Link"
-msgstr ""
+msgstr "स्टैट्स लिंक"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_live_post__state
@@ -1558,71 +1602,71 @@ msgstr ""
 #: code:addons/social/static/src/xml/social_templates.xml:0
 #: model:ir.model.fields,field_description:social.field_social_account__stories
 msgid "Stories"
-msgstr ""
+msgstr "स्टोरीज़"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_account__stories_trend
 msgid "Stories Trend"
-msgstr ""
+msgstr "स्टोरीज़ ट्रेंड"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_kanban_controller.js:0
 msgid "Stream Added (%s)"
-msgstr ""
+msgstr "स्ट्रीम जोड़ा गया (%s)"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post_image__stream_post_id
 msgid "Stream Post"
-msgstr ""
+msgstr "पोस्ट स्ट्रीम करें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__stream_post_image_ids
 msgid "Stream Post Images"
-msgstr ""
+msgstr "पोस्ट की गई इमेज स्ट्रीम करें"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream_post__stream_post_image_urls
 msgid "Stream Post Images URLs"
-msgstr ""
+msgstr "स्ट्रीम पोस्ट इमेज के यूआरएल"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__stream_type_ids
 msgid "Stream Types"
-msgstr ""
+msgstr "स्ट्रीम टाइप"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream__stream_type_type
 #: model:ir.model.fields,field_description:social.field_social_stream_type__stream_type
 msgid "Stream type name (technical)"
-msgstr ""
+msgstr "स्ट्रीम प्रकार का नाम (टेक्निकल)"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_media__has_streams
 msgid "Streams Enabled"
-msgstr ""
+msgstr "स्ट्रीम चालू किया गया"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__live_post_ids
 msgid "Sub-posts that will be published on each selected social accounts."
-msgstr ""
+msgstr "हर चुने गए सोशल अकाउंट पर प्रकाशित किए जाने वाले सब-पोस्ट।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Sync"
-msgstr ""
+msgstr "सिंक करें"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__account_ids
 #: model:ir.model.fields,help:social.field_social_post_template__account_ids
 msgid "The accounts on which this post will be published."
-msgstr ""
+msgstr "वे खाते जिन पर यह पोस्ट प्रकाशित की जाएगी।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_stream_post__author_name
 msgid "The post author name based on third party information (ex: 'John Doe')."
-msgstr ""
+msgstr "पोस्ट लेखक का नाम तृतीय-पक्ष जानकारी के आधार पर (जैसे: 'John Doe')।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__state
@@ -1630,11 +1674,13 @@ msgid ""
 "The post is considered as 'Posted' when all its sub-posts (one per social "
 "account) are either 'Failed' or 'Posted'"
 msgstr ""
+"पोस्ट को 'पोस्ट किया गया' माना जाता है जब इसके सभी सब-पोस्ट (प्रत्येक सोशल अकाउंट पर "
+"एक) या तो 'असफल' हों या 'पोस्ट किए गए' हों"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_stream_post__published_date
 msgid "The post published date based on third party information."
-msgstr ""
+msgstr "पोस्ट प्रकाशित होने की तारीख तीसरे पक्ष की जानकारी के आधार पर है।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_live_post__failure_reason
@@ -1642,21 +1688,23 @@ msgid ""
 "The reason why a post is not successfully posted on the Social Media (eg: "
 "connection error, duplicated post, ...)."
 msgstr ""
+"पोस्ट सोशल मीडिया पर सफलतापूर्वक पोस्ट न होने की वजह (जैसे: कनेक्शन में गड़बड़ी, डुप्लीकेट "
+"पोस्ट, ...)।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream__media_image
 msgid "The related Social Media's image"
-msgstr ""
+msgstr "संबंधित सोशल मीडिया की इमेज"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__media_ids
 msgid "The social medias linked to the selected social accounts."
-msgstr ""
+msgstr "चुने गए सोशल खातों से जुड़े सोशल मीडिया।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_post__has_post_errors
 msgid "There are post errors on sub-posts"
-msgstr ""
+msgstr "सब-पोस्ट पर पोस्ट में गड़बड़िया हैं"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_media__csrf_token
@@ -1664,6 +1712,8 @@ msgid ""
 "This token can be used to verify that an incoming request from a social "
 "provider has not been forged."
 msgstr ""
+"इस टोकन का उपयोग यह सत्यापित करने के लिए किया जा सकता है कि किसी सोशल प्रोवाइडर से "
+"आने वाला अनुरोध जाली नहीं है।"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream__name
@@ -1674,7 +1724,7 @@ msgstr "टाइटल"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "To add a stream"
-msgstr ""
+msgstr "स्ट्रीम जोड़ने के लिए"
 
 #. module: social
 #: model:ir.model.fields,field_description:social.field_social_stream__stream_type_id
@@ -1706,7 +1756,7 @@ msgstr "यूटीएम सोर्स"
 #. odoo-python
 #: code:addons/social/controllers/main.py:0
 msgid "Uh-oh! It looks like this message has been deleted from X."
-msgstr ""
+msgstr "ओह-ओह! ऐसा लगता है कि यह मैसेज X से हटा दिया गया है।"
 
 #. module: social
 #. odoo-python
@@ -1718,7 +1768,7 @@ msgstr "अनजानी गड़बड़ी"
 #. odoo-python
 #: code:addons/social/models/social_post_template.py:0
 msgid "Uploaded file does not seem to be a valid image."
-msgstr ""
+msgstr "अपलोड की गई फ़ाइल एक मान्य इमेज नहीं लगती है।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.res_config_settings_view_form
@@ -1726,6 +1776,8 @@ msgid ""
 "Use your own Developer Accounts on our Social app. Those credentials are "
 "provided in the developer section of your professional social media account."
 msgstr ""
+"हमारे सोशल ऐप पर अपने खुद के डेवलपर अकाउंट का उपयोग करें. वे क्रेडेंशियल आपके प्रोफ़ेशनल सोशल "
+"मीडिया अकाउंट के डेवलपर सेक्शन में दिए गए हैं।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_account__media_type
@@ -1736,6 +1788,8 @@ msgid ""
 "Used to make comparisons when we need to restrict some features to a "
 "specific media ('facebook', 'x', ...)."
 msgstr ""
+"इसका उपयोग तुलना करने के लिए किया जाता है जब हमें कुछ फीचर्स को किसी खास मीडिया "
+"('facebook', 'x', ...) तक सीमित करने की आवश्यकता होती है।"
 
 #. module: social
 #. odoo-javascript
@@ -1766,35 +1820,37 @@ msgid ""
 "When the global post was published. The actual sub-posts published dates may "
 "be different depending on the media."
 msgstr ""
+"जब ग्लोबल पोस्ट प्रकाशित किया गया था. अलग-अलग मीडिया के आधार पर वास्तविक उप-पोस्ट "
+"के प्रकाशन की तारीखें भिन्न हो सकती हैं।"
 
 #. module: social
 #: model:ir.model.fields,help:social.field_social_post__image_ids
 #: model:ir.model.fields,help:social.field_social_post_template__image_ids
 msgid "Will attach images to your posts (if the social media supports it)."
-msgstr ""
+msgstr "आपकी पोस्ट में इमेज अटैच करेंगी (अगर सोशल मीडिया इसे सपोर्ट करता है)।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Write a comment..."
-msgstr ""
+msgstr "कोई टिप्पणी लिखें..।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Write a message or upload an image"
-msgstr ""
+msgstr "कोई मैसेज लिखें या इमेज अपलोड करें"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/tours/social.js:0
 msgid "Write a message to get a preview of your post."
-msgstr ""
+msgstr "अपनी पोस्ट का प्रीव्यू देखने करने के लिए एक मैसेज लिखें।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "Write a reply..."
-msgstr ""
+msgstr "कोई जवाब लिखें..।"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_post
@@ -1802,6 +1858,8 @@ msgid ""
 "Write an enticing post, add images and schedule it to be posted later on "
 "multiple platforms at once."
 msgstr ""
+"एक बेहतरीन पोस्ट लिखें, इमेज जोड़ें और इसे एक साथ कई प्लेटफ़ॉर्म पर बाद में पोस्ट करने के लिए "
+"शेड्यूल करें।"
 
 #. module: social
 #. odoo-python
@@ -1811,6 +1869,9 @@ msgid ""
 "social accounts in Social:\n"
 "%(social_accounts)s"
 msgstr ""
+"आप इन UTM माध्यमों को हटा नहीं सकते, क्योंकि वे सोशल में नीचे दिए गए सोशल खातों से जुड़े "
+"हैं:\n"
+"%(social_accounts)s"
 
 #. module: social
 #. odoo-python
@@ -1820,40 +1881,42 @@ msgid ""
 "Social:\n"
 "%(utm_sources)s"
 msgstr ""
+"आप इन UTM सोर्स को हटा नहीं सकते, क्योंकि वे सोशल में सोशल पोस्ट से जुड़े हुए हैं:\n"
+"%(utm_sources)s"
 
 #. module: social
 #. odoo-python
 #: code:addons/social/models/social_post.py:0
 msgid "You cannot reschedule a post that has already been posted."
-msgstr ""
+msgstr "आप पहले से पोस्ट की गई पोस्ट को फिर से शेड्यूल नहीं कर सकते।"
 
 #. module: social
 #. odoo-python
 #: code:addons/social/models/social_post.py:0
 msgid "You cannot schedule a post in the past."
-msgstr ""
+msgstr "आप बीते हुए समय में कोई पोस्ट शेड्यूल नहीं कर सकते।"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "Your Post"
-msgstr ""
+msgstr "आपकी पोस्ट"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "a Stream from an existing account"
-msgstr ""
+msgstr "एक मौजूदा खाते से स्ट्रीम"
 
 #. module: social
 #: model_terms:ir.ui.view,arch_db:social.social_post_template_view_form
 msgid "before posting."
-msgstr ""
+msgstr "पोस्ट करने से पहले।"
 
 #. module: social
 #. odoo-javascript
 #: code:addons/social/static/src/js/stream_post_comment.js:0
 msgid "comment/reply"
-msgstr ""
+msgstr "टिप्पणी/जवाब"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream
@@ -1870,19 +1933,20 @@ msgstr "फ़ॉर"
 #. odoo-javascript
 #: code:addons/social/static/src/xml/social_templates.xml:0
 msgid "replies..."
-msgstr ""
+msgstr "जवाब देता है..।"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream_post
 msgid "to keep an eye on your own posts and monitor all social activities."
 msgstr ""
+"अपने खुद के पोस्ट पर नज़र रखने और सभी सोशल गतिविधियों की निगरानी करने के लिए।"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_stream
 msgid "to link your accounts and start posting."
-msgstr ""
+msgstr "अपने खातों को लिंक करने और पोस्ट करना शुरू करने के लिए।"
 
 #. module: social
 #: model_terms:ir.actions.act_window,help:social.action_social_account
 msgid "to start posting from Odoo."
-msgstr ""
+msgstr "Odoo से पोस्ट करना शुरू करने के लिए।"

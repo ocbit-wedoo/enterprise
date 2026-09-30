@@ -1,26 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_invoice_extract
+# * account_invoice_extract
 #
 # Translators:
 # Ивайло Малинов <iv.malinov@gmail.com>, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # KeyVillage, 2024
 # Petko Karamotchev, 2024
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Petko Karamotchev, 2024\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-06 16:31+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"account_invoice_extract/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__message_needaction
@@ -41,12 +43,12 @@ msgstr "Брой прикачени файлове"
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_bank_statement_line__extract_can_show_banners
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_can_show_banners
 msgid "Can show the ocr banners"
-msgstr ""
+msgstr "Може да показва OCR банери"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_can_show_send_button
 msgid "Can show the ocr send button"
-msgstr ""
+msgstr "Може да показва бутона за изпращане на ocr"
 
 #. module: account_invoice_extract
 #: model:ir.model,name:account_invoice_extract.model_res_company
@@ -104,7 +106,7 @@ msgstr "Дигитализирай автоматично"
 #. module: account_invoice_extract
 #: model_terms:ir.ui.view,arch_db:account_invoice_extract.view_move_form_inherit_ocr
 msgid "Digitize document"
-msgstr ""
+msgstr "Дигитализиране на документ"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields.selection,name:account_invoice_extract.selection__res_company__extract_in_invoice_digitalization_mode__manual_send
@@ -126,7 +128,7 @@ msgstr "Без дигитализация"
 #. module: account_invoice_extract
 #: model_terms:ir.ui.view,arch_db:account_invoice_extract.res_config_settings_view_form
 msgid "Enable to get only one invoice line per tax"
-msgstr ""
+msgstr "Активирайте, за да получите само един ред във фактурата за всеки данък"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_error_message
@@ -137,30 +139,30 @@ msgstr "Съобщение за грешка"
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_bank_statement_line__extract_attachment_id
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_attachment_id
 msgid "Extract Attachment"
-msgstr ""
+msgstr "Прикачен файл за извличане"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_bank_statement_line__extract_detected_layout
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_detected_layout
 msgid "Extract Detected Layout Id"
-msgstr ""
+msgstr "Id на разпознато оформление от извличане"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_bank_statement_line__extract_partner_name
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_partner_name
 msgid "Extract Detected Partner Name"
-msgstr ""
+msgstr "Разпознато име на партньор от извличане"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_bank_statement_line__extract_prefill_data
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_prefill_data
 msgid "Extract Prefill Data"
-msgstr ""
+msgstr "Данни за предварително попълване от извличане"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_state_processed
 msgid "Extract State Processed"
-msgstr ""
+msgstr "Състояние на извличане - обработено"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_bank_statement_line__extract_word_ids
@@ -171,12 +173,12 @@ msgstr ""
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_state
 msgid "Extract state"
-msgstr ""
+msgstr "Състояние на извличане"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_status
 msgid "Extract status"
-msgstr ""
+msgstr "Статус на извличане"
 
 #. module: account_invoice_extract
 #: model:ir.model,name:account_invoice_extract.model_account_invoice_extract_words
@@ -186,7 +188,7 @@ msgstr ""
 #. module: account_invoice_extract
 #: model_terms:ir.ui.view,arch_db:account_invoice_extract.view_move_form_inherit_ocr
 msgid "Extraction Information"
-msgstr ""
+msgstr "Информация за извличането"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_invoice_extract_words__field
@@ -216,7 +218,7 @@ msgstr "ID"
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__extract_document_uuid
 msgid "ID of the request to IAP-OCR"
-msgstr ""
+msgstr "ID на заявката към IAP-OCR"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,help:account_invoice_extract.field_account_move__message_needaction
@@ -237,12 +239,12 @@ msgstr "Фактура"
 #. module: account_invoice_extract
 #: model:ir.actions.server,name:account_invoice_extract.ir_cron_update_ocr_status_ir_actions_server
 msgid "Invoice OCR: Update All Status"
-msgstr ""
+msgstr "OCR на фактури: Актуализиране на всички статуси"
 
 #. module: account_invoice_extract
 #: model:ir.actions.server,name:account_invoice_extract.ir_cron_ocr_validate_ir_actions_server
 msgid "Invoice OCR: Validate Invoices"
-msgstr ""
+msgstr "OCR на фактури: Валидиране на фактури"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__message_is_follower
@@ -252,7 +254,7 @@ msgstr "е последовател"
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_move__is_in_extractable_state
 msgid "Is In Extractable State"
-msgstr ""
+msgstr "В състояние за извличане ли е"
 
 #. module: account_invoice_extract
 #: model:ir.model,name:account_invoice_extract.model_account_move
@@ -333,7 +335,7 @@ msgstr "Изпрати фактурите за дигитализиране"
 #: model:ir.model.fields,field_description:account_invoice_extract.field_res_company__extract_single_line_per_tax
 #: model:ir.model.fields,field_description:account_invoice_extract.field_res_config_settings__extract_single_line_per_tax
 msgid "Single Invoice Line Per Tax"
-msgstr ""
+msgstr "Един ред във фактура за всеки данък"
 
 #. module: account_invoice_extract
 #: model:ir.model.fields,field_description:account_invoice_extract.field_account_invoice_extract_words__user_selected
@@ -394,4 +396,4 @@ msgstr "Word Text"
 #. odoo-python
 #: code:addons/account_invoice_extract/models/account_invoice.py:0
 msgid "You cannot send a expense that is not in draft state!"
-msgstr ""
+msgstr "Не можете да изпратите разход, който не е в състояние чернова!"

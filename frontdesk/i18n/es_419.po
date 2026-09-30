@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-05-13 21:09+0000\n"
-"Last-Translator: \"Patricia Gutiérrez (pagc)\" <pagc@odoo.com>\n"
+"PO-Revision-Date: 2026-08-21 21:09+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18/frontdesk/es_419/>\n"
 "Language: es_419\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: frontdesk
 #. odoo-python
@@ -79,9 +79,9 @@ msgstr ""
 "                    <p>Hola <t t-if=\"ctx.get('host_name')\"><t t-"
 "out=\"ctx.get('host_name')\"/>, </t><b><t t-out=\"object.name\"/></b> <t t-"
 "if=\"object.phone\">(<t t-out=\"object.phone\"/>)</t><t t-"
-"if=\"object.company\">, que viene de <t t-out=\"object.company\"/></t> "
-"solicitó reunirse con usted en <t t-out=\"object.station_id.name\"/>. Hágale "
-"saber que estará ahí en un momento.\n"
+"if=\"object.company\">, de <t t-out=\"object.company\"/></t>, quiere "
+"reunirse contigo en <t t-out=\"object.station_id.name\"/>. Avísale que "
+"llegarás en unos minutos.\n"
 "                    </p>\n"
 "                </div>\n"
 "            "
@@ -449,10 +449,10 @@ msgid ""
 "'' }} wants to meet you at {{ object.station_id.name }}. Please let them "
 "know you'll be there shortly."
 msgstr ""
-"Hola, su invitado {{ object.name }} {{ '(%s)' % object.phone if object.phone "
-"else '' }} {{ '(%s)' % object.company if object.company else '' }} desea "
-"reunirse con usted en {{ object.station_id.name }}. Hágale saber que estará "
-"ahí en un momento."
+"Hola, {{ object.name }} {{ '(%s)' % object.phone if object.phone else '' }} {"
+"{ '(%s)' % object.company if object.company else '' }} quiere reunirse "
+"contigo en {{ object.station_id.name }}. Avísale que llegarás en unos "
+"minutos."
 
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.print_visitor_badge
@@ -853,7 +853,7 @@ msgstr "Enviar un SMS al anfitrión cuando llegue el invitado"
 #. module: frontdesk
 #: model:mail.template,description:frontdesk.frontdesk_mail_template
 msgid "Sent to hosts on guest arrival"
-msgstr "Enviar al anfitrión cuando llegue el invitado"
+msgstr "Enviado a los anfitriones cuando llega un invitado"
 
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_drink__sequence
@@ -1033,7 +1033,7 @@ msgstr "Tu número de teléfono"
 #. module: frontdesk
 #: model:mail.template,subject:frontdesk.frontdesk_mail_template
 msgid "Your Visitor {{ object.name }} Requested To Meet You"
-msgstr "Su visitante {{ object.name }} solicitó reunirse con usted"
+msgstr "Tu visitante {{ object.name }} solicitó reunirse contigo"
 
 #. module: frontdesk
 #. odoo-javascript

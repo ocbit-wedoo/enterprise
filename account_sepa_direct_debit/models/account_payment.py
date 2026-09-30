@@ -7,6 +7,7 @@ from datetime import datetime
 from odoo import models, fields, api, _
 
 from odoo.exceptions import UserError
+from odoo.tools import street_split
 
 from odoo.tools.float_utils import float_repr
 from odoo.tools.xml_utils import create_xml_node, create_xml_node_chain
@@ -129,7 +130,11 @@ class AccountPayment(models.Model):
         create_xml_node(GrpHdr, 'CtrlSum', float_repr(sum(x.amount for x in self), precision_digits=2))  # This sum ignores the currency, it is used as a checksum (see SEPA rulebook)
         InitgPty = create_xml_node(GrpHdr, 'InitgPty')
         create_xml_node(InitgPty, 'Nm', self.split_node(company_id.name, 70)[0])
-        create_xml_node_chain(InitgPty, ['Id', 'OrgId', 'Othr', 'Id'], company_id.sdd_creditor_identifier)
+        nodes = create_xml_node_chain(InitgPty, ['Id', 'OrgId', 'Othr', 'Id'], company_id.sdd_creditor_identifier)
+        # Those countries need to use the format for Nordea
+        if company_id.account_fiscal_country_id.code in {'SE', 'FI', 'DK', 'NO'}:
+            Othr = nodes[2]
+            create_xml_node_chain(Othr, ['SchmeNm', 'Cd'], 'CUST')
 
     def _sdd_xml_gen_address(self, root_node, partner, sdd_version):
         # Starting from November 2025, structured addresses will become the norm,
@@ -150,8 +155,11 @@ class AccountPayment(models.Model):
                     n_line = n_line + 1
             elif sdd_version == 'pain.008.001.08':
                 if partner.street:
-                    street_name = partner.street if not partner.street2 else f'{partner.street}, {partner.street2}'
+                    street_details = street_split(partner.street)
+                    street_name = street_details['street_name'] if not partner.street2 else f"{street_details['street_name']}, {partner.street2}"
                     create_xml_node(PstlAdr, 'StrtNm', self.split_node(street_name, 70)[0])  # Number and box in street
+                    if bldg_nb := street_details['street_number']:
+                        create_xml_node(PstlAdr, 'BldgNb', bldg_nb)
                 if partner.zip:
                     create_xml_node(PstlAdr, 'PstCd', partner.zip)
                 if partner.city:

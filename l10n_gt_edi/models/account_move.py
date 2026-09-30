@@ -2,7 +2,6 @@ import logging
 
 from lxml import etree
 from urllib.parse import urlencode
-from zoneinfo import ZoneInfo
 
 from odoo import api, fields, models, _
 from odoo.exceptions import UserError
@@ -156,15 +155,19 @@ class AccountMove(models.Model):
                 elif move.move_type in ('out_invoice', 'out_receipt', 'in_invoice', 'in_receipt'):
                     available_types.extend(('FACT', 'FCAM', 'FPEQ', 'FCAP'))
 
-                if not move.debit_origin_id and move.move_type in ('in_invoice', 'in_receipt'):
-                    available_types.extend(('NABN', 'FESP'))
+                if not move.debit_origin_id:
+                    if move.move_type in ('in_invoice', 'in_receipt'):
+                        available_types.append('FESP')
+                    elif move.move_type == 'in_refund':
+                        available_types.append('NABN')
 
-            final_available_types = [
-                doc_type
-                for doc_type in available_types
-                if doc_type in VALID_DOC_TYPES_BY_AFFILIATION.get(move.company_id.l10n_gt_edi_vat_affiliation, {})
-            ]
-            move.l10n_gt_edi_available_doc_types = ','.join(final_available_types)
+            if move.is_sale_document(include_receipts=True):
+                available_types = (
+                    doc_type
+                    for doc_type in available_types
+                    if doc_type in VALID_DOC_TYPES_BY_AFFILIATION.get(move.company_id.l10n_gt_edi_vat_affiliation, {})
+                )
+            move.l10n_gt_edi_available_doc_types = ','.join(available_types)
 
     @api.depends('l10n_gt_edi_available_doc_types')
     def _compute_l10n_gt_edi_doc_type(self):
@@ -269,6 +272,11 @@ class AccountMove(models.Model):
         self.ensure_one()
         return f"SAT_certificate_{self._l10n_gt_edi_get_name()}.xml"
 
+    def _l10n_gt_edi_is_vat_void(self):
+        self.ensure_one()
+        vat = self.commercial_partner_id.vat
+        return not vat or vat in ['/', 'na', 'NA']
+
     def _get_name_invoice_report(self):
         # EXTENDS account
         self.ensure_one()
@@ -309,11 +317,8 @@ class AccountMove(models.Model):
             'company_name': current_company.l10n_gt_edi_legal_name,
             'company_vat': sudo_root_company.vat,
             'phrases': self.l10n_gt_edi_phrase_ids.mapped('pdf_message'),
-            'have_exportacion': self.l10n_gt_edi_doc_type == 'FACT' and self.commercial_partner_id.country_code != 'GT',
-            'have_referencias': self.l10n_gt_edi_doc_type in ('NCRE', 'NDEB'),
-            'have_cambiaria': self.l10n_gt_edi_doc_type in ('FCAM', 'FCAP'),
-            'is_especial_fectura': self.l10n_gt_edi_doc_type == 'FESP',
         }
+        self._l10n_gt_edi_add_base_values(report_values)
         if report_values['have_exportacion']:
             self._l10n_gt_edi_add_export_values(report_values)
         if report_values['have_referencias']:
@@ -400,7 +405,7 @@ class AccountMove(models.Model):
             }
 
         # When IDReceptor="CF" is used (on CF or partners without VAT), the total amount of the invoice must be below 2500 GTQ
-        if not self.commercial_partner_id.vat and self.amount_total >= 2500:
+        if self._l10n_gt_edi_is_vat_void() and abs(self.amount_total_signed) >= 2500:
             if partner_is_cf:
                 additional_message = _("Please replace Consumidor Final with a real partner and VAT number.")
             else:
@@ -662,7 +667,7 @@ class AccountMove(models.Model):
             receptor_tipo_especial = "CUI"
         if not partner_is_guatemalan:
             receptor_tipo_especial = "EXT"
-        if partner_is_final_consumer or not receptor_id:
+        if partner_is_final_consumer or self._l10n_gt_edi_is_vat_void():
             receptor_id = "CF"
             receptor_tipo_especial = None
 
@@ -734,7 +739,7 @@ class AccountMove(models.Model):
         original_document = reference_move.l10n_gt_edi_document_ids.sorted()[0]  # guaranteed to be an `invoice_sent` document
         gt_values.update({
             'referencias_motivo_ajuste': self.ref,
-            'referencias_fecha_emision_documento_origen': original_document.datetime.astimezone(ZoneInfo("America/Guatemala")).strftime("%Y-%m-%d"),
+            'referencias_fecha_emision_documento_origen': reference_move.invoice_date.strftime("%Y-%m-%d"),
             'referencias_numero_autorizacion_documento_origen': original_document.uuid,
             'referencias_numero_documento_origen': original_document.serial_number,
             'referencias_serie_documento_origen': original_document.series,

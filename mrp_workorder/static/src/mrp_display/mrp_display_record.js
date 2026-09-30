@@ -44,6 +44,7 @@ export class MrpDisplayRecord extends Component {
         updateEmployees: Function,
         workcenters: Array,
         demoRecord: { type: Boolean, optional: true },
+        actionPending: { type: Boolean, optional: true },
     };
     static template = "mrp_workorder.MrpDisplayRecord";
 
@@ -456,7 +457,7 @@ export class MrpDisplayRecord extends Component {
     }
 
     onClickOpenMenu(ev) {
-        if (this.props.demoRecord){
+        if (this.props.demoRecord || this.props.actionPending) {
             return;
         }
         const params = {
@@ -470,6 +471,9 @@ export class MrpDisplayRecord extends Component {
             params,
             reload: this.env.reload.bind(this),
             removeFromCache: this.props.removeFromCache,
+            onNavigateToMO: () => {
+                this.env.setActionPending();
+            },
         });
     }
 

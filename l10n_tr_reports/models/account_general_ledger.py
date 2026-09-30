@@ -163,7 +163,38 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
 
         return document_vals
 
-    def _prepare_l10n_tr_reports_csv_row(self, line, counter):
+    def _l10n_tr_reports_get_line_number_offset(self, report, options):
+        """
+        Count the rows already exported since the beginning of the fiscal year.
+
+        The e-Ledger is filed monthly but numbered per fiscal period, so an export
+        starting after the first day of the period continues the previous numbering.
+
+        Counted from the report domain, which assumes the report renders one line per
+        journal item, as the export itself relies on to build its rows.
+
+        :param report: The account report the export is made from.
+        :param options: Report options.
+        :return: The number of rows preceding this export in the fiscal year.
+        """
+        date_from = fields.Date.from_string(options['date']['date_from'])
+        fiscalyear_from = self.env.company.compute_fiscalyear_dates(date_from)['date_from']
+        if fiscalyear_from >= date_from:
+            return 0
+
+        previous_options = {
+            **options,
+            'date': {
+                **options['date'],
+                'date_from': fields.Date.to_string(fiscalyear_from),
+                'date_to': fields.Date.to_string(fields.Date.subtract(date_from, days=1)),
+            },
+        }
+        return self.env['account.move.line'].search_count(
+            report._get_options_domain(previous_options, date_scope='strict_range'),
+        )
+
+    def _prepare_l10n_tr_reports_csv_row(self, line, counter, line_number=None):
         """Constructs a single row of data for the e-Ledger CSV export."""
         move = line.move_id
         company = line.company_id
@@ -175,7 +206,7 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
         document_vals = self._get_l10n_tr_reports_document_number_ref(line)
 
         return [
-            None,  # LineNumber - handled by external system or post-process
+            line_number,  # LineNumber - sequential over the entire fiscal period
             line.create_uid.name,
             formated_date,
             counter,  # EntryNumberCounter - Should be same across the journal items of particular move
@@ -214,18 +245,18 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
         :return: A dict containing the ZIP values.
         """
 
-        def generate_csv_rows(move_lines):
+        def generate_csv_rows(move_lines, offset=None):
             """Generate rows for the CSV file, grouped by move."""
             counter = 0
             last_move_id = None
 
             yield self._l10n_tr_reports_csv_columns()
 
-            for line in move_lines:
+            for line_number, line in enumerate(move_lines, start=(offset or 0) + 1):
                 if line.move_id.id != last_move_id:
                     counter += 1  # Increment when move changes
                     last_move_id = line.move_id.id
-                yield self._prepare_l10n_tr_reports_csv_row(line, counter)
+                yield self._prepare_l10n_tr_reports_csv_row(line, counter, line_number)
 
         # Extract all account.move.line IDs from the report
         report = self.env['account.report'].browse(options['report_id'])
@@ -234,13 +265,15 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
             model, record_id = report._get_model_info_from_id(line_data['id'])
             if model == 'account.move.line':
                 move_line_ids.append(record_id)
-        move_lines = self.env['account.move.line'].search([('id', 'in', move_line_ids)])
+        # The default order of the lines is the most recent first, the opposite of a ledger.
+        move_lines = self.env['account.move.line'].search([('id', 'in', move_line_ids)], order='date, move_name, id')
+        offset = self._l10n_tr_reports_get_line_number_offset(report, options)
 
         zip_buffer = io.BytesIO()
         file_name = self._l10n_tr_reports_format_file_name(options['date'])
         with zipfile.ZipFile(zip_buffer, mode='w', compression=zipfile.ZIP_DEFLATED) as zip_file:
             with io.TextIOWrapper(zip_file.open(f'{file_name}.csv', 'w'), 'utf-8') as w:
-                csv.writer(w, delimiter=';').writerows(generate_csv_rows(move_lines))
+                csv.writer(w, delimiter=';').writerows(generate_csv_rows(move_lines, offset))
 
         return {
             'file_name': f'{file_name}.zip',

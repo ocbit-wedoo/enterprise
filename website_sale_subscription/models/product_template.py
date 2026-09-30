@@ -62,7 +62,7 @@ class ProductTemplate(models.Model):
         res['list_price'] = res['price']  # No pricelist discount for subscription prices
         currency = website.currency_id
         pricelist = website.pricelist_id
-        requested_plan = request and request.params.get('plan_id')
+        requested_plan = request.params.get('plan_id') if request and request.env else None
         requested_plan = requested_plan and requested_plan.isdigit() and int(requested_plan)
         possible_pricing_count = 0
 

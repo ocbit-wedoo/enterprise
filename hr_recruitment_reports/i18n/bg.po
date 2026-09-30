@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_recruitment_reports
+# * hr_recruitment_reports
 #
 # Translators:
 # Petko Karamotchev, 2024
@@ -13,20 +13,22 @@
 # KeyVillage, 2024
 # kalatchev, 2024
 # Emil Krastev, 2024
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Emil Krastev, 2024\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-07-29 20:29+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"hr_recruitment_reports/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
@@ -52,13 +54,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Applicant Name"
-msgstr ""
+msgstr "Име на кандидата"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__create_date
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Application Date"
-msgstr ""
+msgstr "Дата на кандидатстване"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__archived
@@ -77,7 +79,7 @@ msgstr "Фирма"
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__create_uid
 msgid "Creator"
-msgstr ""
+msgstr "Създател"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__days_in_stage
@@ -113,18 +115,18 @@ msgstr "Нает"
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Hired Date"
-msgstr ""
+msgstr "Дата на наемане"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__hiring_ratio
 msgid "Hired Ratio"
-msgstr ""
+msgstr "Коефициент на наемане"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Hiring ratio"
-msgstr ""
+msgstr "Коефициент на наемане"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__id
@@ -155,7 +157,7 @@ msgstr "Работна позиция"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Last 365 Days Applicant"
-msgstr ""
+msgstr "Кандидати за последните 365 дни"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__medium_id
@@ -181,12 +183,12 @@ msgstr "Няма данни за показване"
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__process_duration
 msgid "Process Duration"
-msgstr ""
+msgstr "Продължителност на процеса"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__user_id
 msgid "Recruiter"
-msgstr ""
+msgstr "Специалист по подбор"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_job_action
@@ -200,17 +202,17 @@ msgstr "Анализ на наемането на персонал"
 #. module: hr_recruitment_reports
 #: model:ir.model,name:hr_recruitment_reports.model_hr_recruitment_report
 msgid "Recruitment Analysis Report"
-msgstr ""
+msgstr "Справка за анализ на подбора"
 
 #. module: hr_recruitment_reports
 #: model:ir.model,name:hr_recruitment_reports.model_hr_recruitment_stage_report
 msgid "Recruitment Stage Analysis"
-msgstr ""
+msgstr "Анализ на етапите на подбор"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__refuse_reason_id
 msgid "Refuse Reason"
-msgstr ""
+msgstr "Причина за отказ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__refused
@@ -235,7 +237,7 @@ msgstr "Източник"
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_team_view_graph
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_source_pivot
 msgid "Source Analysis"
-msgstr ""
+msgstr "Анализ на източниците"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__stage_id
@@ -261,7 +263,7 @@ msgstr "Област"
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_team_action
 #: model:ir.ui.menu,name:hr_recruitment_reports.hr_applicant_report_team_menu
 msgid "Team Performance"
-msgstr ""
+msgstr "Резултати на екипа"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_stage_report_action
@@ -284,6 +286,8 @@ msgid ""
 "This report allows you to compare various measures grouped by your sources "
 "of applicants (e.g. LinkedIn, Monster, etc.)."
 msgstr ""
+"Тази справка Ви позволява да сравните различни показатели, групирани по "
+"Вашите източници на кандидати (напр. LinkedIn, Monster и др.)."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_action
@@ -291,16 +295,18 @@ msgid ""
 "This report allows you to follow the evolution of the number of applicants "
 "and hired employees over time."
 msgstr ""
+"Тази справка Ви позволява да проследите развитието на броя кандидати и наети "
+"служители във времето."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_job_action
 msgid "This report performs analysis on your recruitment."
-msgstr ""
+msgstr "Тази справка извършва анализ на Вашия подбор."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
 msgid "Time By Stages"
-msgstr ""
+msgstr "Време по етапи"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_stage_report_job_action
@@ -308,7 +314,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_pivot
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Time In Stage Analysis"
-msgstr ""
+msgstr "Анализ на времето в етап"
 
 #. module: hr_recruitment_reports
 #. odoo-python
@@ -326,7 +332,7 @@ msgstr "Общо срещи"
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total applicants"
-msgstr ""
+msgstr "Общо кандидати"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_stage_report_action

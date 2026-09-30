@@ -181,10 +181,10 @@ def _find_contribution(wage, contributions):
 wage = categories['GROSS']
 if employee.l10n_my_socso_exempted:
     contributions = payslip._rule_parameter('l10n_my_socso_act_4_second_category_employer')
-    result = -_find_contribution(wage, contributions)
+    result = _find_contribution(wage, contributions)
 else:
     contributions = payslip._rule_parameter('l10n_my_socso_act_4_first_category_employer')
-    result = -_find_contribution(wage, contributions)
+    result = _find_contribution(wage, contributions)
         </field>
         <field name="appears_on_payslip" eval="False"/>
         <field name="struct_id" ref="l10n_my_hr_payroll.hr_payroll_structure_my_employee_salary"/>
@@ -192,7 +192,7 @@ else:
 
     <record id="l10n_my_rule_socso_employee" model="hr.salary.rule">
         <field name="name">SOCSO Employee Share</field>
-        <field name="category_id" ref="hr_payroll_socso_employee"/>
+        <field name="category_id" ref="hr_payroll_socso_employee_info"/>
         <field name="code">SOCSO_EMP</field>
         <field name="sequence">150</field>
         <field name="amount_select">code</field>
@@ -218,6 +218,7 @@ result = categories['SOCSO_EMPLR']
     <!-- EIS -->
     <record id="l10n_my_rule_eis_employee" model="hr.salary.rule">
         <field name="name">EIS</field>
+        <field name="active" eval="False"/>
         <field name="category_id" ref="hr_payroll.DED"/>
         <field name="code">EIS_EMP</field>
         <field name="sequence">160</field>
@@ -232,6 +233,7 @@ result_rate = -payslip._rule_parameter("l10n_my_eis_rate_employee")
     <!-- EIS - Employer -->
     <record id="l10n_my_rule_eis_employer" model="hr.salary.rule">
         <field name="name">EIS - Employer</field>
+        <field name="active" eval="False"/>
         <field name="category_id" ref="hr_payroll.COMP"/>
         <field name="code">EIS_EMPLR</field>
         <field name="sequence">161</field>

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
+"PO-Revision-Date: 2026-08-12 16:31+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "project_enterprise/bg/>\n"
@@ -25,13 +25,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: project_enterprise
 #. odoo-python
 #: code:addons/project_enterprise/models/project_task.py:0
 msgid "%(partner)s has %(amount)s tasks at the same time."
-msgstr ""
+msgstr "%(partner)s има %(amount)s задачи едновременно."
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form
@@ -39,6 +39,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" title=\"Dependency "
 "warning\"/>"
 msgstr ""
+"<i class=\"fa fa-exclamation-circle me-2\" role=\"img\" "
+"title=\"Предупреждение за зависимост\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_sharing_project_task_view_kanban_inherited
@@ -52,13 +54,15 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_project_view_gantt
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
 msgid "<i class=\"fa fa-long-arrow-right\" title=\"Arrow\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-long-arrow-right\" title=\"Стрелка\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form
 msgid ""
 "<i class=\"fa fa-random me-2\" role=\"img\" title=\"Planning overlap\"/>"
 msgstr ""
+"<i class=\"fa fa-random me-2\" role=\"img\" title=\"Припокриване в "
+"планирането\"/>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
@@ -96,7 +100,7 @@ msgstr ""
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.portal_my_task
 msgid "<strong>Planned Date:</strong>"
-msgstr ""
+msgstr "<strong>Планирана дата:</strong>"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_project_view_gantt
@@ -111,25 +115,25 @@ msgstr ""
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__allocated_hours
 msgid "Allocated Time"
-msgstr ""
+msgstr "Заделено Време"
 
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__user_ids
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_map_view
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_map_view_no_title
 msgid "Assignees"
-msgstr ""
+msgstr "Изпълнители"
 
 #. module: project_enterprise
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/view_dialogs/select_auto_plan_create_dialog.xml:0
 msgid "Auto Plan"
-msgstr ""
+msgstr "Автоматично планиране"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form
 msgid "Check it out <i class=\"oi oi-chevron-right ms-2\"/>"
-msgstr ""
+msgstr "Разгледайте <i class=\"oi oi-chevron-right ms-2\"/>"
 
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__partner_id
@@ -152,7 +156,7 @@ msgstr "Отхвърлете"
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_map_view
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_map_view_no_title
 msgid "Milestone"
-msgstr ""
+msgstr "Етап"
 
 #. module: project_enterprise
 #. odoo-python
@@ -161,6 +165,8 @@ msgid ""
 "One parameter is missing to use this method. You should give a start and end "
 "dates."
 msgstr ""
+"Липсва един параметър за използване на този метод. Трябва да зададете "
+"начална и крайна дата."
 
 #. module: project_enterprise
 #. odoo-python
@@ -189,7 +195,7 @@ msgstr "Планирана дата"
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__planned_date_start
 msgid "Planned Date Start"
-msgstr ""
+msgstr "Планирана начална дата"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_project_view_gantt
@@ -214,13 +220,13 @@ msgstr "Проект"
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/milestones_popover.xml:0
 msgid "Project due"
-msgstr ""
+msgstr "Краен срок на проекта"
 
 #. module: project_enterprise
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/milestones_popover.xml:0
 msgid "Project start"
-msgstr ""
+msgstr "Начало на проекта"
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form_in_gantt
@@ -231,7 +237,7 @@ msgstr "Запазете"
 #. odoo-python
 #: code:addons/project_enterprise/models/project_task.py:0
 msgid "Some tasks were planned after their initial deadline."
-msgstr ""
+msgstr "Някои задачи бяха планирани след първоначалния си краен срок."
 
 #. module: project_enterprise
 #. odoo-python
@@ -241,6 +247,9 @@ msgid ""
 "limited availability of the assignees. The planned dates for these tasks may "
 "not align with their allocated hours."
 msgstr ""
+"Някои задачи бяха планирани едновременно, което доведе до конфликт поради "
+"ограничената наличност на изпълнителите. Планираните дати за тези задачи "
+"може да не съответстват на разпределените им часове."
 
 #. module: project_enterprise
 #. odoo-python
@@ -249,6 +258,8 @@ msgid ""
 "Some tasks weren't planned because the closest available starting date was "
 "too far ahead in the future"
 msgstr ""
+"Някои задачи не бяха планирани, защото най-близката налична начална дата "
+"беше твърде далеч в бъдещето"
 
 #. module: project_enterprise
 #: model:ir.model.fields,field_description:project_enterprise.field_project_task__planned_date_begin
@@ -264,7 +275,7 @@ msgstr "Задача"
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_project_task_recurrence
 msgid "Task Recurrence"
-msgstr ""
+msgstr "Повторяемост на задачата"
 
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_report_project_task_user
@@ -280,19 +291,19 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/task_gantt_renderer.js:0
 msgid "Tasks have been successfully scheduled for the upcoming periods."
-msgstr ""
+msgstr "Задачите бяха успешно планирани за предстоящите периоди."
 
 #. module: project_enterprise
 #. odoo-python
 #: code:addons/project_enterprise/models/project_task.py:0
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_search_conflict_task_project_enterprise
 msgid "Tasks in Conflict"
-msgstr ""
+msgstr "Задачи в конфликт"
 
 #. module: project_enterprise
 #: model:ir.model.constraint,message:project_enterprise.constraint_project_task_planned_dates_check
 msgid "The planned start date must be before the planned end date."
-msgstr ""
+msgstr "Планираната начална дата трябва да е преди планираната крайна дата."
 
 #. module: project_enterprise
 #. odoo-python
@@ -301,6 +312,8 @@ msgid ""
 "The tasks could not be rescheduled due to the assignees' lack of "
 "availability at this time."
 msgstr ""
+"Задачите не можаха да бъдат пренасрочени поради липса на наличност на "
+"изпълнителите по това време."
 
 #. module: project_enterprise
 #. odoo-python
@@ -315,6 +328,8 @@ msgid ""
 "This task cannot be planned before the following tasks on which it depends: %"
 "(task_list)s"
 msgstr ""
+"Тази задача не може да бъде планирана преди следните задачи, от които "
+"зависи: %(task_list)s"
 
 #. module: project_enterprise
 #. odoo-python
@@ -323,6 +338,8 @@ msgid ""
 "This user isn't expected to have any tasks assigned during this period "
 "because they don't have any running contract."
 msgstr ""
+"Не се очаква този потребител да има задачи, разпределени през този период, "
+"защото няма действащ договор."
 
 #. module: project_enterprise
 #: model_terms:ir.ui.view,arch_db:project_enterprise.res_config_settings_view_form
@@ -339,7 +356,7 @@ msgstr "Неназначени"
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:project_enterprise.project_task_view_gantt
 msgid "Unschedule"
-msgstr ""
+msgstr "Отпланиране"
 
 #. module: project_enterprise
 #: model:ir.model,name:project_enterprise.model_res_users
@@ -350,7 +367,7 @@ msgstr "Потребител"
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/project_task_map/project_task_map_renderer.xml:0
 msgid "View customer locations for your tasks"
-msgstr ""
+msgstr "Преглед на местоположенията на клиентите за вашите задачи"
 
 #. module: project_enterprise
 #. odoo-javascript
@@ -362,10 +379,10 @@ msgstr "Внимание"
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/task_gantt_model.js:0
 msgid "👤 Unassigned"
-msgstr ""
+msgstr "👤 Невъзложена"
 
 #. module: project_enterprise
 #. odoo-javascript
 #: code:addons/project_enterprise/static/src/views/task_gantt/task_gantt_model.js:0
 msgid "🔒 Private"
-msgstr ""
+msgstr "🔒 Поверително"

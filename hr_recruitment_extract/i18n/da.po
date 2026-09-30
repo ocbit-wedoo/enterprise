@@ -9,12 +9,13 @@
 # Martin Trigaux, 2024
 # Sanne Kristensen <sanne@vkdata.dk>, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-03-30 06:13+0000\n"
+"PO-Revision-Date: 2026-06-24 17:16+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "hr_recruitment_extract/da/>\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__message_needaction
@@ -43,7 +44,7 @@ msgstr "Antal vedhæftninger"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__extract_can_show_send_button
 msgid "Can show the ocr send button"
-msgstr "Kan vise ocr send knappen"
+msgstr "Kan vise knappen til afsendelse via OCR"
 
 #. module: hr_recruitment_extract
 #: model:ir.model,name:hr_recruitment_extract.model_hr_candidate
@@ -53,7 +54,7 @@ msgstr "Kandidat"
 #. module: hr_recruitment_extract
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_extract.res_config_settings_view_form
 msgid "Choose a Job Board"
-msgstr ""
+msgstr "Vælg en jobportal"
 
 #. module: hr_recruitment_extract
 #: model:ir.model,name:hr_recruitment_extract.model_res_company
@@ -63,12 +64,12 @@ msgstr "Virksomheder"
 #. module: hr_recruitment_extract
 #: model:ir.model,name:hr_recruitment_extract.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields.selection,name:hr_recruitment_extract.selection__res_company__recruitment_extract_show_ocr_option_selection__auto_send
 msgid "Digitize automatically"
-msgstr "Digitaliser automatisk"
+msgstr "Digitalisér automatisk"
 
 #. module: hr_recruitment_extract
 #: model:ir.actions.server,name:hr_recruitment_extract.ir_actions_server_digitize_cv
@@ -79,7 +80,7 @@ msgstr "Digitalisere dokument"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields.selection,name:hr_recruitment_extract.selection__res_company__recruitment_extract_show_ocr_option_selection__manual_send
 msgid "Digitize on demand only"
-msgstr "Digitaliser kun efter behov"
+msgstr "Digitalisér kun efter behov"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields.selection,name:hr_recruitment_extract.selection__res_company__recruitment_extract_show_ocr_option_selection__no_send
@@ -89,22 +90,22 @@ msgstr "Må ikke digitaliseres"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__extract_error_message
 msgid "Error message"
-msgstr "Fejl besked"
+msgstr "Fejlbesked"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__extract_state_processed
 msgid "Extract State Processed"
-msgstr "Udtræks status behandlet"
+msgstr "Udtræksstatus behandlet"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__extract_state
 msgid "Extract state"
-msgstr "Udtræk tilstand"
+msgstr "Udtræksstatus"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__extract_status
 msgid "Extract status"
-msgstr "Udtræks status"
+msgstr "Udtræksstatus"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__message_follower_ids
@@ -124,18 +125,19 @@ msgstr "Har besked"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__extract_document_uuid
 msgid "ID of the request to IAP-OCR"
-msgstr "ID på anmodning til IAP-OCR'en"
+msgstr "ID for anmodningen til IAP-OCR"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,help:hr_recruitment_extract.field_hr_candidate__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Hvis afkrydset, kræver nye beskeder din opmærksomhed "
+msgstr "Hvis dette felt er markeret, kræver nye beskeder din opmærksomhed."
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,help:hr_recruitment_extract.field_hr_candidate__message_has_error
 #: model:ir.model.fields,help:hr_recruitment_extract.field_hr_candidate__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Hvis afkrydset har nogle beskeder en leveringsfejl"
+msgstr ""
+"Hvis dette felt er markeret, indeholder nogle beskeder en leveringsfejl."
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__message_is_follower
@@ -145,7 +147,7 @@ msgstr "Er følger"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__is_in_extractable_state
 msgid "Is In Extractable State"
-msgstr "Er i udtræks status"
+msgstr "Er i udtræksstatus"
 
 #. module: hr_recruitment_extract
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_extract.res_config_settings_view_form
@@ -160,7 +162,7 @@ msgstr "Jobportaler"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__message_main_attachment_id
 msgid "Main Attachment"
-msgstr "Vedhæftning"
+msgstr "Primære vedhæftning"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__message_has_error
@@ -185,7 +187,7 @@ msgstr "Antal fejl"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,help:hr_recruitment_extract.field_hr_candidate__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Antal meddelelser der kræver handling"
+msgstr "Antal meddelelser, der kræver handling"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,help:hr_recruitment_extract.field_hr_candidate__message_has_error_counter
@@ -195,7 +197,7 @@ msgstr "Antal beskeder med leveringsfejl"
 #. module: hr_recruitment_extract
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_extract.res_config_settings_view_form
 msgid "Post jobs on external job boards"
-msgstr ""
+msgstr "Offentliggør stillinger på eksterne jobportaler"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__rating_ids
@@ -210,7 +212,7 @@ msgstr "OCR i ansættelse: Opdatér alle statusser"
 #. module: hr_recruitment_extract
 #: model:ir.actions.server,name:hr_recruitment_extract.ir_cron_ocr_validate_ir_actions_server
 msgid "Recruitment OCR: Validate CV"
-msgstr "Reskuttering OCR: Validér CV"
+msgstr "OCR i ansættelse: Validér CV"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_res_config_settings__recruitment_extract_show_ocr_option_selection
@@ -220,7 +222,7 @@ msgstr "Muligheder for ansættelse"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_hr_candidate__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS leveringsfejl"
+msgstr "Fejl ved SMS-levering"
 
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,field_description:hr_recruitment_extract.field_res_company__recruitment_extract_show_ocr_option_selection
@@ -235,7 +237,7 @@ msgstr "Beskeder fra hjemmesiden"
 #. module: hr_recruitment_extract
 #: model:ir.model.fields,help:hr_recruitment_extract.field_hr_candidate__website_message_ids
 msgid "Website communication history"
-msgstr "Hjemmesidens kommunikations historik"
+msgstr "Hjemmesidens kommunikationshistorik"
 
 #. module: hr_recruitment_extract
 #. odoo-python

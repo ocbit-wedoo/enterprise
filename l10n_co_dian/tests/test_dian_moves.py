@@ -513,8 +513,8 @@ class TestDianMoves(TestCoDianCommon):
             'subfolder': 'tests/attachments',
             'invoice_vals': {
                 'currency_id': self.currency.id,
-                'amount_total': 224.00,
-                'amount_tax': 24.00,
+                'amount_total': 219.99,
+                'amount_tax': 19.99,
                 'l10n_co_edi_cufe_cude_ref': '8007424c5ee187a2aa3bb99fdbfaee9354c0b2a355ce9654fcd97eae289ad827e19460b71e4390b3e9b1cc6c293fb247',
                 'invoice_lines': [
                     {'price_subtotal': 100.00, 'price_unit': 100.00},
@@ -523,6 +523,31 @@ class TestDianMoves(TestCoDianCommon):
             },
         }
         self._assert_imported_invoice_from_file(filename='import_attached_document.xml', **kwargs)
+
+    def test_dian_import_vendor_xml_base_quantity(self):
+        """ Test to ensure that PriceAmount is imported as the exact price unit for Colombia."""
+        line_xml = b"""
+            <cac:InvoiceLine
+                    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+                <cbc:ID>1</cbc:ID>
+                <cbc:InvoicedQuantity unitCode="94">3.0</cbc:InvoicedQuantity>
+                <cbc:LineExtensionAmount currencyID="COP">30.00</cbc:LineExtensionAmount>
+                <cac:Item>
+                    <cbc:Description>product_a</cbc:Description>
+                </cac:Item>
+                <cac:Price>
+                    <cbc:PriceAmount currencyID="COP">10.0</cbc:PriceAmount>
+                    <cbc:BaseQuantity unitCode="94">3.0</cbc:BaseQuantity>
+                </cac:Price>
+            </cac:InvoiceLine>
+        """
+        line_tree = etree.fromstring(line_xml)
+
+        # DIAN parser: BaseQuantity is ignored as a divisor -> exact unit price, no discount.
+        dian_vals = self.env['account.edi.xml.ubl_dian']._retrieve_line_vals(line_tree, 'in_invoice')
+        self.assertEqual(dian_vals['quantity'], 3.0)
+        self.assertEqual(dian_vals['price_unit'], 10.0)
 
     def test_dian_invoicing_access_rights(self):
         self.user.groups_id = [Command.unlink(self.env.ref('base.group_system').id)]
@@ -603,3 +628,16 @@ class TestDianMoves(TestCoDianCommon):
         xml = self._generate_xml(credit_note)
         self.env['l10n_co_dian.document']._create_document(xml, credit_note, state='invoice_accepted')
         self.assertEqual(credit_note._get_name_invoice_report(), 'l10n_co_dian.report_invoice_document')
+
+    def test_only_terms_and_conditions_are_exported_in_note_tag(self):
+        invoice = self._create_move()
+        invoice.narration = ("<p>Payment due in 15 days</p>")
+        xml = self._generate_xml(invoice)
+        root = etree.fromstring(xml)
+        notes = root.findall('.//{*}Note')
+        self.assertEqual(len(notes), 1, "The XML should contain only one Note tag.")
+        self.assertEqual(
+            notes[0].text,
+            "Payment due in 15 days",
+            "The Note tag should contain only the Terms and Conditions.",
+        )

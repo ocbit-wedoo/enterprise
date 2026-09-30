@@ -1,26 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* documents_spreadsheet
+# * documents_spreadsheet
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 # Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2025
 # Naser mars, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Naser mars, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-13 17:11+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"documents_spreadsheet/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: documents_spreadsheet
 #. odoo-python
@@ -44,17 +46,17 @@ msgstr "%s (کپی)"
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/bundle/actions/spreadsheet_action.js:0
 msgid "%s - Template"
-msgstr ""
+msgstr "%s - قالب"
 
 #. module: documents_spreadsheet
 #: model:ir.model.constraint,message:documents_spreadsheet.constraint_spreadsheet_contributor_spreadsheet_user_unique
 msgid "A combination of the spreadsheet and the user already exist"
-msgstr ""
+msgstr "ترکیبی از صفحه گسترده و کاربر از قبل وجود دارد"
 
 #. module: documents_spreadsheet
 #: model:ir.model.constraint,message:documents_spreadsheet.constraint_documents_document_frozen_spreadsheet_access_via_link_access_internal
 msgid "A frozen spreadsheet can not be editable"
-msgstr ""
+msgstr "صفحه گستری فریز شده قابل ویرایش نیست"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -73,6 +75,7 @@ msgstr ""
 msgid ""
 "Any user will be able to create a new spreadsheet based on this template."
 msgstr ""
+"هر کاربری قادر خواهد بود یک صفحه گسترده جدید بر اساس این قالب ایجاد کند."
 
 #. module: documents_spreadsheet
 #: model_terms:ir.ui.view,arch_db:documents_spreadsheet.save_spreadsheet_template_view_form
@@ -115,7 +118,7 @@ msgstr "ایجاد"
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/spreadsheet_template/spreadsheet_template_dialog.js:0
 msgid "Create a Spreadsheet or select a Template"
-msgstr ""
+msgstr "یک صفحه گسترده ایجاد یا قالبی را انتخاب کنید"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__create_uid
@@ -136,7 +139,7 @@ msgstr "ایجادشده در"
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__current_revision_uuid
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_template__current_revision_uuid
 msgid "Current Revision Uuid"
-msgstr ""
+msgstr "UUID نسخه فعلی"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -157,7 +160,7 @@ msgstr "نام نمایش داده شده"
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__display_thumbnail
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_template__display_thumbnail
 msgid "Display Thumbnail"
-msgstr ""
+msgstr "نمایش تصویر بندانگشتی"
 
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_documents_document
@@ -169,7 +172,7 @@ msgstr "سند"
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_documents_access
 msgid "Document / Partner"
-msgstr ""
+msgstr "سند / طرف همکار"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_res_company__document_spreadsheet_folder_id
@@ -217,35 +220,35 @@ msgstr "نام فایل"
 #: code:addons/documents_spreadsheet/static/src/bundle/actions/spreadsheet_freeze_and_share/spreadsheet_freeze_and_share.xml:0
 #: code:addons/documents_spreadsheet/static/src/documents_control_panel/documents_control_panel.xml:0
 msgid "Freeze and share"
-msgstr ""
+msgstr "فریز و اشتراک‌گذاری"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields.selection,name:documents_spreadsheet.selection__documents_document__handler__frozen_folder
 msgid "Frozen Folder"
-msgstr ""
+msgstr "پوشه فریز شده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields.selection,name:documents_spreadsheet.selection__documents_document__handler__frozen_spreadsheet
 msgid "Frozen Spreadsheet"
-msgstr ""
+msgstr "صفحه گسترده فریز شده"
 
 #. module: documents_spreadsheet
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_access.py:0
 msgid "Frozen Spreadsheets can not be editable."
-msgstr ""
+msgstr "صفحه‌های گسترده فریز شده قابل ویرایش نیستند."
 
 #. module: documents_spreadsheet
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "Frozen at %(date)s: %(name)s"
-msgstr ""
+msgstr "فریز شده در %(date)s: %(name)s"
 
 #. module: documents_spreadsheet
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "Frozen spreadsheets"
-msgstr ""
+msgstr "صفحه‌های گسترده فریز شده"
 
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_ir_http
@@ -255,7 +258,7 @@ msgstr "مسیریابی HTTP"
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_documents_document__handler
 msgid "Handler"
-msgstr ""
+msgstr "کنترل کننده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__id
@@ -268,7 +271,7 @@ msgstr "شناسه"
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/documents_control_panel/documents_control_panel.xml:0
 msgid "Insert in spreadsheet"
-msgstr ""
+msgstr "درج در صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__write_uid
@@ -287,7 +290,7 @@ msgstr "آخرین بروز رسانی در"
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_contributor__last_update_date
 msgid "Last update date"
-msgstr ""
+msgstr "تاریخ آخرین به‌روزرسانی"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -298,7 +301,7 @@ msgstr "فرصت های از دست رفته بر اساس مرحله"
 #. module: documents_spreadsheet
 #: model_terms:ir.ui.view,arch_db:documents_spreadsheet.spreadsheet_template_view_tree
 msgid "Make a copy"
-msgstr ""
+msgstr "تهیه کپی"
 
 #. module: documents_spreadsheet
 #: model_terms:ir.ui.view,arch_db:documents_spreadsheet.spreadsheet_template_view_search
@@ -313,7 +316,7 @@ msgstr "نام"
 #. module: documents_spreadsheet
 #: model_terms:ir.ui.view,arch_db:documents_spreadsheet.spreadsheet_template_view_tree
 msgid "New spreadsheet"
-msgstr ""
+msgstr "صفحه گسترده جدید"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -341,7 +344,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/documents_view/documents_spreadsheet_controller_mixin.js:0
 msgid "Open with Odoo Spreadsheet"
-msgstr ""
+msgstr "باز کردن با صفحه گسترده اودوو"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -353,7 +356,7 @@ msgstr "فرصت ها بر اساس مرحله"
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "Portal users cannot be the owner of a spreadsheet."
-msgstr ""
+msgstr "کاربران پورتال نمی‌توانند مالک یک صفحه گسترده باشند."
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -365,24 +368,24 @@ msgstr "بازگردانی"
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/documents_view/documents_spreadsheet_controller_mixin.js:0
 msgid "Restore file?"
-msgstr ""
+msgstr "بازگردانی فایل؟"
 
 #. module: documents_spreadsheet
 #: model:ir.actions.act_window,name:documents_spreadsheet.save_spreadsheet_template_action
 msgid "Save as template"
-msgstr ""
+msgstr "ذخیره به عنوان قالب"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/documents_control_panel/documents_control_panel.js:0
 msgid "Select one and only one spreadsheet"
-msgstr ""
+msgstr "یک و فقط یک صفحه گسترده انتخاب کنید"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/spreadsheet_clone_xlsx_dialog/spreadsheet_clone_xlsx_dialog.xml:0
 msgid "Send source file to trash"
-msgstr ""
+msgstr "ارسال فایل اصلی به سطل زباله"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_template__sequence
@@ -402,12 +405,12 @@ msgstr "اشتراک‌گذاری"
 #: code:addons/documents_spreadsheet/static/src/spreadsheet_action_loader.js:0
 #: model:ir.model.fields.selection,name:documents_spreadsheet.selection__documents_document__handler__spreadsheet
 msgid "Spreadsheet"
-msgstr ""
+msgstr "صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_spreadsheet_contributor
 msgid "Spreadsheet Contributor"
-msgstr ""
+msgstr "مشارکت کننده صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_documents_document__spreadsheet_data
@@ -426,31 +429,31 @@ msgstr "نام فایل صفحه‌گسترده"
 #. module: documents_spreadsheet
 #: model_terms:ir.ui.view,arch_db:documents_spreadsheet.spreadsheet_document_view_kanban
 msgid "Spreadsheet Preview"
-msgstr ""
+msgstr "پیش‌نمایش صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_documents_document__spreadsheet_revision_ids
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__spreadsheet_revision_ids
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_template__spreadsheet_revision_ids
 msgid "Spreadsheet Revision"
-msgstr ""
+msgstr "نسخه صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_documents_document__spreadsheet_snapshot
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_save_spreadsheet_template__spreadsheet_snapshot
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_template__spreadsheet_snapshot
 msgid "Spreadsheet Snapshot"
-msgstr ""
+msgstr "اسنپ شات صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_spreadsheet_template
 msgid "Spreadsheet Template"
-msgstr ""
+msgstr "قالب صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_save_spreadsheet_template
 msgid "Spreadsheet Template Save Wizard"
-msgstr ""
+msgstr "ویزارد ذخیره قالب صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.actions.act_window,name:documents_spreadsheet.spreadsheet_template_action
@@ -461,7 +464,7 @@ msgstr "قالب‌های صفحه گسترده"
 #. module: documents_spreadsheet
 #: model:ir.model,name:documents_spreadsheet.model_spreadsheet_cell_thread
 msgid "Spreadsheet discussion thread"
-msgstr ""
+msgstr "رشته بحث و گفتگوی صفحه گسترده"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_documents_document__spreadsheet_binary_data
@@ -477,6 +480,8 @@ msgid ""
 "Spreadsheet files cannot be handled from the Trash. Would you like to "
 "restore this document?"
 msgstr ""
+"نمی‌توان با فایل‌های صفحات گسترده‌ای که در سطل زباله هستند کار کرد. می‌خواهید "
+"این سند را بازگردانی کنید؟"
 
 #. module: documents_spreadsheet
 #. odoo-python
@@ -491,6 +496,7 @@ msgstr "صفحات گسترده"
 #: code:addons/documents_spreadsheet/models/documents_access.py:0
 msgid "Spreadsheets can not be shared in edit mode to non-internal users."
 msgstr ""
+"صفحات گسترده را نمی‌توان در حالت ویرایش با کاربران غیرداخلی اشتراک‌گذاری کرد."
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_cell_thread__template_id
@@ -522,7 +528,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "The file is not a xlsx file"
-msgstr ""
+msgstr "این فایل xlsx نیست"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -536,7 +542,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "The spreadsheet you are trying to access does not exist."
-msgstr ""
+msgstr "صفحه گسترده‌ای که می‌خواهید به آن دسترسی پیدا کنید وجود ندارد."
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -550,18 +556,20 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "The xlsx file is corrupted"
-msgstr ""
+msgstr "فایل xlsx خراب است"
 
 #. module: documents_spreadsheet
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "The xlsx file is too big"
-msgstr ""
+msgstr "فایل xlsx خیلی بزرگ است"
 
 #. module: documents_spreadsheet
 #: model_terms:ir.ui.view,arch_db:documents_spreadsheet.documents_error_live_data
 msgid "This spreadsheet contains live data, only internal users can view it."
 msgstr ""
+"این صفحه گسترده حاوی داده زنده است و تنها کاربران داخلی می‌توانند آن را "
+"ببینند."
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_documents_document__thumbnail
@@ -574,12 +582,14 @@ msgstr "بند انگشتی"
 #: model:ir.model.constraint,message:documents_spreadsheet.constraint_documents_document_spreadsheet_access_via_link
 msgid "To share a spreadsheet in edit mode, add the user in the accesses"
 msgstr ""
+"برای اشتراک‌گذاری صفحه گسترده در حالت ویرایش، کاربر را به لیست دارندگان "
+"دسترسی اضافه کنید"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/bundle/actions/spreadsheet_action.xml:0
 msgid "Toggle favorite"
-msgstr ""
+msgstr "تغییر وضعیت علاقه‌مندی"
 
 #. module: documents_spreadsheet
 #. odoo-python
@@ -591,7 +601,7 @@ msgstr "صفحه‌گسترده بدون عنوان"
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/bundle/actions/spreadsheet_template/spreadsheet_template_action.js:0
 msgid "Untitled spreadsheet template"
-msgstr ""
+msgstr "قالب صفحه گسترده بدون عنوان"
 
 #. module: documents_spreadsheet
 #: model:ir.model.fields,field_description:documents_spreadsheet.field_spreadsheet_contributor__user_id
@@ -609,19 +619,19 @@ msgstr "فضای کار"
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "You are not allowed to freeze spreadsheets in Company"
-msgstr ""
+msgstr "شما اجازه فریز صفحات گسترده در شرکت را ندارید"
 
 #. module: documents_spreadsheet
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "You can not edit a frozen spreadsheet"
-msgstr ""
+msgstr "نمی‌توانید صفحه گسترده فریز شده را ویرایش کنید"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
 #: code:addons/documents_spreadsheet/static/src/bundle/actions/spreadsheet_action.js:0
 msgid "You can not freeze a frozen spreadsheet"
-msgstr ""
+msgstr "نمی‌توانید صفحه گسترده فریز شده را دوباره فریز کنید"
 
 #. module: documents_spreadsheet
 #. odoo-javascript
@@ -634,7 +644,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents_spreadsheet/models/documents_document.py:0
 msgid "You don't have access to this document"
-msgstr ""
+msgstr "شما به این سند دسترسی ندارید"
 
 #. module: documents_spreadsheet
 #. odoo-javascript

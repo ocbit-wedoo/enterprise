@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* delivery_easypost
+# * delivery_easypost
 #
 # Translators:
 # Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2024
@@ -9,20 +9,22 @@
 # Martin Trigaux, 2024
 # Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2025
-#
+# Saara Hakanen <sahak@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2025\n"
-"Language-Team: Finnish (https://app.transifex.com/odoo/teams/41243/fi/)\n"
+"PO-Revision-Date: 2026-07-29 09:32+0000\n"
+"Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
+"Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
+"delivery_easypost/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_easypost
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_carrier_form_inherit_delivery_easypost
@@ -42,10 +44,10 @@ msgid ""
 "same page.</b>\n"
 "                <br/>"
 msgstr ""
-"<b>Kun tilisi on luotu, siirry kojelaudalle ja napsauta käyttäjänimesi "
-"vieressä olevaa nuolta määrittääksesi operaattoritilisi. </b>\n"
-"                <b>Voit lisätä uusia operaattoritilejä saman sivun oikealla "
-"puolella.</b>\n"
+"<b>Kun tilisi on luotu, siirry koontinäytölle ja klikkaa käyttäjänimesi "
+"vieressä olevaa nuolta kuljetusyritystilisi määrittämiseksi. </b>\n"
+"                <b>Voit lisätä uusia kuljetusyritystilejä saman sivun "
+"oikeassa laidassa.</b>\n"
 "                <br/>"
 
 #. module: delivery_easypost
@@ -57,7 +59,7 @@ msgstr "<span invisible=\"package_carrier_type != 'easypost'\">Tuumaa</span>"
 #. odoo-python
 #: code:addons/delivery_easypost/models/delivery_carrier.py:0
 msgid "A production key is required in order to load your easypost carriers."
-msgstr "Tuotantoavain tarvitaan easypost-kuljetuslaitteiden lataamiseen."
+msgstr "Easypost-kuljetusyritysten lataamiseen tarvitaan tuotantoavain."
 
 #. module: delivery_easypost
 #. odoo-python
@@ -78,13 +80,13 @@ msgstr "Peruuta"
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_stock_package_type__package_carrier_type
 msgid "Carrier"
-msgstr "Huolitsija"
+msgstr "Kuljetusyritys"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_easypost_service__easypost_carrier
 #: model:ir.model.fields,field_description:delivery_easypost.field_stock_package_type__easypost_carrier
 msgid "Carrier Prefix"
-msgstr "Huolitsijan etuliite"
+msgstr "Kuljetusyrityksen etuliite"
 
 #. module: delivery_easypost
 #: model:ir.model,name:delivery_easypost.model_delivery_carrier_easypost
@@ -92,12 +94,12 @@ msgstr "Huolitsijan etuliite"
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_carrier_form_inherit_delivery_easypost
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_easypost_carrier_type
 msgid "Carrier Type"
-msgstr "Huolitsijan tyyppi"
+msgstr "Kuljetusyrityksen tyyppi"
 
 #. module: delivery_easypost
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_carrier_form_inherit_delivery_easypost
 msgid "Carrier accounts"
-msgstr "Huolitsijan tilit"
+msgstr "Kuljetusyritystilit"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier_easypost__create_uid
@@ -129,7 +131,7 @@ msgstr "Oletuspalvelutaso"
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier_easypost__delivery_carrier_id
 msgid "Delivery Carrier"
-msgstr "Toimituksen huolitsija"
+msgstr "Toimituksen kuljetusyritys"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier_easypost__display_name
@@ -143,8 +145,8 @@ msgid ""
 "Do not forget to load your Easypost carrier accounts for a valid "
 "configuration."
 msgstr ""
-"Älä unohda ladata Easypostin operaattoritilejäsi, jotta konfiguraatio olisi "
-"voimassa."
+"Muistathan ladata Easypostin kuljetusyritystilit asetusten voimassaolon "
+"varmistamiseksi."
 
 #. module: delivery_easypost
 #: model:ir.model.fields.selection,name:delivery_easypost.selection__delivery_carrier__easypost_label_file_type__epl2
@@ -160,17 +162,17 @@ msgstr "Easypost"
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier__easypost_delivery_type
 msgid "Easypost Carrier Type"
-msgstr "Easypost-huolitsijan tyyppi"
+msgstr "Easypost-kuljetusyritystyyppi"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier__easypost_delivery_type_id
 msgid "Easypost Carrier Type ID, technical for API request"
-msgstr "Easypost Carrier Type ID, tekninen API-pyyntöä varten"
+msgstr "Easypost-kuljetusyritystyypin tunnus, tekninen API-pyyntöä varten"
 
 #. module: delivery_easypost
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_carrier_form_inherit_delivery_easypost
 msgid "Easypost Configuration"
-msgstr "Easypost-konfiguraatio"
+msgstr "Easypost-asetukset"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -181,7 +183,7 @@ msgstr "Easypost-asiakirjat:"
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier__easypost_label_file_type
 msgid "Easypost Label File Type"
-msgstr "Easypost tarran tiedostotyyppi"
+msgstr "Easypost-etiketin tiedostotyyppi"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_stock_picking__ep_order_ref
@@ -202,12 +204,12 @@ msgstr "Easypost Toimitusmenetelmät"
 #. module: delivery_easypost
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_carrier_form_inherit_delivery_easypost
 msgid "Easypost Tutorial"
-msgstr "Easypost opetusohjelma"
+msgstr "Easypost-tutoriaali"
 
 #. module: delivery_easypost
 #: model_terms:ir.ui.view,arch_db:delivery_easypost.view_delivery_carrier_form_inherit_delivery_easypost
 msgid "Easypost Website"
-msgstr "Easypost verkkosivusto"
+msgstr "Easypost-verkkosivu"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -218,7 +220,7 @@ msgstr "Easypost palautti virheen: %s"
 #. module: delivery_easypost
 #: model:ir.model.fields,help:delivery_easypost.field_delivery_carrier__easypost_production_api_key
 msgid "Enter your API production key from Easypost account"
-msgstr "Syötä API-tuotantoavaimesi Easypost-tililtäsi"
+msgstr "Syötä Easypost-tilisi API-tuotantoavain"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,help:delivery_easypost.field_delivery_carrier__easypost_test_api_key
@@ -239,7 +241,7 @@ msgstr "ID"
 #. module: delivery_easypost
 #: model:ir.model.fields,help:delivery_easypost.field_delivery_carrier__easypost_default_service_id
 msgid "If not set, the less expensive available service level will be chosen."
-msgstr "Jos ei asetettu, valitaan edullisempi käytettävissä oleva palvelutaso."
+msgstr "Jos ei määritetty, valitaan halvempi käytettävissä oleva palvelutaso."
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier__easypost_insurance_fee_minimum
@@ -341,7 +343,7 @@ msgstr "Valitse"
 #. module: delivery_easypost
 #: model:ir.actions.act_window,name:delivery_easypost.act_delivery_easypost_carrier_type
 msgid "Select a carrier"
-msgstr "Valitse huolitsija"
+msgstr "Valitse kuljetusyritys"
 
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_easypost_service__name
@@ -372,7 +374,7 @@ msgstr "Varastopaketin tyyppi"
 #. module: delivery_easypost
 #: model:ir.model.fields,field_description:delivery_easypost.field_delivery_carrier__easypost_test_api_key
 msgid "Test API Key"
-msgstr "Testaa API-avain"
+msgstr "API-testiavain"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -381,8 +383,8 @@ msgid ""
 "The %s carrier is missing (Missing field(s) :\n"
 " Default Package Type)"
 msgstr ""
-"Huolitsija %s puuttuu (Puuttuva(t) kenttä(t) :\n"
-" Default Package Type)"
+"Kuljetusyritys %s puuttuu (Puuttuvat kentät :\n"
+" Oletuspakettityyppi)"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -391,8 +393,8 @@ msgid ""
 "The %s carrier is missing (Missing field(s) :\n"
 " Delivery Carrier Type)"
 msgstr ""
-"Huolitsija %s puuttuu (Puuttuva(t) kenttä(t) :\n"
-" Delivery Carrier Type)"
+"Kuljetusyritys %s puuttuu (Puuttuvat kentät :\n"
+" Kuljetusyrityksen tyyppi)"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -401,8 +403,8 @@ msgid ""
 "The %s carrier is missing (Missing field(s) :\n"
 " Production API Key)"
 msgstr ""
-"Huolitsija %s puuttuu (Puuttuva(t) kenttä(t) :\n"
-" Production API Key)"
+"Kuljetusyritys %s puuttuu (Puuttuvat kentät :\n"
+" Tuotannon API-avain)"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -411,8 +413,8 @@ msgid ""
 "The %s carrier is missing (Missing field(s) :\n"
 " Test API Key)"
 msgstr ""
-"Huolitsija %s puuttuu (Puuttuva(t) kenttä(t) :\n"
-" Test API Key)"
+"Kuljetusyritys %s puuttuu (Puuttuvat kentät :\n"
+" API-testiavain)"
 
 #. module: delivery_easypost
 #. odoo-python
@@ -420,7 +422,7 @@ msgstr ""
 msgid ""
 "The estimated price cannot be computed because the weight of your product is "
 "missing."
-msgstr "Arvioitua hintaa ei voida laskea, koska tuotteen paino puuttuu."
+msgstr "Hinta-arviota ei voi laskea, koska tuotteesi paino puuttuu."
 
 #. module: delivery_easypost
 #. odoo-python
@@ -430,8 +432,8 @@ msgid ""
 "missing for the following product(s): \n"
 " %s"
 msgstr ""
-"Arvioitua toimitushintaa ei voida laskea, koska seuraavan tuotteen "
-"(seuraavien tuotteiden) paino puuttuu:\n"
+"Toimitushinnan arviota ei voi laskea, koska seuraavien tuotteiden paino "
+"puuttuu:\n"
 " %s"
 
 #. module: delivery_easypost
@@ -441,7 +443,7 @@ msgid ""
 "There is no rate available for the selected service level for one of your "
 "package. Please choose another service level."
 msgstr ""
-"Valittuun palvelutasoon ei ole saatavilla hintaa yhdelle paketistasi. "
+"Yhdelle paketeistasi ei ole saatavilla hintaa valitulle palvelutasolle. "
 "Valitse toinen palvelutaso."
 
 #. module: delivery_easypost
@@ -453,7 +455,7 @@ msgstr "Siirto"
 #. odoo-python
 #: code:addons/delivery_easypost/models/delivery_carrier.py:0
 msgid "Unable to retrieve your default insurance rates."
-msgstr "Ei voi hakea oletusarvoista vakuutusmaksuasi."
+msgstr "Oletusvakuutusmaksujesi hakeminen ei onnistu."
 
 #. module: delivery_easypost
 #. odoo-python
@@ -480,9 +482,8 @@ msgid ""
 "You have no carrier linked to your Easypost Account.                Please "
 "connect to Easypost, link your account to carriers and then retry."
 msgstr ""
-"Sinulla ei ole Easypost-tiliisi liitettyä huolitsijaa.                Ole "
-"hyvä ja muodosta yhteys Easypostiin, yhdistä tilisi operaattoreihin ja yritä "
-"sitten uudelleen."
+"Easypost-tiliisi ei ole linkitetty kuljetusyritystä.                Yhdistä "
+"Easypostiin, linkitä tilisi operaattoreihin ja yritä sitten uudelleen."
 
 #. module: delivery_easypost
 #: model:ir.model.fields.selection,name:delivery_easypost.selection__delivery_carrier__easypost_label_file_type__zpl

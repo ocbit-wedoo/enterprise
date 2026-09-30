@@ -1629,7 +1629,7 @@ class AccountReport(models.Model):
     def _init_options_search_bar(self, options, previous_options):
         if self.search_bar:
             options['search_bar'] = True
-            if 'default_filter_accounts' not in self._context and 'filter_search_bar' in previous_options:
+            if 'filter_search_bar' in previous_options:
                 options['filter_search_bar'] = previous_options['filter_search_bar']
 
     ####################################################
@@ -1686,15 +1686,15 @@ class AccountReport(models.Model):
                         },
                         'colspan': 1,
                     })
-                    if len(self.column_ids.filtered(lambda column: column.figure_type == 'monetary')) == 1:
-                        # Add budget percentage column (only if one column in the report)
-                        budget_headers.append({
-                            'name': "%",
-                            'forced_options': {
-                                'budget_percentage': budget['id'],
-                            },
-                            'colspan': 1,
-                        })
+
+                    # Add budget percentage column )
+                    budget_headers.append({
+                        'name': "%",
+                        'forced_options': {
+                            'budget_percentage': budget['id'],
+                        },
+                        'colspan': 1,
+                    })
 
                 column_headers.append(budget_headers)
 
@@ -2674,7 +2674,10 @@ class AccountReport(models.Model):
         # Manage growth comparison
         if options.get('column_percent_comparison') == 'growth':
             for line in lines:
-                first_value, second_value = line['columns'][0]['no_format'], line['columns'][1]['no_format']
+                if options['comparison']['period_order'] == 'descending':
+                    first_value, second_value = line['columns'][0]['no_format'], line['columns'][1]['no_format']
+                else:
+                    first_value, second_value = line['columns'][1]['no_format'], line['columns'][0]['no_format']
 
                 green_on_positive = True
                 model, line_id = self._get_model_info_from_id(line['id'])
@@ -3935,14 +3938,24 @@ class AccountReport(models.Model):
             groupby_sql = self.env['account.move.line']._field_to_sql('account_move_line', current_groupby, query) if current_groupby else None
             batch_groupby_sql = self.env['account.move.line']._field_to_sql('account_move_line', batch_aml_field, query) if batch_aml_field else None
 
-            select_count_field = self.env['account.move.line']._field_to_sql('account_move_line', next_groupby.split(',')[0] if next_groupby else 'id', query)
+            next_groupby_field = next_groupby.split(',')[0] if next_groupby else 'id'
+            select_count_field = self.env['account.move.line']._field_to_sql('account_move_line', next_groupby_field, query)
+
+            if (
+                next_groupby_field == 'id'
+                and not options.get('analytic_groupby_option')
+                and not options.get('report_cash_basis')
+            ):
+                count_rows_sql = SQL('COUNT(%s)', select_count_field)
+            else:
+                count_rows_sql = SQL('COUNT(DISTINCT %s)', select_count_field)
 
             tail_query = self._get_engine_query_tail(offset, limit)
             query = SQL(
                 """
                 SELECT
                     COALESCE(SUM(%(balance_select)s), 0.0) AS sum,
-                    COUNT(DISTINCT %(select_count_field)s) AS count_rows
+                    %(count_rows_sql)s AS count_rows
                     %(select_groupby_sql)s
                     %(select_batch_groupby_sql)s
                 FROM %(table_references)s
@@ -3952,7 +3965,7 @@ class AccountReport(models.Model):
                 %(order_by_sql)s
                 %(tail_query)s
                 """,
-                select_count_field=select_count_field,
+                count_rows_sql=count_rows_sql,
                 select_groupby_sql=SQL(', %s AS grouping_key', groupby_sql) if groupby_sql else SQL(),
                 select_batch_groupby_sql=SQL(', %s AS batch_grouping_key', batch_groupby_sql) if batch_groupby_sql else SQL(),
                 table_references=query.from_clause,
@@ -4639,8 +4652,7 @@ class AccountReport(models.Model):
                 'name': _("Journal Items"),
                 'type': 'ir.actions.act_window',
                 'res_model': 'account.move.line',
-                'view_mode': 'list',
-                'views': [(False, 'list')],
+                'view_mode': 'list,pivot,graph,kanban',
             }
 
         action = clean_action(action_dict, env=self.env)
@@ -5808,7 +5820,7 @@ class AccountReport(models.Model):
                     for prefix_subline in prefix_sublines:
                         prefix_expr_label_result = prefix_expression_totals_by_group.setdefault(column_data['column_group_key'], {})
                         prefix_expr_label_result.setdefault(column_data['expression_label'], 0)
-                        prefix_expr_label_result[column_data['expression_label']] += (prefix_subline['columns'][column_index]['no_format'] or 0)
+                        prefix_expr_label_result[column_data['expression_label']] += (prefix_subline['columns'][column_index].get('no_format') or 0)
 
             column_values = []
             for column in options['columns']:
@@ -6354,6 +6366,8 @@ class AccountReport(models.Model):
         y_offset = 0
         # 1 and not 0 to leave space for the line name. original_x_offset allows making place for the code column if needed.
         x_offset = original_x_offset + 1
+        annotations_x_offset = 0
+        annotations_header_written = False
 
         # Add headers.
         # For this, iterate in the same way as done in main_table_header template
@@ -6374,6 +6388,7 @@ class AccountReport(models.Model):
             if annotations:
                 annotations_x_offset = x_offset
                 write_cell(sheet, annotations_x_offset, y_offset, 'Annotations', title_format)
+                annotations_header_written = True
                 x_offset += 1
             y_offset += 1
             x_offset = original_x_offset + 1
@@ -6401,6 +6416,13 @@ class AccountReport(models.Model):
 
         if options.get('column_percent_comparison') in ('growth', 'analytic_coverage'):
             write_cell(sheet, x_offset, y_offset, '', title_format, colspan)
+        if annotations and not annotations_header_written:
+            # Fallback: if column_headers is empty the loop above never runs, so
+            # annotations_x_offset was never set. x_offset already points to the
+            # first free column after all data columns — the right spot for Annotations.
+            annotations_x_offset = x_offset
+            write_cell(sheet, annotations_x_offset, y_offset, 'Annotations', title_format)
+
         y_offset += 1
 
         if options.get('order_column'):
@@ -6788,7 +6810,7 @@ class AccountReport(models.Model):
                     other_col_group_key = line_col['column_group_key']
                     other_col_options = options['column_groups'][other_col_group_key]
                     if other_col_options.get('forced_options', {}).get('date') == date_key:
-                        if other_col_options.get('forced_options', {}).get('budget_base') and line_col['figure_type'] == 'monetary':
+                        if other_col_options.get('forced_options', {}).get('budget_base') and line_col['figure_type'] == 'monetary' and line_col['expression_label'] == 'balance':
                             budget_base_col = line_col
                         elif other_col_options.get('forced_options', {}).get('compute_budget') == budget_id:
                             budget_amount_col = line_col
@@ -7392,8 +7414,14 @@ class AccountReportLine(models.Model):
             # Growth comparison column.
             if options.get('column_percent_comparison') == 'growth':
                 compared_expression = self.expression_ids.filtered(lambda expr: expr.label == group_line_dict['columns'][0]['expression_label'])
+
+                if options['comparison']['period_order'] == 'descending':
+                    first_value, second_value = group_line_dict['columns'][0]['no_format'], group_line_dict['columns'][1]['no_format']
+                else:
+                    first_value, second_value = group_line_dict['columns'][1]['no_format'], group_line_dict['columns'][0]['no_format']
+
                 group_line_dict['column_percent_comparison_data'] = self.report_id._compute_column_percent_comparison_data(
-                    options, group_line_dict['columns'][0]['no_format'], group_line_dict['columns'][1]['no_format'], green_on_positive=compared_expression.green_on_positive)
+                    options, first_value, second_value, green_on_positive=compared_expression.green_on_positive)
             # Manage budget comparison
             elif options.get('column_percent_comparison') == 'budget':
                 self.report_id._set_budget_column_comparisons(options, group_line_dict)

@@ -158,3 +158,57 @@ class AccountTestSIE4Export(TestAccountReportsCommon):
             '#KONTO 999999 "Undistributed Profits/Losses"',
             '#KTYP  999999 S',
         ])
+
+    def test_sie4_export_fiscal_years(self):
+        company = self.company_data['company']
+        # Create custom fiscal year covering the 6 first months of 2017.
+        _prev_fiscal_year, fiscal_year = self.env['account.fiscal.year'].create([
+        {
+            'name': 'June-July 2017-18',
+            'date_from': '2017-06-01',
+            'date_to': '2018-06-30',
+            'company_id': company.id,
+        }, {
+            'name': '2018 change date',
+            'date_from': '2018-07-01',
+            'date_to': '2018-12-31',
+            'company_id': company.id,
+        }])
+        for account_a, account_b in {('1931', '1932'), ('3000', '4533')}:
+            # Before fiscal year 1
+            self.create_move('2017-02-15', [(account_a, 1000), (account_b, -1000)])
+            # Begining of fiscal year 1
+            self.create_move('2018-02-15', [(account_a, 1000), (account_b, -1000)])
+            self.create_move('2018-06-15', [(account_a, 1000), (account_b, -1000)])
+            # Ending of fiscal year 1
+            # Begining of fiscal year 2
+            self.create_move('2018-12-15', [(account_a, 1000), (account_b, -1000)])
+            # Ending of fiscal year 2
+            self.create_move('2019-01-01', [(account_a, 1000), (account_b, -1000)])
+
+        options = self._generate_options(self.report, fiscal_year.date_from, fiscal_year.date_to)
+        res = self.export_sie4_result_list(options)
+
+        self.assertListEqual(res[6:8], ['#RAR -1 20170601 20180630', '#RAR  0 20180701 20181231'])
+        self.assertListEqual(
+            list(filter(lambda l: '#UB ' in l or '#IB ' in l, res)),
+            [
+                '#IB  -1 1931 1000.0',
+                '#UB  -1 1931 3000.0',
+                '#IB   0 1931 3000.0',
+                '#UB   0 1931 4000.0',
+                '#IB  -1 1932 -1000.0',
+                '#UB  -1 1932 -3000.0',
+                '#IB   0 1932 -3000.0',
+                '#UB   0 1932 -4000.0',
+            ]
+        )
+        self.assertListEqual(
+            list(filter(lambda l: '#RES ' in l, res)),
+            [
+                '#RES -1 3000 2000.0',
+                '#RES  0 3000 1000.0',
+                '#RES -1 4533 -2000.0',
+                '#RES  0 4533 -1000.0',
+            ]
+        )

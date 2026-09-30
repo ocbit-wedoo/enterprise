@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-05 18:46+0000\n"
-"PO-Revision-Date: 2026-02-07 18:31+0000\n"
+"PO-Revision-Date: 2026-09-21 16:18+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18/"
 "delivery_starshipit/sl/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: delivery_starshipit
 #. odoo-python
@@ -35,6 +35,12 @@ msgid ""
 "Please either continue the configuration or delete the order in Starshipit "
 "before trying again."
 msgstr ""
+"%(order_info)sVendar je ustvarjanje dostavne etikete spodletelo z naslednjo "
+"napako:\n"
+"%(error)s\n"
+"\n"
+"Prosimo, nadaljujte z nastavitvijo ali izbrišite naročilo v Starshipit, "
+"preden poskusite znova."
 
 #. module: delivery_starshipit
 #: model_terms:ir.ui.view,arch_db:delivery_starshipit.view_delivery_carrier_form
@@ -73,7 +79,7 @@ msgstr ""
 #. module: delivery_starshipit
 #: model_terms:ir.ui.view,arch_db:delivery_starshipit.choose_delivery_carrier_view_form
 msgid "<i class=\"oi oi-arrow-right me-1\"/>Get more delivery methods"
-msgstr ""
+msgstr "<i class=\"oi oi-arrow-right me-1\"/>Pridobi več načinov dostave"
 
 #. module: delivery_starshipit
 #. odoo-python
@@ -511,13 +517,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_starshipit/models/delivery_carrier.py:0
 msgid "The order '%(order_number)s' has been created!\n"
-msgstr ""
+msgstr "Naročilo '%(order_number)s' je bilo ustvarjeno!\n"
 
 #. module: delivery_starshipit
 #. odoo-python
 #: code:addons/delivery_starshipit/models/delivery_carrier.py:0
 msgid "The order has been created!\n"
-msgstr ""
+msgstr "Naročilo je bilo ustvarjeno!\n"
 
 #. module: delivery_starshipit
 #. odoo-python

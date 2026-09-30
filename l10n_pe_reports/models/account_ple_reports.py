@@ -66,8 +66,8 @@ class PeruvianTaxPleReportCustomHandler(models.AbstractModel):
                 if current_groupby and query_res_lines:
                     sign_total = -1 if query_res_lines[0]["move_type"] in ("out_invoice", "out_refund") else 1
                     rate = (
-                        (query_res_lines[0]["amount_currency"] / query_res_lines[0]["total"])
-                        if query_res_lines[0]["total"]
+                        1 / query_res_lines[0]["move_rate"]
+                        if query_res_lines[0]["move_rate"]
                         else 1
                     )
                     refund = query_res_lines[0]["reversed_entry_name"]
@@ -172,6 +172,7 @@ SELECT
     account_move_line__move_id.id,
     account_move_line__move_id.name as move_name,
     account_move_line__move_id.ref as move_ref,
+    account_move_line__move_id.invoice_currency_rate as move_rate,
     account_move_line__move_id.edi_state,
     rp.name as partner_name,
     rp.vat as partner_vat,
@@ -262,7 +263,6 @@ SELECT
         THEN account_move_line.balance ELSE Null END) as base_withholding,
     sum(CASE WHEN ntg.id = %(tax_group_ret)s
         THEN account_move_line.balance ELSE Null END) as vat_withholding,
-    account_move_line__move_id.amount_total as total,
     account_move_line__move_id.amount_total_signed as amount_currency
 FROM
     account_move_line
@@ -274,8 +274,11 @@ LEFT JOIN
     account_tax AS nt
     ON account_move_line.tax_line_id = nt.id
 LEFT JOIN
+    -- Tax lines carry their subsequent taxes in tax_ids when a tax affects the base of
+    -- the next ones (e.g. ISC): only base lines may feed the base_* columns
     account_move_line_account_tax_rel AS account_move_linetr
     ON account_move_line.id = account_move_linetr.account_move_line_id
+    AND account_move_line.tax_line_id IS NULL
 LEFT JOIN
     -- bt = base tax
     account_tax AS bt

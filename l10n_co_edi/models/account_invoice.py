@@ -4,6 +4,8 @@ import textwrap
 
 from odoo import api, models, fields, _
 from odoo.exceptions import UserError
+from odoo.tools import SQL
+from odoo.tools.sql import column_exists, create_column
 
 
 DESCRIPTION_CREDIT_CODE = [
@@ -71,6 +73,31 @@ class AccountMove(models.Model):
     l10n_co_edi_description_code_debit = fields.Selection(DESCRIPTION_DEBIT_CODE, string="Concepto Nota de Débito")
     l10n_co_edi_debit_note = fields.Boolean(related="journal_id.l10n_co_edi_debit_note")
     l10n_co_edi_is_support_document = fields.Boolean('Support Document', related='journal_id.l10n_co_edi_is_support_document')
+
+    def _auto_init(self):
+        """
+        Create all compute-stored fields here to avoid MemoryError when initializing on large databases.
+        """
+        if not column_exists(self.env.cr, 'account_move', 'l10n_co_edi_type'):
+            create_column(self.env.cr, 'account_move', 'l10n_co_edi_type', 'varchar')
+
+            self.env.cr.execute(SQL("""
+                UPDATE account_move AS move
+                SET l10n_co_edi_type = CASE
+                    WHEN move.move_type = 'out_refund' THEN %s
+                    ELSE %s
+                END
+                FROM res_company AS company
+                    JOIN res_country AS country
+                        ON country.id = company.account_fiscal_country_id
+                WHERE company.id = move.company_id
+                AND country.code = 'CO';
+            """,
+                L10N_CO_EDI_TYPE['Credit Note'],
+                L10N_CO_EDI_TYPE['Sales Invoice'],
+            ))
+
+        return super()._auto_init()
 
     # -------------------------------------------------------------------------
     # Compute

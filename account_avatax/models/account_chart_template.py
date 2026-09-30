@@ -11,6 +11,8 @@ class AccountChartTemplate(models.AbstractModel):
             'account_fiscal_position_avatax_us': {
                 'name': 'Automatic Tax Mapping (AvaTax)',
                 'is_avatax': True,
+                'avatax_invoice_account_id': 'tax_received',
+                'avatax_refund_account_id': 'tax_received',
                 'auto_apply': False,
                 'country_id': self.env.ref('base.us').id,
             },

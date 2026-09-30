@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2026-04-29 19:05+0000\n"
+"PO-Revision-Date: 2026-07-29 03:09+0000\n"
 "Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18/"
 "mrp_mps/id/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
@@ -54,7 +54,7 @@ msgstr "Actual"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Actual Demand"
-msgstr "Actual Demand"
+msgstr "Permintaan Aktual"
 
 #. module: mrp_mps
 #. odoo-python
@@ -68,14 +68,14 @@ msgstr ""
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Actual Demand Y-1"
-msgstr "Actual Demand Y-1"
+msgstr "Permintaan Aktual Y-1"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Actual Demand Y-2"
-msgstr "Actual Demand Y-2"
+msgstr "Permintaan Aktual Y-2"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -235,22 +235,22 @@ msgstr "Hapus"
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__forecast_qty
 msgid "Demand Forecast"
-msgstr "Perkiraan Demand"
+msgstr "Perkiraan Permintaan"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand
 msgid "Display Actual Demand"
-msgstr "Tampilkan Actual Demand"
+msgstr "Tampilkan Permintaan Aktual"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand_year_minus_2
 msgid "Display Actual Demand Before Year"
-msgstr "Tampilkan Actual Demand Sebelum Tahun"
+msgstr "Tampilkan Permintaan Aktual Sebelum Tahun"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand_year_minus_1
 msgid "Display Actual Demand Last Year"
-msgstr "Tampilkan Actual Demand Tahun Lalu"
+msgstr "Tampilkan Permintaan Aktual Tahun Lalu"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_replenishment
@@ -265,7 +265,7 @@ msgstr "Tampilkan Tersedia untuk Dijanjikan"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_demand_forecast
 msgid "Display Demand Forecast"
-msgstr "Tampilkan Perkiraan Demand"
+msgstr "Tampilkan Perkiraan Permintaan"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_indirect_demand
@@ -324,7 +324,7 @@ msgstr "ID Eksternal"
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_mrp_mps_forecast_details
 msgid "Forecast Demand Details"
-msgstr "Detail Perkiraan Demand"
+msgstr "Detail Perkiraan Permintaan"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -336,7 +336,7 @@ msgstr "Forecasted"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "Forecasted Demand"
-msgstr "Demand yang Diperkirakan"
+msgstr "Permintaan yang Diperkirakan"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -388,7 +388,7 @@ msgstr "Tuntutan Tidak Langsung"
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Indirect Demand Forecast"
-msgstr "Perkiraan Indirect Demand"
+msgstr "Perkiraan Indirect Permintaan"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__is_indirect
@@ -738,7 +738,7 @@ msgstr "Pemicu Pemulihan"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "Replenishment:"
-msgstr "Pemulihan:"
+msgstr "Replenishment:"
 
 #. module: mrp_mps
 #. odoo-python
@@ -842,7 +842,7 @@ msgstr "Kombinasi gudang dan produk harus unik!"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "The confirmed demand, based on the confirmed sales orders."
-msgstr "Demand yang dikonfirmasi, berdasarkan sales order terkonfirmasi."
+msgstr "Permintaan yang dikonfirmasi, berdasarkan sales order terkonfirmasi."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -851,7 +851,8 @@ msgid ""
 "The forecasted demand to fulfill the needs in components of the "
 "Manufacturing Orders."
 msgstr ""
-"Demand diperkirakan untuk memenuhi kebutuhan komponen Manufacturing Order."
+"Permintaan diperkirakan untuk memenuhi kebutuhan komponen Manufacturing "
+"Order."
 
 #. module: mrp_mps
 #. odoo-javascript

@@ -7,13 +7,14 @@
 # Marta Wacławek, 2025
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Marta (wacm)" <wacm@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-04-29 18:58+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-18 12:57+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "sale_shopee/pl/>\n"
 "Language: pl\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.order_sync_failure
@@ -52,6 +53,30 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"<div>\n"
+"                <p>Synchronizacja zamówienia Shopee o numerze referencyjnym "
+"<t t-out=\"ctx.get('shopee_order_ref') or ''\">REF</t> napotkała problem i "
+"nie została ukończona.</p>\n"
+"                <p>O ile zamówienie nie zostanie anulowane w serwisie "
+"Shopee, nie będą podejmowane żadne kolejne próby synchronizacji.</p>\n"
+"                <p>Aby zaplanować nową próbę synchronizacji, postępuj według "
+"następujących kroków:\n"
+"                    </p><ol>\n"
+"                        <li>Przejdź do narzędzi deweloperskich.</li>\n"
+"                        <li>Otwórz formularz sklepu Shopee, w którym zostało "
+"złożone zamówienie.</li>\n"
+"                        <li>Przejdź do zakładki Śledzenie zamówienia.</li>\n"
+"                        <li>Ustaw datę <em>Ostatniej synchronizacji "
+"zamówienia</em> wcześniejszą niż ostatnia aktualizacja statusu zamówienia.</"
+"li>\n"
+"                        <li>Zapisz zmiany i kliknij przycisk <em>"
+"SYNCHRONIZUJ ZAMÓWIENIA</em>.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>Jeśli problem będzie się powtarzał, skontaktuj się ze <a "
+"href=\"https://www.odoo.com/help/\">wsparciem Odoo</a>.</p>\n"
+"            </div>\n"
+"        "
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -60,6 +85,9 @@ msgid ""
 "                    Shop authorization is expired. Please re-authorize the "
 "shop in the Shopee Account page."
 msgstr ""
+"<strong>Ostrzeżenie:</strong>\n"
+"                    Autoryzacja sklepu wygasła. Proszę ponownie autoryzować "
+"sklep na stronie konta Shopee."
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -68,6 +96,9 @@ msgid ""
 "                    Shop authorization will expire soon. Re-authorize the "
 "shop in the Shopee Account page."
 msgstr ""
+"<strong>Ostrzeżenie:</strong>\n"
+"                    Autoryzacja sklepu wkrótce wygaśnie. Ponownie autoryzuj "
+"sklep na stronie konta Shopee."
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.picking_sync_failure
@@ -265,6 +296,69 @@ msgid ""
 "            </div>\n"
 "        </body>"
 msgstr ""
+"<style>\n"
+"                .shopee_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .shopee_table th,\n"
+"                .shopee_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .shopee_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .shopee_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .shopee_table tbody th,\n"
+"                .shopee_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"           </style>\n"
+"            <body> <div>\n"
+"                <p> Synchronizacja magazynowania dla sklepu Shopee\n"
+"                   <b><t t-out=\"ctx.get('shopee_shop') or ''\"> REF</t></b>"
+"\n"
+"                    napotkała pewne błędy i nie została zakończona.</p>\n"
+"                <p>Oto błędy przesłane przez Shopee: </p>\n"
+"                <table class=\"shopee_table\">\n"
+"                   <thead>\n"
+"                        <tr> \n"
+"                           <th> Identyfikator produktu Shopee</th>\n"
+"                            <th>Komunikat</th>\n"
+"                        </tr>\n"
+"                   </thead>\n"
+"                    <tbody> \n"
+"                       <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th> <t t-out=\"error['item_identifier']\"/></"
+"th> \n"
+"                           <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/> \n"
+"                               <t t-else=\"\"> Podczas synchronizacji z "
+"Shopee wystąpił nieznany błąd.\n"
+"                                    Niestety musisz ręcznie sprawdzić, czy "
+"dostępna ilość produktu jest prawidłowa.\n"
+"                                    Jeśli problem nadal występuje, "
+"skontaktuj się ze <a href=\"https://www.odoo.com/help/\">wsparciem Odoo</a>"
+".\n"
+"                               </t>\n"
+"                            </td> \n"
+"                       </tr>\n"
+"                    </tbody> \n"
+"               </table>\n"
+"            </div> \n"
+"       </body>"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__api_endpoint
@@ -317,13 +411,13 @@ msgstr "Aktywne"
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Add-on Deal Main"
-msgstr ""
+msgstr "Dodatek Deal Main"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Add-on Deal Sub"
-msgstr ""
+msgstr "Dodatek Deal Sub"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__company_ids
@@ -523,7 +617,7 @@ msgstr ""
 "Autoryzacja sklepu nie powiodła się, z powodu następującego błędu:\n"
 "- %(message)s\n"
 "\n"
-"Jeden z następujących wpisów może być nieprawidłowy: ID Partnera, Klucz "
+"Jedna z następujących danych może być nieprawidłowa: ID Partnera, Klucz "
 "Partnera lub API Endpoint."
 
 #. module: sale_shopee
@@ -555,12 +649,12 @@ msgstr "Zrealizowano przez sprzedawcę transgranicznego"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Merchant"
-msgstr "Realizowano przez Sprzedawce"
+msgstr "Zrealizowano przez sprzedawcę"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Shopee"
-msgstr "Realizowano przez Shopee"
+msgstr "Zrealizowano przez Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__hybrid
@@ -597,8 +691,8 @@ msgid ""
 "If the sale is locked, you can not modify it anymore. However, you will "
 "still be able to invoice or deliver."
 msgstr ""
-"If the sale is locked, you can not modify it anymore. However, you will "
-"still be able to invoice or deliver."
+"Jeśli sprzedaż została zamknięta, nie można jej już modyfikować. Nadal "
+"jednak będzie można wystawić fakturę lub zrealizować dostawę."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_account__company_ids
@@ -614,8 +708,7 @@ msgstr "Nieaktywne"
 #. module: sale_shopee
 #: model:ir.model.constraint,message:sale_shopee.constraint_shopee_item_unique_shopee_item_and_model_identifiers
 msgid "Item and Model Identifiers must be unique for a given shop."
-msgstr ""
-"Identyfikatory elementu i modelu muszą być unikatowe dla danego sklepu."
+msgstr "Identyfikatory elementu i modelu muszą być unikatowe dla danego sklepu."
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_stock_picking__shopee_label_status
@@ -647,7 +740,7 @@ msgstr "Data ostatniej synchronizacji"
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__write_uid
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__write_uid
 msgid "Last Updated by"
-msgstr "Ostatnio aktualizowane przez"
+msgstr "Ostatnio zaktualizowane przez"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__write_date
@@ -680,7 +773,7 @@ msgstr "Nowe"
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__stock_picking__shopee_label_status__not_available
 msgid "Not Available"
-msgstr "Niedostępny/e"
+msgstr "Niedostępny"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__order_count
@@ -768,7 +861,7 @@ msgstr "Zarejestruj swoje konto Shopee"
 #. module: sale_shopee
 #: model_terms:ir.actions.act_window,help:sale_shopee.action_shopee_account_list
 msgid "Register yours to start synchronizing your orders into Odoo."
-msgstr "Zarejestruj się by zacząć synchronizować swoje zamówienia z Odoo"
+msgstr "Zarejestruj się by zacząć synchronizować swoje zamówienia z Odoo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__authorization_remaining_days
@@ -845,7 +938,7 @@ msgstr "Nazwa sklepu"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Settings"
-msgstr "Ustawienia sklep"
+msgstr "Ustawienia sklepu"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -911,17 +1004,17 @@ msgstr "Typ realizacji Shopee"
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_shopee_item
 msgid "Shopee Item"
-msgstr "Przedmiot Shopee"
+msgstr "Towar Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__shopee_item_count
 msgid "Shopee Item Count"
-msgstr "Liczba przedmiotów Shopee"
+msgstr "Liczba towarów Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__shopee_item_identifier
 msgid "Shopee Item ID"
-msgstr "ID przedmiotu Shopee"
+msgstr "ID towaru Shopee"
 
 #. module: sale_shopee
 #. odoo-python
@@ -932,7 +1025,7 @@ msgstr "ID przedmiotu Shopee"
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_item_view_list
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shopee Items"
-msgstr "Przedmioty Shopee"
+msgstr "Towary Shopee"
 
 #. module: sale_shopee
 #. odoo-python
@@ -955,7 +1048,7 @@ msgstr "Zamówienie Shopee %(order)s w mock_shopee_shop"
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Shopee Order %(shopee_order_ref)s at %(shop_name)s"
-msgstr "Zamówienie Shopee %(order)s w %(shop_name)s"
+msgstr "Zamówienie Shopee %(shopee_order_ref)s w %(shop_name)s"
 
 #. module: sale_shopee
 #. odoo-python
@@ -1045,7 +1138,7 @@ msgstr "Magazyn Shopee - %(shop)s"
 #. module: sale_shopee
 #: model_terms:ir.actions.act_window,help:sale_shopee.action_shopee_account_list
 msgid "Shopee accounts correspond to Shopee Seller Central accounts."
-msgstr "Konta Shopee korespondujące z kontami Centrum Sprzedawcy Shopee"
+msgstr "Konta Shopee korespondujące z kontami Centrum Sprzedawcy Shopee."
 
 #. module: sale_shopee
 #. odoo-python
@@ -1124,7 +1217,7 @@ msgstr "Synchronizuj magazyn"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Sync Orders"
-msgstr "Synchronizuj Zamówione"
+msgstr "Synchronizuj zamówienia"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -1141,7 +1234,7 @@ msgstr "Synchronizacja magazynu Shopee nie powiodła się"
 msgid ""
 "Synchronization of Shopee order {{ ctx.get('shopee_order_ref') }} has failed"
 msgstr ""
-"Synchronizacja zamówienia Shopee {{ ctx.get('amazon_order_ref') }} nie "
+"Synchronizacja zamówienia Shopee {{ ctx.get('shopee_order_ref') }} nie "
 "powiodła się."
 
 #. module: sale_shopee
@@ -1166,11 +1259,15 @@ msgid ""
 "testing endpoints. Among the endpoints, choose the one that is "
 "geographically closest to the marketplace you are targeting."
 msgstr ""
+"Punkt końcowy API, którego należy używać do wywołań API Shopee. Dostępne są "
+"punkty końcowe produkcyjne i testowe. Spośród dostępnych punktów końcowych "
+"wybierz ten, który jest geograficznie najbliżej rynku, na którym chcesz "
+"prowadzić działalność."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_sale_order__shopee_shop_id
 msgid "The Shopee shop from which the order was placed."
-msgstr "Sklep Shopee, z którego było złożone zamówienie."
+msgstr "Sklep Shopee, z którego zostało złożone zamówienie."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_sale_order__shopee_order_ref
@@ -1182,12 +1279,13 @@ msgstr "Referencja zamówienia zdefiniowana w Shopee."
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__team_id
 msgid "The default Sales Team assigned to Shopee orders for reporting"
 msgstr ""
-"Domyślny zespół sprzedaży przydzielony do raportowania zamówień Shopee."
+"Domyślny zespół sprzedaży przydzielony do zamówień Shopee w celach "
+"raportowania"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__user_id
 msgid "The default salesperson assigned to Shopee orders"
-msgstr "Domyślny sprzedawca przypisany do zamówień Shopee."
+msgstr "Domyślny sprzedawca przypisany do zamówień Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__last_orders_sync_date
@@ -1196,7 +1294,7 @@ msgid ""
 "has not changed since this date will not be created nor updated in Odoo."
 msgstr ""
 "Ostatnia synchronizacja zamówień z Shopee. Zamówienia, których status się "
-"nie zmienił od tej daty nie będą tworzone, ani aktualizowane w Odoo"
+"nie zmienił od tej daty nie będą tworzone, ani aktualizowane w Odoo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_stock_picking__last_picking_sync_date
@@ -1206,7 +1304,7 @@ msgstr "Ostatnia synchronizacja kompletacji z Shopee."
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__last_shop_status_sync_date
 msgid "The last time the shop status was synchronized with Shopee"
-msgstr "Ostatnia synchronizacja statusu sklepu z Shopee."
+msgstr "Ostatnia synchronizacja statusu sklepu z Shopee"
 
 #. module: sale_shopee
 #. odoo-python
@@ -1241,10 +1339,10 @@ msgstr ""
 "Status zlecenia dostawy w Shopee:\n"
 "- Gotowe do wysyłki: Sprzedawca może zaplanować wysyłkę.\n"
 "- Wysyłka zaplanowana: Sprzedawca zaplanował wysyłkę online i otrzymał numer "
-"śledzenia z 3PL.\n"
-"- Wysłane: Paczka została dostarczona u 3PL lub odebrana przez 3PL.\n"
+"śledzenia od kuriera.\n"
+"- Wysłane: Paczka została dostarczona do lub odebrana przez kuriera.\n"
 "- Anulowane: Zamówienie zostało anulowane.\n"
-"- Niepowodzenie odbioru: odebranie paczki przez 3PL nie powiodło się. "
+"- Niepowodzenie odbioru: odebranie paczki przez kuriera nie powiodło się. "
 "Konieczne jest ponowne zaaranżowanie wysyłki."
 
 #. module: sale_shopee
@@ -1295,7 +1393,7 @@ msgstr "Tokeny"
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_stock_picking
 msgid "Transfer"
-msgstr "Przekaz"
+msgstr "Transfer"
 
 #. module: sale_shopee
 #. odoo-python
@@ -1321,14 +1419,14 @@ msgid ""
 "synchronized with Shopee. Only products available in FBM or hybrid will be "
 "synchronized."
 msgstr ""
-"Czy dostępne ilości produktów powiązanych z tym sklepem są synchronizowane z "
-"Shopee. Synchronizowane będą tylko produkty dostępne w FBM lub hybrydowe."
+"Czy dostępne ilości produktów powiązanych z tym sklepem są zsynchronizowane "
+"z Shopee. Synchronizowane będą tylko produkty dostępne w FBM lub hybrydowe."
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/controllers/onboarding.py:0
 msgid "You are not allowed to access this page."
-msgstr "Nie masz upoważnienia dostępu do tej strony."
+msgstr "Nie masz dostępu do tej strony."
 
 #. module: sale_shopee
 #. odoo-python
@@ -1349,7 +1447,7 @@ msgstr ""
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
 msgid "e.g. American Market"
-msgstr "Na przykład Rynek Amerykański "
+msgstr "np. Rynek smerykański"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form

@@ -235,6 +235,23 @@ class WhatsAppMessage(models.Model):
         else:
             self.env.ref('whatsapp.ir_cron_send_whatsapp_queue')._trigger()
 
+    def _assert_recipient_identifier(self):
+        if not self.mobile_number_formatted:
+            raise WhatsAppError(failure_type='phone_invalid')
+        return self.mobile_number_formatted
+
+    def _check_number_blacklist(self):
+        blacklist_number = wa_phone_validation.wa_phone_format_for_blacklist(self.mobile_number_formatted)
+        if self.env['phone.blacklist'].sudo().search_count([('number', 'ilike', blacklist_number), ('active', '=', True)], limit=1):
+            raise WhatsAppError(failure_type='blacklisted')
+
+    def _get_sent_whatsapp_message_values(self, send_response):
+        """Values to write on a message once successfully sent, some derived from the API response."""
+        return {'state': 'sent', 'msg_uid': send_response.get('msg_uid')}
+
+    def _send_with_identifier(self, wa_api, **send_kwargs):
+        return wa_api._send_whatsapp_to_identifier(bsuid=None, number=self.mobile_number_formatted, **send_kwargs)
+
     def _send_message(self, with_commit=False):
         """ Prepare json data for sending messages, attachments and templates."""
         # init api
@@ -269,12 +286,9 @@ class WhatsAppMessage(models.Model):
                 parent_message_id = False
                 # body would always come from plaintext2html hence the url text is already the url and references are redundant
                 body = html2plaintext(whatsapp_message.body, include_references=False)
-                number = whatsapp_message.mobile_number_formatted
-                if not number:
-                    raise WhatsAppError(failure_type='phone_invalid')
-                blacklist_number = wa_phone_validation.wa_phone_format_for_blacklist(number)
-                if self.env['phone.blacklist'].sudo().search_count([('number', 'ilike', blacklist_number), ('active', '=', True)], limit=1):
-                    raise WhatsAppError(failure_type='blacklisted')
+                recipient_identifier = whatsapp_message._assert_recipient_identifier()
+                if whatsapp_message.mobile_number_formatted:
+                    whatsapp_message._check_number_blacklist()
 
                 # based on template
                 if template := whatsapp_message.wa_template_id:
@@ -306,7 +320,7 @@ class WhatsAppMessage(models.Model):
                         if template.header_type in ('image', 'video', 'document'):
                             components = [component_vals for component_vals in send_vals['components'] if component_vals['type'] != 'header']
                             send_vals_without_attachments['components'] = components
-                        unique_message_vals = (number, frozendict(send_vals_without_attachments))
+                        unique_message_vals = (recipient_identifier, frozendict(send_vals_without_attachments))
                         if unique_message_vals not in sent_message_vals:
                             sent_message_vals.add(unique_message_vals)
                         else:
@@ -334,7 +348,10 @@ class WhatsAppMessage(models.Model):
                     if parent_id:
                         parent_message_id = parent_id[0].msg_uid
                 if not is_duplicate:
-                    msg_uid = wa_api._send_whatsapp(number=number, message_type=message_type, send_vals=send_vals, parent_message_id=parent_message_id)
+                    send_response = whatsapp_message._send_with_identifier(
+                        wa_api, message_type=message_type, send_vals=send_vals, parent_message_id=parent_message_id,
+                    )
+                    msg_uid = send_response.get('msg_uid')
             except WhatsAppError as we:
                 whatsapp_message._handle_error(whatsapp_error_code=we.error_code, error_message=we.error_message,
                                                failure_type=we.failure_type)
@@ -349,10 +366,7 @@ class WhatsAppMessage(models.Model):
                     else:
                         if message_type == 'template':
                             whatsapp_message._post_message_in_active_channel()
-                        whatsapp_message.write({
-                            'state': 'sent',
-                            'msg_uid': msg_uid
-                        })
+                        whatsapp_message.write(whatsapp_message._get_sent_whatsapp_message_values(send_response))
                 if with_commit:
                     self._cr.commit()
 
@@ -423,12 +437,26 @@ class WhatsAppMessage(models.Model):
 
         if not whatsapp_media_type:
             raise WhatsAppError(_("Attachment mimetype is not supported by WhatsApp: %s.", attachment.mimetype))
-        wa_api = WhatsAppApi(wa_account_id)
-        whatsapp_media_uid = wa_api._upload_whatsapp_document(attachment)
+
+        # /web/content/<id> only redirects to this same signed url, and Meta seems
+        # to rate limit per ASN of the host it fetches from, so let it fetch the
+        # bucket directly instead of going through the instance.
+        # See https://github.com/chatwoot/chatwoot/issues/13540
+        if attachment.type == 'cloud_storage':
+            whatsapp_media_url = attachment.with_context(
+                cloud_storage_download_url_time_to_expiry=7 * 24 * 60 * 60,
+            )._to_http_stream().url
+            whatsapp_media_vals = {'link': whatsapp_media_url}
+        elif attachment._is_remote_source():
+            whatsapp_media_vals = {'link': attachment.url}
+        else:
+            wa_api = WhatsAppApi(wa_account_id)
+            whatsapp_media_uid = wa_api._upload_whatsapp_document(attachment)
+            whatsapp_media_vals = {'id': whatsapp_media_uid}
 
         vals = {
             'type': whatsapp_media_type,
-            whatsapp_media_type: {'id': whatsapp_media_uid}
+            whatsapp_media_type: whatsapp_media_vals,
         }
 
         if whatsapp_media_type == 'document':

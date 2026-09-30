@@ -282,3 +282,140 @@ class TestPeSales(TestAccountReportsCommon):
 0.00|0.00|0.00|0.00
 """[1:],
         )
+
+    def test_sale_report_isc_base(self):
+        """The ISC raises the IGV base but is reported in its own column, not in the taxable base one"""
+        taxes = self.env["account.tax"].create({
+            "name": "tax_ics_10",
+            "sequence": -1,  # So it precedes the IGV 18% tax
+            "amount_type": "percent",
+            "amount": 10,
+            "include_base_amount": True,
+            "l10n_pe_edi_tax_code": "2000",
+            "l10n_pe_edi_unece_category": "S",
+            "type_tax_use": "sale",
+            "tax_group_id": self.env.ref(f"account.{self.env.company.id}_tax_group_isc").id,
+        })
+        taxes |= self.env.ref(f"account.{self.env.company.id}_sale_tax_igv_18")
+
+        moves = self.env["account.move"].create([
+            {
+                "move_type": "out_invoice",
+                "partner_id": self.partner_a.id,
+                "invoice_date": "2022-07-01",
+                "invoice_date_due": "2022-07-01",
+                "date": "2022-07-01",
+                "invoice_payment_term_id": False,
+                "l10n_latam_document_type_id": self.env.ref("l10n_pe.document_type01").id,
+                "invoice_line_ids": [Command.create({
+                    "name": "test",
+                    "quantity": 1,
+                    "price_unit": 1000,
+                    "tax_ids": [Command.set(taxes.ids)],
+                })],
+            },
+            {
+                "move_type": "out_refund",
+                "partner_id": self.partner_a.id,
+                "invoice_date": "2022-07-01",
+                "invoice_date_due": "2022-07-01",
+                "date": "2022-07-01",
+                "invoice_payment_term_id": False,
+                "invoice_line_ids": [Command.create({
+                    "name": "test",
+                    "quantity": 1,
+                    "price_unit": 1000,
+                    "tax_ids": [Command.set(taxes.ids)],
+                })],
+            },
+        ])
+        moves.action_post()
+        moves.write({"edi_state": "sent"})
+
+        report = self.env.ref("l10n_pe_reports.tax_report_ple_sales_14_1")
+        options = self._generate_options(
+            report, fields.Date.from_string("2022-01-01"), fields.Date.from_string("2022-12-31")
+        )
+        report._get_lines(options)
+
+        self.maxDiff = None
+        self.assertEqual(
+            "\n".join(
+                [
+                    "|".join(line.split("|")[14:26])
+                    for line in self.env[report.custom_handler_model_name]
+                    .export_to_txt(options)["file_content"]
+                    .decode()
+                    .split("\r\n")
+                ]
+            ),
+            """
+-1000.0|0.00|-198.0|0.00|0.00|0.00|-100.0|0.00|0.00|0.00|0.00|-1298.0
+1000.0|0.00|198.0|0.00|0.00|0.00|100.0|0.00|0.00|0.00|0.00|1298.0
+"""[1:],
+        )
+
+    def test_sale_report_isc_reported_once(self):
+        """An ISC followed by several taxes is reported once, not once per following tax"""
+        taxes = self.env["account.tax"].create({
+            "name": "tax_ics_10",
+            "sequence": -1,  # So it precedes the IGV 18% and ICBPER taxes
+            "amount_type": "percent",
+            "amount": 10,
+            "include_base_amount": True,
+            "l10n_pe_edi_tax_code": "2000",
+            "l10n_pe_edi_unece_category": "S",
+            "type_tax_use": "sale",
+            "tax_group_id": self.env.ref(f"account.{self.env.company.id}_tax_group_isc").id,
+        })
+        taxes |= self.env.ref(f"account.{self.env.company.id}_sale_tax_igv_18")
+        taxes |= taxes.create({
+            "name": "icbper",
+            "amount_type": "fixed",
+            "amount": 0.4,
+            "l10n_pe_edi_tax_code": "7152",
+            "l10n_pe_edi_unece_category": "S",
+            "type_tax_use": "sale",
+            "tax_group_id": self.env.ref(f"account.{self.env.company.id}_tax_group_icbper").id,
+            "include_base_amount": True,
+        })
+
+        move = self.env["account.move"].create({
+            "move_type": "out_invoice",
+            "partner_id": self.partner_a.id,
+            "invoice_date": "2022-07-01",
+            "invoice_date_due": "2022-07-01",
+            "date": "2022-07-01",
+            "invoice_payment_term_id": False,
+            "l10n_latam_document_type_id": self.env.ref("l10n_pe.document_type01").id,
+            "invoice_line_ids": [Command.create({
+                "name": "test",
+                "quantity": 1,
+                "price_unit": 1000,
+                "tax_ids": [Command.set(taxes.ids)],
+            })],
+        })
+        move.action_post()
+        move.write({"edi_state": "sent"})
+
+        report = self.env.ref("l10n_pe_reports.tax_report_ple_sales_14_1")
+        options = self._generate_options(
+            report, fields.Date.from_string("2022-01-01"), fields.Date.from_string("2022-12-31")
+        )
+        report._get_lines(options)
+
+        self.maxDiff = None
+        self.assertEqual(
+            "\n".join(
+                [
+                    "|".join(line.split("|")[14:26])
+                    for line in self.env[report.custom_handler_model_name]
+                    .export_to_txt(options)["file_content"]
+                    .decode()
+                    .split("\r\n")
+                ]
+            ),
+            """
+1000.0|0.00|198.0|0.00|0.00|0.00|100.0|0.00|0.00|0.4|0.00|1298.4
+"""[1:],
+        )

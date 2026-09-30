@@ -6,11 +6,13 @@ import {
     mountView,
     onRpc,
     patchWithCleanup,
+    selectFieldDropdownItem,
     serverState,
     webModels,
 } from "@web/../tests/web_test_helpers";
 import { mailModels } from "@mail/../tests/mail_test_helpers";
 import { describe, expect, test } from "@odoo/hoot";
+import { animationFrame } from "@odoo/hoot-mock";
 
 import {
     DocumentsModels,
@@ -208,4 +210,38 @@ test("file sharing via link with multiple subfolders", async function () {
     await contains(`.o_data_row .o_field_cell[name="name"]:contains("Folder 4")`).click();
     expect(`.o_search_panel_label[data-tooltip="Folder 4"]`).toHaveCount(1);
     expect.verifySteps(["touch 2"]);
+});
+
+test("edit mode is preserved when interacting with modals or control panel", async function () {
+    onRpc("/documents/touch/<access_token>", () => ({}));
+    const serverData = getDocumentsTestServerData();
+    await makeDocumentsMockEnv({ serverData });
+    await mountView({
+        type: "list",
+        resModel: "documents.document",
+        arch: basicDocumentsListArch,
+        searchViewArch: getEnrichedSearchArch(),
+    });
+
+    // Enter edit mode and open "Search More" modal
+    await contains(".o_data_row:nth-child(1) td.o_list_record_selector").click();
+    expect(".o_data_row_selected").toHaveCount(1);
+    await contains('.o_data_row:nth-child(1) td.o_list_many2one[name="partner_id"]').click();
+    await selectFieldDropdownItem("partner_id", "Search More...");
+    
+    // Clicks inside the modal do not exit edit mode
+    await contains(`.modal-title:contains("Search: Related partner")`).click();
+    await animationFrame();
+    expect(".modal-title").toHaveText("Search: Related partner");
+    expect(".o_data_row_selected").toHaveCount(1);
+    await contains(".modal-footer .btn-secondary").click();
+
+    // Clicks near searchbar exit edit mode
+    await contains(".o_control_panel_breadcrumbs").click();
+    expect(".o_list_button_discard").toHaveCount(0);
+    expect(".o_data_row_selected").toHaveCount(1);
+
+    // Click below the list panel unselects the row
+    await contains(".o_renderer_with_searchpanel").click();
+    expect(".o_data_row_selected").toHaveCount(0);
 });

@@ -12,13 +12,14 @@
 # Martin Trigaux, 2024
 # Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Saara Hakanen <sahak@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-11-17 14:15+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-17 08:06+0000\n"
+"Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "industry_fsm_stock/fi/>\n"
 "Language: fi\n"
@@ -26,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: industry_fsm_stock
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.view_task_form2_inherit
@@ -36,7 +37,7 @@ msgid ""
 "                        </span>"
 msgstr ""
 "<span class=\"o_stat_text\">\n"
-"                            noutaa\n"
+"                            odottaa noutoa\n"
 "                        </span>"
 
 #. module: industry_fsm_stock
@@ -52,9 +53,9 @@ msgid ""
 "Your current access rights do not allow you to perform these actions. Please "
 "contact your administrator to request the necessary permissions."
 msgstr ""
-"Tämän tuotteen lisääminen tai päivittäminen on rajoitettu sen seuratun tilan "
-"vuoksi. Nykyiset käyttöoikeutesi eivät salli näiden toimien suorittamista. "
-"Ota yhteyttä järjestelmänvalvojaan ja pyydä tarvittavia oikeuksia."
+"Tämän tuotteen lisääminen tai päivittäminen on rajoitettu sen tilaseurannan "
+"vuoksi. Nykyiset käyttöoikeutesi eivät salli näiden toimintojen "
+"suorittamista. Ota yhteyttä ylläpitäjään ja pyydä tarvittavia oikeuksia."
 
 #. module: industry_fsm_stock
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.fsm_stock_tracking_line_view_form
@@ -104,7 +105,7 @@ msgstr "Kenttätyön erä"
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__id
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking_line__id
 msgid "ID"
-msgstr "ID"
+msgstr "Tunnus"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__write_uid
@@ -121,24 +122,24 @@ msgstr "Viimeksi päivitetty"
 #. module: industry_fsm_stock
 #: model:ir.model,name:industry_fsm_stock.model_fsm_stock_tracking_line
 msgid "Lines for FSM Stock Tracking"
-msgstr "Kenttätyön varastoseurantaa koskevat rivit"
+msgstr "Kenttätyön hallinnan varastoseurantarivit"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking_line__lot_id
 msgid "Lot/Serial Number"
-msgstr "Erä/sarjanumero"
+msgstr "Erä-/sarjanumero"
 
 #. module: industry_fsm_stock
 #. odoo-javascript
 #: code:addons/industry_fsm_stock/static/src/js/product_catalog/sale_order_line/sale_order_line.xml:0
 msgid "Lot/Serial number"
-msgstr "Erä/sarjanumero"
+msgstr "Erä-/sarjanumero"
 
 #. module: industry_fsm_stock
 #. odoo-python
 #: code:addons/industry_fsm_stock/models/project_task.py:0
 msgid "Pick Up Material"
-msgstr "Poimi materiaali"
+msgstr "Materiaalin nouto"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__product_id
@@ -148,7 +149,7 @@ msgstr "Tuote"
 #. module: industry_fsm_stock
 #: model:ir.model,name:industry_fsm_stock.model_product_product
 msgid "Product Variant"
-msgstr "Tuotevariaatio"
+msgstr "Tuotevariantti"
 
 #. module: industry_fsm_stock
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.view_task_form2_inherit
@@ -183,7 +184,7 @@ msgstr "Varastosiirto"
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_project_task__stock_move_customer_product_count
 msgid "Stock Move Customer Product Count"
-msgstr "Varaston siirto Asiakkaan tuotteiden lukumäärä"
+msgstr "Varastosiirron asiakastuotteiden lukumäärä"
 
 #. module: industry_fsm_stock
 #: model:ir.model,name:industry_fsm_stock.model_project_task
@@ -198,8 +199,8 @@ msgid ""
 "The ordered quantity cannot be decreased below the amount already delivered. "
 "Instead, create a return in your inventory."
 msgstr ""
-"Tilattua määrää ei voi pienentää jo toimitettua määrää pienemmäksi. Luo sen "
-"sijaan palautus varastoon."
+"Tilattua määrää ei voi vähentää jo toimitettua määrää pienemmäksi. Luo sen "
+"sijaan palautus varastointi-sovelluksessa."
 
 #. module: industry_fsm_stock
 #: model:ir.model,name:industry_fsm_stock.model_fsm_stock_tracking

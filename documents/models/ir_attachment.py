@@ -104,3 +104,15 @@ class IrAttachment(models.Model):
         if not self._context.get('no_document'):
             self.filtered(lambda a: not (vals.get('res_field') or a.res_field)).sudo()._create_document(vals)
         return super(IrAttachment, self).write(vals)
+
+    def unlink(self):
+        """Unlink linked documents before their attachment_id cascade deletes them."""
+        documents_sudo = self.env['documents.document'].sudo().with_context(active_test=False).search_fetch(
+            [('attachment_id', 'in', self.ids)],
+            ['attachment_id'],
+        )
+        if documents_sudo:
+            linked_attachments = documents_sudo.attachment_id
+            documents_sudo.unlink()
+            return super(IrAttachment, self - linked_attachments).unlink()
+        return super().unlink()

@@ -73,6 +73,32 @@ class TestHelpdeskMenu(TransactionCase):
         team.use_website_helpdesk_form = False
         self.assertFalse(team.website_menu_id.is_visible)
 
+    def test_website_form_keeps_translations(self):
+        """ The website form of a team must keep the template's translations, so
+        it is rendered in the visitor's language regardless of the language of
+        the user creating the team. """
+        self.env['res.lang']._activate_lang('fr_FR')
+        fr_lang = self.env['res.lang'].search([('code', '=', 'fr_FR')])
+        website = self.env['website'].create({'name': 'French website'})
+        website.write({'language_ids': [(4, fr_lang.id)], 'default_lang_id': fr_lang.id})
+
+        # Translate the form title to French so the languages are distinguishable.
+        submit_form = self.env.ref('website_helpdesk.ticket_submit_form')
+        submit_form.update_field_translations('arch_db', {'fr_FR': {'Submit a Ticket': 'Soumettre un ticket'}})
+
+        # The user configuring the team uses English while the website is French.
+        team = self.env['helpdesk.team'].with_context(lang='en_US').create({
+            'name': 'French Team',
+            'use_website_helpdesk_form': True,
+            'website_id': website.id,
+        })
+
+        form_view = team.website_form_view_id
+        self.assertIn('Submit a Ticket', form_view.with_context(lang='en_US').arch,
+            "The generated form should keep its English translation.")
+        self.assertIn('Soumettre un ticket', form_view.with_context(lang='fr_FR').arch,
+            "The generated form should keep its French translation.")
+
     def test_archive_multiple_teams_different_websites(self):
         """ Test archiving multiple helpdesk teams linked to different websites. """
         websites = self.env['website'].create([{'name': 'W1'}, {'name': 'W2'}])
@@ -92,3 +118,48 @@ class TestHelpdeskMenu(TransactionCase):
             self.assertTrue(team.website_menu_id and team.website_menu_id.exists(), f"Expected a website menu to be created for {team.name}")
             self.assertEqual(team.website_menu_id.website_id, websites[i])
         self.assertNotEqual(teams[0].website_menu_id.id, teams[1].website_menu_id.id, "Each team should have its own distinct menu")
+
+    def _create_teams(self, names, website, **extra_vals):
+        single = isinstance(names, str)
+        name_list = [names] if single else names
+        vals_list = [
+            {'name': name, 'use_website_helpdesk_form': True, 'website_id': website.id, **extra_vals}
+            for name in name_list
+        ]
+        teams = self.env['helpdesk.team'].create(vals_list)
+        return teams[0] if single else teams
+
+    def test_website_menu_sharing_and_cleanup(self):
+        """
+        Test scenarios for shared helpdesk Help menus:
+        - reuse on team creation
+        - reuse with a custom menu URL
+        - cleanup once no team references the menu anymore.
+        - when archiving the last team on a website, the menu should present.
+        """
+        website = self.env['website'].create({'name': 'Test Website'})
+
+        # Creating a new team should not create a new Help menu; it should reuse the existing one.
+        team_a = self._create_teams('Team A', website)
+        self.assertTrue(team_a.website_menu_id, "First team should have a website menu.")
+        team_b = self._create_teams('Team B', website)
+        self.assertEqual(team_b.website_menu_id, team_a.website_menu_id,
+                          "Second team should reuse the existing menu, not create a new one.")
+
+        # A custom menu URL should not prevent it from being reused.
+        team_a.website_menu_id.write({'name': 'Support', 'url': '/support'})
+        team_c = self._create_teams('Team C', website)
+        self.assertEqual(team_c.website_menu_id, team_a.website_menu_id,
+                          "Renaming the menu should not prevent it from being reused.")
+
+        # Unlinking the last team referencing the menu removes it.
+        menu = team_a.website_menu_id
+        (team_a + team_b + team_c).unlink()
+        self.assertFalse(menu.exists(), "Menu should be removed once no team references it anymore.")
+
+        # Archiving the only team on a website keeps the menu for the next team to reuse.
+        team_d = self._create_teams('Team D', website)
+        team_d.active = False
+        team_e = self._create_teams('Team E', website)
+        self.assertEqual(team_e.website_menu_id, team_d.website_menu_id,
+                          "New team should reuse the archived team's menu instead of duplicating it.")

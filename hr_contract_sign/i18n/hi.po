@@ -8,13 +8,13 @@
 # Manav Shah, 2025
 # Ujjawal Pathak, 2025
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-11-17 14:12+0000\n"
+"PO-Revision-Date: 2026-08-11 18:04+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
 "hr_contract_sign/hi/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_contract_sign
 #. odoo-python
@@ -36,18 +36,19 @@ msgstr ""
 #: code:addons/hr_contract_sign/wizard/hr_contract_sign_document_wizard.py:0
 msgid "%(user_name)s requested a new signature on the following documents:"
 msgstr ""
+"%(user_name)s ने नीचे दिए गए दस्तावेज़ों पर नए हस्ताक्षर का अनुरोध किया है:"
 
 #. module: hr_contract_sign
 #. odoo-python
 #: code:addons/hr_contract_sign/wizard/hr_contract_sign_document_wizard.py:0
 msgid "%s does not have a private email set."
-msgstr ""
+msgstr "%s प्राइवेट ईमेल सेट नहीं है।"
 
 #. module: hr_contract_sign
 #. odoo-python
 #: code:addons/hr_contract_sign/wizard/hr_contract_sign_document_wizard.py:0
 msgid "%s does not have a work email set."
-msgstr ""
+msgstr "%s वर्क ईमेल सेट नहीं है।"
 
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.hr_contract_sign_view_form
@@ -94,7 +95,7 @@ msgstr "कॉन्ट्रैक्ट का इतिहास"
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__cc_partner_ids
 msgid "Copy to"
-msgstr ""
+msgstr "कॉपी करें"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__create_uid
@@ -124,7 +125,7 @@ msgstr ""
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_mail_activity_plan_template__sign_template_id
 msgid "Document to sign"
-msgstr ""
+msgstr "साइन करने के लिए दस्तावेज़"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__sign_template_ids
@@ -156,6 +157,10 @@ msgid ""
 "                - If the selected email is not defined, the available one "
 "will be used."
 msgstr ""
+"हस्ताक्षर अनुरोध भेजने के लिए उपयोग किया गया ईमेल.\n"
+"                - वर्क \"वर्क ईमेल\" में तय किया गया ईमेल लेता है\n"
+"                - प्राइवेट प्राइवेट जानकारी में तय किया गया ईमेल लेता है\n"
+"                - अगर चुना गया ईमेल सेट नहीं है, तो उपलब्ध ईमेल का उपयोग किया जाएगा।"
 
 #. module: hr_contract_sign
 #: model:ir.model,name:hr_contract_sign.model_hr_employee
@@ -180,6 +185,8 @@ msgid ""
 "Employee's role on the templates to sign. The same role must be present in "
 "all the templates"
 msgstr ""
+"साइन किए जाने वाले टेम्प्लेट पर कर्मचारी की भूमिका. सभी टेम्प्लेट में एक जैसी ही भूमिका होनी "
+"चाहिए"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__employee_ids
@@ -194,7 +201,7 @@ msgstr "एचआर रिस्पॉन्सिबल"
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__has_both_template
 msgid "Has Both Template"
-msgstr ""
+msgstr "दोनों टेम्प्लेट हैं"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__id
@@ -204,7 +211,7 @@ msgstr "आईडी"
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_mail_activity_plan_template__is_signature_request
 msgid "Is Signature Request"
-msgstr ""
+msgstr "क्या हस्ताक्षर का अनुरोध है"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__write_uid
@@ -219,7 +226,7 @@ msgstr "आखिरी बार अपडेट हुआ"
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__mail_displayed
 msgid "Mail Displayed"
-msgstr ""
+msgstr "मेल दिखाया गया"
 
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.view_hr_contract_sign
@@ -242,23 +249,23 @@ msgstr ""
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.view_hr_contract_sign
 msgid "No template available"
-msgstr ""
+msgstr "कोई टेम्प्लेट उपलब्ध नहीं है"
 
 #. module: hr_contract_sign
 #. odoo-python
 #: code:addons/hr_contract_sign/wizard/hr_contract_sign_document_wizard.py:0
 msgid "Only %s has to sign."
-msgstr ""
+msgstr "सिर्फ़ %s को साइन करना है।"
 
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.view_hr_contract_sign
 msgid "Optional Message..."
-msgstr ""
+msgstr "वैकल्पिक मैसेज.।"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__possible_template_ids
 msgid "Possible Template"
-msgstr ""
+msgstr "संभावित टेम्प्लेट"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields.selection,name:hr_contract_sign.selection__hr_contract_sign_document_wizard__mail_to__private
@@ -279,7 +286,7 @@ msgstr "जिम्मेदार"
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_mail_activity_plan_template__responsible_count
 msgid "Responsible Count"
-msgstr ""
+msgstr "ज़िम्मेदारी संभालने वाले लोगों की संख्या"
 
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.view_hr_contract_sign
@@ -291,18 +298,18 @@ msgstr "भेजें"
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_employee__sign_request_count
 #: model:ir.model.fields,field_description:hr_contract_sign.field_res_users__sign_request_count
 msgid "Sign Request Count"
-msgstr ""
+msgstr "साइन के लिए भेजे गए कुल अनुरोध की संख्या"
 
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.view_hr_contract_sign
 msgid "Sign Request Options"
-msgstr ""
+msgstr "साइन के लिए अनुरोध के विकल्प"
 
 #. module: hr_contract_sign
 #: model:ir.model.fields,field_description:hr_contract_sign.field_hr_contract_sign_document_wizard__sign_template_responsible_ids
 #: model:ir.model.fields,field_description:hr_contract_sign.field_mail_activity_plan_template__sign_template_responsible_ids
 msgid "Sign Template Responsible"
-msgstr ""
+msgstr "साइन टेम्प्लेट संभालने वाला व्यक्ति"
 
 #. module: hr_contract_sign
 #: model:ir.model,name:hr_contract_sign.model_hr_contract_sign_document_wizard
@@ -342,6 +349,7 @@ msgid ""
 "This sign request has been cancelled due to the cancellation of the related "
 "contract."
 msgstr ""
+"संबंधित कॉन्ट्रैक्ट रद्द होने की वजह से साइन करने से जुड़े इस अनुरोध को रद्द कर दिया गया है।"
 
 #. module: hr_contract_sign
 #: model:ir.model,name:hr_contract_sign.model_res_users
@@ -356,7 +364,7 @@ msgstr "वर्क"
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.view_hr_contract_sign
 msgid "Write email or search contact..."
-msgstr ""
+msgstr "ईमेल लिखें या कॉन्टैक्ट खोजें..।"
 
 #. module: hr_contract_sign
 #. odoo-python
@@ -364,6 +372,8 @@ msgstr ""
 msgid ""
 "You can't delete a contract linked to a signed document, archive it instead."
 msgstr ""
+"साइन किए हुए दस्तावेज़ से जुड़े कॉन्ट्रैक्ट को आप मिटा नहीं सकते. इसकी जगह आप उसे आर्काइव "
+"करके रख सकते हैं।"
 
 #. module: hr_contract_sign
 #: model_terms:ir.ui.view,arch_db:hr_contract_sign.hr_contract_history_view_form

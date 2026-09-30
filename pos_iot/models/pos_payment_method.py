@@ -24,14 +24,7 @@ class PoSPaymentMethod(models.Model):
     @api.depends('use_payment_terminal')
     def _compute_payment_terminal_ids(self):
         for payment_method in self:
-            domain = [('type', '=', 'payment')]
-            if payment_method.use_payment_terminal == 'ingenico':
-                domain.append(('manufacturer', '=', 'Ingenico'))
-            elif payment_method.use_payment_terminal == 'worldline':
-                domain.append(('manufacturer', '=', 'Worldline'))
-            elif payment_method.use_payment_terminal == 'six_iot':
-                domain.append(('manufacturer', '=', 'Six'))
-            payment_method.payment_terminal_ids = self.env['iot.device'].search(domain)
+            payment_method.payment_terminal_ids = self.env['iot.device'].search([('type', '=', 'payment')])
 
     @api.model
     def _load_pos_data_fields(self, config_id):

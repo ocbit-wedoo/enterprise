@@ -18,4 +18,12 @@ class HelpdeskTicket(models.Model):
 
         self.env['data_merge.record']._update_foreign_keys(destination, source)
         destination.update({'sla_status_ids': status_list, 'sla_ids': status_list.mapped('sla_id')})
+
+        # To avoid creating a `data_merge_helpdesk_sale_timesheet` bridge module, we check if the timesheet fields are available.
+        # If necessary, we ensure that the timesheet so line is updated according to the destination ticket's value.
+        # _compute_so_line can't update the value because the cache is invalidated too late in _update_foreign_keys and the recompute don't have proper values
+        if hasattr(destination, 'sale_line_id') and hasattr(destination, 'timesheet_ids'):
+            ts_to_edit = destination.timesheet_ids.filtered(lambda ts: not ts.is_so_line_edited and ts._is_not_billed() and not ts.validated and ts.so_line != destination.sale_line_id)
+            ts_to_edit.write({"so_line": destination.sale_line_id.id})
+
         return {'post_merge': True, 'log_chatter': True}

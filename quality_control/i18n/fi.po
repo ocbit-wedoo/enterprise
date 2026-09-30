@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-05-13 16:56+0000\n"
+"PO-Revision-Date: 2026-09-18 08:43+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "quality_control/fi/>\n"
@@ -37,7 +37,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
@@ -667,13 +667,13 @@ msgstr "Erä/sarja"
 #. module: quality_control
 #: model:ir.model.fields,field_description:quality_control.field_quality_check_on_demand__lot_id
 msgid "Lot/Serial Number"
-msgstr "Erä/sarjanumero"
+msgstr "Erä-/sarjanumero"
 
 #. module: quality_control
 #: model:ir.model.fields,field_description:quality_control.field_quality_check__lot_name
 #: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__lot_name
 msgid "Lot/Serial Number Name"
-msgstr "Erän / sarjanumeron nimi"
+msgstr "Erä-/sarjanumeron nimi"
 
 #. module: quality_control
 #: model:ir.ui.menu,name:quality_control.quality_control_menu_traceability
@@ -960,7 +960,7 @@ msgstr "Tuotteiden siirrot (Stock Move Line)"
 #: model:ir.model.fields,field_description:quality_control.field_quality_check__uom_id
 #: model:ir.model.fields,field_description:quality_control.field_quality_check_wizard__uom_id
 msgid "Product Unit of Measure"
-msgstr "Tuotteen yksikkö"
+msgstr "Tuotteen mittayksikkö"
 
 #. module: quality_control
 #: model:ir.model,name:quality_control.model_product_product
@@ -1053,7 +1053,7 @@ msgstr "Laatuhälytykset"
 #: model:ir.model,name:quality_control.model_quality_check
 #: model_terms:ir.ui.view,arch_db:quality_control.view_stock_move_line_detailed_operation_tree_inherit_quality
 msgid "Quality Check"
-msgstr "Laadun tarkistus"
+msgstr "Laaduntarkastus"
 
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_graph
@@ -1178,7 +1178,7 @@ msgstr "Laatun tunnisteet"
 #: model:ir.actions.act_window,name:quality_control.quality_alert_team_action_config
 #: model:ir.ui.menu,name:quality_control.menu_quality_config_alert_team
 msgid "Quality Teams"
-msgstr "Laaturyhmät"
+msgstr "Laatutiimit"
 
 #. module: quality_control
 #: model_terms:ir.actions.act_window,help:quality_control.quality_alert_team_action
@@ -1192,12 +1192,12 @@ msgstr ""
 #. module: quality_control
 #: model:ir.model,name:quality_control.model_report_quality_control_quality_worksheet_internal
 msgid "Quality Worksheet Internal Report"
-msgstr "Laaduntarkastuksen arkin sisäinen raportti"
+msgstr "Laadun sisäinen työkirjaraportti"
 
 #. module: quality_control
 #: model:ir.model,name:quality_control.model_report_quality_control_quality_worksheet
 msgid "Quality Worksheet Report"
-msgstr "Laaduntarkastuksen laskentataulukon raportti"
+msgstr "Laadun työkirjaraportti"
 
 #. module: quality_control
 #: model:ir.model,name:quality_control.model_quality_check_spreadsheet
@@ -1329,7 +1329,7 @@ msgstr "Taulukkolaskenta"
 #: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_data
 #: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__spreadsheet_data
 msgid "Spreadsheet Data"
-msgstr "Taulukkolaskentataulukon data"
+msgstr "Taulukkolaskennan data"
 
 #. module: quality_control
 #: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__spreadsheet_file_name

@@ -249,6 +249,37 @@ class TestSEPACreditTransfer(TestSEPACreditTransferCommon):
         payment = self.createPayment(self.partner_a, 500, '000000000000000000000012371')
         self._check_structured_reference('ch', payment)
 
+    def test_ch_qr_iban_journal_reference_with_special_chars_is_sanitized(self):
+        """
+        Test that the reference is sanitized when generating a
+        QR-IBAN SEPA credit transfer.
+        """
+        self.bank_journal.bank_account_id.allow_out_payment = False
+        self.bank_journal.bank_acc_number = 'CH59 3007 6011 6238 5295 7'
+        self.partner_a.country_id = self.env.ref('base.ch')
+        ch_bank_account = self.env['res.partner.bank'].create({
+            'acc_number': 'CH59 3007 6011 6238 5295 7',
+            'partner_id': self.partner_a.id,
+            'allow_out_payment': True,
+        })
+
+        payment = self.createPayment(self.partner_a, 500, '°°°REF123°°°')
+        payment.partner_bank_id = ch_bank_account
+        payment.action_post()
+
+        batch = self.env['account.batch.payment'].create({
+            'journal_id': self.bank_journal.id,
+            'payment_ids': [Command.link(payment.id)],
+            'payment_method_id': self.sepa_ct_method.id,
+            'batch_type': 'outbound',
+        })
+        batch.validate_batch()
+
+        namespaces = {'ns': 'urn:iso:std:iso:20022:tech:xsd:pain.001.001.09'}
+        ct_doc = etree.fromstring(base64.b64decode(batch.export_file))
+        strd = ct_doc.findtext('.//ns:Strd/ns:CdtrRefInf/ns:Ref', namespaces=namespaces)
+        self.assertEqual('000000000000000...REF123...', strd)
+
     def test_structured_reference_fi(self):
         self.partner_a.country_id = self.env.ref('base.fi')
         payment = self.createPayment(self.partner_a, 500, '2023000098')

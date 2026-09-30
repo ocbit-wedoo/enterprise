@@ -284,7 +284,14 @@ class AccountBatchPayment(models.Model):
 
         template = self.env.ref('account_sepa_direct_debit.email_template_sdd_pre_notification')
         sdd_codes = set(self.env['account.payment.method']._get_sdd_payment_method_code())
-        for payment in self.payment_ids.filtered(lambda payment: payment.payment_method_code in sdd_codes and payment.sdd_mandate_id):
+        payments = self.payment_ids.filtered(lambda payment: payment.payment_method_code in sdd_codes and payment.sdd_mandate_id)
+        emails_from = template._generate_template(
+            payments.ids,
+            {'email_from'},
+        )
+
+        authorship_by_email = {}
+        for payment in payments:
             mandate = payment.sdd_mandate_id
             sanitized_acc_number = mandate.partner_bank_id.sanitized_acc_number
             anonymized_bank_account_number = f"{re.sub(r'.', '*', sanitized_acc_number[:-4])}{sanitized_acc_number[-4:]}"
@@ -296,7 +303,22 @@ class AccountBatchPayment(models.Model):
                 'amount': payment.amount,
                 'creditor_iban': anonymized_bank_account_number,
             }
-            payment.with_context(ctx).message_post_with_source(source_ref=template, subtype_xmlid='mail.mt_note')
+            email_from = emails_from[payment.id]['email_from']
+
+            if email_from not in authorship_by_email:
+                authorship_by_email[email_from] = (
+                    self.env['mail.thread']._message_compute_author(
+                        email_from=email_from,
+                    )
+                )
+
+            author_id, email_from = authorship_by_email[email_from]
+            payment.with_context(ctx).message_post_with_source(
+                source_ref=template,
+                subtype_xmlid='mail.mt_note',
+                author_id=author_id,
+                email_from=email_from,
+            )
         return res
 
     def check_payments_for_errors(self):

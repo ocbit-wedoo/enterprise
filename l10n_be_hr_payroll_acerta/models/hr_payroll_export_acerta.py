@@ -2,8 +2,21 @@
 
 from datetime import datetime
 from math import ceil
+from dateutil.relativedelta import relativedelta
+from pytz import timezone
 
 from odoo import api, models, fields, _
+
+from odoo.addons.resource.models.utils import timezone_datetime
+
+SICKNESS_ACCIDENT_CODES = {
+        '0050',  # Sick leave
+        '0055',  # Accident
+        '0056',  # New illness
+        '0059',  # Maternity leave
+        '0060',  # Occupational illness
+        '0065',  # Work accident
+    }
 
 
 class L10nBeHrPayrollExportAcerta(models.Model):
@@ -38,9 +51,10 @@ class L10nBeHrPayrollExportAcerta(models.Model):
         """
 
         work_entry = we_dotdict.work_entries[0]
-        duration = we_dotdict.duration
+        duration = we_dotdict.duration if not self.env.context.get('we_entry_date') else 0
+        entry_date = self.env.context.get('we_entry_date') or work_entry.date_start
         return 'KLX1' + self.company_id.acerta_code + contract.acerta_code.zfill(17) + '   ' \
-            + work_entry.date_start.strftime('%d/%m/%Y') + '  '  \
+            + entry_date.strftime('%d/%m/%Y') + '  '  \
             + work_entry.work_entry_type_id.acerta_code.zfill(4) + '  ' \
             + str(int(duration // 3600)).zfill(2) \
             + str(int(ceil(duration % 3600 // 100))).zfill(2) + '\n'
@@ -56,9 +70,22 @@ class L10nBeHrPayrollExportAcerta(models.Model):
                 }
             else:
                 we_by_day_and_code_in_contract = we_by_day_and_code
+            checked_leaves = set()
             for work_entries_by_code in we_by_day_and_code_in_contract.values():
                 for work_entries_dotdict in work_entries_by_code.values():
+                    overlapping_weekends = []
+                    leave_to_be_declared_in_weekend = work_entries_dotdict.work_entries[0].leave_id
+                    if (
+                        leave_to_be_declared_in_weekend
+                        and leave_to_be_declared_in_weekend.holiday_status_id.work_entry_type_id.acerta_code.zfill(4) in SICKNESS_ACCIDENT_CODES
+                        and leave_to_be_declared_in_weekend not in checked_leaves
+                    ):
+                        overlapping_weekends = self._get_overlapping_weekends(work_entries_dotdict.work_entries[0].leave_id)
+                        checked_leaves.add(leave_to_be_declared_in_weekend)
                     employee_entries += self._generate_line(contract, work_entries_dotdict)
+                    if overlapping_weekends:
+                        for we in overlapping_weekends:
+                            employee_entries += self.with_context(we_entry_date=we)._generate_line(contract, work_entries_dotdict)
         return employee_entries
 
     def _generate_export_file(self):
@@ -77,6 +104,24 @@ class L10nBeHrPayrollExportAcerta(models.Model):
 
     def _get_name(self):
         return _('Export to Acerta')
+
+    def _get_overlapping_weekends(self, leave):
+        calendar = leave.resource_calendar_id
+        attendances = calendar._attendance_intervals_batch(
+            timezone_datetime(leave.date_from), timezone_datetime(leave.date_to), resources=leave.employee_id.resource_id, tz=timezone(calendar.tz)
+        )[leave.employee_id.resource_id.id]
+
+        overlapping_weekend = []
+
+        start_date = min(attendance[0] for attendance in attendances).date()
+        end_date = max(attendance[1] for attendance in attendances).date()
+
+        for i in range((end_date - start_date).days + 1):
+            current_date = start_date + relativedelta(days=i)
+            if not calendar._works_on_date(current_date):
+                overlapping_weekend.append(current_date)
+
+        return overlapping_weekend
 
 
 class L10nBeHrPayrollExportAcertaEmployee(models.Model):

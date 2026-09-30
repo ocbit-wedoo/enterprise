@@ -314,3 +314,47 @@ class TestSaleTimesheetInTicket(TestCommonSaleTimesheet):
         }])
         self.assertEqual(so1.state, 'sale')
         self.assertEqual(so2.state, 'sale')
+
+    def test_merge_respects_destination_sale_line(self):
+        if not self.env["ir.module.module"].search([("name", "=", "data_merge_helpdesk"), ("state", "=", "installed")]):
+            self.skipTest("The data_merge_helpdesk module is needed to test merging helpdesk ticket with timesheets")
+
+        so_a = self.env["sale.order"].create({
+            "partner_id": self.partner_a.id,
+            "order_line": [
+                (0, 0, {"product_id": self.product_delivery_timesheet1.id})
+            ],
+        })
+        so_b = self.env["sale.order"].create({
+            "partner_id": self.partner_a.id,
+            "order_line": [
+                (0, 0, {'product_id': self.product_delivery_timesheet1.id})
+            ],
+        })
+
+        sol_a = so_a.order_line[0]
+        sol_b = so_b.order_line[0]
+
+        source_ticket = self.env['helpdesk.ticket'].create({
+            'name': 'Test Ticket 1',
+            'team_id': self.helpdesk_team.id,
+            'sale_line_id': sol_a.id,
+        })
+        dest_ticket = self.env['helpdesk.ticket'].create({
+            'name': 'Test Ticket 2',
+            'team_id': self.helpdesk_team.id,
+            'sale_line_id': sol_b.id,
+        })
+
+        timesheet_src = self.env["account.analytic.line"].create({
+            "employee_id": self.employee_user.id,
+            "so_line": sol_a.id,
+            "unit_amount": 1,
+            "helpdesk_ticket_id": source_ticket.id
+        })
+
+        self.env['helpdesk.ticket']._merge_method(dest_ticket, source_ticket)
+
+        # the destination should have properties linking to sale order B
+        self.assertEqual(timesheet_src.so_line.id, sol_b.id)
+        self.assertEqual(timesheet_src.order_id.id, so_b.id)

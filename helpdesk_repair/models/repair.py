@@ -53,3 +53,18 @@ class Repair(models.Model):
         context = dict(self.env.context)
         context.pop('default_lot_id', None)
         return super(Repair, self.with_context(context))._action_repair_confirm()
+
+    def action_create_sale_order(self):
+        """
+        Prevent `default_user_id` from propagating when creating a quotation
+        so the quotation's salesperson is taken from the customer, unless a
+        valid Sales user is explicitly provided in the context.
+        """
+        context = dict(self.env.context)
+        default_user_id = context.get('default_user_id')
+        if (
+            not default_user_id
+            or not self.env['res.users'].browse(default_user_id).has_group('sales_team.group_sale_salesman')
+        ):
+            context.pop('default_user_id', None)
+        return super(Repair, self.with_context(context)).action_create_sale_order()

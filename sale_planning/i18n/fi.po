@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-04-03 10:34+0000\n"
+"PO-Revision-Date: 2026-08-26 09:20+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "sale_planning/fi/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: sale_planning
 #. odoo-python
@@ -88,7 +88,7 @@ msgid ""
 "All open shifts and sales orders have already been assigned, or there are no "
 "resources available to take them at this time."
 msgstr ""
-"Kaikki avoimet työvuorot ja myyntitilaukset on jo annettu, tai niitä varten "
+"Kaikki avoimet työvuorot ja myyntitilaukset on jo jaettu, tai niitä varten "
 "ei ole tällä hetkellä resursseja."
 
 #. module: sale_planning
@@ -114,7 +114,7 @@ msgstr "Asiakas"
 #. module: sale_planning
 #: model:product.template,name:sale_planning.developer_product_product_template
 msgid "Developer (Plan services)"
-msgstr "Kehittäjä (suunnittele palvelut)"
+msgstr "Kehittäjä (palveluiden suunnittelu)"
 
 #. module: sale_planning
 #: model:ir.model.fields,field_description:sale_planning.field_planning_slot__end_datetime
@@ -134,7 +134,7 @@ msgstr "Tunnit"
 #. module: sale_planning
 #: model:product.template,name:sale_planning.technical_maintainance_product_product_template
 msgid "IT Technical Maintenance (Plan services)"
-msgstr "Tietotekniikan tekninen ylläpito (suunnittele palvelut)"
+msgstr "Tietotekniikan tekninen ylläpito (palveluiden suunnittelu)"
 
 #. module: sale_planning
 #: model:planning.role,name:sale_planning.planning_role_technician
@@ -154,14 +154,14 @@ msgid ""
 "planned.                 You can also manually schedule open shifts for your "
 "Sales Order or assign them to any employee you prefer."
 msgstr ""
-"Jos valittu, tälle roolille luodaan automaattisesti työvuoro, kun "
-"myyntitilaus vahvistetaan.                 Automaattinen suunnitelma "
-"-toiminnon avulla vain tämän roolin omaaville työntekijöille määritetään "
-"automaattisesti työvuorot tätä palvelua sisältäville "
-"myyntitilauksille.                 Järjestelmä ottaa huomioon työntekijän "
-"saatavuuden ja jäljellä olevan suunnitellun ajan.                 Voit myös "
-"manuaalisesti suunnitella myyntitilauksen avoimet työvuorot tai määrittää ne "
-"haluamallesi työntekijälle."
+"Jos otettu käyttöön, valitulle roolille luodaan automaattisesti työvuoro "
+"myyntitilauksen vahvistuksen yhteydessä.                 'Automaattinen "
+"suunnittelu' -toiminnon avulla vain tämän roolin omaaville työntekijöille "
+"määritetään automaattisesti työvuorot tämän palvelun sisältäville "
+"myyntitilauksille.                 Järjestelmä huomioi työntekijän "
+"saatavuuden sekä jäljellä olevan suunniteltavan ajan.                 Voit "
+"myös aikatauluttaa myyntitilauksen avoimet työvuorot manuaalisesti tai "
+"määrittää ne haluamallesi työntekijälle."
 
 #. module: sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_search_inherit_sale_planning
@@ -301,8 +301,8 @@ msgid ""
 "are automatically planned, the remaining hours of the sales order item, as "
 "well as the role defined on the service, are taken into account."
 msgstr ""
-"Myyntitilauskohde, jolle tämä siirto tehdään. Kun myyntitilauksia "
-"suunnitellaan automaattisesti, otetaan huomioon myyntitilauskohteen jäljellä "
+"Myyntitilaustuote, jota varten tämä vuoro suoritetaan. Kun myyntitilauksia "
+"suunnitellaan automaattisesti, huomioidaan myyntitilaustuotteen jäljellä "
 "olevat tunnit sekä palvelulle määritelty rooli."
 
 #. module: sale_planning
@@ -369,7 +369,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_slot_view_gantt_inherit_sale_planning
 #: model_terms:ir.ui.view,arch_db:sale_planning.planning_view_form_in_gantt_inherit_sale_planning
 msgid "Unschedule"
-msgstr "Ajastamaton"
+msgstr "Poista aikataulutus"
 
 #. module: sale_planning
 #. odoo-python

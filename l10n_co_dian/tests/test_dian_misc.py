@@ -7,6 +7,7 @@ from unittest.mock import patch, Mock
 from odoo import Command
 from odoo.tests import tagged, freeze_time
 from odoo.addons.l10n_co_dian import xml_utils
+from odoo.addons.l10n_co_dian.models.res_partner import ResPartner
 from .common import TestCoDianCommon
 
 
@@ -189,3 +190,37 @@ class TestDianMisc(TestCoDianCommon):
         journal = self.support_document_journal
         message = self._mock_button_l10n_co_dian_fetch_numbering_range(journal=journal, response_file='GetNumberingRange_journal.xml')
         self.assertEqual(message['params']['message'], 'The journal values were successfully updated.')
+
+    def test_dian_update_data_multi_company(self):
+        """ Test that the child contact created by DIAN update inherits the parent's company """
+
+        company_a = self.company_data['company']
+
+        company_b = self.env['res.company'].create({'name': 'Company B'})
+
+        parent_partner = self.env['res.partner'].create({
+            'name': 'Parent Contact',
+            'email': 'parent@test.com',
+            'company_id': company_b.id,
+            'country_id': self.env.ref('base.co').id,
+            'l10n_latam_identification_type_id': self.env.ref('l10n_co.rut').id,
+            'vat': '1018419008-5',
+        })
+
+        mock_dian_data = {
+            'name': 'Official DIAN Child',
+            'email': 'child_dian@test.com',
+        }
+
+        with patch.object(ResPartner, '_l10n_co_dian_call_get_acquirer', return_value=mock_dian_data):
+            # sudo() used to bypass multi company record rules
+            parent_partner.with_company(company_a).sudo()._l10n_co_dian_update_data(company_a)
+
+        child_partner = parent_partner.child_ids.filtered(lambda p: p.type == 'invoice')
+
+        self.assertTrue(child_partner, "A child invoice contact should have been created.")
+        self.assertEqual(
+            child_partner.company_id,
+            company_b,
+            "The child contact should inherit Company B from the parent, not the active Company A."
+        )

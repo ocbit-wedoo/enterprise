@@ -340,17 +340,23 @@ class PosUrbanPiperController(http.Controller):
         main_product = self._product_template_to_product_variant(int(line_data['merchant_id'].split('-')[0]), variant_value_lst)
         price_unit = float(line_data['price'] + price_extra)
         tax_ids = main_product.taxes_id.filtered_domain(request.env['account.tax']._check_company_domain(pos_config_sudo.company_id))
+        tax_types = tax_ids.flatten_taxes_hierarchy().mapped('price_include')
+        line_qty = int(line_data['quantity'])
+        if len(set(tax_types)) > 1:
+            _logger.warning("UrbanPiper: Multiple tax types found for product %s. Using the first one.", main_product.name)
         if line_data.get('taxes'):
-            line_taxes = self._get_tax_value(line_data.get('taxes'), pos_config_sudo)
+            if tax_types and len(set(tax_types)) >= 1 and tax_types[0]:
+                price_unit = float(line_data['total_with_tax'] / line_qty + price_extra)
+            line_taxes = tax_ids
         elif tax_ids:
             price_unit = self._prepare_price_unit_from_baseline(tax_ids, price_unit, main_product, pos_config_sudo)
             line_taxes = tax_ids
         tax_ids_after_fiscal_position = pos_config_sudo.urbanpiper_fiscal_position_id.map_tax(line_taxes)
-        taxes = tax_ids_after_fiscal_position.compute_all(price_unit, pos_config_sudo.company_id.currency_id, int(line_data['quantity']), product=main_product)
+        taxes = tax_ids_after_fiscal_position.compute_all(price_unit, pos_config_sudo.company_id.currency_id, line_qty, product=main_product)
         lines = Command.create({
             'product_id': main_product.id,
             'full_product_name': line_data['title'],
-            'qty': int(line_data['quantity']),
+            'qty': line_qty,
             'attribute_value_ids': attribute_value_ids,
             'price_extra': price_extra,
             'price_unit': price_unit,

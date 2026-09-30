@@ -1076,7 +1076,6 @@ class Task(models.Model):
 
         valid_intervals_per_user = candidates._web_gantt_get_valid_intervals(start_date, end_date, users, all_candidates.ids or candidates.ids)
         initial_valid_intervals_per_user = dict(valid_intervals_per_user.items())
-        move_in_conflicts_users = set()
         first_possible_start_date_per_candidate = {}
         last_possible_end_date_per_candidate = {}
 
@@ -1124,7 +1123,7 @@ class Task(models.Model):
             index = 0 if search_forward else len(intervals) - 1
             used_intervals = []
             compute_start_date, compute_end_date = False, False
-            while users_ids not in move_in_conflicts_users and ((search_forward and index < len(intervals)) or (not search_forward and index >= 0)) and candidate_duration > intervals_durations:
+            while ((search_forward and index < len(intervals)) or (not search_forward and index >= 0)) and candidate_duration > intervals_durations:
                 start, end, _dummy = intervals[index]
                 index += step
                 start, end = start.astimezone(utc), end.astimezone(utc)
@@ -1166,7 +1165,7 @@ class Task(models.Model):
                 intervals_durations += duration
                 used_intervals.append((start, end, candidate))
 
-            if users_ids not in move_in_conflicts_users and candidate_duration == intervals_durations and compute_start_date and compute_end_date:
+            if candidate_duration == intervals_durations and compute_start_date and compute_end_date:
                 candidates_passed_initial_deadline = candidates_passed_initial_deadline or (not candidate[start_date_field_name] and compute_end_date > candidate[stop_date_field_name].astimezone(utc))
                 old_planned_date_begin, old_date_deadline = candidate[start_date_field_name], candidate[stop_date_field_name]
                 if candidate._web_gantt_reschedule_write_new_dates(compute_start_date, compute_end_date, start_date_field_name, stop_date_field_name):
@@ -1187,7 +1186,7 @@ class Task(models.Model):
                     return result, {}
 
                 candidates_moved_with_conflicts = True
-                move_in_conflicts_users.add(users_ids)
+                used_intervals = []
                 final_interval_index = -1 if search_forward else 0
                 ranges = initial_valid_intervals_per_user[users_ids]._items
                 compute_start_date = ranges[final_interval_index][0]

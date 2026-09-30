@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-05-17 05:59+0000\n"
+"PO-Revision-Date: 2026-08-20 16:24+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "appointment/bg/>\n"
@@ -37,7 +37,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -828,7 +828,7 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_date
 msgid "<small class=\"text-uppercase text-muted\">Date &amp; time</small>"
-msgstr ""
+msgstr "<small class=\"text-uppercase text-muted\">Дата и час</small>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_details
@@ -1281,7 +1281,7 @@ msgstr "Среща"
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_answer_input
 msgid "Appointment Answer Inputs"
-msgstr ""
+msgstr "Входове за отговори при запис"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_answer_input_ids
@@ -1315,7 +1315,7 @@ msgstr "Отменена среща"
 #. module: appointment
 #: model:mail.template,subject:appointment.appointment_canceled_mail_template
 msgid "Appointment Canceled: {{ object.appointment_type_id.name }}"
-msgstr ""
+msgstr "Отменен запис: {{ object.appointment_type_id.name }}"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
@@ -1382,7 +1382,7 @@ msgstr "Въпроси за насрочване"
 #: model:ir.model,name:appointment.model_appointment_resource
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__appointment_resource_id
 msgid "Appointment Resource"
-msgstr ""
+msgstr "Ресурс за резервация"
 
 #. module: appointment
 #: model:ir.actions.server,name:appointment.resource_calendar_leaves_action_show_appointment_resources
@@ -1393,7 +1393,7 @@ msgstr "Отпуски по болест"
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_resource_ids
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_search
 msgid "Appointment Resources"
-msgstr ""
+msgstr "Ресурси за запис"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_resource_action
@@ -1401,6 +1401,9 @@ msgid ""
 "Appointment Resources are the places or equipment people can book\n"
 "                (e.g. Tables, Tennis Courts, Meeting Rooms, ...)"
 msgstr ""
+"Ресурсите за запис са местата или оборудването, които хората могат да "
+"резервират\n"
+"                (напр. маси, тенис кортове, зали за срещи, ...)"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_status
@@ -1602,7 +1605,7 @@ msgstr "Фоново изображение"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__base_book_url
 msgid "Base Link URL"
-msgstr ""
+msgstr "URL на базовата връзка"
 
 #. module: appointment
 #. odoo-python
@@ -1648,7 +1651,7 @@ msgstr "Детайли на резервацията"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__booked_mail_template_id
 msgid "Booking Email"
-msgstr ""
+msgstr "Имейл за резервация"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__event_stop
@@ -1658,7 +1661,7 @@ msgstr "Край на резрвацията"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__booking_line_ids
 msgid "Booking Lines"
-msgstr ""
+msgstr "Редове на резервацията"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
@@ -1853,7 +1856,7 @@ msgstr "Свързване"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__connectors_displayed
 msgid "Connectors Displayed"
-msgstr ""
+msgstr "Показани конектори"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_res_partner
@@ -1920,7 +1923,7 @@ msgstr "Създаване на линк за споделяне"
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_resource_action
 msgid "Create an Appointment Resource"
-msgstr ""
+msgstr "Създайте ресурс за запис"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_type_action_custom
@@ -1972,6 +1975,7 @@ msgstr "Клиент"
 msgid ""
 "DROP BUILDING BLOCKS HERE TO MAKE THEM AVAILABLE ACROSS ALL APPOINTMENTS"
 msgstr ""
+"ПУСНЕТЕ СТРОИТЕЛНИ БЛОКОВЕ ТУК, ЗА ДА ГИ НАПРАВИТЕ ДОСТЪПНИ ВЪВ ВСИЧКИ ЗАПИСИ"
 
 #. module: appointment
 #. odoo-python
@@ -1985,7 +1989,7 @@ msgstr "Дата"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_progress_bar
 msgid "Date &amp; time"
-msgstr ""
+msgstr "Дата &amp; час"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
@@ -2023,6 +2027,13 @@ msgid ""
 "        defining non-recurring time slot (e.g. 10th of April 2021 from 10 to "
 "11 am) from its calendar."
 msgstr ""
+"Определя типа на слота. Обикновеният слот е типът по подразбиране, който се "
+"използва за\n"
+"        тип запис, използван многократно като медицински преглед.\n"
+"        Еднократният тип се използва само когато потребител създаде "
+"персонализиран тип запис за клиент чрез\n"
+"        задаване на неповтарящ се времеви слот (напр. 10 април 2021 г. от 10 "
+"до 11 ч.) от своя календар."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__event_videocall_source
@@ -2030,6 +2041,9 @@ msgid ""
 "Defines the type of video call link that will be used for the generated "
 "events. Keep it empty to prevent generating meeting url."
 msgstr ""
+"Определя типа на връзката за видеоразговор, която ще се използва за "
+"генерираните събития. Оставете празно, за да предотвратите генерирането на "
+"URL за среща."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
@@ -2057,7 +2071,7 @@ msgstr "Описание"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__destination_resource_ids
 msgid "Destination combination"
-msgstr ""
+msgstr "Целева комбинация"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_progress_bar
@@ -2073,6 +2087,8 @@ msgstr ""
 msgid ""
 "Determine if the slot englobe the whole day, mainly used for unique slot type"
 msgstr ""
+"Определя дали слотът обхваща целия ден, използва се основно за уникален тип "
+"слот"
 
 #. module: appointment
 #. odoo-javascript
@@ -2104,7 +2120,7 @@ msgstr "Показване на снимката на потребители/р�
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__category_time_display
 msgid "Displayed category time fields"
-msgstr ""
+msgstr "Показвани полета за час на категорията"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__appointment_manual_confirmation
@@ -2202,7 +2218,7 @@ msgstr "Помощен модел за поточно предаване на ф
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.portal_my_home_appointment
 msgid "Follow, reschedule or cancel your appointments"
-msgstr ""
+msgstr "Проследявайте, пренасрочвайте или отменяйте своите записи"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__message_follower_ids
@@ -2244,7 +2260,7 @@ msgstr "Име и фамилия"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Get Share Link"
-msgstr ""
+msgstr "Вземи връзка за споделяне"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_invite__suggested_staff_user_ids
@@ -2252,11 +2268,13 @@ msgid ""
 "Get the users linked to the appointment type selected to apply a domain on "
 "the users that can be selected"
 msgstr ""
+"Взема потребителите, свързани с избрания тип запис, за да приложи домейн "
+"върху потребителите, които могат да бъдат избрани"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Google Agenda"
-msgstr ""
+msgstr "Google Agenda"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_answer_input_view_search
@@ -2270,6 +2288,8 @@ msgstr "Групиране по"
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Guest usage is limited to 10 customers for performance reason."
 msgstr ""
+"Използването от гости е ограничено до 10 клиенти по съображения за "
+"производителност."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
@@ -2354,6 +2374,8 @@ msgid ""
 "If empty, all resources are considered to be available.\n"
 "If set, only the selected resources will be taken into account for this slot."
 msgstr ""
+"Ако е празно, всички ресурси се считат за налични.\n"
+"Ако е зададено, само избраните ресурси ще бъдат взети предвид за този слот."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_slot__restrict_to_user_ids
@@ -2361,6 +2383,9 @@ msgid ""
 "If empty, all users are considered to be available.\n"
 "If set, only the selected users will be taken into account for this slot."
 msgstr ""
+"Ако е празно, всички потребители се считат за налични.\n"
+"Ако е зададено, само избраните потребители ще бъдат взети предвид за този "
+"слот."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__resource_calendar_id
@@ -2368,6 +2393,8 @@ msgid ""
 "If kept empty, the working schedule of the company set on the resource will "
 "be used"
 msgstr ""
+"Ако се остави празно, ще се използва работният график на фирмата, зададена "
+"за ресурса"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__booked_mail_template_id
@@ -2383,6 +2410,8 @@ msgid ""
 "If set an email will be sent to the customer when the appointment is "
 "cancelled."
 msgstr ""
+"Ако е зададено, ще бъде изпратен имейл до клиента, когато записът бъде "
+"отменен."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__active
@@ -2471,7 +2500,7 @@ msgstr "Имейл за покана до нови участници в сре�
 #. module: appointment
 #: model:mail.template,subject:appointment.attendee_invitation_mail_template
 msgid "Invitation to {{ object.event_id.name }}"
-msgstr ""
+msgstr "Покана за {{ object.event_id.name }}"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.appointment_type_action_custom
@@ -2500,6 +2529,8 @@ msgid ""
 "Keep empty to allow visitors from any country, otherwise you only allow "
 "visitors from selected countries"
 msgstr ""
+"Оставете празно, за да разрешите посетители от всяка държава; в противен "
+"случай разрешавате само посетители от избраните държави"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer__write_uid
@@ -2530,7 +2561,7 @@ msgstr "Последно актуализирано на"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__allow_guests
 msgid "Let attendees invite guests when registering a meeting."
-msgstr ""
+msgstr "Позволете на участниците да поканят гости при регистрация за среща."
 
 #. module: appointment
 #. odoo-python
@@ -2565,7 +2596,7 @@ msgstr "Връзката е копирана в клипборда!"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Link copied to your clipboard!"
-msgstr ""
+msgstr "Връзката е копирана в клипборда ви!"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__linked_resource_ids
@@ -2576,6 +2607,8 @@ msgstr "Свързан ресурс"
 #: model:ir.model.fields,help:appointment.field_appointment_resource__linked_resource_ids
 msgid "List of resources that can be combined to handle a bigger demand."
 msgstr ""
+"Списък с ресурси, които могат да бъдат комбинирани за обслужване на по-"
+"голямо търсене."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__location_id
@@ -2585,12 +2618,12 @@ msgstr "Локация"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__location
 msgid "Location formatted"
-msgstr ""
+msgstr "Форматирано местоположение"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__location
 msgid "Location formatted for one line uses"
-msgstr ""
+msgstr "Местоположение, форматирано за използване на един ред"
 
 #. module: appointment
 #. odoo-javascript
@@ -2636,7 +2669,7 @@ msgstr "Аз (само с потребители)"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__videocall_redirection
 msgid "Meeting redirection URL"
-msgstr ""
+msgstr "URL за пренасочване на среща"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -2749,7 +2782,7 @@ msgstr "Все още няма споделени връзки!"
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_search_booking
 msgid "No Show"
-msgstr ""
+msgstr "Неявяване"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_type_action_custom
@@ -2759,7 +2792,7 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__appointment_type_info_msg
 msgid "No User Assigned Message"
-msgstr ""
+msgstr "Съобщение за неназначен потребител"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.calendar_event_action_appointment_reporting
@@ -2778,7 +2811,7 @@ msgstr "Никакъв"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_calendar_event__alarm_ids
 msgid "Notifications sent to all attendees to remind of the meeting."
-msgstr ""
+msgstr "Известия, изпращани до всички участници, за да напомнят за срещата."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__message_needaction_counter
@@ -2814,7 +2847,7 @@ msgstr "Odoo дискусии"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_slot__slot_type__unique
 msgid "One Shot"
-msgstr ""
+msgstr "Еднократно"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -2826,7 +2859,7 @@ msgstr "Онлайн среща"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid ""
 "Only letters, numbers, underscores and dashes are allowed in your links."
-msgstr ""
+msgstr "Във връзките ви са разрешени само букви, цифри, долни черти и тирета."
 
 #. module: appointment
 #. odoo-python
@@ -2835,24 +2868,27 @@ msgid ""
 "Only letters, numbers, underscores and dashes are allowed in your links. You "
 "need to adapt %s."
 msgstr ""
+"Във връзките ви са разрешени само букви, цифри, долни черти и тирета. Трябва "
+"да адаптирате %s."
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/appointment_type.py:0
 msgid "Only one anytime appointment type is allowed for a specific user."
 msgstr ""
+"За конкретен потребител е разрешен само един тип запис „по всяко време“."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Oops! Your appointment is scheduled in less than"
-msgstr ""
+msgstr "Опа! Вашият запис е насрочен за по-малко от"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.js:0
 #: code:addons/appointment/static/src/views/custom_appointment_form_dialog/custom_appointment_form_dialog.js:0
 msgid "Open Appointment Type Form"
-msgstr ""
+msgstr "Отвори формуляра за тип запис"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_form
@@ -2894,7 +2930,7 @@ msgstr "Отминал"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_booker_id
 msgid "Person who is booking the appointment"
-msgstr ""
+msgstr "Лице, което прави записа"
 
 #. module: appointment
 #. odoo-python
@@ -2916,7 +2952,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Pick your availabilities"
-msgstr ""
+msgstr "Изберете вашата свободна заетост"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__placeholder
@@ -2931,7 +2967,7 @@ msgstr "Моля, изберете друга дата."
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__suggested_resource_ids
 msgid "Possible resources"
-msgstr ""
+msgstr "Възможни ресурси"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__suggested_staff_user_ids
@@ -2980,7 +3016,7 @@ msgstr "Въпроси"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__radio
 msgid "Radio (one answer)"
-msgstr ""
+msgstr "Радио бутон (един отговор)"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__rating_ids
@@ -3048,18 +3084,18 @@ msgstr "Ресурс"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Resource %s"
-msgstr ""
+msgstr "Ресурс %s"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.calendar_event_action_view_bookings_resources
 #: model:ir.actions.server,name:appointment.calendar_event_action_all_resources_bookings
 msgid "Resource Bookings"
-msgstr ""
+msgstr "Резервации на ресурси"
 
 #. module: appointment
 #: model:ir.ui.menu,name:appointment.menu_appointment_resource_leaves
 msgid "Resource Leaves"
-msgstr ""
+msgstr "Отсъствия на ресурси"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.appointment_resource_action
@@ -3084,12 +3120,12 @@ msgstr ""
 #. module: appointment
 #: model:ir.ui.menu,name:appointment.menu_appointment_schedule_resource_booking
 msgid "Resources Bookings"
-msgstr ""
+msgstr "Резервации на ресурси"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__on_leave_resource_ids
 msgid "Resources intersecting with leave time"
-msgstr ""
+msgstr "Ресурси, застъпващи се с времето на отсъствие"
 
 #. module: appointment
 #. odoo-python
@@ -3105,12 +3141,12 @@ msgstr "Отговорен потребител"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_tree
 msgid "Restrict to Resource"
-msgstr ""
+msgstr "Ограничи до ресурс"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__restrict_to_resource_ids
 msgid "Restrict to Resources"
-msgstr ""
+msgstr "Ограничи до ресурси"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_tree
@@ -3126,7 +3162,7 @@ msgstr "Ограничаване до потребители"
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Review Booking"
-msgstr ""
+msgstr "Преглед на резервацията"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -3158,7 +3194,7 @@ msgstr "Запазете и Затворете"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/custom_appointment_form_dialog/custom_appointment_form_dialog.xml:0
 msgid "Save & Copy Link"
-msgstr ""
+msgstr "Запиши и копирай връзка"
 
 #. module: appointment
 #. odoo-javascript
@@ -3188,17 +3224,17 @@ msgstr "рафик, базиран на"
 #: code:addons/appointment/static/src/appointment_plugin.js:0
 #: code:addons/appointment/static/src/js/wysiwyg.js:0
 msgid "Schedule an Appointment"
-msgstr ""
+msgstr "Насрочване на записване"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__min_schedule_hours
 msgid "Schedule before (hours)"
-msgstr ""
+msgstr "Насрочване преди (часове)"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__max_schedule_days
 msgid "Schedule not after (days)"
-msgstr ""
+msgstr "Насрочване не по-късно от (дни)"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -3221,28 +3257,28 @@ msgstr "Търсете в Описанието "
 #. odoo-python
 #: code:addons/appointment/controllers/portal.py:0
 msgid "Search in Name"
-msgstr ""
+msgstr "Търсене в Име"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/controllers/portal.py:0
 msgid "Search in Responsible"
-msgstr ""
+msgstr "Търсене в Отговорник"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid "Select Appointments to share..."
-msgstr ""
+msgstr "Изберете записвания за споделяне..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
 msgid "Select Resources"
-msgstr ""
+msgstr "Изберете ресурси"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Select Resources..."
-msgstr ""
+msgstr "Изберете ресурси..."
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__assign_method__time_resource
@@ -3262,7 +3298,7 @@ msgstr "Изберете потребители..."
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid "Select a date &amp; time"
-msgstr ""
+msgstr "Изберете дата &amp; час"
 
 #. module: appointment
 #. odoo-javascript
@@ -3283,22 +3319,23 @@ msgstr "Избран отговор"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__appointment_type_count
 msgid "Selected Appointments Count"
-msgstr ""
+msgstr "Брой избрани записвания"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_answer_input_view_search
 msgid "Selection Questions"
-msgstr ""
+msgstr "Въпроси с избор"
 
 #. module: appointment
 #: model:mail.template,description:appointment.appointment_canceled_mail_template
 msgid "Sent to all attendees when an appointment is cancelled"
-msgstr ""
+msgstr "Изпраща се до всички участници, когато записването е отменено"
 
 #. module: appointment
 #: model:mail.template,description:appointment.appointment_booked_mail_template
 msgid "Sent to followers of an appointment type when a meeting is booked"
 msgstr ""
+"Изпраща се до последователите на тип записване, когато е резервирана среща"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer__sequence
@@ -3321,13 +3358,13 @@ msgstr "Споделете"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/kanban/kanban_controller.js:0
 msgid "Share Appointment"
-msgstr ""
+msgstr "Сподели записване"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Share Appointment Link"
-msgstr ""
+msgstr "Сподели връзка за записване"
 
 #. module: appointment
 #. odoo-javascript
@@ -3335,7 +3372,7 @@ msgstr ""
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form_custom_share
 msgid "Share Availabilities"
-msgstr ""
+msgstr "Сподели свободни часове"
 
 #. module: appointment
 #. odoo-javascript
@@ -3363,7 +3400,7 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__shareable
 msgid "Shareable"
-msgstr ""
+msgstr "Споделяемо"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__anytime
@@ -3375,7 +3412,7 @@ msgstr ""
 #: model:ir.ui.menu,name:appointment.menu_appointment_invite
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Shared Links"
-msgstr ""
+msgstr "Споделени връзки"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__short_code
@@ -3385,12 +3422,12 @@ msgstr "Кратък код"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__short_code_format_warning
 msgid "Short Code Format Warning"
-msgstr ""
+msgstr "Предупреждение за формат на кратък код"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__short_code_unique_warning
 msgid "Short Code Unique Warning"
-msgstr ""
+msgstr "Предупреждение за уникалност на кратък код"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__avatars_display__show
@@ -3405,57 +3442,57 @@ msgstr "Вход"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__char
 msgid "Single line text"
-msgstr ""
+msgstr "Текст на един ред"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__slot_type
 msgid "Slot type"
-msgstr ""
+msgstr "Тип слот"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_intro
 msgid "Small description of the appointment type."
-msgstr ""
+msgstr "Кратко описание на типа записване."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry,"
-msgstr ""
+msgstr "Съжаляваме,"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, it is no longer possible to schedule an appointment."
-msgstr ""
+msgstr "Съжаляваме, вече не е възможно да се насрочи записване."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, there is not any more availability for the asked capacity."
-msgstr ""
+msgstr "Съжаляваме, няма повече свободни часове за заявения капацитет."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, we have no availability for an appointment."
-msgstr ""
+msgstr "Съжаляваме, нямаме свободни часове за записване."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Sorry, we have no more slots available for this month."
-msgstr ""
+msgstr "Съжаляваме, нямаме повече свободни слотове за този месец."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__source_resource_ids
 msgid "Source combination"
-msgstr ""
+msgstr "Комбинация на източник"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__custom
 msgid "Specific Slots"
-msgstr ""
+msgstr "Конкретни слотове"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__specific_resources
@@ -3467,7 +3504,7 @@ msgstr ""
 #: model:ir.actions.server,name:appointment.calendar_event_action_all_users_appointments
 #: model:ir.ui.menu,name:appointment.menu_appointment_schedule_staff_appointment
 msgid "Staff Bookings"
-msgstr ""
+msgstr "Резервации на персонал"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_manage_leaves__leave_start_dt
@@ -3477,7 +3514,7 @@ msgstr "Начална Дата"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__start_datetime
 msgid "Start Datetime"
-msgstr ""
+msgstr "Начален дата и час"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_booking_line__event_start
@@ -3493,12 +3530,12 @@ msgstr "Началната дата трябва да предхожда кра�
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_slot__start_datetime
 msgid "Start datetime for unique slot type management"
-msgstr ""
+msgstr "Начален дата и час за управление на тип уникален слот"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__start_hour
 msgid "Starting Hour"
-msgstr ""
+msgstr "Начален час"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
@@ -3534,7 +3571,7 @@ msgstr "Тема"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__answer_input_ids
 msgid "Submitted Answers"
-msgstr ""
+msgstr "Подадени отговори"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_slot__weekday__7
@@ -3544,12 +3581,12 @@ msgstr "Неделя"
 #. module: appointment
 #: model:appointment.question,name:appointment.appointment_type_dental_care_question_1
 msgid "Symptoms"
-msgstr ""
+msgstr "Симптоми"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Synchronize your Calendar to avoid double-booking"
-msgstr ""
+msgstr "Синхронизирайте календара си, за да избегнете двойни резервации"
 
 #. module: appointment
 #. odoo-python
@@ -3561,13 +3598,13 @@ msgstr "Таблица"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Table %s"
-msgstr ""
+msgstr "Маса %s"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Table Booking"
-msgstr ""
+msgstr "Резервация на маса"
 
 #. module: appointment
 #: model:appointment.type,name:appointment.appointment_type_tennis_court
@@ -3577,28 +3614,28 @@ msgstr "Тенис корт"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer_input__value_text_box
 msgid "Text Answer"
-msgstr ""
+msgstr "Текстов отговор"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_answer_input_view_search
 msgid "Text Questions"
-msgstr ""
+msgstr "Текстови въпроси"
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_invite_short_code_uniq
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid "The URL is already taken, please pick another code."
-msgstr ""
+msgstr "URL адресът вече е зает, моля изберете друг код."
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_type_check_resource_manual_confirmation_percentage
 msgid "The capacity percentage should be between 0 and 100%"
-msgstr ""
+msgstr "Процентът на капацитета трябва да е между 0 и 100%"
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_booking_line_check_capacity_reserved
 msgid "The capacity reserved should be positive."
-msgstr ""
+msgstr "Резервираният капацитет трябва да е положителен."
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_booking_line_check_capacity_used
@@ -3612,17 +3649,19 @@ msgid ""
 "The configuration has changed and synchronization is not possible anymore. "
 "Please reload the page."
 msgstr ""
+"Конфигурацията е променена и синхронизацията вече не е възможна. Моля, "
+"презаредете страницата."
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_slot_check_start_and_end_hour
 msgid "The end time must be later than the start time."
-msgstr ""
+msgstr "Крайният час трябва да е по-късен от началния час."
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "The event %s cannot book resources without an appointment type."
-msgstr ""
+msgstr "Събитието %s не може да резервира ресурси без тип записване."
 
 #. module: appointment
 #. odoo-python
@@ -3631,35 +3670,36 @@ msgid ""
 "The event %s cannot have an appointment status without being linked to an "
 "appointment type."
 msgstr ""
+"Събитието %s не може да има статус на запис, без да е свързано с тип запис."
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/controllers/portal.py:0
 msgid "The field '%s' does not exist in the targeted model"
-msgstr ""
+msgstr "Полето '%s' не съществува в целевия модел"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/appointment_invite.py:0
 msgid "The following appointment type(s) have no resource assigned: %s."
-msgstr ""
+msgstr "Следните типове записи нямат назначен ресурс: %s."
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/appointment_invite.py:0
 msgid "The following appointment type(s) have no staff assigned: %s."
-msgstr ""
+msgstr "Следните типове записи нямат назначен персонал: %s."
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/appointment_question.py:0
 msgid "The following question(s) do not have any selectable answers : %s"
-msgstr ""
+msgstr "Следните въпроси нямат избираеми отговори : %s"
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_resource_check_capacity
 msgid "The resource should have at least one capacity."
-msgstr ""
+msgstr "Ресурсът трябва да има поне един капацитет."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__sequence
@@ -3668,22 +3708,26 @@ msgid ""
 "priority against another resource\n"
 "        (e.g. for 2 tables of 4, the lowest sequence will be picked first)"
 msgstr ""
+"Последователността определя дали ресурсът ще бъде избран с по-висок "
+"приоритет спрямо друг ресурс\n"
+"        (напр. за 2 маси по 4, първо ще бъде избрана тази с най-ниска "
+"последователност)"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Their first availability is"
-msgstr ""
+msgstr "Тяхната първа свободна наличност е"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointments_list_layout
 msgid "There is currently no appointment available"
-msgstr ""
+msgstr "В момента няма налично записване"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.portal_my_appointments
 msgid "There is no appointment linked to your account."
-msgstr ""
+msgstr "Няма запис, свързан с вашия акаунт."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__shareable
@@ -3691,6 +3735,8 @@ msgid ""
 "This allows to share the resource with multiple attendee for a same time "
 "slot (e.g. a bar counter)"
 msgstr ""
+"Това позволява ресурсът да се споделя с няколко участници за един и същ "
+"времеви слот (напр. бар плот)"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -3698,13 +3744,15 @@ msgid ""
 "This appointment type has no availabilities because it does not have any "
 "opening hours configured"
 msgstr ""
+"Този тип запис няма свободни наличности, защото няма конфигурирано работно "
+"време"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid ""
 "This appointment type has no availabilities because it has no resource "
 "assigned"
-msgstr ""
+msgstr "Този тип запис няма свободни наличности, защото няма назначен ресурс"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -3712,12 +3760,14 @@ msgid ""
 "This appointment type has no availabilities because it has no resource "
 "assigned and does not have any opening hours configured"
 msgstr ""
+"Този тип запис няма свободни наличности, защото няма назначен ресурс и няма "
+"конфигурирано работно време"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid ""
 "This appointment type has no availabilities because it has no staff assigned"
-msgstr ""
+msgstr "Този тип запис няма свободни наличности, защото няма назначен персонал"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -3725,6 +3775,8 @@ msgid ""
 "This appointment type has no availabilities because it has no staff assigned "
 "and does not have any opening hours configured"
 msgstr ""
+"Този тип запис няма свободни наличности, защото няма назначен персонал и "
+"няма конфигурирано работно време"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__tz
@@ -3738,7 +3790,7 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_edit_in_backend
 msgid "This is a preview of the customer appointment form."
-msgstr ""
+msgstr "Това е преглед на формуляра за запис на клиента."
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_slot__weekday__4
@@ -3756,12 +3808,12 @@ msgstr "Часови пояс"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__appointment_tz
 msgid "Timezone where appointment take place"
-msgstr ""
+msgstr "Часови пояс, в който се провежда записът"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
 msgid "Timezone:"
-msgstr ""
+msgstr "Часови пояс:"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__end_datetime
@@ -3772,12 +3824,12 @@ msgstr "До"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "To make any changes, please contact"
-msgstr ""
+msgstr "За да направите промени, моля свържете се с"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "To make any changes, please contact us."
-msgstr ""
+msgstr "За да направите промени, моля свържете се с нас."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__access_token
@@ -3788,26 +3840,26 @@ msgstr "Токен"
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__resource_total_capacity
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_tree
 msgid "Total Capacity"
-msgstr ""
+msgstr "Общ капацитет"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__resource_total_capacity_reserved
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_tree_booking
 msgid "Total Capacity Reserved"
-msgstr ""
+msgstr "Запазен общ капацитет"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__resource_total_capacity_used
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_tree_booking
 msgid "Total Capacity Used"
-msgstr ""
+msgstr "Използван общ капацитет"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
 msgid "Total Reserved"
-msgstr ""
+msgstr "Общо запазени"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.portal_my_appointments
@@ -3843,41 +3895,43 @@ msgstr "Несигурен"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Until (max)"
-msgstr ""
+msgstr "До (макс.)"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Up to"
-msgstr ""
+msgstr "До"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/controllers/portal.py:0
 msgid "Upcoming"
-msgstr ""
+msgstr "Предстоящи"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_res_partner__upcoming_appointment_ids
 #: model:ir.model.fields,field_description:appointment.field_res_users__upcoming_appointment_ids
 msgid "Upcoming Appointments"
-msgstr ""
+msgstr "Предстоящи записи"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_invite/appointment_share_link_list_controller.js:0
 msgid "Update a Share Link"
-msgstr ""
+msgstr "Обновяване на връзка за споделяне"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_calendar_alarm__default_for_new_appointment_type
 msgid "Use as default for new Appointment Types"
-msgstr ""
+msgstr "Използвай по подразбиране за нови типове записи"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.calendar_event_action_appointment_reporting
 #: model_terms:ir.actions.act_window,help:appointment.calendar_event_action_report_all
 msgid "Use this menu to overview your Appointments once you get some bookings."
 msgstr ""
+"Използвайте това меню, за да прегледате записите си, след като получите "
+"резервации."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__category
@@ -3915,7 +3969,7 @@ msgstr "Потребители"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Video Call"
-msgstr ""
+msgstr "Видеоразговор"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__event_videocall_source
@@ -3931,7 +3985,7 @@ msgstr "Преглед"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "We will come back to you to confirm it."
-msgstr ""
+msgstr "Ще се свържем с вас, за да го потвърдим."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__website_message_ids
@@ -3951,12 +4005,12 @@ msgstr "Сряда"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_slot__weekday
 msgid "Week Day"
-msgstr ""
+msgstr "Ден от седмицата"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.staff_user_select
 msgid "With"
-msgstr ""
+msgstr "С"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category_time_display__punctual_fields
@@ -3973,23 +4027,23 @@ msgstr "Работни часове"
 #: code:addons/appointment/static/src/js/appointment_form.js:0
 #: code:addons/appointment/static/src/js/appointment_validation.js:0
 msgid "You cannot invite more than 10 people"
-msgstr ""
+msgstr "Не можете да поканите повече от 10 души"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_details_column
 msgid "Your Appointment"
-msgstr ""
+msgstr "Вашият запис"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_sync_button/appointment_sync_button.js:0
 msgid "Your calendar is already configured and was successfully synchronized."
-msgstr ""
+msgstr "Вашият календар вече е конфигуриран и беше успешно синхронизиран."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_user
 msgid "Your choice"
-msgstr ""
+msgstr "Вашият избор"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -4005,7 +4059,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form_custom_share
 msgid "e.g. \"During this meeting, we will...\""
-msgstr ""
+msgstr "напр. „По време на тази среща ще...“"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4028,6 +4082,8 @@ msgstr "напр. \"Техническа демонстрация\""
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form_custom_share
 msgid "e.g. \"Thank you for your trust, we look forward to meeting you!\""
 msgstr ""
+"напр. „Благодарим ви за доверието, очакваме с нетърпение да се срещнем с "
+"вас!“"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4042,23 +4098,23 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
 msgid "e.g. Inventory count and valuation"
-msgstr ""
+msgstr "напр. Инвентаризация и оценка на наличностите"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "e.g. John Smith"
-msgstr ""
+msgstr "напр. Иван Иванов"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_form
 msgid "e.g. Tennis Court 1"
-msgstr ""
+msgstr "напр. Тенис корт 1"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "e.g. Vegetarian, Lactose Intolerant, ..."
-msgstr ""
+msgstr "напр. вегетарианец, лактозна непоносимост, ..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -4067,6 +4123,9 @@ msgid ""
 "e.g. jane.doe@example.com\r\n"
 "..."
 msgstr ""
+"напр. ivan.ivanov@email.com\r\n"
+"напр. petar.petrov@example.com\r\n"
+"..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
@@ -4075,28 +4134,31 @@ msgid ""
 "e.g. jane.doe@example.com\r\n"
 "..."
 msgstr ""
+"напр. ivan.ivanov@email.com \r\n"
+"напр. petar.petrov@example.com\r\n"
+"..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "e.g. john.smith@example.com"
-msgstr ""
+msgstr "напр. ivan.ivanov@example.com"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "has no availability for an appointment."
-msgstr ""
+msgstr "няма свободни часове за среща."
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "has no more slots available for this month."
-msgstr ""
+msgstr "няма повече свободни часове за този месец."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "hour(s) and cannot be cancelled at this time.<br/>"
-msgstr ""
+msgstr "час(а) и не може да бъде отменена в момента.<br/>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4118,7 +4180,7 @@ msgstr "или"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_details
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "people"
-msgstr ""
+msgstr "души"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4129,12 +4191,12 @@ msgstr ""
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "somebody"
-msgstr ""
+msgstr "някого"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "this link"
-msgstr ""
+msgstr "тази връзка"
 
 #. module: appointment
 #. odoo-javascript

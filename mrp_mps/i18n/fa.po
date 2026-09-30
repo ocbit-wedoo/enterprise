@@ -1,24 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* mrp_mps
+# * mrp_mps
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-09-01 17:13+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/mrp_mps/"
+"fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
@@ -33,59 +36,59 @@ msgstr ""
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_bom_form_view_inherit_mps
 msgid "<span>Schedules</span>"
-msgstr ""
+msgstr "<span>زمان‌بندی‌ها</span>"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "ATP"
-msgstr ""
+msgstr "موجودی در دسترس"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "Actual"
-msgstr ""
+msgstr "واقعی"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Actual Demand"
-msgstr ""
+msgstr "تقاضای واقعی"
 
 #. module: mrp_mps
 #. odoo-python
 #: code:addons/mrp_mps/models/mrp_mps.py:0
 msgid "Actual Demand %(product)s %(date)s (%(date_start)s - %(date_end)s)"
-msgstr ""
+msgstr "تقاضای واقعی %(product)s %(date)s (%(date_start)s - %(date_end)s)"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Actual Demand Y-1"
-msgstr ""
+msgstr "تقاضای واقعی Y-1"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Actual Demand Y-2"
-msgstr ""
+msgstr "تقاضای واقعی Y-2"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__total_qty
 msgid "Actual Replenishment"
-msgstr ""
+msgstr "تجدید موجودی واقعی"
 
 #. module: mrp_mps
 #. odoo-python
 #: code:addons/mrp_mps/models/mrp_mps.py:0
 msgid ""
 "Actual Replenishment %(product)s %(date)s (%(date_start)s - %(date_end)s)"
-msgstr ""
+msgstr "تجدید موجودی واقعی %(product)s %(date)s (%(date_start)s - %(date_end)s)"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -119,18 +122,18 @@ msgstr "خودکار"
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "Automatically Replenished"
-msgstr ""
+msgstr "تجدید موجودی خودکار"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Available to Promise"
-msgstr ""
+msgstr "قابل وعده دادن"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__batch_size
 msgid "Batch Size"
-msgstr ""
+msgstr "اندازه دسته"
 
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_mrp_bom
@@ -206,7 +209,7 @@ msgstr "روز"
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.res_config_settings_view_form
 msgid "Default Time Range"
-msgstr ""
+msgstr "بازه زمانی پیش‌فرض"
 
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__product_uom_id
@@ -217,7 +220,7 @@ msgstr "واحد اندازه گیری پیش فرض برای همه عملیا�
 #: model:ir.model.fields,help:mrp_mps.field_res_company__manufacturing_period
 #: model:ir.model.fields,help:mrp_mps.field_res_config_settings__manufacturing_period
 msgid "Default value for the time ranges in Master Production Schedule report."
-msgstr ""
+msgstr "مقدار پیش‌فرض بازه‌های زمانی گزارش برنامه اصلی تولید."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -235,37 +238,37 @@ msgstr "پیش بینی تقاضا"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand
 msgid "Display Actual Demand"
-msgstr ""
+msgstr "نمایش تقاضای واقعی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand_year_minus_2
 msgid "Display Actual Demand Before Year"
-msgstr ""
+msgstr "نمایش تقاضای واقعی قبل از سال"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_demand_year_minus_1
 msgid "Display Actual Demand Last Year"
-msgstr ""
+msgstr "نمایش تقاضای واقعی سال قبل"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_actual_replenishment
 msgid "Display Actual Replenishment"
-msgstr ""
+msgstr "نمایش تجدید موجودی واقعی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_available_to_promise
 msgid "Display Available to Promise"
-msgstr ""
+msgstr "نمایش موجودی قابل وعده دادن"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_demand_forecast
 msgid "Display Demand Forecast"
-msgstr ""
+msgstr "نمایش پیش‌بینی تقاضا"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_indirect_demand
 msgid "Display Indirect Demand"
-msgstr ""
+msgstr "نمایش تقاضای غیرمستقیم"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__display_name
@@ -277,22 +280,22 @@ msgstr "نام نمایش داده شده"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_safety_stock
 msgid "Display Safety Stock"
-msgstr ""
+msgstr "نمایش موجودی احتیاطی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_starting_inventory
 msgid "Display Starting Inventory"
-msgstr ""
+msgstr "نمایش موجودی اولیه"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__mrp_mps_show_to_replenish
 msgid "Display To Replenish"
-msgstr ""
+msgstr "نمایش تجدید موجودی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__enable_batch_size
 msgid "Enable Batch Size"
-msgstr ""
+msgstr "فعال کردن اندازه دسته"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__enable_max_replenish
@@ -302,7 +305,7 @@ msgstr ""
 #. module: mrp_mps
 #: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_state__excessive_replenishment
 msgid "Excessive Replenishment"
-msgstr ""
+msgstr "تجدید موجودی بیش از اندازه"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -319,7 +322,7 @@ msgstr "آیدی خارجی"
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_mrp_mps_forecast_details
 msgid "Forecast Demand Details"
-msgstr ""
+msgstr "جزئیات پیش‌بینی تقاضا"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -331,7 +334,7 @@ msgstr "پیش بینی شده"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "Forecasted Demand"
-msgstr ""
+msgstr "تقاضای پیش‌بینی شده"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -343,7 +346,7 @@ msgstr "موجودی‌کالای پیش‌بینی‌شده"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__forecast_ids
 msgid "Forecasted quantity at date"
-msgstr ""
+msgstr "تعداد پیش‌بینی شده در تاریخ"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__id
@@ -355,7 +358,7 @@ msgstr "شناسه"
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__bom_id
 msgid "If set, the bill of materials components will also be imported."
-msgstr ""
+msgstr "اگر این گزینه فعال باشد، اجزای لیست مواد نیز ایمپورت خواهند شد."
 
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__batch_size
@@ -368,30 +371,30 @@ msgstr ""
 #. odoo-python
 #: code:addons/mrp_mps/models/mrp_mps.py:0
 msgid "Import Template for Master Production Schedule"
-msgstr ""
+msgstr "قالب ایمپورت زمان‌بندی اصلی تولید"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "Indirect Demand"
-msgstr ""
+msgstr "تقاضای غیرمستقیم"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Indirect Demand Forecast"
-msgstr ""
+msgstr "پیش‌بینی تقاضای غیرمستقیم"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__is_indirect
 msgid "Indirect demand product"
-msgstr ""
+msgstr "محصول تقاضای غیرمستقیم"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__is_manufacture_route
 msgid "Is Manufacture Route"
-msgstr ""
+msgstr "مسیر تولید است"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__write_uid
@@ -410,12 +413,12 @@ msgstr "آخرین بروز رسانی در"
 #. module: mrp_mps
 #: model:ir.ui.menu,name:mrp_mps.mrp_mps_menu_planning
 msgid "MPS"
-msgstr ""
+msgstr "MPS (برنامه اصلی تولید)"
 
 #. module: mrp_mps
 #: model:ir.actions.server,name:mrp_mps.ir_cron_replenish_automated_mps_ir_actions_server
 msgid "MPS: replenish automated schedules"
-msgstr ""
+msgstr "MPS: تجدید موجودی زمان‌بندی‌های خودکار"
 
 #. module: mrp_mps
 #: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_trigger__manual
@@ -429,16 +432,19 @@ msgid ""
 "Automatic: Product replenished automatically via scheduled action.\n"
 "Never: Product is not replenished from MPS."
 msgstr ""
+"دستی: محصول به صورت دستی از طریق MPS تجدید موجودی می‌شود.\n"
+"خودکار: محصول به طور خودکار از طریق عملیات زمان‌بندی شده تجدید موجودی می‌شود.\n"
+"هرگز: محصول از طریق MPS تجدید موجودی نمی‌شود."
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "Manually Replenished"
-msgstr ""
+msgstr "تجدید موجودی دستی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__manufacture_string
 msgid "Manufacture String"
-msgstr ""
+msgstr "رشته تولید"
 
 #. module: mrp_mps
 #. odoo-python
@@ -466,6 +472,7 @@ msgid ""
 "Manufacturing Settings: Your Master Production Schedule must always display "
 "at least 1 period."
 msgstr ""
+"تنظیمات تولید: زمان‌بندی تولید اصلی همیشه باید حداقل 1 دوره را نمایش دهد."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -484,7 +491,7 @@ msgstr ""
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__min_to_replenish_qty
 msgid "Minimum to Replenish"
-msgstr ""
+msgstr "حداقل مقدار تجدید موجودی"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -505,7 +512,7 @@ msgstr "جابجایی"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__moves_string
 msgid "Moves String"
-msgstr ""
+msgstr "رشته انتقال‌ها"
 
 #. module: mrp_mps
 #: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_trigger__never
@@ -516,65 +523,65 @@ msgstr "هرگز"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/main.xml:0
 msgid "No product yet. Add one to start scheduling."
-msgstr ""
+msgstr "هنوز محصولی وجود ندارد. برای شروع زمان‌بندی، یک محصول اضافه کنید."
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "Not Replenished from MPS"
-msgstr ""
+msgstr "از MPS تجدید موجودی نشده است"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_day
 msgid "Number of Daily Manufacturing Period Columns"
-msgstr ""
+msgstr "تعداد ستون‌ در بازه زمانی تولید روزانه"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_month
 msgid "Number of Monthly Manufacturing Period Columns"
-msgstr ""
+msgstr "تعداد ستون‌ در بازه زمانی تولید ماهانه"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.res_config_settings_view_form
 msgid "Number of Periods"
-msgstr ""
+msgstr "تعداد بازه‌های زمانی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_week
 msgid "Number of Weekly Manufacturing Period Columns"
-msgstr ""
+msgstr "تعداد ستون‌ در بازه زمانی تولید هفتگی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_config_settings__manufacturing_period_to_display_year
 msgid "Number of Yearly Manufacturing Period Columns"
-msgstr ""
+msgstr "تعداد ستون‌ در بازه زمانی تولید سالانه"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_day
 msgid ""
 "Number of columns for the daily period to display in Master Production "
 "Schedule"
-msgstr ""
+msgstr "تعداد ستون در بازه زمانی روزانه برای نمایش در زمان‌بندی اصلی تولید"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_month
 msgid ""
 "Number of columns for the monthly period to display in Master Production "
 "Schedule"
-msgstr ""
+msgstr "تعداد ستون در بازه زمانی ماهانه برای نمایش در زمان‌بندی اصلی تولید"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_week
 msgid ""
 "Number of columns for the weekly period to display in Master Production "
 "Schedule"
-msgstr ""
+msgstr "تعداد ستون در بازه زمانی هفتگی برای نمایش در زمان‌بندی اصلی تولید"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_res_company__manufacturing_period_to_display_year
 msgid ""
 "Number of columns for the yearly period to display in Master Production "
 "Schedule"
-msgstr ""
+msgstr "تعداد ستون در بازه زمانی سالانه برای نمایش در زمان‌بندی اصلی تولید"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -592,7 +599,7 @@ msgstr "مسیر ترجیحی"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__procurement_launched
 msgid "Procurement has been run for this forecast"
-msgstr ""
+msgstr "خرید برای این پیش‌بینی اجرا شد"
 
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_product_template
@@ -608,7 +615,7 @@ msgstr "دسته بندی محصول"
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_mrp_product_forecast
 msgid "Product Forecast at Date"
-msgstr ""
+msgstr "پیش‌بینی محصول در تاریخ"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__product_tmpl_id
@@ -628,12 +635,12 @@ msgstr "گونه محصول"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__production_schedule_id
 msgid "Production Schedule"
-msgstr ""
+msgstr "برنامه تولید"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__warehouse_id
 msgid "Production Warehouse"
-msgstr ""
+msgstr "انبار تولید"
 
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_purchase_order
@@ -648,17 +655,17 @@ msgstr "سطر سفارش خرید"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__moves_qty
 msgid "Quantity from Incoming Moves"
-msgstr ""
+msgstr "تعداد از انتقال‌های ورودی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__manufacture_qty
 msgid "Quantity from Manufacturing Order"
-msgstr ""
+msgstr "تعداد از سفارش تولید"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__rfq_qty
 msgid "Quantity from RFQ"
-msgstr ""
+msgstr "تعداد از درخواست پیش‌فاکتور"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -667,6 +674,8 @@ msgid ""
 "Quantity predicted to be available for sale at the end of the period (= to "
 "replenish - actual demand)."
 msgstr ""
+"تعداد پیش‌بینی شده برای فروش در پایان دوره (= تجدید موجودی - تقاضای واقعی) که "
+"در دسترس خواهد بود."
 
 #. module: mrp_mps
 #. odoo-python
@@ -690,39 +699,39 @@ msgstr "جایگزین"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__replenish_state
 msgid "Replenish State"
-msgstr ""
+msgstr "وضعیت تجدید موجودی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_product_forecast__replenish_qty_updated
 msgid "Replenish_qty has been manually updated"
-msgstr ""
+msgstr "Replenish_qty به طور دستی به‌روز شد"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "Replenishment Too High"
-msgstr ""
+msgstr "تجدید موجودی بسیار زیاد است"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "Replenishment Too Low"
-msgstr ""
+msgstr "تجدید موجودی بسیار کم است"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__replenish_trigger
 msgid "Replenishment Trigger"
-msgstr ""
+msgstr "نحوه اجرای تجدید موجودی"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "Replenishment:"
-msgstr ""
+msgstr "تجدید موجودی:"
 
 #. module: mrp_mps
 #. odoo-python
 #: code:addons/mrp_mps/wizard/mrp_mps_forecast_details.py:0
 msgid "Request for quotation"
-msgstr ""
+msgstr "درخواست پیش‌فاکتور"
 
 #. module: mrp_mps
 #. odoo-python
@@ -734,7 +743,7 @@ msgstr "درخواست استعلام قیمت"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_mps_forecast_details__rfq_string
 msgid "Rfq String"
-msgstr ""
+msgstr "رشته درخواست‌های پیش‌فاکتور"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
@@ -744,7 +753,7 @@ msgstr "مسیر"
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__route_id
 msgid "Route to replenish your product."
-msgstr ""
+msgstr "مسیر تجدید موجودی محصول."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -755,7 +764,7 @@ msgstr "ردیفها"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__forecast_target_qty
 msgid "Safety Stock Target"
-msgstr ""
+msgstr "موجودی هدف احتیاطی"
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_production_schedule_form_view
@@ -765,7 +774,7 @@ msgstr "ذخیره"
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_mrp_production_schedule
 msgid "Schedule the production of Product in a warehouse"
-msgstr ""
+msgstr "زمان‌بندی تولید محصول در انبار"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_purchase_order__date_planned_mps
@@ -778,7 +787,7 @@ msgstr "تاریخ برنامه ریزی شده"
 #: model_terms:ir.ui.view,arch_db:mrp_mps.product_normal_form_view_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.product_template_only_form_view_mps
 msgid "Schedules"
-msgstr ""
+msgstr "زمان‌بندی‌ها"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__mps_sequence
@@ -788,7 +797,7 @@ msgstr "دنباله"
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__show_bom
 msgid "Show Bom"
-msgstr ""
+msgstr "نمایش لیست مواد"
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__show_vendor
@@ -799,7 +808,7 @@ msgstr "نمایش تامین کننده"
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/search/group_menu.xml:0
 msgid "Starting Inventory"
-msgstr ""
+msgstr "موجودی اولیه"
 
 #. module: mrp_mps
 #: model:ir.model,name:mrp_mps.model_stock_rule
@@ -809,18 +818,18 @@ msgstr "قانون موجودی انبار"
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__replenish_state
 msgid "Technical field to support filtering by replenish state"
-msgstr ""
+msgstr "فیلد فنی برای پشتیبانی از فیلتر بر اساس وضعیت تجدید موجودی"
 
 #. module: mrp_mps
 #: model:ir.model.constraint,message:mrp_mps.constraint_mrp_production_schedule_warehouse_product_ref_uniq
 msgid "The combination of warehouse and product must be unique!"
-msgstr ""
+msgstr "ترکیب انبار و محصول باید منحصر به فرد باشد!"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "The confirmed demand, based on the confirmed sales orders."
-msgstr ""
+msgstr "تقاضای تأیید شده بر اساس سفارش‌های فروش تأیید شده."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -828,25 +837,25 @@ msgstr ""
 msgid ""
 "The forecasted demand to fulfill the needs in components of the "
 "Manufacturing Orders."
-msgstr ""
+msgstr "تقاضای پیش‌بینی شده برای تأمین نیازهای مربوط به اجزای سفارش‌های تولید."
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "The forecasted demand. This value has to be entered manually."
-msgstr ""
+msgstr "تقاضای پیش‌بینی شده. این مقدار باید به صورت دستی وارد شود."
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "The forecasted quantity in stock at the beginning of the period."
-msgstr ""
+msgstr "تعداد پیش‌بینی شده موجودی در شروع دوره."
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/line.xml:0
 msgid "The forecasted quantity in stock at the end of the period."
-msgstr ""
+msgstr "تعداد پیش‌بینی شده موجود در پایان دوره."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -858,6 +867,11 @@ msgid ""
 "constraints such as: safety stock, production capacity, lead times.\n"
 "                    It's the perfect tool to support your S&OP meetings."
 msgstr ""
+"زمان‌بندی اصلی تولید، پیش‌بینی فروش و تقاضای شما را به برنامه‌ریزی تولید و خرید "
+"برای هر جزء تبدیل می‌کند.\n"
+"                     این کار تضمین می‌کند که همه چیز بر اساس محدودیت‌هایی "
+"مانند موجودی احتیاطی، ظرفیت تولید و زمان انتظار به موقع برنامه‌ریزی می‌شود.\n"
+"                     این ابزار برای پشتیبانی از جلسات S&OP ایده‌آل است."
 
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__max_to_replenish_qty
@@ -875,6 +889,8 @@ msgid ""
 "The quantity being replenished, based on the Requests for Quotation and the "
 "Manufacturing Orders."
 msgstr ""
+"تعدادی که بر اساس درخواست‌های پیش‌فاکتور و سفارش‌های تولید باید تجدید موجودی "
+"شود."
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -889,11 +905,13 @@ msgid ""
 "This is the minimum free stock you want to keep for that product at all "
 "times."
 msgstr ""
+"این مقدار نشانگر حداقل موجودی آزادی از محصول است که می‌خواهید همیشه به آن "
+"میزان موجودی داشته باشید."
 
 #. module: mrp_mps
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "To Forecast"
-msgstr ""
+msgstr "برای پیش‌بینی"
 
 #. module: mrp_mps
 #. odoo-javascript
@@ -902,24 +920,25 @@ msgstr ""
 #: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_state__to_replenish
 #: model_terms:ir.ui.view,arch_db:mrp_mps.mrp_mps_search_view
 msgid "To Replenish"
-msgstr ""
+msgstr "برای تجدید موجودی"
 
 #. module: mrp_mps
 #. odoo-javascript
 #: code:addons/mrp_mps/static/src/components/main.js:0
 msgid "Toggle Indirect Demand"
-msgstr ""
+msgstr "تغییر وضعیت تقاضای غیرمستقیم"
 
 #. module: mrp_mps
 #: model:ir.model.fields.selection,name:mrp_mps.selection__mrp_production_schedule__replenish_state__under_replenishment
 msgid "Under Replenishment"
-msgstr ""
+msgstr "در حال تجدید موجودی"
 
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__min_to_replenish_qty
 msgid ""
 "Unless the demand is 0, Odoo will always at least replenish this quantity."
 msgstr ""
+"در صورتی که تقاضا 0 نباشد، اودو همیشه حداقل این مقدار را تجدید موجودی می‌کند."
 
 #. module: mrp_mps
 #: model:ir.model.fields,field_description:mrp_mps.field_mrp_production_schedule__supplier_id
@@ -936,7 +955,7 @@ msgstr "هفته"
 #. odoo-python
 #: code:addons/mrp_mps/models/res_company.py:0
 msgid "Week %(week_num)s (%(start_date)s-%(end_date)s/%(month)s)"
-msgstr ""
+msgstr "هفته %(week_num)s (%(start_date)s-%(end_date)s/%(month)s)"
 
 #. module: mrp_mps
 #: model:ir.model.fields.selection,name:mrp_mps.selection__res_company__manufacturing_period__week
@@ -946,7 +965,7 @@ msgstr "هفتگی"
 #. module: mrp_mps
 #: model:ir.model.fields,help:mrp_mps.field_mrp_production_schedule__is_indirect
 msgid "When checked, this product will not appear in the 'To Forecast' filter."
-msgstr ""
+msgstr "با فعال بودن این گزینه، محصول در فیلتر «برای پیش‌بینی» قرار نمی‌گیرد."
 
 #. module: mrp_mps
 #. odoo-javascript

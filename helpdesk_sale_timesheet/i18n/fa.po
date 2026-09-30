@@ -1,24 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* helpdesk_sale_timesheet
+# * helpdesk_sale_timesheet
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-27 17:24+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"helpdesk_sale_timesheet/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: helpdesk_sale_timesheet
 #: model:helpdesk.sla,name:helpdesk_sale_timesheet.helpdesk_sla_4
@@ -34,6 +37,10 @@ msgid ""
 "the cancellation of the sales order.\" invisible=\"sale_order_state != "
 "'cancel'\"/>"
 msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning\" title=\"سفارش فروش "
+"مربوط به این تیکت لغو شده است. توصیه می‌کنیم آیتم سفارش فروش را به‌روزرسانی "
+"کنید یا این تیکت را در راستای لغو سفارش فروش لغو کنید.\" "
+"invisible=\"sale_order_state != 'cancel'\"/>"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_account_analytic_line
@@ -95,7 +102,7 @@ msgstr "فاکتورها"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_my_timesheets_inherit
 msgid "No Ticket"
-msgstr ""
+msgstr "بدون تیکت"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_sale_timesheet
@@ -105,7 +112,7 @@ msgstr "غیرقابل پرداخت"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_helpdesk_ticket_inherit
 msgid "Not Billed"
-msgstr ""
+msgstr "فاکتور نشده"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_sla_view_form_inherit_sale_timesheet
@@ -196,7 +203,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/helpdesk_sale_timesheet/controllers/portal.py:0
 msgid "Search in Ticket"
-msgstr ""
+msgstr "جستجو در تیکت"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_sla__product_ids
@@ -206,7 +213,7 @@ msgstr "محصولات"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_my_timesheets_inherit
 msgid "Task/Ticket"
-msgstr ""
+msgstr "وظیفه/تیکت"
 
 #. module: helpdesk_sale_timesheet
 #. odoo-python
@@ -233,17 +240,17 @@ msgstr "تیکت ها"
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_sla__use_helpdesk_sale_timesheet
 msgid "Time Billing"
-msgstr ""
+msgstr "صورت‌حساب زمان"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__remaining_hours_so
 msgid "Time Remaining on SO"
-msgstr ""
+msgstr "زمان باقی‌مانده در سفارش فروش"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Time Remaining on SO:"
-msgstr ""
+msgstr "زمان باقی‌مانده در سفارش فروش:"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_helpdesk_ticket_timesheet
@@ -259,7 +266,7 @@ msgstr "برگه ساعت کارکرد"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Total Time Spent:"
-msgstr ""
+msgstr "کل زمان صرف شده:"
 
 #. module: helpdesk_sale_timesheet
 #. odoo-python
@@ -268,3 +275,5 @@ msgid ""
 "You cannot link order item %(order_id)s - %(product_id)s to this ticket "
 "because it is not a service product."
 msgstr ""
+"امکان لینک کردن آیتم سفارش %(order_id)s - %(product_id)s به این تیکت وجود "
+"ندارد، چون محصول خدماتی نیست."

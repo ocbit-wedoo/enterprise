@@ -2193,6 +2193,39 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
         ])
 
     @freeze_time('2017-01-01')
+    def test_auto_reconcile_model_label_uses_company_lang(self):
+        """ The label of a reconcile model line is translatable, but it ends up on a journal item.
+        Reading it in the language of whoever applies the model makes the same model write two
+        different labels: one when a user applies it manually, another one when the
+        auto-reconciliation CRON applies it, since the CRON runs as OdooBot.
+        """
+        self.env['res.lang']._activate_lang('fr_FR')
+        self.company_data['company'].partner_id.lang = 'fr_FR'
+
+        st_line = self._create_st_line(1000.0, partner_id=self.partner_a.id, date='2017-01-01')
+
+        rule = self._create_reconcile_model(
+            name="test_auto_reconcile_model_label_uses_company_lang",
+            rule_type='writeoff_suggestion',
+            auto_reconcile=True,
+            line_ids=[{
+                'account_id': self.account_revenue1.id,
+                'label': "Bank fees",
+            }],
+        )
+        rule.line_ids.with_context(lang='fr_FR').label = "Frais bancaires"
+
+        # The CRON is not running in the language of the company.
+        with freeze_time('2017-01-02'):
+            self.env['account.bank.statement.line']\
+                .with_context(lang='en_US')\
+                ._cron_try_auto_reconcile_statement_lines()
+
+        write_off_line = st_line.move_id.line_ids.filtered(lambda line: line.reconcile_model_id == rule)
+        self.assertEqual(len(write_off_line), 1)
+        self.assertRecordValues(write_off_line, [{'name': "Frais bancaires"}])
+
+    @freeze_time('2017-01-01')
     def test_auto_reconcile_model_with_archived_partner(self):
         self.env['account.reconcile.model'].search([('company_id', '=', self.company_data['company'].id)]).unlink()
         self.env['res.partner.bank'].search([('company_id', '=', self.company_data['company'].id)]).unlink()
@@ -3752,3 +3785,32 @@ class TestBankRecWidget(TestBankRecWidgetCommon):
         wizard._action_add_new_amls(inv_line_with_epd)
         wizard._action_validate()
         self.assertEqual(payment.state, 'paid')
+
+    def test_validation_small_exchange_diff_coarse_rounding_currency(self):
+        """ A small but real exchange difference should still be posted as
+        an exchange_diff line, even when the transaction currency has a
+        coarse rounding (0 decimals). """
+        comp_curr = self.env.company.currency_id
+        foreign_curr = self.setup_other_currency('JPY', rounding=1.0, rates=[
+            ('2026-08-01', 270.6),
+            ('2026-08-10', 272.9),
+        ])
+        inv_line = self._create_invoice_line(
+            'out_invoice',
+            currency_id=foreign_curr.id,
+            invoice_date='2026-08-01',
+            invoice_line_ids=[{'price_unit': 11480.0}],
+        )
+        st_line = self._create_st_line(
+            42.07,
+            date='2026-08-10',
+            foreign_currency_id=foreign_curr.id,
+            amount_currency=11480.0,
+        )
+        wizard = self.env['bank.rec.widget'].with_context(default_st_line_id=st_line.id).new({})
+        wizard._action_add_new_amls(inv_line)
+        self.assertRecordValues(wizard.line_ids, [
+            {'flag': 'liquidity',       'amount_currency': 42.07,    'balance': 42.07,   'currency_id': comp_curr.id},
+            {'flag': 'new_aml',         'amount_currency': -11480.0, 'balance': -42.42,  'currency_id': foreign_curr.id},
+            {'flag': 'exchange_diff',   'amount_currency': 0.0,      'balance': 0.35,    'currency_id': foreign_curr.id},
+        ])

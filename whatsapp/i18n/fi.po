@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-04-16 10:37+0000\n"
+"PO-Revision-Date: 2026-09-15 13:34+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/whatsapp/"
 "fi/>\n"
@@ -42,7 +42,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: whatsapp
 #. odoo-python
@@ -227,7 +227,7 @@ msgstr "Sovellustunnus"
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_account__app_secret
 msgid "App Secret"
-msgstr "Sovelluksen salasana"
+msgstr "Sovelluksen salaus"
 
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template__model_id
@@ -478,9 +478,9 @@ msgid ""
 "Chat is private and unique between 2 persons. Group is private among invited "
 "persons. Channel can be freely joined (depending on its configuration)."
 msgstr ""
-"Chat on yksityinen ja ainutlaatuinen kahden henkilön välillä. Ryhmä on "
-"yksityinen kutsuttujen kesken. Kanavaan voi liittyä vapaasti (sen "
-"kokoonpanosta riippuen)."
+"Chat on yksityinen ja yksilöllinen kahden henkilön välillä. Ryhmä on "
+"yksityinen kutsun saaneiden kesken. Kanavalle voi liittyä vapaasti (riippuen "
+"sen asetuksista)."
 
 #. module: whatsapp
 #: model:ir.model.fields.selection,name:whatsapp.selection__whatsapp_template__lang_code__zh_cn
@@ -522,7 +522,7 @@ msgstr "Meta-tilien määrittäminen"
 #. odoo-python
 #: code:addons/whatsapp/wizard/whatsapp_composer.py:0
 msgid "Configure Templates"
-msgstr "Määritä mallit"
+msgstr "Määritä mallipohjat"
 
 #. module: whatsapp
 #. odoo-python
@@ -647,7 +647,7 @@ msgstr "Näyttönimi"
 #. module: whatsapp
 #: model:ir.model.fields.selection,name:whatsapp.selection__whatsapp_template__header_type__document
 msgid "Document"
-msgstr "Dokumentti"
+msgstr "Asiakirja"
 
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_composer__res_ids
@@ -1687,7 +1687,7 @@ msgstr "Valitse käyttäjät, joille haluat ilmoittaa..."
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template_variable__name
 msgid "Placeholder"
-msgstr "Paikanpitäjä"
+msgstr "Paikkamerkki"
 
 #. module: whatsapp
 #. odoo-python
@@ -1736,7 +1736,7 @@ msgstr "Esikatsele WhatsApp"
 #. module: whatsapp
 #: model:ir.model,name:whatsapp.model_whatsapp_preview
 msgid "Preview template"
-msgstr "Esikatselumalli"
+msgstr "Mallipohjan esikatselu"
 
 #. module: whatsapp
 #: model:ir.model.fields.selection,name:whatsapp.selection__whatsapp_template__lang_code__pa
@@ -1767,7 +1767,7 @@ msgstr "Lue"
 #. module: whatsapp
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_message_view_search
 msgid "Read Messages"
-msgstr "Lue viestit"
+msgstr "Luetut viestit"
 
 #. module: whatsapp
 #. odoo-python
@@ -1873,7 +1873,7 @@ msgstr "Katso kaikki vaihtoehdot"
 #. module: whatsapp
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_composer_view_form
 msgid "Send Message"
-msgstr "Lähetä viesti"
+msgstr "Viestin lähetys"
 
 #. module: whatsapp
 #: model:ir.model.fields.selection,name:whatsapp.selection__ir_actions_server__state__whatsapp
@@ -2065,12 +2065,12 @@ msgstr "Ruotsalainen"
 #. module: whatsapp
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_template_view_form
 msgid "Sync Template"
-msgstr "Synkronointimalli"
+msgstr "Mallipohjan synkronointi"
 
 #. module: whatsapp
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_account_view_form
 msgid "Synchronize Templates"
-msgstr "Synkronoi mallit"
+msgstr "Mallipohjien synkronointi"
 
 #. module: whatsapp
 #: model:ir.model.fields.selection,name:whatsapp.selection__whatsapp_template__lang_code__ta
@@ -2086,7 +2086,7 @@ msgstr "Telugu"
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_composer__wa_template_id
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_message_view_search
 msgid "Template"
-msgstr "Malli"
+msgstr "Mallipohja"
 
 #. module: whatsapp
 #. odoo-python
@@ -2102,12 +2102,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_template_button_view_form
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_template_variable_view_form
 msgid "Template Button"
-msgstr "Mallipainike"
+msgstr "Mallipohjapainike"
 
 #. module: whatsapp
 #: model_terms:ir.actions.act_window,help:whatsapp.whatsapp_template_action
 msgid "Template Guidelines"
-msgstr "Malliohjeet"
+msgstr "Mallipohjan ohjeet"
 
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template__header_text
@@ -2117,12 +2117,12 @@ msgstr "Mallin otsikon teksti"
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template__template_name
 msgid "Template Name"
-msgstr "Mallin nimi"
+msgstr "Mallipohjan nimi"
 
 #. module: whatsapp
 #: model:ir.actions.act_window,name:whatsapp.whatsapp_preview_action_from_template
 msgid "Template Preview"
-msgstr "Mallin esikatselu"
+msgstr "Mallipohjan esikatselu"
 
 #. module: whatsapp
 #: model:ir.model.fields.selection,name:whatsapp.selection__whatsapp_message__failure_type__template
@@ -2166,7 +2166,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_account_view_form
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_template_view_search
 msgid "Templates"
-msgstr "Mallit"
+msgstr "Mallipohjat"
 
 #. module: whatsapp
 #. odoo-python
@@ -2183,7 +2183,7 @@ msgstr "Mallit, jotka on luotu"
 #. odoo-python
 #: code:addons/whatsapp/models/whatsapp_account.py:0
 msgid "Templates synchronized!"
-msgstr "Mallit on synkronoitu!"
+msgstr "Mallipohjat synkronoitu!"
 
 #. module: whatsapp
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_account_view_form
@@ -2406,10 +2406,10 @@ msgid ""
 msgstr ""
 "Käytetään viestigeneraattorin luokitteluun\n"
 "'email': syntyy saapuvan sähköpostin, esim. mailgatewayn, tuloksena\n"
-"'kommentti': syntyy käyttäjän syötteestä esim. discuss- tai composer-"
-"ohjelmassa\n"
-"'email_outgoing': syntyy postituksesta\n"
-"'notification': järjestelmän tuottama esim. seurantaviestit\n"
+"'kommentti': syntyy käyttäjän syöttämänä, esim. viestinnän tai "
+"kirjoitustoiminnon kautta\n"
+"'email_outgoing': postituksen luoma\n"
+"'notification': järjestelmän tuottama, esim. viestien seuranta\n"
 "'auto_comment': automaattisen ilmoitusmekanismin tuottama, esim. kuittaus\n"
 "'user_notification': luodaan tietylle vastaanottajalle"
 
@@ -2529,7 +2529,7 @@ msgstr "Käy verkkosivuilla"
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template_button__wa_template_id
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template_variable__wa_template_id
 msgid "Wa Template"
-msgstr "WA-malli"
+msgstr "WA-mallipohja"
 
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_account__webhook_verify_token
@@ -2545,7 +2545,7 @@ msgstr "Verkkosivun ilmoitukset"
 #. module: whatsapp
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_template_button__website_url
 msgid "Website URL"
-msgstr "Verkkosivuston osoite"
+msgstr "Verkkosivun URL"
 
 #. module: whatsapp
 #: model:ir.model.fields,help:whatsapp.field_whatsapp_account__website_message_ids
@@ -2588,7 +2588,7 @@ msgstr "WhatsApp-tili"
 #: model:ir.model.fields,field_description:whatsapp.field_whatsapp_message__wa_account_id
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_account_view_form
 msgid "WhatsApp Business Account"
-msgstr "WhatsApp Business-tili"
+msgstr "WhatsApp-yritystili"
 
 #. module: whatsapp
 #: model_terms:ir.ui.view,arch_db:whatsapp.whatsapp_account_view_form

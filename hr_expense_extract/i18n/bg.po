@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 18:51+0000\n"
-"PO-Revision-Date: 2026-03-20 14:24+0000\n"
-"Last-Translator: \"v.kanev\" <v.kanev@tutanota.com>\n"
+"PO-Revision-Date: 2026-08-12 16:31+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "hr_expense_extract/bg/>\n"
 "Language: bg\n"
@@ -26,13 +26,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_expense_extract
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "<b>Wasting time recording your receipts?</b> Let’s try a better way."
 msgstr ""
+"<b>Губите време в записване на вашите разписки?</b> Нека опитаме по-добър "
+"начин."
 
 #. module: hr_expense_extract
 #: model_terms:web_tour.tour,rainbow_man_message:hr_expense_extract.hr_expense_extract_tour
@@ -40,6 +42,8 @@ msgid ""
 "<span><b>Congratulations</b>, you are now an expert of Expenses.\n"
 "        </span>"
 msgstr ""
+"<span><b>Поздравления</b>, вече сте експерт по разходите.\n"
+"        </span>"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_needaction
@@ -64,7 +68,7 @@ msgstr "Ред за Налични Начини на Плащане"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_can_show_send_button
 msgid "Can show the ocr send button"
-msgstr ""
+msgstr "Може да показва бутона за изпращане на ocr"
 
 #. module: hr_expense_extract
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.expense_sample_register_view_form
@@ -75,7 +79,7 @@ msgstr "Отказ"
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Choose a receipt."
-msgstr ""
+msgstr "Изберете разписка."
 
 #. module: hr_expense_extract
 #: model:ir.model,name:hr_expense_extract.model_res_company
@@ -123,7 +127,7 @@ msgstr "Дигитализирай автоматично"
 #: model:ir.actions.server,name:hr_expense_extract.hr_expense_parse_action_server
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.hr_expense_extract_view_form
 msgid "Digitize document"
-msgstr ""
+msgstr "Дигитализиране на документ"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields.selection,name:hr_expense_extract.selection__res_company__expense_extract_show_ocr_option_selection__manual_send
@@ -155,12 +159,12 @@ msgstr "Разход"
 #. module: hr_expense_extract
 #: model:ir.actions.server,name:hr_expense_extract.ir_cron_update_ocr_status_ir_actions_server
 msgid "Expense OCR: Update All Status"
-msgstr ""
+msgstr "Разходи OCR: Актуализирай всички статуси"
 
 #. module: hr_expense_extract
 #: model:ir.actions.server,name:hr_expense_extract.ir_cron_ocr_validate_ir_actions_server
 msgid "Expense OCR: Validate Expenses"
-msgstr ""
+msgstr "Разходи OCR: Валидиране на разходи"
 
 #. module: hr_expense_extract
 #: model:ir.model,name:hr_expense_extract.model_hr_expense_sheet
@@ -175,27 +179,27 @@ msgstr "Разпределяне на разходите"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_res_config_settings__expense_extract_show_ocr_option_selection
 msgid "Expense processing option"
-msgstr ""
+msgstr "Опция за обработка на разходи"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__sample
 msgid "Expenses created from sample receipt"
-msgstr ""
+msgstr "Разходи, създадени от примерна разписка"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_state_processed
 msgid "Extract State Processed"
-msgstr ""
+msgstr "Състояние на извличане - обработено"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_state
 msgid "Extract state"
-msgstr ""
+msgstr "Състояние на извличане"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_status
 msgid "Extract status"
-msgstr ""
+msgstr "Статус на извличане"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_follower_ids
@@ -231,7 +235,7 @@ msgstr "ID"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__extract_document_uuid
 msgid "ID of the request to IAP-OCR"
-msgstr ""
+msgstr "ID на заявката към IAP-OCR"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_needaction
@@ -252,7 +256,7 @@ msgstr "е последовател"
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__is_in_extractable_state
 msgid "Is In Extractable State"
-msgstr ""
+msgstr "В състояние за извличане ли е"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_expense_sample_register__journal_id
@@ -377,7 +381,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Report this expense to your manager for validation."
-msgstr ""
+msgstr "Изпратете този разход на вашия мениджър за валидиране."
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_has_sms_error
@@ -393,45 +397,45 @@ msgstr "Мостра"
 #. odoo-python
 #: code:addons/hr_expense_extract/wizard/expense_sample_receipt.py:0
 msgid "Sample Employee"
-msgstr ""
+msgstr "Примерен служител"
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/wizard/expense_sample_receipt.py:0
 msgid "Sample Receipt: %s"
-msgstr ""
+msgstr "Примерна разписка: %s"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_res_company__expense_extract_show_ocr_option_selection
 msgid "Send mode on expense attachments"
-msgstr ""
+msgstr "Режим на изпращане на прикачени файлове към разходи"
 
 #. module: hr_expense_extract
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.expense_sample_receipt_view_form
 msgid "Try Expense Digitization"
-msgstr ""
+msgstr "Опитайте дигитализация на разходи"
 
 #. module: hr_expense_extract
 #: model:ir.actions.act_window,name:hr_expense_extract.action_expense_sample_receipt
 msgid "Try Sample Receipt"
-msgstr ""
+msgstr "Опитайте с примерна разписка"
 
 #. module: hr_expense_extract
 #: model:ir.model,name:hr_expense_extract.model_expense_sample_receipt
 msgid "Try Sample Receipts"
-msgstr ""
+msgstr "Опитайте с примерни разписки"
 
 #. module: hr_expense_extract
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Try the AI with a sample receipt."
-msgstr ""
+msgstr "Опитайте AI с примерна разписка."
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "Upload or drop an expense receipt"
-msgstr ""
+msgstr "Качете или пуснете разписка за разход"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__website_message_ids
@@ -453,16 +457,17 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "You cannot send a expense that is not in draft state!"
-msgstr ""
+msgstr "Не можете да изпратите разход, който не е в състояние чернова!"
 
 #. module: hr_expense_extract
 #. odoo-javascript
 #: code:addons/hr_expense_extract/static/src/js/tours/expense_tour.js:0
 msgid "Your manager will have to approve (or refuse) your expense reports."
 msgstr ""
+"Вашият мениджър ще трябва да одобри (или откаже) вашите разходни отчети."
 
 #. module: hr_expense_extract
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "try a sample receipt"
-msgstr ""
+msgstr "опитайте с примерна разписка"

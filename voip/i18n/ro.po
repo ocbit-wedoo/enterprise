@@ -10,22 +10,23 @@
 # Larisa_nexterp, 2025
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Alexandru Vajda <vajdasanyi2002@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-12-17 18:09+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
-"Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18/voip/ro/"
-">\n"
+"PO-Revision-Date: 2026-07-03 11:12+0000\n"
+"Last-Translator: Alexandru Vajda <vajdasanyi2002@gmail.com>\n"
+"Language-Team: Romanian <https://translate.odoo.com/projects/odoo-18/voip/"
+"ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: voip
 #. odoo-javascript
@@ -439,7 +440,7 @@ msgstr "Introduceți un număr sau un nume"
 #. odoo-javascript
 #: code:addons/voip/static/src/softphone/numpad.xml:0
 msgid "Enter the number…"
-msgstr "Formați numărul..."
+msgstr "Formați numărul…"
 
 #. module: voip
 #: model:ir.model.fields,field_description:voip.field_res_users__external_device_number
@@ -467,7 +468,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/voip/static/src/core/user_agent_service.js:0
 msgid "Failed to put the call on hold/unhold."
-msgstr ""
+msgstr "Apelul nu a putut fi pus în așteptare/reluat."
 
 #. module: voip
 #. odoo-javascript
@@ -485,7 +486,7 @@ msgstr "Așteptare"
 #. odoo-javascript
 #: code:addons/voip/static/src/softphone/activities_tab.js:0
 msgid "Hold on!"
-msgstr ""
+msgstr "Aşteaptă!"
 
 #. module: voip
 #: model:ir.model.fields,field_description:voip.field_res_users__how_to_call_on_mobile
@@ -495,7 +496,7 @@ msgstr "Cum să suni pe mobil"
 #. module: voip
 #: model:ir.model.fields,field_description:voip.field_res_users_settings__how_to_call_on_mobile
 msgid "How to place calls on mobile"
-msgstr ""
+msgstr "Cum să efectuați apeluri de pe telefonul mobil"
 
 #. module: voip
 #: model:ir.model.fields,field_description:voip.field_voip_call__id
@@ -506,7 +507,7 @@ msgstr "ID"
 #. module: voip
 #: model:ir.model.fields,help:voip.field_res_users_settings__should_auto_reject_incoming_calls
 msgid "If enabled, incoming calls will be automatically declined in Odoo."
-msgstr ""
+msgstr "Dacă este activată, apelurile primite vor fi respinse automat în Odoo."
 
 #. module: voip
 #: model:ir.model.fields,help:voip.field_res_users_settings__should_call_from_another_device
@@ -526,12 +527,14 @@ msgid ""
 "If the \"Call from another device\" option is enabled, calls placed in Odoo "
 "will be transfered to this phone number."
 msgstr ""
+"Dacă opțiunea „Apel de pe un alt dispozitiv” este activată, apelurile "
+"efectuate din Odoo vor fi transferate către acest număr de telefon."
 
 #. module: voip
 #. odoo-javascript
 #: code:addons/voip/static/src/softphone/correspondence_details.js:0
 msgid "In call for: %(minutes)s:%(seconds)s"
-msgstr ""
+msgstr "În apel de: %(minutes)s:%(seconds)s"
 
 #. module: voip
 #: model:ir.model.fields.selection,name:voip.selection__voip_call__direction__incoming
@@ -542,7 +545,7 @@ msgstr "Intrări"
 #. odoo-javascript
 #: code:addons/voip/static/src/softphone/call_invitation.xml:0
 msgid "Incoming call from…"
-msgstr "Primire apel de la..."
+msgstr "Primire apel de la…"
 
 #. module: voip
 #. odoo-javascript
@@ -589,7 +592,7 @@ msgstr "Marchează ca efectuat"
 #. odoo-javascript
 #: code:addons/voip/static/src/softphone/activities_tab.js:0
 msgid "Missclicked, sorry."
-msgstr ""
+msgstr "Am apăsat din greșeală, scuze."
 
 #. module: voip
 #: model:ir.model.fields.selection,name:voip.selection__voip_call__state__missed

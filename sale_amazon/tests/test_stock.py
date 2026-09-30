@@ -307,10 +307,17 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             """ Return a mock response without making an actual call to the Selling Partner API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
             if operation_ == 'getOrder':
-                response_ = {'payload': dict(common.ORDER_MOCK, OrderStatus='Shipped')}
-            else:
-                response_ = base_response_
-            return response_
+                order_mock = base_response_['order']
+                return {
+                    "order": {
+                        **order_mock,
+                        "fulfillment": {
+                            **order_mock["fulfillment"],
+                            "fulfillmentStatus": "SHIPPED",
+                        },
+                    }
+                }
+            return base_response_
 
         with patch(
             'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
@@ -358,10 +365,17 @@ class TestStock(common.TestAmazonCommon, TestStockCommon):
             """ Return a mock response without making an actual call to the Selling Partner API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
             if operation_ == 'getOrder':
-                response_ = {'payload': dict(common.ORDER_MOCK, OrderStatus='Shipped')}
-            else:
-                response_ = base_response_
-            return response_
+                order_mock = base_response_["order"]
+                return {
+                    "order": {
+                        **order_mock,
+                        "fulfillment": {
+                            **order_mock["fulfillment"],
+                            "fulfillmentStatus": "SHIPPED",
+                        },
+                    }
+                }
+            return base_response_
 
         with patch(
             'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock

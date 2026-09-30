@@ -25,13 +25,15 @@
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
 # Mikael Akerberg <mikael.akerberg@mariaakerberg.com>, 2026.
+# David Poole <david@proloc.se>, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-04-17 09:57+0000\n"
-"Last-Translator: Mikael Akerberg <mikael.akerberg@mariaakerberg.com>\n"
+"PO-Revision-Date: 2026-09-09 13:56+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "appointment/sv/>\n"
 "Language: sv\n"
@@ -39,7 +41,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -53,17 +55,17 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count
 msgid "# Appointments"
-msgstr "# Utnämningar"
+msgstr "Antal tidsbokningar"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count_request
 msgid "# Appointments To Confirm"
-msgstr "# Utnämningar att bekräfta"
+msgstr "Antal tidsbokningar att bekräfta"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__calendar_event_count
 msgid "# Bookings"
-msgstr "# Bokningar"
+msgstr "Antal tidsbokningar"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_invite_count
@@ -85,7 +87,7 @@ msgstr "# Personal Användare"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count_upcoming
 msgid "# Upcoming Appointments"
-msgstr "# Kommande utnämningar"
+msgstr "Antal kommande tidsbokningar"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_calendar
@@ -1604,7 +1606,7 @@ msgstr "Godkänn"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__access_token
 msgid "Access Token"
-msgstr "Åtkomsttecken"
+msgstr "Åtkomsttoken"
 
 #. module: appointment
 #. odoo-javascript
@@ -1641,12 +1643,12 @@ msgstr "Aktiviteter"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Aktivitet undantaget dekoration"
+msgstr "Stilmarkeringar för undantagsaktiviteter"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_state
 msgid "Activity State"
-msgstr "Aktivitetsläge"
+msgstr "Aktivitetsstatus"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_type_icon
@@ -1717,7 +1719,7 @@ msgstr "Alla"
 #: model:ir.actions.act_window,name:appointment.calendar_event_action_report_all
 #: model:ir.ui.menu,name:appointment.menu_schedule_report_all_events
 msgid "All Appointments"
-msgstr "Alla utnämningar"
+msgstr "Alla tidsbokningar"
 
 #. module: appointment
 #. odoo-python
@@ -1783,12 +1785,12 @@ msgstr "Svar Inmatning"
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer_input__question_type
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__question_type
 msgid "Answer Type"
-msgstr "Typ av svar"
+msgstr "Svarstyp"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Answers"
-msgstr "Svar"
+msgstr "Svarsalternativ"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__all_assigned_resources
@@ -1939,7 +1941,7 @@ msgstr "Status för utnämning"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__name
 msgid "Appointment Title"
-msgstr "Titel på utnämningen"
+msgstr "Namn"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_appointment_type
@@ -1957,7 +1959,7 @@ msgstr "Tidsbokningstyp"
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__appointment_type_ids
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_search
 msgid "Appointment Types"
-msgstr "Typer av utnämningar"
+msgstr "Tidsbokningstyper"
 
 #. module: appointment
 #. odoo-python
@@ -2026,7 +2028,7 @@ msgstr "Utnämningar av"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_search
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
 msgid "Archived"
-msgstr "Arkiverad"
+msgstr "Arkiverade"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
@@ -2079,7 +2081,7 @@ msgstr "Tillgänglighet på"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__answer_ids
 msgid "Available Answers"
-msgstr "Tillgängliga svar"
+msgstr "Svarsalternativ"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_search
@@ -2331,7 +2333,7 @@ msgstr "Beräknar om varning är närvarande"
 #. module: appointment
 #: model:ir.ui.menu,name:appointment.appointment_menu_config
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr "Inställningar"
 
 #. module: appointment
 #. odoo-javascript
@@ -2424,7 +2426,7 @@ msgstr "Kopiera länk"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_invite/appointment_invite_copy_close.xml:0
 msgid "Copy Link & Close"
-msgstr "Kopiera länk & stäng"
+msgstr "Kopiera länk och stäng"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
@@ -2489,7 +2491,7 @@ msgstr "Skapad den"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Custom Link"
-msgstr "Anpassad länk"
+msgstr "Länka till tidsbokningstyper"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_answer_input__partner_id
@@ -2673,7 +2675,7 @@ msgstr "Rullgardinsmeny (ett svar)"
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_duration
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
 msgid "Duration"
-msgstr "Varaktighet"
+msgstr "Tidsperiod"
 
 #. module: appointment
 #. odoo-javascript
@@ -2882,13 +2884,15 @@ msgstr "Ikon för att indikera en undantagsaktivitet."
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Om markerat, nya meddelanden kräver din uppmärksamhet."
+msgstr ""
+"Om rutan är markerad, så finns det nya meddelanden som kräver din "
+"uppmärksamhet."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_error
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Om markerad, några meddelanden har leveransfel."
+msgstr "Om rutan är markerad, så har vissa meddelanden leveransfel."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -3048,7 +3052,7 @@ msgstr "Är publicerad"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Join using"
-msgstr "Gå med med hjälp av"
+msgstr "Anslut med"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__country_ids
@@ -3273,12 +3277,12 @@ msgstr "Nästa Kalenderhändelse för aktivitet"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Nästa slutdatum för aktivitet"
+msgstr "Tidsgräns för nästa aktivitet"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_summary
 msgid "Next Activity Summary"
-msgstr "Nästa aktivitetssammanställning"
+msgstr "Sammanfattning av nästa aktivitet"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__activity_type_id
@@ -3304,7 +3308,7 @@ msgstr "Ingen bild"
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_invite_action
 msgid "No Shared Links yet!"
-msgstr "Inga delade länkar ännu!"
+msgstr "Inga delningslänkar hittades!"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__calendar_event__appointment_status__no_show
@@ -3513,7 +3517,7 @@ msgstr "Tid för förbokning"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Preview"
-msgstr "Förhandsgranskning"
+msgstr "Förhandsvisa"
 
 #. module: appointment
 #. odoo-javascript
@@ -3533,7 +3537,7 @@ msgstr "Punktlig"
 #: model:ir.model.fields,field_description:appointment.field_appointment_question__name
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_answer_input_view_search
 msgid "Question"
-msgstr "Fråga"
+msgstr "Informationstyp"
 
 #. module: appointment
 #. odoo-python
@@ -3542,7 +3546,7 @@ msgstr "Fråga"
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form
 msgid "Questions"
-msgstr "Frågor"
+msgstr "Bokningsinformation"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__radio
@@ -3563,7 +3567,7 @@ msgstr "Är du redo att göra schemaläggning enkelt?"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_manage_leaves__reason
 msgid "Reason"
-msgstr "Anledning"
+msgstr "Beskrivning"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__redirect_url
@@ -3621,7 +3625,7 @@ msgstr "Resurs %s"
 #: model:ir.actions.act_window,name:appointment.calendar_event_action_view_bookings_resources
 #: model:ir.actions.server,name:appointment.calendar_event_action_all_resources_bookings
 msgid "Resource Bookings"
-msgstr "Bokning av resurser"
+msgstr "Resursbokningar"
 
 #. module: appointment
 #: model:ir.ui.menu,name:appointment.menu_appointment_resource_leaves
@@ -3737,7 +3741,7 @@ msgstr "Spara och kopiera länk"
 #: model:ir.ui.menu,name:appointment.menu_appointment_schedule_resources
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Schedule"
-msgstr "Schemalägg"
+msgstr "Schema"
 
 #. module: appointment
 #. odoo-python
@@ -3799,7 +3803,7 @@ msgstr "Sök i Ansvarig"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid "Select Appointments to share..."
-msgstr "Välj Möten att dela..."
+msgstr "Välj tidsbokningstyper att dela..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
@@ -3888,7 +3892,7 @@ msgstr "Dela"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/kanban/kanban_controller.js:0
 msgid "Share Appointment"
-msgstr "Dela utnämning"
+msgstr "Länka till tidsbokningstyp"
 
 #. module: appointment
 #. odoo-javascript
@@ -3942,7 +3946,7 @@ msgstr "Delad kalender"
 #: model:ir.ui.menu,name:appointment.menu_appointment_invite
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Shared Links"
-msgstr "Delade länkar"
+msgstr "Delningslänkar"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__short_code
@@ -4024,7 +4028,7 @@ msgstr "Källa kombination"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__custom
 msgid "Specific Slots"
-msgstr "Specifika spelautomater"
+msgstr "Specifika tider"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__specific_resources
@@ -4085,10 +4089,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Status baserad på aktiviteter\n"
-"Försenade: Leveranstidpunkten har passerat\n"
-"Idag: Aktivitetsdatum är idag\n"
-"Kommande: Framtida aktiviteter."
+"Status baserat på aktivitetsdatum:\n"
+"Försenade: Aktivitetsdatum har redan passerat.\n"
+"Idag: Aktivitetsdatum är dagens datum.\n"
+"Planerade: Kommande aktiviteter."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_booking_line__event_stop
@@ -4648,7 +4652,7 @@ msgstr "t.ex. +1(605)691-3277"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
 msgid "e.g. Inventory count and valuation"
-msgstr "t.ex. inventering och värdering av lager"
+msgstr "T.ex. inventering och värdering av lager"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form

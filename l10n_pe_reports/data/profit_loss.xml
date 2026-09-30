@@ -23,7 +23,7 @@
                     <record id="account_financial_report_pnl_A_4_balance" model="account.report.expression">
                         <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">PE_PNL_A.balance - PE_PNL_A_3.balance</field>
+                        <field name="formula">PE_PNL_A.balance - PE_PNL_A_3.balance + PE_PNL_A_5.balance</field>
                     </record>
                 </field>
                 <field name="children_ids">

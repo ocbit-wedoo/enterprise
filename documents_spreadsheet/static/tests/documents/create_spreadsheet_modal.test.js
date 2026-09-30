@@ -152,6 +152,33 @@ test("Can search template in modal with searchbar", async function () {
     expect(`${dialogSelector} .o-spreadsheet-grid:first`).toHaveText("Blank spreadsheet");
 });
 
+test("Searchbar remains even without search matches", async function () {
+    await initTestEnvWithKanban();
+    await openTemplateDialog();
+
+    expect(`${dialogSelector} .o-spreadsheet-grid:not(.o-spreadsheet-grid-ghost-item)`).toHaveCount(
+        3
+    );
+    expect(`${dialogSelector} .o-spreadsheet-grid:first`).toHaveText("Blank spreadsheet");
+
+    await contains(`${dialogSelector} .o_searchview_input`).edit("No Match");
+    expect(`${dialogSelector} .o-spreadsheet-grid:not(.o-spreadsheet-grid-ghost-item)`).toHaveCount(
+        1
+    );
+    expect(`${dialogSelector} .o-spreadsheet-grid:first`).toHaveText("Blank spreadsheet");
+    expect(`${dialogSelector} .o_searchview_input`).toHaveCount(1);
+});
+
+test("Can make a custom filter in the searchbar", async function () {
+    await initTestEnvWithKanban();
+    await openTemplateDialog();
+
+    await contains(`${dialogSelector} .o_searchview_input`).edit("t", { confirm: false });
+    expect(`.o_domain_selector`).toHaveCount(0);
+    await contains(`${dialogSelector} .o_menu_item a[title='Add a custom filter']`).click();
+    expect(`.o_domain_selector`).toHaveCount(1);
+});
+
 test("Can fetch next templates", async function () {
     let fetch = 0;
     const mockRPC = async function (route, args) {
@@ -177,6 +204,20 @@ test("Can fetch next templates", async function () {
     );
     await contains(`${dialogSelector} .o_pager_next`).click();
     expect.verifySteps(["fetch_templates", "fetch_templates"]);
+});
+
+test("Can create a blank spreadsheet without access to the template model", async function () {
+    const mockRPC = async function (route, args) {
+        if (args.model === "spreadsheet.template" && args.method === "has_access") {
+            return false;
+        }
+    };
+    await initTestEnvWithKanban({ additionalTemplates: TEST_TEMPLATES, mockRPC });
+    await openTemplateDialog();
+
+    expect(`${dialogSelector} .o-spreadsheet-grid:not(.o-spreadsheet-grid-ghost-item)`).toHaveCount(
+        1
+    );
 });
 
 test("Disable create button if no template is selected", async function () {

@@ -1,26 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_shopee
+# * sale_shopee
 #
 # Translators:
 # Tadej Lupšina <tadej@hbs.si>, 2025
 # Jasmina Macur <jasmina@hbs.si>, 2025
 # Wil Odoo, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-01-19 01:20+0000\n"
-"Last-Translator: Wil Odoo, 2025\n"
-"Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
+"PO-Revision-Date: 2026-09-25 17:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18/"
+"sale_shopee/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.order_sync_failure
@@ -49,6 +51,30 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"<div>\n"
+"                <p>Sinhronizacija naročila Shopee s sklicem <t t-"
+"out=\"ctx.get('shopee_order_ref') or ''\">REF</t> je naletela na napako in "
+"ni bila dokončana.</p>\n"
+"                <p>Če naročilo ni preklicano v Shopeeju, noben drug poskus "
+"sinhronizacije ne bo izveden.</p>\n"
+"                <p>Če želite načrtovati nov poskus sinhronizacije, storite "
+"naslednje:\n"
+"                    </p><ol>\n"
+"                        <li>Odprite razvojna orodja.</li>\n"
+"                        <li>Odprite obrazec trgovine Shopee, v kateri je "
+"bilo naročilo oddano.</li>\n"
+"                        <li>Odprite zavihek Spremljanje naročil.</li>\n"
+"                        <li>Nastavite datum za <em>Datum zadnje "
+"sinhronizacije naročil</em>, ki je pred zadnjo posodobitvijo statusa "
+"naročila.</li>\n"
+"                        <li>Shranite spremembe in kliknite gumb <em>"
+"SINHRONIZIRAJ NAROČILA</em>.</li>\n"
+"                    </ol>\n"
+"                \n"
+"                <p>Če težava ni odpravljena, se obrnite na <a href=\"https://"
+"www.odoo.com/help/\">podporo Odoo</a>.</p>\n"
+"            </div>\n"
+"        "
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -57,6 +83,9 @@ msgid ""
 "                    Shop authorization is expired. Please re-authorize the "
 "shop in the Shopee Account page."
 msgstr ""
+"<strong>Opozorilo:</strong>\n"
+"                    Avtorizacija trgovine je potekla. Ponovno avtorizirajte "
+"trgovino na strani računa Shopee."
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -65,6 +94,9 @@ msgid ""
 "                    Shop authorization will expire soon. Re-authorize the "
 "shop in the Shopee Account page."
 msgstr ""
+"<strong>Opozorilo:</strong>\n"
+"                    Avtorizacija trgovine bo kmalu potekla. Ponovno "
+"avtorizirajte trgovino na strani računa Shopee."
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.picking_sync_failure
@@ -132,6 +164,68 @@ msgid ""
 "            </div>\n"
 "        </body>"
 msgstr ""
+"<style>\n"
+"                .shopee_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .shopee_table th,\n"
+"                .shopee_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .shopee_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .shopee_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .shopee_table tbody th,\n"
+"                .shopee_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>Sinhronizacija odpremnih nalepk Shopee je naletela na "
+"nekaj napak in ni bila dokončana.</p>\n"
+"                <p>Odpravite težavo, preden znova ročno sinhronizirate "
+"premike, saj nobena druga sinhronizacija ne bo izvedena.</p>\n"
+"                <p>Tukaj so napake, ki jih je poslal Shopee: </p>\n"
+"                <table class=\"shopee_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Reference paketnih premikov</th>\n"
+"                            <th>Sporočilo</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th><t t-out=\"error['batch_picking_refs']\"/></"
+"th>\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">Med sinhronizacijo s Shopee "
+"je prišlo do neznane napake.\n"
+"                                    Žal morate ročno preveriti, ali je "
+"stanje naročila pravilno ali ne.\n"
+"                                    Če težava ni odpravljena, se obrnite na "
+"<a href=\"https://www.odoo.com/help/\">Odoojevo podporo </a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.inventory_sync_failure
@@ -199,11 +293,73 @@ msgid ""
 "            </div>\n"
 "        </body>"
 msgstr ""
+"<style>\n"
+"                .shopee_table {\n"
+"                    width: 100%;\n"
+"                    max-width: 900px;\n"
+"                    border-collapse: collapse;\n"
+"                }\n"
+"\n"
+"                .shopee_table th,\n"
+"                .shopee_table td {\n"
+"                    border: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .shopee_table th {\n"
+"                    white-space: nowrap;\n"
+"                }\n"
+"\n"
+"                .shopee_table thead th {\n"
+"                    padding: 0.5em 0.5em;\n"
+"                    text-align: center;\n"
+"                    border-bottom: 1px solid #888;\n"
+"                }\n"
+"\n"
+"                .shopee_table tbody th,\n"
+"                .shopee_table tbody td {\n"
+"                    padding: 0.5em 0.5em 1em;\n"
+"                    vertical-align: top;\n"
+"                }\n"
+"            </style>\n"
+"            <body><div>\n"
+"                <p>Sinhronizacija zaloge za trgovino Shopee\n"
+"                    <b><t t-out=\"ctx.get('shopee_shop') or ''\">REF</t></b>"
+"\n"
+"                    je naletela na nekaj napak in ni bila dokončana.</p>\n"
+"                <p>Tukaj so napake, ki jih je poslal Shopee: </p>\n"
+"                <table class=\"shopee_table\">\n"
+"                    <thead>\n"
+"                        <tr>\n"
+"                            <th>Identifikator elementa Shopee</th>\n"
+"                            <th>Sporočilo</th>\n"
+"                        </tr>\n"
+"                    </thead>\n"
+"                    <tbody>\n"
+"                        <tr t-foreach=\"ctx.get('error_messages')\" t-"
+"as=\"error\">\n"
+"                            <th><t t-out=\"error['item_identifier']\"/></th>"
+"\n"
+"                            <td>\n"
+"                                <t t-if=\"error['message']\" t-"
+"out=\"error['message']\"/>\n"
+"                                <t t-else=\"\">Med sinhronizacijo s "
+"Shopeejem je prišlo do neznane napake.\n"
+"                                    Žal morate ročno preveriti, ali je "
+"razpoložljiva količina izdelka pravilna ali ne.\n"
+"                                    Če težava ni odpravljena, se obrnite na "
+"<a href=\"https://www.odoo.com/help/\">Odoo podporo </a>.\n"
+"                                </t>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                    </tbody>\n"
+"                </table>\n"
+"            </div>\n"
+"        </body>"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__api_endpoint
 msgid "API Endpoint"
-msgstr ""
+msgstr "Končna točka API-ja"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__access_token
@@ -213,12 +369,13 @@ msgstr "Žeton vabila"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__access_token_expiration_date
 msgid "Access Token Expiration Date"
-msgstr ""
+msgstr "Datum poteka dostopnega žetona"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__access_token
 msgid "Access Token expires in 4 hours and is used to access the Shopee API."
 msgstr ""
+"Žeton za dostop poteče čez 4 ure in se uporablja za dostop do API-ja Shopee."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__access_token_expiration_date
@@ -226,6 +383,8 @@ msgid ""
 "Access token expiration date. Computed using the expires_in returned by "
 "Shopee."
 msgstr ""
+"Datum poteka veljavnosti dostopnega žetona. Izračunan je na podlagi "
+"vrednosti expires_in, ki jo vrne Shopee."
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
@@ -248,18 +407,18 @@ msgstr "Aktivno"
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Add-on Deal Main"
-msgstr ""
+msgstr "Glavna dodatna ponudba"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Add-on Deal Sub"
-msgstr ""
+msgstr "Podponudba dodatka"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__company_ids
 msgid "Allowed Company"
-msgstr ""
+msgstr "Dovoljeno podjetje"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -275,6 +434,10 @@ msgid ""
 "\n"
 "%(error_message)s"
 msgstr ""
+"V trgovini - %(shop_name)s je pri operaciji %(operation)s prišlo do napake %"
+"(error_code)s pri vzpostavljanju stika z API-jem Shopee. Shopee je poslal:\n"
+"\n"
+"%(error_message)s\n"
 
 #. module: sale_shopee
 #. odoo-python
@@ -285,6 +448,10 @@ msgid ""
 "\n"
 "%(error_message)s"
 msgstr ""
+"V trgovini - %(shop_name)s je pri operaciji %(operation)s prišlo do napake %"
+"(error_code)s pri vzpostavljanju stika z API-jem Shopee:\n"
+"\n"
+"%(error_message)s\n"
 
 #. module: sale_shopee
 #. odoo-python
@@ -293,27 +460,29 @@ msgid ""
 "Authorization Code is required to request an Access Token. Please authorize "
 "the connection first."
 msgstr ""
+"Za zahtevo dostopnega žetona je potrebna avtorizacijska koda. Najprej "
+"avtorizirajte povezavo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__authorization_expiration_date
 msgid "Authorization Expiration Date"
-msgstr ""
+msgstr "Datum poteka avtorizacije"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__authorization_remaining_days
 msgid "Authorization Remaining Days"
-msgstr ""
+msgstr "Preostali dnevi avtorizacije"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
 msgid "Authorize Shop"
-msgstr ""
+msgstr "Avtoriziraj trgovino"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Bundle Deal"
-msgstr ""
+msgstr "Paketna ponudba"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.quick_create_account_form
@@ -328,19 +497,19 @@ msgstr "Preklicano"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Cancelled on Shopee"
-msgstr ""
+msgstr "Preklicano na Shopeeju"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_account.py:0
 msgid "Changing API endpoint will reset the authorization of the shops."
-msgstr ""
+msgstr "Spreminjanje končne točke API-ja bo ponastavilo avtorizacijo trgovin."
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Changing the company of a Shopee shop is not allowed."
-msgstr ""
+msgstr "Spreminjanje podjetja trgovine Shopee ni dovoljeno."
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__company_id
@@ -357,12 +526,12 @@ msgstr "Stik"
 #. odoo-python
 #: code:addons/sale_shopee/controllers/onboarding.py:0
 msgid "Could not find Shopee account with id %(account)s"
-msgstr ""
+msgstr "Ni bilo mogoče najti računa Shopee z ID-jem %(account)s"
 
 #. module: sale_shopee
 #: model:ir.actions.act_window,name:sale_shopee.quick_create_account_action
 msgid "Create Shopee Accounts"
-msgstr ""
+msgstr "Ustvari račune Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__create_uid
@@ -381,7 +550,7 @@ msgstr "Ustvarjeno"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
 msgid "Credentials"
-msgstr ""
+msgstr "Poverilnice"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -391,7 +560,7 @@ msgstr "Dni"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__team_id
 msgid "Default Sales Team"
-msgstr ""
+msgstr "Privzeta prodajna ekipa"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__user_id
@@ -417,11 +586,14 @@ msgid ""
 "Shopee shop authorization on Shopee Account view. Once expired, the user "
 "must re-authorize the connection on Shopee Account view."
 msgstr ""
+"Datum poteka avtorizacije trgovine, ki je bil vrnjen med avtorizacijo "
+"trgovine Shopee v pogledu računa Shopee. Po poteku mora uporabnik znova "
+"avtorizirati povezavo v pogledu računa Shopee."
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__fbs_location_id
 msgid "FBS Stock Location"
-msgstr ""
+msgstr "Lokacija zaloge FBS"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__stock_picking__shopee_label_status__failed
@@ -438,57 +610,62 @@ msgid ""
 "One of the following input could be incorrect: Partner ID, Partner Key, or "
 "API Endpoint."
 msgstr ""
+"Trgovine ni bilo mogoče avtorizirati zaradi naslednje napake:\n"
+"- %(message)s\n"
+"\n"
+"Eden od naslednjih podatkov je morda napačen: ID partnerja, ključ partnerja "
+"ali končna točka API-ja.\n"
 
 #. module: sale_shopee
 #: model:ir.actions.server,name:sale_shopee.action_fetch_shipping_label
 msgid "Fetch Shipping Label"
-msgstr ""
+msgstr "Pridobi odpremno nalepko"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Fetch Shipping Labels"
-msgstr ""
+msgstr "Pridobi odpremne nalepke"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Fetch Shopee Label"
-msgstr ""
+msgstr "Pridobi nalepko Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Flash Sale"
-msgstr ""
+msgstr "Hitra razprodaja"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Cross Border Seller"
-msgstr ""
+msgstr "Izpolnil čezmejni prodajalec"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Merchant"
-msgstr ""
+msgstr "Izpolnil trgovec"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
 msgid "Fulfilled by Shopee"
-msgstr ""
+msgstr "Izpolnjuje Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__hybrid
 msgid "Fulfillment by Cross Border Seller"
-msgstr ""
+msgstr "Izpolnitev s strani čezmejnega prodajalca"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__fbm
 msgid "Fulfillment by Merchant"
-msgstr ""
+msgstr "Izpolnil trgovec"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_fulfillment_type__fbs
 msgid "Fulfillment by Shopee"
-msgstr ""
+msgstr "Izpolnjuje Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__id
@@ -501,7 +678,7 @@ msgstr "ID"
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__active
 msgid ""
 "If made inactive, this account will no longer be synchronized with Shopee."
-msgstr ""
+msgstr "Če bo ta račun deaktiviran, ne bo več sinhroniziran s Shopee."
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.view_order_form
@@ -515,7 +692,7 @@ msgstr ""
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_account__company_ids
 msgid "If this field is empty, all companies will be allowed."
-msgstr ""
+msgstr "Če je to polje prazno, bodo dovoljena vsa podjetja."
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_shop__status__inactive
@@ -527,31 +704,32 @@ msgstr "Neaktivno"
 #: model:ir.model.constraint,message:sale_shopee.constraint_shopee_item_unique_shopee_item_and_model_identifiers
 msgid "Item and Model Identifiers must be unique for a given shop."
 msgstr ""
+"Identifikatorji artikla in modela morajo biti edinstveni za dano trgovino."
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_stock_picking__shopee_label_status
 msgid "Label Status"
-msgstr ""
+msgstr "Stanje nalepke"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__last_orders_sync_date
 msgid "Last Order Synchronization Date"
-msgstr ""
+msgstr "Datum zadnje sinhronizacije naročil"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_stock_picking__last_picking_sync_date
 msgid "Last Picking Sync Date"
-msgstr ""
+msgstr "Datum zadnje sinhronizacije prevzema"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__last_shop_status_sync_date
 msgid "Last Shop Status Synchronization Date"
-msgstr ""
+msgstr "Datum zadnje sinhronizacije statusa trgovine"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__last_inventory_sync_date
 msgid "Last Sync Date"
-msgstr ""
+msgstr "Datum zadnje sinhronizacije"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__write_uid
@@ -581,7 +759,7 @@ msgstr "Naziv"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Need to rearrange shipment on Shopee"
-msgstr ""
+msgstr "Pošiljko na Shopeeju je treba preurediti"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_list
@@ -606,17 +784,17 @@ msgstr "Naročila"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__partner_identifier
 msgid "Partner ID"
-msgstr ""
+msgstr "ID partnerja"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__partner_key
 msgid "Partner Key"
-msgstr ""
+msgstr "Ključ partnerja"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_delivery_status__error
 msgid "Pickup Failed"
-msgstr ""
+msgstr "Prevzem ni uspel"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__stock_picking__shopee_label_status__processing
@@ -633,7 +811,7 @@ msgstr "Izdelek"
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Product Promotion"
-msgstr ""
+msgstr "Promocija izdelka"
 
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_product_product
@@ -648,12 +826,12 @@ msgstr "Pripravljeno"
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_delivery_status__draft
 msgid "Ready to Ship"
-msgstr ""
+msgstr "Pripravljeno za odpremo"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Ready to arrange shipment via Shopee"
-msgstr ""
+msgstr "Pripravljeno za ureditev pošiljke na Shopeeju"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__refresh_token
@@ -667,16 +845,20 @@ msgid ""
 "Once expired, the user must re-authorize the connection on Shopee Account "
 "view."
 msgstr ""
+"Osvežitveni žeton se uporablja za zahtevanje novega dostopnega žetona in "
+"poteče po 30 dneh. Ko poteče, mora uporabnik v pogledu računa Shopee "
+"povezavo znova avtorizirati."
 
 #. module: sale_shopee
 #: model_terms:ir.actions.act_window,help:sale_shopee.action_shopee_account_list
 msgid "Register your Shopee account"
-msgstr ""
+msgstr "Registrirajte svoj račun Shopee"
 
 #. module: sale_shopee
 #: model_terms:ir.actions.act_window,help:sale_shopee.action_shopee_account_list
 msgid "Register yours to start synchronizing your orders into Odoo."
 msgstr ""
+"Registrirajte svoj račun, da začnete sinhronizirati svoja naročila v Odoo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__authorization_remaining_days
@@ -684,6 +866,8 @@ msgid ""
 "Remaining days of the shop authorization. Show a warning in the Shopee Shop "
 "view that the authorization will expire soon."
 msgstr ""
+"Preostali dnevi avtorizacije trgovine. V pogledu trgovine Shopee prikažite "
+"opozorilo, da bo avtorizacija kmalu potekla."
 
 #. module: sale_shopee
 #. odoo-python
@@ -699,33 +883,33 @@ msgstr "Prodajni nalog"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.quick_create_account_form
 msgid "Save And Authorize"
-msgstr ""
+msgstr "Shrani in avtoriziraj"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_delivery_status__confirmed
 msgid "Shipment Arranged"
-msgstr ""
+msgstr "Pošiljka urejena"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Shipment arranged via Shopee"
-msgstr ""
+msgstr "Pošiljka organizirana prek Shopeeja"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__sale_order__shopee_delivery_status__done
 msgid "Shipped"
-msgstr ""
+msgstr "Odpremljeno"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.picking_view_form
 msgid "Shipped via Shopee"
-msgstr ""
+msgstr "Odposlano prek Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/stock_picking.py:0
 msgid "Shipping Label Not Ready"
-msgstr ""
+msgstr "Odpremna nalepka ni pripravljena"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__shop_id
@@ -736,98 +920,98 @@ msgstr "Trgovina"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__shop_count
 msgid "Shop Count"
-msgstr ""
+msgstr "Število trgovin"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Information"
-msgstr ""
+msgstr "Informacije o trgovini"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Name"
-msgstr ""
+msgstr "Ime trgovine"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Settings"
-msgstr ""
+msgstr "Nastavitve trgovine"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Status: Active"
-msgstr ""
+msgstr "Stanje trgovine: Aktivna"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Status: Error"
-msgstr ""
+msgstr "Stanje trgovine: napaka"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shop Status: Inactive"
-msgstr ""
+msgstr "Status trgovine: neaktivna"
 
 #. module: sale_shopee
 #: model:ir.ui.menu,name:sale_shopee.root_menu
 msgid "Shopee"
-msgstr ""
+msgstr "Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_account.py:0
 msgid "Shopee API Account - %(partner_id)s"
-msgstr ""
+msgstr "Račun API-ja Shopee - %(partner_id)s"
 
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_shopee_account
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__account_id
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
 msgid "Shopee Account"
-msgstr ""
+msgstr "Račun Shopee"
 
 #. module: sale_shopee
 #: model:ir.actions.act_window,name:sale_shopee.action_shopee_account_list
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_list
 msgid "Shopee Accounts"
-msgstr ""
+msgstr "Računi Shopee"
 
 #. module: sale_shopee
 #: model:product.template,name:sale_shopee.default_adjustment_product_product_template
 msgid "Shopee Amount Adjustment"
-msgstr ""
+msgstr "Prilagoditev zneska Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_res_partner__shopee_buyer_identifier
 #: model:ir.model.fields,field_description:sale_shopee.field_res_users__shopee_buyer_identifier
 msgid "Shopee Buyer ID"
-msgstr ""
+msgstr "ID kupca Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Shopee Customer #%(order_no)s"
-msgstr ""
+msgstr "Stranka Shopee št. %(order_no)s"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_sale_order__shopee_fulfillment_type
 msgid "Shopee Fulfillment Type"
-msgstr ""
+msgstr "Vrsta izpolnitve Shopee"
 
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_shopee_item
 msgid "Shopee Item"
-msgstr ""
+msgstr "Artikel Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__shopee_item_count
 msgid "Shopee Item Count"
-msgstr ""
+msgstr "Število artiklov Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__shopee_item_identifier
 msgid "Shopee Item ID"
-msgstr ""
+msgstr "ID artikla Shopee"
 
 #. module: sale_shopee
 #. odoo-python
@@ -838,68 +1022,68 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_item_view_list
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shopee Items"
-msgstr ""
+msgstr "Artikli Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/stock_picking.py:0
 msgid "Shopee Label"
-msgstr ""
+msgstr "Nalepka Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__shopee_model_identifier
 msgid "Shopee Model ID"
-msgstr ""
+msgstr "ID modela Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/tests/test_shopee.py:0
 msgid "Shopee Order %(order)s at mock_shopee_shop"
-msgstr ""
+msgstr "Shopeejevo naročilo %(order)s pri mock_shopee_shop"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Shopee Order %(shopee_order_ref)s at %(shop_name)s"
-msgstr ""
+msgstr "Naročilo Shopee %(shopee_order_ref)s v trgovini %(shop_name)s"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 #: code:addons/sale_shopee/tests/test_shopee.py:0
 msgid "Shopee Pricelist %(currency)s"
-msgstr ""
+msgstr "Cenik Shopee %(currency)s"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__production_brazil
 msgid "Shopee Production Endpoint (Brazil)"
-msgstr ""
+msgstr "Produkcijska končna točka Shopee (Brazilija)"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__production_china
 msgid "Shopee Production Endpoint (China)"
-msgstr ""
+msgstr "Produkcijska končna točka Shopee (Kitajska)"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__production_singapore
 msgid "Shopee Production Endpoint (Singapore)"
-msgstr ""
+msgstr "Produkcijska končna točka Shopee (Singapur)"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_sale_order__shopee_order_ref
 #: model:ir.model.fields,field_description:sale_shopee.field_stock_picking__shopee_order_ref
 msgid "Shopee Reference"
-msgstr ""
+msgstr "Referenca Shopee"
 
 #. module: sale_shopee
 #: model:product.template,name:sale_shopee.default_sale_product_product_template
 msgid "Shopee Sale"
-msgstr ""
+msgstr "Shopee prodaja"
 
 #. module: sale_shopee
 #: model:product.template,name:sale_shopee.default_shipping_product_product_template
 msgid "Shopee Shipping"
-msgstr ""
+msgstr "Dostava Shopee"
 
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_shopee_shop
@@ -907,51 +1091,51 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_item_view_search
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Shopee Shop"
-msgstr ""
+msgstr "Trgovina Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Shopee Shop #%(shop_id)s"
-msgstr ""
+msgstr "Trgovina Shopee št. %(shop_id)s"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__shop_identifier
 msgid "Shopee Shop ID"
-msgstr ""
+msgstr "ID trgovine Shopee"
 
 #. module: sale_shopee
 #: model:ir.actions.act_window,name:sale_shopee.action_shopee_shop_list
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_list
 msgid "Shopee Shops"
-msgstr ""
+msgstr "Trgovine Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_sale_order__shopee_delivery_status
 #: model:ir.model.fields,field_description:sale_shopee.field_stock_picking__shopee_delivery_status
 msgid "Shopee Status"
-msgstr ""
+msgstr "Status Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__test
 msgid "Shopee Testing Endpoint"
-msgstr ""
+msgstr "Preskusna končna točka Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields.selection,name:sale_shopee.selection__shopee_account__api_endpoint__test_china
 msgid "Shopee Testing Endpoint (China)"
-msgstr ""
+msgstr "Preskusna končna točka Shopee (Kitajska)"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Shopee Warehouse - %(shop)s"
-msgstr ""
+msgstr "Skladišče Shopee - %(shop)s"
 
 #. module: sale_shopee
 #: model_terms:ir.actions.act_window,help:sale_shopee.action_shopee_account_list
 msgid "Shopee accounts correspond to Shopee Seller Central accounts."
-msgstr ""
+msgstr "Shopeejevi računi ustrezajo računom Shopee Seller Central."
 
 #. module: sale_shopee
 #. odoo-python
@@ -960,6 +1144,8 @@ msgid ""
 "Shopee is processing the shipping label. Odoo will try fetching the shipping "
 "label again later."
 msgstr ""
+"Shopee obdeluje odpremno nalepko. Odoo bo pozneje znova poskusil pridobiti "
+"odpremno nalepko."
 
 #. module: sale_shopee
 #. odoo-python
@@ -970,37 +1156,37 @@ msgstr ""
 #. module: sale_shopee
 #: model:mail.template,name:sale_shopee.inventory_sync_failure
 msgid "Shopee: Inventory Synchronization Failure"
-msgstr ""
+msgstr "Shopee: Napaka pri sinhronizaciji zaloge"
 
 #. module: sale_shopee
 #: model:mail.template,name:sale_shopee.order_sync_failure
 msgid "Shopee: Order Synchronization Failure"
-msgstr ""
+msgstr "Shopee: Napaka pri sinhronizaciji naročila"
 
 #. module: sale_shopee
 #: model:mail.template,name:sale_shopee.picking_sync_failure
 msgid "Shopee: Shipping Label Synchronization Failure"
-msgstr ""
+msgstr "Shopee: Napaka pri sinhronizaciji nalepke za pošiljanje"
 
 #. module: sale_shopee
 #: model:ir.actions.server,name:sale_shopee.ir_cron_sync_shopee_pickings_retry_ir_actions_server
 msgid "Shopee: retry sync shipping labels"
-msgstr ""
+msgstr "Shopee: ponovni poskus sinhronizacije odpremnih nalepk"
 
 #. module: sale_shopee
 #: model:ir.actions.server,name:sale_shopee.ir_cron_sync_shopee_inventory_ir_actions_server
 msgid "Shopee: sync inventory"
-msgstr ""
+msgstr "Shopee: sinhronizacija zaloge"
 
 #. module: sale_shopee
 #: model:ir.actions.server,name:sale_shopee.ir_cron_sync_shopee_orders_ir_actions_server
 msgid "Shopee: sync orders"
-msgstr ""
+msgstr "Shopee: sinhronizacija naročil"
 
 #. module: sale_shopee
 #: model:ir.actions.server,name:sale_shopee.ir_cron_sync_shopee_pickings_ir_actions_server
 msgid "Shopee: sync shipping labels"
-msgstr ""
+msgstr "Shopee: sinhronizacija odpremnih nalepk"
 
 #. module: sale_shopee
 #. odoo-python
@@ -1008,7 +1194,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_account__shop_ids
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
 msgid "Shops"
-msgstr ""
+msgstr "Trgovine"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__status
@@ -1023,43 +1209,45 @@ msgstr "Shranjeno"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Sync Inventory"
-msgstr ""
+msgstr "Sinhroniziraj zalogo"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Sync Orders"
-msgstr ""
+msgstr "Sinhroniziraj naročila"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Synchronization Information"
-msgstr ""
+msgstr "Informacije o sinhronizaciji"
 
 #. module: sale_shopee
 #: model:mail.template,subject:sale_shopee.inventory_sync_failure
 msgid "Synchronization of Shopee inventory has failed"
-msgstr ""
+msgstr "Sinhronizacija zaloge Shopee ni uspela"
 
 #. module: sale_shopee
 #: model:mail.template,subject:sale_shopee.order_sync_failure
 msgid ""
 "Synchronization of Shopee order {{ ctx.get('shopee_order_ref') }} has failed"
 msgstr ""
+"Sinhronizacija Shopeejevega naročila {{ ctx.get('shopee_order_ref') }} ni "
+"uspela"
 
 #. module: sale_shopee
 #: model:mail.template,subject:sale_shopee.picking_sync_failure
 msgid "Synchronization of shipping labels has failed"
-msgstr ""
+msgstr "Sinhronizacija odpremnih etiket ni uspela"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__synchronize_inventory
 msgid "Synchronize Inventory"
-msgstr ""
+msgstr "Sinhroniziraj zalogo"
 
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_item__sync_to_shopee
 msgid "Synchronize Inventory to Shopee"
-msgstr ""
+msgstr "Sinhroniziraj zalogo s Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_account__api_endpoint
@@ -1068,27 +1256,30 @@ msgid ""
 "testing endpoints. Among the endpoints, choose the one that is "
 "geographically closest to the marketplace you are targeting."
 msgstr ""
+"Končna točka API-ja, ki jo je treba uporabiti za klice API-ja Shopee. "
+"Obstajajo produkcijske in testne končne točke. Med končnimi točkami izberite "
+"tisto, ki je geografsko najbližje tržnici, na katero ciljate."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_sale_order__shopee_shop_id
 msgid "The Shopee shop from which the order was placed."
-msgstr ""
+msgstr "Trgovina Shopee, iz katere je bilo oddano naročilo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_sale_order__shopee_order_ref
 #: model:ir.model.fields,help:sale_shopee.field_stock_picking__shopee_order_ref
 msgid "The Shopee-defined order reference."
-msgstr ""
+msgstr "Referenca naročila, ki jo določi Shopee."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__team_id
 msgid "The default Sales Team assigned to Shopee orders for reporting"
-msgstr ""
+msgstr "Privzeta prodajna ekipa, dodeljena naročilom Shopee za poročanje"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__user_id
 msgid "The default salesperson assigned to Shopee orders"
-msgstr ""
+msgstr "Privzeti prodajalec, dodeljen naročilom Shopee"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__last_orders_sync_date
@@ -1096,22 +1287,25 @@ msgid ""
 "The last time the orders were synchronized with Shopee. Orders whose status "
 "has not changed since this date will not be created nor updated in Odoo."
 msgstr ""
+"Zadnjič, ko so bila naročila sinhronizirana s Shopee. Naročila, katerih "
+"stanje se od tega datuma ni spremenilo, v Odoo ne bodo ustvarjena niti "
+"posodobljena."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_stock_picking__last_picking_sync_date
 msgid "The last time the picking was synchronized with Shopee."
-msgstr ""
+msgstr "Zadnjič, ko je bil prevzem sinhroniziran s Shopee."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__last_shop_status_sync_date
 msgid "The last time the shop status was synchronized with Shopee"
-msgstr ""
+msgstr "Zadnjič, ko je bilo stanje trgovine sinhronizirano s Shopee"
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/controllers/onboarding.py:0
 msgid "The request signature is not valid."
-msgstr ""
+msgstr "Podpis zahteve ni veljaven."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__status
@@ -1120,6 +1314,9 @@ msgid ""
 "Shopee.- Active: The shop is active and can be synchronized with Odoo.- "
 "Error: The shop is banned and cannot be synchronized with Odoo."
 msgstr ""
+"Stanje trgovine na Shopee.- Neaktivna: Trgovina še ni odobrena s strani "
+"Shopee.- Aktivna: Trgovina je aktivna in jo je mogoče sinhronizirati z "
+"Odoo.- Napaka: Trgovina je blokirana in je ni mogoče sinhronizirati z Odoo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_sale_order__shopee_delivery_status
@@ -1133,6 +1330,15 @@ msgid ""
 "- Cancelled: The order has been cancelled.\n"
 "- Pickup Failed: 3PL parcel pickup failed. Need to rearrange shipment."
 msgstr ""
+"Status dostavnega naročila na Shopeeju:\n"
+"- Pripravljeno za odpremo: Prodajalec lahko organizira odpremo.\n"
+"- Odpremа urejena: Prodajalec je odpremo uredil prek spleta in od 3PL prejel "
+"številko za sledenje.\n"
+"- Odpremljeno: Paket je bil oddan ponudniku 3PL ali ga je prevzel ponudnik "
+"3PL.\n"
+"- Preklicano: Naročilo je bilo preklicano.\n"
+"- Prevzem ni uspel: Prevzem paketa pri 3PL ni uspel. Odpremo je treba "
+"ponovno urediti."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_stock_picking__shopee_label_status
@@ -1144,6 +1350,12 @@ msgid ""
 "- Stored: The shipping label has been downloaded and stored.\n"
 "- Failed: The shipping label creation failed."
 msgstr ""
+"Stanje odpremne nalepke:\n"
+"- Ni na voljo: Odpremna nalepka še ni na voljo.\n"
+"- V obdelavi: Odpremna nalepka se obdeluje.\n"
+"- Pripravljena: Odpremna nalepka je pripravljena za prenos.\n"
+"- Shranjena: Odpremna nalepka je bila prenesena in shranjena.\n"
+"- Neuspešno: Ustvarjanje odpremne nalepke ni uspelo."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__fbs_location_id
@@ -1151,11 +1363,13 @@ msgid ""
 "The stock location managed by Shopee under the Fulfilled by Shopee (FBS) "
 "program."
 msgstr ""
+"Skladiščna lokacija, ki jo upravlja Shopee v okviru programa Fulfilled by "
+"Shopee (FBS)."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_account__name
 msgid "The user-defined name of the account."
-msgstr ""
+msgstr "Uporabniško določeno ime računa."
 
 #. module: sale_shopee
 #: model:ir.model.constraint,message:sale_shopee.constraint_sale_order_unique_shopee_order_ref_shopee_shop_id
@@ -1163,11 +1377,13 @@ msgid ""
 "There can only exist one sale order for a given Shopee Order Reference per "
 "Shop."
 msgstr ""
+"Za dano referenco Shopeejevega naročila v posamezni trgovini lahko obstaja "
+"samo eno prodajno naročilo."
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Tokens"
-msgstr ""
+msgstr "Žetoni"
 
 #. module: sale_shopee
 #: model:ir.model,name:sale_shopee.model_stock_picking
@@ -1178,12 +1394,12 @@ msgstr "Prenos"
 #. odoo-python
 #: code:addons/sale_shopee/models/shopee_shop.py:0
 msgid "Unknown Promotion Type"
-msgstr ""
+msgstr "Neznana vrsta promocije"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Update Shop"
-msgstr ""
+msgstr "Posodobi trgovino"
 
 #. module: sale_shopee
 #. odoo-python
@@ -1198,12 +1414,15 @@ msgid ""
 "synchronized with Shopee. Only products available in FBM or hybrid will be "
 "synchronized."
 msgstr ""
+"Določa, ali so razpoložljive količine izdelkov, povezanih s to trgovino, "
+"sinhronizirane s Shopee. Sinhronizirani bodo samo izdelki, ki so na voljo v "
+"načinu FBM ali hibridnem načinu."
 
 #. module: sale_shopee
 #. odoo-python
 #: code:addons/sale_shopee/controllers/onboarding.py:0
 msgid "You are not allowed to access this page."
-msgstr ""
+msgstr "Dostop do te strani ni dovoljen."
 
 #. module: sale_shopee
 #. odoo-python
@@ -1222,9 +1441,9 @@ msgstr ""
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_account_view_form
 msgid "e.g. American Market"
-msgstr ""
+msgstr "npr. ameriški trg"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "e.g. Indonesian Shop"
-msgstr ""
+msgstr "npr. indonezijska trgovina"

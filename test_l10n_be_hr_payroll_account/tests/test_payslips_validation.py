@@ -3585,8 +3585,8 @@ class TestPayslipValidation(TestPayslipValidationCommon):
         })
         self.assertEqual(len(self.holiday_pay_2020.worked_days_line_ids), 0)
         self.assertEqual(len(self.holiday_pay_2020.input_line_ids), 11)
-        self.assertEqual(len(self.holiday_pay_2020.line_ids), 24)
-        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'ASSIG_SALARY': -10.0, 'ATTACH_SALARY': -10.0, 'CHILD_SUPPORT': -10.0, 'DEDUCTION': -20.0, 'REIMBURSEMENT': 50.0, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
+        self.assertEqual(len(self.holiday_pay_2020.line_ids), 25)
+        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'EUROPEAN': 0.0, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'ASSIG_SALARY': -10.0, 'ATTACH_SALARY': -10.0, 'CHILD_SUPPORT': -10.0, 'DEDUCTION': -20.0, 'REIMBURSEMENT': 50.0, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
         self._validate_payslip(self.holiday_pay_2020, payslip_results)
 
         self._add_other_inputs(self.holiday_pay_2019, {
@@ -3633,8 +3633,8 @@ class TestPayslipValidation(TestPayslipValidationCommon):
 
         self.assertEqual(len(self.holiday_pay_2020.worked_days_line_ids), 0)
         self.assertEqual(len(self.holiday_pay_2020.input_line_ids), 6)
-        self.assertEqual(len(self.holiday_pay_2020.line_ids), 19)
-        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
+        self.assertEqual(len(self.holiday_pay_2020.line_ids), 20)
+        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'EUROPEAN': 0.0, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
         self._validate_payslip(self.holiday_pay_2020, payslip_results)
 
         self.assertEqual(len(self.holiday_pay_2019.worked_days_line_ids), 0)
@@ -5000,7 +5000,7 @@ class TestPayslipValidation(TestPayslipValidationCommon):
         })
         holiday_pay_2020.compute_sheet()
 
-        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
+        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'EUROPEAN': 0.0, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
         self._validate_payslip(holiday_pay_2020, payslip_results)
 
     def test_holiday_attest_n_after_june(self):
@@ -5039,7 +5039,7 @@ class TestPayslipValidation(TestPayslipValidationCommon):
         })
         holiday_pay_2020.compute_sheet()
 
-        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
+        payslip_results = {'PAY_SIMPLE': 1137.92, 'DOUBLE_BASIC': 1008.85, 'EUROPEAN': 0.0, 'PAY DOUBLE': 1008.85, 'PAY DOUBLE COMPLEMENTARY': 129.07, 'BASIC': 2275.84, 'ONSS1': -148.73, 'ONSS2': -131.86, 'ONSSTOTAL': 280.58, 'GROSS': 1995.26, 'PROF_TAX': -725.08, 'PPTOTAL': 725.08, 'NET': 1270.18, 'ONSSEMPLOYERBASIC': 284.71, 'ONSSEMPLOYERCPAE': 2.62, 'ONSSEMPLOYERFFE': 1.48, 'ONSSEMPLOYERMFFE': 1.14, 'ONSSEMPLOYERRESTREINT': 19.23, 'ONSSEMPLOYERUNEMP': 1.14, 'ONSSEMPLOYER': 310.31}
         self._validate_payslip(holiday_pay_2020, payslip_results)
 
         struct_n1_id = self.env.ref('l10n_be_hr_payroll.hr_payroll_structure_cp200_employee_departure_n1_holidays')

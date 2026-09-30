@@ -206,7 +206,6 @@ test("open xlsx converts to o-spreadsheet, clone it and opens the spreadsheet", 
         id: spreadsheetId,
         name: "My excel file",
         mimetype: XLSX_MIME_TYPES[0],
-        thumbnail_status: "present",
         type: "binary",
         attachment_id: 1, // Necessary to not be considered as a request
     });
@@ -248,7 +247,6 @@ test("open WPS-marked xlsx converts to o-spreadsheet, clone it and opens the spr
         folder_id: 1,
         name: "My excel file",
         mimetype: XLSX_MIME_TYPES[1],
-        thumbnail_status: "present",
         type: "binary",
         attachment_id: 1, // Necessary to not be considered as a request
     });
@@ -338,7 +336,6 @@ test("can open spreadsheet while multiple documents are selected along with it",
             raw: "{}",
             folder_id: 1,
             handler: "spreadsheet",
-            thumbnail_status: "present",
             attachment_id: 1,
         },
         {
@@ -395,7 +392,6 @@ test("spreadsheet should be skipped while toggling the preview in the FileViewer
             raw: "{}",
             folder_id: 1,
             handler: "spreadsheet",
-            thumbnail_status: "present",
             access_token: "accessTokendog-stats",
             attachment_id: 2,
         },

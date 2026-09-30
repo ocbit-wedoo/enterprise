@@ -474,7 +474,7 @@ class AccountMove(models.Model):
     def _find_partner_with_iban(self, iban_ocr, partner_name):
         bank_accounts = self.env['res.partner.bank'].search([
             *self.env['res.partner.bank']._check_company_domain(self.company_id),
-            ('acc_number', '=ilike', iban_ocr),
+            ('sanitized_acc_number', '=ilike', iban_ocr),
         ])
 
         bank_account_match_ratios = sorted([
@@ -977,5 +977,8 @@ class AccountMove(models.Model):
                     node.set('invisible', placeholder_condition)
                 node_with_placeholder.set('invisible', f"not {node.get('invisible')}")
                 node_with_placeholder.set('placeholder', "Click here and select the vendor on the bill to create it")
+                # Mark the node as automatically added, like `_add_missing_fields` does in ir_ui_view,
+                # so that Studio does not consider it as a normal, user-editable node.
+                node_with_placeholder.set('data-used-by', 'account_invoice_extract')
                 node.addnext(node_with_placeholder)
         return arch, view

@@ -1,3 +1,4 @@
+import copy
 from lxml import etree
 from pytz import timezone
 
@@ -660,7 +661,6 @@ class AccountEdiXmlUBLDian(models.AbstractModel):
 
         cufe_cude_cuds_vals = "".join(str(res) for res in self._dian_get_identifier_vals(invoice, vals).values())
         vals['vals']['uuid'] = sha384(cufe_cude_cuds_vals.encode()).hexdigest()  # as stated in the "Anexo Tecnico" file, SHA384 must be used
-        vals['vals']['note_vals'].append({'note': cufe_cude_cuds_vals})
         return vals
 
     def _export_invoice(self, invoice, convert_fixed_taxes=True):
@@ -684,10 +684,10 @@ class AccountEdiXmlUBLDian(models.AbstractModel):
     def _export_invoice_constraints(self, move, vals):
         # EXTENDS account.edi.xml.ubl_20
         constraints = super()._export_invoice_constraints(move, vals)
-        now = fields.Datetime.now()
+        now = fields.Datetime.context_timestamp(self.with_context(tz='America/Bogota'), fields.Datetime.now()).date()
         oldest_date = now - timedelta(days=6)
         newest_date = now + timedelta(days=6)
-        if not (oldest_date <= fields.Datetime.to_datetime(move.invoice_date) <= newest_date):
+        if move.invoice_date and not (oldest_date <= move.invoice_date <= newest_date):
             constraints['dian_date'] = self.env._("The issue date can not be older than 6 days or more than 6 days in the future.")
         # required fields on invoice
         if not move.l10n_co_dian_post_time:
@@ -806,6 +806,21 @@ class AccountEdiXmlUBLDian(models.AbstractModel):
     def _dian_get_co_ubl_code(self, uom):
         """ Colombia follows a standard that very much resembles the UNSPSC """
         return uom.l10n_co_edi_ubl or '94'
+
+    def _get_tax_nodes(self, tree):
+        tax_nodes = super()._get_tax_nodes(tree)
+        # Deepcopy WithholdingTaxTotal elements so it doesn't modify the tree itself
+        # the tree eventually gets passed into `_import_attachments'
+        for elem in copy.deepcopy(tree.findall('.//{*}WithholdingTaxTotal')):
+            percentage_nodes = elem.findall('.//{*}TaxSubtotal/{*}TaxCategory/{*}Percent')
+            if not percentage_nodes:
+                percentage_nodes = elem.findall('.//{*}TaxSubtotal/{*}Percent')
+            # Negate the percentage amount to find the withholding tax in `_retrieve_taxes`
+            for node in percentage_nodes:
+                negate_percentage = -float(node.text)
+                node.text = str(negate_percentage)
+            tax_nodes += percentage_nodes
+        return tax_nodes
 
     def _dian_tax_totals(self, move, taxes_vals, withholding):
         """
@@ -1250,6 +1265,12 @@ class AccountEdiXmlUBLDian(models.AbstractModel):
             invoice.l10n_co_edi_cufe_cude_ref = cufe
         return logs
 
+    def _get_basis_qty(self, tree, xpath_dict):
+        """ OVERRIDE account.edi.common
+        In Colombia, the DIAN treats PriceAmount as the exact unit price,
+        so it must not be divided by BaseQuantity."""
+        return 1.0
+
     # -------------------------------------------------------------------------
     # EXPORT: New (dict_to_xml) helpers
     # -------------------------------------------------------------------------
@@ -1575,10 +1596,6 @@ class AccountEdiXmlUBLDian(models.AbstractModel):
     def _add_document_uuid_node(self, document_node, vals):
         # Add CUFE/CUDE/CUDS
         document_node['cbc:UUID']['_text'] = vals['uuid']  # as stated in the "Anexo Tecnico" file, SHA384 must be used
-        document_node['cbc:Note'] = [
-            document_node['cbc:Note'],
-            {'_text': vals['cufe_cude_cuds']}
-        ]
 
     def _add_invoice_payment_exchange_rate_node(self, document_node, vals):
         invoice = vals['invoice']

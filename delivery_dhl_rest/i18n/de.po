@@ -3,13 +3,14 @@
 # * delivery_dhl_rest
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Larissa Manderfeld (lman)" <lman@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-03-30 06:15+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-06-20 09:34+0000\n"
+"Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18/"
 "delivery_dhl_rest/de/>\n"
 "Language: de\n"
@@ -17,7 +18,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: delivery_dhl_rest
+#. odoo-python
+#: code:addons/delivery_dhl_rest/models/delivery_dhl.py:0
+msgid ""
+" Extra Info: The scheduled time for the shipment was either not set or was "
+"in the past, so DHL has been sent a planned shipping time of one hour from "
+"now"
+msgstr ""
+" Zusätzliche Informationen: Der geplante Versandtermin war entweder nicht "
+"festgelegt oder lag in der Vergangenheit, daher wurde DHL ein geplanter "
+"Versandtermin in einer Stunde ab jetzt übermittelt"
 
 #. module: delivery_dhl_rest
 #: model:ir.model.fields.selection,name:delivery_dhl_rest.selection__delivery_carrier__dhl_product_code__0
@@ -195,8 +208,7 @@ msgstr "Der DHL-API-Schlüssel fehlt, bitte ändern Sie Ihre Lieferkonfiguration
 #. module: delivery_dhl_rest
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
-msgid ""
-"DHL API secret is missing, please modify your delivery method settings."
+msgid "DHL API secret is missing, please modify your delivery method settings."
 msgstr "Das API-Geheimnis fehlt, bitte ändern Sie Ihre Lieferkonfiguration"
 
 #. module: delivery_dhl_rest
@@ -291,14 +303,16 @@ msgstr "Zusatzdaten für Versandanfragen"
 #: model:ir.model.fields,help:delivery_dhl_rest.field_delivery_carrier__dhl_extra_data_ship_request
 msgid ""
 "Extra data to be sent in the request. It should be JSON-formatted.\n"
-"This functionality is advanced/technical and should only be used if you know what you are doing.\n"
+"This functionality is advanced/technical and should only be used if you know "
+"what you are doing.\n"
 "\n"
 "Example of a valid value: ```\n"
 "\"content\": {\"packages\": {\"description\": \"amazing package\"}}\n"
 "```\n"
 "\n"
 "With the above example, the description of each package will be updated.\n"
-"For more information, please refer to the DHL API documentation: https://developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
+"For more information, please refer to the DHL API documentation: https://"
+"developer.dhl.com/api-reference/dhl-express-mydhl-api.\n"
 msgstr ""
 "Zusatzdaten, die in der Anfrage gesendet werden müssen. Es sollte im JSON-"
 "Format sein.\n"
@@ -501,7 +515,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
-"The address of your company warehouse is missing or wrong (Missing field(s) :\n"
+"The address of your company warehouse is missing or wrong (Missing "
+"field(s) :\n"
 " %s)"
 msgstr ""
 "Die Adresse von Ihrem Unternehmenslager fehlt oder sie ist fehlerhaft "
@@ -512,7 +527,8 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_dhl_rest/models/dhl_request.py:0
 msgid ""
-"The estimated shipping price cannot be computed because the weight is missing for the following product(s): \n"
+"The estimated shipping price cannot be computed because the weight is "
+"missing for the following product(s): \n"
 " %s"
 msgstr ""
 "Der geschätzte Versandpreis kann nicht berechnet werden, da das Gewicht für "

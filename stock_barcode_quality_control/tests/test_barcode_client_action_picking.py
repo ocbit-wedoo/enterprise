@@ -140,6 +140,32 @@ class TestBarcodeClientActionPicking(TestBarcodeClientAction):
         ])
         self.assertEqual(quality_checks.picking_id.state, "done")
 
+    def test_operation_quality_check_kept_on_partial_barcode_exit(self):
+        """
+        Receiving less than the demand in Barcode then leaving with the back
+        button must keep the receipt's pending operation quality check.
+        """
+        self.env['quality.point'].create({
+            'measure_on': "operation",
+            'picking_type_ids': [Command.link(self.picking_type_in.id)],
+        })
+        receipt = self.env['stock.picking'].create({
+            'picking_type_id': self.picking_type_in.id,
+            'location_id': self.supplier_location.id,
+            'location_dest_id': self.stock_location.id,
+            'move_ids': [Command.create({
+                'name': self.product1.name,
+                'product_id': self.product1.id,
+                'product_uom_qty': 2,
+            })],
+        })
+        receipt.action_confirm()
+
+        url = self._get_client_action_url(receipt.id)
+        self.start_tour(url, "test_operation_quality_check_kept_on_partial_barcode_exit", login="admin")
+
+        self.assertTrue(receipt.check_ids)
+
     def test_quality_check_partial_reception_barcode(self):
         """
         Check that quality checks triggered at validation are related to the products

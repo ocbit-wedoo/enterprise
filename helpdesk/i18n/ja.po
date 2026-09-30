@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-01 17:46+0000\n"
-"PO-Revision-Date: 2026-04-29 19:20+0000\n"
-"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
+"PO-Revision-Date: 2026-09-17 17:35+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "helpdesk/ja/>\n"
 "Language: ja\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__answered_customer_message_count
@@ -2019,7 +2019,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_ticket__message_has_error
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_ticket__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: helpdesk
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_team__alias_bounced_content
@@ -2179,7 +2179,7 @@ msgstr "最終更新日"
 #: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_ticket_view_search_analysis_closed
 #: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_tickets_view_search
 msgid "Late Activities"
-msgstr "遅れた活動"
+msgstr "期限超過の活動"
 
 #. module: helpdesk
 #: model_terms:ir.ui.view,arch_db:helpdesk.team_rating_data
@@ -2509,7 +2509,7 @@ msgstr "エラー数"
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_team__message_needaction_counter
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_ticket__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: helpdesk
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_team__message_has_error_counter
@@ -3559,7 +3559,7 @@ msgstr "終了済チケット"
 msgid ""
 "Ticket Closed - Reference {{ object.ticket_ref if object.ticket_ref else "
 "15 }}"
-msgstr ""
+msgstr "チケット完了 - 参照番号 {{ object.ticket_ref if object.ticket_ref else 15 }}"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_sla__ticket_count
@@ -3729,7 +3729,7 @@ msgstr "今日"
 #: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_ticket_view_search_analysis_closed
 #: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_tickets_view_search
 msgid "Today Activities"
-msgstr "本日の活動"
+msgstr "今日の活動"
 
 #. module: helpdesk
 #. odoo-javascript

@@ -43,7 +43,7 @@
         <field name="code">578</field>
     </record>
 
-    <record id="l10n_be_dmfa" model="l10n_be.dmfa">
+    <record id="l10n_be_dmfa" model="l10n_be.dmfa" context="{'allowed_company_ids': [ref('base.demo_company_be')]}">
         <field name="reference">DMFA001</field>
         <field name="year" eval="(DateTime.today() + relativedelta(years=-1, month=5, day=1)).year"/>
         <field name="quarter" eval="str((DateTime.today() + relativedelta(years=-1, month=5, day=1)).month // 4 + 1)"/>
@@ -484,6 +484,7 @@
     <record id="hr_candidate_salesman0" model="hr.candidate">
         <field name="partner_name">Jun Theodor</field>
         <field name="partner_phone">9963214587</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_salesman0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_salesman0"/>
@@ -500,6 +501,7 @@
     <record id="hr_candidate_salesman1" model="hr.candidate">
         <field name="partner_name">Farran Michaela</field>
         <field name="partner_phone">998655451</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_salesman1" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_salesman1"/>
@@ -516,6 +518,7 @@
     <record id="hr_candidate_dev0" model="hr.candidate">
         <field name="partner_name">Suzanne Conway</field>
         <field name="partner_phone">8955545</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_dev0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_dev0"/>
@@ -532,6 +535,7 @@
     <record id="hr_candidate_dev1" model="hr.candidate">
         <field name="partner_name">Francisco Burke</field>
         <field name="partner_phone">879895515</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_dev1" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_dev1"/>
@@ -548,6 +552,7 @@
     <record id="hr_candidate_dev2" model="hr.candidate">
         <field name="partner_name">Julio Hill</field>
         <field name="partner_phone">98765411</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_dev2" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_dev2"/>
@@ -564,6 +569,7 @@
     <record id="hr_candidate_dev3" model="hr.candidate">
         <field name="partner_name">Elias Klein</field>
         <field name="partner_phone">654687987654</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_dev3" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_dev3"/>
@@ -581,6 +587,7 @@
         <field name="partner_name">Lance Greene</field>
         <field name="partner_phone">9988774455</field>
         <field name="partner_phone">6633225</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_traineemca0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_traineemca0"/>
@@ -597,6 +604,7 @@
     <record id="hr_candidate_fresher0" model="hr.candidate">
         <field name="partner_name">Bryan Evans</field>
         <field name="partner_phone">999666735</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_fresher0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_fresher0"/>
@@ -612,6 +620,7 @@
 
     <record id="hr_candidate_mkt0" model="hr.candidate">
         <field name="partner_name">Emily Walsh</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_mkt0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_mkt0"/>
@@ -626,6 +635,7 @@
 
     <record id="hr_candidate_mkt1" model="hr.candidate">
         <field name="partner_name">Nadine Knight</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_mkt1" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_mkt1"/>
@@ -641,6 +651,7 @@
 
     <record id="hr_candidate_yrsexperienceinphp0" model="hr.candidate">
         <field name="partner_name">Jamie Salazar</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_yrsexperienceinphp0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_yrsexperienceinphp0"/>
@@ -655,6 +666,7 @@
 
     <record id="hr_candidate_marketingjob0" model="hr.candidate">
         <field name="partner_name">Nadine Hopkins</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_marketingjob0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_marketingjob0"/>
@@ -670,6 +682,7 @@
     <record id="hr_candidate_financejob0" model="hr.candidate">
         <field name="partner_name">Sherri Lopez</field>
         <field name="partner_phone">33968745</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_financejob0" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_financejob0"/>
@@ -685,6 +698,7 @@
 
     <record id="hr_candidate_financejob1" model="hr.candidate">
         <field name="partner_name">Forrest Cooper</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_financejob1" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_financejob1"/>
@@ -702,6 +716,7 @@
         <field name="partner_name">Earnest Gonzales</field>
         <field name="partner_phone">9898745745</field>
         <field name="partner_phone">6630125</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_traineemca1" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_traineemca1"/>
@@ -717,6 +732,7 @@
         <field name="partner_name">Saul Cole</field>
         <field name="partner_phone">9812398524</field>
         <field name="partner_phone">6630125</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_programmer" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_programmer"/>
@@ -732,6 +748,7 @@
     <record id="hr_candidate_advertisement" model="hr.candidate">
         <field name="partner_name">Hugh Torres</field>
         <field name="partner_phone">9988774455</field>
+        <field name="company_id" ref="base.demo_company_be"/>
     </record>
     <record id="hr_case_advertisement" model="hr.applicant">
         <field name="candidate_id" ref="hr_candidate_advertisement"/>
@@ -2670,7 +2687,7 @@
         obj().env.ref('test_l10n_be_hr_payroll_account.hr_payslip_demo_jon_february_2020'),
     ] if p.state in ['draft', 'verify']]]"/>
 
-    <record id="notice_period_wizard" model="hr.payslip.employee.depature.notice" forcecreate="False">
+    <record id="notice_period_wizard" model="hr.payslip.employee.depature.notice" forcecreate="False" context="{'allowed_company_ids': [ref('base.demo_company_be')]}">
         <field name="employee_id" ref="hr_employee_joseph_noluck"/>
         <field name="leaving_type_id" ref="hr.departure_fired" />
         <field name="departure_date" eval="time.strftime('2020-04-15')"/>
@@ -2678,7 +2695,7 @@
         <field name="notice_respect">without</field>
         <field name="departure_description">Doesn't reach his target anymore</field>
     </record>
-    <function model="hr.payslip.employee.depature.notice" name="compute_termination_fee">
+    <function model="hr.payslip.employee.depature.notice" name="compute_termination_fee" context="{'allowed_company_ids': [ref('base.demo_company_be')]}">
         <value eval="[ref('test_l10n_be_hr_payroll_account.notice_period_wizard')]"/>
     </function>
 

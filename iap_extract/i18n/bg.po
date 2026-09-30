@@ -9,13 +9,14 @@
 # KeyVillage, 2024
 # Petko Karamotchev, 2024
 # "v.kanev" <v.kanev@tutanota.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-03-20 14:24+0000\n"
-"Last-Translator: \"v.kanev\" <v.kanev@tutanota.com>\n"
+"PO-Revision-Date: 2026-08-08 17:09+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "iap_extract/bg/>\n"
 "Language: bg\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: iap_extract
 #: model:mail.template,body_html:iap_extract.iap_extract_no_credit
@@ -36,6 +37,13 @@ msgid ""
 "    <p>Odoo S.A.</p>\n"
 "</div>"
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p>Уважаеми,<br/></p>\n"
+"    <p>Няма повече кредити във вашия IAP OCR акаунт.<br/>\n"
+"    Можете да заредите своя IAP OCR акаунт от страницата с настройки.</p>\n"
+"    <p>С уважение,<br/></p>\n"
+"    <p>Odoo S.A.</p>\n"
+"</div>"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_needaction
@@ -49,6 +57,8 @@ msgid ""
 "All fields will be automatically populated by Artificial Intelligence, it "
 "might take 5 seconds."
 msgstr ""
+"Всички полета ще бъдат попълнени автоматично от изкуствен интелект, това "
+"може да отнеме 5 секунди."
 
 #. module: iap_extract
 #. odoo-python
@@ -75,18 +85,18 @@ msgstr "Брой прикачени файлове"
 #. module: iap_extract
 #: model:ir.model,name:iap_extract.model_extract_mixin
 msgid "Base class to extract data from documents"
-msgstr ""
+msgstr "Базов клас за извличане на данни от документи"
 
 #. module: iap_extract
 #. odoo-javascript
 #: code:addons/iap_extract/static/src/components/status_header/status.xml:0
 msgid "Buy credits"
-msgstr ""
+msgstr "Купете кредити"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_can_show_send_button
 msgid "Can show the ocr send button"
-msgstr ""
+msgstr "Може да показва бутона за изпращане на ocr"
 
 #. module: iap_extract
 #: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__done
@@ -103,24 +113,26 @@ msgid ""
 "Digitize your scanned or PDF vendor bills, expenses and resumes with OCR and "
 "Artificial Intelligence."
 msgstr ""
+"Дигитализирайте сканираните си или PDF фактури от доставчици, разходи и "
+"автобиографии с OCR и изкуствен интелект."
 
 #. module: iap_extract
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "Document is being digitized"
-msgstr ""
+msgstr "Документът се дигитализира"
 
 #. module: iap_extract
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "Document sent for digitization"
-msgstr ""
+msgstr "Документът е изпратен за дигитализация"
 
 #. module: iap_extract
 #. odoo-javascript
 #: code:addons/iap_extract/static/src/components/status_header/status.xml:0
 msgid "Document successfully parsed. Please refresh."
-msgstr ""
+msgstr "Документът е обработен успешно. Моля, опреснете."
 
 #. module: iap_extract
 #: model:iap.service,unit_name:iap_extract.iap_service_ocr
@@ -131,7 +143,7 @@ msgstr "Документи"
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "Documents sent for digitization"
-msgstr ""
+msgstr "Документите са изпратени за дигитализация"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_error_message
@@ -141,17 +153,17 @@ msgstr "Съобщение за грешка"
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_state_processed
 msgid "Extract State Processed"
-msgstr ""
+msgstr "Състояние на извличане - обработено"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_state
 msgid "Extract state"
-msgstr ""
+msgstr "Състояние на извличане"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_status
 msgid "Extract status"
-msgstr ""
+msgstr "Статус на извличане"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_follower_ids
@@ -172,12 +184,12 @@ msgstr "има съобщение"
 #: model:mail.template,name:iap_extract.iap_extract_no_credit
 #: model:mail.template,subject:iap_extract.iap_extract_no_credit
 msgid "IAP Extract Notification"
-msgstr ""
+msgstr "Известие за извличане чрез IAP"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__extract_document_uuid
 msgid "ID of the request to IAP-OCR"
-msgstr ""
+msgstr "ID на заявката към IAP-OCR"
 
 #. module: iap_extract
 #: model:ir.model.fields,help:iap_extract.field_extract_mixin__message_needaction
@@ -209,7 +221,7 @@ msgstr "е последовател"
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__is_in_extractable_state
 msgid "Is In Extractable State"
-msgstr ""
+msgstr "В състояние за извличане ли е"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_main_attachment_id
@@ -233,7 +245,7 @@ msgstr "Съобщения"
 #: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__no_extract_requested
 #: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__no_extract_requested
 msgid "No extract requested"
-msgstr ""
+msgstr "Няма заявено извличане"
 
 #. module: iap_extract
 #: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__not_enough_credit
@@ -242,13 +254,13 @@ msgstr ""
 #: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__not_enough_credit
 #: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__not_enough_credit
 msgid "Not enough credits"
-msgstr ""
+msgstr "Няма достатъчно кредити"
 
 #. module: iap_extract
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "Not enough credits for data extraction"
-msgstr ""
+msgstr "Няма достатъчно кредити за извличане на данни"
 
 #. module: iap_extract
 #: model:ir.model.fields,field_description:iap_extract.field_extract_mixin__message_needaction_counter
@@ -303,7 +315,7 @@ msgstr "Сървърът не е наличен. Моля опитайте по-
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "Some documents were skipped as they were already digitized"
-msgstr ""
+msgstr "Някои документи бяха пропуснати, тъй като вече са дигитализирани"
 
 #. module: iap_extract
 #. odoo-python
@@ -331,7 +343,7 @@ msgstr "Документът беше отказан, защото е твърд
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "The selected documents are already digitized"
-msgstr ""
+msgstr "Избраните документи вече са дигитализирани"
 
 #. module: iap_extract
 #: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__to_validate
@@ -355,7 +367,7 @@ msgstr "Неподдържан формат на изображението"
 #: model:ir.model.fields.selection,name:iap_extract.selection__hr_candidate__extract_state__waiting_extraction
 #: model:ir.model.fields.selection,name:iap_extract.selection__hr_expense__extract_state__waiting_extraction
 msgid "Waiting extraction"
-msgstr ""
+msgstr "В очакване на извличане"
 
 #. module: iap_extract
 #: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__waiting_validation
@@ -370,7 +382,7 @@ msgstr "Очаква потвърждение"
 #. odoo-javascript
 #: code:addons/iap_extract/static/src/components/status_header/status.xml:0
 msgid "You don't have enough credit to extract data from your document."
-msgstr ""
+msgstr "Нямате достатъчно кредит, за да извлечете данни от вашия документ."
 
 #. module: iap_extract
 #. odoo-python
@@ -384,7 +396,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/iap_extract/models/extract_mixin.py:0
 msgid "Your document contains too many pages"
-msgstr ""
+msgstr "Вашият документ съдържа твърде много страници"
 
 #. module: iap_extract
 #: model:ir.model.fields.selection,name:iap_extract.selection__account_bank_statement__extract_state__extract_not_ready

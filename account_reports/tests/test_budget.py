@@ -567,7 +567,8 @@ class TestBudgetReport(TestAccountReportsCommon):
 
     def test_financial_budget_with_several_columns(self):
         """ Ensure that financial budget feature works properly on reports with several columns,
-        and that percentage column of budget is hidden is the case where multiple monetary columns exist """
+        and that percentage column of budget is computed based on the 'balance' column, considered the main one,
+        if there is more than one moneraty column. """
         self.report.write({
             'column_ids': [
                 Command.create({
@@ -600,25 +601,25 @@ class TestBudgetReport(TestAccountReportsCommon):
         # Ensure level header colspan is 3 for top header, 2 for the columns + 1 selected budget
         self.assertEqual(
             self.report._get_column_headers_render_data(options),
-            {'level_colspan': [3, 2], 'level_repetitions': [1, 2], 'custom_subheaders': []}
+            {'level_colspan': [4, 2], 'level_repetitions': [1, 2], 'custom_subheaders': []}
         )
 
         self.assertLinesValues(
             self.report._get_lines(options),
             #                                   [          2020                ]  [            2019              ]
-            #                                   [ col 1 ] [ col 2 ] [ budget 1 ]  [ col 1 ] [ col 2 ] [ budget 1 ]
-            [0,                                     1,        2,         3,          4,        5,         6],
+            #                                   [ col 1 ] [ col 2 ] [ budget 1 ] [ budget percentage ] [ col 1 ] [ col 2 ] [ budget 1 ] [ budget percentag ]
+            [0,                                     1,        2,         3,               4,               5,         6,        7,                 8],
             [
-                ('line_domain',                   600,        '',      1110,          0,       '',         0),
-                (self.account_1.display_name,     100,        '',      1000,          0,       '',         0),
-                (self.account_2.display_name,     200,        '',         0,          0,       '',         0),
-                (self.account_3.display_name,     300,        '',       100,          0,       '',         0),
-                (self.account_4.display_name,       0,        '',        10,          0,       '',         0),
-                ('line_account_codes',            600,        '',      1110,          0,       '',         0),
-                (self.account_1.display_name,     100,        '',      1000,          0,       '',         0),
-                (self.account_2.display_name,     200,        '',         0,          0,       '',         0),
-                (self.account_3.display_name,     300,        '',       100,          0,       '',         0),
-                (self.account_4.display_name,       0,        '',        10,          0,       '',         0),
+                ('line_domain',                   600,        '',      1110,           '54.1%',            0,        '',        0,             'n/a'),
+                (self.account_1.display_name,     100,        '',      1000,           '10.0%',            0,        '',        0,             'n/a'),
+                (self.account_2.display_name,     200,        '',         0,             'n/a',            0,        '',        0,             'n/a'),
+                (self.account_3.display_name,     300,        '',       100,          '300.0%',            0,        '',        0,             'n/a'),
+                (self.account_4.display_name,       0,        '',        10,            '0.0%',            0,        '',        0,             'n/a'),
+                ('line_account_codes',            600,        '',      1110,           '54.1%',            0,        '',        0,             'n/a'),
+                (self.account_1.display_name,     100,        '',      1000,           '10.0%',            0,        '',        0,             'n/a'),
+                (self.account_2.display_name,     200,        '',         0,             'n/a',            0,        '',        0,             'n/a'),
+                (self.account_3.display_name,     300,        '',       100,          '300.0%',            0,        '',        0,             'n/a'),
+                (self.account_4.display_name,       0,        '',        10,            '0.0%',            0,        '',        0,             'n/a'),
             ],
             options,
         )

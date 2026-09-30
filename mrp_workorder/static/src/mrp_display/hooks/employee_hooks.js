@@ -186,9 +186,9 @@ export function useConnectedEmployee(controllerType, context, actionService, dia
             employees.connected.find((e) => e.id === employeeId) &&
             employees.admin?.id != employeeId
         ) {
-            setSessionOwner(employeeId, pin);
+            await setSessionOwner(employeeId, pin);
         } else {
-            selectEmployee(employeeId, pin);
+            await selectEmployee(employeeId, pin);
         }
         const pinValid = await pinValidation(employeeId, pin);
         return pinValid;

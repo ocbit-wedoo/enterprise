@@ -2,11 +2,16 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import json
+import logging
 import requests
+import traceback
 
 from dateutil.relativedelta import relativedelta
 from odoo import _, models, fields
 from werkzeug.urls import url_join
+
+
+_logger = logging.getLogger(__name__)
 
 
 class SocialLivePostInstagram(models.Model):
@@ -66,6 +71,26 @@ class SocialLivePostInstagram(models.Model):
             live_post._post_instagram()
 
     def _post_instagram(self):
+        self.ensure_one()
+        try:
+            self._post_instagram_request()
+        except requests.exceptions.Timeout as e:
+            _logger.error("Social Instagram: timeout while posting %s - %s", e, traceback.format_exc())
+            self.write({
+                'state': 'failed',
+                'failure_reason': self.env._(
+                    "Instagram took too long to process the request. "
+                    "This can happen with large images, try posting a smaller one."
+                ),
+            })
+        except requests.exceptions.RequestException as e:
+            _logger.error("Social Instagram: error while posting %s - %s", e, traceback.format_exc())
+            self.write({
+                'state': 'failed',
+                'failure_reason': self.env._("An error occurred while contacting the Instagram API, please try again."),
+            })
+
+    def _post_instagram_request(self):
         """
         Handles the process of posting images to Instagram, supporting both single and multiple (carousel) posts.
 
@@ -119,7 +144,7 @@ class SocialLivePostInstagram(models.Model):
                 else:
                     data['is_carousel_item'] = True
 
-                media_response = session.post(media_url, data, timeout=10)
+                media_response = session.post(media_url, data, timeout=15)
                 if not media_response.ok or not media_response.json().get('id'):
                     self._instagram_log_error(media_response)
                     return
@@ -136,7 +161,7 @@ class SocialLivePostInstagram(models.Model):
                         'media_type': 'CAROUSEL',
                         'children': media_container_ids
                     },
-                    timeout=10,
+                    timeout=15,
                 )
                 if not media_response.ok or not media_response.json().get('id'):
                     self._instagram_log_error(media_response)
@@ -149,7 +174,7 @@ class SocialLivePostInstagram(models.Model):
         status_response = session.get(f"{endpoint}/{container_id}", params={
             'access_token': account.instagram_access_token,
             'fields': 'status_code'
-        }, timeout=3)
+        }, timeout=15)
 
         if not status_response.ok:
             self._instagram_log_error(status_response)
@@ -174,7 +199,7 @@ class SocialLivePostInstagram(models.Model):
             status_response = session.get(f"{endpoint}/{container_id}", params={
                 'access_token': account.instagram_access_token,
                 'fields': 'ig_id'
-            }, timeout=3)
+            }, timeout=15)
             status_data = status_response.json()
             self.write({
                 'state': 'posted',
@@ -198,7 +223,7 @@ class SocialLivePostInstagram(models.Model):
                 'access_token': account.instagram_access_token,
                 'creation_id': container_id,
             },
-            timeout=10,
+            timeout=15,
         )
 
         if not publish_response.ok or not publish_response.json().get('id'):

@@ -129,7 +129,8 @@ export class GridRow {
         const labelArray = [];
         for (const rowField of this._dataPoint.rowFields) {
             let title = this.valuePerFieldName[rowField.name];
-            if (this.model.fieldsInfo[rowField.name].type === "many2one") {
+            const fieldInfo = this.model.fieldsInfo[rowField.name];
+            if (fieldInfo.type === "many2one") {
                 if (title) {
                     title = title[1];
                 } else if (labelArray.length) {
@@ -137,6 +138,8 @@ export class GridRow {
                 } else {
                     title = "None";
                 }
+            } else if (fieldInfo.type === "selection") {
+                title = fieldInfo.selection.find(([key]) => key === title)?.[1];
             }
             if (title) {
                 labelArray.push(title);

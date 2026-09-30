@@ -12,7 +12,7 @@ class TestInterCompanyRulesCommon(AccountTestInvoicingCommon):
         super(TestInterCompanyRulesCommon, cls).setUpClass()
 
         cls.company_a = cls.company_data['company']
-        cls.company_b = cls.setup_other_company()['company']
+        cls.company_b = cls.setup_other_company(name='Test company 2')['company']
 
         # Create a new product named product_consultant
         cls.product_consultant = cls.env['product.product'].create({

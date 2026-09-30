@@ -3,13 +3,14 @@
 # * maintenance_worksheet
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-21 19:08+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 11:07+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "maintenance_worksheet/lo/>\n"
 "Language: lo\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: maintenance_worksheet
 #: model:ir.actions.report,print_report_name:maintenance_worksheet.maintenance_request_report
@@ -25,11 +26,12 @@ msgid ""
 "'Maintenance Request Worksheet - %s - %s' % (object.name, "
 "object.user_id.name)"
 msgstr ""
+"'ໃບງານຄຳຮ້ອງຂໍບຳລຸງຮັກສາ - %s - %s' % (object.name, object.user_id.name)"
 
 #. module: maintenance_worksheet
 #: model_terms:ir.ui.view,arch_db:maintenance_worksheet.maintenance_request_view_form_inherit_worksheet
 msgid "<span class=\"o_stat_text\">Worksheet</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">ໃບງານ</span>"
 
 #. module: maintenance_worksheet
 #: model_terms:ir.ui.view,arch_db:maintenance_worksheet.maintenance_request_view_form_inherit_worksheet
@@ -37,6 +39,8 @@ msgid ""
 "<span class=\"o_stat_text\">Worksheet</span>\n"
 "                            <span class=\"o_stat_text\">Complete</span>"
 msgstr ""
+"<span class=\"o_stat_text\">ໃບງານ</span>\n"
+"                            <span class=\"o_stat_text\">ສຳເລັດແລ້ວ</span>"
 
 #. module: maintenance_worksheet
 #: model_terms:ir.ui.view,arch_db:maintenance_worksheet.report_custom_x_maintenance_request_worksheet_template_1
@@ -56,6 +60,7 @@ msgid ""
 "Create templates for each type of request you have and customize their "
 "content with your own custom fields."
 msgstr ""
+"ສ້າງແບບຟອມສຳລັບຄຳຮ້ອງຂໍແຕ່ລະປະເພດທີ່ທ່ານມີ ແລະ ປັບແຕ່ງເນື້ອຫາດ້ວຍຟິວທີ່ທ່ານກຳນົດເອງ."
 
 #. module: maintenance_worksheet
 #: model:ir.model.fields,field_description:maintenance_worksheet.x_maintenance_request_worksheet_template_1_ir_model_fields_2
@@ -71,12 +76,12 @@ msgstr "ສ້າງເມື່ອ"
 #. module: maintenance_worksheet
 #: model_terms:ir.actions.act_window,help:maintenance_worksheet.maintenance_worksheet_action_settings
 msgid "Customize worksheet templates for each type of request.<br>"
-msgstr ""
+msgstr "ປັບແຕ່ງແບບຟອມໃບງານສຳລັບຄຳຮ້ອງຂໍແຕ່ລະປະເພດ.<br>"
 
 #. module: maintenance_worksheet
 #: model:ir.model,name:maintenance_worksheet.x_maintenance_request_worksheet_template_1_ir_model_1
 msgid "Default Worksheet"
-msgstr "ແຜ່ນວຽກເລີ່ມຕົ້ນ"
+msgstr "ໃບງານເລີ່ມຕົ້ນ"
 
 #. module: maintenance_worksheet
 #: model:ir.model.fields,field_description:maintenance_worksheet.x_maintenance_request_worksheet_template_1_ir_model_fields_3
@@ -102,17 +107,17 @@ msgstr "ອັບເດດຫຼ້າສຸດເມື່ອ"
 #: model:ir.model,name:maintenance_worksheet.model_maintenance_request
 #: model:ir.model.fields,field_description:maintenance_worksheet.x_maintenance_request_worksheet_template_1_ir_model_fields_8
 msgid "Maintenance Request"
-msgstr "ຄຳຮ້ອງບຳລຸງຮັກສາ"
+msgstr "ຄຳຮ້ອງຂໍບຳລຸງຮັກສາ"
 
 #. module: maintenance_worksheet
 #: model:ir.model,name:maintenance_worksheet.model_report_maintenance_worksheet_maintenance_worksheet
 msgid "Maintenance Request Worksheet Custom Report"
-msgstr ""
+msgstr "ລາຍງານໃບງານຄຳຮ້ອງຂໍບຳລຸງຮັກສາແບບກຳນົດເອງ"
 
 #. module: maintenance_worksheet
 #: model_terms:ir.ui.view,arch_db:maintenance_worksheet.worksheet_page
 msgid "Maintenance Request:"
-msgstr ""
+msgstr "ຄຳຮ້ອງຂໍບຳລຸງຮັກສາ:"
 
 #. module: maintenance_worksheet
 #: model:ir.model.fields,field_description:maintenance_worksheet.x_maintenance_request_worksheet_template_1_ir_model_fields_9
@@ -122,13 +127,13 @@ msgstr "ຊື່"
 #. module: maintenance_worksheet
 #: model_terms:ir.actions.act_window,help:maintenance_worksheet.maintenance_worksheet_action_settings
 msgid "No worksheet templates found. Let's create one!"
-msgstr ""
+msgstr "ບໍ່ພົບແບບຟອມໃບງານ. ມາສ້າງໃໝ່ນຳກັນເລີຍ!"
 
 #. module: maintenance_worksheet
 #. odoo-python
 #: code:addons/maintenance_worksheet/models/maintenance_request.py:0
 msgid "Please select a Worksheet Template."
-msgstr ""
+msgstr "ກະລຸນາເລືອກແບບຟອມໃບງານ."
 
 #. module: maintenance_worksheet
 #: model_terms:ir.ui.view,arch_db:maintenance_worksheet.worksheet_page
@@ -138,25 +143,25 @@ msgstr "ໃບງານ"
 #. module: maintenance_worksheet
 #: model:ir.model.fields,field_description:maintenance_worksheet.field_maintenance_request__worksheet_count
 msgid "Worksheet Count"
-msgstr ""
+msgstr "ຈຳນວນໃບງານ"
 
 #. module: maintenance_worksheet
 #: model:ir.actions.report,name:maintenance_worksheet.maintenance_request_report
 msgid "Worksheet Report"
-msgstr ""
+msgstr "ລາຍງານໃບງານ"
 
 #. module: maintenance_worksheet
 #: model:ir.model,name:maintenance_worksheet.model_worksheet_template
 #: model:ir.model.fields,field_description:maintenance_worksheet.field_maintenance_request__worksheet_template_id
 msgid "Worksheet Template"
-msgstr ""
+msgstr "ແບບຟອມໃບງານ"
 
 #. module: maintenance_worksheet
 #: model:ir.actions.act_window,name:maintenance_worksheet.action_maintenance_worksheets
 #: model:ir.actions.act_window,name:maintenance_worksheet.maintenance_worksheet_action_settings
 #: model:ir.ui.menu,name:maintenance_worksheet.menu_maintenance_configuration_worksheet_templates
 msgid "Worksheet Templates"
-msgstr "ແບບຟອມແຜ່ນວຽກ"
+msgstr "ແບບຟອມໃບງານ"
 
 #. module: maintenance_worksheet
 #: model:ir.actions.act_window,name:maintenance_worksheet.x_maintenance_request_worksheet_template_1_ir_actions_act_window_1

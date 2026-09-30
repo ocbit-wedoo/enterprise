@@ -3,10 +3,7 @@
 <div t-name="spreadsheet_edition.CellThread"
     t-key="props.threadId"
     class="o-cell-thread"
-    t-on-wheel.stop=""
-    t-on-click.prevent="">
-    <!-- the prevent on click is necessary because we cannot benefit from the
-    scroller service event listener -->
+    t-on-wheel.stop="">
     <div class="o-cell-thread-body">
         <t t-if="state.thread.id">
             <Thread 

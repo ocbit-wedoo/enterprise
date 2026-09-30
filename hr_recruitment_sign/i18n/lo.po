@@ -1,46 +1,50 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_recruitment_sign
+# * hr_recruitment_sign
 #
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-12-29 18:47+0000\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-06-06 10:08+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
+"hr_recruitment_sign/lo/>\n"
+"Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_applicant__sign_request_count
 msgid "# Signatures"
-msgstr ""
+msgstr "# ລາຍເຊັນ"
 
 #. module: hr_recruitment_sign
 #. odoo-python
 #: code:addons/hr_recruitment_sign/wizard/hr_recruitment_sign_document_wizard.py:0
 msgid "%(partner)s and %(responsible)s are the signatories."
-msgstr ""
+msgstr "%(partner)s ແລະ %(responsible)s ແມ່ນຜູ້ລົງລາຍເຊັນ."
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_applicant_sign_view_form
 msgid "<span class=\"o_stat_text\">Signature Requests</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">ຄຳຮ້ອງຂໍລາຍເຊັນ</span>"
 
 #. module: hr_recruitment_sign
 #: model:ir.model,name:hr_recruitment_sign.model_hr_applicant
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__applicant_id
 msgid "Applicant"
-msgstr ""
+msgstr "ຜູ້ສະໝັກງານ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__applicant_role_id
 msgid "Applicant Role"
-msgstr ""
+msgstr "ບົດບາດຜູ້ສະໝັກ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,help:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__applicant_role_id
@@ -48,61 +52,62 @@ msgid ""
 "Applicant's role on the templates to sign. The same role must be present in "
 "all the templates"
 msgstr ""
+"ບົດບາດຂອງຜູ້ສະໝັກໃນແມ່ແບບທີ່ຈະເຊັນ. ບົດບາດດຽວກັນນີ້ຕ້ອງມີຢູ່ໃນທຸກໆແມ່ແບບ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Attach a file"
-msgstr ""
+msgstr "ຄັດຕິດໄຟລ໌"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__attachment_ids
 msgid "Attachment"
-msgstr ""
+msgstr "ໄຟລ໌ຄັດຕິດ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model,name:hr_recruitment_sign.model_hr_candidate
 msgid "Candidate"
-msgstr ""
+msgstr "ຜູ້ມີສິດຄັດເລືອກ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__partner_id
 msgid "Contact"
-msgstr ""
+msgstr "ຜູ້ຕິດຕໍ່"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__cc_partner_ids
 msgid "Copy to"
-msgstr ""
+msgstr "ສຳເນົາເຖິງ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "ສ້າງໂດຍ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__create_date
 msgid "Created on"
-msgstr ""
+msgstr "ສ້າງເມື່ອ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Discard"
-msgstr ""
+msgstr "ຍົກເລີກ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "ຊື່ທີ່ສະແດງ"
 
 #. module: hr_recruitment_sign
 #: model:ir.actions.act_window,name:hr_recruitment_sign.sign_recruitment_wizard_action
 msgid "Document Signature"
-msgstr ""
+msgstr "ລາຍເຊັນເອກະສານ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__sign_template_ids
 msgid "Documents to sign"
-msgstr ""
+msgstr "ເອກະສານທີ່ຈະເຊັນ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,help:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__sign_template_ids
@@ -111,36 +116,40 @@ msgid ""
 "        Documents with 1 responsible will only have to be signed by the applicant while documents with 2 different responsible will have to be signed by both the applicant and the responsible.\n"
 "        "
 msgstr ""
+"ເອກະສານທີ່ຈະເຊັນ. ສາມາດເລືອກໄດ້ສະເພາະເອກະສານທີ່ມີຜູ້ຮັບຜິດຊອບ 1 ຫຼື 2 ທ່ານ.\n"
+"        ເອກະສານທີ່ມີຜູ້ຮັບຜິດຊອບ 1 ທ່ານ ຈະຕ້ອງໄດ້ຮັບການເຊັນໂດຍຜູ້ສະໝັກເທົ່ານັ້ນ, ໃນຂະນະທີ່ເອກະສານທີ່"
+"ມີຜູ້ຮັບຜິດຊອບ 2 ທ່ານ ຈະຕ້ອງໄດ້ຮັບການເຊັນໂດຍທັງຜູ້ສະໝັກ ແລະ ຜູ້ຮັບຜິດຊອບ.\n"
+"        "
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__has_both_template
 msgid "Has Both Template"
-msgstr ""
+msgstr "ມີທັງສອງແມ່ແບບ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__id
 msgid "ID"
-msgstr ""
+msgstr "ໄອດີ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "ແກ້ໄຂລ້າສຸດໂດຍ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "ແກ້ໄຂລ້າສຸດເມື່ອ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Mail Options"
-msgstr ""
+msgstr "ຕົວເລືອກອີເມລ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__message
 msgid "Message"
-msgstr ""
+msgstr "ຂໍ້ຄວາມ"
 
 #. module: hr_recruitment_sign
 #. odoo-python
@@ -149,102 +158,103 @@ msgid ""
 "No appropriate template could be found, please make sure you configured them"
 " properly."
 msgstr ""
+"ບໍ່ພົບແມ່ແບບທີ່ເໝາະສົມ, ກະລຸນາກວດສອບໃຫ້ແນ່ໃຈວ່າທ່ານໄດ້ຕັ້ງຄ່າພວກມັນຢ່າງຖືກຕ້ອງ."
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "No template available"
-msgstr ""
+msgstr "ບໍ່ມີແມ່ແບບ"
 
 #. module: hr_recruitment_sign
 #. odoo-python
 #: code:addons/hr_recruitment_sign/wizard/hr_recruitment_sign_document_wizard.py:0
 msgid "Only %s has to sign."
-msgstr ""
+msgstr "ມີພຽງ %s ເທົ່ານັ້ນທີ່ຕ້ອງເຊັນ."
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Optional Message..."
-msgstr ""
+msgstr "ຂໍ້ຄວາມເພີ່ມເຕີມ..."
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__partner_name
 msgid "Partner Name"
-msgstr ""
+msgstr "ຊື່ຜູ້ຕິດຕໍ່"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__possible_template_ids
 msgid "Possible Template"
-msgstr ""
+msgstr "ແມ່ແບບທີ່ເປັນໄປໄດ້"
 
 #. module: hr_recruitment_sign
 #: model:ir.actions.server,name:hr_recruitment_sign.action_request_signature
 msgid "Request Signature"
-msgstr ""
+msgstr "ຮ້ອງຂໍລາຍເຊັນ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__responsible_id
 msgid "Responsible"
-msgstr ""
+msgstr "ຜູ້ຮັບຜິດຊອບ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Send"
-msgstr ""
+msgstr "ສົ່ງ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Sign Request Options"
-msgstr ""
+msgstr "ຕົວເລືອກການຮ້ອງຂໍລາຍເຊັນ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__sign_template_responsible_ids
 msgid "Sign Template Responsible"
-msgstr ""
+msgstr "ຜູ້ຮັບຜິດຊອບແມ່ແບບການເຊັນ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model,name:hr_recruitment_sign.model_hr_recruitment_sign_document_wizard
 msgid "Sign document in recruitment"
-msgstr ""
+msgstr "ເຊັນເອກະສານໃນການຮັບສະໝັກງານ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Signature Request"
-msgstr ""
+msgstr "ຄຳຮ້ອງຂໍລາຍເຊັນ"
 
 #. module: hr_recruitment_sign
 #. odoo-python
 #: code:addons/hr_recruitment_sign/wizard/hr_recruitment_sign_document_wizard.py:0
 msgid "Signature Request - %s"
-msgstr ""
+msgstr "ຄຳຮ້ອງຂໍລາຍເຊັນ - %s"
 
 #. module: hr_recruitment_sign
 #. odoo-python
 #: code:addons/hr_recruitment_sign/models/hr_applicant.py:0
 msgid "Signature Requests"
-msgstr ""
+msgstr "ຄຳຮ້ອງຂໍລາຍເຊັນ"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__subject
 msgid "Subject"
-msgstr ""
+msgstr "ຫົວຂໍ້"
 
 #. module: hr_recruitment_sign
 #: model:ir.model.fields,field_description:hr_recruitment_sign.field_hr_recruitment_sign_document_wizard__template_warning
 msgid "Template Warning"
-msgstr ""
+msgstr "ຄຳເຕືອນແມ່ແບບ"
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.hr_recruitment_sign_view
 msgid "Write email or search contact..."
-msgstr ""
+msgstr "ຂຽນອີເມລ ຫຼື ຄົ້ນຫາຜູ້ຕິດຕໍ່..."
 
 #. module: hr_recruitment_sign
 #. odoo-python
 #: code:addons/hr_recruitment_sign/models/hr_applicant.py:0
 msgid "You must define a Contact Name for this applicant."
-msgstr ""
+msgstr "ທ່ານຕ້ອງກຳນົດຊື່ຜູ້ຕິດຕໍ່ສຳລັບຜູ້ສະໝັກຄົນນີ້."
 
 #. module: hr_recruitment_sign
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_sign.message_signature_request
 msgid "requested a new signature on the following documents:"
-msgstr ""
+msgstr "ໄດ້ຮ້ອງຂໍລາຍເຊັນໃໝ່ໃນເອກະສານຕໍ່ໄປນີ້:"

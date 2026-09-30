@@ -455,3 +455,31 @@ class TestSwissdecTestCases(TestSwissdec5Common):
         self.is_declaration_2022_06.action_prepare_data()
         generated_dict = self.is_declaration_2022_06._get_declaration()
         self._compare_with_truth_base("is_declaration_perception", identifier, generated_dict)
+
+    @freeze_time("2023-01-01")
+    def test_salary_certificate_remarks(self):
+        rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7010')
+        rule.l10n_ch_salary_certificate = '15'
+        employee = self.env['hr.employee'].search([('registration_number', '=', '1'), ('company_id', '=', self.muster_ag_company.id)])
+        payslips = self.env['hr.payslip'].search([
+            ('employee_id', '=', employee.id),
+            ('state', 'in', ['done', 'paid']),
+            ('date_from', '>=', date(2022, 1, 1)),
+            ('date_to', '<=', date(2022, 12, 31)),
+        ])
+        lines = payslips.line_ids.filtered(lambda line: line.salary_rule_id == rule)
+        # as named by an input
+        lines.name = "Cotisation AVS employeur"
+        lines[0].name = "Cotisation AVS employeur (correction)"
+        total = sum(lines.mapped('total'))
+
+        self.yearly_retrospective_2022_12.action_prepare_data()
+        person = next(
+            person for person in self.yearly_retrospective_2022_12.l10n_ch_declare_salary_data['Staff']['Person']
+            if person['Particulars']['EmployeeNumber'] == employee.registration_number
+        )
+        self.assertEqual(
+            person['TaxSalaries']['TaxSalary'][0]['Remark'],
+            f"Cotisation AVS employeur, Cotisation AVS employeur (correction): {total:.2f} CHF",
+            "The total of the rule should be declared in the remarks, named after its payslip lines",
+        )

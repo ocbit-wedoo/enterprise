@@ -732,6 +732,10 @@ class L10nAuSTP(models.Model):
 
     def _check_payslips(self):
         self.ensure_one()
+        if self.payevent_type == "submit" and not self.payslip_ids:
+            raise ValidationError(self.env._("There are no payslips for STP submission."))
+        if self.payevent_type == "update" and not self.l10n_au_stp_emp:
+            raise ValidationError(self.env._("There are no employees for STP submission."))
         if self.payslip_ids.filtered(lambda p: p.l10n_au_stp_status != 'ready'):
             raise ValidationError(_("Some payslips are not ready for STP submission!"))
         if self.payslip_batch_id and self.payslip_batch_id.l10n_au_stp_status != 'ready':

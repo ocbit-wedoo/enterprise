@@ -9,12 +9,13 @@
 #
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Ryoko Tsuda <ryoko@quartile.co>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-22 17:52+0000\n"
-"PO-Revision-Date: 2026-04-29 19:21+0000\n"
+"PO-Revision-Date: 2026-08-31 03:09+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "documents/ja/>\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: documents
 #. odoo-javascript
@@ -232,7 +233,7 @@ msgstr "<span class=\"o_stat_text\">関連した <br/>レコード</span>"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "<span title=\"Requested Document\">Requested Document</span>"
-msgstr "<span title=\"Requested Document\">要求済ドキュメント</span>"
+msgstr "<span title=\"Requested Document\">依頼済ドキュメント</span>"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_page_layout
@@ -242,12 +243,12 @@ msgstr "<span>&amp;nbsp;ドキュメント</span>"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "<span><b> Request</b></span>"
-msgstr "<span><b> 要求</b></span>"
+msgstr "<span><b> 依頼</b></span>"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "<span><b>Requested Document</b></span>"
-msgstr "<span><b>ドキュメント要求</b></span>"
+msgstr "<span><b>ドキュメント依頼</b></span>"
 
 #. module: documents
 #: model:mail.template,body_html:documents.mail_template_document_request
@@ -1226,7 +1227,7 @@ msgstr "会社"
 #. module: documents
 #: model:ir.model,name:documents.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: documents
 #: model:ir.ui.menu,name:documents.Config
@@ -1398,7 +1399,7 @@ msgstr "削除遅延"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.res_config_settings_view_form
 msgid "Deletion delay (days)"
-msgstr "削除遅延(日数)"
+msgstr "削除までの期間(日)"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_deprecated
@@ -1491,25 +1492,24 @@ msgstr "ドキュメントリダイレクト"
 #. module: documents
 #: model:ir.model,name:documents.model_documents_request_wizard
 msgid "Document Request"
-msgstr "ドキュメント要求"
+msgstr "ドキュメント依頼"
 
 #. module: documents
 #: model:mail.template,subject:documents.mail_template_document_request
 msgid "Document Request {{ object.name != False and ': '+ object.name or '' }}"
-msgstr ""
-"ドキュメント要求 {{ object.name != False and ': '+ object.name or '' }}"
+msgstr "ドキュメント依頼 {{ object.name != False and ': '+ object.name or '' }}"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 #: code:addons/documents/models/mail_activity.py:0
 msgid "Document Request: %(name)s Uploaded by: %(user)s"
-msgstr "ドキュメント要求: %(name)sアップロード者 : %(user)s"
+msgstr "ドキュメント依頼: %(name)sアップロード者 : %(user)s"
 
 #. module: documents
 #: model:mail.template,name:documents.mail_template_document_request_reminder
 msgid "Document Request: Reminder"
-msgstr "ドキュメント要求: リマインダ"
+msgstr "ドキュメント依頼: リマインダ"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__document_token
@@ -1536,7 +1536,7 @@ msgstr " %(user)sによりドキュメントをアップロード済"
 #. module: documents
 #: model:mail.template,name:documents.mail_template_document_request
 msgid "Document: Document Request"
-msgstr "ドキュメント: ドキュメント要求"
+msgstr "ドキュメント: ドキュメント依頼"
 
 #. module: documents
 #. odoo-javascript
@@ -1643,7 +1643,7 @@ msgstr "zipをダウンロード #{subfolder.name}"
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_draft
 msgid "Draft"
-msgstr "ドラフト"
+msgstr "下書き"
 
 #. module: documents
 #. odoo-javascript
@@ -2006,7 +2006,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:documents.field_documents_document__message_has_error
 #: model:ir.model.fields,help:documents.field_documents_document__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_bounced_content
@@ -2643,7 +2643,7 @@ msgstr "エラー数"
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__message_has_error_counter
@@ -2768,7 +2768,7 @@ msgstr "オプションメッセージ..."
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.xml:0
 msgid "Or send emails to"
-msgstr "または、次のドレスにEメールを送ってください。"
+msgstr "または、次の宛先にメールを送信："
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_other
@@ -2997,7 +2997,7 @@ msgstr "名前の変更"
 #: code:addons/documents/static/src/views/documents_controller_mixin.xml:0
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "Request"
-msgstr "要求"
+msgstr "依頼"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__request_activity_id
@@ -3007,35 +3007,35 @@ msgstr "活動を要求"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "Request To"
-msgstr "要求先"
+msgstr "依頼先"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/web/activity/activity_menu_patch.xml:0
 msgid "Request a Document"
-msgstr "ドキュメントを要求"
+msgstr "ドキュメントを依頼"
 
 #. module: documents
 #: model:ir.actions.act_window,name:documents.action_request_form
 msgid "Request a file"
-msgstr "ファイルを要求"
+msgstr "ファイルを依頼"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_request_page
 msgid ""
 "Requested\n"
 "                                ∙"
-msgstr "要求済"
+msgstr "依頼済"
 
 #. module: documents
 #: model:mail.activity.type,name:documents.mail_documents_activity_data_md
 msgid "Requested Document"
-msgstr "要求されたドキュメント"
+msgstr "依頼済ドキュメント"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
 msgid "Requested Documents"
-msgstr "要求済ドキュメント"
+msgstr "依頼済ドキュメント"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__requestee_partner_id
@@ -3206,7 +3206,7 @@ msgstr "財務に送信"
 #. module: documents
 #: model:mail.template,description:documents.mail_template_document_request
 msgid "Sent to partner when requesting a document from them"
-msgstr "ドキュメントを要求するときに取引先に送信"
+msgstr "ドキュメントを依頼するときに取引先に送信"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_tag__sequence
@@ -3241,8 +3241,8 @@ msgid ""
 "Set reminders in activities to notify users who didn't upload their "
 "requested document"
 msgstr ""
-"活動でリマインダを設定し、要求されたドキュメントをアップロードしなかったユー"
-"ザに通知します。"
+"活動でリマインダを設定し、依頼されたドキュメントをアップロードしなかった"
+"ユーザに通知します。"
 
 #. module: documents
 #: model:ir.actions.act_window,name:documents.configuration_action
@@ -3554,7 +3554,7 @@ msgid ""
 "onclick=\"document.querySelector('.o_request_upload').click()\" "
 "style=\"cursor:pointer;\">Upload it</b>."
 msgstr ""
-"このドキュメントが要求されました。\n"
+"このドキュメントが依頼されました。\n"
 "　　　　　<b onclick=\"document.querySelector('.o_request_upload').click()\" "
 "style=\"cursor:pointer;\">アップロードして下さい</b>"
 
@@ -3755,7 +3755,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/mail_activity.py:0
 msgid "Upload file request"
-msgstr "ファイルアップロード要求"
+msgstr "ファイルアップロード依頼"
 
 #. module: documents
 #. odoo-javascript

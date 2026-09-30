@@ -324,8 +324,8 @@
                 <filter name="shift_planned" invisible="1" string="Shifts Planned" groups="planning.group_planning_user" context="{'highlight_planned': 1}"/>
                 <filter name="conflict_shifts" string="Shifts in Conflict" groups="planning.group_planning_manager" context="{'highlight_conflicting': 1}"/>
                 <separator/>
-                <filter string="Employees" name="employees" domain="[('resource_type','=', 'user'), '|', ('role_id.resource_ids.resource_type', '=', 'user'), ('role_id', '=', False)]" groups="planning.group_planning_user"/>
-                <filter string="Materials" name="materials" domain="[('resource_type','=', 'material'), '|', ('role_id.resource_ids.resource_type', '=', 'material'), ('role_id', '=', False)]" groups="planning.group_planning_user"/>
+                <filter string="Employees" name="employees" domain="['|', ('resource_type', '=', 'user'), '&amp;', ('resource_id', '=', False), '|', ('role_id.resource_ids.resource_type', '=', 'user'), ('role_id', '=', False)]" groups="planning.group_planning_user"/>
+                <filter string="Materials" name="materials" domain="['|', ('resource_type', '=', 'material'), '&amp;', ('resource_id', '=', False), '|', ('role_id.resource_ids.resource_type', '=', 'material'), ('role_id', '=', False)]" groups="planning.group_planning_user"/>
                 <separator/>
                 <filter name="unpublished_shifts" string="Draft" domain="[('state', '=', 'draft')]" groups="planning.group_planning_manager"/>
                 <filter name="published_shifts" string="Published" domain="[('state', '=', 'published')]" groups="planning.group_planning_manager"/>

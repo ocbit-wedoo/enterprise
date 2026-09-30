@@ -115,6 +115,16 @@ class Job(models.Model):
         wizard = self.env['hr.referral.link.to.share'].create({'job_id': self.id, 'channel': channel})
         return wizard.url
 
+    def _get_attachments_domain(self):
+        accessible_applicants = self.env['hr.applicant'].with_context(active_test=False).search([
+            ('id', 'in', self.application_ids.ids),
+            ('is_accessible_to_current_user', '=', True),
+        ])
+        return ['|',
+            '&', ('res_model', '=', 'hr.job'), ('res_id', 'in', self.ids),
+            '&', ('res_model', '=', 'hr.applicant'), ('res_id', 'in', accessible_applicants.ids),
+        ]
+
     def action_share_external(self):
         self.ensure_one()
         wizard = self.env['hr.referral.link.to.share'].create({'job_id': self.id})

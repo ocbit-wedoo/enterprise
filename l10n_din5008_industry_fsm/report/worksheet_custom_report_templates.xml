@@ -13,7 +13,7 @@
                         <table>
                             <tr>
                                 <td>Date:</td>
-                                <td><t t-out="doc.l10n_din5008_date" t-options="{'widget': 'date'}"/></td>
+                                <td><t t-out="doc.l10n_din5008_date" t-options="{'widget': 'date', 'format': 'dd.MM.yyyy'}"/></td>
                             </tr>
                         </table>
                     </div>

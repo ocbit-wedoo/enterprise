@@ -294,7 +294,7 @@ class TestInvoiceExtract(AccountTestInvoicingCommon, TestExtractMixin, MailCommo
         invoice = self.env['account.move'].create({'move_type': 'in_invoice', 'extract_state': 'waiting_extraction'})
         existing_partner = self.env['res.partner'].create({
             'name': 'test',
-            'bank_ids': [(0, 0, {'acc_number': "BE01234567890123"})],
+            'bank_ids': [(0, 0, {'acc_number': "BE01 2345 6789 0123"})],
         })
 
         with self._mock_iap_extract(extract_response=self.get_result_success_response()):
@@ -307,7 +307,7 @@ class TestInvoiceExtract(AccountTestInvoicingCommon, TestExtractMixin, MailCommo
         invoice = self.env['account.move'].create({'move_type': 'in_invoice', 'extract_state': 'waiting_extraction'})
         self.env['res.partner'].create({
             'name': 'Existing partner',
-            'bank_ids': [(0, 0, {'acc_number': "BE01234567890123"})],
+            'bank_ids': [(0, 0, {'acc_number': "BE01 2345 6789 0123"})],
         })
 
         with self._mock_iap_extract(extract_response=self.get_result_success_response()):

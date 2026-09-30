@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-05-30 09:03+0000\n"
+"POT-Creation-Date: 2026-06-19 17:45+0000\n"
+"PO-Revision-Date: 2026-06-26 07:47+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "delivery_ups_rest/lo/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_ups_rest
 #: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_bill_my_account
@@ -78,6 +78,21 @@ msgstr "ສ້າງບັນຊີຢູ່ທີ່"
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
 msgid "Create an app"
 msgstr "ສ້າງແອັບ"
+
+#. module: delivery_ups_rest
+#. odoo-python
+#: code:addons/delivery_ups_rest/models/ups_request.py:0
+msgid ""
+"Detected a problem when validating delivery %(delivery_name)s. Invoicing "
+"address of the commercial invoice has been defaulted to %(ship_to_partner)s "
+"instead of %(sold_to_partner)s to avoid the following error from UPS: \"The "
+"Sold To party's country code must be the same as the Ship To party's country "
+"code with the exception of Canada and satellite countries.\""
+msgstr ""
+"ພົບເຫັນບັນຫາໃນເວລາກວດສອບການສົ່ງສິນຄ້າ %(delivery_name)s. ທີ່ຢູ່ອອກໃບແຈ້ງໜີ້ຂອງໃບແຈ້ງໜີ້ການຄ້າໄດ້"
+"ຖືກກຳນົດເປັນ %(ship_to_partner)s ແທນທີ່ຈະເປັນ %(sold_to_partner)s ເພື່ອຫຼີກເວັ້ນຂໍ້ຜິດພາດຈາ"
+"ກ UPS ດັ່ງນີ້: \"ລະຫັດປະເທດຂອງຝ່າຍຜູ້ຊື້ (Sold To) ຈະຕ້ອງແມ່ນລະຫັດດຽວກັນກັບລະຫັດປະເທດຂອງຝ່າຍຜູ້ຮັ"
+"ບສິນຄ້າ (Ship To) ໂດຍຍົກເວັ້ນປະເທດການາດາ ແລະ ປະເທດບໍລິວານ.\""
 
 #. module: delivery_ups_rest
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
@@ -169,16 +184,14 @@ msgid ""
 "dimensions and weight unit for your country"
 msgstr ""
 "ຕອນນີ້ໃຫ້ໄປທີ່ Odoo ແລະ ສ້າງວິທີການຈັດສົ່ງສຳລັບ UPS ໂດຍໃຊ້ ເລກບັນຊີ (ຂັ້ນຕອນທີ 2) ແລະ Client "
-"ID + Client Secret (ຂັ້ນຕອນທີ 8). ນອກຈາກນີ້, ຕ້ອງຮັບປະກັນວ່າທ່ານໃຊ້ຫົວໜ່ວຍຂະໜາດ ແລະ ນ້ຳໜັກທີ່ຖື"
-"ກຕ້ອງສຳລັບປະເທດຂອງທ່ານ"
+"ID + Client Secret (ຂັ້ນຕອນທີ 8). ນອກຈາກນີ້, ຕ້ອງຮັບປະກັນວ່າທ່ານໃຊ້ຫົວໜ່ວຍຂະໜາດ ແລະ "
+"ນ້ຳໜັກທີ່ຖືກຕ້ອງສຳລັບປະເທດຂອງທ່ານ"
 
 #. module: delivery_ups_rest
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
 msgid ""
-"Now open your app, you'll have your <b>Client ID</b> and <b>Client "
-"Secret</b>"
-msgstr ""
-"ຕອນນີ້ໃຫ້ເປີດແອັບຂອງທ່ານ, ທ່ານຈະເຫັນ <b>Client ID</b> ແລະ <b>Client Secret</b>"
+"Now open your app, you'll have your <b>Client ID</b> and <b>Client Secret</b>"
+msgstr "ຕອນນີ້ໃຫ້ເປີດແອັບຂອງທ່ານ, ທ່ານຈະເຫັນ <b>Client ID</b> ແລະ <b>Client Secret</b>"
 
 #. module: delivery_ups_rest
 #: model_terms:ir.ui.view,arch_db:delivery_ups_rest.view_delivery_carrier_form
@@ -237,8 +250,8 @@ msgstr "ເບີໂທລະສັບຜູ້ຮັບຕ້ອງມີຢ່
 #. odoo-python
 #: code:addons/delivery_ups_rest/models/delivery_ups.py:0
 msgid ""
-"Return label generated<br/><b>Tracking Numbers:</b> "
-"%(tracking_numbers)s<br/><b>Packages:</b> %(packages)s"
+"Return label generated<br/><b>Tracking Numbers:</b> %(tracking_numbers)s<br/"
+"><b>Packages:</b> %(packages)s"
 msgstr ""
 "ສ້າງສະຕິກເກີສົ່ງຄືນແລ້ວ<br/><b>ເລກຕິດຕາມ:</b> %(tracking_numbers)s<br/><b>ພັດສະດຸ:</b> "
 "%(packages)s"
@@ -278,11 +291,11 @@ msgstr "ການຈັດສົ່ງ #%s ຖືກຍົກເລີກແລ�
 #. odoo-python
 #: code:addons/delivery_ups_rest/models/delivery_ups.py:0
 msgid ""
-"Shipment created into UPS<br/><b>Tracking Numbers:</b> "
-"%(tracking_numbers)s<br/><b>Packages:</b> %(packages)s"
+"Shipment created into UPS<br/><b>Tracking Numbers:</b> %"
+"(tracking_numbers)s<br/><b>Packages:</b> %(packages)s"
 msgstr ""
-"ສ້າງການຈັດສົ່ງໃນ UPS ແລ້ວ<br/><b>ເລກຕິດຕາມ:</b> %(tracking_numbers)s<br/><b>ພັດສະ"
-"ດຸ:</b> %(packages)s"
+"ສ້າງການຈັດສົ່ງໃນ UPS ແລ້ວ<br/><b>ເລກຕິດຕາມ:</b> %(tracking_numbers)s<br/><b>ພັດສະດຸ:"
+"</b> %(packages)s"
 
 #. module: delivery_ups_rest
 #. odoo-python
@@ -330,15 +343,15 @@ msgstr ""
 #. odoo-python
 #: code:addons/delivery_ups_rest/models/ups_request.py:0
 msgid ""
-"The delivery cannot be done because the weight of your product %s is "
-"missing."
+"The delivery cannot be done because the weight of your product %s is missing."
 msgstr "ບໍ່ສາມາດຈັດສົ່ງໄດ້ ເນື່ອງຈາກຍັງຂາດຂໍ້ມູນນ້ຳໜັກຂອງສິນຄ້າ %s."
 
 #. module: delivery_ups_rest
 #. odoo-python
 #: code:addons/delivery_ups_rest/models/ups_request.py:0
 msgid ""
-"The estimated shipping price cannot be computed because the weight is missing for the following product(s): \n"
+"The estimated shipping price cannot be computed because the weight is "
+"missing for the following product(s): \n"
 " %s"
 msgstr ""
 "ບໍ່ສາມາດຄຳນວນຄ່າຈັດສົ່ງໂດຍປະມານໄດ້ ເນື່ອງຈາກຍັງຂາດຂໍ້ມູນນ້ຳໜັກຂອງສິນຄ້າລຸ່ມນີ້: \n"
@@ -370,8 +383,7 @@ msgstr "ບໍລິການເສີມນີ້ຊ່ວຍໃຫ້ UPS ສ�
 #. module: delivery_ups_rest
 #: model:ir.model.fields,help:delivery_ups_rest.field_delivery_carrier__ups_saturday_delivery
 msgid ""
-"This value added service will allow you to ship the package on saturday "
-"also."
+"This value added service will allow you to ship the package on saturday also."
 msgstr "ບໍລິການເສີມນີ້ຈະຊ່ວຍໃຫ້ທ່ານສາມາດຈັດສົ່ງພັດສະດຸໃນວັນເສົາໄດ້ຄືກັນ."
 
 #. module: delivery_ups_rest
@@ -501,11 +513,11 @@ msgstr "ເລກບັນຊີ UPS"
 #. odoo-python
 #: code:addons/delivery_ups_rest/models/ups_request.py:0
 msgid ""
-"UPS address lines can only contain a maximum of 35 characters. You can split"
-" the contacts addresses on multiple lines to try to avoid this limitation."
+"UPS address lines can only contain a maximum of 35 characters. You can split "
+"the contacts addresses on multiple lines to try to avoid this limitation."
 msgstr ""
-"ທີ່ຢູ່ຂອງ UPS ສາມາດມີຄວາມຍາວໄດ້ສູງສຸດ 35 ຕົວອັກສອນຕໍ່ແຖວ. ທ່ານສາມາດແບ່ງທີ່ຢູ່ຜູ້ຕິດຕໍ່ອອກເປັນຫຼາຍແຖວເພື່"
-"ອຫຼີກລ່ຽງຂໍ້ຈຳກັດນີ້."
+"ທີ່ຢູ່ຂອງ UPS ສາມາດມີຄວາມຍາວໄດ້ສູງສຸດ 35 ຕົວອັກສອນຕໍ່ແຖວ. "
+"ທ່ານສາມາດແບ່ງທີ່ຢູ່ຜູ້ຕິດຕໍ່ອອກເປັນຫຼາຍແຖວເພື່ອຫຼີກລ່ຽງຂໍ້ຈຳກັດນີ້."
 
 #. module: delivery_ups_rest
 #: model:ir.model.fields,field_description:delivery_ups_rest.field_delivery_carrier__ups_duty_payment

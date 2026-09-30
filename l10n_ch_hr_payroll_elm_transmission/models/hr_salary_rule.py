@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import _, fields, models
 
 
 class HrSalaryRule(models.Model):
@@ -92,29 +92,34 @@ class HrSalaryRule(models.Model):
     l10n_ch_lpp_forecast = fields.Boolean(tracking=True)
     l10n_ch_lpp_factor = fields.Integer(tracking=True)
     l10n_ch_lpp_retroactive = fields.Boolean(tracking=True)
-    l10n_ch_salary_certificate = fields.Selection(selection=[
-        ('1', '1. Salary'),
-        ('2.1', '2.1 Room and board'),
-        ('2.2', '2.2 Personal use of the company car'),
-        ('2.3', '2.3 Additional salary benefits - Other'),
-        ('3', '3. Irregular Benefits'),
-        ('4', '4. Capital Benefits'),
-        ('5', '5. Ownership right in accordance with supplement'),
-        ('6', '6. Board of directors’ compensation'),
-        ('7', '7. Other benefits'),
-        ('8', '8. Gross Salary Total / Pension'),
-        ('9', '9. Contributions OASI/DI/IC/UI/NBUV'),
-        ('10.1', '10.1 Regular contributions'),
-        ('10.2', '10.2 Purchasing contribution'),
-        ('11', '11. Net salary / Pension'),
-        ('12', '12. Withholding tax deduction'),
-        ('13.1.1', '13.1.1. Actual expenses - Trip, room and board'),
-        ('13.1.2', '13.1.2. Actual expenses - Others'),
-        ('13.2.1', '13.2.1. Overall expenses - Representation'),
-        ('13.2.2', '13.2.2. Overall expenses - Car'),
-        ('13.2.3', '13.2.3. Overall expenses - Other'),
-        ('13.3', '13.3. Contributions to further education'),
-        ('14', '14. Further fringe benefits'),
-    ], tracking=True)
+    l10n_ch_salary_certificate = fields.Selection(selection='_get_l10n_ch_salary_certificate_selection', tracking=True)
     l10n_ch_caf_statement = fields.Char(tracking=True)
     l10n_ch_is_periodic = fields.Boolean(tracking=True)
+
+    def _get_l10n_ch_salary_certificate_selection(self):
+        # dynamic: unlike a static selection, its values are not stored in the database, so sections can be added in stable
+        return [
+            ('1', _('1. Salary')),
+            ('2.1', _('2.1 Room and board')),
+            ('2.2', _('2.2 Personal use of the company car')),
+            ('2.3', _('2.3 Additional salary benefits - Other')),
+            ('3', _('3. Irregular Benefits')),
+            ('4', _('4. Capital Benefits')),
+            ('5', _('5. Ownership right in accordance with supplement')),
+            ('6', _('6. Board of directors’ compensation')),
+            ('7', _('7. Other benefits')),
+            ('8', _('8. Gross Salary Total / Pension')),
+            ('9', _('9. Contributions OASI/DI/IC/UI/NBUV')),
+            ('10.1', _('10.1 Regular contributions')),
+            ('10.2', _('10.2 Purchasing contribution')),
+            ('11', _('11. Net salary / Pension')),
+            ('12', _('12. Withholding tax deduction')),
+            ('13.1.1', _('13.1.1. Actual expenses - Trip, room and board')),
+            ('13.1.2', _('13.1.2. Actual expenses - Others')),
+            ('13.2.1', _('13.2.1. Overall expenses - Representation')),
+            ('13.2.2', _('13.2.2. Overall expenses - Car')),
+            ('13.2.3', _('13.2.3. Overall expenses - Other')),
+            ('13.3', _('13.3. Contributions to further education')),
+            ('14', _('14. Further fringe benefits')),
+            ('15', _('15. Remarks')),
+        ]

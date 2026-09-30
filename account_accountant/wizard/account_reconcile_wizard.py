@@ -352,7 +352,7 @@ class AccountReconcileWizard(models.TransientModel):
                 rate_lower_bound = rate - rate_tolerance
                 rate_upper_bound = rate + rate_tolerance
             else:
-                rate = self.env['res.currency']._get_conversion_rate(reco_currency, amls.company_currency_id, amls.company_id, most_recent_line.date)
+                rate = self.env['res.currency']._get_conversion_rate(reco_currency, amls.company_currency_id, most_recent_line.company_id, most_recent_line.date)
                 rate_lower_bound = rate_upper_bound = rate
 
             # If an AML's rate is close enough to the reconciliation rate that it could be the same,

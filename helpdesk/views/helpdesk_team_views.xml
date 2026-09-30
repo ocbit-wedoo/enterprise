@@ -325,7 +325,7 @@
                     </t>
                     <t t-name="card" class="px-3">
                         <field name="display_name" class="fw-bold fs-4"/>
-                        <small t-if="record.use_alias.value and record.alias_email.value" class="ms-2">
+                        <small t-if="record.use_alias.value and record.alias_email.value">
                             <a t-att-href="'mailto:' + record.alias_email.value"><i class="fa fa-envelope-o" title="Domain alias" role="img" aria-label="Domain alias"></i>&amp;nbsp; <field name="alias_email"/></a>
                         </small>
                         <div class="row mt-3" t-if="!selection_mode">

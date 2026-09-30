@@ -22,11 +22,11 @@ export class CalendarEvent extends models.Model {
     resource_ids = fields.Many2many({ string: "Resources", relation: "appointment.resource" });
     appointment_status = fields.Selection({
         selection: [
-            ['cancelled', 'Cancelled'],
-            ['request', 'Request'],
-            ['booked', 'Booked'],
-            ['attended', 'Checked-In'],
-            ['no_show', 'No Show'],
+            ["cancelled", "Cancelled"],
+            ["request", "Request"],
+            ["booked", "Booked"],
+            ["attended", "Checked-In"],
+            ["no_show", "No Show"],
         ],
         string: "Appointment Status",
     });
@@ -45,7 +45,7 @@ export class CalendarEvent extends models.Model {
             start: "2022-01-12 10:00:00",
             stop: "2022-01-12 11:00:00",
             allday: false,
-            appointment_status: 'booked',
+            appointment_status: "booked",
             partner_ids: [100, 214],
         },
         {
@@ -57,7 +57,7 @@ export class CalendarEvent extends models.Model {
             start: "2022-01-05 10:00:00",
             stop: "2022-01-05 11:00:00",
             allday: false,
-            appointment_status: 'booked',
+            appointment_status: "booked",
             partner_ids: [214, 216],
         },
         {
@@ -69,7 +69,7 @@ export class CalendarEvent extends models.Model {
             start: "2022-01-05 10:00:00",
             stop: "2022-01-05 11:00:00",
             allday: false,
-            appointment_status: 'booked',
+            appointment_status: "booked",
             partner_ids: [216, 100, 214, 217],
         },
     ];
@@ -95,7 +95,10 @@ export class AppointmentType extends models.Model {
     category = fields.Selection({
         selection: [
             ["website", "Website"],
+            ["recurring", "Regular"],
+            ["punctual", "Punctual"],
             ["custom", "Specific Slots"],
+            ["anytime", "Shared Calendar"],
         ],
     });
 

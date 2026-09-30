@@ -609,7 +609,12 @@ export class ViewEditorModel extends Reactive {
             .replace(/[\s_-]+/g, "_") // swap any length of whitespace, underscore, hyphen characters with a single _
             .replace(/^-+|-+$/g, ""); // remove leading, trailing
 
-        if (!newName.startsWith("x_studio_")) {
+        if (newName.startsWith("_")) {
+            // keep default fieldName (randomly generated) if the new name is full of
+            // invalid chars (example arabic letters) to prevent having x_studio__ (which contains
+            // forbidden double underscore pattern)
+            newName = fieldName;
+        } else if (!newName.startsWith("x_studio_")) {
             newName = `x_studio_${newName}`;
         }
 

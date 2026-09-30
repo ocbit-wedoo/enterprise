@@ -35,9 +35,9 @@ class TimesheetForecastReport(models.Model):
                 FROM
                     planning_slot F
                     JOIN resource_resource R ON F.resource_id = R.id
-                    JOIN resource_calendar C ON R.calendar_id = C.id,
+                    LEFT JOIN resource_calendar C ON R.calendar_id = C.id,
                     generate_series(F.start_datetime, F.end_datetime, '1 day') AS g(day)
-                WHERE EXTRACT(ISODOW FROM g.day) < 6 OR C.flexible_hours
+                WHERE EXTRACT(ISODOW FROM g.day) < 6 OR C.flexible_hours OR R.calendar_id IS NULL
                 GROUP BY F.id
             )
         """
@@ -141,22 +141,27 @@ class TimesheetForecastReport(models.Model):
     @api.model
     def _where(self):
         where_str = """
-                WHERE EXISTS (
-                    SELECT 1
-                    FROM resource_calendar_attendance A
-                    JOIN resource_calendar C ON (
-                        C.id = A.calendar_id
-                        AND A.calendar_id = R.calendar_id
-                    )
-                    WHERE (
-                        C.flexible_hours
-                        OR (
-                            A.dayofweek::int + 1 = EXTRACT(ISODOW FROM d.date)
-                            AND F.start_datetime < (d.date::date + (A.hour_to || ' hour')::interval)
-                            AND F.end_datetime > (d.date::date + (A.hour_from || ' hour')::interval)
+                WHERE
+                    d.date BETWEEN F.start_datetime::date AND F.end_datetime::date
+                    AND (
+                        R.calendar_id IS NULL
+                        OR EXISTS (
+                            SELECT 1
+                              FROM resource_calendar_attendance A
+                              JOIN resource_calendar C ON (
+                                   C.id = A.calendar_id
+                                   AND A.calendar_id = R.calendar_id
+                            )
+                            WHERE (
+                                C.flexible_hours
+                                OR (
+                                    A.dayofweek::int + 1 = EXTRACT(ISODOW FROM d.date)
+                                    AND F.start_datetime < (d.date::date + (A.hour_to || ' hour')::interval)
+                                    AND F.end_datetime > (d.date::date + (A.hour_from || ' hour')::interval)
+                                )
+                            )
                         )
                     )
-                )
         """
         return where_str
 

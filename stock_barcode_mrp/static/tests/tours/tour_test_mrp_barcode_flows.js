@@ -1503,6 +1503,45 @@ registry.category("web_tour.tours").add("test_not_allowing_component_lot_creatio
             run () {},
         },
         {
+            trigger: ".o_barcode_line:contains('productserial1') .o_line_button.o_edit",
+            run: "click",
+        },
+        {
+            trigger: ".o_field_widget[name='lot_id'] input",
+            run: "edit",
+        },
+        {
+            trigger: "button.btn-primary.o_save",
+            run: "click",
+        },
+        {
+            trigger: "button.o_validate_page",
+            run: "click",
+        },
+        {
+            trigger: `.o_error_dialog:contains("You need to supply Lot/Serial Number for products and 'consume' them")`,
+        },
+        {
+            trigger: ".o_error_dialog button:contains('close')",
+            run: "click",
+        },
+        {
+            trigger: ".o_barcode_line:contains(productserial1) .o_edit",
+            run: "click",
+        },
+        {
+            trigger: ".o_field_widget[name='lot_id'] input",
+            run: "edit SN008",
+        },
+        {
+            trigger: ".dropdown-item:contains(SN008)",
+            run: "click",
+        },
+        {
+            trigger: ".btn.o_save",
+            run: "click",
+        },
+        {
             trigger: "button.o_by_products",
             run: "click",
         },

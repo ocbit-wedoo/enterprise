@@ -3,6 +3,7 @@
 
 import time
 import odoo.tests
+from unittest.mock import patch
 
 from datetime import date, datetime, timedelta
 from dateutil.relativedelta import relativedelta
@@ -498,6 +499,14 @@ class TestHrPayrollAccount(TestHrPayrollAccountCommon):
         for line in self.hr_payslip_john.move_id.line_ids:
             if line.account_id.id == self.hra_account.id:
                 self.assertEqual(line.tax_ids, hra_tax, 'The account default tax is not added to move lines!')
+
+    def test_load_payroll_accounts_not_called_without_context_key(self):
+        """_load_payroll_accounts must NOT be called when chart_template_load is absent."""
+        target = 'odoo.addons.hr_payroll_account.models.account_chart_template.AccountChartTemplate._load_payroll_accounts'
+        with patch(target) as mock_load:
+            ChartTemplate = self.env['account.chart.template']
+            ChartTemplate._post_load_data(None, self.env.company, {})
+            mock_load.assert_not_called()
 
     def test_payslip_refund(self):
         """ Checking if refunding a payslip creates the correct invoice lines """

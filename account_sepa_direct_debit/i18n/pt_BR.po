@@ -1,26 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_sepa_direct_debit
+# * account_sepa_direct_debit
 #
 # Translators:
 # Wil Odoo, 2025
 # Maitê Dietze, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:48+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Maitê Dietze, 2025\n"
-"Language-Team: Portuguese (Brazil) (https://app.transifex.com/odoo/teams/"
-"41243/pt_BR/)\n"
+"POT-Creation-Date: 2026-06-19 17:47+0000\n"
+"PO-Revision-Date: 2026-07-16 17:10+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.odoo.com/projects/odoo-"
+"18/account_sepa_direct_debit/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % "
-"1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : ((n != 0 && n % "
+"1000000 == 0) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -1301,6 +1303,12 @@ msgstr "Mandato"
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__mandate_pdf_file
 msgid "Mandate Form PDF"
 msgstr "Formulário de mandato em PDF"
+
+#. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Mandate customer and bank account need to match."
+msgstr "É obrigatório que o nome do cliente e o da conta bancária coincidam."
 
 #. module: account_sepa_direct_debit
 #: model:ir.actions.report,name:account_sepa_direct_debit.sdd_mandate_form_report_main

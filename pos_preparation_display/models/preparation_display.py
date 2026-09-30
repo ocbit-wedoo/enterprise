@@ -1,5 +1,6 @@
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+from odoo.tools import SQL
 
 from odoo.addons.pos_preparation_display.models.preparation_display_orderline import PosPreparationDisplayOrderline
 
@@ -87,21 +88,34 @@ class PosPreparationDisplay(models.Model):
 
     def _get_stageless_orders_in_display(self):
         self.ensure_one()
-        stageless_orders_ids = self.env['pos_preparation_display.order']._search([
-            '|', ('pos_order_id', '=', False),
-                 ('pos_config_id', 'in', self.get_pos_config_ids().ids),
+        self.env['pos_preparation_display.order'].flush_model(['pos_order_id'])
+        self.env['pos.order'].flush_model(['config_id'])
+        self.env['pos_preparation_display.order.stage'].flush_model([
+            'order_id',
+            'preparation_display_id',
         ])
-        stageless_orders_ids.add_where(
+        stageless_orders_ids = self.env['pos_preparation_display.order']._search([])
+        stageless_orders_ids.add_where(SQL(
             """
-            NOT EXISTS
                 (
+                    pos_preparation_display_order.pos_order_id IS NULL
+                    OR EXISTS (
+                        SELECT 1
+                        FROM pos_order
+                        WHERE pos_order.id = pos_preparation_display_order.pos_order_id
+                          AND pos_order.config_id = ANY(%s)
+                    )
+                )
+                AND NOT EXISTS (
                     SELECT 1
                     FROM pos_preparation_display_order_stage
-                    WHERE order_id = pos_preparation_display_order.id AND preparation_display_id = %s
+                    WHERE order_id = pos_preparation_display_order.id
+                      AND preparation_display_id = %s
                 )
             """,
-            (self.id,)
-        )
+            self.get_pos_config_ids().ids,
+            self.id,
+        ))
 
         return self.env['pos_preparation_display.order'].browse(stageless_orders_ids)
 
@@ -168,10 +182,8 @@ class PosPreparationDisplay(models.Model):
     def _compute_order_count(self):
         for preparation_display in self:
             progress_order_count = 0
-            orders = preparation_display.env['pos_preparation_display.order'].search([
-                ('pos_config_id', 'in', preparation_display.get_pos_config_ids().ids),
-                ('create_date', '>=', fields.Date.today())
-            ])
+            orders = (preparation_display._get_open_orders_in_display()
+                      | preparation_display._get_stageless_orders_in_display())
 
             for order in orders:
                 order_stage = order.order_stage_ids.filtered(lambda s: s.preparation_display_id.id == preparation_display.id)

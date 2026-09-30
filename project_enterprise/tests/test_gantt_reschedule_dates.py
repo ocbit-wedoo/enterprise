@@ -448,6 +448,30 @@ class TestGanttRescheduleOnTasks(ProjectEnterpriseGanttRescheduleCommon):
                          datetime(year=2021, month=6, day=28, hour=16), failed_message)
 
     @users('admin')
+    def test_project2_reschedule_forward_conflict_does_not_block_unrelated_sibling(self):
+        """ This test purpose is to ensure that a task that cannot be scheduled due to
+            unavailability does not affect the scheduling of other candidates that only
+            share its assignee. Tasks 1 and 2 are made direct siblings under task 0,
+            with task 2 given a workload (3000h) that cannot fit the 53 week search
+            window. Since task 1 has ample near-term availability, it should land
+            right after task 0's new end date, not the tail of the search window,
+            regardless of task 2's outcome.
+        """
+        self.project2_task_2.write({
+            'depend_on_ids': [Command.set(self.project2_task_0.ids)],
+            'allocated_hours': 3000,
+            'date_deadline': datetime(2025, 8, 25, 12, 0),
+        })
+        self.gantt_reschedule_forward(self.project2_task_8, self.project2_task_0)
+
+        self.assert_new_dates(
+            self.project2_task_1,
+            datetime(year=2024, month=3, day=18, hour=13),
+            datetime(year=2024, month=3, day=18, hour=17),
+            "task 1 must be scheduled right after task 0, regardless of task 2's conflict"
+        )
+
+    @users('admin')
     def test_project2_reschedule_cascading_forward(self):
         """
             This test concerns project2 tasks, when the right arrow is clicked. task 0 should move ahead of task 8.

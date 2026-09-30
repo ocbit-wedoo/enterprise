@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 19:07+0000\n"
-"PO-Revision-Date: 2026-04-11 09:32+0000\n"
+"POT-Creation-Date: 2026-06-12 18:08+0000\n"
+"PO-Revision-Date: 2026-07-04 18:21+0000\n"
 "Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18-l10n/"
 "l10n_ch_hr_payroll_elm_transmission/it/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,help:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_salary_certificate_profile__l10n_ch_cs_free_meals
@@ -761,6 +761,11 @@ msgid "<strong>Source-Tax Code: </strong>"
 msgstr "<strong>Codice imposta alla fonte: </strong>"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
+#: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_report_payslip
+msgid "<strong>Source-Tax Rate: </strong>"
+msgstr "<strong>Aliquota fiscale alla fonte: </strong>"
+
+#. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.report_company_master_data_document
 msgid "<strong>Sub-Number:</strong>"
 msgstr "<strong>Numero secondario:</strong>"
@@ -783,7 +788,7 @@ msgstr "<strong>Data di ritiro: </strong>"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__a
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-python
@@ -792,6 +797,8 @@ msgid ""
 "A previous payslip in the system is required for after departure payement to "
 "work."
 msgstr ""
+"Per poter effettuare il pagamento dopo la partenza è necessario che nel "
+"sistema sia presente una busta paga precedente."
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_is_report_view_form
@@ -809,7 +816,7 @@ msgstr ""
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_hr_salary_rule__l10n_ch_aanp_included
 msgid "AANP Included"
-msgstr "AANP incluso"
+msgstr "INP inclusa"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_9020
@@ -1544,7 +1551,7 @@ msgstr "Correzione in attesa dell'azienda"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__b
 msgid "B"
-msgstr ""
+msgstr "B"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_tax_rate_import_wizard__canton__be
@@ -1739,7 +1746,7 @@ msgstr "Bâle-Ville"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__c
 msgid "C"
-msgstr ""
+msgstr "C"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_swissdec_job_result__domain__fak-caf
@@ -2707,7 +2714,7 @@ msgstr "Numero cliente:"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__d
 msgid "D"
-msgstr ""
+msgstr "D"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__res_company__l10n_ch_transmission_language__de
@@ -3172,7 +3179,7 @@ msgstr "Conteggio delle indennità familiari"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__e
 msgid "E"
-msgstr ""
+msgstr "E"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-python
@@ -3367,12 +3374,12 @@ msgstr "Dipendenti"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.report_company_master_data_document
 msgid "Employer AANP Part"
-msgstr "Parte AANP del datore di lavoro"
+msgstr "Parte INP del datore di lavoro"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_accident_insurance_line_rate__employer_aanp_part
 msgid "Employer Aanp Part"
-msgstr "Parte AANP del datore di lavoro"
+msgstr "Parte INP del datore di lavoro"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-javascript
@@ -3530,7 +3537,7 @@ msgstr "Straordinari"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__f
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_salary_certificate_profile__l10n_ch_cs_free_transport
@@ -3805,7 +3812,7 @@ msgstr "Formazione continua (certificato di salario)"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__g
 msgid "G"
-msgstr ""
+msgstr "G"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_salary_certificate_profile__l10n_ch_cs_free_meals
@@ -3855,27 +3862,27 @@ msgstr "Deduzione AVS generale in % (4)"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5404
 msgid "General AVS Deduction in % (5)"
-msgstr ""
+msgstr "Detrazione AVS generale in % (5)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5405
 msgid "General AVS Deduction in % (6)"
-msgstr ""
+msgstr "Detrazione AVS generale in % (6)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5406
 msgid "General AVS Deduction in % (7)"
-msgstr ""
+msgstr "Detrazione AVS generale in % (7)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5407
 msgid "General AVS Deduction in % (8)"
-msgstr ""
+msgstr "Detrazione AVS generale in % (8)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5408
 msgid "General AVS Deduction in % (9)"
-msgstr ""
+msgstr "Detrazione AVS generale in % (9)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7400
@@ -3896,27 +3903,27 @@ msgstr "Deduzione AVS generale datore di lavoro in % (4)"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7404
 msgid "General AVS Deduction in % Employer (5)"
-msgstr ""
+msgstr "Detrazione AVS generale in % datore di lavoro (5)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7405
 msgid "General AVS Deduction in % Employer (6)"
-msgstr ""
+msgstr "Detrazione AVS generale in % datore di lavoro (6)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7406
 msgid "General AVS Deduction in % Employer (7)"
-msgstr ""
+msgstr "Detrazione AVS generale in % datore di lavoro (7)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7407
 msgid "General AVS Deduction in % Employer (8)"
-msgstr ""
+msgstr "Detrazione AVS generale in % datore di lavoro (8)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7408
 msgid "General AVS Deduction in % Employer (9)"
-msgstr ""
+msgstr "Detrazione AVS generale in % datore di lavoro (9)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.swissdec_wage_types_form
@@ -4086,7 +4093,7 @@ msgstr "Unità gruppo"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__h
 msgid "H"
-msgstr ""
+msgstr "H"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_employee__l10n_ch_pre_defined_tax_scale__hen
@@ -4238,7 +4245,7 @@ msgstr "Marito del proprietario"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_wage_statement__i
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__i
 msgid "I"
-msgstr ""
+msgstr "I"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_hr_employee_is_line_correction__id
@@ -4814,7 +4821,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_wage_statement__j
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__j
 msgid "J"
-msgstr ""
+msgstr "J"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_tax_rate_import_wizard__canton__ju
@@ -4907,7 +4914,7 @@ msgstr "Jura"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_wage_statement__k
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__k
 msgid "K"
-msgstr ""
+msgstr "K"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-javascript
@@ -4924,7 +4931,7 @@ msgstr "Tipo di residenza"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_wage_statement__l
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__l
 msgid "L"
-msgstr ""
+msgstr "L"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_hr_salary_rule__l10n_ch_13th_month_hourly_included
@@ -5731,7 +5738,7 @@ msgstr "Indennità forfettaria di pensione"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_wage_statement__m
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__m
 msgid "M"
-msgstr ""
+msgstr "M"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_employee__l10n_ch_pre_defined_tax_scale__men
@@ -6094,7 +6101,7 @@ msgstr "Mutazioni"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__n
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-javascript
@@ -6479,7 +6486,7 @@ msgstr "Numero di messaggi con errore di consegna"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_yearly_statement__o
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__o
 msgid "O"
-msgstr ""
+msgstr "O"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.ui.menu,name:l10n_ch_hr_payroll_elm_transmission.menu_l10n_ch_avs_split
@@ -6644,7 +6651,7 @@ msgstr "Operazione non supportata"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_1975
 msgid "Optional employer contribution AANP"
-msgstr "Contributo datore di lavoro facoltativo all'AINF"
+msgstr "Contributo datore di lavoro facoltativo all'INP"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_1976
@@ -6738,7 +6745,7 @@ msgstr "Straordinari 150%"
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_1068
 #: model:hr.work.entry.type,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_swissdec_overtime_200_wt
 msgid "Overtime 200%"
-msgstr ""
+msgstr "Straordinari 200%"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_1067
@@ -6749,7 +6756,7 @@ msgstr "Straordinari dopo la partenza"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_yearly_statement__p
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__p
 msgid "P"
-msgstr ""
+msgstr "P"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.res_config_settings_view_form
@@ -7154,7 +7161,7 @@ msgstr "Giorni festivi"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_yearly_statement__q
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__q
 msgid "Q"
-msgstr ""
+msgstr "Q"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-javascript
@@ -7166,7 +7173,7 @@ msgstr "Livello qualità:"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_yearly_statement__r
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__r
 msgid "R"
-msgstr ""
+msgstr "R"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_report_payslip
@@ -7391,7 +7398,7 @@ msgstr "Conversione in azioni"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_yearly_statement__s
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__s
 msgid "S"
-msgstr ""
+msgstr "S"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_employee__l10n_ch_pre_defined_tax_scale__sfn
@@ -8516,7 +8523,7 @@ msgstr "Data/ora sistema:"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_yearly_statement__t
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__t
 msgid "T"
-msgstr ""
+msgstr "T"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_tax_rate_import_wizard__canton__tg
@@ -9076,7 +9083,7 @@ msgstr "Tipo"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__u
 msgid "U"
-msgstr ""
+msgstr "U"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_lpp_insurance__uid_bfs
@@ -9215,7 +9222,7 @@ msgstr "Uri"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__v
 msgid "V"
-msgstr ""
+msgstr "V"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_tax_rate_import_wizard__canton__vd
@@ -9345,7 +9352,7 @@ msgstr "Partecipazione virtuale"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__w
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.report_company_master_data_document
@@ -9430,13 +9437,13 @@ msgstr "Accordo salariale al di fuori di un contratto collettivo"
 #. odoo-python
 #: code:addons/l10n_ch_hr_payroll_elm_transmission/models/l10n_ch_declaration_yearly_retrospective.py:0
 msgid "Wage_statement_%(year)s_%(name)s_%(timestamp)s"
-msgstr ""
+msgstr "Wage_statement_%(year)s_%(name)s_%(timestamp)s"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #. odoo-python
 #: code:addons/l10n_ch_hr_payroll_elm_transmission/models/l10n_ch_declaration_salary_certificates.py:0
 msgid "Wage_statement_correction_%(year)s_%(name)s_%(timestamp)s"
-msgstr ""
+msgstr "Wage_statement_correction_%(year)s_%(name)s_%(timestamp)s"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.hr_contract_view_form
@@ -9741,13 +9748,13 @@ msgstr "Luogo di lavoro"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__x
 msgid "X"
-msgstr ""
+msgstr "X"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_wage_statement__y
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__y
 msgid "Y"
-msgstr ""
+msgstr "Y"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_ch_yearly_report__year
@@ -9782,7 +9789,7 @@ msgstr "Salario annuale massimo AC"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_social_insurance_view_form
 msgid "Yearly ACC Maximum Salary"
-msgstr "Salario annuale massimo AANP"
+msgstr "Salario annuale massimo AD"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.actions.act_window,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_yearly_retrospective_action
@@ -9885,7 +9892,7 @@ msgstr "La tua richiesta è in fase di elaborazione da parte dell'istituzione"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_accident_group__group_unit__z
 msgid "Z"
-msgstr ""
+msgstr "Z"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_tax_rate_import_wizard__canton__zg
@@ -10016,7 +10023,7 @@ msgstr "indirizzo..."
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.view_l10n_ch_avs_splits_form
 msgid "µ"
-msgstr ""
+msgstr "µ"
 
 #~ msgid "50 %"
 #~ msgstr "50 %"

@@ -5,6 +5,7 @@ from freezegun import freeze_time
 from odoo.addons.l10n_es_reports.tests.common import TestEsAccountReportsCommon
 from odoo import fields
 from odoo.tests import tagged
+from odoo.tests.common import new_test_user
 
 
 @tagged('post_install_l10n', 'post_install', '-at_install')
@@ -26,6 +27,33 @@ class TestBOEGeneration(TestEsAccountReportsCommon):
     @freeze_time('2020-12-22')
     def test_boe_mod_115(self):
         self._check_boe_111_to_303('115')
+
+    @freeze_time('2020-12-22')
+    def test_boe_mod_115_no_company_write_access_required(self):
+        """
+        Generating a mod 115 BOE file should not require write access on res.company.
+        """
+        self._create_invoice(
+            partner_id=self.spanish_partner,
+            invoice_date=fields.Date.today(),
+            invoice_line_ids=[self._prepare_invoice_line(price_unit=10000, tax_ids=self.spanish_test_tax)],
+            post=True,
+        )
+        report = self.env.ref('l10n_es.mod_115')
+        options = self._generate_options(report, fields.Date.from_string('2020-12-01'), fields.Date.from_string('2020-12-31'))
+
+        accountant = new_test_user(self.env, login='accountant_no_settings_access', groups='account.group_account_user')
+        self.assertFalse(accountant.has_group('base.group_erp_manager'), "Test user should not have write access on res.company")
+
+        wizard_model = self.env[report.custom_handler_model_name].with_user(accountant)
+        wizard_action = wizard_model.open_boe_wizard(options, 115)
+        wizard = self.env[wizard_action['res_model']].with_context(wizard_action['context']).with_user(accountant).create({
+            # Mimics the value the web client sends back on save, since the field is
+            # present (albeit invisible) in the wizard view.
+            'company_partner_id': self.env.company.partner_id.id,
+        })
+        options['l10n_es_reports_boe_wizard_id'] = wizard.id
+        self.assertTrue(wizard_model.export_boe(options), "Empty BOE")
 
     @freeze_time('2020-12-22')
     def test_boe_mod_303(self):

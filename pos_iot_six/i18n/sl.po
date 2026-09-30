@@ -1,30 +1,33 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* pos_iot_six
+# * pos_iot_six
 #
 # Translators:
 # Wil Odoo, 2024
 # Aleš Pipan, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Aleš Pipan, 2025\n"
-"Language-Team: Slovenian (https://app.transifex.com/odoo/teams/41243/sl/)\n"
+"PO-Revision-Date: 2026-09-21 16:18+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Slovenian <https://translate.odoo.com/projects/odoo-18/"
+"pos_iot_six/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: pos_iot_six
 #: model_terms:ir.ui.view,arch_db:pos_iot_six.view_add_six_terminal
 msgid "Add Terminal"
-msgstr ""
+msgstr "Dodaj terminal"
 
 #. module: pos_iot_six
 #: model_terms:ir.ui.view,arch_db:pos_iot_six.view_add_six_terminal
@@ -34,7 +37,7 @@ msgstr "Prekliči"
 #. module: pos_iot_six
 #: model:ir.model,name:pos_iot_six.model_pos_iot_six_add_six_terminal
 msgid "Connect a Six Payment Terminal"
-msgstr ""
+msgstr "Poveži plačilni terminal Six"
 
 #. module: pos_iot_six
 #: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__create_uid
@@ -56,12 +59,13 @@ msgstr "Prikazani naziv"
 #: code:addons/pos_iot_six/static/src/js/payment_six.js:0
 msgid "Failed to get balance report from the terminal. Please retry."
 msgstr ""
+"Ni bilo mogoče pridobiti poročila o stanju iz terminala. Poskusite znova."
 
 #. module: pos_iot_six
 #. odoo-javascript
 #: code:addons/pos_iot_six/static/src/js/six_terminal_id_field.xml:0
 msgid "Failed to save Terminal ID to IoT Box"
-msgstr ""
+msgstr "Shranjevanje ID-ja terminala v IoT Box ni uspelo"
 
 #. module: pos_iot_six
 #: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__id
@@ -93,58 +97,58 @@ msgstr "Zadnjič posodobljeno"
 #. odoo-javascript
 #: code:addons/pos_iot_six/static/src/js/six_terminal_id_field.xml:0
 msgid "Must only contain digits"
-msgstr ""
+msgstr "Mora vsebovati samo cifre"
 
 #. module: pos_iot_six
 #. odoo-javascript
 #: code:addons/pos_iot_six/static/src/js/payment_six.js:0
 msgid "No printer configured"
-msgstr ""
+msgstr "Noben tiskalnik ni nastavljen"
 
 #. module: pos_iot_six
 #: model:ir.model,name:pos_iot_six.model_pos_payment_method
 msgid "Point of Sale Payment Methods"
-msgstr ""
+msgstr "Načini plačila prodajne točke"
 
 #. module: pos_iot_six
 #. odoo-javascript
 #: code:addons/pos_iot_six/static/src/js/six_terminal_id_field.xml:0
 msgid "Saved Terminal ID to IoT Box"
-msgstr ""
+msgstr "ID terminala je shranjen v IoT Box"
 
 #. module: pos_iot_six
 #: model_terms:ir.ui.view,arch_db:pos_iot_six.pos_payment_method_view_form_six_iot
 msgid "Setup Six Terminal"
-msgstr ""
+msgstr "Nastavi terminal Six"
 
 #. module: pos_iot_six
 #: model:ir.actions.act_window,name:pos_iot_six.action_add_six_terminal
 #: model_terms:ir.ui.view,arch_db:pos_iot_six.view_add_six_terminal
 msgid "Setup a Six Payment Terminal"
-msgstr ""
+msgstr "Nastavitev plačilnega terminala Six"
 
 #. module: pos_iot_six
 #. odoo-javascript
 #: code:addons/pos_iot_six/static/src/xml/balance_button.xml:0
 msgid "Six Terminal Balance"
-msgstr ""
+msgstr "Stanje terminala Six"
 
 #. module: pos_iot_six
 #: model:ir.model.fields,field_description:pos_iot_six.field_iot_box__six_terminal_id
 #: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__six_terminal_id
 msgid "Six Terminal ID (TID)"
-msgstr ""
+msgstr "ID terminala Six (TID)"
 
 #. module: pos_iot_six
 #. odoo-javascript
 #: code:addons/pos_iot_six/static/src/js/payment_six.js:0
 msgid "Six balance report error"
-msgstr ""
+msgstr "Napaka poročila o stanju Six"
 
 #. module: pos_iot_six
 #: model:ir.model.fields,field_description:pos_iot_six.field_pos_iot_six_add_six_terminal__terminal_device_id
 msgid "Terminal Device"
-msgstr ""
+msgstr "Naprava terminala"
 
 #. module: pos_iot_six
 #: model:ir.model.fields,help:pos_iot_six.field_iot_box__six_terminal_id
@@ -154,11 +158,14 @@ msgid ""
 "you will have to wait several seconds before the terminal will appear in "
 "your device list."
 msgstr ""
+"ID vašega plačilnega terminala Six. Upoštevajte, da boste po vnosu tega "
+"podatka morali počakati nekaj sekund, preden se terminal pojavi na seznamu "
+"naprav."
 
 #. module: pos_iot_six
 #: model:ir.model.fields,help:pos_iot_six.field_pos_iot_six_add_six_terminal__iot_box_id
 msgid "The IoT Box that your Six terminal is connected to."
-msgstr ""
+msgstr "IoT Box, s katerim je vaš terminal Six povezan."
 
 #. module: pos_iot_six
 #. odoo-javascript
@@ -166,3 +173,5 @@ msgstr ""
 msgid ""
 "You must select a printer in your POS config to print Six balance report"
 msgstr ""
+"Za tiskanje poročila o stanju Six morate v nastavitvah prodajne točke "
+"izbrati tiskalnik."

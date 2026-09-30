@@ -222,6 +222,9 @@ class L10nClEdiUtilMixin(models.AbstractModel):
         except requests.exceptions.HTTPError as error:
             self._report_connection_err(MSG_ERROR['status'] % error)
             return None
+        if not response.content:
+            self._report_connection_err(_('Empty response when checking DTE status.'))
+            return None
         return response.json()
 
     def _analyze_sii_result_rest(self, message):

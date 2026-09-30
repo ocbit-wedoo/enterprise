@@ -172,6 +172,58 @@ class TestWorkentryAttendance(HrWorkEntryAttendanceCommon):
         work_entries = self.env['hr.work.entry'].search([('employee_id', '=', self.employee.id)])
         self.assertEqual(len(work_entries), 8)
 
+    def test_attendance_keeps_previous_day_work_entry_link(self):
+        self.contract.resource_calendar_id.tz = 'Australia/Melbourne'
+        # Wednesday, 08:00 to 17:00 in Melbourne
+        previous_attendance = self.env['hr.attendance'].create({
+            'employee_id': self.employee.id,
+            'check_in': datetime(2026, 7, 28, 22, 0),
+            'check_out': datetime(2026, 7, 29, 7, 0),
+        })
+        previous_work_entry = self.contract.generate_work_entries(date(2026, 7, 29), date(2026, 7, 30))
+        self.assertEqual(previous_work_entry.attendance_id, previous_attendance)
+
+        # Thursday, 06:34 in Melbourne is still Wednesday in UTC
+        attendance = self.env['hr.attendance'].create({
+            'employee_id': self.employee.id,
+            'check_in': datetime(2026, 7, 29, 20, 34),
+        })
+        attendance.write({'check_out': datetime(2026, 7, 30, 8, 59)})
+
+        self.assertEqual(previous_work_entry.attendance_id, previous_attendance)
+
+    def test_attendance_batch_keeps_unrelated_work_entry_link(self):
+        self.contract.write({
+            'date_generated_from': datetime(2021, 9, 1, 0, 0),
+            'date_generated_to': datetime(2021, 9, 30, 23, 59, 59),
+        })
+        # Wednesday morning, 08:00 to 10:00 in Brussels
+        middle_attendance = self.env['hr.attendance'].create({
+            'employee_id': self.employee.id,
+            'check_in': datetime(2021, 9, 15, 6, 0),
+            'check_out': datetime(2021, 9, 15, 8, 0),
+        })
+        middle_work_entry = self.env['hr.work.entry'].search([
+            ('attendance_id', '=', middle_attendance.id),
+        ])
+        self.assertTrue(middle_work_entry, 'The attendance should have created a work entry')
+
+        # Monday and Friday of the same week; the Wednesday entry lies in between.
+        self.env['hr.attendance'].create([
+            {
+                'employee_id': self.employee.id,
+                'check_in': datetime(2021, 9, 13, 6, 0),
+                'check_out': datetime(2021, 9, 13, 8, 0),
+            },
+            {
+                'employee_id': self.employee.id,
+                'check_in': datetime(2021, 9, 17, 6, 0),
+                'check_out': datetime(2021, 9, 17, 8, 0),
+            },
+        ])
+
+        self.assertEqual(middle_work_entry.attendance_id, middle_attendance)
+
     def test_unlink(self):
         # Tests that the work entry is archived when unlinking an attendance
         # Makes the attendance create a work entry directly

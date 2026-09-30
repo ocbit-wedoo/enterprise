@@ -53,3 +53,18 @@ class TestAccountOnlineLink(AccountOnlineSynchronizationCommon):
             link_count,
             "No new account online link should have been created since the recordset contains one",
         )
+
+    def test_non_blocking_error_does_not_change_state(self):
+        link = self.account_online_link
+        link.state = 'connected'
+        link._handle_response(
+            {
+                'result': {
+                    'exception_type': 'non_blocking_error',
+                    'message': 'This is a non-blocking error.',
+                },
+            },
+            '',
+            {},
+        )
+        self.assertEqual(link.state, 'connected', "The state should not have changed for a non-blocking error.")

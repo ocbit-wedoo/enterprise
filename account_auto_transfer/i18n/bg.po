@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_auto_transfer
+# * account_auto_transfer
 #
 # Translators:
 # Igor Sheludko <igor.sheludko@gmail.com>, 2024
@@ -9,25 +9,27 @@
 # KeyVillage, 2024
 # Petko Karamotchev, 2024
 # Emil Krastev, 2024
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:43+0000\n"
-"Last-Translator: Emil Krastev, 2024\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-16 17:22+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"account_auto_transfer/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
 msgid "<span> to </span>"
-msgstr ""
+msgstr "<span> до </span>"
 
 #. module: account_auto_transfer
 #: model:ir.model,name:account_auto_transfer.model_account_chart_template
@@ -37,12 +39,12 @@ msgstr "Шаблон за схема на сметката"
 #. module: account_auto_transfer
 #: model:ir.model,name:account_auto_transfer.model_account_transfer_model
 msgid "Account Transfer Model"
-msgstr ""
+msgstr "Модел за прехвърляне между сметки"
 
 #. module: account_auto_transfer
 #: model:ir.model,name:account_auto_transfer.model_account_transfer_model_line
 msgid "Account Transfer Model Line"
-msgstr ""
+msgstr "Ред на модел за прехвърляне между сметки"
 
 #. module: account_auto_transfer
 #: model:ir.actions.server,name:account_auto_transfer.ir_cron_auto_transfer_ir_actions_server
@@ -169,7 +171,7 @@ msgstr "Компания, свързана с този журнал"
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
 msgid "Compute Transfer"
-msgstr ""
+msgstr "Изчисляване на прехвърлянето"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__create_uid
@@ -196,12 +198,12 @@ msgstr "По сметка"
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__line_ids
 msgid "Destination Accounts"
-msgstr ""
+msgstr "Сметки местоназначение"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__journal_id
 msgid "Destination Journal"
-msgstr ""
+msgstr "Дневник на местоназначението"
 
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
@@ -227,12 +229,12 @@ msgstr "Честота"
 #. module: account_auto_transfer
 #: model:ir.actions.act_window,name:account_auto_transfer.generated_transfers_action
 msgid "Generated Entries"
-msgstr ""
+msgstr "Генерирани записи"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__move_ids
 msgid "Generated Moves"
-msgstr ""
+msgstr "Генерирани документи"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__id
@@ -250,7 +252,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_auto_transfer/demo/account_demo.py:0
 msgid "IFRS rent expense transfer"
-msgstr ""
+msgstr "МСФО прехвърляне на разход за наем"
 
 #. module: account_auto_transfer
 #: model:ir.model,name:account_auto_transfer.model_account_journal
@@ -288,17 +290,17 @@ msgstr "Месечно"
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__move_ids_count
 msgid "Move Ids Count"
-msgstr ""
+msgstr "Брой на документите"
 
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
 msgid "Move Model"
-msgstr ""
+msgstr "Модел на документ"
 
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_tree
 msgid "Move Models"
-msgstr ""
+msgstr "Модели на документи"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__name
@@ -308,19 +310,19 @@ msgstr "Име"
 #. module: account_auto_transfer
 #: model:ir.model.constraint,message:account_auto_transfer.constraint_account_transfer_model_line_unique_account_by_transfer_model
 msgid "Only one account occurrence by transfer model"
-msgstr ""
+msgstr "Само едно срещане на сметка в модел за прехвърляне"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__account_ids
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
 msgid "Origin Accounts"
-msgstr ""
+msgstr "Изходни сметки"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_bank_statement_line__transfer_model_id
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_move__transfer_model_id
 msgid "Originating Model"
-msgstr ""
+msgstr "Изходен модел"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model_line__partner_ids
@@ -348,6 +350,8 @@ msgid ""
 "Percentage of the sum of lines from the origin accounts will be transferred "
 "to the destination account"
 msgstr ""
+"Процент от сумата на редовете от изходните сметки, който ще бъде прехвърлен "
+"към сметката местоназначение"
 
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
@@ -382,7 +386,7 @@ msgstr "Област"
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__date_stop
 msgid "Stop Date"
-msgstr ""
+msgstr "Крайна дата"
 
 #. module: account_auto_transfer
 #. odoo-python
@@ -408,7 +412,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_auto_transfer/models/transfer_model.py:0
 msgid "The total percentage (%s) should be less or equal to 100!"
-msgstr ""
+msgstr "Общият процент (%s) трябва да е по-малък или равен на 100!"
 
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model__total_percent
@@ -418,7 +422,7 @@ msgstr "Общо проценти"
 #. module: account_auto_transfer
 #: model:ir.model.fields,field_description:account_auto_transfer.field_account_transfer_model_line__transfer_model_id
 msgid "Transfer Model"
-msgstr ""
+msgstr "Модел за прехвърляне"
 
 #. module: account_auto_transfer
 #: model:ir.ui.menu,name:account_auto_transfer.menu_auto_transfer
@@ -435,7 +439,7 @@ msgstr "Годишно"
 #. odoo-python
 #: code:addons/account_auto_transfer/demo/account_demo.py:0
 msgid "Yearly liabilites auto transfers"
-msgstr ""
+msgstr "Годишни автоматични прехвърляния на пасиви"
 
 #. module: account_auto_transfer
 #. odoo-python
@@ -462,4 +466,4 @@ msgstr ""
 #. module: account_auto_transfer
 #: model_terms:ir.ui.view,arch_db:account_auto_transfer.view_transfer_model_form
 msgid "e.g. Monthly Expense Transfer"
-msgstr ""
+msgstr "напр. Месечно прехвърляне на разходи"

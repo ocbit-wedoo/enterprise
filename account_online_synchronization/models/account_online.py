@@ -20,6 +20,8 @@ from odoo.addons.account_online_synchronization.models.odoofin_auth import OdooF
 from odoo.tools.misc import format_amount, format_date, get_lang
 from odoo.tools import _, LazyTranslate
 
+NON_BLOCKING_ERROR = 'non_blocking_error'
+
 _lt = LazyTranslate(__name__)
 _logger = logging.getLogger(__name__)
 pattern = re.compile("^[a-z0-9-_]+$")
@@ -650,7 +652,10 @@ class AccountOnlineLink(models.Model):
             error_details = error.get('data')
             subject = error.get('message')
             message = error_details.get('message')
-            state = error_details.get('odoofin_state') or 'error'
+            state = error_details.get('odoofin_state')
+            if state is None:
+                # None blocking errors must not change the connection state, anything else is a real error
+                state = self.state if error_details.get('exception_type') == NON_BLOCKING_ERROR else 'error'
             ctx = self.env.context.copy()
             ctx['error_reference'] = error_details.get('error_reference')
             ctx['provider_type'] = error_details.get('provider_type')
@@ -888,9 +893,7 @@ class AccountOnlineLink(models.Model):
                     total = sum([transaction['amount'] for transaction in transactions])
                     statement_lines = self.env['account.bank.statement.line'].with_context(transactions_total=total)._online_sync_bank_statement(sorted_transactions[:100], online_account)
                     online_account.fetching_status = 'planned' if len(transactions) > 100 else 'done'
-                    domain = None
-                    if statement_lines:
-                        domain = [('id', 'in', statement_lines.ids)]
+                    domain = [('id', 'in', statement_lines.ids)]
 
                     duplicates_from_date = get_duplicates_from_date(statement_lines, journal)
                     return self.env['account.bank.statement.line']._action_open_bank_reconciliation_widget(
@@ -952,6 +955,10 @@ class AccountOnlineLink(models.Model):
             # Avoid an infinite "expired synchro" if the provider
             # doesn't send us a new consent expiring date
             self.expiring_synchronization_date = None
+
+    @api.model
+    def _get_institution_data(self):
+        return self._fetch_odoo_fin('/proxy/v1/get_user_institution_data')
 
     def _update_connection_status(self):
         self.ensure_one()

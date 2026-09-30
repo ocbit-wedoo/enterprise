@@ -8,13 +8,14 @@
 # Wil Odoo, 2025
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-03-04 17:23+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:30+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "pos_urban_piper/da/>\n"
 "Language: da\n"
@@ -22,13 +23,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.1\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_urban_piper
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
 msgid " is offline on ."
-msgstr "er offline nu."
+msgstr " er offline nu."
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -66,7 +67,7 @@ msgstr "Fragtformidler (håndteret af platform)"
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_config__name
 msgid "An internal identification of the point of sale."
-msgstr "En intern identifikation af kassen."
+msgstr "En intern identifikator for kassen."
 
 #. module: pos_urban_piper
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
@@ -123,7 +124,7 @@ msgstr "Tjek, om produktet kan leveres som madudbringning."
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_payment_method__is_delivery_payment
 msgid "Check this if this payment method is used for online delivery orders."
-msgstr "Tjek, om denne betalingsform bruges til online leveringsordrer."
+msgstr "Tjek, om denne betalingsform bruges til online ordrer."
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -140,12 +141,12 @@ msgstr "Afslut ordre"
 #. module: pos_urban_piper
 #: model:ir.model.fields.selection,name:pos_urban_piper.selection__pos_order__delivery_status__completed
 msgid "Completed"
-msgstr "Færdiggjort"
+msgstr "Afsluttet"
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -179,7 +180,7 @@ msgstr "Oprettet den"
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
 msgid "Customer Email"
-msgstr "Kunde e-mail"
+msgstr "Kunde-e-mail"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -231,7 +232,7 @@ msgstr "Leveringsdata i JSON-format"
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.js:0
 msgid "Delivery Order Status"
-msgstr "Status for leveringsordre"
+msgstr "Status for ordre"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -264,7 +265,7 @@ msgstr "Leveringsudbydere"
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_rider_json
 msgid "Delivery Rider JSON"
-msgstr "Leveringschaufførens JSON-data"
+msgstr "Leveringschaufførens JSON"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_order__delivery_status
@@ -287,7 +288,7 @@ msgstr "Levering/online"
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.xml:0
 msgid "Details"
-msgstr "Detaljer:"
+msgstr "Detaljer"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -304,7 +305,7 @@ msgstr "Sendt"
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__display_name
 #: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -316,7 +317,7 @@ msgstr "Udført"
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/screens/ticket_screen/ticket_screen.xml:0
 msgid "Edit"
-msgstr "Rediger"
+msgstr "Redigér"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields.selection,name:pos_urban_piper.selection__product_template__urbanpiper_meal_type__3
@@ -339,7 +340,7 @@ msgstr "Der opstod en fejl under opdatering af status."
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/override/store/pos_store.js:0
 msgid "Error to send in preparation display."
-msgstr "Fejl skal sendes til klargøringsvisning."
+msgstr "Fejl skal sendes til klargøringsdisplay."
 
 #. module: pos_urban_piper
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
@@ -349,12 +350,12 @@ msgstr "Udfyld formularen for at få brugernavn og API-nøgle"
 #. module: pos_urban_piper
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
 msgid "Fiscal Position"
-msgstr "Bogføringsgruppe"
+msgstr "Skatteposition"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_fiscal_position_id
 msgid "Fiscal position for Urban Piper sync menu."
-msgstr "Skatteposition for Urban Piper-synkroniseringsmenu."
+msgstr "Skatteposition for UrbanPiper-synkroniseringsmenu."
 
 #. module: pos_urban_piper
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper.res_config_settings_view_form_pos_urban_piper
@@ -449,7 +450,7 @@ msgstr "Er anbefalet"
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_rider_json
 msgid "JSON data of the delivery rider."
-msgstr "Leveringschaufførens JSON-data"
+msgstr "Leveringschaufførens JSON-data."
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_json
@@ -459,7 +460,7 @@ msgstr "Ordrens JSON-data."
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_delivery_provider__journal_code
 msgid "Journal Short Code"
-msgstr "Journalkode"
+msgstr "Journalens korte kode"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_last_sync_date
@@ -495,7 +496,7 @@ msgstr "Markér som klar"
 #: model:ir.model.fields,field_description:pos_urban_piper.field_product_product__urbanpiper_meal_type
 #: model:ir.model.fields,field_description:pos_urban_piper.field_product_template__urbanpiper_meal_type
 msgid "Meal Type"
-msgstr "Måltids Type"
+msgstr "Måltidstype"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -506,7 +507,7 @@ msgstr "Min"
 #. module: pos_urban_piper
 #: model:ir.model.fields.selection,name:pos_urban_piper.selection__product_template__urbanpiper_meal_type__4
 msgid "N/A"
-msgstr "- Ikke angivet -"
+msgstr "Ikke relevant"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -569,7 +570,7 @@ msgstr "Udbydere af onlinelevering"
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
 msgid "Order ID"
-msgstr "Ordre ID"
+msgstr "Ordre-ID"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -593,7 +594,7 @@ msgstr "Ordre status"
 #. odoo-javascript
 #: code:addons/pos_urban_piper/static/src/point_of_sale_overrirde/app/order_info_popup/order_info_popup.js:0
 msgid "Order Time"
-msgstr "Bestillings tidspunkt"
+msgstr "Bestillingstidspunkt"
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -676,32 +677,32 @@ msgstr "POS"
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_pos_category
 msgid "Point of Sale Category"
-msgstr "POS kategori"
+msgstr "POS-kategori"
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_pos_config
 msgid "Point of Sale Configuration"
-msgstr "POS konfiguration"
+msgstr "POS-konfiguration"
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_pos_order
 msgid "Point of Sale Orders"
-msgstr "POS ordrer"
+msgstr "POS-ordrer"
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_pos_payment_method
 msgid "Point of Sale Payment Methods"
-msgstr "Point of Sale betalingsmetoder"
+msgstr "POS-betalingsformer"
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_pos_payment
 msgid "Point of Sale Payments"
-msgstr "Point of Sale betalinger"
+msgstr "POS-betalinger"
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_pos_session
 msgid "Point of Sale Session"
-msgstr "PoS session"
+msgstr "POS-session"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_store_identifier
@@ -739,7 +740,7 @@ msgstr "Prisliste"
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_config__urbanpiper_pricelist_id
 msgid "Pricelist for Urban Piper sync menu."
-msgstr "Prisliste for Urban Piper-synkroniseringsmenu."
+msgstr "Prisliste for UrbanPiper-synkroniseringsmenu."
 
 #. module: pos_urban_piper
 #: model:ir.model,name:pos_urban_piper.model_product_template
@@ -822,8 +823,7 @@ msgstr "Det er ikke muligt at afvise ordre for \"%(providerName)s\""
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_order__delivery_provider_id
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_payment_method__delivery_provider_id
 msgid "Responsible delivery provider for online order, e.g., UberEats, Zomato."
-msgstr ""
-"Ansvarlig leveringspartner ved onlinebestilling, f.eks. UberEats, Zomato."
+msgstr "Ansvarlig leveringspartner ved onlineordre, f.eks. UberEats, Zomato."
 
 #. module: pos_urban_piper
 #. odoo-javascript
@@ -917,7 +917,7 @@ msgstr "Talabat-kort kode"
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_pos_delivery_provider__technical_name
 msgid "Technical name of the provider used by UrbanPiper"
-msgstr "Udbyderens tekniske navn anvendt af UrbanPiper."
+msgstr "Udbyderens tekniske navn anvendt af UrbanPiper"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,help:pos_urban_piper.field_res_config_settings__urbanpiper_apikey
@@ -991,7 +991,7 @@ msgstr "Unik leverings-ID leveret af UrbanPiper."
 #: code:addons/pos_urban_piper/models/pos_config.py:0
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper.product_template_only_form_view_inherit_pos_urban_piper
 msgid "Urban Piper"
-msgstr "Urban Piper"
+msgstr "UrbanPiper"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_product_urban_piper_status__config_id
@@ -1011,7 +1011,7 @@ msgstr "UrbanPiper-placering"
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_store_identifier
 msgid "Urban Piper POS ID"
-msgstr "UrbanPiper-POS-iD"
+msgstr "UrbanPiper-POS-ID"
 
 #. module: pos_urban_piper
 #: model:ir.model.fields,field_description:pos_urban_piper.field_pos_config__urbanpiper_payment_methods_ids

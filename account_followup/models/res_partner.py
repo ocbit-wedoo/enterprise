@@ -285,7 +285,7 @@ class ResPartner(models.Model):
             options = {}
         if not options.get('join_invoices', options.get('followup_line', self.followup_line_id).join_invoices):
             return self.env['account.move']
-        invoices_to_print = self.unreconciled_aml_ids.move_id.filtered(lambda l: l.is_invoice(include_receipts=True))
+        invoices_to_print = self._get_unreconciled_aml_ids().move_id
         if options.get('manual_followup'):
             # For manual reminders, only print invoices with the selected attachments
             return invoices_to_print.filtered(lambda inv: inv.invoice_pdf_report_id.id in options.get('attachment_ids', []))
@@ -664,27 +664,35 @@ class ResPartner(models.Model):
         return invoice_online_payment and payment_method_available
 
     def _compute_has_moves(self):
-        query = self.env['res.partner']._search([('id', 'in', self.ids)])
-        account_move_query = self.env["account.move"]._search(
-            [
-                ("company_id", "in", self.env.companies.ids),
-                "|",
-                ("partner_id", "=", SQL.identifier(query.table, "id")),
-                "|",
-                ("partner_shipping_id", "=", SQL.identifier(query.table, "id")),
-                ("commercial_partner_id", "=", SQL.identifier(query.table, "id")),
-            ]
-        )
-        result = dict(self.env.execute_query(query.select(
-            "id",
-            SQL(
-                "EXISTS (%s) AS has_moves",
-                account_move_query.subselect(SQL.identifier(account_move_query.table, "id")),
-            ),
-        )))
+        self.has_moves = False
+        if not self.ids:
+            return
+        sources = [
+            ('account.move', 'partner_id'),
+            ('account.move.line', 'partner_id'),
+            ('account.move', 'commercial_partner_id'),
+            ('account.move', 'partner_shipping_id'),
+        ]
+        exists_clauses = []
+        for model_name, field_name in sources:
+            query = self.env[model_name]._search([('company_id', 'in', self.env.companies.ids)])
+            # Correlate on the outer partner row.
+            query.add_where(SQL(
+                "%s = %s",
+                self.env[model_name]._field_to_sql(query.table, field_name, query),
+                self.env['res.partner']._field_to_sql('partner', 'id'),
+            ))
+            # `EXISTS` clause to break early once a match has been found. We are not interested in the actual rows, just if they exist.
+            exists_clauses.append(SQL("EXISTS %s", query.subselect(SQL("1"))))
+
+        partner_ids = {partner_id for partner_id, in self.env.execute_query(SQL(
+            "SELECT partner.id FROM unnest(%s::int[]) AS partner(id) WHERE %s",
+            self.ids,
+            SQL(" OR ").join(exists_clauses),
+        ))}
 
         for partner in self:
-            partner.has_moves = result.get(partner.id, False)
+            partner.has_moves = partner.id in partner_ids
 
     def _get_followup_report_pdf(self, options):
         """
@@ -714,3 +722,21 @@ class ResPartner(models.Model):
             'type': 'binary',
             'mimetype': 'application/pdf',
         })
+
+    def _get_attachments_ids(self):
+        self.ensure_one()
+        # `account_no_followup` was added in stable so not all users have it installed even if it's auto_install
+        if 'no_followup' in self.env['account.move.line']:
+            return self.unreconciled_aml_ids.filtered(lambda l: not l.no_followup).move_id.invoice_pdf_report_id
+        return self.unreconciled_aml_ids.move_id.invoice_pdf_report_id
+
+    def _get_unreconciled_aml_ids(self):
+        self.ensure_one()
+        # `account_no_followup` was added in stable so not all users have it installed even if it's auto_install
+        if 'no_followup' in self.env['account.move.line']:
+            return self.unreconciled_aml_ids.filtered(
+                lambda l: not l.no_followup and l.move_id.is_invoice(include_receipts=True)
+            )
+        return self.unreconciled_aml_ids.filtered(
+            lambda l: l.move_id.is_invoice(include_receipts=True)
+        )

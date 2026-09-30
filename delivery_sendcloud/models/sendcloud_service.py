@@ -320,7 +320,7 @@ class SendCloud:
         return list(parcel_items.values())
 
     def _get_house_number(self, address):
-        house_number = re.search(r"(\d+(?:[-\/]?\d+)* ?[a-zA-Z]?\d*)(?![a-zA-Z])", address)
+        house_number = re.search(r"(\d+(?:[-\/.]?\d+)* ?[a-zA-Z]?\d*)(?![a-zA-Z])", address)
         if house_number:
             return house_number.group()
         return ' '

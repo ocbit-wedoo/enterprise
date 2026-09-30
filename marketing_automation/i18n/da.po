@@ -10,13 +10,14 @@
 # Mads Søndergaard, 2025
 # Mads Søndergaard, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-05-17 05:59+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-06-23 12:35+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "marketing_automation/da/>\n"
 "Language: da\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
@@ -59,27 +60,27 @@ msgstr "# Favoritfiltre"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__mass_mailing_count
 msgid "# Mailings"
-msgstr "# Mailinger"
+msgstr "# E-mails"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__total_participant_count
 msgid "# of active and completed participants"
-msgstr "# af aktive og fuldførte deltagere"
+msgstr "# aktive og tidligere deltagere"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__running_participant_count
 msgid "# of active participants"
-msgstr "# af aktive deltagere"
+msgstr "# aktive deltagere"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__completed_participant_count
 msgid "# of completed participants"
-msgstr "# af fuldførte deltagere"
+msgstr "# fuldførte deltagere"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__test_participant_count
 msgid "# of test participants"
-msgstr "# af test deltagere"
+msgstr "# testdeltagere"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
@@ -112,13 +113,13 @@ msgid ""
 "<i class=\"fa fa-clock-o pe-1\" role=\"img\" aria-label=\"Select time\" "
 "title=\"Select time\"/>"
 msgstr ""
-"<i class=\"fa fa-clock-o pe-1\" role=\"img\" aria-label=\"Select time\" "
-"title=\"Select time\"/>"
+"<i class=\"fa fa-clock-o pe-1\" role=\"img\" aria-label=\"Vælg tidspunkt\" "
+"title=\"Vælg tidspunkt\"/>"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "<i class=\"fa fa-envelope-open-o\"/> Not opened within"
-msgstr "<i class=\"fa fa-envelope-open-o\"/> Ikke åbnet indenfor"
+msgstr "<i class=\"fa fa-envelope-open-o\"/> Ikke åbnet inden for"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -128,7 +129,7 @@ msgstr "<i class=\"fa fa-envelope-open-o\"/> Åbnet efter"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "<i class=\"fa fa-exclamation-circle\"/> Bounced after"
-msgstr "<i class=\"fa fa-exclamation-circle\"/> Ikke Leveret efter"
+msgstr "<i class=\"fa fa-exclamation-circle\"/> Ikke leveret efter"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -138,7 +139,7 @@ msgstr "<i class=\"fa fa-hand-pointer-o\"/> Klikket efter"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "<i class=\"fa fa-hand-pointer-o\"/> Not clicked within"
-msgstr "<i class=\"fa fa-hand-pointer-o\"/> Ikke klikket indenfor"
+msgstr "<i class=\"fa fa-hand-pointer-o\"/> Ikke klikket inden for"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -148,12 +149,12 @@ msgstr "<i class=\"fa fa-pie-chart\"/> Detaljer"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "<i class=\"fa fa-plus-circle\"/> Add child activity"
-msgstr "<i class=\"fa fa-plus-circle\"/> Tilføj under aktivitet"
+msgstr "<i class=\"fa fa-plus-circle\"/> Tilføj underaktivitet"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "<i class=\"fa fa-reply\"/> Not replied within"
-msgstr "<i class=\"fa fa-reply\"/> Ikke besvaret indenfor"
+msgstr "<i class=\"fa fa-reply\"/> Ikke besvaret inden for"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -170,8 +171,8 @@ msgid ""
 msgstr ""
 "<i data-trigger-type=\"activity\" class=\"fa fa-code-fork fa-rotate-180 fa-"
 "flip-vertical o_ma_text_processed o_add_child_activity text-success\" "
-"title=\"Add Another Activity\" role=\"img\" aria-label=\"Add Another "
-"Activity\"/>"
+"title=\"Tilføj yderligere aktivitet\" role=\"img\" aria-label=\"Tilføj "
+"yderligere aktivitet\"/>"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
@@ -181,7 +182,7 @@ msgstr "<span class=\"d-inline-block w-25\">efter</span>"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "<span class=\"o_form_label\">Record</span>"
-msgstr "<span class=\"o_form_label\">Datasæt</span>"
+msgstr "<span class=\"o_form_label\">Post</span>"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -218,12 +219,12 @@ msgstr "<span>Fuldført</span>"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_kanban
 msgid "<span>Running</span>"
-msgstr "<span>Afvikles</span>"
+msgstr "<span>Kører</span>"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_kanban
 msgid "<span>Total</span>"
-msgstr "<span>Total</span>"
+msgstr "<span>I alt</span>"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
@@ -237,22 +238,22 @@ msgstr ""
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "<strong>The workflow has been modified!</strong>"
-msgstr "<strong>Workflowet er blevet modificeret!</strong>"
+msgstr "<strong>Workflowet er blevet ændret!</strong>"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__ab_testing_winner_mailing_id
 msgid "A/B Campaign Winner Mailing"
-msgstr "Vindermail fra A/B-kampagnen"
+msgstr "A/B-kampagnens vinder-e-mail"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__ab_testing_mailings_count
 msgid "A/B Test Mailings #"
-msgstr "A/B test mailforsendelser #"
+msgstr "A/B-teste-e-mails #"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__ab_testing_completed
 msgid "A/B Testing Campaign Finished"
-msgstr "A/B Test kampagne afsluttet"
+msgstr "A/B-testkampagne afsluttet"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__trace_ids
@@ -281,7 +282,7 @@ msgstr "Aktivitet"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__activity_domain
 msgid "Activity Filter"
-msgstr "Aktivitet filter"
+msgstr "Aktivitetsfilter"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
@@ -291,7 +292,7 @@ msgstr "Aktivitetsnavn"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__activity_summary
 msgid "Activity Summary"
-msgstr "Aktivitets Opsummering"
+msgstr "Aktivitetsoversigt"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__activity_type
@@ -305,8 +306,8 @@ msgid ""
 "Activity will only be performed if record satisfies this domain, obtained "
 "from the combination of the activity filter and its inherited filter"
 msgstr ""
-"Aktivitet vil kun udføres, hvis datasæt tilfredsstiller dette domæne, "
-"indhentet fra kombinationen af aktivitets filtret og dens nedarvede filtre"
+"Aktivitet vil kun udføres, hvis posten tilfredsstiller dette domæne, "
+"indhentet fra kombinationen af aktivitetsfiltret og dets nedarvede filtre"
 
 #. module: marketing_automation
 #. odoo-python
@@ -318,7 +319,7 @@ msgstr "Tilføj populær kategori"
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Add Tag"
-msgstr "Tilføj Tag"
+msgstr "Tilføj tag"
 
 #. module: marketing_automation
 #. odoo-python
@@ -356,17 +357,17 @@ msgstr "Efter 7 dage"
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_activity__allowed_parent_ids
 msgid "All activities which can be the parent of this one"
-msgstr "Alle aktiviteter som kan være nedarvende for denne"
+msgstr "Alle aktiviteter, som kan være nedarvede fra denne"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__social_post_ids
 msgid "All related social media posts"
-msgstr "Alle relateret social medie indlæg"
+msgstr "Alle relaterede opslag på sociale medier"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__allowed_parent_ids
 msgid "Allowed parents"
-msgstr "Tilladte nedarvende"
+msgstr "Tilladte overordnede"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_campaign__is_auto_campaign
@@ -402,7 +403,7 @@ msgstr ""
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
 msgid "Attach a file"
-msgstr "Vedhæft fil"
+msgstr "Vedhæft en fil"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__is_auto_campaign
@@ -415,8 +416,8 @@ msgid ""
 "Be aware that participants that had no more activities could be reintroduced "
 "into the campaign and new traces could be created for them."
 msgstr ""
-"Vær opmærksom på at deltagere der ikke har nogen aktiviteter, kan "
-"genintroduceres til kampagnen, og nye sporinger kan oprettes for dem."
+"Bemærk, at deltagere uden aktiviteter kan genindføres i kampagnen, og at nye "
+"sporingsposter kan oprettes for dem."
 
 #. module: marketing_automation
 #. odoo-python
@@ -459,7 +460,7 @@ msgstr "Kampagneidentifikator"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__title
 msgid "Campaign Name"
-msgstr "Kampagne navn"
+msgstr "Kampagnenavn"
 
 #. module: marketing_automation
 #: model:ir.actions.act_window,name:marketing_automation.marketing_campaign_action
@@ -476,7 +477,7 @@ msgstr "Annullér"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
 msgid "Cancel after"
-msgstr "Annuller efter"
+msgstr "Annullér efter"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_trace__state__canceled
@@ -509,7 +510,7 @@ msgstr ""
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__child_ids
 msgid "Child Activities"
-msgstr "Under aktiviteter"
+msgstr "Underordnede aktiviteter"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -525,7 +526,7 @@ msgstr "Klik"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__color
 msgid "Color Index"
-msgstr "Farve index"
+msgstr "Farveindeks"
 
 #. module: marketing_automation
 #: model_terms:ir.actions.act_window,help:marketing_automation.marketing_participants_action_reporting
@@ -540,14 +541,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Commercial prospection"
-msgstr "Kommerciel efterforskning"
+msgstr "Kundehvervning"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_participant__state__completed
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_trace_view_search
 msgid "Completed"
-msgstr "Færdiggjort"
+msgstr "Afsluttet"
 
 #. module: marketing_automation
 #: model:ir.ui.menu,name:marketing_automation.marketing_automation_menu_configuration
@@ -620,7 +621,7 @@ msgstr "Oprettet den"
 #: model:ir.model.fields,help:marketing_automation.field_marketing_campaign__ab_testing_schedule_datetime
 msgid ""
 "Date that will be used to know when to determine and send the winner mailing"
-msgstr "Dato der vil blive anvendt til at fastslå og sende vinderforsendelsen"
+msgstr "Dato, der bruges til at fastsætte og sende vinderforsendelsen"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__interval_type__days
@@ -631,7 +632,7 @@ msgstr "Dage"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_type
 msgid "Delay Type"
-msgstr "Forsinkelses type"
+msgstr "Forsinkelsestype"
 
 #. module: marketing_automation
 #. odoo-javascript
@@ -658,7 +659,7 @@ msgstr "Udarbejd din egen marketingkampagne helt fra bunden."
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__child_ids
 msgid "Direct child traces"
-msgstr "Diriger under sporinger"
+msgstr "Spor direkte underordnede"
 
 #. module: marketing_automation
 #. odoo-javascript
@@ -673,12 +674,12 @@ msgstr "Kassér"
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__display_name
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__res_id
 msgid "Document ID"
-msgstr "Dokument ID"
+msgstr "Dokument-ID"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
@@ -688,12 +689,12 @@ msgstr "Domæne"
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_activity__activity_domain
 msgid "Domain that applies to this activity and its child activities"
-msgstr "Domæne der anvendes på denne aktivitet og dens under aktiviteter"
+msgstr "Domæne, der gælder for denne aktivitet og alle dens underaktiviteter"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Don't update"
-msgstr "Opdater ikke"
+msgstr "Opdatér ikke"
 
 #. module: marketing_automation
 #. odoo-python
@@ -718,13 +719,13 @@ msgstr "E-mail annulleret"
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_mail_compose_message
 msgid "Email composition wizard"
-msgstr "Guide til at oprette e-mail"
+msgstr "Assistent til at oprette e-mail"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Email failed"
-msgstr "Mail slog fejl"
+msgstr "E-mail mislykkedes"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_trace__state__error
@@ -734,7 +735,7 @@ msgstr "Fejl"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__state_msg
 msgid "Error message"
-msgstr "Fejl besked"
+msgstr "Fejlmelding"
 
 #. module: marketing_automation
 #. odoo-python
@@ -745,14 +746,20 @@ msgstr "Fejl! Du kan ikke oprette et rekursivt hierarki af aktiviteten."
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
+msgid "Error! You can't modify the hierarchy of an active Activity."
+msgstr "Fejl! Du kan ikke ændre hierarkiet for en aktiv aktivitet."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Exception in mass mailing: %s"
-msgstr "Undtagelse i masseforsendelser: %s"
+msgstr "Undtagelse i masseforsendelse: %s"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Exception in server action: %s"
-msgstr "Undtagelse i server handling: %s"
+msgstr "Undtagelse i serverhandling: %s"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
@@ -763,22 +770,22 @@ msgstr "Udeluk test"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
 msgid "Expiry Duration"
-msgstr "Udløbs varighed"
+msgstr "Gyldighedsperiode"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__mailing_filter_id
 msgid "Favorite Filter"
-msgstr "Foretrukne filtre"
+msgstr "Favoritfilter"
 
 #. module: marketing_automation
 #: model:ir.ui.menu,name:marketing_automation.mailing_filter_menu_action_marketing_automaion
 msgid "Favorite Filters"
-msgstr "Favorit filtrer"
+msgstr "Favoritfiltre"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__mailing_filter_domain
 msgid "Favorite filter domain"
-msgstr "Foretrukket filterdomæne"
+msgstr "Favoritfilterdomæne"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__domain
@@ -793,7 +800,7 @@ msgstr "Generér deltagere"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Generate participants"
-msgstr "Generer deltagere"
+msgstr "Generér deltagere"
 
 #. module: marketing_automation
 #. odoo-python
@@ -839,13 +846,13 @@ msgstr "Er e-mailkampagnen aktiveret"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "It will be generated automatically once you save this record."
-msgstr "Den vil blive genereret automatisk når du har gemt dette datasæt."
+msgstr "Den vil blive genereret automatisk, når du har gemt denne post."
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Join partnership!"
-msgstr "Deltag i partnerskab!"
+msgstr "Tilmeld dig partnerskabet!"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__write_uid
@@ -868,40 +875,40 @@ msgstr "Sidst opdateret den"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__last_sync_date
 msgid "Last activities synchronization"
-msgstr "Seneste aktiviteter synkronisering"
+msgstr "Seneste synkronisering af aktiviteterne"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_test_view_form
 msgid "Launch"
-msgstr "Udgiv"
+msgstr "Start"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/wizard/marketing_campaign_test.py:0
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Launch a Test"
-msgstr "Påbegynd en test"
+msgstr "Start en test"
 
 #. module: marketing_automation
 #: model:ir.actions.act_window,name:marketing_automation.marketing_campaign_test_action
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_test_view_form
 msgid "Launch a test"
-msgstr "Påbegynd en test"
+msgstr "Start en test"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__crm_lead_count
 msgid "Leads/Opportunities count"
-msgstr "Antal Kundeemner/Muligheder"
+msgstr "Antal leads/salgsmuligheder"
 
 #. module: marketing_automation
 #: model:ir.actions.act_window,name:marketing_automation.link_tracker_action_marketing_campaign
 msgid "Link Statistics"
-msgstr "Link statstikker"
+msgstr "Linkstatstikker"
 
 #. module: marketing_automation
 #: model:ir.ui.menu,name:marketing_automation.link_tracker_menu_reporting_marketing_automation
 msgid "Link Tracker"
-msgstr "Sporing af link"
+msgstr "Linktracker"
 
 #. module: marketing_automation
 #: model_terms:ir.actions.act_window,help:marketing_automation.link_tracker_action_marketing_campaign
@@ -920,74 +927,74 @@ msgstr "Dato og klokkeslæt for klik på links"
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_category__email
 msgid "Mail"
-msgstr "Mail"
+msgstr "E-mail"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_automation
 msgid "Mail Body"
-msgstr "Mail krop"
+msgstr "E-mailtekst"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
 msgid "Mail Template"
-msgstr "Mailskabelon"
+msgstr "E-mailskabelon"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_bounce
 msgid "Mail: bounced"
-msgstr "Mail: returneret"
+msgstr "E-mail: ikke leveret"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_click
 msgid "Mail: clicked"
-msgstr "Mail: Klikket"
+msgstr "E-mail: klikket"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_not_click
 msgid "Mail: not clicked"
-msgstr "Mail: Ikke klikket"
+msgstr "E-mail: ikke klikket"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_not_open
 msgid "Mail: not opened"
-msgstr "Mail: ikke åbnet"
+msgstr "E-mail: ikke åbnet"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_not_reply
 msgid "Mail: not replied"
-msgstr "Mail: ikke svaret"
+msgstr "E-mail: ikke svaret"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_open
 msgid "Mail: opened"
-msgstr "Mail: åbnet"
+msgstr "E-mail: åbnet"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__mail_reply
 msgid "Mail: replied"
-msgstr "Mail: Besvaret"
+msgstr "E-mail: besvaret"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
 msgid "Mailing"
-msgstr "Mailing"
+msgstr "E-mail"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_mailing_trace
 msgid "Mailing Statistics"
-msgstr "Mailing statistikker"
+msgstr "E-mailstatistikker"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__mass_mailing_id_mailing_type
 msgid "Mailing Type"
-msgstr "Mailing type"
+msgstr "E-mailtype"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_tree
 msgid "Mailings"
-msgstr "Udsendelser"
+msgstr "E-mail"
 
 #. module: marketing_automation
 #. odoo-python
@@ -1002,7 +1009,7 @@ msgstr ""
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Mails sent and not bounced"
-msgstr "Mails afsendt og ikke afvist"
+msgstr "E-mails afsendt og ikke afvist"
 
 #. module: marketing_automation
 #. odoo-python
@@ -1014,45 +1021,45 @@ msgstr "Manuelt"
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_participant.py:0
 msgid "Marked as completed"
-msgstr "Markeret som fuldført"
+msgstr "Markeret som udført"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Marketing"
-msgstr "Markedsføring"
+msgstr "Marketing"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_mailing_mailing__marketing_activity_ids
 msgid "Marketing Activities"
-msgstr "Marketing aktiviteter"
+msgstr "Marketingaktiviteter"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_marketing_activity
 #: model:ir.model.fields,field_description:marketing_automation.field_mail_compose_message__marketing_activity_id
 msgid "Marketing Activity"
-msgstr "Marketing aktivitet"
+msgstr "Marketingaktivitet"
 
 #. module: marketing_automation
 #: model:ir.module.category,name:marketing_automation.module_marketing_automation_category
 #: model:ir.ui.menu,name:marketing_automation.marketing_automation_menu
 msgid "Marketing Automation"
-msgstr "Marketing automatisering"
+msgstr "Marketingautomatisering"
 
 #. module: marketing_automation
 #: model:ir.actions.act_window,name:marketing_automation.mail_mass_mailing_action_marketing_automation
 msgid "Marketing Automation Mailings"
-msgstr "Marketing automatisering mailinger"
+msgstr "Marketingautomatisering via e-mail"
 
 #. module: marketing_automation
 #: model:ir.actions.server,name:marketing_automation.ir_cron_campaign_execute_activities_ir_actions_server
 msgid "Marketing Automation: execute activities"
-msgstr "Marketing automatisering: udfør aktiviteter"
+msgstr "Marketingautomatisering: Udfør aktiviteter"
 
 #. module: marketing_automation
 #: model:ir.actions.server,name:marketing_automation.ir_cron_campaign_sync_participants_ir_actions_server
 msgid "Marketing Automation: sync participants"
-msgstr "Marketing automatisering: synkroniser deltagere"
+msgstr "Marketingautomatisering: Synkronisér deltagere"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_marketing_campaign
@@ -1062,23 +1069,23 @@ msgstr "Marketingkampagne"
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_marketing_campaign_test
 msgid "Marketing Campaign: Launch a Test"
-msgstr "Marketing kampagne: Påbegynd en test"
+msgstr "Marketingkampagne: Start en test"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_marketing_participant
 msgid "Marketing Participant"
-msgstr "Marketing deltager"
+msgstr "Marketingdeltager"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__mass_mailing_id
 msgid "Marketing Template"
-msgstr "Marketing skabelon"
+msgstr "Marketingskabelon"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_marketing_trace
 #: model:ir.model.fields,field_description:marketing_automation.field_mailing_trace__marketing_trace_id
 msgid "Marketing Trace"
-msgstr "Marketing spor"
+msgstr "Marketingopfølgning"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_mailing_mailing__use_in_marketing_automation
@@ -1086,35 +1093,35 @@ msgid ""
 "Marketing campaigns use mass mailings with some specific behavior; this "
 "field is used to indicate its statistics may be suspicious."
 msgstr ""
-"Marketing kampagner anvender masse mailinger med en specifik opførsel; dette "
-"felt bruges til at indikere at dets statistikker kan være mistænkelige."
+"Marketingkampagner anvender masseforsendelser med en bestemt adfærd. Dette "
+"felt angiver, at statistikkerne kan være usikre."
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_mailing_mailing
 msgid "Mass Mailing"
-msgstr "Mailudsendelse"
+msgstr "Masseforsendelse"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_mailing_trace_report
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_trace_view_form
 msgid "Mass Mailing Statistics"
-msgstr "Statistikker for mailudsendelser"
+msgstr "Statistikker for masseforsendelser"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__mailing_mail_ids
 msgid "Mass Mailings"
-msgstr "Mailudsendelser"
+msgstr "Masseforsendelser"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__mailing_trace_ids
 msgid "Mass mailing statistics"
-msgstr "Masse mailing statistikker"
+msgstr "Statistikker for masseforsendelser"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Message for sales person"
-msgstr "Besked til salgs personale"
+msgstr "Besked til salgspersonale"
 
 #. module: marketing_automation
 #. odoo-python
@@ -1134,7 +1141,7 @@ msgstr "Model"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.ir_model_view_tree_marketing
 msgid "Model Description"
-msgstr "Model beskrivelse"
+msgstr "Modelbeskrivelse"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__model_name
@@ -1220,26 +1227,36 @@ msgstr "Ikke besvaret endnu"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__mailing_mail_count
 msgid "Number of Mass Mailing"
-msgstr "Antal af masse mailing"
+msgstr "Antal masseforsendelser"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__click_count
 msgid "Number of clicks generated by the campaign"
-msgstr "Antal klik genereret af denne kampagne"
+msgstr "Antal klik genereret af kampagnen"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__social_engagement
 msgid ""
 "Number of interactions (likes, shares, comments ...) with the social posts"
 msgstr ""
-"Antal interaktioner (synes om, delinger, kommentarer ...) med de sociale "
-"indlæg"
+"Antal interaktioner (synes godt om, delinger, kommentarer osv.) med opslag "
+"på sociale medier"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Offer free catalog"
 msgstr "Tilbyd gratis katalog"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/mailing_mailing.py:0
+msgid ""
+"Oops! You can't retry sending emails from inside a Marketing Automation "
+"campaign."
+msgstr ""
+"Ups! Du kan ikke forsøge at sende e-mails igen fra en automatiseret "
+"marketingkampagne."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1249,7 +1266,7 @@ msgstr "Åbnet"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__opened_ratio
 msgid "Opened Ratio"
-msgstr "Åbnet forhold"
+msgstr "Åbningsprocent"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
@@ -1271,25 +1288,25 @@ msgstr "Overordnet"
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_trace.py:0
 msgid "Parent activity mail bounced"
-msgstr "Oprindelig aktivitet mail afvist"
+msgstr "Oprindelig aktivitetsmail blev afvist"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_trace.py:0
 msgid "Parent activity mail clicked"
-msgstr "Oprindelig aktivitet mail klikket"
+msgstr "Oprindelig aktivitetsmail blev klikket"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_trace.py:0
 msgid "Parent activity mail opened"
-msgstr "Oprindelig aktivitet mail åbnet"
+msgstr "Oprindelig aktivitetsmail åbnet"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_trace.py:0
 msgid "Parent activity mail replied"
-msgstr "Oprindelig aktivitet mail besvaret"
+msgstr "Oprindelig aktivitetsmail besvaret"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__participant_id
@@ -1302,13 +1319,13 @@ msgstr "Deltager"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_tree
 msgid "Participant Name"
-msgstr "Deltager navn"
+msgstr "Deltagernavn"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_graph
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_pivot
 msgid "Participant summary"
-msgstr "Deltager opsummering"
+msgstr "Deltageroversigt"
 
 #. module: marketing_automation
 #: model:ir.actions.act_window,name:marketing_automation.marketing_participant_action_campaign
@@ -1327,7 +1344,7 @@ msgstr "Deltagere"
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Participants of %(activity)s (%(filter)s)"
-msgstr "Deltagere af  %(activity)s (%(filter)s)"
+msgstr "Deltagere %(activity)s (%(filter)s)"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
@@ -1363,31 +1380,31 @@ msgstr "AFVIST"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__received_ratio
 msgid "Received Ratio"
-msgstr "Modtaget mængde"
+msgstr "Modtageprocent"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign_test__resource_ref
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__resource_ref
 msgid "Record"
-msgstr "Datasæt"
+msgstr "Post"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign_test__res_id
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__res_id
 msgid "Record ID"
-msgstr "Datasæt ID"
+msgstr "Post-ID"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_participant.py:0
 msgid "Record deleted"
-msgstr "Datasæt slettet"
+msgstr "Post slettet"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign_test__model_name
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__model_name
 msgid "Record model"
-msgstr "Datasæt model"
+msgstr "Postmodel"
 
 #. module: marketing_automation
 #. odoo-python
@@ -1401,7 +1418,7 @@ msgstr "Afvist"
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Rejected by activity filter or record deleted / archived"
-msgstr "Afvist af aktivitets filter eller datasæt slettet / arkiveret"
+msgstr "Afvist af aktivitetsfilter eller slettet/arkiveret post"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1421,7 +1438,7 @@ msgstr "Fjernet"
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_participant__state
 msgid "Removed means the related record does not exist anymore."
-msgstr "Fjernet betyder, at det relaterede datasæt ikke længere eksistere."
+msgstr "\"Fjernet\" betyder, at den relaterede post ikke længere eksisterer."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1431,7 +1448,7 @@ msgstr "Besvaret"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__replied_ratio
 msgid "Replied Ratio"
-msgstr "Besvaret forhold"
+msgstr "Svarprocent"
 
 #. module: marketing_automation
 #: model:ir.ui.menu,name:marketing_automation.marketing_automation_reporting_menu
@@ -1441,12 +1458,12 @@ msgstr "Rapportering"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__require_sync
 msgid "Require trace sync"
-msgstr "Kræver spor synkronisering"
+msgstr "Anmod om synkronisering af tracking"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "Resource ID"
-msgstr "Ressource ID"
+msgstr "Ressource-ID"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_search
@@ -1488,12 +1505,12 @@ msgstr "Kører"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "SUCCESS"
-msgstr "SUCCES"
+msgstr "VELLYKKET"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__schedule_date
 msgid "Schedule Date"
-msgstr "Planlæg dato"
+msgstr "Planlagt dato"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_trace__state__scheduled
@@ -1518,7 +1535,7 @@ msgstr "Søg sporinger"
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_campaign__ab_testing_winner_selection
 msgid "Selection to determine the winner mailing that will be sent."
-msgstr "Udvalg til at afgøre vinderforsendelsen, der vil blive sendt."
+msgstr "Udvælgelse af vinderudsendelse til afsendelse."
 
 #. module: marketing_automation
 #. odoo-python
@@ -1585,12 +1602,12 @@ msgstr "Sendt"
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__server_action_id
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__activity_type__action
 msgid "Server Action"
-msgstr "Server handling"
+msgstr "Serverhandling"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__social_posts_count
 msgid "Social Media Posts"
-msgstr "Sociale medie posteringer"
+msgstr "Opslag på sociale medier"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1598,8 +1615,8 @@ msgid ""
 "Some participants are already running on this campaign. Click on 'Update' to "
 "apply the modifications you've just made."
 msgstr ""
-"Visse deltagere afvikler allerede denne kampagne. Klik på 'Opdater' for at "
-"avende modificeringerne du lige har foretaget."
+"Visse deltagere har allerede startet denne kampagne. Klik på 'Opdatér' for "
+"at anvende de ændringer, du lige har foretaget."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__source_id
@@ -1609,7 +1626,7 @@ msgstr "Kilde"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_mailing_mailing__use_in_marketing_automation
 msgid "Specific mailing used in marketing campaign"
-msgstr "Specifik mailing brugt i marketing kampagne"
+msgstr "Specifik e-mail brugt i marketingkampagne"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__stage_id
@@ -1643,7 +1660,7 @@ msgstr "Status: #{record.state.raw_value}"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__statistics_graph_data
 msgid "Statistics Graph Data"
-msgstr "Statistikker graf data"
+msgstr "Data fra statistikdiagrammer"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__mailing_trace_status
@@ -1675,9 +1692,8 @@ msgid ""
 "Switching Target Model invalidates the existing activities. Either update "
 "your activity actions to match the new Target Model or delete them."
 msgstr ""
-"Skiftning af Mål-model invaliderer eksisterende. Enten opdater din "
-"aktivitets handlinger til at stemme overens med den nye Målmodel, eller slet "
-"dem."
+"Ændring af målmodel invaliderer eksisterende data. Opdatér enten dine "
+"aktivitetshandlinger, så de passer til den nye målmodel, eller slet dem."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__require_sync
@@ -1705,7 +1721,7 @@ msgstr "Mål"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_tree
 msgid "Target Model"
-msgstr "Mål model"
+msgstr "Målmodel"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1720,17 +1736,17 @@ msgstr "Test"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_participant__is_test
 msgid "Test Record"
-msgstr "Test datasæt"
+msgstr "Testpost"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__is_test
 msgid "Test Trace"
-msgstr "Test spor"
+msgstr "Test af opfølgninger"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Tests"
-msgstr "Test"
+msgstr "Tests"
 
 #. module: marketing_automation
 #. odoo-python
@@ -1756,33 +1772,33 @@ msgid ""
 "To use this feature you should be an administrator or belong to the "
 "marketing automation group."
 msgstr ""
-"For at bruge denne funktion skal du være administrator, eller tilhøre "
-"marketing automatiserings gruppen."
+"For at bruge denne funktion skal du være administrator eller medlem af "
+"marketingautomatiseringsgruppen."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_bounce
 msgid "Total Bounce"
-msgstr "Samlet afvisninger"
+msgstr "Samlet antal afviste"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_click
 msgid "Total Click"
-msgstr "Total antal klik"
+msgstr "Samlet antal klik"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_open
 msgid "Total Open"
-msgstr "Samlet åbnet"
+msgstr "Samlet antal åbnet"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_reply
 msgid "Total Reply"
-msgstr "Total antal svar"
+msgstr "Samlet antal svar"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_sent
 msgid "Total Sent"
-msgstr "Total sendt"
+msgstr "Samlet antal sendt"
 
 #. module: marketing_automation
 #: model:ir.actions.act_window,name:marketing_automation.marketing_trace_action
@@ -1790,35 +1806,35 @@ msgstr "Total sendt"
 #: model:ir.ui.menu,name:marketing_automation.marketing_trace_menu
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_trace_view_tree
 msgid "Traces"
-msgstr "Sporinger"
+msgstr "Opfølgninger"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
 msgid "Trigger"
-msgstr "Trigger"
+msgstr "Udløser"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__trigger_category
 msgid "Trigger Category"
-msgstr "Udløser Kategori"
+msgstr "Udløserkategori"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__trigger_type
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__trigger_type
 msgid "Trigger Type"
-msgstr "Udløsnings type"
+msgstr "Udløsertype"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_utm_campaign
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__utm_campaign_id
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__utm_campaign_id
 msgid "UTM Campaign"
-msgstr "UTM Kampagne"
+msgstr "UTM-kampagne"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_utm_source
 msgid "UTM Source"
-msgstr "UTM kilde"
+msgstr "UTM-kilde"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1833,12 +1849,12 @@ msgstr "Unikt felt"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Update"
-msgstr "Opdater"
+msgstr "Opdatér"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__use_leads
 msgid "Use Leads"
-msgstr "Brug Leads"
+msgstr "Brug leads"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_campaign__unique_field_id
@@ -1848,10 +1864,10 @@ msgid ""
 "                For model 'Customers', select email field here if you don't\n"
 "                want to process records which have the same email address"
 msgstr ""
-"Anvendes til at undgå duplikeringer baseret på model felt.\n"
+"Bruges til at undgå duplikater baseret på et felt i modellen.\n"
 "f.eks.\n"
-"                 For model 'Kunder', vælg mail felt her hvis du ikke\n"
-"                 vil behandle datasæt, som har samme email adresse"
+"                 For modellen ‘Kunder’ vælg e-mailfeltet her, hvis du ikke\n"
+"                 vil behandle poster med samme e-mailadresse"
 
 #. module: marketing_automation
 #: model:res.groups,name:marketing_automation.group_marketing_automation_user
@@ -1861,17 +1877,17 @@ msgstr "Bruger"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__validity_duration_number
 msgid "Valid during"
-msgstr "Gyldig under"
+msgstr "Gælder i perioden"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__validity_duration
 msgid "Validity Duration"
-msgstr "Gyldig i"
+msgstr "Gyldighedsperiode"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__validity_duration_type
 msgid "Validity Duration Type"
-msgstr "Gyldighed varighed type"
+msgstr "Gyldighedsperiodetype"
 
 #. module: marketing_automation
 #. odoo-python
@@ -1900,13 +1916,13 @@ msgstr "Velkommen!"
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__ab_testing_winner_selection
 msgid "Winner Selection"
-msgstr "Valg af vinder"
+msgstr "Vinderudvælgelse"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "Workflow"
-msgstr "Arbejdsgang"
+msgstr "Workflow"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
@@ -1922,10 +1938,10 @@ msgid ""
 "(trigger_type)s\"\n"
 "Please modify one of those activities before saving."
 msgstr ""
-"Du prøver at angive aktiviteten \"%(parent_activity)s\" som \"%"
-"(parent_type)s\", imens dens nedarver \"%(activity)s\" har udløsningstypen "
-"\"%(trigger_type)s\"\n"
-"Vær venlig at redigere en af disse aktiviteter før du gemmer."
+"Du forsøger at angive aktiviteten \"%(parent_activity)s\" som \"%"
+"(parent_type)s\", mens dens underordnede \"%(activity)s\" har udløsertypen "
+"\"%(trigger_type)s\".\n"
+"Redigér venligst en af aktiviteterne, før du gemmer."
 
 #. module: marketing_automation
 #. odoo-python
@@ -1955,7 +1971,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "You must set up at least one activity to start this campaign."
-msgstr "Du skal oprette mindst én aktivitet for at påbegynde denne kampagne."
+msgstr "Du skal oprette mindst én aktivitet for at starte denne kampagne."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
@@ -2022,7 +2038,7 @@ msgstr "f.eks. \"Brandon Freeman\""
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
 msgid "e.g. eCommerce Offers"
-msgstr "f.eks. eHandel tilbud"
+msgstr "f.eks. e-handelstilbud"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form

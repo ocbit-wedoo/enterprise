@@ -1,24 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* social_facebook
+# * social_facebook
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-19 18:22+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"social_facebook/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
@@ -28,12 +31,12 @@ msgstr "<b class=\"d-block mb-2\">صفحه فیس‌بوک</b>"
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-comments me-1\" title=\"نظرات\"/>"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_live_post__facebook_post_id
 msgid "Actual Facebook ID of the post"
-msgstr ""
+msgstr "شناسه (ID) پست فیسبوک"
 
 #. module: social_facebook
 #. odoo-python
@@ -56,7 +59,7 @@ msgstr "رمز اپلیکیشن"
 #: code:addons/social_facebook/static/src/xml/social_facebook_templates.xml:0
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "Author Image"
-msgstr ""
+msgstr "تصویر مؤلف"
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_res_config_settings__facebook_use_own_account
@@ -64,6 +67,8 @@ msgid ""
 "Check this if you want to use your personal Facebook Developer Account "
 "instead of the provided one."
 msgstr ""
+"در صورتی که می‌خواهید از حساب توسعه‌دهنده فیسبوک شخصی خود به جای حساب ارائه "
+"شده استفاده کنید، این گزینه را فعال کنید."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_comments_count
@@ -79,7 +84,7 @@ msgstr "تنظیمات پیکربندی"
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__display_facebook_preview
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__display_facebook_preview
 msgid "Display Facebook Preview"
-msgstr ""
+msgstr "نمایش پیش‌نمایش فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields.selection,name:social_facebook.selection__social_media__media_type__facebook
@@ -91,50 +96,50 @@ msgstr "فیسبوک"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_account__facebook_access_token
 msgid "Facebook Access Token"
-msgstr ""
+msgstr "توکن دسترسی فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_account__facebook_account_id
 msgid "Facebook Account ID"
-msgstr ""
+msgstr "شناسه (ID) حساب فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_res_config_settings__facebook_app_id
 msgid "Facebook App ID"
-msgstr ""
+msgstr "شناسه (ID) برنامه فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_res_config_settings__facebook_client_secret
 msgid "Facebook App Secret"
-msgstr ""
+msgstr "رمز (Secret) برنامه فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_author_id
 msgid "Facebook Author ID"
-msgstr ""
+msgstr "شناسه (ID) نویسنده فیسبوک"
 
 #. module: social_facebook
 #. odoo-javascript
 #: code:addons/social_facebook/static/src/js/stream_post_kanban_record.js:0
 msgid "Facebook Comments"
-msgstr ""
+msgstr "نظرات فیسبوک"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.res_config_settings_view_form
 msgid "Facebook Developer Account"
-msgstr ""
+msgstr "حساب توسعه‌دهنده فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__facebook_image_ids
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__facebook_image_ids
 msgid "Facebook Images"
-msgstr ""
+msgstr "تصاویر فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__facebook_message
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__facebook_message
 msgid "Facebook Message"
-msgstr ""
+msgstr "پیام فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_account__facebook_access_token
@@ -144,6 +149,10 @@ msgid ""
 "            It's used to authenticate requests when posting to or reading "
 "information from this account."
 msgstr ""
+"توکن دسترسی به فیسبوک که از طریق API فیسبوک ارائه شده است، هرگز نباید به "
+"صورت دستی تنظیم شود.\n"
+"             این گزینه برای تأیید اعتبار درخواست‌ها هنگام ارسال یا خواندن "
+"اطلاعات از حساب استفاده می‌شود."
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_account__facebook_account_id
@@ -151,35 +160,37 @@ msgid ""
 "Facebook Page ID provided by the Facebook API, this should never be set "
 "manually."
 msgstr ""
+"شناسه (ID) صفحه فیسبوک که از طریق API فیسبوک ارائه شده است، هرگز نباید به "
+"صورت دستی تنظیم شود."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_post_id
 msgid "Facebook Post ID"
-msgstr ""
+msgstr "شناسه (ID) پست فیسبوک"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__facebook_preview
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__facebook_preview
 msgid "Facebook Preview"
-msgstr ""
+msgstr "پیش‌نمایش فیسبوک"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Facebook did not provide a valid access token or it may have expired."
-msgstr ""
+msgstr "فیسبوک توکن دسترسی معتبری ارائه نکرده یا احتمالاً منقضی شده است."
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Facebook did not provide a valid access token."
-msgstr ""
+msgstr "فیسبوک توکن دسترسی معتبری ارائه نکرده است."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_post__has_facebook_account
 #: model:ir.model.fields,field_description:social_facebook.field_social_post_template__has_facebook_account
 msgid "Has Facebook Account"
-msgstr ""
+msgstr "دارای حساب فیسبوک است"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_post_template_view_form
@@ -189,7 +200,7 @@ msgstr "تصاویر"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_is_event_post
 msgid "Is event post"
-msgstr ""
+msgstr "پست رویداد است"
 
 #. module: social_facebook
 #. odoo-javascript
@@ -206,7 +217,7 @@ msgstr "پسندها"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_media__media_type
 msgid "Media Type"
-msgstr ""
+msgstr "نوع رسانه"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_post_template_view_form
@@ -216,24 +227,24 @@ msgstr "پیام"
 #. module: social_facebook
 #: model:social.stream.type,name:social_facebook.stream_type_page_mentions
 msgid "Page Mentions"
-msgstr ""
+msgstr "منشن‌های صفحه"
 
 #. module: social_facebook
 #: model:social.stream.type,name:social_facebook.stream_type_page_posts
 msgid "Page Posts"
-msgstr ""
+msgstr "پست‌های صفحه"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/models/social_post_template.py:0
 msgid ""
 "Please specify either a Facebook Message or upload some Facebook Images."
-msgstr ""
+msgstr "لطفاً یک پیام فیسبوک مشخص کنید یا تصاویری از فیسبوک بارگذاری کنید."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
 msgid "Post Image"
-msgstr ""
+msgstr "تصویر پست"
 
 #. module: social_facebook
 #. odoo-python
@@ -241,28 +252,28 @@ msgstr ""
 msgid ""
 "Post not found. It could be because the post has been deleted on the Social "
 "Platform."
-msgstr ""
+msgstr "پست یافت نشد. ممکن است علت آن حذف پست در پلتفرم رسانه اجتماعی باشد."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview
 msgid "Published by Facebook Page •"
-msgstr ""
+msgstr "منتشر شده از طریق صفحه فیسبوک •"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_reach
 msgid "Reach"
-msgstr ""
+msgstr "دامنه دستیابی"
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_reactions_count
 msgid "Reactions Count"
-msgstr ""
+msgstr "تعداد واکنش‌ها"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Read More about Facebook Pages"
-msgstr ""
+msgstr "اطلاعات بیشتر درباره حساب‌های فیسبوک"
 
 #. module: social_facebook
 #. odoo-javascript
@@ -270,17 +281,17 @@ msgstr ""
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_shares_count
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "Shares"
-msgstr ""
+msgstr "اشتراک‌گذاری‌ها"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_account
 msgid "Social Account"
-msgstr ""
+msgstr "حساب کاربری رسانه اجتماعی"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_live_post
 msgid "Social Live Post"
-msgstr ""
+msgstr "پست لایو اجتماعی"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_media
@@ -290,28 +301,28 @@ msgstr "رسانه های اجتماعی"
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_post
 msgid "Social Post"
-msgstr ""
+msgstr "پست شبکه اجتماعی"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_post_template
 msgid "Social Post Template"
-msgstr ""
+msgstr "قالب پست شبکه اجتماعی"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_stream
 msgid "Social Stream"
-msgstr ""
+msgstr "شبکه‌های اجتماعی"
 
 #. module: social_facebook
 #: model:ir.model,name:social_facebook.model_social_stream_post
 msgid "Social Stream Post"
-msgstr ""
+msgstr "پست استریم شبکه اجتماعی"
 
 #. module: social_facebook
 #. odoo-python
 #: code:addons/social_facebook/controllers/main.py:0
 msgid "Unauthorized. Please contact your administrator. "
-msgstr ""
+msgstr "غیرمجاز. لطفاً با مدیر سیستم تماس بگیرید. "
 
 #. module: social_facebook
 #. odoo-python
@@ -322,7 +333,7 @@ msgstr "ناشناخته"
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_res_config_settings__facebook_use_own_account
 msgid "Use your own Facebook Account"
-msgstr ""
+msgstr "استفاده از حساب فیسبوک خودتان"
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_media__media_type
@@ -330,11 +341,13 @@ msgid ""
 "Used to make comparisons when we need to restrict some features to a "
 "specific media ('facebook', 'x', ...)."
 msgstr ""
+"برای مقایسه چند ویژگی محدود به یک رسانه خاص (مانند «فیسبوک»، «x»، ...) "
+"استفاده می‌شود."
 
 #. module: social_facebook
 #: model:ir.model.fields,field_description:social_facebook.field_social_stream_post__facebook_user_likes
 msgid "User Likes"
-msgstr ""
+msgstr "لایک‌های کاربر"
 
 #. module: social_facebook
 #. odoo-javascript
@@ -351,12 +364,14 @@ msgid ""
 "We could not upload your image, try reducing its size and posting it again "
 "(error: %s)."
 msgstr ""
+"نتوانستیم تصویر شما را آپلود کنیم، سایز آن را کاهش داده و دوباره ارسال کنید "
+"(خطا: %s)."
 
 #. module: social_facebook
 #: model:ir.model.fields,help:social_facebook.field_social_post__facebook_image_ids
 #: model:ir.model.fields,help:social_facebook.field_social_post_template__facebook_image_ids
 msgid "Will attach images to your posts."
-msgstr ""
+msgstr "تصاویر به پست‌ها پیوست خواهند شد."
 
 #. module: social_facebook
 #. odoo-python
@@ -371,11 +386,14 @@ msgid ""
 "You need to be the manager of a Facebook Page to post with Odoo Social.\n"
 " Please create one and make sure it is linked to your account."
 msgstr ""
+"برای ارسال پست با برنامه شبکه‌های اجتماعی اودوو، باید مدیر یک صفحه فیسبوک "
+"باشید.\n"
+"لطفاً یک صفحه ایجاد کنید و مطمئن شوید که به حساب کاربری شما لینک شده است."
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.social_stream_post_view_kanban
 msgid "added an event"
-msgstr ""
+msgstr "رویدادی اضافه کرد"
 
 #. module: social_facebook
 #: model_terms:ir.ui.view,arch_db:social_facebook.facebook_preview

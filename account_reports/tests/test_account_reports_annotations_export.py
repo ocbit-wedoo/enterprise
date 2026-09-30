@@ -134,3 +134,46 @@ class TestAccountReportAnnotationsExport(TestAccountReportsCommon):
         # data (one per period) and finally one column for the annotations. Hence the index 5 for the annotation column.
         self.assertEqual(export_content[0][5], "Annotations")
         self.assertEqual(export_content[7][5], "1 - Papa a vu le fifi de lolo")
+
+    def test_annotations_export_deferred_revenue_report(self):
+        """
+        Regression test: exporting the Deferred Revenue Report to XLSX must not crash with
+        UnboundLocalError when annotations exist on a deferred revenue record.
+        """
+        deferred_revenue_report = self.env.ref('account_reports.deferred_revenue_report')
+        revenue_account = self.company_data['default_account_revenue']
+
+        self._create_invoice(
+            move_type='out_invoice',
+            invoice_date='2024-01-01',
+            post=True,
+            invoice_line_ids=[
+                self._prepare_invoice_line(
+                    price_unit=1200.0,
+                    account_id=revenue_account,
+                    deferred_start_date='2024-01-01',
+                    deferred_end_date='2024-04-30',
+                )
+            ],
+        )
+
+        # Generate the report lines to get a valid line_id to annotate
+        options = self._generate_options(deferred_revenue_report, '2024-01-01', '2024-01-31')
+        lines = deferred_revenue_report._get_lines(options)
+
+        # Add an annotation on the first report line — this triggers the bug on XLSX export
+        line_id = self.env['account.report.annotation']._remove_tax_grouping_from_line_id(lines[0]['id'])
+        deferred_revenue_report.write({
+            'annotations_ids': [
+                Command.create({
+                    'line_id': line_id,
+                    'text': 'Annotation on deferred revenue record',
+                    'date': '2024-01-15',
+                }),
+            ]
+        })
+
+        # This must not raise UnboundLocalError
+        report_data = deferred_revenue_report.export_to_xlsx(options)
+        self.assertIn('file_content', report_data)
+        self.assertEqual(report_data['file_type'], 'xlsx')

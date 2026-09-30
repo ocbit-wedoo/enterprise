@@ -5,13 +5,13 @@
 # Translators:
 # Tiffany Chang, 2025
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2025-11-17 16:26+0000\n"
+"PO-Revision-Date: 2026-08-20 16:18+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
 "hr_payroll_expense/fa/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll_expense
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.view_account_payment_register_form_inherit_hr_payroll_expense
@@ -30,11 +30,15 @@ msgid ""
 "payslip. Make sure this payment is intended.\n"
 "                        </span>"
 msgstr ""
+"<span class=\"fw-bold\">\n"
+"                            هزینه‌ها قبلاً در یک فیش حقوقی بازپرداخت شده‌اند. "
+"مطمئن شوید که این پرداخت مورد تأیید است.\n"
+"                        </span>"
 
 #. module: hr_payroll_expense
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.hr_expense_sheet_view_form_inherit_payroll
 msgid "<span class=\"o_stat_text\">Payslip</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">فیش حقوقی</span>"
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_hr_expense_sheet
@@ -50,6 +54,8 @@ msgid ""
 "Please create one salary rule with the \"%(code)s\" code on the relevant "
 "salary structures."
 msgstr ""
+"برای افزودن هزینه به فیش حقوقی باید قانون بازپرداخت هزینه‌ها پیکربندی شود.\n"
+"یک قانون با کد \"%(code)s\" در ساختارهای حقوق و دستمزد مرتبط ایجاد کنید."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -93,12 +99,12 @@ msgstr "فیش‌های‌حقوق را برای همه کارکنان انتخ�
 #. odoo-python
 #: code:addons/hr_payroll_expense/models/hr_expense_sheet.py:0
 msgid "Go to salary rules"
-msgstr ""
+msgstr "ورود به قوانین حقوق و دستمزد"
 
 #. module: hr_payroll_expense
 #: model:ir.model.fields,field_description:hr_payroll_expense.field_account_payment_register__is_already_paid_through_a_payslip
 msgid "Is Already Paid Through A Payslip"
-msgstr ""
+msgstr "قبلاً از طریق فیش حقوقی پرداخت شده است"
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_account_move
@@ -161,7 +167,7 @@ msgstr "هزینه‌های بازپرداخت شده"
 #. module: hr_payroll_expense
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.hr_expense_sheet_view_form_inherit_payroll
 msgid "Remove from Payslip"
-msgstr ""
+msgstr "حذف از فیش حقوقی"
 
 #. module: hr_payroll_expense
 #: model:ir.actions.server,name:hr_payroll_expense.hr_expense_add_to_payslip_action_server
@@ -181,6 +187,8 @@ msgid ""
 "The '%(account_name)s' account for the salary rule '%(rule_name)s' must be "
 "of type 'Payable'."
 msgstr ""
+"حساب '%(account_name)s' برای قانون حقوقی '%(rule_name)s' باید از نوع 'قابل "
+"پرداخت' باشد."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -213,6 +221,8 @@ msgid ""
 "validated.\n"
 "Expenses can only be removed from draft or canceled payslips."
 msgstr ""
+"نمی‌توانید هزینه‌ای را از فیش حقوقی که قبلاً تأیید شده است حذف کنید.\n"
+"هزینه‌ها فقط از فیش‌های حقوقی پیش‌نویس یا لغو شده قابل حذف هستند."
 
 #. module: hr_payroll_expense
 #. odoo-python

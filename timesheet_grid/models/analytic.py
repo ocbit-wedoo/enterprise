@@ -85,7 +85,20 @@ class AnalyticLine(models.Model):
             company_calendar = self.env.company.resource_calendar_id
             if company_calendar.flexible_hours:
                 return []
-            return get_unavailable_dates(company_calendar._work_intervals_batch(from_datetime, to_datetime)[False])
+            return get_unavailable_dates(company_calendar._work_intervals_batch(
+                from_datetime, to_datetime,
+                domain=[('time_type', '=', 'leave'), ('company_id', '=', self.env.company.id)],
+            )[False])
+
+        def get_current_user_unavailable_dates():
+            resource = self.env.user.employee_id.resource_id
+            if resource:
+                resource_work_intervals, _ = resource._get_valid_work_intervals(
+                    from_datetime, to_datetime
+                )
+                if resource.id in resource_work_intervals:
+                    return get_unavailable_dates(resource_work_intervals[resource.id])
+            return False
 
         if groupby == 'employee_id':
             employees = self.env['hr.employee'].browse(set(res_ids))
@@ -94,10 +107,7 @@ class AnalyticLine(models.Model):
             if not calendar_work_intervals:
                 unavailability_intervals_per_employee_id[False] = get_company_unavailable_dates()
                 return unavailability_intervals_per_employee_id
-            if self.env.company.resource_calendar_id.id in calendar_work_intervals:
-                company_unavailable_days = [] if self.env.company.resource_calendar_id.flexible_hours else get_unavailable_dates(calendar_work_intervals[self.env.company.resource_calendar_id.id])
-            else:
-                company_unavailable_days = get_company_unavailable_dates()
+            company_unavailable_days = get_company_unavailable_dates()
             unavailability_intervals_per_employee_id = {
                 employee_id:
                     []
@@ -108,6 +118,8 @@ class AnalyticLine(models.Model):
                 for resource_id, employee_id in employee_id_per_resource_id.items()
             }
             unavailability_intervals_per_employee_id[False] = company_unavailable_days
+        elif self.env.context.get('get_current_user_unavailable_dates', False):
+            unavailability_intervals_per_employee_id[False] = get_current_user_unavailable_dates()
         else:
             if self.env.user.resource_calendar_id.flexible_hours:
                 unavailability_intervals_per_employee_id[False] = []

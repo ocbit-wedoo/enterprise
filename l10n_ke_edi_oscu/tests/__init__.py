@@ -2,4 +2,5 @@
 
 from . import common
 from . import test_live
+from . import test_invoice_sequence
 from . import test_mocked

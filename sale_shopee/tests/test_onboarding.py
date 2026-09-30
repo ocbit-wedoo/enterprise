@@ -15,14 +15,15 @@ from odoo.addons.sale_shopee.tests import common as common_sale_shopee
 class TestShopeeOnboarding(HttpCase, common_sale_shopee.TestShopeeCommon):
     """Tests the Shopee onboarding controller."""
 
-    def call_return_from_authorization(self, query):
+    def call_return_from_authorization(self, query, account=None):
+        account = account or self.account
         self.authenticate("admin", "admin")
         timestamp = int(datetime.now().timestamp())
         sign = shopee_utils.get_public_sign(
-            self.account, API_OPERATIONS_MAPPING["auth_partner"]["url_path"], timestamp
+            account, API_OPERATIONS_MAPPING["auth_partner"]["url_path"], timestamp
         )
 
-        path_params = (self.account.id, self.env.company.id, timestamp, sign)
+        path_params = (account.id, self.env.company.id, timestamp, sign)
         url = (
             "/shopee/return_from_authorization"
             f"/{'/'.join(map(str, path_params))}"
@@ -86,5 +87,34 @@ class TestShopeeOnboarding(HttpCase, common_sale_shopee.TestShopeeCommon):
             shops = self.env["shopee.shop"].search([("account_id", "=", self.account.id)])
             self.assertEqual(len(shops), 1)
             self.assertEqual(shops.shop_identifier, 1)
+            self.assertEqual(shops.access_token, "dummy_oauth_token")
+            self.assertEqual(shops.refresh_token, "dummy_refresh_token")
+
+    def test_shopee_return_from_authorization_switches_shop_account(self):
+        """
+        When re-authorizing an existing shop with another Shopee account, the shop should
+        be reassigned to that account instead of creating a duplicate.
+        """
+        new_account = self.env["shopee.account"].create({
+            "name": "another_shopee_account",
+            "api_endpoint": "test",
+            "partner_identifier": 2,
+            "partner_key": "Another partner token",
+            "company_ids": [self.env.company.id],
+        })
+
+        def get_shopee_api_response_mock(_shop, operation_, *_args, **_kwargs):
+            return common_sale_shopee.OPERATIONS_RESPONSES_MAP[operation_]
+
+        with patch(
+            "odoo.addons.sale_shopee.utils.make_shopee_api_request",
+            new=get_shopee_api_response_mock,
+        ):
+            query = {"code": "test_authorization_code", "shop_id": "1"}
+            self.call_return_from_authorization(query, account=new_account)
+
+            shops = self.env["shopee.shop"].search([("shop_identifier", "=", 1)])
+            self.assertEqual(len(shops), 1)
+            self.assertEqual(shops.account_id, new_account)
             self.assertEqual(shops.access_token, "dummy_oauth_token")
             self.assertEqual(shops.refresh_token, "dummy_refresh_token")

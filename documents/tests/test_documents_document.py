@@ -238,9 +238,11 @@ class TestCaseDocuments(TransactionCaseDocuments):
         Makes sure that documents are unlinked when their attachment is unlinked.
         """
         document = self.env['documents.document'].create({'datas': GIF, 'folder_id': self.folder_b.id})
+        alias = document.alias_id
         self.assertTrue(document.exists(), 'the document should exist')
         document.attachment_id.unlink()
         self.assertFalse(document.exists(), 'the document should not exist')
+        self.assertFalse(alias.exists(), 'the document alias should be deleted')
 
     def test_is_favorited(self):
         user = new_test_user(self.env, "test user", groups='documents.group_documents_user')

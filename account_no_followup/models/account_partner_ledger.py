@@ -35,7 +35,7 @@ class PartnerLedgerCustomHandler(models.AbstractModel):
         if move.is_invoice():
             # For invoices, the `no_followup` toggle will impact all its receivable/payable lines.
             res['updated_line_ids'] = move.line_ids.filtered(
-                lambda line: line.account_type in ('asset_receivable', 'liability_payable'),
+                lambda line: line.account_type in ('asset_receivable', 'liability_payable') and line.id in aml_id_to_line_id,
             ).mapped(lambda line: aml_id_to_line_id[line.id])
         return res
 

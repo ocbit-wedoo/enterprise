@@ -76,6 +76,7 @@
                             removeFromCache.bind="removeRecordIdFromCache"
                             removeFromValidationStack.bind="removeFromValidationStack"
                             barcodeTarget="barcodeTargetRecord === record.resId"
+                            actionPending="state.actionPending"
                             />
                     </t>
                     <t t-if="!relevantRecords.length">

@@ -353,7 +353,7 @@ class RentalOrderLine(models.Model):
     def _create_procurements(self, product_qty, procurement_uom, origin, values):
         """ Change the destination for rental procurement groups. """
         if self.is_rental and self._are_rental_pickings_enabled():
-            values['route_ids'] = values.get('route_ids') or self.env.ref('sale_stock_renting.route_rental')
+            values['route_ids'] = values.get('route_ids', self.env['stock.route']) | (self.env.ref('sale_stock_renting.route_rental', raise_if_not_found=False) or self.env['stock.route'])
             delivery_values = {
                 **values,
                 'date_planned': self.order_id.rental_start_date,

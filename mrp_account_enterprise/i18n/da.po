@@ -9,13 +9,14 @@
 # Martin Trigaux, 2024
 # lhmflexerp <lhm@flexerp.dk>, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-11-17 14:16+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:27+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "mrp_account_enterprise/da/>\n"
 "Language: da\n"
@@ -23,17 +24,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: mrp_account_enterprise
 #: model:ir.actions.report,print_report_name:mrp_account_enterprise.action_cost_struct_mrp_production
 msgid "'Cost Analysis - %s ' % object.name"
-msgstr "'Omkostnings analyse - %s' % object.name"
+msgstr "'Omkostningsanalyse - %s' % object.name"
 
 #. module: mrp_account_enterprise
 #: model:ir.actions.report,print_report_name:mrp_account_enterprise.action_cost_struct_product_template
 msgid "'Cost Structure Analysis - %s' % object.name"
-msgstr "Omkostnings struktur analyse - %s' % object.name"
+msgstr "Omkostningsstrukturanalyse - %s' % object.name"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -84,7 +85,7 @@ msgstr "<span>Produkt</span>"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<span>Quantity</span>"
-msgstr "<span>Antal</span>"
+msgstr "<span>Mængde</span>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -94,17 +95,17 @@ msgstr "<span>Ressource</span>"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<span>Scraps</span>"
-msgstr "<span>Skrot</span>"
+msgstr "<span>Kasseringer</span>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<span>Total Cost</span>"
-msgstr "<span>Samlet Omkostning</span>"
+msgstr "<span>Samlede omkostninger</span>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<span>Unit Cost</span>"
-msgstr "<span>Enheds omkostning</span>"
+msgstr "<span>Omkostninger pr. enhed</span>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -119,17 +120,17 @@ msgstr "<span>Arbejdstid</span>"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<strong>Total Cost of Components</strong>"
-msgstr "<strong>Samlet omkostning af komponenter</strong>"
+msgstr "<strong>Samlede omkostninger for komponenterne</strong>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<strong>Total Cost of Operations</strong>"
-msgstr "<strong>Samlede omkostninger ved driften</strong>"
+msgstr "<strong>Samlede driftsomkostninger</strong>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "<strong>Total Cost of Scraps</strong>"
-msgstr "<strong>Total kostpris for skrot</strong>"
+msgstr "<strong>Samlede omkostninger for kasseringer</strong>"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -154,7 +155,7 @@ msgstr "Gennemsnitlige samlede omkostninger / enhed"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "By product(s)"
-msgstr "Per produkt(er)"
+msgstr "Pr. produkt(er)"
 
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__byproduct_cost
@@ -197,12 +198,12 @@ msgstr "Omkostningsanalyserapport"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "Cost Breakdown of Products"
-msgstr "Fordeling af produktomkostninger"
+msgstr "Produkters omkostningsfordeling"
 
 #. module: mrp_account_enterprise
 #: model:ir.actions.report,name:mrp_account_enterprise.action_cost_struct_product_template
 msgid "Cost Structure Analysis"
-msgstr "Omkostning struktur analyse"
+msgstr "Analyse af omkostningsstrukturen"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -217,7 +218,7 @@ msgstr "Komponentomkostninger pr. enhed (i"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "Cost of Operations"
-msgstr "Omkostning af operationer"
+msgstr "Driftsomkostninger"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -227,7 +228,7 @@ msgstr "Driftsomkostninger pr. enhed (i"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "Cost of Scraps"
-msgstr "Kostpris for skrot"
+msgstr "Omkostning for kasseringer"
 
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,help:mrp_account_enterprise.field_mrp_report__unit_cost
@@ -254,7 +255,7 @@ msgstr "Valuta"
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__unit_duration
@@ -265,7 +266,7 @@ msgstr "Driftsvarighed / enhed"
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__date_finished
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_report_search_view
 msgid "End Date"
-msgstr "Slut dato"
+msgstr "Slutdato"
 
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__expected_component_cost_unit
@@ -300,7 +301,7 @@ msgstr "ID"
 #. module: mrp_account_enterprise
 #: model:ir.model,name:mrp_account_enterprise.model_report_mrp_account_enterprise_mrp_cost_structure
 msgid "MRP Cost Structure Report"
-msgstr "MRP Omkostning struktur rapport"
+msgstr "MRP-omkostningsstrukturrapport"
 
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__production_id
@@ -335,7 +336,7 @@ msgstr ""
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_report_pivot_view
 msgid "Order Overview"
-msgstr "Ordre oversigt"
+msgstr "Ordreoversigt"
 
 #. module: mrp_account_enterprise
 #: model:ir.model,name:mrp_account_enterprise.model_product_template
@@ -347,12 +348,12 @@ msgstr "Produkt"
 #. module: mrp_account_enterprise
 #: model:ir.model,name:mrp_account_enterprise.model_report_mrp_account_enterprise_product_template_cost_structure
 msgid "Product Template Cost Structure Report"
-msgstr "Produkt skabelon omkostning struktur rapport"
+msgstr "Rapport om omkostningsstruktur for produktskabelon"
 
 #. module: mrp_account_enterprise
 #: model:ir.model,name:mrp_account_enterprise.model_product_product
 msgid "Product Variant"
-msgstr "Varevariant"
+msgstr "Produktvariant"
 
 #. module: mrp_account_enterprise
 #: model:ir.actions.act_window,name:mrp_account_enterprise.mrp_report_dashboard_action
@@ -369,7 +370,7 @@ msgstr "Efterspurgt mængde"
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__qty_produced
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_report_pivot_view
 msgid "Quantity Produced"
-msgstr "Antal produceret"
+msgstr "Produceret mængde"
 
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,help:mrp_account_enterprise.field_mrp_report__yield_rate
@@ -389,7 +390,7 @@ msgstr "Samlede komponentomkostninger"
 #. module: mrp_account_enterprise
 #: model:ir.model.fields,field_description:mrp_account_enterprise.field_mrp_report__total_cost
 msgid "Total Cost"
-msgstr "Total kostbeløb"
+msgstr "Samlede omkostninger"
 
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
@@ -458,4 +459,4 @@ msgstr "timer"
 #. module: mrp_account_enterprise
 #: model_terms:ir.ui.view,arch_db:mrp_account_enterprise.mrp_cost_structure
 msgid "manufacturing order(s)."
-msgstr "produktionsordre(r)"
+msgstr "produktionsordre(r)."

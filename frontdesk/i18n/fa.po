@@ -1,48 +1,51 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* frontdesk
+# * frontdesk
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-16 17:12+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"frontdesk/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: frontdesk
 #. odoo-python
 #: code:addons/frontdesk/models/frontdesk_visitor.py:0
 msgid "%(name)s just checked-in. Requested Drink: %(drink)s."
-msgstr ""
+msgstr "%(name)s وارد شد. نوشیدنی درخواستی: %(drink)s."
 
 #. module: frontdesk
 #. odoo-python
 #: code:addons/frontdesk/models/frontdesk_visitor.py:0
 msgid "%(station)s Check-In: %(visitor)s"
-msgstr ""
+msgstr "ثبت ورود %(visitor)s در ایستگاه %(station)s"
 
 #. module: frontdesk
 #. odoo-python
 #: code:addons/frontdesk/models/frontdesk_visitor.py:0
 msgid "%(station)s Check-In: %(visitor)s to meet %(host)s"
-msgstr ""
+msgstr "ثبت ورود %(visitor)s در ایستگاه %(station)s برای ملاقات با %(host)s"
 
 #. module: frontdesk
 #. odoo-python
 #: code:addons/frontdesk/models/frontdesk_visitor.py:0
 msgid "%s just checked-in."
-msgstr ""
+msgstr "%s وارد شد."
 
 #. module: frontdesk
 #: model:ir.actions.report,print_report_name:frontdesk.frontdesk_visitor_print_badge
@@ -75,11 +78,13 @@ msgid ""
 "<span><b>Congratulations!!!</b> You have created your first visitor.\n"
 "        </span>"
 msgstr ""
+"<span><b>تبریک!!!</b> شما اولین بازدیدکننده خود را ایجاد کردید.\n"
+"        </span>"
 
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.print_visitor_badge
 msgid "<strong>Visiting:</strong>"
-msgstr ""
+msgstr "<strong>ملاقات با:</strong>"
 
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_drink__active
@@ -507,13 +512,13 @@ msgstr "لینک باجه"
 #. odoo-python
 #: code:addons/frontdesk/models/frontdesk_frontdesk.py:0
 msgid "Last Check-In: %s hours ago"
-msgstr ""
+msgstr "آخرین ورود: %s ساعت قبل"
 
 #. module: frontdesk
 #. odoo-python
 #: code:addons/frontdesk/models/frontdesk_frontdesk.py:0
 msgid "Last Check-In: %s minutes ago"
-msgstr ""
+msgstr "آخرین ورود: %s دقیقه قبل"
 
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_drink__write_uid
@@ -558,6 +563,8 @@ msgid ""
 "Looking for a better way to manage your visitors? \n"
 " It begins right here."
 msgstr ""
+"به دنبال راه بهتری برای مدیریت بازدیدکنندگان هستید؟ \n"
+" از همینجا شروع کنید."
 
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.print_visitor_badge
@@ -584,13 +591,13 @@ msgstr "نام"
 #. module: frontdesk
 #: model_terms:ir.actions.act_window,help:frontdesk.action_frontdesk_drink
 msgid "No drinks to offer to visitors. Let's add one!"
-msgstr ""
+msgstr "نوشیدنی جهت سرو به بازدیدکنندگان وجود ندارد. نوشیدنی جدیدی ایجاد کنید!"
 
 #. module: frontdesk
 #: model_terms:ir.actions.act_window,help:frontdesk.action_frontdesk_frontdesk
 #: model_terms:ir.actions.act_window,help:frontdesk.action_frontdesk_frontdesk_tree
 msgid "No stations found. Let's create one!"
-msgstr ""
+msgstr "پایانه‌ای یافت نشد. ایستگاه پذیرش جدیدی ایجاد کنید!"
 
 #. module: frontdesk
 #: model_terms:ir.actions.act_window,help:frontdesk.action_frontdesk_visitor
@@ -599,7 +606,7 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:frontdesk.action_open_planned_visitor
 #: model_terms:ir.actions.act_window,help:frontdesk.action_open_station_visitor
 msgid "No visitors yet. Let's add one!"
-msgstr ""
+msgstr "فعلاً بازدیدکننده‌ای وجود ندارد. بازدیدکننده جدیدی اضافه کنید!"
 
 #. module: frontdesk
 #. odoo-javascript
@@ -628,7 +635,7 @@ msgstr "اطلاع رسانی با پیامک"
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_frontdesk__notify_discuss
 msgid "Notify by discuss"
-msgstr ""
+msgstr "اطلاع‌رسانی با پیام‌رسان"
 
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_frontdesk__notify_email
@@ -638,7 +645,7 @@ msgstr "ارسال از طریق ایمیل"
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_form
 msgid "Notify the host on guest arrival"
-msgstr ""
+msgstr "هنگام حاضر شدن مهمان، به میزبان اطلاع‌رسانی می‌شود"
 
 #. module: frontdesk
 #: model_terms:ir.actions.act_window,help:frontdesk.action_frontdesk_visitor
@@ -647,7 +654,7 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:frontdesk.action_open_planned_visitor
 #: model_terms:ir.actions.act_window,help:frontdesk.action_open_station_visitor
 msgid "Odoo helps you to track all information related to your visitors."
-msgstr ""
+msgstr "اودوو در رهگیری همه اطلاعات مربوط به بازدیدکنندگان به شما کمک می‌کند."
 
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_frontdesk__drink_offer
@@ -768,7 +775,7 @@ msgstr "گزارش"
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_form
 msgid "Request additional information upon registering"
-msgstr ""
+msgstr "به هنگام ثبت نام، از بازدیدکننده اطلاعات بیشتری درخواست می‌شود"
 
 #. module: frontdesk
 #: model:ir.model.fields.selection,name:frontdesk.selection__frontdesk_frontdesk__ask_company__required
@@ -807,7 +814,7 @@ msgstr "توکن امنیتی"
 #. odoo-javascript
 #: code:addons/frontdesk/static/src/js/tours/frontdesk.js:0
 msgid "Select or create a station on the fly from where the visitor arrived."
-msgstr ""
+msgstr "برای مکان ورود بازدیدکننده، یک ایستگاه را ایجاد یا انتخاب کنید."
 
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_form
@@ -822,7 +829,7 @@ msgstr "ورود خودکار"
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_form
 msgid "Send an SMS to the host on guest arrival"
-msgstr ""
+msgstr "هنگام حاضر شدن مهمان، با پیامک به میزبان اطلاع‌رسانی می‌شود"
 
 #. module: frontdesk
 #: model:mail.template,description:frontdesk.frontdesk_mail_template
@@ -839,6 +846,8 @@ msgstr "دنباله"
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_form
 msgid "Show a QR code on the welcome screen to check-in from mobile"
 msgstr ""
+"برای ورود آسان بازدیدکننده از طریق موبایل، یک بارکد QR در صفحه خوشامدگویی "
+"نمایش داده می‌شود"
 
 #. module: frontdesk
 #: model:ir.model.fields,help:frontdesk.field_frontdesk_frontdesk__self_check_in
@@ -846,17 +855,19 @@ msgid ""
 "Shows a QR code in the interface, for guests to check in from their mobile "
 "phone."
 msgstr ""
+"یک کد QR در رابط کاربری برای مهمان نمایش می‌دهد تا مهمان بتواند از طریق "
+"موبایل خود وارد شود."
 
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_form
 msgid "Side Message"
-msgstr ""
+msgstr "پیام جانبی"
 
 #. module: frontdesk
 #: model:ir.model.fields,field_description:frontdesk.field_frontdesk_visitor__station_id
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_visitor_view_search
 msgid "Station"
-msgstr ""
+msgstr "ایستگاه"
 
 #. module: frontdesk
 #: model_terms:ir.ui.view,arch_db:frontdesk.frontdesk_frontdesk_view_search
@@ -866,7 +877,7 @@ msgstr "نام ایستگاه"
 #. module: frontdesk
 #: model:ir.actions.act_window,name:frontdesk.action_open_station_visitor
 msgid "Station Visitors"
-msgstr ""
+msgstr "بازدیدکنندگان ایستگاه"
 
 #. module: frontdesk
 #: model:ir.actions.act_window,name:frontdesk.action_frontdesk_frontdesk
@@ -1032,7 +1043,7 @@ msgstr "برای مثال شرکت من"
 #. odoo-javascript
 #: code:addons/frontdesk/static/src/visitor_form/visitor_form.xml:0
 msgid "e.g. john@company.com"
-msgstr ""
+msgstr "مثال: john@company.com"
 
 #. module: frontdesk
 #. odoo-javascript

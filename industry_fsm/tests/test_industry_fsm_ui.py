@@ -10,5 +10,10 @@ class TestIndustryFsmUi(HttpCase):
     def test_ui(self):
         # Disable onboarding tours as they can conflict with our running tours.
         self.env.ref('base.user_admin').tour_enabled = False
+        if (Worksheet := self.env.get('worksheet.template')) is not None:
+            Worksheet.create({
+                'name': 'Test Worksheet',
+                'res_model': 'project.task',
+            })
         self.start_tour("/odoo", 'industry_fsm_tour', login="admin")
         self.start_tour('/odoo', 'fsm_task_form_tour', login="admin")

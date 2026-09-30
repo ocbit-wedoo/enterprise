@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-02-28 18:30+0000\n"
+"PO-Revision-Date: 2026-08-28 17:09+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
 "approvals/fa/>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: approvals
 #: model:ir.actions.report,print_report_name:approvals.action_report_approval_request
 msgid "'Approval - %s' % object.name"
-msgstr ""
+msgstr "'تأیید - %s' % object.name"
 
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.report_aprroval_request_document
 msgid "<span class=\"col-2 fw-bold\">Description:</span>"
-msgstr ""
+msgstr "<span class=\"col-2 fw-bold\">توضیح:</span>"
 
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.approval_category_view_form
@@ -41,7 +41,7 @@ msgstr "<span class=\"fa fa-warning\" title=\"Invalid minimum مصوبات\"/>"
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.report_aprroval_request_document
 msgid "<span class=\"fw-bold\">To</span>"
-msgstr ""
+msgstr "<span class=\"fw-bold\">تا</span>"
 
 #. module: approvals
 #: model:ir.model.fields,field_description:approvals.field_approval_request__message_needaction
@@ -154,7 +154,7 @@ msgstr "درخواست مصوبه"
 #: model:mail.message.subtype,description:approvals.mt_approval_request_status
 #: model:mail.message.subtype,name:approvals.mt_approval_request_status
 msgid "Approval Status Change"
-msgstr ""
+msgstr "تغییر وضعیت تأیید"
 
 #. module: approvals
 #: model:ir.model.fields,field_description:approvals.field_approval_request__name
@@ -477,6 +477,8 @@ msgid ""
 "Define the components and finished products you wish to use in\n"
 "            bill of materials and manufacturing orders."
 msgstr ""
+"اجزاء و محصولات نهایی که می‌خواهید در لیست مواد\n"
+"            و سفارش‌های تولید استفاده کنید را تعریف کنید."
 
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.approval_request_view_kanban
@@ -803,6 +805,8 @@ msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna aliqua."
 msgstr ""
+"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از "
+"طراحان گرافیک است."
 
 #. module: approvals
 #: model:ir.model.fields,field_description:approvals.field_approval_request__message_main_attachment_id
@@ -986,7 +990,7 @@ msgstr "مسئول: تمام درخواست‌ها تأیید شوند"
 #. module: approvals
 #: model:ir.actions.server,name:approvals.action_open_approval_category
 msgid "Open Approval Category"
-msgstr ""
+msgstr "ورود به دسته‌بندی تأیید"
 
 #. module: approvals
 #: model:ir.model.fields.selection,name:approvals.selection__approval_category__has_amount__optional
@@ -1153,7 +1157,7 @@ msgstr "وضعیت درخواست"
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.approval_request_view_tree
 msgid "Request To"
-msgstr ""
+msgstr "درخواست به"
 
 #. module: approvals
 #: model:ir.model.fields,field_description:approvals.field_approval_approver__required
@@ -1192,7 +1196,7 @@ msgstr "دنباله"
 #. odoo-python
 #: code:addons/approvals/models/approval_category.py:0
 msgid "Sequence %(code)s"
-msgstr ""
+msgstr "توالی %(code)s"
 
 #. module: approvals
 #: model:ir.model.fields,help:approvals.field_approval_approver__can_edit_user_id
@@ -1245,22 +1249,22 @@ msgstr "ارسال ‌شده"
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.report_aprroval_request_document
 msgid "Test Category"
-msgstr ""
+msgstr "دسته‌بندی آزمایشی"
 
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.report_aprroval_request_document
 msgid "Test Document"
-msgstr ""
+msgstr "سند آزمایشی"
 
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.report_aprroval_request_document
 msgid "Test Product"
-msgstr ""
+msgstr "محصول آزمایشی"
 
 #. module: approvals
 #: model_terms:ir.ui.view,arch_db:approvals.report_aprroval_request_document
 msgid "Test Reference"
-msgstr ""
+msgstr "مرجع آزمایشی"
 
 #. module: approvals
 #. odoo-python
@@ -1272,7 +1276,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/approvals/models/approval_request.py:0
 msgid "The request %(request_name)s for %(request_owner)s has been refused"
-msgstr ""
+msgstr "درخواست %(request_name)s برای %(request_owner)s رد شد"
 
 #. module: approvals
 #. odoo-python
@@ -1288,6 +1292,8 @@ msgstr ""
 msgid ""
 "The request created on %(create_date)s by %(request_owner)s has been refused."
 msgstr ""
+"درخواستی که در تاریخ %(create_date)s توسط %(request_owner)s ایجاد شده بود، "
+"رد شد."
 
 #. module: approvals
 #: model:res.groups,comment:approvals.group_approval_user
@@ -1433,7 +1439,7 @@ msgstr "امکان تعیین مجدد تصویب کننده یکسان بر ر�
 #. odoo-python
 #: code:addons/approvals/models/approval_request.py:0
 msgid "You cannot change approval request."
-msgstr ""
+msgstr "شما نمی‌توانید درخواست تأیید را تغییر دهید."
 
 #. module: approvals
 #. odoo-python
@@ -1460,7 +1466,7 @@ msgstr "برای تصویب‌ درخواست خود باید حداقل %s تص
 #. odoo-python
 #: code:addons/approvals/models/approval_request.py:0
 msgid "You have to attach at least one document."
-msgstr ""
+msgstr "باید حداقل یک سند پیوست کنید."
 
 #. module: approvals
 #: model_terms:ir.actions.act_window,help:approvals.product_product_action

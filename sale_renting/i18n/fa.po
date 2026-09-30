@@ -1,25 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_renting
+# * sale_renting
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 # Naser mars, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Naser mars, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-20 16:19+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"sale_renting/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_renting
 #. odoo-python
@@ -28,12 +31,14 @@ msgid ""
 "\n"
 "%(from_date)s to %(to_date)s"
 msgstr ""
+"\n"
+"%(from_date)s تا %(to_date)s"
 
 #. module: sale_renting
 #. odoo-python
 #: code:addons/sale_renting/models/product_template.py:0
 msgid "%(amount)s (fixed)"
-msgstr ""
+msgstr "%(amount)s (ثابت)"
 
 #. module: sale_renting
 #. odoo-python
@@ -53,7 +58,7 @@ msgstr "%(duration)s %(unit)s"
 #: code:addons/sale_renting/models/product_product.py:0
 #: code:addons/sale_renting/models/product_template.py:0
 msgid "%s (Rental)"
-msgstr ""
+msgstr "%s (اجاره)"
 
 #. module: sale_renting
 #: model:ir.actions.report,print_report_name:sale_renting.action_report_rental_saleorder
@@ -61,6 +66,8 @@ msgid ""
 "(object.rental_status not in ('draft', 'sent') and 'Delivery or Return "
 "Receipt - %s' %(object.name)) or 'Order - %s' % (object.name)"
 msgstr ""
+"(object.rental_status not in ('draft', 'sent') and 'تحویل یا رسید برگشت - "
+"%s' %(object.name)) or 'سفارش - %s' % (object.name)"
 
 #. module: sale_renting
 #: model_terms:ir.ui.view,arch_db:sale_renting.report_rental_order_document
@@ -167,7 +174,7 @@ msgstr "<strong>وضعیت — </strong>"
 #. odoo-python
 #: code:addons/sale_renting/models/product_template.py:0
 msgid "A rental combo product can only contain rental products."
-msgstr ""
+msgstr "محصول ترکیبی اجاره فقط می‌تواند حاوی محصولات اجاره‌ای باشد."
 
 #. module: sale_renting
 #: model:ir.model.fields,field_description:sale_renting.field_sale_temporal_recurrence__active
@@ -337,7 +344,7 @@ msgstr "در اینجا یک مشتری ایجاد یا انتخاب کنید."
 #. module: sale_renting
 #: model:ir.model.fields,field_description:sale_renting.field_sale_order__is_rental_order
 msgid "Created In App Rental"
-msgstr ""
+msgstr "ایجاد شده در برنامه اجاره"
 
 #. module: sale_renting
 #: model:ir.model.fields,field_description:sale_renting.field_product_pricing__create_uid
@@ -624,7 +631,7 @@ msgstr "تاخیر دارد"
 #. module: sale_renting
 #: model_terms:ir.ui.view,arch_db:sale_renting.report_rental_order_document
 msgid "Jane Doe"
-msgstr ""
+msgstr "لیلی داوودی"
 
 #. module: sale_renting
 #: model_terms:ir.ui.view,arch_db:sale_renting.report_rental_order_document
@@ -875,7 +882,7 @@ msgstr "رسید تحویل و بازگشت"
 #. module: sale_renting
 #: model:ir.model.fields,field_description:sale_renting.field_sale_order_line__reservation_begin
 msgid "Pickup date - padding time"
-msgstr ""
+msgstr "تاریخ برداشت - زمان احتیاط"
 
 #. module: sale_renting
 #: model_terms:ir.ui.view,arch_db:sale_renting.rental_order_view_kanban
@@ -1112,7 +1119,7 @@ msgstr "وضعیت اجاره (پیشرفته)"
 #. module: sale_renting
 #: model:ir.model.fields,field_description:sale_renting.field_rental_order_wizard__rental_wizard_line_ids
 msgid "Rental Wizard Line"
-msgstr ""
+msgstr "سطر ویزارد اجاره"
 
 #. module: sale_renting
 #: model_terms:ir.ui.view,arch_db:sale_renting.rental_order_form_view
@@ -1149,7 +1156,7 @@ msgstr "قوانین اجاره"
 #. module: sale_renting
 #: model:ir.model,name:sale_renting.model_rental_order_wizard_line
 msgid "RentalOrderLine transient representation"
-msgstr ""
+msgstr "بازنمود گذرا برای سطر سفارش اجاره"
 
 #. module: sale_renting
 #: model_terms:ir.ui.view,arch_db:sale_renting.rental_order_view_search
@@ -1401,6 +1408,9 @@ msgid ""
 "This is the default extra cost per day set on newly created products.You can "
 "change this value for existing products directly on the product itself."
 msgstr ""
+"این قیمت به صورت پیش‌فرض به عنوان قیمت اضافی هر روز برای محصولات ایجاد شده "
+"جدید استفاده می‌شود. در فرم محصول می‌توانید مستقیماً این مقدار را برای محصولات "
+"موجود تغییر دهید."
 
 #. module: sale_renting
 #: model:ir.model.fields,help:sale_renting.field_res_config_settings__extra_hour
@@ -1408,6 +1418,9 @@ msgid ""
 "This is the default extra cost per hour set on newly created products.You "
 "can change this value for existing products directly on the product itself."
 msgstr ""
+"این قیمت به صورت پیش‌فرض به عنوان قیمت اضافی هر ساعت برای محصولات ایجاد شده "
+"جدید استفاده می‌شود. در فرم محصول می‌توانید مستقیماً این مقدار را برای محصولات "
+"موجود تغییر دهید."
 
 #. module: sale_renting
 #: model:ir.model.fields,help:sale_renting.field_res_config_settings__extra_product

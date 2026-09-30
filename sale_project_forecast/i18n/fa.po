@@ -1,23 +1,26 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_project_forecast
+# * sale_project_forecast
 #
 # Translators:
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-17 17:10+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"sale_project_forecast/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_project_forecast
 #: model:ir.model.fields,help:sale_project_forecast.field_product_product__planning_enabled
@@ -31,17 +34,24 @@ msgid ""
 "planned.                 You can also manually schedule open shifts for your "
 "Sales Order or assign them to any employee you prefer."
 msgstr ""
+"با فعال بودن این گزینه، هنگام تأیید سفارش فروش یک شیفت به‌صورت خودکار برای "
+"نقش انتخاب شده ایجاد خواهد شد. با ویژگی «برنامه‌ریزی خودکار»، تنها کارکنانی "
+"که این نقش را دارند به‌طور خودکار به شیفت‌های سفارش‌های فروش که شامل این خدمت "
+"هستند اختصاص داده می‌شوند. سیستم در دسترس بودن کارکنان و زمان باقی‌مانده برای "
+"برنامه‌ریزی را در نظر خواهد گرفت. همچنین می‌توانید شیفت‌های باز سفارش فروش را "
+"به‌صورت دستی برنامه‌ریزی کرده یا آنها را به هر کارمندی که ترجیح می‌دهید اختصاص "
+"دهید."
 
 #. module: sale_project_forecast
 #: model:ir.model.fields,field_description:sale_project_forecast.field_product_product__planning_enabled
 #: model:ir.model.fields,field_description:sale_project_forecast.field_product_template__planning_enabled
 msgid "Plan Services"
-msgstr ""
+msgstr "برنامه‌ریزی خدمات"
 
 #. module: sale_project_forecast
 #: model:ir.model,name:sale_project_forecast.model_planning_slot
 msgid "Planning Shift"
-msgstr ""
+msgstr "شیفت برنامه‌ریزی"
 
 #. module: sale_project_forecast
 #: model:ir.model,name:sale_project_forecast.model_product_template
@@ -65,3 +75,6 @@ msgid ""
 "are automatically planned, the remaining hours of the sales order item, as "
 "well as the role defined on the service, are taken into account."
 msgstr ""
+"آیتم سفارش فروش که این شیفت برای آن انجام خواهد شد. زمانی که سفارش‌های فروش "
+"به طور خودکار برنامه‌ریزی می‌شوند، ساعات باقی مانده‌ی آیتم سفارش فروش و نقش "
+"تعریف شده در نظر گرفته می‌شود."

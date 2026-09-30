@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* partner_commission
+# * partner_commission
 #
 # Translators:
 # KeyVillage, 2024
@@ -14,20 +14,22 @@
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Elena Varbanova, 2024
 # Martin Dinovski, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Martin Dinovski, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-10 16:51+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"partner_commission/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: partner_commission
 #. odoo-python
@@ -36,12 +38,14 @@ msgid ""
 "\n"
 "%(product)s: from %(start_date)s to %(end_date)s"
 msgstr ""
+"\n"
+"%(product)s: от %(start_date)s до %(end_date)s"
 
 #. module: partner_commission
 #. odoo-python
 #: code:addons/partner_commission/models/account_move.py:0
 msgid " (%d month(s))"
-msgstr ""
+msgstr " (%d месец(а))"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_plan__active
@@ -61,24 +65,24 @@ msgstr "Архивиран"
 #. module: partner_commission
 #: model_terms:ir.ui.view,arch_db:partner_commission.res_config_settings_view_form
 msgid "Automatic PO frequency"
-msgstr ""
+msgstr "Честота на автоматичните поръчки за покупка"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_rule__is_capped
 msgid "Capped"
-msgstr ""
+msgstr "С таван"
 
 #. module: partner_commission
 #: model:ir.model.fields.selection,name:partner_commission.selection__purchase_order__purchase_type__commission
 #: model:product.template,name:partner_commission.product_commission_product_template
 msgid "Commission"
-msgstr ""
+msgstr "Комисиона"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_res_company__commission_automatic_po_frequency
 #: model:ir.model.fields,field_description:partner_commission.field_res_config_settings__commission_automatic_po_frequency
 msgid "Commission Automatic Po Frequency"
-msgstr ""
+msgstr "Честота на автоматичните поръчки за покупка за комисиони"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_rule__plan_id
@@ -89,35 +93,35 @@ msgstr ""
 #: model:ir.model.fields,field_description:partner_commission.field_sale_report__commission_plan_id
 #: model:ir.model.fields,field_description:partner_commission.field_sale_subscription_report__commission_plan_id
 msgid "Commission Plan"
-msgstr ""
+msgstr "Комисионен план"
 
 #. module: partner_commission
 #: model:ir.actions.act_window,name:partner_commission.action_commission_plans
 #: model:ir.ui.menu,name:partner_commission.menu_commission_plans
 msgid "Commission Plans"
-msgstr ""
+msgstr "Планове за комисиони"
 
 #. module: partner_commission
 #. odoo-python
 #: code:addons/partner_commission/models/account_move.py:0
 msgid "Commission on %(invoice)s, %(partner)s, %(amount)s"
-msgstr ""
+msgstr "Комисиона по %(invoice)s, %(partner)s, %(amount)s"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_commission_plan
 msgid "Commission plan"
-msgstr ""
+msgstr "План за комисиони"
 
 #. module: partner_commission
 #. odoo-python
 #: code:addons/partner_commission/models/account_move.py:0
 msgid "Commission refunded. Invoice: %(link)s. Amount: %(amount)s."
-msgstr ""
+msgstr "Комисионата е възстановена. Фактура: %(link)s. Сума: %(amount)s."
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_commission_rule
 msgid "Commission rules management."
-msgstr ""
+msgstr "Управление на правилата за комисиони."
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_res_company
@@ -159,7 +163,7 @@ msgstr "Фактури за продажби"
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_res_partner_grade__default_commission_plan_id
 msgid "Default Commission Plan"
-msgstr ""
+msgstr "План за комисиони по подразбиране"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_plan__display_name
@@ -170,7 +174,7 @@ msgstr "Име за показване"
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_sale_order__commission_plan_frozen
 msgid "Freeze Plan"
-msgstr ""
+msgstr "Замразяване на плана"
 
 #. module: partner_commission
 #: model_terms:ir.ui.view,arch_db:partner_commission.res_config_settings_view_form
@@ -192,11 +196,16 @@ msgid ""
 "The product must belong to the selected category.\n"
 "Use several rules if you need to match multiple products within a category."
 msgstr ""
+"Ако е зададено, правилото не се прилага за цялата категория, а само за "
+"посочения продукт.\n"
+"Продуктът трябва да принадлежи към избраната категория.\n"
+"Използвайте няколко правила, ако трябва да обхванете няколко продукта в "
+"рамките на една категория."
 
 #. module: partner_commission
 #: model:ir.model.fields,help:partner_commission.field_purchase_order__invoice_commission_count
 msgid "Invoices that have generated commissions included in this order"
-msgstr ""
+msgstr "Фактури, генерирали комисиони, включени в тази поръчка"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_account_move
@@ -233,23 +242,24 @@ msgstr "Механично"
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_rule__max_commission
 msgid "Max Commission"
-msgstr ""
+msgstr "Максимална комисиона"
 
 #. module: partner_commission
 #: model:ir.model.fields,help:partner_commission.field_commission_rule__max_commission
 msgid "Maximum amount, specified in the currency of the pricelist, if given."
 msgstr ""
+"Максимална сума, посочена във валутата на ценовата листа, ако е зададена."
 
 #. module: partner_commission
 #: model_terms:ir.ui.view,arch_db:partner_commission.res_config_settings_view_form
 msgid "Minimum PO amount total"
-msgstr ""
+msgstr "Минимална обща сума на поръчката за покупка"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_res_company__commission_po_minimum
 #: model:ir.model.fields,field_description:partner_commission.field_res_config_settings__commission_po_minimum
 msgid "Minimum Total Amount for PO commission"
-msgstr ""
+msgstr "Минимална обща сума за комисиона по поръчка за покупка"
 
 #. module: partner_commission
 #: model:ir.model.fields.selection,name:partner_commission.selection__res_company__commission_automatic_po_frequency__monthly
@@ -265,27 +275,27 @@ msgstr "Име"
 #. odoo-python
 #: code:addons/partner_commission/models/account_move.py:0
 msgid "New commission. Invoice: %(link)s. Amount: %(amount)s."
-msgstr ""
+msgstr "Нова комисиона. Фактура: %(link)s. Сума: %(amount)s."
 
 #. module: partner_commission
 #: model:res.groups,name:partner_commission.group_commission_user
 msgid "Own Documents Only"
-msgstr ""
+msgstr "Само собствените документи"
 
 #. module: partner_commission
 #: model:ir.actions.server,name:partner_commission.cron_confirm_purchase_orders_ir_actions_server
 msgid "Partner Commission: confirm purchase orders"
-msgstr ""
+msgstr "Комисиони на партньори: потвърждаване на поръчките за покупка"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_res_partner_grade
 msgid "Partner Grade"
-msgstr ""
+msgstr "Ниво на партньора"
 
 #. module: partner_commission
 #: model_terms:ir.ui.view,arch_db:partner_commission.res_config_settings_view_form
 msgid "Partners Commissions"
-msgstr ""
+msgstr "Комисиони на партньорите"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_rule__pricelist_id
@@ -306,7 +316,7 @@ msgstr "Продукт"
 #. odoo-python
 #: code:addons/partner_commission/models/commission_plan.py:0
 msgid "Product %(product)s does not belong to category %(category)s"
-msgstr ""
+msgstr "Продуктът %(product)s не принадлежи към категория %(category)s"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_rule__category_id
@@ -316,7 +326,7 @@ msgstr "Категория продукт"
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_plan__product_id
 msgid "Purchase Default Product"
-msgstr ""
+msgstr "Продукт по подразбиране за покупката"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_purchase_order
@@ -326,7 +336,7 @@ msgstr "Поръчка"
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_purchase_order__purchase_type
 msgid "Purchase Type"
-msgstr ""
+msgstr "Тип покупка"
 
 #. module: partner_commission
 #: model:ir.model.fields.selection,name:partner_commission.selection__res_company__commission_automatic_po_frequency__quarterly
@@ -341,7 +351,7 @@ msgstr "Курс"
 #. module: partner_commission
 #: model:ir.model.constraint,message:partner_commission.constraint_commission_rule_check_rate
 msgid "Rate should be between 0 and 100."
-msgstr ""
+msgstr "Ставката трябва да е между 0 и 100."
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_account_bank_statement_line__referrer_id
@@ -357,18 +367,18 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:partner_commission.sale_report_search
 #: model_terms:ir.ui.view,arch_db:partner_commission.sale_subscription_report_search
 msgid "Referrer"
-msgstr ""
+msgstr "Препоръчител"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_sale_order__commission
 msgid "Referrer Commission"
-msgstr ""
+msgstr "Комисиона на препоръчителя"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_account_bank_statement_line__commission_po_line_id
 #: model:ir.model.fields,field_description:partner_commission.field_account_move__commission_po_line_id
 msgid "Referrer Purchase Order line"
-msgstr ""
+msgstr "Ред от поръчката за покупка на препоръчителя"
 
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_plan__commission_rule_ids
@@ -379,7 +389,7 @@ msgstr "Правила"
 #. module: partner_commission
 #: model:ir.model.fields,field_description:partner_commission.field_commission_rule__template_id
 msgid "Sale Order Template"
-msgstr ""
+msgstr "Шаблон на поръчка за продажба"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_sale_report
@@ -389,7 +399,7 @@ msgstr "Отчет за анализа на продажбите"
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_sale_order_log_report
 msgid "Sales Log Analysis Report"
-msgstr ""
+msgstr "Отчет за анализ на дневника на продажбите"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_sale_order
@@ -405,7 +415,7 @@ msgstr "Последователност"
 #: model:ir.model.fields,field_description:partner_commission.field_purchase_order__invoice_commission_count
 #: model_terms:ir.ui.view,arch_db:partner_commission.purchase_order_form_inherit_partner_commission
 msgid "Source Invoices"
-msgstr ""
+msgstr "Фактури-източници"
 
 #. module: partner_commission
 #: model:ir.model,name:partner_commission.model_sale_subscription_report
@@ -415,7 +425,7 @@ msgstr "Анализ на абонаменти"
 #. module: partner_commission
 #: model:ir.model.fields,help:partner_commission.field_sale_order__commission_plan_id
 msgid "Takes precedence over the Referrer's commission plan."
-msgstr ""
+msgstr "Има предимство пред плана за комисиони на препоръчителя."
 
 #. module: partner_commission
 #. odoo-python
@@ -424,6 +434,8 @@ msgid ""
 "The commission partner order %s must be checked manually (especially refund "
 "lines which can be duplicated)."
 msgstr ""
+"Поръчката за комисиона към партньора %s трябва да се провери ръчно (особено "
+"редовете за кредитни известия, които може да са дублирани)."
 
 #. module: partner_commission
 #: model:ir.model.fields,help:partner_commission.field_res_partner_grade__default_commission_plan_id
@@ -431,6 +443,8 @@ msgid ""
 "The default commission plan used for this grade. Can be overwritten on the "
 "partner form."
 msgstr ""
+"Планът за комисиони по подразбиране, използван за това ниво. Може да бъде "
+"заместен във формуляра на партньора."
 
 #. module: partner_commission
 #: model_terms:ir.ui.view,arch_db:partner_commission.res_config_settings_view_form
@@ -449,7 +463,7 @@ msgstr "Седмично"
 #. module: partner_commission
 #: model:ir.model.fields,help:partner_commission.field_commission_rule__is_capped
 msgid "Whether the commission is capped."
-msgstr ""
+msgstr "Дали комисионата е ограничена с таван."
 
 #. module: partner_commission
 #: model:ir.model.fields,help:partner_commission.field_sale_order__commission_plan_frozen
@@ -457,3 +471,5 @@ msgid ""
 "Whether the commission plan is frozen. When checked, the commission plan "
 "won't automatically be updated according to the partner level."
 msgstr ""
+"Дали планът за комисиони е замразен. Когато е отметнато, планът за комисиони "
+"няма да се актуализира автоматично според нивото на партньора."

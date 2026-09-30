@@ -2673,6 +2673,40 @@ class TestAccountAsset(TestAccountReportsCommon):
             options,
         )
 
+    def test_depreciation_schedule_prefix_groups_with_comparison(self):
+        """ Prefix grouping + comparison: an asset with no value in the comparison
+        period yields an empty column dict, which must be summed as 0 instead of
+        raising KeyError: 'no_format'. """
+        for i in range(1, 3):
+            asset = self.env['account.asset'].create({
+                'method_period': '12',
+                'method_number': 4,
+                'name': f"Bldg {i}",
+                'original_value': i * 100.0,
+                'acquisition_date': fields.Date.from_string('2021-06-01'),
+                'account_asset_id': self.company_data['default_account_assets'].id,
+                'account_depreciation_id': self.company_data['default_account_assets'].copy().id,
+                'account_depreciation_expense_id': self.company_data['default_account_expense'].id,
+                'journal_id': self.company_data['default_journal_misc'].id,
+                'prorata_computation_type': 'none',
+            })
+            asset.validate()
+        self.env['account.move']._autopost_draft_entries()
+
+        report = self.env.ref('account_asset.assets_report')
+        report.prefix_groups_threshold = 2
+        report.filter_period_comparison = True
+        options = self._generate_options(
+            report, '2021-01-01', '2021-12-31',
+            default_options={'assets_grouping_field': 'none', 'unfold_all': True},
+        )
+        options = self._update_comparison_filter(options, report, 'previous_period', 1)
+
+        lines = report._get_lines(options)
+
+        prefix_line_names = [line['name'] for line in lines if line['name'].startswith('B ')]
+        self.assertEqual(prefix_line_names, ['B (2 lines)'])
+
     def test_archive_asset_model(self):
         """ Test that we can archive an asset model. """
         self.account_asset_model_fixedassets.active = False
@@ -3182,3 +3216,46 @@ class TestAccountAsset(TestAccountReportsCommon):
                 line_form.product_id = self.product_a
                 line_form.tax_ids.clear()
                 line_form.tax_ids.add(self.tax_armageddon)
+
+    def test_asset_account_mismatch(self):
+        """
+        Test if the Depreciation Schedule report catches the mismatch between the
+        Fixed Asset Account of the asset and the Account of the associated move_line
+        """
+        self.company_data['default_account_assets'].create_asset = 'validate'
+        self.company_data['default_account_assets'].asset_model_ids = self.truck
+
+        invoices = self.env['account.move'].create([
+            {
+                'move_type': 'in_invoice',
+                'invoice_date': '2026-07-31',
+                'partner_id': self.partner_a.id,
+                'invoice_line_ids': [
+                    Command.create({
+                        'name': f"Truck {idx}",
+                        'account_id': self.company_data['default_account_assets'].id,
+                        'price_unit': price_unit,
+                        'quantity': 1,
+                    })
+                ],
+            }
+            for idx, price_unit in enumerate([450, 500, 550])
+        ])
+        invoices.action_post()
+
+        report = self.env.ref('account_asset.assets_report')
+        options = self._generate_options(report, '2026-01-01', '2026-12-31')
+        warnings = {}
+        report._get_lines(options, warnings=warnings)
+
+        self.assertNotIn('account_asset.common_warning_discrepancy_detected', warnings)
+
+        modified_move_line = invoices[1].invoice_line_ids[0]
+        modified_move_line.account_id = self.company_data['default_account_expense'].id
+        corresponding_asset = self.env['account.asset'].search([('original_move_line_ids', 'in', [modified_move_line.id])])
+
+        warnings = {}
+        report._get_lines(options, warnings=warnings)
+
+        self.assertIn('account_asset.common_warning_discrepancy_detected', warnings)
+        self.assertEqual(warnings['account_asset.common_warning_discrepancy_detected']['asset_ids'], corresponding_asset.ids)

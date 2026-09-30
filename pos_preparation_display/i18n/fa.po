@@ -1,41 +1,44 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* pos_preparation_display
+# * pos_preparation_display
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 # Naser mars, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Naser mars, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-11 09:36+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"pos_preparation_display/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "<span>Average time</span>"
-msgstr ""
+msgstr "<span>زمان میانگین</span>"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "<span>In progress</span>"
-msgstr ""
+msgstr "<span>در جریان</span>"
 
 #. module: pos_preparation_display
 #. odoo-python
 #: code:addons/pos_preparation_display/models/preparation_display.py:0
 msgid "A preparation display must have a minimum of one step."
-msgstr ""
+msgstr "نمایشگر آماده‌سازی باید حداقل یک مرحله داشته باشد."
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__access_token
@@ -45,7 +48,7 @@ msgstr "توکن دسترسی"
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_stage__alert_timer
 msgid "Alert timer (min)"
-msgstr ""
+msgstr "تایمر هشدار (دقیقه)"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -56,7 +59,7 @@ msgstr "همه"
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_form
 msgid "All PoS"
-msgstr ""
+msgstr "همه پایانه‌های فروش"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_form
@@ -74,22 +77,24 @@ msgid ""
 "Archive all preparation display's orders for a fresh start. This will not "
 "affect the PoS order history."
 msgstr ""
+"برای شروعی دوباره، تمام سفارش‌های نمایشگر آماده‌سازی را بایگانی کنید. این کار "
+"بر تاریخچه سفارش‌های پایانه فروش تأثیری نخواهد گذاشت."
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_display__average_time
 msgid "Average time of all order that not in a done stage."
-msgstr ""
+msgstr "میانگین زمان همه سفارش‌هایی که در مرحله انجام شده نیستند."
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_reset_wizard
 msgid "Check products"
-msgstr ""
+msgstr "بررسی محصولات"
 
 #. module: pos_preparation_display
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "Clear All Filters"
-msgstr ""
+msgstr "پاک کردن همه فیلترها"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -135,7 +140,7 @@ msgstr "ایجادشده در"
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_order__pdis_general_note
 msgid "Current general-note displayed on preparation display"
-msgstr ""
+msgstr "یادداشت عمومی فعلی که در صفحه آماده‌سازی نمایش داده می‌شود"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_order__displayed
@@ -148,6 +153,7 @@ msgstr ""
 msgid ""
 "Different products and categories are sent to different tablets and screens."
 msgstr ""
+"محصولات و دسته‌بندی‌های مختلف به تبلت‌ها و نمایشگرهای مختلف ارسال می‌شوند."
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_reset_wizard
@@ -175,13 +181,13 @@ msgstr "انجام شده"
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "Explore demo data"
-msgstr ""
+msgstr "داده‌های دمو را بررسی کنید"
 
 #. module: pos_preparation_display
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/override/point_of_sale/pos_store.js:0
 msgid "Failed in sending the changes to preparation display"
-msgstr ""
+msgstr "ارسال تغییرات به نمایشگر آماده‌سازی ناموفق بود"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -194,7 +200,7 @@ msgstr "فیلترها"
 #: code:addons/pos_preparation_display/static/src/app/components/order/order.xml:0
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_order__pdis_general_note
 msgid "General Note"
-msgstr ""
+msgstr "یادداشت عمومی"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__id
@@ -219,7 +225,7 @@ msgstr "یادداشت داخلی"
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_orderline__internal_note
 msgid "Internal notes written at the time of the order"
-msgstr ""
+msgstr "یادداشت‌های داخلی که در زمان سفارش نوشته شده‌اند"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__contains_bar_restaurant
@@ -236,7 +242,7 @@ msgstr ""
 #: model:ir.actions.server,name:pos_preparation_display.action_pos_preparation_display_kitchen_display
 #: model:ir.ui.menu,name:pos_preparation_display.menu_point_kitchen_display_root
 msgid "Kitchen Display"
-msgstr ""
+msgstr "نمایشگر آشپزخانه"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__write_uid
@@ -273,7 +279,7 @@ msgstr "نام"
 #. module: pos_preparation_display
 #: model_terms:ir.actions.act_window,help:pos_preparation_display.action_preparation_display
 msgid "Need a touchscreen interface to manage order ?"
-msgstr ""
+msgstr "برای مدیریت سفارش به رابط کاربری لمسی نیاز دارید؟"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -284,7 +290,7 @@ msgstr "هیچ داده‌ای موجود نیست."
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_form
 msgid "Offer"
-msgstr ""
+msgstr "پیشنهاد"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_order_stage__order_id
@@ -304,12 +310,12 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__average_time
 msgid "Order average time"
-msgstr ""
+msgstr "میانگین زمان سفارش"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__order_count
 msgid "Order count"
-msgstr ""
+msgstr "تعداد سفارش"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_order__displayed
@@ -319,7 +325,7 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_orderline__pos_order_line_uuid
 msgid "Original pos order line UUID"
-msgstr ""
+msgstr "UUID سطر سفارش اصلی پایانه فروش"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__pos_config_ids
@@ -355,7 +361,7 @@ msgstr "سفارش Pos"
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__pos_order_line_uuid
 msgid "Pos Order Line Uuid"
-msgstr ""
+msgstr "Uuid سطر سفارش پایانه فروش"
 
 #. module: pos_preparation_display
 #: model:ir.actions.act_url,name:pos_preparation_display.action_pos_preparation_display_bar_restaurant_filter_link
@@ -376,13 +382,13 @@ msgstr ""
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "Preparation Screen"
-msgstr ""
+msgstr "صفحه نمایش آماده‌سازی"
 
 #. module: pos_preparation_display
 #: model:ir.model,name:pos_preparation_display.model_pos_preparation_display_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_stage__preparation_display_id
 msgid "Preparation display"
-msgstr ""
+msgstr "نمایشگر آماده‌سازی"
 
 #. module: pos_preparation_display
 #: model:ir.model,name:pos_preparation_display.model_pos_preparation_display_order
@@ -392,22 +398,22 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__product_id
 msgid "Product ID"
-msgstr ""
+msgstr "شناسه محصول"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__category_ids
 msgid "Product categories"
-msgstr ""
+msgstr "دسته‌بندی‌های محصول"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_display__category_ids
 msgid "Product categories that will be displayed on this screen."
-msgstr ""
+msgstr "دسته‌بندی‌های محصولی که در این صفحه نمایش داده خواهند شد."
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__product_cancelled
 msgid "Quantity of cancelled product"
-msgstr ""
+msgstr "تعداد محصول لغو شده"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__product_quantity
@@ -418,7 +424,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "Recall"
-msgstr ""
+msgstr "فراخوانی"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -431,17 +437,17 @@ msgstr "تنظیم مجدد"
 #. odoo-python
 #: code:addons/pos_preparation_display/models/preparation_display.py:0
 msgid "Reset Preparation Display"
-msgstr ""
+msgstr "بازنشانی نمایشگر آماده‌سازی"
 
 #. module: pos_preparation_display
 #: model:ir.model,name:pos_preparation_display.model_pos_preparation_display_reset_wizard
 msgid "Reset all current order in a preparation display"
-msgstr ""
+msgstr "بازنشانی تمام سفارش‌های فعلی در نمایشگر آماده‌سازی"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "Reset all orders"
-msgstr ""
+msgstr "بازنشانی همه سفارش‌ها"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__attribute_value_ids
@@ -452,7 +458,7 @@ msgstr "خصوصیات انتخاب شده"
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/override/point_of_sale/pos_store.js:0
 msgid "Send failed"
-msgstr ""
+msgstr "ارسال ناموفق بود"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_stage__sequence
@@ -478,17 +484,17 @@ msgstr "مراحل"
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__todo
 msgid "Status of the orderline"
-msgstr ""
+msgstr "وضعیت سطر سفارش"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_orderline__todo
 msgid "The status of a command line, todo or not"
-msgstr ""
+msgstr "وضعیت خط فرمان، کار انجام نشده یا انجام شده"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_stage__alert_timer
 msgid "Timer after which the order will be highlighted"
-msgstr ""
+msgstr "تایمری که پس از آن سفارش برجسته خواهد شد"
 
 #. module: pos_preparation_display
 #. odoo-python
@@ -496,7 +502,7 @@ msgstr ""
 msgid ""
 "You cannot modify the stages of a preparation display that has an active "
 "sessions."
-msgstr ""
+msgstr "شما نمی‌توانید مراحل نمایشگر آماده‌سازی دارای نشست فعال را تغییر دهید."
 
 #. module: pos_preparation_display
 #: model:ir.actions.server,name:pos_preparation_display.preparation_display_delete_cron_ir_actions_server
@@ -507,10 +513,10 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "or simply wait for orders to be sent for preparation."
-msgstr ""
+msgstr "یا منتظر بمانید تا سفارش‌ها به نمایشگر آماده‌سازی ارسال شوند."
 
 #. module: pos_preparation_display
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/order/order.xml:0
 msgid "products"
-msgstr ""
+msgstr "محصول"

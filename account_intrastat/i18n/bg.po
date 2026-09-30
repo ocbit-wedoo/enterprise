@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 17:48+0000\n"
-"PO-Revision-Date: 2026-05-06 21:40+0000\n"
+"PO-Revision-Date: 2026-08-05 17:57+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "account_intrastat/bg/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -71,7 +71,7 @@ msgstr ""
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.account_move_line_tree_view_account_intrastat_transaction_codes
 msgid "Account move line"
-msgstr ""
+msgstr "Ред от счетоводен запис"
 
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
@@ -117,7 +117,7 @@ msgstr "Проверете изтеклите"
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid "Check the premature"
-msgstr ""
+msgstr "Проверете преждевременното"
 
 #. module: account_intrastat
 #: model:account.report.column,name:account_intrastat.intrastat_report_column_commodity_code
@@ -306,7 +306,7 @@ msgstr "Интрастат код на транзакция"
 #. odoo-python
 #: code:addons/account_intrastat/models/product.py:0
 msgid "Invalid Intrastat Code"
-msgstr ""
+msgstr "Невалиден Intrastat код"
 
 #. module: account_intrastat
 #. odoo-python
@@ -361,7 +361,7 @@ msgstr "Липсващ продукт"
 #. module: account_intrastat
 #: model:res.country,name:account_intrastat.xi
 msgid "Northern Ireland"
-msgstr ""
+msgstr "Северна Ирландия"
 
 #. module: account_intrastat
 #. odoo-python
@@ -370,6 +370,8 @@ msgid ""
 "Note that the selected commodity code is invalid based on its start or "
 "expiry date. You can still select it."
 msgstr ""
+"Имайте предвид, че избраният стоков код е невалиден според началната или "
+"крайната си дата. Все пак можете да го изберете."
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -477,7 +479,7 @@ msgstr "Ситема"
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__tj
 msgid "TJ"
-msgstr ""
+msgstr "TJ"
 
 #. module: account_intrastat
 #: model:ir.model.fields,help:account_intrastat.field_res_config_settings__company_country_id
@@ -509,6 +511,8 @@ msgid ""
 "The product template has no products/variants. At least one variant is "
 "required to set the Intrastat values."
 msgstr ""
+"Шаблонът на продукта няма продукти/варианти. Необходим е поне един вариант, "
+"за да се зададат стойностите за Интрастат."
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -565,13 +569,13 @@ msgstr "Килограм (kg)"
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__c/k
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__c/k
 msgid "c/k"
-msgstr ""
+msgstr "c/k"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__ce/el
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__ce/el
 msgid "ce/el"
-msgstr ""
+msgstr "ce/el"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -583,19 +587,19 @@ msgstr "кодове на стоки"
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__ct/l
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__ct/l
 msgid "ct/l"
-msgstr ""
+msgstr "ct/l"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__g
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__g
 msgid "g"
-msgstr ""
+msgstr "г"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__gi_f_/_s
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__gi_f_/_s
 msgid "gi F / S"
-msgstr ""
+msgstr "gi F / S"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -607,73 +611,73 @@ msgstr "редове от дневници без продукт"
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_90_%_sdt
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_90_%_sdt
 msgid "kg 90 % sdt"
-msgstr ""
+msgstr "kg 90 % sdt"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_h2o2
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_h2o2
 msgid "kg H2O2"
-msgstr ""
+msgstr "kg H2O2"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_k2o
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_k2o
 msgid "kg K2O"
-msgstr ""
+msgstr "kg K2O"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_koh
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_koh
 msgid "kg KOH"
-msgstr ""
+msgstr "kg KOH"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_n
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_n
 msgid "kg N"
-msgstr ""
+msgstr "kg N"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_naoh
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_naoh
 msgid "kg NaOH"
-msgstr ""
+msgstr "kg NaOH"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_p2o5
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_p2o5
 msgid "kg P2O5"
-msgstr ""
+msgstr "kg P2O5"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_u
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_u
 msgid "kg U"
-msgstr ""
+msgstr "kg U"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg_met_am_
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg_met_am_
 msgid "kg met.am."
-msgstr ""
+msgstr "kg met.am."
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__kg/net_eda
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__kg/net_eda
 msgid "kg/net eda"
-msgstr ""
+msgstr "kg/net eda"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__l
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__l
 msgid "l"
-msgstr ""
+msgstr "l"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__l_alc__100_%
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__l_alc__100_%
 msgid "l alc. 100 %"
-msgstr ""
+msgstr "l alc. 100 %"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__m
@@ -685,25 +689,25 @@ msgstr "м"
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__m2
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__m2
 msgid "m2"
-msgstr ""
+msgstr "m2"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__m3
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__m3
 msgid "m3"
-msgstr ""
+msgstr "m3"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__p/st
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__p/st
 msgid "p/st"
-msgstr ""
+msgstr "p/st"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__pa
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__pa
 msgid "pa"
-msgstr ""
+msgstr "pa"
 
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.product_product_tree_view_account_intrastat_supplementary_unit
@@ -732,7 +736,7 @@ msgstr "допълнителни единици"
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__t__co2
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__t__co2
 msgid "t. CO2"
-msgstr ""
+msgstr "т. CO2"
 
 #. module: account_intrastat
 #. odoo-javascript

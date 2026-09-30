@@ -26,6 +26,7 @@ from urllib3.util.ssl_ import create_urllib3_context
 from urllib3.contrib.pyopenssl import inject_into_urllib3
 from urllib3.connectionpool import HTTPSConnectionPool
 from requests.exceptions import SSLError
+from stdnum.nl.btw import compact
 
 server_leaf_cert = None
 server_intermediate_certs = []
@@ -405,8 +406,12 @@ class L10nNlTaxReportSBRWizard(models.TransientModel):
                 _('Company settings')
             )
 
-    def _get_sbr_identifier(self):
-        return self.env.company.vat[2:] if self.env.company.vat.startswith('NL') else self.env.company.vat
+    def _get_sbr_identifier(self, options=None):
+        vat = self.env.company.vat[2:] if self.env.company.vat.startswith('NL') else self.env.company.vat
+        if options and options.get('report_id'):
+            report = self.env['account.report'].browse(options['report_id'])
+            vat = report.get_vat_for_export(options, raise_warning=False)
+        return compact(vat) if vat else ''
 
     def _additional_processing(self, options, kenmerk, closing_move):
         # TO BE OVERRIDEN by additional service(s)
@@ -479,7 +484,7 @@ class L10nNlTaxReportSBRWizard(models.TransientModel):
                 response = delivery_service.aanleveren(
                     berichtsoort='Omzetbelasting',
                     aanleverkenmerk=aanleverkenmerk,
-                    identiteitBelanghebbende=factory.identiteitType(nummer=self._get_sbr_identifier(), type='BTW'),
+                    identiteitBelanghebbende=factory.identiteitType(nummer=self._get_sbr_identifier(options), type='BTW'),
                     rolBelanghebbende='Bedrijf',
                     berichtInhoud=factory.berichtInhoudType(mimeType='application/xml', bestandsnaam='TaxReport.xbrl', inhoud=report_file),
                     autorisatieAdres='http://geenausp.nl',
@@ -529,12 +534,14 @@ class L10nNlTaxReportSBRWizard(models.TransientModel):
     def _generate_general_codes_values(self, options):
         self._check_values()
         report = self.env['account.report'].browse(options['report_id'])
+        sender_vat = report._get_sender_company_for_export(options).vat
+        vat_identification_division = compact(sender_vat) if sender_vat else ''
         vat = report.get_vat_for_export(options)
         message_reference_supplier_vat = (self.env.company.account_representative_id.vat or vat)
         if message_reference_supplier_vat.startswith('NL'):
-            message_reference_supplier_vat = message_reference_supplier_vat[2:]
+            message_reference_supplier_vat = compact(message_reference_supplier_vat)
         return {
-            'identifier': self._get_sbr_identifier() or (vat[2:] if vat.startswith('NL') else vat),
+            'identifier': self._get_sbr_identifier(options),
             'startDate': fields.Date.to_string(self.date_from),
             'endDate': fields.Date.to_string(self.date_to),
             'ContactInitials': self.contact_initials or '',
@@ -550,4 +557,5 @@ class L10nNlTaxReportSBRWizard(models.TransientModel):
             'SoftwarePackageVersion': '.'.join(self.sudo().env.ref('base.module_base').latest_version.split('.')[0:3]),
             'SoftwareVendorAccountNumber': 'swo02770',
             'TaxConsultantNumber': self.tax_consultant_number,
+            'VATIdentificationNumberNLFiscalEntityDivision': vat_identification_division,
         }

@@ -215,6 +215,53 @@ class TestL10nBREDI(TestL10nBREDICommon):
 
         self.assertEqual(header["goods"]["class"], "TEST CLASS VALUE", "Test class value should be included in header.")
 
+    def _prepare_return(self, lines):
+        self.invoice.l10n_br_access_key = "12345678901234567890123456789012345678901234"
+        refund = self.invoice._reverse_moves()
+        refund.l10n_br_edi_avatax_data = json.dumps(
+            {"header": invoice_1_request["header"], "lines": lines, "summary": invoice_1_request["summary"]}
+        )
+        return refund
+
+    def test_prepare_tax_data_return_access_key(self):
+        referenced_item = {"documentCode": "account.move_1", "lineCode": 2}
+        refund = self._prepare_return([{"lineCode": 1, "referencedItem": referenced_item}, {"lineCode": 3}])
+
+        lines = refund._l10n_br_edi_get_tax_data()[0]["lines"]
+
+        self.assertEqual(
+            lines[0]["referencedItem"],
+            {"invoiceAccessKey": self.invoice.l10n_br_access_key, "lineCode": 2},
+            "Returns should reference the original NF-e by access key alone on each referenced line.",
+        )
+        self.assertNotIn("referencedItem", lines[1], "Lines without a reference should be left alone.")
+
+    def test_submit_payload_has_no_header_ref_for_return(self):
+        """The reference tax calculation leaves in the header survives _l10n_br_edi_get_invoice_refs returning {}."""
+        refund = self._prepare_return([{"lineCode": 1}])
+        refund.l10n_br_edi_payment_method = "01"
+        refund.is_tax_computed_externally = False  # same hack as setUpClass: posting would call Avatax
+        refund.action_post()
+        refund.is_tax_computed_externally = True
+
+        payload, errors = refund._l10n_br_prepare_invoice_payload()
+
+        self.assertFalse(errors, "The origin has an access key, so there should be no error.")
+        self.assertNotIn("invoicesRefs", payload["header"], "Returns should carry no reference in the header.")
+
+    def test_invoice_refs_kept_when_not_a_return(self):
+        referenced_item = {"documentCode": "account.move_1", "lineCode": 2}
+        refund = self._prepare_return([{"lineCode": 1, "referencedItem": referenced_item}])
+        refund.move_type = "out_invoice"
+
+        refs, _error = refund._l10n_br_edi_get_invoice_refs()
+        lines = refund._l10n_br_edi_get_tax_data()[0]["lines"]
+
+        self.assertEqual(lines[0]["referencedItem"], referenced_item, "Only returns should be rewritten.")
+        self.assertEqual(
+            refs["invoicesRefs"][0]["refNFe"], self.invoice.l10n_br_access_key, "Others keep the header ref."
+        )
+
     def test_update_cancel(self):
         self.invoice.button_draft()  # FIXME this test only works with a draft invoice, is it intended ?
         wizard = self.env["l10n_br_edi.invoice.update"].create(

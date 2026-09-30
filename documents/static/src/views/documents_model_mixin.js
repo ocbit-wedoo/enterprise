@@ -15,7 +15,7 @@ export const DocumentsModelMixin = (component) =>
             this.initialLimit = 40;
 
             if (!this.defaultOrderBy?.length) {
-                this.defaultOrderBy = [{ name: "create_date", asc: false }];
+                this.defaultOrderBy = [{ name: "create_date", asc: false }, {name: "id", asc: false}];
             }
         }
 

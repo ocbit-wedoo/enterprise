@@ -8,12 +8,13 @@
 #
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Ryoko Tsuda <ryoko@quartile.co>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:54+0000\n"
-"PO-Revision-Date: 2026-05-19 10:53+0000\n"
+"POT-Creation-Date: 2026-06-19 17:50+0000\n"
+"PO-Revision-Date: 2026-08-31 07:08+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "spreadsheet_edition/ja/>\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -70,7 +71,7 @@ msgstr "%s スレッド"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/components/locale_status/locale_status.js:0
 msgid "- dates: %s"
-msgstr "- 日にち: %s"
+msgstr "- 日付: %s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -167,13 +168,13 @@ msgstr "添付数"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/date_filter_editor_side_panel.xml:0
 msgid "Automatically filter on the current period"
-msgstr "現在の期間で自動的にフィルタ"
+msgstr "現在の期間で自動的に絞り込む"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 msgid "Automatically filter on the current user"
-msgstr "現在のユーザで自動的にフィルタ"
+msgstr "現在のユーザで自動的に絞り込む"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -290,14 +291,14 @@ msgstr "通貨"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/version_history/side_panel/version_history_item.xml:0
 msgid "Current"
-msgstr "流動"
+msgstr "現在"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_dashboard__current_revision_uuid
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_dashboard_share__current_revision_uuid
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_mixin__current_revision_uuid
 msgid "Current Revision Uuid"
-msgstr "現在の改訂Uuid"
+msgstr "現在のリビジョンUUID"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -374,7 +375,7 @@ msgid ""
 "Difference between user locale (%(user_locale)s) and spreadsheet locale (%"
 "(spreadsheet_locale)s). This spreadsheet is using the formats below:"
 msgstr ""
-"ローカルユーザ (%(user_locale)s)とローカススプレッドシート (%"
+"ユーザロケール (%(user_locale)s)とスプレッドシートロケール (%"
 "(spreadsheet_locale)s)の違い。このスプレッドシートは以下のフォーマットを使用"
 "しています:"
 
@@ -516,7 +517,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:spreadsheet_edition.field_spreadsheet_cell_thread__message_has_error
 #: model:ir.model.fields,help:spreadsheet_edition.field_spreadsheet_cell_thread__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -618,7 +619,7 @@ msgstr "凡例ポジション"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/index.js:0
 msgid "Line"
-msgstr "ライン"
+msgstr "折れ線"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -677,11 +678,12 @@ msgstr "リストプロパティ"
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/side_panel/version_history_side_panel.xml:0
 #: code:addons/spreadsheet_edition/static/src/bundle/version_history/side_panel/version_history_side_panel.xml:0
 msgid "Load More"
-msgstr "さらにロード"
+msgstr "さらに読み込む"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/common/config_panel.xml:0
+#: code:addons/spreadsheet_edition/static/src/bundle/list/plugins/list_autofill_plugin.js:0
 msgid "Loading..."
 msgstr "読込中..."
 
@@ -850,7 +852,7 @@ msgstr "エラー数"
 #. module: spreadsheet_edition
 #: model:ir.model.fields,help:spreadsheet_edition.field_spreadsheet_cell_thread__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,help:spreadsheet_edition.field_spreadsheet_cell_thread__message_has_error_counter
@@ -940,7 +942,7 @@ msgstr "可能な値"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_field_offset.js:0
 msgid "Previous"
-msgstr "前へ"
+msgstr "前期"
 
 #. module: spreadsheet_edition
 #. odoo-javascript

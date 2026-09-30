@@ -23,13 +23,14 @@
 # Albena Mincheva <albena_vicheva@abv.bg>, 2025
 # Petko Karamotchev, 2025
 # "v.kanev" <v.kanev@tutanota.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-22 17:52+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
-"Last-Translator: \"v.kanev\" <v.kanev@tutanota.com>\n"
+"PO-Revision-Date: 2026-07-27 17:09+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "documents/bg/>\n"
 "Language: bg\n"
@@ -37,7 +38,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: documents
 #. odoo-javascript
@@ -1122,6 +1123,8 @@ msgid ""
 "Can configure folders, manage access rights, and oversee all documents "
 "within their areas."
 msgstr ""
+"Може да конфигурира папки, да управлява правата за достъп и да наблюдава "
+"всички документи в своите области."
 
 #. module: documents
 #: model:res.groups,comment:documents.group_documents_user
@@ -1137,7 +1140,7 @@ msgstr "Отказ"
 #. odoo-python
 #: code:addons/documents/models/documents_access.py:0
 msgid "Cannot invite this member."
-msgstr ""
+msgstr "Този член не може да бъде поканен."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__checksum
@@ -1207,7 +1210,7 @@ msgstr "Затвори"
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Close (Esc)"
-msgstr ""
+msgstr "Затваряне (Esc)"
 
 #. module: documents
 #. odoo-javascript
@@ -1317,7 +1320,7 @@ msgstr "Създаване на нова дейност"
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Create a new document for the remaining page."
-msgstr ""
+msgstr "Създаване на нов документ за оставащата страница."
 
 #. module: documents
 #. odoo-javascript
@@ -1541,7 +1544,7 @@ msgstr "Токен на документ"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/kanban/documents_kanban_model.js:0
 msgid "Document not found or inaccessible."
-msgstr ""
+msgstr "Документът не е намерен или е недостъпен."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
@@ -1966,6 +1969,8 @@ msgid ""
 "Has full control over all document settings, folders, and user rights across "
 "the application."
 msgstr ""
+"Има пълен контрол върху всички настройки на документи, папки и потребителски "
+"права в приложението."
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
@@ -2205,7 +2210,7 @@ msgstr "Елементите преместени в кошчето ще бъд�
 #. module: documents
 #: model:ir.model,name:documents.model_kpi_provider
 msgid "KPI Provider"
-msgstr ""
+msgstr "Доставчик на KPI"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_access__last_access_date
@@ -2241,18 +2246,20 @@ msgid ""
 "Let's move this document to Finance<br/> <i>Tips: actions can be tailored to "
 "your process, according to the folder.</i>"
 msgstr ""
+"Нека преместим този документ във Финанси<br/> <i>Съвети: действията могат да "
+"бъдат съобразени с вашия процес, според папката.</i>"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Let's process documents in this folder.<br/>"
-msgstr ""
+msgstr "Нека обработим документите в тази папка.<br/>"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Let's process these bills: send to Finance folder."
-msgstr ""
+msgstr "Нека обработим тези фактури: изпратете ги в папка Финанси."
 
 #. module: documents
 #. odoo-javascript
@@ -2515,7 +2522,7 @@ msgstr "Име / Разширение"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_model_mixin.js:0
 msgid "Name cannot be empty."
-msgstr ""
+msgstr "Името не може да бъде празно."
 
 #. module: documents
 #. odoo-javascript
@@ -2713,7 +2720,7 @@ msgstr "Само мениджърите на Документи могат да 
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_model_mixin.js:0
 msgid "Only current page items can be dragged."
-msgstr ""
+msgstr "Само елементите от текущата страница могат да бъдат влачени."
 
 #. module: documents
 #. odoo-javascript
@@ -2741,7 +2748,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/js/tours/documents.js:0
 msgid "Open the actions menu"
-msgstr ""
+msgstr "Отваряне на менюто с действия"
 
 #. module: documents
 #. odoo-javascript
@@ -3545,7 +3552,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "There are no records to link this document. Create one first."
-msgstr ""
+msgstr "Няма записи, към които да се свърже този документ. Първо създайте един."
 
 #. module: documents
 #: model:ir.model.fields.selection,name:documents.selection__documents_document__last_access_date_group__1_month
@@ -3789,7 +3796,7 @@ msgstr "Заявка за качване на файл"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_type_icon/documents_type_icon.xml:0
 msgid "Upload the requested file"
-msgstr ""
+msgstr "Качи заявения файл"
 
 #. module: documents
 #: model:ir.model,name:documents.model_res_users
@@ -4169,7 +4176,7 @@ msgstr "папки,"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_link_to_record_wizard__is_readonly_model
 msgid "is_readonly_model"
-msgstr ""
+msgstr "is_readonly_model"
 
 #. module: documents
 #. odoo-javascript
@@ -4229,7 +4236,7 @@ msgstr "код на състоянието: %(status)s, съобщение: %(me
 #. odoo-javascript
 #: code:addons/documents/static/src/owl/components/pdf_manager/pdf_manager.js:0
 msgid "sub-doc-%s"
-msgstr ""
+msgstr "sub-doc-%s"
 
 #. module: documents
 #. odoo-javascript

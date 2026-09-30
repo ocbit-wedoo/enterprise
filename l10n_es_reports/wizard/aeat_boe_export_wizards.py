@@ -35,7 +35,7 @@ class Mod111And115And303CommonBOEWizard(models.TransientModel):
         return self.env.company
 
     company_id = fields.Many2one(string="Current Company", comodel_name='res.company', default=_get_current_company)
-    company_partner_id = fields.Many2one(string="Company Partner", comodel_name='res.partner', related='company_id.partner_id', readonly=False)
+    company_partner_id = fields.Many2one(string="Company Partner", comodel_name='res.partner', related='company_id.partner_id')
     partner_bank_id = fields.Many2one(string="Direct Debit Account", comodel_name='res.partner.bank', help="The IBAN account number to use for direct debit. Leave blank if you don't use direct debit.", domain="[('partner_id','=',company_partner_id)]")
     complementary_declaration = fields.Boolean(string="Complementary Declaration", help="Whether or not this BOE file is a complementary declaration.")
     declaration_type = fields.Selection(string="Declaration Type", selection=[('I', 'I - Income'), ('U', 'U - Direct debit'), ('G', 'G - Income to enter on CCT'), ('N', 'N - To return')], required=True, default='I')

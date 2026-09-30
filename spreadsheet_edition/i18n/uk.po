@@ -4,7 +4,7 @@
 #
 # Translators:
 # Martin Trigaux, 2024
-# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2025
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2025, 2026.
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
 # Yana Bystrytska <yana.bystrytska@erp.co.ua>, 2026.
@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:54+0000\n"
-"PO-Revision-Date: 2026-05-29 20:07+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-06-19 17:50+0000\n"
+"PO-Revision-Date: 2026-07-22 11:10+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
 "spreadsheet_edition/uk/>\n"
 "Language: uk\n"
@@ -25,7 +25,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -49,7 +49,7 @@ msgstr "%(name)s (переміщено з %(timestamp)s)"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/pivot_init_callback.js:0
 msgid "%(pivot_name)s (Pivot #%(pivot_id)s)"
-msgstr ""
+msgstr "%(pivot_name)s (Зведена таблиця #%(pivot_id)s)"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -67,7 +67,7 @@ msgstr "%(pivot_title)s %(group_by)s (%(granularity)s)"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "%s threads"
-msgstr ""
+msgstr "%s тредс"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -85,12 +85,12 @@ msgstr "- числа: %s"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "1 thread"
-msgstr ""
+msgstr "1 тред"
 
 #. module: spreadsheet_edition
 #: model:ir.model.constraint,message:spreadsheet_edition.constraint_spreadsheet_revision_parent_unique
 msgid "A revision based on the same revision already exists"
-msgstr ""
+msgstr "Версія, заснована на тій самій версії, вже існує"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__message_needaction
@@ -119,7 +119,7 @@ msgstr "Додайте новий фільтр..."
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_field_offset.js:0
 msgid "After next"
-msgstr "Після настпуного"
+msgstr "Після наступного"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -131,7 +131,7 @@ msgstr "Усі коментарі"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "All sheets"
-msgstr ""
+msgstr "Усі таблиці"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -143,7 +143,7 @@ msgstr "Ви впевнені, що хочете видалити цей спи�
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/index.js:0
 msgid "Area"
-msgstr ""
+msgstr "Область"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -158,6 +158,8 @@ msgid ""
 "At least one data source has an invalid model. Please delete it before "
 "editing this global filter."
 msgstr ""
+"Принаймні одне джерело даних має недійсну модель. Видаліть його, перш ніж "
+"редагувати цей глобальний фільтр."
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__message_attachment_count
@@ -180,7 +182,7 @@ msgstr "Автоматичний фільтр на поточному корис
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Axis"
-msgstr "Axis"
+msgstr "Вісь"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -224,6 +226,8 @@ msgid ""
 "Changing the pivot definition requires to reload the data. It may take some "
 "time."
 msgstr ""
+"Зміна визначення зведеної таблиці вимагає перезавантаження даних. Це може "
+"зайняти деякий час."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -334,7 +338,7 @@ msgstr "Значення за замовчуванням"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/side_panels/pivot_details_side_panel.js:0
 msgid "Defer updates"
-msgstr ""
+msgstr "Відкласти оновлення"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -346,19 +350,19 @@ msgstr "Рівень"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/common/config_panel.xml:0
 msgid "Delete Chart"
-msgstr ""
+msgstr "Видалити діаграму"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.xml:0
 msgid "Delete List"
-msgstr ""
+msgstr "Видалити список"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/side_panels/pivot_details_side_panel.xml:0
 msgid "Delete Pivot"
-msgstr ""
+msgstr "Видалити зведену таблицю"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -446,7 +450,7 @@ msgstr "Співставлення полів"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "Filter comments"
-msgstr ""
+msgstr "Фільтрувати коментарі"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -458,7 +462,7 @@ msgstr "Влластивості фільтра"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/text_filter_editor_side_panel.xml:0
 msgid "Filter value"
-msgstr ""
+msgstr "Фільтрувати значення"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -492,13 +496,13 @@ msgstr "Є повідомлення"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/version_history_action.js:0
 msgid "Heads up!"
-msgstr ""
+msgstr "Увага!"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.js:0
 msgid "Horizontal axis"
-msgstr ""
+msgstr "Горизонтальна вісь"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__id
@@ -524,24 +528,26 @@ msgid ""
 "If you go ahead, your document will go back to the version from %s.\n"
 "Any changes you've made after that time will disappear. Ready to proceed?"
 msgstr ""
+"Якщо ви продовжите, ваш документ повернеться до версії з %s.\n"
+"Будь-які зміни, внесені після цього часу, зникнуть. Готові продовжити?"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 msgid "Include children"
-msgstr ""
+msgstr "Включно з дочірніми"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/pivot_missing_cell_dialog/pivot_missing_cell_dialog.xml:0
 msgid "Insert a pivot cell"
-msgstr ""
+msgstr "Вставити клітинку зведеної таблиці"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/index.js:0
 msgid "Insert comment"
-msgstr ""
+msgstr "Вставити коментар"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -654,12 +660,14 @@ msgid ""
 "List duplicated. Use the \"Re-insert list\" menu item to insert it in a "
 "sheet."
 msgstr ""
+"Список дублюється. Щоб вставити його в аркуш, скористайтеся пунктом меню «"
+"Вставити список знову»."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.js:0
 msgid "List duplication failed"
-msgstr ""
+msgstr "Не вдалося дублювати список"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -677,6 +685,7 @@ msgstr "Завантажити більше"
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/common/config_panel.xml:0
+#: code:addons/spreadsheet_edition/static/src/bundle/list/plugins/list_autofill_plugin.js:0
 msgid "Loading..."
 msgstr "Завантаження..."
 
@@ -684,7 +693,7 @@ msgstr "Завантаження..."
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Logarithmic"
-msgstr ""
+msgstr "Логарифмічний"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -697,7 +706,7 @@ msgstr "Зробити копію"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/restore_version_dialog/restore_version_dialog.xml:0
 msgid "Make a copy instead"
-msgstr ""
+msgstr "Замість цього зробіть копію"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -764,7 +773,7 @@ msgstr "Місяць"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/pivot_view/pivot_view.js:0
 msgid "Month & Year"
-msgstr ""
+msgstr "Місяць та Рік"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -812,7 +821,7 @@ msgstr "Нову таблицю вставлено в '%s'"
 #. odoo-python
 #: code:addons/spreadsheet_edition/models/spreadsheet_mixin.py:0
 msgid "New spreadsheet created"
-msgstr ""
+msgstr "Створено нову електронну таблицю"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -856,7 +865,7 @@ msgstr "Кількість повідомлень з помилковою дст
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/side_panel/version_history_item.xml:0
 msgid "OLD"
-msgstr ""
+msgstr "СТАРИЙ"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -869,7 +878,7 @@ msgstr "Електронна таблиця Odoo"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/components/cell_thread_popover.xml:0
 msgid "Open all comments"
-msgstr ""
+msgstr "Відкрити усі коментарі"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -881,7 +890,7 @@ msgstr "Замовлення"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/version_history_action.js:0
 msgid "Original data"
-msgstr ""
+msgstr "Оригінальні дані"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__parent_revision_id
@@ -922,14 +931,14 @@ msgstr "Введіть дійсний номер."
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Polynomial"
-msgstr ""
+msgstr "Поліном"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/text_filter_editor_side_panel.xml:0
 msgid "Possible values"
-msgstr ""
+msgstr "Можливі значення"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -954,7 +963,7 @@ msgstr "Чверть"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/pivot_view/pivot_view.js:0
 msgid "Quarter & Year"
-msgstr ""
+msgstr "Квартал та Рік"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -971,7 +980,7 @@ msgstr "Оцінювання"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/o_spreadsheet/menu_item_registry.js:0
 msgid "Re-insert dynamic pivot"
-msgstr ""
+msgstr "Повторно вставити динамічну зведену таблицю"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -984,25 +993,25 @@ msgstr "Повторно вставити список"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/o_spreadsheet/menu_item_registry.js:0
 msgid "Re-insert pivot cell"
-msgstr ""
+msgstr "Повторно вставити зведену клітинку"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/o_spreadsheet/menu_item_registry.js:0
 msgid "Re-insert static pivot"
-msgstr ""
+msgstr "Знову вставити статичну зведену таблицю"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "Re-open this thread"
-msgstr ""
+msgstr "Знову відкрити цю тему"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/plugins/list_autofill_plugin.js:0
 msgid "Record #%(record_number)s"
-msgstr ""
+msgstr "Запис #%(record_number)s"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__res_id
@@ -1055,19 +1064,19 @@ msgstr "Вимагає вибране поле"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "Resolve this thread"
-msgstr ""
+msgstr "Вирішити цю тему"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "Resolved"
-msgstr ""
+msgstr "Вирішено"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/side_panel/version_history_item.js:0
 msgid "Restore this version"
-msgstr ""
+msgstr "Відновити цю версію"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1079,12 +1088,12 @@ msgstr "Обмежити значення діапазоном"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 msgid "Restrict values with a domain"
-msgstr ""
+msgstr "Обмежити значення за допомогою домену"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__revision_uuid
 msgid "Revision Uuid"
-msgstr ""
+msgstr "UUID версії"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__name
@@ -1196,13 +1205,13 @@ msgstr "Встановити як фільтр"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Show trend line"
-msgstr ""
+msgstr "Показати лінію тренду"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Show values"
-msgstr ""
+msgstr "Показати значення"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1259,19 +1268,19 @@ msgstr "mixin електронної таблиці"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/index.js:0
 msgid "Stacked Area"
-msgstr ""
+msgstr "Складена область"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/index.js:0
 msgid "Stacked Column"
-msgstr ""
+msgstr "Стовпчаста діаграма з накопиченням"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/index.js:0
 msgid "Stacked Line"
-msgstr ""
+msgstr "Лінія з накопиченням"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1296,6 +1305,8 @@ msgid ""
 "The model (%(model)s) of this chart is not valid (it may have been renamed/"
 "deleted). Please re-insert a new chart."
 msgstr ""
+"Модель (%(model)s) цієї діаграми недійсна (можливо, її було перейменовано/"
+"видалено). Повторно вставте нову діаграму."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1304,6 +1315,8 @@ msgid ""
 "The model (%(model)s) of this list is not valid (it may have been renamed/"
 "deleted). Please re-insert a new list."
 msgstr ""
+"Модель (%(model)s) цього списку недійсна (можливо, її було перейменовано/"
+"видалено). Будь ласка, вставте новий список."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1312,6 +1325,8 @@ msgid ""
 "The model (%(model)s) of this pivot is not valid (it may have been renamed/"
 "deleted). Please re-insert a new pivot."
 msgstr ""
+"Модель (%(model)s) цієї опорної точки недійсна (можливо, її було "
+"перейменовано/видалено). Будь ласка, вставте нову опорну точку."
 
 #. module: spreadsheet_edition
 #. odoo-python
@@ -1346,26 +1361,26 @@ msgstr "Для цієї електронної таблиці немає поп�
 #. module: spreadsheet_edition
 #: model:ir.model.constraint,message:spreadsheet_edition.constraint_spreadsheet_revision_initial_unique
 msgid "There can be only one initial revision per spreadsheet"
-msgstr ""
+msgstr "В одній електронній таблиці може бути лише одна початкова редакція"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.js:0
 #: code:addons/spreadsheet_edition/static/src/bundle/o_spreadsheet/icons.xml:0
 msgid "This list is not used"
-msgstr ""
+msgstr "Цей список не використовується"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/side_panels/pivot_details_side_panel.js:0
 msgid "This pivot is not used"
-msgstr ""
+msgstr "Зведена таблиця не використовується"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "This sheet"
-msgstr ""
+msgstr "Ця таблиця"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1414,13 +1429,13 @@ msgstr "Історія версій"
 #. odoo-python
 #: code:addons/spreadsheet_edition/models/spreadsheet_mixin.py:0
 msgid "Version restored"
-msgstr ""
+msgstr "Версія відновлена"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.js:0
 msgid "Vertical axis"
-msgstr ""
+msgstr "Вертикальна вісь"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1448,7 +1463,7 @@ msgstr "Тиждень"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/pivot_view/pivot_view.js:0
 msgid "Week & Year"
-msgstr ""
+msgstr "Тиждень та рік"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1461,7 +1476,7 @@ msgstr "Рік"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/restore_version_dialog/restore_version_dialog.xml:0
 msgid "Yes, restore"
-msgstr ""
+msgstr "Так, відновити"
 
 #. module: spreadsheet_edition
 #. odoo-javascript

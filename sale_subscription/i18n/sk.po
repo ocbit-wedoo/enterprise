@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-03 18:51+0000\n"
-"PO-Revision-Date: 2026-04-29 20:02+0000\n"
+"PO-Revision-Date: 2026-07-27 17:09+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovak <https://translate.odoo.com/projects/odoo-18/"
 "sale_subscription/sk/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && "
 "n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_subscription
 #. odoo-python
@@ -4252,6 +4252,10 @@ msgid ""
 "You should first invoice the original subscription, use an earlier start "
 "date for the upsell or create a renewal quotation."
 msgstr ""
+"Dátum začiatku upsellu nesmie byť neskorší alebo rovnaký ako dátum "
+"nasledujúcej faktúry za predplatné %s.\n"
+"Najskôr by ste mali vyfakturovať pôvodné predplatné, použiť skorší dátum "
+"začiatku pre upsell alebo vytvoriť ponuku na obnovenie."
 
 #. module: sale_subscription
 #: model:sale.order.close.reason,name:sale_subscription.close_reason_renew

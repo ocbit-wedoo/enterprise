@@ -175,7 +175,7 @@ class AccountEdiXmlUBLPE(models.AbstractModel):
             vals['tax_subtotal_vals'].append({
                 'currency': line.currency_id,
                 'currency_dp': line.currency_id.decimal_places,
-                'taxable_amount': tax_detail_vals['base_amount_currency'] if tax.tax_group_id.l10n_pe_edi_code != 'ICBPER' else None,
+                'taxable_amount': tax_detail_vals['total_excluded_currency'] if tax.tax_group_id.l10n_pe_edi_code != 'ICBPER' else None,
                 'tax_amount': tax_detail_vals['tax_amount_currency'] or 0.0,
                 'base_unit_measure_attrs': {
                     'unitCode': 'NIU' if line._get_downpayment_lines() else line.product_uom_id.l10n_pe_edi_measure_unit_code,

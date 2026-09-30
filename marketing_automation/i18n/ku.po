@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
 "PO-Revision-Date: 2024-09-25 09:44+0000\n"
 "Last-Translator: Raz Omer Hussein, 2025\n"
 "Language-Team: Kurdish (https://app.transifex.com/odoo/teams/41243/ku/)\n"
@@ -704,6 +704,12 @@ msgstr ""
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
+msgid "Error! You can't modify the hierarchy of an active Activity."
+msgstr ""
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Exception in mass mailing: %s"
 msgstr ""
 
@@ -1188,6 +1194,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Offer free catalog"
+msgstr ""
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/mailing_mailing.py:0
+msgid ""
+"Oops! You can't retry sending emails from inside a Marketing Automation "
+"campaign."
 msgstr ""
 
 #. module: marketing_automation

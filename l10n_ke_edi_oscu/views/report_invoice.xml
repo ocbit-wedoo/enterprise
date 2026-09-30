@@ -100,9 +100,9 @@
                                 </t>
                                 <tr class="border-black">
                                     <td name="td_total_tax_rate" class="text-start"><span>Total</span></td>
-                                    <td name="td_total_taxable_amount" class="text-end"><span t-out="correct_sign(move_json['totTaxblAmt'])" t-options='{"widget": "float", "precision": 2}'/></td>
-                                    <td name="td_total_tax_amount" class="text-end"><span t-out="correct_sign(move_json['totTaxAmt'])" t-options='{"widget": "float", "precision": 2}'/></td>
-                                    <td name="td_total_total_amount" class="text-end"><span t-out="correct_sign(move_json['totAmt'])" t-options='{"widget": "float", "precision": 2}'/></td>
+                                    <td name="td_total_taxable_amount" class="text-end"><span t-out="o.amount_untaxed_signed" t-options='{"widget": "float", "precision": 2}'/></td>
+                                    <td name="td_total_tax_amount" class="text-end"><span t-out="o.amount_tax_signed" t-options='{"widget": "float", "precision": 2}'/></td>
+                                    <td name="td_total_total_amount" class="text-end"><span t-out="o.amount_total_signed" t-options='{"widget": "float", "precision": 2}'/></td>
                                 </tr>
                             </tbody>
 

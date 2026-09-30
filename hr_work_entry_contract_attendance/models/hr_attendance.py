@@ -7,6 +7,7 @@ from odoo.exceptions import UserError
 
 from odoo import api, models, _
 from odoo.fields import Datetime
+from odoo.osv import expression
 
 class HrAttendance(models.Model):
     _inherit = 'hr.attendance'
@@ -50,13 +51,14 @@ class HrAttendance(models.Model):
             new_work_entries = self.env['hr.work.entry'].sudo().create(work_entries_vals_list)
             if new_work_entries:
                 # Fetch overlapping work entries, grouped by employees
-                start = min((datetime.combine(a.check_in, time.min) for a in self if a.check_in), default=False)
-                stop = max((datetime.combine(a.check_out, time.max) for a in self if a.check_out), default=False)
-                work_entry_groups = self.env['hr.work.entry'].sudo()._read_group([
-                    ('date_start', '<', stop),
-                    ('date_stop', '>', start),
-                    ('employee_id', 'in', self.employee_id.ids),
-                ], ['employee_id'], ['id:recordset'])
+                work_entry_groups = self.env['hr.work.entry'].sudo()._read_group(expression.OR([
+                    [
+                        ('employee_id', '=', work_entry.employee_id.id),
+                        ('date_start', '<', work_entry.date_stop),
+                        ('date_stop', '>', work_entry.date_start),
+                    ]
+                    for work_entry in new_work_entries
+                ]), ['employee_id'], ['id:recordset'])
                 work_entries_by_employee = {
                     employee.id: records
                     for employee, records in work_entry_groups

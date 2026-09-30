@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.3alpha1+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 19:09+0000\n"
-"PO-Revision-Date: 2026-05-16 09:04+0000\n"
+"PO-Revision-Date: 2026-08-28 17:09+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_pe_edi/es_419/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields,help:l10n_pe_edi.field_res_config_settings__l10n_pe_edi_provider
@@ -162,7 +162,7 @@ msgstr "Ajustes de las operaciones de exportación"
 #. module: l10n_pe_edi
 #: model:ir.model.fields,field_description:l10n_pe_edi.field_account_tax__l10n_pe_edi_affectation_reason
 msgid "Affectation Reason"
-msgstr "EDI Razón de Afectación"
+msgstr "Motivo de afectación"
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields.selection,name:l10n_pe_edi.selection__account_move__l10n_pe_edi_legend__2004
@@ -245,9 +245,9 @@ msgid ""
 "document over 700 Soles With services you must select on the 'Operation Type "
 "field the correct code 1001 for example"
 msgstr ""
-"Tiene un documento que debe ser retenido (es decir, un documento por más de "
-"700 soles con servicios). Seleccione el código correcto, por ejemplo, 1001, "
-"en el campo “Tipo de operación”."
+"Tienes un documento sujeto a detracción (es decir, un comprobante por un "
+"importe superior a 700 soles por servicios), así que debes seleccionar el "
+"código correcto en el campo Tipo de operación, por ejemplo, 1001"
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields.selection,name:l10n_pe_edi.selection__product_template__l10n_pe_withhold_code__001
@@ -368,9 +368,9 @@ msgid ""
 "happen when you did not set a proper VAT in the company, go to company form "
 "and set it properly.."
 msgstr ""
-"Revisa que el VAT de la empresa ha sido correctamente escrito, este error "
-"generalmente ocurre cuando el VAT de la empresa no esta correctamente "
-"configurado, ve a la empresa y configúralo correctamente.."
+"Verifica que el RUC configurado en la empresa sea correcto. Este error suele "
+"ocurrir cuando la empresa no tiene un RUC válido. Ve al formulario de la "
+"empresa y configúralo de forma correcta."
 
 #. module: l10n_pe_edi
 #. odoo-python
@@ -380,10 +380,10 @@ msgid ""
 "'Affectation reason' to set it by default or set the proper value in the "
 "field Affect. Reason in the line"
 msgstr ""
-"Revisa la configuración de los impuestos, ve a Configuración -> Impuestos y "
-"coloca el campo 'Razón de afectación' para configurarlo de forma "
-"predeterminada o establecer el valor adecuado en el campo Afecto. Razón en "
-"la línea"
+"Verifica la configuración de tus impuestos. Ve a Configuración -> Impuestos "
+"y configura el campo Motivo de afectación para usarlo como valor "
+"predeterminado, o asigna el valor correcto en el campo Motivo de afectación "
+"de la línea"
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields,help:l10n_pe_edi.field_res_company__l10n_pe_edi_address_type_code
@@ -481,7 +481,7 @@ msgstr "Nombre a mostrar"
 #. module: l10n_pe_edi
 #: model:ir.model.fields,field_description:l10n_pe_edi.field_account_move_line__l10n_pe_edi_affectation_reason
 msgid "EDI Affect. Reason"
-msgstr "EDI Razón de Afectación"
+msgstr "Motivo de afectación"
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields,field_description:l10n_pe_edi.field_account_tax_group__l10n_pe_edi_code
@@ -640,10 +640,10 @@ msgid ""
 "several attempts to avoid abuse, please ensure just use it for testing "
 "purposes)."
 msgstr ""
-"Para evitar la firma de facturas en su entorno de prueba, establezca como "
-"verdadero cuando no necesita que las facturas estén realmente firmadas (se "
-"bloquea después de varios intentos para evitar abusos, por favor, asegúrese "
-"de sólo utilizarlo para pruebas fines)."
+"Para evitar firmar facturas en tu entorno de prueba, activa esta opción "
+"cuando no necesites firmar las facturas de verdad (el proceso se bloquea "
+"después de varios intentos para evitar abusos; úsalo solo para realizar "
+"pruebas)."
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields.selection,name:l10n_pe_edi.selection__account_debit_note__l10n_pe_edi_charge_reason__02
@@ -815,9 +815,9 @@ msgid ""
 "you must return the document to the Draft state and place taxes on the lines "
 "that do not have them."
 msgstr ""
-"Una o mas lineas del documento no tienen impuestos asignado, para resolver "
-"esto  debes regresar a este documento a Draft y colocar los impuestos en las "
-"lineas que no los tengan"
+"Una o más líneas de este documento no tienen impuestos asignados. Para "
+"resolverlo, regresa el documento a estado de borrador y asigna impuestos a "
+"las líneas que no los tienen."
 
 #. module: l10n_pe_edi
 #. odoo-python
@@ -827,9 +827,9 @@ msgid ""
 "warning you must configure a code for this product. This warning does not "
 "invalidate the document."
 msgstr ""
-"Uno o mas productos no tienen configurado el código UNSPSC, para evitar "
-"estas advertencias, debes configurar el código para este producto. Esta "
-"advertencia no indica rechazo del documento."
+"Uno o más productos no tienen un código UNSPSC configurado. Para evitar esta "
+"advertencia, configura un código para esos productos. Esta advertencia no "
+"invalida el documento."
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields.selection,name:l10n_pe_edi.selection__account_move__l10n_pe_edi_legend__2006
@@ -955,9 +955,8 @@ msgid ""
 "Peru: Catalog No. 54 SUNAT, used functionally to show in the printed "
 "document on invoices that need to have the proper SPOT text."
 msgstr ""
-"Catalogo No. 54 SUNAT, Catálogo No. 54 SUNAT, utilizado funcionalmente para "
-"documentar en el documento impreso en facturas que deben tener el texto SPOT "
-"adecuado"
+"Catálogo No. 54 SUNAT, utilizado funcionalmente para mostrar en el documento "
+"impreso el texto SPOT correspondiente en las facturas que lo requieren."
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields,help:l10n_pe_edi.field_account_bank_statement_line__l10n_pe_edi_operation_type
@@ -998,9 +997,9 @@ msgid ""
 "Peru: Percentages of detraction informed in the Annex I Resolution 183-2004/"
 "SUNAT, it depends on the withhold code but you need to read the resolution."
 msgstr ""
-"Porcentajes de la detracción listados en el anexo I de la resolución "
-"183-2004/SUNAT, depende del código de detracción pero necesitas leer la "
-"resolución"
+"Porcentajes de detracción establecidos en el Anexo I de la Resolución 183-"
+"2004/SUNAT. Dependen del código de detracción, por lo que debes consultar la "
+"resolución."
 
 #. module: l10n_pe_edi
 #: model:ir.model.fields,help:l10n_pe_edi.field_account_bank_statement_line__l10n_pe_edi_cancel_reason
@@ -1094,7 +1093,7 @@ msgstr "Recursos hidrobiológicos"
 #: model:ir.model.fields,help:l10n_pe_edi.field_account_move__l10n_pe_edi_cancel_cdr_number
 msgid "Reference from webservice to consult afterwards."
 msgstr ""
-"Numero de Referencia de la cancelación, se usara para consultar el estado de "
+"Número de referencia de la cancelación. Se usará para consultar el estado de "
 "la cancelación en el servicio web."
 
 #. module: l10n_pe_edi
@@ -1322,8 +1321,7 @@ msgid ""
 "The EDI document failed to be cancelled because the cancellation CDR number "
 "is missing."
 msgstr ""
-"Los documentos electrónicos fallaron al ser cancelados ya que no se "
-"encuentra un numero de CDR."
+"No se pudo cancelar el documento electrónico porque falta el número de CDR."
 
 #. module: l10n_pe_edi
 #. odoo-python
@@ -1423,8 +1421,8 @@ msgid ""
 "The invoice related to this Credit Note has been cancelled, set this "
 "document to draft and cancel it."
 msgstr ""
-"La factura relacionada a esta Nota de Crédito ha sido cancelada, regresa "
-"este documento  a Borrador y cancela."
+"La factura relacionada con esta nota de crédito ha sido cancelada. Regresa "
+"este documento a estado de borrador y cancélalo."
 
 #. module: l10n_pe_edi
 #. odoo-python
@@ -1433,9 +1431,8 @@ msgid ""
 "The invoice related to this Credit Note has not been reported, go to the "
 "invoice related and sign it in order to generate this Credit Note."
 msgstr ""
-"La factura relacionada a esta Nota de Crédito no ha sido reportada, ve a la "
-"factura relacionada y que sea firmada para que sea posible generar esta Nota "
-"de Crédito"
+"La factura relacionada con esta nota de crédito no ha sido reportada. Ve a "
+"la factura relacionada y fírmala para generar esta nota de crédito."
 
 #. module: l10n_pe_edi
 #. odoo-python
@@ -1444,8 +1441,8 @@ msgid ""
 "The invoice related to this Debit Note has been cancelled, set this document "
 "to draft and cancel it."
 msgstr ""
-"El documento relacionado a esta Nota de Débito ha sido cancelada, regresa "
-"este documento a Borrador y cancela."
+"La factura relacionada con esta nota de débito ha sido cancelada. Regresa "
+"este documento a estado de borrador y cancélalo."
 
 #. module: l10n_pe_edi
 #. odoo-python

@@ -3,7 +3,7 @@
 import datetime
 
 from odoo import _, api, fields, models, Command
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError, ValidationError
 from odoo.tools.float_utils import float_round
 
 from collections import defaultdict
@@ -23,7 +23,9 @@ class HrPayslip(models.Model):
     l10n_ch_txb_code = fields.Char(compute="_compute_l10n_ch_is_code", store=True)
     l10n_ch_is_correction = fields.Many2one('hr.employee.is.line', compute="_compute_l10n_ch_is_correction", store=True)
     l10n_ch_monthly_snapshot = fields.Many2one('l10n.ch.employee.monthly.values', compute="_compute_l10n_ch_monthly_snapshot", store=True)
-    l10n_ch_swiss_wage_ids = fields.One2many('l10n.ch.swiss.wage.component', 'payslip_id', compute="_compute_l10n_ch_swiss_wage_ids", store=True)
+    l10n_ch_swiss_wage_ids = fields.One2many(
+        'l10n.ch.swiss.wage.component', 'payslip_id',
+        compute="_compute_l10n_ch_swiss_wage_ids", store=True, readonly=False, copy=False)
     l10n_ch_validation_errors = fields.Json(related="l10n_ch_monthly_snapshot.validation_errors")
 
     @api.model_create_multi
@@ -31,6 +33,17 @@ class HrPayslip(models.Model):
         swiss_employees = self.env['hr.employee'].browse([val["employee_id"] for val in vals_list if "employee_id" in val]).filtered(lambda e: e.company_id.country_id.code == 'CH')
         swiss_employees._create_or_update_snapshot()
         return super().create(vals_list)
+
+    def _get_iso20022_communication(self):
+        self.ensure_one()
+        bank = self.employee_id.bank_account_id.bank_id
+        is_revolut = (bank.bic or '').upper().startswith('REVO') or 'revolut' in (bank.name or '').lower()
+        if is_revolut and self.company_id.country_id.code == 'CH':
+            # Revolut accounts are pooled under Revolut's own IBANs: the beneficiary's name
+            # and country must appear in the communication so the payment can be credited
+            # to the right account.
+            return f'{self.employee_id.l10n_ch_legal_first_name} {self.employee_id.l10n_ch_legal_last_name}, CH'
+        return super()._get_iso20022_communication()
 
     def _get_schedule_period_start(self):
         if self.struct_id.code == "CHMONTHLYELM":
@@ -821,11 +834,7 @@ class HrPayslip(models.Model):
         if code in ['ASDAYS', 'ISWORKEDDAYSINCH', 'ISWORKEDDAYS']:
             total_is = amount
         else:
-            total = float_round(amount, precision_rounding=0.01, rounding_method="HALF-UP")
-            if total % 0.05 >= 0.025:
-                total_is = total + 0.05 - (total % 0.05)
-            else:
-                total_is = total - (total % 0.05)
+            total_is = float_round(amount, precision_rounding=0.05, rounding_method="HALF-UP")
         if total_is or code in ['ISDTSALARY', 'ISSALARY', 'IS']:
             self.env['hr.payslip.is.log.line'].create({
                 'source_tax_canton': is_canton,
@@ -961,4 +970,130 @@ class HrPayslip(models.Model):
             'WT_2032',
             'WT_2035',
             "WT_2040",
+        } | self._get_net_compensation_wage_types()
+
+    def _get_net_compensation_wage_types(self):
+        # Third party payments guaranteed net to the employee (see WT_4900)
+        return {
+            'WT_2000_NET',
+            'WT_2005_NET',
+            'WT_2010_NET',
+            'WT_2020_NET',
+            'WT_2025_NET',
+            'WT_2030_NET',
+            'WT_2035_NET',
+            'WT_2040_NET',
         }
+
+    def _l10n_ch_eval_net(self, compensation=0.0, without_input_codes=None):
+        """ Return the payslip's 'NET' total when evaluated with a forced wage
+        type 4900 amount, inside a rolled back savepoint: nothing is persisted.
+        """
+        self.ensure_one()
+        slip = self.with_context(
+            l10n_ch_force_net_compensation=compensation,
+            force_payslip_localdict=None,
+            prevent_payslip_computation_line_ids=[],
+        )
+        if without_input_codes:
+            localdict = slip._get_localdict()
+            for code in without_input_codes:
+                localdict['inputs'].pop(code, None)
+                localdict['same_type_input_lines'].pop(code, None)
+            slip = slip.with_context(force_payslip_localdict=localdict)
+        savepoint = self.env.cr.savepoint()
+        try:
+            # already logged lines would be double counted, the rollback restores them
+            self.l10n_ch_is_log_line_ids.unlink()
+            line_vals = slip._get_payslip_lines()
+            return next(vals['total'] for vals in line_vals if vals['code'] == 'NET')
+        finally:
+            savepoint.close(rollback=True)
+
+    def _l10n_ch_get_net_compensation(self):
+        """ Called by the wage type 4900 rule: the amount bringing the Net Paid
+        back to what it would be without the net compensation wage types, solved
+        numerically as the deduction chain has no closed form.
+        """
+        self.ensure_one()
+        forced = self.env.context.get('l10n_ch_force_net_compensation')
+        if forced is not None:
+            return forced  # inner evaluation of the solver itself
+        net_codes = self._get_net_compensation_wage_types()
+        net_compensation_inputs = self.input_line_ids.filtered(lambda l: l.code in net_codes)
+        if not net_compensation_inputs:
+            return 0.0
+        if 'WT_2050' in self.input_line_ids.mapped('code'):
+            raise UserError(_(
+                "%(payslip)s: A manual Third Party Correction (2050) input disables the "
+                "automatic third party offsetting: the net compensation (4900) cannot be "
+                "solved. Remove either the manual 2050 input or the net compensation "
+                "wage types.", payslip=self.name))
+
+        tolerance = 0.05  # Net Paid moves in 5 cents steps
+        max_evaluations = 25
+        max_amount = 4 * sum(abs(amount) for amount in net_compensation_inputs.mapped('amount')) + 1000
+
+        net_base = self._l10n_ch_eval_net(without_input_codes=net_codes)
+        deviation = self._l10n_ch_eval_net() - net_base
+        evaluations = 1
+        if abs(deviation) <= tolerance:
+            return 0.0
+
+        # deviation() increases with the compensation: keep a bracket [low, high]
+        # with deviation(low) < 0 < deviation(high)
+        if deviation > 0:
+            low, deviation_low, high, deviation_high = None, None, 0.0, deviation
+        else:
+            low, deviation_low, high, deviation_high = 0.0, deviation, None, None
+        best_compensation, best_deviation = 0.0, deviation
+
+        # expand the bracket, doubling away from the first guess
+        compensation = max(-max_amount, min(max_amount, -deviation / 0.65))
+        while (low is None or high is None) and abs(best_deviation) > tolerance:
+            if evaluations >= max_evaluations:
+                raise UserError(_(
+                    "%(payslip)s: The net compensation (4900) did not converge within "
+                    "%(count)s payslip evaluations.", payslip=self.name, count=evaluations))
+            evaluations += 1
+            deviation = self._l10n_ch_eval_net(compensation=compensation) - net_base
+            if abs(deviation) < abs(best_deviation):
+                best_compensation, best_deviation = compensation, deviation
+            if deviation >= 0:
+                high, deviation_high = compensation, deviation
+            else:
+                low, deviation_low = compensation, deviation
+            if low is None or high is None:
+                if abs(compensation) >= max_amount:
+                    raise UserError(_(
+                        "%(payslip)s: The net compensation (4900) could not be bracketed "
+                        "within ±%(bound).2f.", payslip=self.name, bound=max_amount))
+                compensation = max(-max_amount, min(max_amount, compensation * 2))
+
+        # narrow the bracket: secant interpolation, midpoint fallback
+        while abs(best_deviation) > tolerance and high - low > 0.01:
+            if evaluations >= max_evaluations:
+                raise UserError(_(
+                    "%(payslip)s: The net compensation (4900) did not converge within "
+                    "%(count)s payslip evaluations.", payslip=self.name, count=evaluations))
+            evaluations += 1
+            if deviation_high - deviation_low > 1e-9:
+                compensation = low - deviation_low * (high - low) / (deviation_high - deviation_low)
+            else:
+                compensation = (low + high) / 2
+            if not low + 0.001 < compensation < high - 0.001:
+                compensation = (low + high) / 2
+            deviation = self._l10n_ch_eval_net(compensation=compensation) - net_base
+            if abs(deviation) < abs(best_deviation):
+                best_compensation, best_deviation = compensation, deviation
+            if deviation >= 0:
+                high, deviation_high = compensation, deviation
+            else:
+                low, deviation_low = compensation, deviation
+
+        # book a 5 cents rounded amount when it is as accurate
+        rounded = float_round(best_compensation, precision_rounding=0.05, rounding_method='HALF-UP')
+        if abs(rounded - best_compensation) > 0.0001 and evaluations < max_evaluations:
+            if abs(self._l10n_ch_eval_net(compensation=rounded) - net_base) <= max(abs(best_deviation), tolerance):
+                best_compensation = rounded
+        return float_round(best_compensation, precision_rounding=0.01)

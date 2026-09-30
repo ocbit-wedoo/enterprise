@@ -289,3 +289,82 @@ class TestSubscriptionTask(TestSubscriptionCommon, TestCommonSaleTimesheet):
         # An invoice should be created
         self.assertTrue(subscription.invoice_ids)
         self.assertEqual(subscription.invoice_ids.invoice_line_ids[0].quantity, timesheet.unit_amount)
+
+    @freeze_time("2026-04-01")
+    def test_batch_invoicing_timesheet_date_leak_and_empty_records(self):
+        """
+        Test that batch invoicing multiple orders does not leak the subscription's
+        date range onto other orders, and that non-product lines (notes) do not
+        cause empty recordset evaluations.
+        """
+        # 1. Create Subscription A (Period: Jan 1 -> Jan 31)
+        subscription_a = self.env['sale.order'].create({
+            'name': 'Subscription A',
+            'is_subscription': True,
+            'plan_id': self.plan_month.id,
+            'partner_id': self.user_portal.partner_id.id,
+            'pricelist_id': self.company_data['default_pricelist'].id,
+            'start_date': '2026-01-01',
+            'order_line': [
+                Command.create({
+                    'product_id': self.product_deliver_timesheet.id,
+                    'product_uom_qty': 10
+                }),
+            ],
+        })
+        subscription_a.action_confirm()
+
+        # Log a timesheet for Subscription A in January
+        task_a = subscription_a.tasks_ids
+        ts_a = self.env['account.analytic.line'].create({
+            'name': 'Timesheet Sub A (Jan)',
+            'date': '2026-01-15',
+            'project_id': task_a.project_id.id,
+            'task_id': task_a.id,
+            'unit_amount': 2,
+            'employee_id': self.employee_user.id,
+        })
+        subscription_a.order_line[0].write({'qty_delivered': 2})
+
+        # 2. Create Regular Order B with a Note Line
+        # We use a different partner to ensure they don't group into a single invoice
+        partner_b = self.env['res.partner'].create({'name': 'Partner B'})
+        order_b = self.env['sale.order'].create({
+            'name': 'Regular Order B',
+            'partner_id': partner_b.id,
+            'pricelist_id': self.company_data['default_pricelist'].id,
+            'order_line': [
+                Command.create({
+                    'product_id': self.product_delivery_timesheet2.id,
+                    'product_uom_qty': 10
+                }),
+            ],
+        })
+        order_b.action_confirm()
+
+        # Log a timesheet for Order B in March (outside Sub A's window)
+        task_b = order_b.tasks_ids
+        ts_b = self.env['account.analytic.line'].create({
+            'name': 'Timesheet Order B (March)',
+            'date': '2026-03-15',
+            'project_id': task_b.project_id.id,
+            'task_id': task_b.id,
+            'unit_amount': 3,
+            'employee_id': self.employee_user.id,
+        })
+
+        # Invoice both orders simultaneously to trigger the batch loop
+        moves = (subscription_a | order_b)._create_invoices()
+
+        # 4. Validate Invoices
+        invoice_a = moves.filtered(lambda m: subscription_a.name in m.invoice_origin)
+        invoice_b = moves.filtered(lambda m: order_b.name in m.invoice_origin)
+
+        self.assertEqual(len(invoice_a.timesheet_ids), 1, "Subscription A's timesheet should be linked.")
+        self.assertEqual(invoice_a.timesheet_ids, ts_a, "Subscription A should link its January timesheet.")
+        self.assertEqual(
+            len(invoice_b.timesheet_ids),
+            1,
+            "Order B's timesheet failed to link! The date range likely leaked from Subscription A."
+        )
+        self.assertEqual(invoice_b.timesheet_ids, ts_b, "Order B should link its March timesheet.")

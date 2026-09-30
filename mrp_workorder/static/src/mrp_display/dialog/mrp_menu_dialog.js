@@ -17,6 +17,7 @@ export class MrpMenuDialog extends Component {
         reload: Function,
         title: String,
         removeFromCache: Function,
+        onNavigateToMO: { type: Function, optional: true },
     };
     static template = "mrp_workorder.MrpDisplayMenuDialog";
     static components = { Dialog };
@@ -79,6 +80,9 @@ export class MrpMenuDialog extends Component {
     openMO() {
         const id = this.props.record.resModel === 'mrp.production' ?
             this.props.record.resId : this.props.record.data.production_id[0];
+        if (this.props.onNavigateToMO) {
+            this.props.onNavigateToMO();
+        }
         this.action.doAction({
             'type': 'ir.actions.act_window',
             'res_model': 'mrp.production',

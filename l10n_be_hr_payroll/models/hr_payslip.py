@@ -1079,12 +1079,14 @@ class Payslip(models.Model):
         self.ensure_one()
         categories = localdict['categories']
         if categories['EmpBonus']:
+            bonus_volet_A_rate = self.env['hr.rule.parameter']._get_parameter_from_code('work_bonus_volet_A_rate', date=self.date_to, raise_if_not_found=False) or 0.3314
             if self.date_from >= date(2024, 4, 1):
                 bonus_volet_A = localdict['result_rules']['EmpBonus.A']['total']
                 bonus_volet_B = localdict['result_rules']['EmpBonus.B']['total']
-                reduction = bonus_volet_A * 0.3314 + bonus_volet_B * 0.5254
+                bonus_volet_B_rate = self.env['hr.rule.parameter']._get_parameter_from_code('work_bonus_volet_B_rate', date=self.date_to, raise_if_not_found=False) or 0.5254
+                reduction = bonus_volet_A * bonus_volet_A_rate + bonus_volet_B * bonus_volet_B_rate
             else:
-                reduction = categories['EmpBonus'] * 0.3314
+                reduction = categories['EmpBonus'] * bonus_volet_A_rate
             return min(abs(categories['PP']), reduction)
         return 0.0
 

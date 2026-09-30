@@ -139,6 +139,10 @@ class SignTemplate(models.Model):
             self.attachment_id.check('read')
         return res
 
+    @api.onchange("attachment_id")
+    def _onchange_attachment_id(self):
+        self.attachment_id.check('read')
+
     def copy_data(self, default=None):
         vals_list = super().copy_data(default=default)
         for template, vals in zip(self, vals_list):

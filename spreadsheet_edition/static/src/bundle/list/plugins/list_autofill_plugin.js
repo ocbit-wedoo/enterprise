@@ -84,7 +84,7 @@ export class ListAutofillPlugin extends UIPlugin {
      */
     getTooltipListFormula(formula, isColumn) {
         if (!formula) {
-            return [];
+            return "";
         }
         const { functionName, args } = getFirstListFunction(tokenize(formula));
         const evaluatedArgs = args
@@ -93,6 +93,9 @@ export class ListAutofillPlugin extends UIPlugin {
         const listId = evaluatedArgs[0];
         if (!this.getters.isExistingList(listId)) {
             return sprintf(_t("Missing list #%s"), listId);
+        }
+        if (!this.getters.getListDataSource(listId).isReady()) {
+            return _t("Loading...");
         }
         if (isColumn || functionName === "ODOO.LIST.HEADER") {
             const fieldName = functionName === "ODOO.LIST" ? evaluatedArgs[2] : evaluatedArgs[1];

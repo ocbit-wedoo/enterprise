@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from datetime import date, datetime
+from datetime import date, datetime, time
 from dateutil.relativedelta import relativedelta
 from odoo.tests.common import tagged, TransactionCase
 from pytz import utc
@@ -262,4 +262,73 @@ class TestHrAttendanceGantt(TransactionCase):
             'week',
         )
         self.assertEqual(unavailabilities[employee.id][0]['start'], public_holiday.date_from.astimezone(utc))
-        self.assertEqual(unavailabilities[employee.id][0]['stop'], public_holiday.date_to.astimezone(utc))
+        self.assertEqual(unavailabilities[employee.id][0]['stop'], public_holiday.date_to.astimezone(utc).replace(microsecond=999999))
+
+    def test_attendance_gantt_unavailabilities_calendar_change_mid_range(self):
+        if (Contract := self.env.get('hr.contract')) is None:
+            self.skipTest('hr_contract module not installed')
+
+        monday_off_calendar, friday_off_calendar = self.env['resource.calendar'].create([
+            {
+                'name': '80% Monday off',
+                'tz': 'UTC',
+                'hours_per_day': 6.4,
+                'attendance_ids': [
+                    (0, 0, {'name': name, 'dayofweek': str(day), 'hour_from': 8, 'hour_to': 16, 'day_period': 'morning'})
+                    for day, name in [('1', 'Tuesday'), ('2', 'Wednesday'), ('3', 'Thursday'), ('4', 'Friday')]
+                ],
+            },
+            {
+                'name': '80% Friday off',
+                'tz': 'UTC',
+                'hours_per_day': 6.4,
+                'attendance_ids': [
+                    (0, 0, {'name': name, 'dayofweek': str(day), 'hour_from': 8, 'hour_to': 16, 'day_period': 'morning'})
+                    for day, name in [('0', 'Monday'), ('1', 'Tuesday'), ('2', 'Wednesday'), ('3', 'Thursday')]
+                ],
+            },
+        ])
+
+        employee = self.env['hr.employee'].create({
+            'name': 'Anita Oliver',
+            'tz': 'UTC',
+            'resource_calendar_id': friday_off_calendar.id,
+        })
+
+        Contract.create([
+            {
+                'name': 'Monday off contract',
+                'employee_id': employee.id,
+                'date_start': date(2026, 6, 1),
+                'date_end': date(2026, 7, 31),
+                'resource_calendar_id': monday_off_calendar.id,
+                'wage': 1,
+                'state': 'close',
+            },
+            {
+                'name': 'Friday off contract',
+                'employee_id': employee.id,
+                'date_start': date(2026, 8, 1),
+                'resource_calendar_id': friday_off_calendar.id,
+                'wage': 1,
+                'state': 'open',
+            },
+        ])
+
+        unavailabilities = self.env['hr.attendance']._gantt_unavailability(
+            'employee_id',
+            [employee.id],
+            datetime(2026, 6, 30, 22, 0),
+            datetime(2026, 8, 30, 22, 0),
+            'month',
+        )[employee.id]
+
+        def is_unavailable(day):
+            moment = utc.localize(datetime.combine(day, time(12, 0)))
+            return any(inv['start'] <= moment <= inv['stop'] for inv in unavailabilities)
+
+        self.assertTrue(is_unavailable(date(2026, 7, 6)), "Monday should be off in July")
+        self.assertFalse(is_unavailable(date(2026, 7, 3)), "Friday should be worked in July")
+
+        self.assertFalse(is_unavailable(date(2026, 8, 3)), "Monday should be worked in August")
+        self.assertTrue(is_unavailable(date(2026, 8, 7)), "Friday should be off in August")

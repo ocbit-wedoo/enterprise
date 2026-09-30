@@ -6,7 +6,7 @@ import logging
 
 from odoo import api, models, fields, _, Command
 from odoo.osv import expression
-from odoo.exceptions import ValidationError, UserError
+from odoo.exceptions import AccessError, ValidationError, UserError
 from collections import defaultdict
 
 
@@ -278,6 +278,14 @@ class StudioApprovalRule(models.Model):
                 'trigger': 'on_state_set',
                 'trg_selection_field_id': state_field.selection_ids.filtered(lambda s: s.value == "draft").id,
                 'filter_pre_domain': "[('state', '!=', 'draft')]",
+            }
+        if model_name == "hr.expense.sheet":
+            state_field = self.env["ir.model.fields"]._get("hr.expense.sheet", "state")
+            return {
+                'trigger': 'on_create_or_write',
+                'trigger_field_ids': [Command.link(state_field.id)],
+                'filter_pre_domain': "[('state', 'in', ['post', 'done'])]",
+                'filter_domain': "[('state', 'not in', ['post', 'done'])]",
             }
         return None
 
@@ -1293,9 +1301,11 @@ class StudioApprovalRuleDelegate(models.TransientModel):
     def create(self, vals):
         records = super().create(vals)
         for rec in records:
-            rule = rec.approval_rule_id.sudo()
-            rule._delegate_to(rec.approver_ids, rec.date_to)
-            rule.write({"users_to_notify": rec.users_to_notify})
+            rule_su = rec.approval_rule_id.sudo()
+            if not self.env.su and not rule_su.can_validate:
+                raise AccessError(_("You are not allowed to delegate this approval rule."))
+            rule_su._delegate_to(rec.approver_ids, rec.date_to)
+            rule_su.write({"users_to_notify": rec.users_to_notify})
         return records
 
     def default_get(self, fields_list):

@@ -427,6 +427,68 @@ class AppointmentUITest(AppointmentUICommon):
             slots_calendar.getchildren(),
             "Slots calendar should not be visible")
 
+    @users('apt_manager')
+    def test_resources_shareable_linked_no_overbooking_with_capacity(self):
+        """ Ensure linked shareable resources are correctly handled when managed in gantt view """
+        self.authenticate(self.env.user.login, self.env.user.login)
+        resource_1, resource_2 = self.env['appointment.resource'].create([{
+            'appointment_type_ids': self.apt_type_resource.ids,
+            'capacity': 3,
+            'name': 'Resource 1',
+            'shareable': True,
+        }, {
+            'appointment_type_ids': self.apt_type_resource.ids,
+            'capacity': 4,
+            'name': 'Resource 2',
+            'shareable': True,
+        }])
+        resource_1.linked_resource_ids = resource_2
+        start = datetime(2022, 2, 14, 15, 0, 0)
+        end = start + timedelta(hours=1)
+
+        # Create two bookings to overbook resource 1
+        bookings = self.env['calendar.event'].create({
+            'appointment_type_id': self.apt_type_resource.id,
+            'booking_line_ids': [
+                (0, 0, {'appointment_resource_id': resource_1.id, 'capacity_reserved': 2}),
+                (0, 0, {'appointment_resource_id': resource_1.id, 'capacity_reserved': 2}),
+            ],
+            'name': 'Booking',
+            'start': start,
+            'stop': end,
+        })
+
+        # Check that resource 1 was overbooked
+        self.assertEqual(len(bookings.resource_ids), 1)
+        self.assertEqual(bookings.appointment_resource_ids, resource_1)
+        self.assertEqual(bookings.resource_total_capacity_reserved, 4)
+
+        # Resource 1 is fully used, so only resource 2 should be available for another booking
+        with freeze_time(self.reference_now):
+            slots = self.apt_type_resource._get_appointment_slots('UTC', asked_capacity=1)
+            resource_slots_c5 = self._filter_appointment_slots(slots)
+            slots = self.apt_type_resource._get_appointment_slots('UTC', asked_capacity=5)
+            resource_slots_c9 = self._filter_appointment_slots(slots)
+        available_resources_c5 = [resource['id'] for resource in resource_slots_c5[0]['available_resources']]
+        self.assertListEqual(available_resources_c5, resource_2.ids, "Should not allow new booking for the first resource")
+        self.assertFalse(resource_slots_c9, "Should not allow overbooking")
+
+        # Appointment created from the website should not fail _check_capacity_reserved
+        appointment_data = {
+            "asked_capacity": 1,
+            "available_resource_ids": resource_1.id,
+            "csrf_token": http.Request.csrf_token(self),
+            "datetime_str": str(start),
+            "duration_str": "1.0",
+            "email": "test@test.example.com",
+            "name": "Online Meeting",
+            "phone": "2025550999",
+        }
+        url = f"/appointment/{self.apt_type_resource.id}/submit"
+        res = self.url_open(url, data=appointment_data)
+        self.assertEqual(res.status_code, 200, "Response should = OK")
+
+
 @tagged('appointment_ui', '-at_install', 'post_install')
 class CalendarTest(AppointmentUICommon):
 

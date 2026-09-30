@@ -49,6 +49,9 @@ export class TaskGanttRenderer extends GanttRenderer {
                 pill.className += " opacity-25";
             }
         }
+        if (enrichedPill?._progress) {
+            enrichedPill._progress = enrichedPill._progress * 100;
+        }
         return enrichedPill;
     }
 

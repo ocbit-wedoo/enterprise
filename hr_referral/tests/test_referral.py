@@ -264,3 +264,32 @@ class TestHrReferral(TestHrReferralBase):
 
         app.save()
         self.assertEqual(app.record.source_id.id, source.id)
+
+    def test_referral_attachment_access(self):
+        """A user must not be able to see/download the attachments of an applicant they can only
+        access as a referrer (not as an interviewer) through a job-level action."""
+
+        self.richard_user.groups_id = self.env.ref('hr_recruitment.group_hr_recruitment_interviewer')
+        self.richard_user.write({'company_ids': [(4, self.company_1.id)], 'company_id': self.company_1.id})
+
+        referred_applicant = self.env['hr.applicant'].create({
+            'partner_name': 'Referred worker',
+            'candidate_id': self.env['hr.candidate'].create({'partner_name': 'Applicant', 'company_id': self.company_1.id}).id,
+            'job_id': self.job_dev.id,
+            'ref_user_id': self.richard_user.id,
+            'company_id': self.company_1.id,
+        })
+        referred_attachment = self.env['ir.attachment'].create({
+            'name': 'referred.pdf',
+            'res_model': 'hr.applicant',
+            'res_id': referred_applicant.id,
+            'raw': b'secret',
+        })
+        action = self.job_dev.with_user(self.richard_user).action_open_attachments()
+
+        model = action['res_model']
+        if model == 'documents.document':
+            referred_attachment = self.env[model].search([('attachment_id', '=', referred_attachment.id)])
+
+        attachments = self.env[model].with_user(self.richard_user).search(action['domain'])
+        self.assertNotIn(referred_attachment, attachments, "The referred applicant's attachment should not leak")

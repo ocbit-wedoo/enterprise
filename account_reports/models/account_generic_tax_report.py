@@ -865,7 +865,7 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
                 tax_id = row['tax_id']
                 if row['group_tax_id']:
                     tax_type_tax_use = row['group_tax_type_tax_use']
-                    if not group_of_taxes_info[row['group_tax_id']]['to_expand']:
+                    if row['group_tax_id'] not in group_of_taxes_info or not group_of_taxes_info[row['group_tax_id']]['to_expand']:
                         tax_id = row['group_tax_id']
                 else:
                     tax_type_tax_use = row['group_tax_type_tax_use'] or row['tax_type_tax_use']

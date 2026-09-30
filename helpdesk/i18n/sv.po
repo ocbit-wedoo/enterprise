@@ -24,13 +24,14 @@
 # Mikael Akerberg <mikael.akerberg@mariaakerberg.com>, 2025, 2026.
 # Claes-Johan Dahlin <user-89@users.noreply.translate.odoo.com>, 2025.
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-01 17:46+0000\n"
-"PO-Revision-Date: 2026-05-07 08:05+0000\n"
-"Last-Translator: Mikael Akerberg <mikael.akerberg@mariaakerberg.com>\n"
+"PO-Revision-Date: 2026-08-28 07:15+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/helpdesk/"
 "sv/>\n"
 "Language: sv\n"
@@ -38,7 +39,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__answered_customer_message_count
@@ -793,12 +794,12 @@ msgstr "Aktiviteter"
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Aktivitet undantaget dekoration"
+msgstr "Stilmarkeringar för undantagsaktiviteter"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__activity_state
 msgid "Activity State"
-msgstr "Aktivitetsläge"
+msgstr "Aktivitetsstatus"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__activity_type_icon
@@ -948,7 +949,7 @@ msgstr "Arkivera Lägen"
 #: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_ticket_view_search_analysis_closed
 #: model_terms:ir.ui.view,arch_db:helpdesk.helpdesk_tickets_view_search_base
 msgid "Archived"
-msgstr "Arkiverad"
+msgstr "Arkiverade"
 
 #. module: helpdesk
 #: model_terms:ir.ui.view,arch_db:helpdesk.view_helpdesk_stage_delete_confirmation_wizard
@@ -1276,7 +1277,7 @@ msgstr "Kommersiell enhet"
 #. module: helpdesk
 #: model_terms:ir.ui.view,arch_db:helpdesk.tickets_followup
 msgid "Communication history"
-msgstr "Kommuniktationshistorik"
+msgstr "Kommunikationshistorik"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_team__use_website_helpdesk_forum
@@ -1303,7 +1304,7 @@ msgstr "Företag"
 #. module: helpdesk
 #: model:ir.ui.menu,name:helpdesk.helpdesk_menu_config
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr "Inställningar"
 
 #. module: helpdesk
 #: model_terms:ir.ui.view,arch_db:helpdesk.view_helpdesk_stage_delete_confirmation_wizard
@@ -2057,7 +2058,9 @@ msgstr "Ikon för att indikera en undantagsaktivitet."
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_team__message_needaction
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_ticket__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Om markerat, nya meddelanden kräver din uppmärksamhet."
+msgstr ""
+"Om rutan är markerad, så finns det nya meddelanden som kräver din "
+"uppmärksamhet."
 
 #. module: helpdesk
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_team__message_has_error
@@ -2065,7 +2068,7 @@ msgstr "Om markerat, nya meddelanden kräver din uppmärksamhet."
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_ticket__message_has_error
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_ticket__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Om markerad, några meddelanden har leveransfel."
+msgstr "Om rutan är markerad, så har vissa meddelanden leveransfel."
 
 #. module: helpdesk
 #: model:ir.model.fields,help:helpdesk.field_helpdesk_team__alias_bounced_content
@@ -2447,12 +2450,12 @@ msgstr "Nästa Kalenderhändelse för aktivitet"
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Nästa slutdatum för aktivitet"
+msgstr "Tidsgräns för nästa aktivitet"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__activity_summary
 msgid "Next Activity Summary"
-msgstr "Nästa aktivitetssammanställning"
+msgstr "Sammanfattning av nästa aktivitet"
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__activity_type_id
@@ -3368,10 +3371,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Status baserad på aktiviteter\n"
-"Försenade: Leveranstidpunkten har passerat\n"
-"Idag: Aktivitetsdatum är idag\n"
-"Kommande: Framtida aktiviteter."
+"Status baserat på aktivitetsdatum:\n"
+"Försenade: Aktivitetsdatum har redan passerat.\n"
+"Idag: Aktivitetsdatum är dagens datum.\n"
+"Planerade: Kommande aktiviteter."
 
 #. module: helpdesk
 #: model:ir.model.fields,field_description:helpdesk.field_helpdesk_ticket__duration_tracking

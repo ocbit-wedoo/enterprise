@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_payroll_account
+# * hr_payroll_account
 #
 # Translators:
 # aleksandar ivanov, 2024
@@ -9,26 +9,28 @@
 # Ивайло Малинов <iv.malinov@gmail.com>, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Petko Karamotchev, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Petko Karamotchev, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-17 17:09+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"hr_payroll_account/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_bank_statement_line__payslip_count
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_move__payslip_count
 msgid "# of Payslips"
-msgstr ""
+msgstr "# Фишове за заплата"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_run_view_form
@@ -41,11 +43,17 @@ msgid ""
 "                        <span class=\"o_stat_text\" invisible=\"move_state !"
 "= 'cancel'\">Journal Entry <br/>(Canceled)</span>"
 msgstr ""
+"<span class=\"o_stat_text\" invisible=\"move_state != 'draft'\">Дневников "
+"запис <br/>(Чернова)</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"move_state "
+"!= 'posted'\">Дневников запис <br/>(Публикуван)</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"move_state "
+"!= 'cancel'\">Дневников запис <br/>(Отменен)</span>"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.view_move_form_inherit
 msgid "<span class=\"o_stat_text\">Payslip</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Фиш заплата</span>"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_chart_template
@@ -56,7 +64,7 @@ msgstr "Шаблон за схема на сметката"
 #. odoo-python
 #: code:addons/hr_payroll_account/models/account_chart_template.py:0
 msgid "Account Payslip Houserental"
-msgstr ""
+msgstr "Сметка за наем на жилище във фиша за заплата"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_contract_view_form
@@ -86,7 +94,7 @@ msgstr "Аналитична Сметка"
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_run_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_view_form
 msgid "Are you sure you want to proceed?"
-msgstr ""
+msgstr "Сигурни ли сте, че искате да продължите?"
 
 #. module: hr_payroll_account
 #: model:ir.actions.act_window,name:hr_payroll_account.action_res_partner_bank_account_form
@@ -98,14 +106,14 @@ msgstr "Банкови Сметки"
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.res_config_settings_view_form
 msgid "Batch Account Move Lines"
-msgstr ""
+msgstr "Групови редове на счетоводни записи"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__batch_payroll_move_lines
 #: model:ir.model.fields,field_description:hr_payroll_account.field_res_company__batch_payroll_move_lines
 #: model:ir.model.fields,field_description:hr_payroll_account.field_res_config_settings__batch_payroll_move_lines
 msgid "Batch Payroll Move Lines"
-msgstr ""
+msgstr "Счетоводни редове на партида ведомости"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_res_company
@@ -142,7 +150,7 @@ msgstr "Кредитна сметка"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_line__credit_tag_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__credit_tag_ids
 msgid "Credit Tax Grids"
-msgstr ""
+msgstr "Кредитни данъчни таблици"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__date
@@ -158,7 +166,7 @@ msgstr "Дебитна сметка"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_line__debit_tag_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__debit_tag_ids
 msgid "Debit Tax Grids"
-msgstr ""
+msgstr "Дебитни данъчни таблици"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_contract
@@ -178,6 +186,10 @@ msgid ""
 "into a single account move line. This will anonymize the accounting entries "
 "but also disable single payment generations."
 msgstr ""
+"Активирайте тази опция, за да обедините всички счетоводни записи за един и "
+"същ период в един ред на счетоводна операция. Това ще анонимизира "
+"счетоводните записи, но също така ще деактивира генерирането на отделни "
+"плащания."
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,help:hr_payroll_account.field_hr_salary_rule__split_move_lines
@@ -192,24 +204,26 @@ msgstr ""
 msgid ""
 "From here you can manage all bank accounts linked to you and your contacts."
 msgstr ""
+"Оттук можете да управлявате всички банкови сметки, свързани с вас и вашите "
+"контакти."
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payroll_payment_report_wizard
 msgid "HR Payroll Payment Report Wizard"
-msgstr ""
+msgstr "Помощник за справка за платежни ведомости"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_setup_bank_manual_config__has_alt_bank_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_res_partner_bank__has_alt_bank_account
 msgid "Has Alt Bank Account"
-msgstr ""
+msgstr "Има алтернативна банкова сметка"
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payroll_structure.py:0
 msgid ""
 "Incorrect journal: The journal must be in the same currency as the company"
-msgstr ""
+msgstr "Неправилен дневник: Дневникът трябва да е в същата валута като фирмата"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -218,6 +232,8 @@ msgid ""
 "Invalid IBAN for the following employees:\n"
 "%s"
 msgstr ""
+"Невалиден IBAN за следните служители:\n"
+"%s"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_journal
@@ -247,7 +263,7 @@ msgstr "Движение"
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_run__move_state
 msgid "Move State"
-msgstr ""
+msgstr "Състояние на движението"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__not_computed_in_net
@@ -275,7 +291,7 @@ msgstr "Фиш заплата"
 #. odoo-python
 #: code:addons/hr_payroll_account/wizard/account_payment_register.py:0
 msgid "Payment done at %s"
-msgstr ""
+msgstr "Плащането е извършено на %s"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_payment
@@ -302,7 +318,7 @@ msgstr "Фишове заплата"
 #. odoo-python
 #: code:addons/hr_payroll_account/models/account_chart_template.py:0
 msgid "SLR"
-msgstr ""
+msgstr "SLR"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -319,7 +335,7 @@ msgstr "Журнал за заплати"
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_salary_rule
 msgid "Salary Rule"
-msgstr ""
+msgstr "Правило за заплата"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payroll_structure
@@ -339,6 +355,9 @@ msgid ""
 "into an accounting journal entry.They will be applied on the credit account "
 "line in the journal entry."
 msgstr ""
+"Етикетите, присвоени на този ред, ще повлияят на финансовите отчети, когато "
+"бъдат преобразувани в счетоводен запис в дневник. Те ще бъдат приложени към "
+"кредитния ред на сметката в записа в дневника."
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,help:hr_payroll_account.field_hr_payslip_line__debit_tag_ids
@@ -348,6 +367,9 @@ msgid ""
 "into an accounting journal entry.They will be applied on the debit account "
 "line in the journal entry."
 msgstr ""
+"Етикетите, присвоени на този ред, ще повлияят на финансовите отчети, когато "
+"бъдат преобразувани в счетоводен запис в дневник. Те ще бъдат приложени към "
+"дебитния ред на сметката в записа в дневника."
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -355,12 +377,14 @@ msgstr ""
 msgid ""
 "The Expense Journal \"%s\" has not properly configured the default Account!"
 msgstr ""
+"Дневникът за разходи \"%s\" няма правилно конфигурирана сметка по "
+"подразбиране!"
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "The credit account on the NET salary rule is not reconciliable"
-msgstr ""
+msgstr "Кредитната сметка на правилото за NET заплата не е равняема"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -380,28 +404,28 @@ msgstr ""
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.view_partner_bank_form_inherit_hr_payroll_account
 msgid "This will replace the employee existing bank account."
-msgstr ""
+msgstr "Това ще замени съществуващата банкова сметка на служителя."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "You can only register payment for posted journal entries."
-msgstr ""
+msgstr "Можете да регистрирате плащане само за осчетоводени счетоводни записи."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "You can only register payments for unpaid documents."
-msgstr ""
+msgstr "Можете да регистрирате плащания само за неплатени документи."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "You can't create a journal entry for a paid payslip."
-msgstr ""
+msgstr "Не можете да създадете счетоводен запис за платен фиш за заплата."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/account_journal.py:0
 msgid "You cannot delete the journal linked to a Salary Structure"
-msgstr ""
+msgstr "Не можете да изтриете дневника, свързан със структура на заплата"

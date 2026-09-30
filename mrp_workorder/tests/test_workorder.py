@@ -706,3 +706,19 @@ class TestShopFloor(HttpCase, TestMrpWorkorderCommon):
             'quantity': 2.0,
             'product_id': self.product_1.id,
         }])
+
+    def test_gear_disabled_during_open_mo(self):
+        """Verify the gear menu button is disabled after clicking 'Open
+        Manufacturing Order', preventing other dialogs from opening on a
+        component that is about to be destroyed by the navigation.
+        Two MOs are created so the tour can also verify that the gear button
+        on a *different* WO card is disabled when navigation is pending."""
+        self.bom_2.bom_line_ids = False
+        mos = self.env['mrp.production'].create([{
+            'product_id': self.product_5.id,
+            'product_qty': 1,
+            'bom_id': self.bom_2.id,
+        } for _ in range(2)])
+        mos.action_confirm()
+        mos.button_plan()
+        self.start_tour("/odoo/shop-floor", "test_gear_disabled_during_open_mo", login='admin')

@@ -46,7 +46,9 @@ export class UseAsAttachmentMacro extends AbstractMacro {
                     }
                     return null;
                 },
-                action: (el) => el.scrollIntoView(),
+                action: (el) => {
+                    el.scrollIntoView()
+                },
             },
             {
                 action: () => this.unblockUI(),

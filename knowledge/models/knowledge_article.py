@@ -860,11 +860,6 @@ class Article(models.Model):
                 vals["body"] = Markup('<h1>%s</h1>') % vals["name"] if vals.get("name") \
                                else Markup('<h1 class="oe-hint"><br></h1>')
 
-            vals.update({
-                'last_edition_date': fields.Datetime.now(),
-                'last_edition_uid': self.env.user.id,
-            })
-
             can_sudo = False
             # get values from vals or defaults
             member_ids = vals.get('article_member_ids') or defaults.get('article_member_ids') or False
@@ -874,12 +869,41 @@ class Article(models.Model):
                 parent_ids.add(parent_id)
 
             if not self.env.user._is_internal() and not self.env.su:
+                allowed_fields = self._get_portal_write_fields_allowlist() | {'active', 'to_delete', 'parent_id'}
+                write_fields = {
+                    key[len("default_"):] for key in self.env.context if key.startswith("default_")
+                } | set(vals)
+                forbidden_fields = write_fields - allowed_fields
+                if forbidden_fields and (
+                    # A private root requires both its private permission and a membership granting
+                    # its portal creator write access, so allow these two otherwise forbidden fields.
+                    forbidden_fields - {'internal_permission', 'article_member_ids'}
+                    or not (
+                        # Restrict the exception to a new private root with one exact self-membership command.
+                        not parent_id
+                        and internal_permission == 'none'
+                        and member_ids
+                        and len(member_ids) == 1
+                        and member_ids[0][0] == Command.CREATE
+                        and member_ids[0][2] == {
+                            'partner_id': self.env.user.partner_id.id,
+                            'permission': 'write',
+                        }
+                    )
+                ):
+                    raise AccessError(_('Only internal users are allowed to modify this information.'))
+
                 if not parent_id and internal_permission != 'none':
                     raise AccessError(_('Only internal users are allowed to create workspace root articles.'))
 
                 if internal_permission != 'none' and 'is_article_visible_by_everyone' in vals:
                     # do not let portal specify the visibility, it will inherit from the root article
                     del vals['is_article_visible_by_everyone']
+
+            vals.update({
+                'last_edition_date': fields.Datetime.now(),
+                'last_edition_uid': self.env.user.id,
+            })
 
             # force write permission for workspace articles
             if not parent_id and not internal_permission:

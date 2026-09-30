@@ -53,7 +53,7 @@
     <record id="cap57_employees_salary_internet" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll.ALW"/>
         <field name="name">Internet Allowance</field>
-        <field name="code">ALW.INT</field>
+        <field name="code">ALW_INT</field>
         <field name="sequence">30</field>
         <field name="condition_select">python</field>
         <field name="condition_python">result = bool(not payslip.is_outside_contract and contract.l10n_hk_internet)</field>

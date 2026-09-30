@@ -13,13 +13,14 @@
 # KeyVillage, 2024
 # Milena Georgieva, 2024
 # "v.kanev" <v.kanev@tutanota.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-03-11 13:03+0000\n"
-"Last-Translator: \"v.kanev\" <v.kanev@tutanota.com>\n"
+"PO-Revision-Date: 2026-08-11 09:36+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "pos_preparation_display/bg/>\n"
 "Language: bg\n"
@@ -27,23 +28,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "<span>Average time</span>"
-msgstr ""
+msgstr "<span>Средно време</span>"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "<span>In progress</span>"
-msgstr ""
+msgstr "<span>В процес на изпълнение</span>"
 
 #. module: pos_preparation_display
 #. odoo-python
 #: code:addons/pos_preparation_display/models/preparation_display.py:0
 msgid "A preparation display must have a minimum of one step."
-msgstr ""
+msgstr "Дисплеят за приготвяне трябва да има поне една стъпка."
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__access_token
@@ -53,7 +54,7 @@ msgstr "Токен за достъп"
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_stage__alert_timer
 msgid "Alert timer (min)"
-msgstr ""
+msgstr "Таймер за предупреждение (мин)"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -64,12 +65,12 @@ msgstr "Всичко"
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_form
 msgid "All PoS"
-msgstr ""
+msgstr "Всички каси"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_form
 msgid "All categories"
-msgstr ""
+msgstr "Всички категории"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_order__order_stage_ids
@@ -82,16 +83,18 @@ msgid ""
 "Archive all preparation display's orders for a fresh start. This will not "
 "affect the PoS order history."
 msgstr ""
+"Архивиране на всички поръчки от дисплея за приготвяне за чисто начало. Това "
+"няма да засегне историята на поръчките в касата."
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_display__average_time
 msgid "Average time of all order that not in a done stage."
-msgstr ""
+msgstr "Средно време на всички поръчки, които не са в приключен етап."
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_reset_wizard
 msgid "Check products"
-msgstr ""
+msgstr "Проверка на продуктите"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -143,7 +146,7 @@ msgstr "Създадено на"
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_order__pdis_general_note
 msgid "Current general-note displayed on preparation display"
-msgstr ""
+msgstr "Текуща обща бележка, показана на дисплея за приготвяне"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_order__displayed
@@ -156,6 +159,7 @@ msgstr ""
 msgid ""
 "Different products and categories are sent to different tablets and screens."
 msgstr ""
+"Различни продукти и категории се изпращат към различни таблети и екрани."
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_reset_wizard
@@ -183,13 +187,13 @@ msgstr "Извършен"
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "Explore demo data"
-msgstr ""
+msgstr "Разгледай демо данните"
 
 #. module: pos_preparation_display
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/override/point_of_sale/pos_store.js:0
 msgid "Failed in sending the changes to preparation display"
-msgstr ""
+msgstr "Неуспешно изпращане на промените към дисплея за приготвяне"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -227,7 +231,7 @@ msgstr "Вътрешна бележка"
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_orderline__internal_note
 msgid "Internal notes written at the time of the order"
-msgstr ""
+msgstr "Вътрешни бележки, написани в момента на поръчката"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__contains_bar_restaurant
@@ -244,7 +248,7 @@ msgstr ""
 #: model:ir.actions.server,name:pos_preparation_display.action_pos_preparation_display_kitchen_display
 #: model:ir.ui.menu,name:pos_preparation_display.menu_point_kitchen_display_root
 msgid "Kitchen Display"
-msgstr ""
+msgstr "Кухненски дисплей"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__write_uid
@@ -281,7 +285,7 @@ msgstr "Име"
 #. module: pos_preparation_display
 #: model_terms:ir.actions.act_window,help:pos_preparation_display.action_preparation_display
 msgid "Need a touchscreen interface to manage order ?"
-msgstr ""
+msgstr "Нуждаете се от сензорен интерфейс за управление на поръчките?"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -292,7 +296,7 @@ msgstr "Няма налични данни."
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_form
 msgid "Offer"
-msgstr ""
+msgstr "Оферта"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_order_stage__order_id
@@ -312,12 +316,12 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__average_time
 msgid "Order average time"
-msgstr ""
+msgstr "Средно време на поръчката"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__order_count
 msgid "Order count"
-msgstr ""
+msgstr "Брой поръчки"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_order__displayed
@@ -327,7 +331,7 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_orderline__pos_order_line_uuid
 msgid "Original pos order line UUID"
-msgstr ""
+msgstr "UUID на оригиналния ред на поръчка от касата"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__pos_config_ids
@@ -358,12 +362,12 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_order__pos_order_id
 msgid "Pos Order"
-msgstr ""
+msgstr "Поръчка в касата"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__pos_order_line_uuid
 msgid "Pos Order Line Uuid"
-msgstr ""
+msgstr "UUID на ред на поръчка в касата"
 
 #. module: pos_preparation_display
 #: model:ir.actions.act_url,name:pos_preparation_display.action_pos_preparation_display_bar_restaurant_filter_link
@@ -374,7 +378,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_search
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_tree
 msgid "Preparation Display"
-msgstr ""
+msgstr "Дисплей за приготвяне"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__preparation_display_order_id
@@ -384,13 +388,13 @@ msgstr ""
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "Preparation Screen"
-msgstr ""
+msgstr "Екран за приготвяне"
 
 #. module: pos_preparation_display
 #: model:ir.model,name:pos_preparation_display.model_pos_preparation_display_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_stage__preparation_display_id
 msgid "Preparation display"
-msgstr ""
+msgstr "Дисплей за приготвяне"
 
 #. module: pos_preparation_display
 #: model:ir.model,name:pos_preparation_display.model_pos_preparation_display_order
@@ -400,22 +404,22 @@ msgstr ""
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__product_id
 msgid "Product ID"
-msgstr ""
+msgstr "ID на продукта"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_display__category_ids
 msgid "Product categories"
-msgstr ""
+msgstr "Продуктови категории"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_display__category_ids
 msgid "Product categories that will be displayed on this screen."
-msgstr ""
+msgstr "Продуктови категории, които ще се показват на този екран."
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__product_cancelled
 msgid "Quantity of cancelled product"
-msgstr ""
+msgstr "Количество отменен продукт"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__product_quantity
@@ -426,7 +430,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "Recall"
-msgstr ""
+msgstr "Връщане"
 
 #. module: pos_preparation_display
 #. odoo-javascript
@@ -439,28 +443,28 @@ msgstr "Нулиране"
 #. odoo-python
 #: code:addons/pos_preparation_display/models/preparation_display.py:0
 msgid "Reset Preparation Display"
-msgstr ""
+msgstr "Нулиране на дисплея за приготвяне"
 
 #. module: pos_preparation_display
 #: model:ir.model,name:pos_preparation_display.model_pos_preparation_display_reset_wizard
 msgid "Reset all current order in a preparation display"
-msgstr ""
+msgstr "Нулиране на всички текущи поръчки в дисплей за приготвяне"
 
 #. module: pos_preparation_display
 #: model_terms:ir.ui.view,arch_db:pos_preparation_display.preparation_display_view_kanban
 msgid "Reset all orders"
-msgstr ""
+msgstr "Нулиране на всички поръчки"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__attribute_value_ids
 msgid "Selected Attributes"
-msgstr ""
+msgstr "Избрани атрибути"
 
 #. module: pos_preparation_display
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/override/point_of_sale/pos_store.js:0
 msgid "Send failed"
-msgstr ""
+msgstr "Изпращането е неуспешно"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_stage__sequence
@@ -486,17 +490,17 @@ msgstr "Стадии"
 #. module: pos_preparation_display
 #: model:ir.model.fields,field_description:pos_preparation_display.field_pos_preparation_display_orderline__todo
 msgid "Status of the orderline"
-msgstr ""
+msgstr "Статус на реда от поръчката"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_orderline__todo
 msgid "The status of a command line, todo or not"
-msgstr ""
+msgstr "Статусът на команден ред, за изпълнение или не"
 
 #. module: pos_preparation_display
 #: model:ir.model.fields,help:pos_preparation_display.field_pos_preparation_display_stage__alert_timer
 msgid "Timer after which the order will be highlighted"
-msgstr ""
+msgstr "Таймер, след който поръчката ще бъде осветена"
 
 #. module: pos_preparation_display
 #. odoo-python
@@ -505,6 +509,8 @@ msgid ""
 "You cannot modify the stages of a preparation display that has an active "
 "sessions."
 msgstr ""
+"Не можете да променяте етапите на дисплей за приготвяне, който има активни "
+"сесии."
 
 #. module: pos_preparation_display
 #: model:ir.actions.server,name:pos_preparation_display.preparation_display_delete_cron_ir_actions_server
@@ -515,10 +521,10 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/preparation_display/preparation_display.xml:0
 msgid "or simply wait for orders to be sent for preparation."
-msgstr ""
+msgstr "или просто изчакайте поръчки да бъдат изпратени за приготвяне."
 
 #. module: pos_preparation_display
 #. odoo-javascript
 #: code:addons/pos_preparation_display/static/src/app/components/order/order.xml:0
 msgid "products"
-msgstr ""
+msgstr "продукти"

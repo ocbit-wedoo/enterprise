@@ -22,15 +22,7 @@ class FuenteReportCustomHandler(models.AbstractModel):
             account_code = self.env['account.account']._field_to_sql(account_alias, 'code', query)
             account_name = self.env['account.account']._field_to_sql(account_alias, 'name')
             account_id = SQL.identifier(account_alias, 'id')
-            tax_base_amount_select = SQL("""
-                SUM(CASE
-                    WHEN account_move_line.credit > 0
-                        THEN account_move_line.tax_base_amount
-                    WHEN account_move_line.debit > 0
-                        THEN account_move_line.tax_base_amount * -1
-                    ELSE 0
-                    END)
-            """)
+            tax_base_amount_select = SQL("SUM(account_move_line.tax_base_amount)")
             queries.append(SQL(
                 """
                 SELECT

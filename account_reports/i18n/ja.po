@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 17:48+0000\n"
-"PO-Revision-Date: 2026-05-27 11:05+0000\n"
+"PO-Revision-Date: 2026-09-14 03:32+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "account_reports/ja/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1137,7 +1137,7 @@ msgstr "比較"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
@@ -1175,7 +1175,7 @@ msgstr "連絡先"
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__mail_body
 #, fuzzy
 msgid "Contents"
-msgstr "本文"
+msgstr "内容"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_direct_costs0
@@ -1297,7 +1297,7 @@ msgstr "通貨:"
 #: model:account.report.column,name:account_reports.deferred_expense_current
 #: model:account.report.column,name:account_reports.deferred_revenue_current
 msgid "Current"
-msgstr "流動"
+msgstr "当期"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_current_assets0
@@ -1574,13 +1574,13 @@ msgstr "データ変更不可チェックレポートをダウンロード"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_extra_options.xml:0
 msgid "Draft Entries"
-msgstr "ドラフト仕訳"
+msgstr "下書き仕訳"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_general_ledger.py:0
 msgid "Draft Entry"
-msgstr "ドラフト仕訳"
+msgstr "下書き仕訳"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2181,7 +2181,7 @@ msgstr "単位：%s"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_report_search
 msgid "Inactive"
-msgstr "無効"
+msgstr "非アクティブ"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2513,7 +2513,7 @@ msgstr "その他経費の低減"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_annotation__line_id
 msgid "Line"
-msgstr "ライン"
+msgstr "行"
 
 #. module: account_reports
 #. odoo-python
@@ -2653,8 +2653,8 @@ msgid ""
 "after %(period_start)s. There should be at most one. \n"
 " %(closing_entries)s"
 msgstr ""
-"税決算仕訳のドラフトが会計ポジション %(position)s、%(period_start)s以降に複数"
-"存在します。多くても１つである必要があります。 \n"
+"税決算仕訳の下書きが会計ポジション %(position)s、%(period_start)s以降に複数存"
+"在します。多くても１つである必要があります。 \n"
 " %(closing_entries)s"
 
 #. module: account_reports
@@ -2665,8 +2665,8 @@ msgid ""
 "(period_start)s. There should be at most one. \n"
 " %(closing_entries)s"
 msgstr ""
-" あなたの国内地域用に%(period_start)s後の複数のドラフト税決算仕訳が存在しま"
-"す。最大でも1までにして下さい。 \n"
+" あなたの国内地域用に%(period_start)s後の複数の下書き税決算仕訳が存在します。"
+"最大でも1までにして下さい。 \n"
 " %(closing_entries)s"
 
 #. module: account_reports
@@ -2799,7 +2799,7 @@ msgstr "未収入金"
 #: code:addons/account_reports/static/src/components/journal_report/line/line.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_journal_report_taxes_summary
 msgid "Non-Deductible"
-msgstr "控除不可"
+msgstr "損金不算入"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2860,7 +2860,7 @@ msgstr "顧客明細を開く"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_financial_year_op
 msgid "Opening Balance of Financial Year"
-msgstr "会計年度の開始残高"
+msgstr "会計年度の期首残高"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_operating_income0
@@ -3058,7 +3058,7 @@ msgstr "期間オーダ"
 #: model:ir.model.fields,help:account_reports.field_res_config_settings__account_tax_periodicity
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
 msgid "Periodicity"
-msgstr "周期設定"
+msgstr "申告周期"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_financial_year_op__account_tax_periodicity
@@ -4074,8 +4074,8 @@ msgid ""
 "meantime."
 msgstr ""
 "この税の締め仕訳は計上されていますが、税ロック日が対象期間の最終日よりも早い"
-"です。その間に税金を使用した他の仕訳が記帳された場合、この仕訳をドラフトにリ"
-"セットし、内容を更新する必要があるかもしれません。"
+"です。その間に税金を使用した他の仕訳が記帳された場合、この仕訳を下書きに"
+"リセットし、内容を更新する必要があるかもしれません。"
 
 #. module: account_reports
 #. odoo-javascript
@@ -4316,7 +4316,7 @@ msgstr "選択した外貨に対応する必要があるかどうか。"
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filter_extra_options_template
 msgid "With Draft Entries"
-msgstr "ドラフト仕訳を含む"
+msgstr "下書き仕訳を含む"
 
 #. module: account_reports
 #. odoo-python
@@ -4395,8 +4395,8 @@ msgid ""
 "You cannot reset this closing entry to draft, as another closing entry has "
 "been posted at a later date."
 msgstr ""
-"後日、別の締め仕訳が記帳されたため、この締め仕訳をドラフトにリセットすること"
-"はできません。"
+"後日、別の締め仕訳が記帳されたため、この締め仕訳を下書きにリセットすることは"
+"できません。"
 
 #. module: account_reports
 #. odoo-python
@@ -4406,8 +4406,8 @@ msgid ""
 "values impacting the tax report of a locked period. Please change the "
 "following lock dates to proceed: %(lock_date_info)s."
 msgstr ""
-"この締め仕訳をドラフトに戻すと、ロックされた期間の税レポートに影響する繰越額"
-"が削除されます。続行するには、以下のロック日付を変更してください:%"
+"この締め仕訳を下書きに戻すと、ロックされた期間の税レポートに影響する繰越額が"
+"削除されます。続行するには、以下のロック日付を変更してください:%"
 "(lock_date_info)s"
 
 #. module: account_reports
@@ -4517,7 +4517,7 @@ msgstr "直近の銀行取引明細書"
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__res_company__account_tax_periodicity__monthly
 msgid "monthly"
-msgstr "毎月"
+msgstr "月次"
 
 #. module: account_reports
 #. odoo-python
@@ -4640,7 +4640,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/multicurrency_revaluation_report/warnings.xml:0
 msgid "⇒ Reset to Odoo’s Rate"
-msgstr "Odooのレート⇒リセット"
+msgstr "⇒ Odooのレートにリセット"
 
 #~ msgid "Could not parse account_code formula from token '%s'"
 #~ msgstr "トークン '%s'からaccount_code 数式を解析できませんでした。"

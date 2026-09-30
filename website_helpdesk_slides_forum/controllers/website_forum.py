@@ -6,5 +6,7 @@ from odoo.addons.website_helpdesk_forum.controllers.website_forum import Website
 
 class WebsiteSlidesForumHelpdesk(WebsiteForumHelpdesk):
 
-    def get_template_xml_id(self):
-        return "website_helpdesk_slides_forum.helpdesk_forums"
+    def _get_helpdesk_forums_render_values(self, forums):
+        values = super()._get_helpdesk_forums_render_values(forums)
+        values['hide_forum_slides_link'] = True
+        return values

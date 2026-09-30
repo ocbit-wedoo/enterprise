@@ -1493,7 +1493,7 @@ export class GanttRenderer extends Component {
 
     getSubColumnFromDate(date, onLeft = true) {
         const { interval, cellPart, cellTime, time } = this.model.metaData.scale;
-        const column = date.startOf(interval);
+        const column = localStartOf(date, interval);
         let delta;
         if (onLeft) {
             delta = 0;

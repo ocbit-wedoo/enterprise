@@ -209,7 +209,7 @@
                     <NrDostawcy t-else="" t-out="'BRAK'"/>
                     <NazwaDostawcy t-if="b.get('partner_complete_name')" t-out="b.get('partner_complete_name')"/>
                     <NazwaDostawcy t-else="" t-out="'BRAK'"/>
-                    <DowodZakupu t-out="b.get('move_name')"/>
+                    <DowodZakupu t-out="b.get('reference') or b.get('move_name')"/>
                     <DataZakupu t-out="b.get('move_date')"/>
                     <DataWplywu t-if="b.get('create_date') != b.get('move_date')" t-out="b.get('create_date')"/>
                     <NrKSeF t-if="b.get('ksef_reference') not in ('OFF', 'BFK', 'DI')" t-out="b.get('ksef_reference')"/>

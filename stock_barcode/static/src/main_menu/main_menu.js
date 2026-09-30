@@ -57,7 +57,8 @@ export class MainMenu extends Component {
         this.dialogService.add(ManualBarcodeScanner, {
             facingMode: "environment",
             onResult: (barcode) => {
-                this._onBarcodeScanned(barcode);
+                const cleanedBarcode = this.barcodeService.cleanBarcode(barcode);
+                this._onBarcodeScanned(cleanedBarcode);
                 res(barcode);
             },
             onError: (error) => rej(error),

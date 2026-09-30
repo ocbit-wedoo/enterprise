@@ -8,13 +8,14 @@
 # Antonio Trueba, 2016
 # Ivan Nieto <ivan.nieto.sousa@gmail.com>, 2016
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 19:01+0000\n"
-"PO-Revision-Date: 2025-11-07 22:22+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-18 22:58+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_do_check_printing/es_419/>\n"
 "Language: es_419\n"
@@ -22,52 +23,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,print_report_name:l10n_do_check_printing.action_print_blank_check_bottom
 msgid "'Blank Check Bottom - %s' % (object.partner_id.name or '',)"
 msgstr ""
+"'Cheque en blanco, parte inferior - %s' % (object.partner_id.name or '',)"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,print_report_name:l10n_do_check_printing.action_print_blank_check_middle
 msgid "'Blank Check Middle - %s' % (object.partner_id.name or '',)"
 msgstr ""
+"'Cheque en blanco, parte central - %s' % (object.partner_id.name or '',)"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,print_report_name:l10n_do_check_printing.action_print_blank_check_top
 msgid "'Blank Check Top - %s' % (object.partner_id.name or '',)"
 msgstr ""
+"'Cheque en blanco, parte superior - %s' % (object.partner_id.name or '',)"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,print_report_name:l10n_do_check_printing.action_print_check_bottom
 msgid "'Check Bottom - %s' % (object.partner_id.name or '',)"
-msgstr ""
+msgstr "'Cheque, parte inferior - %s' % (object.partner_id.name or '',)"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,print_report_name:l10n_do_check_printing.action_print_check_middle
 msgid "'Check Middle - %s' % (object.partner_id.name or '',)"
-msgstr ""
+msgstr "'Cheque, parte central - %s' % (object.partner_id.name or '',)"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,print_report_name:l10n_do_check_printing.action_print_check_top
 msgid "'Check Top - %s' % (object.partner_id.name or '',)"
-msgstr ""
+msgstr "'Cheque, parte superior - %s' % (object.partner_id.name or '',)"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_check_blank
 msgid "AUTHORIZED SIGNATURE"
-msgstr ""
+msgstr "FIRMA AUTORIZADA"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_stub
 msgid "Balance Due"
-msgstr ""
+msgstr "Saldo pendiente"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_stub
 msgid "Check Amount:"
-msgstr "Comprobar Cantidad:"
+msgstr "Importe del cheque:"
 
 #. module: l10n_do_check_printing
 #: model:ir.model.fields,field_description:l10n_do_check_printing.field_res_company__account_check_printing_layout
@@ -82,7 +86,7 @@ msgstr "Empresas"
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_check_blank
 msgid "DOLLARS"
-msgstr ""
+msgstr "DÓLARES"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_stub
@@ -102,12 +106,12 @@ msgstr "Importe factura"
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_check_blank
 msgid "MEMO"
-msgstr ""
+msgstr "NOTA"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_check_blank
 msgid "PAY TO THE<br/>ORDER OF"
-msgstr ""
+msgstr "PÁGUESE A LA<br/>ORDEN DE"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_stub
@@ -122,32 +126,32 @@ msgstr "Pagos"
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,name:l10n_do_check_printing.action_print_blank_check_bottom
 msgid "Print Blank Check (Bottom)"
-msgstr ""
+msgstr "Imprimir cheque en blanco (abajo)"
 
 #. module: l10n_do_check_printing
 #: model:ir.model.fields.selection,name:l10n_do_check_printing.selection__res_company__account_check_printing_layout__l10n_do_check_printing_action_print_blank_check_bottom
 msgid "Print Blank Check (Bottom) - Dominican Republic"
-msgstr ""
+msgstr "Imprimir cheque en blanco (abajo) - República Dominicana"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,name:l10n_do_check_printing.action_print_blank_check_middle
 msgid "Print Blank Check (Middle)"
-msgstr ""
+msgstr "Imprimir cheque en blanco (al centro)"
 
 #. module: l10n_do_check_printing
 #: model:ir.model.fields.selection,name:l10n_do_check_printing.selection__res_company__account_check_printing_layout__l10n_do_check_printing_action_print_blank_check_middle
 msgid "Print Blank Check (Middle) - Dominican Republic"
-msgstr ""
+msgstr "Imprimir cheque en blanco (al centro) - República Dominicana"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,name:l10n_do_check_printing.action_print_blank_check_top
 msgid "Print Blank Check (Top)"
-msgstr ""
+msgstr "Imprimir cheque en blanco (arriba)"
 
 #. module: l10n_do_check_printing
 #: model:ir.model.fields.selection,name:l10n_do_check_printing.selection__res_company__account_check_printing_layout__l10n_do_check_printing_action_print_blank_check_top
 msgid "Print Blank Check (Top) - Dominican Republic"
-msgstr ""
+msgstr "Imprimir cheque en blanco (arriba) - República Dominicana"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,name:l10n_do_check_printing.action_print_check_bottom
@@ -157,7 +161,7 @@ msgstr "Imprimir cheque (abajo)"
 #. module: l10n_do_check_printing
 #: model:ir.model.fields.selection,name:l10n_do_check_printing.selection__res_company__account_check_printing_layout__l10n_do_check_printing_action_print_check_bottom
 msgid "Print Check (Bottom) - Dominican Republic"
-msgstr ""
+msgstr "Imprimir cheque (abajo) - República Dominicana"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,name:l10n_do_check_printing.action_print_check_middle
@@ -167,7 +171,7 @@ msgstr "Imprimir cheque (en medio)"
 #. module: l10n_do_check_printing
 #: model:ir.model.fields.selection,name:l10n_do_check_printing.selection__res_company__account_check_printing_layout__l10n_do_check_printing_action_print_check_middle
 msgid "Print Check (Middle) - Dominican Republic"
-msgstr ""
+msgstr "Imprimir cheque (al centro) - República Dominicana"
 
 #. module: l10n_do_check_printing
 #: model:ir.actions.report,name:l10n_do_check_printing.action_print_check_top
@@ -177,7 +181,7 @@ msgstr "Imprimir cheque (arriba)"
 #. module: l10n_do_check_printing
 #: model:ir.model.fields.selection,name:l10n_do_check_printing.selection__res_company__account_check_printing_layout__l10n_do_check_printing_action_print_check_top
 msgid "Print Check (Top) - Dominican Republic"
-msgstr ""
+msgstr "Imprimir cheque (arriba) - República Dominicana"
 
 #. module: l10n_do_check_printing
 #: model:ir.model.fields,help:l10n_do_check_printing.field_res_company__account_check_printing_layout
@@ -193,9 +197,9 @@ msgstr ""
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_check
 msgid "VOID"
-msgstr ""
+msgstr "ANULADO"
 
 #. module: l10n_do_check_printing
 #: model_terms:ir.ui.view,arch_db:l10n_do_check_printing.ckdo_check_blank
 msgid "company logo"
-msgstr ""
+msgstr "logotipo de la empresa"

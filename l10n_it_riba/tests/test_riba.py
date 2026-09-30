@@ -160,3 +160,30 @@ class TestRiba(AccountTestInvoicingCommon):
         original_riba_values = batch_payment._l10n_it_riba_get_values()
         actual_imported_values = riba.file_import(self._expected_content(batch_payment.payment_ids.ids))
         self.assertTrue(riba.eq_records(actual_imported_values, original_riba_values))
+
+    def test_sm_iban_riba_batch_payment(self):
+        """ Test that the RIBA batch payment method is available for a partner bank with IBAN for San Marino Regional Bank (SM) """
+        partner_bank_account = self.env['res.partner.bank'].create({
+            'partner_id': self.partner_a.id,
+            'acc_number': 'SM59 E085 4009 8130 0013 0170 004',
+            'allow_out_payment': True,
+        })
+        self.partner_a.write({
+            'vat': 'SM24165',
+            'country_id': self.env.ref('base.sm').id,
+            'bank_ids': [Command.set(partner_bank_account.id)]
+        })
+        payment = self.env['account.payment'].create({
+            'amount': 100.0,
+            'payment_type': 'inbound',
+            'partner_id': self.partner_a.id,
+            'payment_method_line_id': self.riba_payment_line.id,
+        })
+        payment.action_post()
+        batch_payment = self.env['account.batch.payment'].create({
+            'journal_id': payment.journal_id.id,
+            'payment_method_id': payment.payment_method_id.id,
+            'payment_ids': [Command.set([payment.id])],
+        })
+        batch_payment.validate_batch()
+        self.assertEqual(batch_payment.payment_method_id, self.riba_method)

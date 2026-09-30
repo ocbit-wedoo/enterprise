@@ -78,8 +78,8 @@ class HelpdeskSLAReport(models.Model):
                             T.priority AS priority,
                             NULLIF(T.close_hours, 0) AS ticket_close_hours,
                             CASE
-                                WHEN EXTRACT(EPOCH FROM (COALESCE(T.assign_date, NOW() AT TIME ZONE 'UTC') - T.create_date)) / 3600 < 1 THEN NULL
-                                ELSE EXTRACT(EPOCH FROM (COALESCE(T.assign_date, NOW() AT TIME ZONE 'UTC') - T.create_date)) / 3600
+                                WHEN EXTRACT(EPOCH FROM (COALESCE(T.close_date, NOW() AT TIME ZONE 'UTC') - T.create_date)) / 3600 < 1 THEN NULL
+                                ELSE EXTRACT(EPOCH FROM (COALESCE(T.close_date, NOW() AT TIME ZONE 'UTC') - T.create_date)) / 3600
                             END AS ticket_open_hours,
                             NULLIF(T.assign_hours, 0) AS ticket_assignation_hours,
                             NULLIF(T.avg_response_hours, 0) AS avg_response_hours,

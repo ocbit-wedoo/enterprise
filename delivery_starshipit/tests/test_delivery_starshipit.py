@@ -6,6 +6,7 @@ from unittest.mock import patch
 import requests
 
 from odoo import Command
+from odoo.addons.delivery_starshipit.models.starshipit_service import Starshipit
 from odoo.tests import TransactionCase, tagged
 from odoo.exceptions import UserError
 
@@ -367,3 +368,65 @@ class TestDeliveryStarShipIt(TransactionCase):
             # Redirected to the "Add Shipping" Wizard with the new carrier
             new_add_shipping_wizard = self.env[result_action['res_model']].with_context(result_action['context']).create({})
             self.assertEqual(new_add_shipping_wizard.carrier_id.starshipit_service_code, 'CP01ILB', "A new carrier id should have been created with the selected service code.")
+
+    def test_rate_streetless_address(self):
+        """ A streetless address is rejected before reaching the api, whether or not the rate is
+        computed for a partial express checkout address.
+        """
+        partial_partner = self.env['res.partner'].create({
+            'name': 'Express Checkout Buyer',
+            'city': 'Hazelwood North',
+            'country_id': self.env.ref('base.au').id,
+            'zip': 3840,
+            'state_id': self.env.ref('base.state_au_7').id,
+            # No street / street2: this is what Apple Pay discloses before authorization.
+        })
+        sale_order = self.env['sale.order'].create({
+            'partner_id': partial_partner.id,
+            'order_line': [Command.create({'product_id': self.product_to_ship1.id})],
+        })
+
+        for partial_address in (True, False):
+            with self.subTest(partial_address=partial_address):
+                order = sale_order.with_context(
+                    express_checkout_partial_delivery_address=partial_address
+                )
+                with patch.object(Starshipit, '_send_request') as mocked_request:
+                    rate = self.starshipit.rate_shipment(order)
+                self.assertFalse(rate['success'])
+                mocked_request.assert_not_called()
+                # The street is only reported as missing outside of the express checkout flow,
+                # where the customer can still complete their address.
+                if partial_address:
+                    self.assertNotIn('street', rate['error_message'])
+                else:
+                    self.assertIn('street', rate['error_message'])
+
+    def test_rate_incomplete_warehouse_address(self):
+        """ An incomplete warehouse address is rejected before reaching the api. """
+        sale_order = self.env['sale.order'].create({
+            'partner_id': self.au_partner.id,
+            'order_line': [Command.create({'product_id': self.product_to_ship1.id})],
+        })
+        sale_order.warehouse_id.partner_id.city = False
+
+        with patch.object(Starshipit, '_send_request') as mocked_request:
+            rate = self.starshipit.rate_shipment(sale_order)
+        self.assertFalse(rate['success'])
+        self.assertIn('city', rate['error_message'])
+        mocked_request.assert_not_called()
+
+    def test_rate_api_error_does_not_abort_rating(self):
+        """ An api error is returned as an unsuccessful rate rather than raised.
+        """
+        sale_order = self.env['sale.order'].create({
+            'partner_id': self.au_partner.id,
+            'order_line': [Command.create({'product_id': self.product_to_ship1.id})],
+        })
+
+        with patch.object(
+            Starshipit, '_send_request', side_effect=UserError('Invalid Starshipit credentials.')
+        ):
+            rate = self.starshipit.rate_shipment(sale_order)
+        self.assertFalse(rate['success'])
+        self.assertEqual(rate['error_message'], 'Invalid Starshipit credentials.')

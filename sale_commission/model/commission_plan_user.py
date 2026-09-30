@@ -26,9 +26,11 @@ class CommissionPlanUser(models.Model):
     def _date_constraint(self):
         for user in self:
             if user.date_to and user.date_from and user.date_to < user.date_from:
-                raise exceptions.UserError(_("From must be before To"))
+                raise exceptions.UserError(_("The assignment start date must be before the end date"))
             if user.date_from and user.plan_id.date_from and user.date_from < user.plan_id.date_from:
-                raise exceptions.UserError(_("User period cannot start before the plan."))
+                raise exceptions.UserError(_("The sales person's assignment must be within the commission plan period."))
+            if user.date_from and user.plan_id.date_to and user.date_from > user.plan_id.date_to:
+                raise exceptions.UserError(_("User period cannot start after the plan."))
             if user.date_to and user.plan_id.date_to and user.date_to > user.plan_id.date_to:
                 raise exceptions.UserError(_("User period cannot end after the plan."))
 

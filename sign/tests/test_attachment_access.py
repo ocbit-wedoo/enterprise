@@ -100,6 +100,35 @@ class testAttachmentAccess(TransactionCase):
             template.write({'attachment_id': attachment_forbidden.id})
             template.datas
 
+        with self.assertRaises(AccessError):
+            self.env["sign.template"].with_user(self.user).onchange(
+                {"attachment_id": attachment_forbidden.id},
+                ["attachment_id"],
+                {"datas": {}},
+            )
+
+        with self.assertRaises(AccessError):
+            self.env["sign.template"].with_user(self.user).with_context(
+                default_attachment_id=attachment_forbidden.id,
+            ).onchange(
+                {},
+                [],
+                {"attachment_id": {}, "datas": {}},
+            )
+
+        self.env["ir.default"].with_user(self.user).set(
+            "sign.template",
+            "attachment_id",
+            attachment_forbidden.id,
+            user_id=True,
+        )
+        with self.assertRaises(AccessError):
+            self.env["sign.template"].with_user(self.user).onchange(
+                {},
+                [],
+                {"attachment_id": {}, "datas": {}},
+            )
+
     def test_user_template_duplicate_created_by_admin(self):
         """Test an employee can read the content of a duplicated template created by another user, the admin"""
 

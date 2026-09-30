@@ -24,13 +24,14 @@
 # Mikael Akerberg <mikael.akerberg@mariaakerberg.com>, 2025, 2026.
 # Johannes Myrlander <johannes.myrlander@ucsonedo.se>, 2025.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-22 17:52+0000\n"
-"PO-Revision-Date: 2026-05-17 05:58+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-09-10 12:33+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/"
 "documents/sv/>\n"
 "Language: sv\n"
@@ -38,7 +39,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: documents
 #. odoo-javascript
@@ -639,7 +640,7 @@ msgstr "Åtkomstfel"
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_token
 #: model:ir.model.fields,field_description:documents.field_documents_redirect__access_token
 msgid "Access Token"
-msgstr "Åtkomsttecken"
+msgstr "Åtkomsttoken"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.portal_my_home_documents
@@ -720,17 +721,17 @@ msgstr "Verksamhet"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__activity_exception_decoration
 msgid "Activity Exception Decoration"
-msgstr "Aktivitet undantaget dekoration"
+msgstr "Stilmarkeringar för undantagsaktiviteter"
 
 #. module: documents
 #: model:ir.ui.menu,name:documents.mail_activity_plan_menu
 msgid "Activity Plans"
-msgstr "Verksamhetsplaner"
+msgstr "Aktivitetsplaner"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__activity_state
 msgid "Activity State"
-msgstr "Aktivitetsläge"
+msgstr "Aktivitetsstatus"
 
 #. module: documents
 #: model:ir.model,name:documents.model_mail_activity_type
@@ -1403,12 +1404,12 @@ msgstr ""
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__deletion_delay
 msgid "Deletion delay"
-msgstr ""
+msgstr "Fördröjning för borttagning"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.res_config_settings_view_form
 msgid "Deletion delay (days)"
-msgstr ""
+msgstr "Tid innan raderande (dagar)"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_deprecated
@@ -1491,7 +1492,7 @@ msgstr "Dokumentets namn"
 #. module: documents
 #: model:ir.actions.act_window,name:documents.mail_activity_plan_action_document
 msgid "Document Plans"
-msgstr ""
+msgstr "Aktivitetsplaner för dokument"
 
 #. module: documents
 #: model:ir.model,name:documents.model_documents_redirect
@@ -1535,7 +1536,7 @@ msgstr ""
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "Document preview"
-msgstr ""
+msgstr "Förhandsvisning"
 
 #. module: documents
 #. odoo-python
@@ -1638,7 +1639,7 @@ msgstr "Ladda ner alla filer"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "Download file"
-msgstr ""
+msgstr "Ladda ner fil"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
@@ -1809,7 +1810,7 @@ msgstr "Filinnehåll (rå)"
 #: model:ir.model.fields,field_description:documents.field_documents_document__file_extension
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
 msgid "File Extension"
-msgstr ""
+msgstr "Filändelse"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__file_size
@@ -1926,7 +1927,7 @@ msgstr "Allmänt"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_access_settings.xml:0
 msgid "General access"
-msgstr ""
+msgstr "Allmän åtkomst"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.format_file_size
@@ -2005,13 +2006,15 @@ msgstr ""
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Om markerat, nya meddelanden kräver din uppmärksamhet."
+msgstr ""
+"Om rutan är markerad, så finns det nya meddelanden som kräver din "
+"uppmärksamhet."
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__message_has_error
 #: model:ir.model.fields,help:documents.field_documents_document__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Om markerad, några meddelanden har leveransfel."
+msgstr "Om rutan är markerad, så har vissa meddelanden leveransfel."
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_bounced_content
@@ -2080,7 +2083,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Info & tags"
-msgstr ""
+msgstr "Info och taggar"
 
 #. module: documents
 #. odoo-javascript
@@ -2243,7 +2246,7 @@ msgstr "Låt oss bearbeta det här dokumentet som kommer från vår skanner."
 #: code:addons/documents/static/src/views/documents_type_icon/documents_type_icon.xml:0
 #: model_terms:ir.ui.view,arch_db:documents.documents_link_to_record_form_view
 msgid "Link"
-msgstr "Link"
+msgstr "Länk"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__is_access_via_link_hidden
@@ -2444,12 +2447,12 @@ msgstr ""
 #: code:addons/documents/models/documents_document.py:0
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "Must have the link to access"
-msgstr ""
+msgstr "Kräver länk för åtkomst"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
 msgid "My Activities"
-msgstr "Mina aktivieteter"
+msgstr "Mina aktiviteter"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__my_activity_date_deadline
@@ -2468,7 +2471,7 @@ msgstr "Mina dokument"
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.js:0
 #: code:addons/documents/static/src/views/kanban/documents_kanban_record.js:0
 msgid "My Drive"
-msgstr ""
+msgstr "Min enhet"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_access_role_or_last_access_date
@@ -2526,12 +2529,12 @@ msgstr "Nästa Kalenderhändelse för aktivitet"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Nästa slutdatum för aktivitet"
+msgstr "Tidsgräns för nästa aktivitet"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__activity_summary
 msgid "Next Activity Summary"
-msgstr "Nästa aktivitetssammanställning"
+msgstr "Sammanfattning av nästa aktivitet"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__activity_type_id
@@ -2553,7 +2556,7 @@ msgstr "Inga aktivitetstyper hittades. Låt oss skapa en!"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/helper/documents_action_helper.xml:0
 msgid "No alias configured"
-msgstr ""
+msgstr "Inget angett alias."
 
 #. module: documents
 #. odoo-javascript
@@ -2989,7 +2992,7 @@ msgstr "Byt namn på"
 #: code:addons/documents/static/src/views/documents_controller_mixin.xml:0
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "Request"
-msgstr "Begäran"
+msgstr "Förfrågan"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__request_activity_id
@@ -3027,7 +3030,7 @@ msgstr "Begärt dokument"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
 msgid "Requested Documents"
-msgstr ""
+msgstr "Dokumentförfrågningar"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__requestee_partner_id
@@ -3264,7 +3267,7 @@ msgstr ""
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.js:0
 #: code:addons/documents/static/src/views/kanban/documents_kanban_record.js:0
 msgid "Shared with me"
-msgstr ""
+msgstr "Delas med mig"
 
 #. module: documents
 #. odoo-javascript
@@ -3364,10 +3367,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Status baserad på aktiviteter\n"
-"Försenade: Leveranstidpunkten har passerat\n"
-"Idag: Aktivitetsdatum är idag\n"
-"Kommande: Framtida aktiviteter."
+"Status baserat på aktivitetsdatum:\n"
+"Försenade: Aktivitetsdatum har redan passerat.\n"
+"Idag: Aktivitetsdatum är dagens datum.\n"
+"Planerade: Kommande aktiviteter."
 
 #. module: documents
 #. odoo-javascript
@@ -3415,7 +3418,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:documents.field_documents_request_wizard__tag_ids
 #: model:ir.ui.menu,name:documents.category_menu
 msgid "Tags"
-msgstr "Etiketter"
+msgstr "Taggar"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_text
@@ -3649,7 +3652,7 @@ msgstr "Papperskorg"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.res_config_settings_view_form
 msgid "Trash Management"
-msgstr "Hantering av papperskorg"
+msgstr "Hantering av papperskorgen"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__is_editable_attachment

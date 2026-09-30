@@ -10,13 +10,14 @@
 # Mads Søndergaard, 2024
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:52+0000\n"
-"PO-Revision-Date: 2026-05-13 16:55+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:40+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "social_twitter/da/>\n"
 "Language: da\n"
@@ -24,33 +25,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/models/social_post_template.py:0
 msgid "%(current_length)s / %(max_length)s characters to fit in a Post"
-msgstr ""
+msgstr "%(current_length)s / %(max_length)s tegnantal for opslag"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.twitter_preview
 msgid "11m"
-msgstr "11m"
+msgstr "11 m"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.twitter_preview
 msgid "<b class=\"text-900\">X Account</b>"
-msgstr ""
+msgstr "<b class=\"text-900\">X-konto</b>"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
-msgstr "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
+msgstr "<i class=\"fa fa-comments me-1\" title=\"Kommentarer\"/>"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-heart me-1\" title=\"Likes\"/>"
-msgstr "<i class=\"fa fa-heart me-1\" title=\"Likes\"/>"
+msgstr "<i class=\"fa fa-heart me-1\" title=\"Synes om\"/>"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
@@ -58,35 +59,37 @@ msgid ""
 "<i class=\"fa fa-pencil me-1\" title=\"Quote a post\"/>\n"
 "                                    <span>Quote</span>"
 msgstr ""
+"<i class=\"fa fa-pencil me-1\" title=\"Henvis til en publikation\"/>\n"
+"                                    <span>Citat</span>"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-retweet me-1\" title=\"Repost a post\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-retweet me-1\" title=\"Læg opslag op igen\"/>"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.twitter_preview
 msgid "@x ·"
-msgstr ""
+msgstr "@x ·"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "A repost already exists"
-msgstr ""
+msgstr "Der findes allerede et opslag, der er blevet lagt op igen"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/controllers/main.py:0
 msgid "Authentication failed. Please enter valid credentials."
-msgstr ""
+msgstr "Godkendelsen mislykkedes. Indtast venligst gyldige loginoplysninger."
 
 #. module: social_twitter
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/xml/social_twitter_templates.xml:0
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "Author Image"
-msgstr "Forfatter billede"
+msgstr "Forfatterbillede"
 
 #. module: social_twitter
 #. odoo-python
@@ -95,6 +98,8 @@ msgid ""
 "Can not like / unlike the tweet\n"
 "%s."
 msgstr ""
+"Kan ikke synes godt om/ikke synes godt om tweetet\n"
+"%s."
 
 #. module: social_twitter
 #. odoo-javascript
@@ -108,21 +113,23 @@ msgid ""
 "Check this if you want to use your personal X Developer Account instead of "
 "the provided one."
 msgstr ""
+"Markér dette afkrydsningsfelt for at bruge din personlige X-udviklerkonto i "
+"stedet for den tildelte konto."
 
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.res_config_settings_view_form
 msgid "Consumer Key"
-msgstr "Forbruger nøgle"
+msgstr "Forbrugernøgle"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.res_config_settings_view_form
 msgid "Consumer Secret Key"
-msgstr "Forbruger hemmelig nøgle"
+msgstr "Hemmelig forbrugernøgle"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_twitter_account__create_uid
@@ -142,13 +149,13 @@ msgstr "Beskrivelse"
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_twitter_account__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__display_twitter_preview
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__display_twitter_preview
 msgid "Display X Preview"
-msgstr ""
+msgstr "Vis X-forhåndsvisning"
 
 #. module: social_twitter
 #. odoo-javascript
@@ -156,12 +163,14 @@ msgstr ""
 msgid ""
 "Easy, tiger! No spamming allowed. Let's stick to three replies per Tweet."
 msgstr ""
+"Rolig nu, tiger! Spam er ikke tilladt. Begræns venligst til tre svar pr. "
+"opslag."
 
 #. module: social_twitter
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/xml/social_twitter_templates.xml:0
 msgid "Empty post"
-msgstr ""
+msgstr "Tomt opslag"
 
 #. module: social_twitter
 #. odoo-javascript
@@ -173,7 +182,7 @@ msgstr "Fejl"
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/js/stream_post_twitter_quote.js:0
 msgid "Error while sending the data to the server."
-msgstr ""
+msgstr "Der opstod en fejl under overførslen af data til serveren."
 
 #. module: social_twitter
 #. odoo-python
@@ -182,6 +191,8 @@ msgid ""
 "Failed to delete the post\n"
 "%s."
 msgstr ""
+"Opslaget kunne ikke slettes\n"
+"%s."
 
 #. module: social_twitter
 #. odoo-python
@@ -190,12 +201,15 @@ msgid ""
 "Failed to fetch the posts in the same thread: '%(text)s' using the account %"
 "(account)s."
 msgstr ""
+"Opslaget i samme tråd kunne ikke hentes: '%(text)s' for den pågældende konto "
+"%(account)s."
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "Failed to post comment: %(error)s with the account %(account)s."
 msgstr ""
+"Kommentaren kunne ikke offentliggøres: %(error)s med kontoen %(account)s."
 
 #. module: social_twitter
 #: model:social.stream.type,name:social_twitter.stream_type_twitter_likes
@@ -206,7 +220,7 @@ msgstr "Favoritter af"
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__has_twitter_account
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__has_twitter_account
 msgid "Has X Account"
-msgstr ""
+msgstr "Har X-konto"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_twitter_account__id
@@ -278,13 +292,13 @@ msgstr "Navn"
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream.py:0
 msgid "Please select a X account for this stream type."
-msgstr ""
+msgstr "Vælg venligst en X-konto til denne streamtype."
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/models/social_post_template.py:0
 msgid "Please specify either an X Message or upload some X Images."
-msgstr ""
+msgstr "Indtast venligst en X-besked eller upload X-billeder."
 
 #. module: social_twitter
 #. odoo-javascript
@@ -295,44 +309,44 @@ msgstr "Bogfør"
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.twitter_preview
 msgid "Post Image"
-msgstr "Postér billed"
+msgstr "Læg billede op"
 
 #. module: social_twitter
 #: model:social.stream.type,name:social_twitter.stream_type_twitter_follow
 msgid "Posts of"
-msgstr ""
+msgstr "Opslag fra"
 
 #. module: social_twitter
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/js/stream_post_kanban_record.js:0
 msgid "Quote a Tweet"
-msgstr ""
+msgstr "Citér et tweet"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_quoted_tweet_author_link
 msgid "Quoted post author Link"
-msgstr ""
+msgstr "Link til forfatteren af det citerede opslag"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_quoted_tweet_author_name
 msgid "Quoted post author Name"
-msgstr ""
+msgstr "Navnet på forfatteren af det citerede opslag"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_quoted_tweet_message
 msgid "Quoted post message"
-msgstr ""
+msgstr "Citat fra det nævnte opslag"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_quoted_tweet_profile_image_url
 msgid "Quoted post profile image URL"
-msgstr ""
+msgstr "URL til profilbilledet for det nævnte opslag"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/controllers/main.py:0
 msgid "Read More about X Accounts"
-msgstr ""
+msgstr "Få mere at vide om X-konti"
 
 #. module: social_twitter
 #. odoo-python
@@ -343,12 +357,12 @@ msgstr ""
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "Repost"
-msgstr ""
+msgstr "Læg opslag op igen"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "Repost or Quote"
-msgstr ""
+msgstr "Læg opslag op igen eller citér"
 
 #. module: social_twitter
 #. odoo-javascript
@@ -356,7 +370,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_retweet_count
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "Reposts"
-msgstr ""
+msgstr "Opslag, der er blevet lagt op igen"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream__twitter_searched_keyword
@@ -376,12 +390,12 @@ msgstr "Søgt af"
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_account
 msgid "Social Account"
-msgstr "Social konto"
+msgstr "Social mediekonto"
 
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_live_post
 msgid "Social Live Post"
-msgstr "Social live postering"
+msgstr "Liveopslag på sociale medier"
 
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_media
@@ -391,7 +405,7 @@ msgstr "Sociale medier"
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_post
 msgid "Social Post"
-msgstr "Social postering"
+msgstr "Opslag på sociale medier"
 
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_post_template
@@ -401,17 +415,17 @@ msgstr "Skabelon til opslag på sociale medier"
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_stream
 msgid "Social Stream"
-msgstr "Sociale medier"
+msgstr "Socialt mediestream"
 
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_stream_post
 msgid "Social Stream Post"
-msgstr "Social Stream postering"
+msgstr "Opslag på socialt mediestream"
 
 #. module: social_twitter
 #: model:ir.model,name:social_twitter.model_social_twitter_account
 msgid "Social X Account"
-msgstr ""
+msgstr "Social mediekonto X"
 
 #. module: social_twitter
 #. odoo-python
@@ -420,8 +434,8 @@ msgid ""
 "The keyword you've typed in does not look valid. Please try again with other "
 "words."
 msgstr ""
-"Nøgleordet du angav ser ikke ud til at være gyldig. Omformuler og prøv "
-"venligst igen."
+"Nøgleordet, du angav, ser ikke ud til at være gyldigt. Prøv at omformulere, "
+"og prøv igen."
 
 #. module: social_twitter
 #. odoo-python
@@ -430,26 +444,26 @@ msgid ""
 "The url that this service requested returned an error. Please contact the "
 "author of the app."
 msgstr ""
-"URL'en som denne tjeneste anmoder om returnerede en fejl. Kontakt venligst "
-"udvikleren af denne applikation."
+"URL’en, som denne tjeneste anmoder om, returnerede en fejl. Kontakt venligst "
+"appens udvikler."
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/controllers/main.py:0
 msgid "This Post has been deleted."
-msgstr ""
+msgstr "Dette opslag er blevet slettet."
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "This post is outdated, please refresh the stream and try again."
-msgstr ""
+msgstr "Dette opslag er forældet. Opdatér venligst feedet, og prøv igen."
 
 #. module: social_twitter
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/js/stream_post_comment.js:0
 msgid "Tweet"
-msgstr ""
+msgstr "Tweet"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_post_template_view_form
@@ -460,23 +474,23 @@ msgstr "Twitter"
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/js/stream_post_kanban_record.js:0
 msgid "Twitter Comments"
-msgstr "Twitter kommentarer"
+msgstr "Twitter-kommentarer"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream__twitter_followed_account_id
 msgid "Twitter Followed Account"
-msgstr "Twitter fulgt konto"
+msgstr "Fulgt Twitter-konto"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/controllers/main.py:0
 msgid "Unauthorized. Please contact your administrator."
-msgstr "Uautoriseret. Vær venlig at kontakte din administrator."
+msgstr "Uautoriseret. Kontakt venligst din administrator."
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "Undo Repost"
-msgstr ""
+msgstr "Fortryd at lægge opslaget op igen"
 
 #. module: social_twitter
 #. odoo-javascript
@@ -495,7 +509,7 @@ msgstr "Ukendt fejl"
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_res_config_settings__twitter_use_own_account
 msgid "Use your own X Account"
-msgstr ""
+msgstr "Brug din egen X-konto"
 
 #. module: social_twitter
 #: model:ir.model.fields,help:social_twitter.field_social_media__media_type
@@ -503,6 +517,8 @@ msgid ""
 "Used to make comparisons when we need to restrict some features to a "
 "specific media ('facebook', 'x', ...)."
 msgstr ""
+"Bruges til at foretage sammenligninger, når visse funktioner skal begrænses "
+"til et bestemt medie ('Facebook', 'X' osv.)."
 
 #. module: social_twitter
 #. odoo-python
@@ -511,12 +527,14 @@ msgid ""
 "We could not upload your image, it may be corrupted, it may exceed size "
 "limit or API may have send improper response (error: %s)."
 msgstr ""
+"Vi kunne ikke uploade dit billede. Det kan være beskadiget, for stort, eller "
+"at API’et har returneret et forkert svar (fejl: %s)."
 
 #. module: social_twitter
 #: model:ir.model.fields,help:social_twitter.field_social_post__twitter_image_ids
 #: model:ir.model.fields,help:social_twitter.field_social_post_template__twitter_image_ids
 msgid "Will attach images to your posts."
-msgstr ""
+msgstr "Vil vedhæfte billeder til dine opslag."
 
 #. module: social_twitter
 #: model:ir.model.fields.selection,name:social_twitter.selection__social_media__media_type__twitter
@@ -527,156 +545,157 @@ msgstr "X"
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_author_id
 msgid "X Author ID"
-msgstr ""
+msgstr "Forfatter-ID for X-konto"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_res_config_settings__twitter_consumer_key
 msgid "X Consumer Key"
-msgstr ""
+msgstr "X-forbrugernøgle"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_res_config_settings__twitter_consumer_secret_key
 msgid "X Consumer Secret Key"
-msgstr ""
+msgstr "Hemmelig forbrugernøgle til X"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_conversation_id
 msgid "X Conversation ID"
-msgstr ""
+msgstr "Samtale-ID for X"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.res_config_settings_view_form
 msgid "X Developer Account"
-msgstr ""
+msgstr "X-udviklerkonto"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_twitter_account__twitter_id
 msgid "X ID"
-msgstr ""
+msgstr "X-ID"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__twitter_image_ids
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__twitter_image_ids
 msgid "X Images"
-msgstr ""
+msgstr "X-billeder"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_likes_count
 msgid "X Likes"
-msgstr ""
+msgstr "Synes om på X"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__twitter_message
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__twitter_message
 msgid "X Message"
-msgstr ""
+msgstr "X-besked"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_account__twitter_oauth_token
 msgid "X OAuth Token"
-msgstr ""
+msgstr "X-OAuth-token"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_account__twitter_oauth_token_secret
 msgid "X OAuth Token Secret"
-msgstr ""
+msgstr "Hemmeligheden bag X-OAuth-tokenet"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_tweet_id
 msgid "X Post ID"
-msgstr ""
+msgstr "Opslags-ID på X"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__is_twitter_post_limit_exceed
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__is_twitter_post_limit_exceed
 msgid "X Post Limit Exceeded"
-msgstr ""
+msgstr "Grænsen for X-opslag er overskredet"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__twitter_post_limit_message
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__twitter_post_limit_message
 msgid "X Post Limit Message"
-msgstr ""
+msgstr "Meddelelse om begrænsning af X-opslag"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_post__twitter_preview
 #: model:ir.model.fields,field_description:social_twitter.field_social_post_template__twitter_preview
 msgid "X Preview"
-msgstr ""
+msgstr "X-forhåndsvisning"
 
 #. module: social_twitter
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/xml/social_twitter_templates.xml:0
 msgid "X Profile Image"
-msgstr ""
+msgstr "X-profilbillede"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_profile_image_url
 msgid "X Profile Image URL"
-msgstr ""
+msgstr "X-profilbillede-URL"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_quoted_tweet_id_str
 msgid "X Quoted post ID"
-msgstr ""
+msgstr "ID for det citerede opslag på X"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_comments_count
 msgid "X Replies"
-msgstr ""
+msgstr "X-svar"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_retweeted_tweet_id_str
 msgid "X Repost ID"
-msgstr ""
+msgstr "ID for genoplagte opslag på X"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_can_retweet
 msgid "X Repost Permission"
-msgstr ""
+msgstr "Tilladelse til at lægge opslag op igen på X"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_screen_name
 msgid "X Screen Name"
-msgstr ""
+msgstr "X-brugernavn"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_account__twitter_user_id
 msgid "X User ID"
-msgstr ""
+msgstr "X-bruger-ID"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_stream_post__twitter_user_likes
 msgid "X User Likes"
-msgstr ""
+msgstr "Brugeres \"Synes om\" på X"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/controllers/main.py:0
 msgid "X did not provide a valid access token or it may have expired."
 msgstr ""
+"X har ikke angivet et gyldigt adgangstoken, eller det er muligvis udløbet."
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/controllers/main.py:0
 msgid "X did not provide a valid access token."
-msgstr ""
+msgstr "X har ikke angivet et gyldigt adgangstoken."
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_social_live_post__twitter_tweet_id
 msgid "X post id"
-msgstr ""
+msgstr "Opslags-ID for X"
 
 #. module: social_twitter
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "You are not authenticated"
-msgstr ""
+msgstr "Du er ikke godkendt"
 
 #. module: social_twitter
 #: model:ir.model.constraint,message:social_twitter.constraint_social_stream_post_tweet_uniq
 msgid "You can not store two times the same post on the same stream!"
-msgstr ""
+msgstr "Du kan ikke gemme det samme opslag to gange i samme feed!"
 
 #. module: social_twitter
 #. odoo-python
@@ -686,6 +705,8 @@ msgid ""
 "It may be because it's protected. To solve this, please make sure you follow "
 "it before trying again."
 msgstr ""
+"Du kan ikke oprette en stream fra denne X-konto.\n"
+"Kontoen kan være beskyttet. Følg den for at løse problemet, og prøv igen."
 
 #. module: social_twitter
 #. odoo-python
@@ -698,7 +719,7 @@ msgstr "Du har ikke et aktivt abonnement. Køb venligst en her: %s"
 #: code:addons/social_twitter/models/social_media.py:0
 msgid ""
 "You need to add the following callback URL to your X application settings: %s"
-msgstr ""
+msgstr "Tilføj følgende callback-URL til indstillingerne for din X-app: %s"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_view_form

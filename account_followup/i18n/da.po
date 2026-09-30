@@ -10,13 +10,14 @@
 # Martin Trigaux, 2024
 # lhmflexerp <lhm@flexerp.dk>, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:48+0000\n"
-"PO-Revision-Date: 2026-02-07 10:24+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:18+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "account_followup/da/>\n"
 "Language: da\n"
@@ -24,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_followup
 #. odoo-python
@@ -178,18 +179,18 @@ msgstr ""
 "                        <br/>\n"
 "                        Med venlig hilsen\n"
 "                        <br/>\n"
-"                        <t t-if=\"not "
-"is_html_empty(object._get_followup_responsible().signature)\">\n"
+"                        <t t-if=\"not is_html_empty"
+"(object._get_followup_responsible().signature)\">\n"
 "                            <br/>\n"
-"                            <t t-"
-"out=\"object._get_followup_responsible().signature\"/>\n"
+"                            <t t-out=\"object._get_followup_responsible()"
+".signature\"/>\n"
 "                        </t>\n"
 "                        <t t-else=\"\">\n"
 "                            <br/>\n"
 "                            --\n"
 "                            <br/>\n"
-"                            <t t-"
-"out=\"object._get_followup_responsible().name\"/>\n"
+"                            <t t-out=\"object._get_followup_responsible()"
+".name\"/>\n"
 "                        </t>\n"
 "                    </p>\n"
 "                </div>\n"
@@ -264,18 +265,18 @@ msgstr ""
 "betalinger.\n"
 "                        <br/>\n"
 "                        Med venlig hilsen\n"
-"                        <t t-if=\"not "
-"is_html_empty(object._get_followup_responsible().signature)\">\n"
+"                        <t t-if=\"not is_html_empty"
+"(object._get_followup_responsible().signature)\">\n"
 "                            <br/>\n"
-"                            <t t-"
-"out=\"object._get_followup_responsible().signature\"/>\n"
+"                            <t t-out=\"object._get_followup_responsible()"
+".signature\"/>\n"
 "                        </t>\n"
 "                        <t t-else=\"\">\n"
 "                            <br/>\n"
 "                            --\n"
 "                            <br/>\n"
-"                            <t t-"
-"out=\"object._get_followup_responsible().name\"/>\n"
+"                            <t t-out=\"object._get_followup_responsible()"
+".name\"/>\n"
 "                        </t>\n"
 "                    </p>\n"
 "                </div>\n"
@@ -310,18 +311,18 @@ msgid ""
 "A follow-up action name must be unique. This name is already set to another "
 "action."
 msgstr ""
-"En rykkerhandling skal være unik. Dette navn er allerede angivet på en anden "
-"handling."
+"En rykkerhandling skal have et unikt navn. Dette navn er allerede brugt på "
+"en anden handling."
 
 #. module: account_followup
 #: model:ir.model.fields.selection,name:account_followup.selection__account_followup_followup_line__activity_default_responsible_type__account_manager
 msgid "Account Manager"
-msgstr "Kontoadministrator"
+msgstr "Kundechef"
 
 #. module: account_followup
 #: model:ir.actions.server,name:account_followup.ir_cron_auto_post_draft_entry_ir_actions_server
 msgid "Account Report Followup; Execute followup"
-msgstr "Konto rapport opfølgning; eksekver opfølgning"
+msgstr "Kontorapportopfølgning; udfør rykkerskrivelsen"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_account_followup_followup_line_form
@@ -352,7 +353,7 @@ msgstr "Tilføj et notat"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
 msgid "Add contacts to notify..."
-msgstr "Tilføj modtagere..."
+msgstr "Tilføj kontakter, der skal underrettes ..."
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__additional_follower_ids
@@ -391,12 +392,12 @@ msgstr "Automatisk"
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__body_has_template_value
 msgid "Body content is the same as the template"
-msgstr "Kropsindholdet er det samme som skabelonen"
+msgstr "Tekstindholdet er det samme som skabelonen"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__can_edit_body
 msgid "Can Edit Body"
-msgstr "Kan Redigere Krop"
+msgstr "Kan redigere brødtekst"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
@@ -452,12 +453,12 @@ msgstr "Oprettet den"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.followup_filter_info_template
 msgid "Customer ref:"
-msgstr "Kundens ref:"
+msgstr "Kundereference:"
 
 #. module: account_followup
 #: model:ir.actions.client,name:account_followup.action_account_followup
 msgid "Customers Statement"
-msgstr "Kontoudtog på debitorer"
+msgstr "Kundeoversigt"
 
 #. module: account_followup
 #. odoo-python
@@ -492,18 +493,16 @@ msgid ""
 "Best Regards,\n"
 "\n"
 msgstr ""
-"Kære %s,\n"
+"Kære %s\n"
 "\n"
 "\n"
-"Vi beklager hvis vi tager fejl, men det ville se ud til, at følgende beløb "
-"fortsat er ubetalt. Venligst sørg for at betalingen sker indenfor de næste 8 "
-"dage.\n"
+"Hvis vores oplysninger er korrekte, er følgende beløb stadig udestående. Vi "
+"beder dig venligst betale det inden for 8 dage.\n"
 "\n"
-"Er din betaling blevet udført efter afsendelsen af denne mail, kan du blot "
-"ignorere denne besked. Tøv ikke med at kontakte os, skulle der være "
-"spørgsmål.\n"
+"Hvis betalingen allerede er foretaget, kan du se bort fra denne meddelelse. "
+"Kontakt os ved spørgsmål.\n"
 "\n"
-"Venlig Hilsen,\n"
+"Med venlig hilsen\n"
 "\n"
 
 #. module: account_followup
@@ -513,13 +512,13 @@ msgid ""
 "Dear client, we kindly remind you that you still have unpaid invoices. "
 "Please check them and take appropriate action. %s"
 msgstr ""
-"Kære kunde, vi minder dig venligt om, at du fortsat har ubetalte fakturaer. "
-"Venligst kontrollér og tag affære. %s"
+"Kære kunde. Vi minder venligt om, at der fortsat er ubetalte fakturaer på "
+"din konto. Vi beder dig venligst kontrollere og afregne snarest muligt. %s"
 
 #. module: account_followup
 #: model_terms:ir.actions.act_window,help:account_followup.action_account_followup_line_definition_form
 msgid "Define follow-up levels and their related actions"
-msgstr "Definer rykkerniveauer og deres relaterede handlinger"
+msgstr "Definér rykkerniveauer og de tilhørende handlinger"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.followup_filter_info_template
@@ -549,7 +548,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__display_name
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_missing_information_wizard__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: account_followup
 #. odoo-python
@@ -575,7 +574,7 @@ msgstr "Mailmodtagere"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
 msgid "Email Subject"
-msgstr "Mailemne"
+msgstr "E-mailemne"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__email_recipient_ids
@@ -596,7 +595,7 @@ msgstr "Rykkeradresse"
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_followup_followup_line
 msgid "Follow-up Criteria"
-msgstr "Kriterier for opfølgning"
+msgstr "Rykkerkriterier"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_move_line__followup_line_id
@@ -614,18 +613,18 @@ msgstr "Rykkerniveauer"
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_followup_report
 msgid "Follow-up Report"
-msgstr "Rykkerkontoudtog"
+msgstr "Rykkerrapport"
 
 #. module: account_followup
 #: model:ir.model.fields.selection,name:account_followup.selection__account_followup_followup_line__activity_default_responsible_type__followup
 msgid "Follow-up Responsible"
-msgstr "Ansvarlig for opfølgning"
+msgstr "Rykkereansvarlig"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__followup_status
 #: model:ir.model.fields,field_description:account_followup.field_res_users__followup_status
 msgid "Follow-up Status"
-msgstr "Opfølgnings status"
+msgstr "Rykkerstatus"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_account_followup_followup_line_form
@@ -642,7 +641,7 @@ msgstr "Rykkeroplysninger"
 #. odoo-python
 #: code:addons/account_followup/models/account_followup_report.py:0
 msgid "Follow-up letter generated"
-msgstr "Rykkerskrivelse lavet"
+msgstr "Rykkerskrivelse genereret"
 
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_followup_missing_information_wizard
@@ -666,7 +665,7 @@ msgstr ""
 #. module: account_followup
 #: model:mail.template,name:account_followup.demo_followup_email_template_4
 msgid "Fourth reminder followup"
-msgstr "Fjerde påmindelsesopfølgning"
+msgstr "Rykker: fjerde påmindelse"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__has_moves
@@ -695,7 +694,7 @@ msgstr ""
 #. module: account_followup
 #: model:ir.model.fields.selection,name:account_followup.selection__res_partner__followup_status__in_need_of_action
 msgid "In need of action"
-msgstr "Behov for handling"
+msgstr "Handling påkrævet"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_partner_property_form_followup
@@ -705,12 +704,12 @@ msgstr "Rykkere"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.template_followup_report
 msgid "Invoices Analysis"
-msgstr "Faktura analyse"
+msgstr "Fakturaanalyse"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__is_mail_template_editor
 msgid "Is Editor"
-msgstr "Er Redaktør"
+msgstr "Er redaktør"
 
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_move_line
@@ -744,13 +743,13 @@ msgstr "Sidst opdateret den"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
 msgid "Letter/Email Content"
-msgstr "Brev/email indhold"
+msgstr "Brev-/e-mailindhold"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__mail_template_id
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__template_id
 msgid "Mail Template"
-msgstr "Mailskabelon"
+msgstr "E-mailskabelon"
 
 #. module: account_followup
 #: model:ir.model.fields.selection,name:account_followup.selection__res_partner__followup_reminder_type__manual
@@ -763,7 +762,7 @@ msgstr "Manuel"
 #: code:addons/account_followup/models/res_partner.py:0
 #: code:addons/account_followup/wizard/followup_missing_information.py:0
 msgid "Missing information"
-msgstr "Manglende information"
+msgstr "Manglende oplysninger"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.line_template
@@ -774,7 +773,7 @@ msgstr "Navn"
 #. odoo-python
 #: code:addons/account_followup/models/res_partner.py:0
 msgid "Next Reminder Date set to %s"
-msgstr "Næste påmindelses dato sat til %s"
+msgstr "Næste påmindelsesdato sat til %s"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__followup_next_action_date
@@ -796,8 +795,9 @@ msgid ""
 "levels configuration, and you can change it manually."
 msgstr ""
 "Rykkelsesforanstaltninger iværksættes ikke før denne dato.\n"
-"                Når du sender en påmindelse, fastsættes datoen baseret på "
-"konfigurationen af rykkelsesniveauerne, men du kan ændre den manuelt."
+"                Når du sender en påmindelse, fastsættes datoen automatisk på "
+"baggrund af konfigurationen af rykkelsesniveauerne, men du kan ændre den "
+"manuelt."
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__activity_note
@@ -817,10 +817,10 @@ msgid ""
 "a placeholder expression that provides the appropriate language, e.g. "
 "{{ object.partner_id.lang }}."
 msgstr ""
-"Valgfri oversættelses sprog (ISO kode) til valg ved afsending af en email. "
-"Hvis ikke angivet, vil den engelske udgave blive anvendt. Dette bør "
-"normaltvis være et pladsholder-udtryk der angiver det passende sprog, f.eks. "
-"{{ object.partner_id.lang }}."
+"Valgfrit oversættelsessprog (ISO-kode), som kan vælges ved afsendelse af en "
+"e-mail. Hvis der ikke angives et sprog, anvendes den engelske version. Dette "
+"bør normalt være et pladsholderudtryk, der angiver det relevante sprog, "
+"f.eks. {{ object.partner_id.lang }}."
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_account_followup_followup_line_form
@@ -849,7 +849,7 @@ msgstr "Forfaldne fakturaer"
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__partner_id
 msgid "Partner"
-msgstr "Kontakt"
+msgstr "Partner"
 
 #. module: account_followup
 #: model:mail.template,name:account_followup.email_template_followup_1
@@ -897,7 +897,7 @@ msgstr "Gengivelsesmodel"
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_ir_actions_report
 msgid "Report Action"
-msgstr "Rapporter handling"
+msgstr "Rapportér handling"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.customer_statements_search_view
@@ -924,7 +924,7 @@ msgstr "Sælger"
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__create_activity
 msgid "Schedule Activity"
-msgstr "Skemalæg aktivitet"
+msgstr "Planlæg aktivitet"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_account_followup_line_filter
@@ -934,7 +934,7 @@ msgstr "Søg rykkere"
 #. module: account_followup
 #: model:mail.template,name:account_followup.demo_followup_email_template_2
 msgid "Second reminder followup"
-msgstr "Anden påmindelsesopfølgning"
+msgstr "Rykker: anden påmindelse"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
@@ -945,7 +945,7 @@ msgstr "Send"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
 msgid "Send & Print"
-msgstr "Send & print"
+msgstr "Send og udskriv"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__send_email
@@ -960,12 +960,12 @@ msgstr "Send SMS besked"
 #. module: account_followup
 #: model:ir.actions.act_window,name:account_followup.manual_reminder_action
 msgid "Send and Print"
-msgstr "Send og print"
+msgstr "Send og udskriv"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__sms
 msgid "Sms"
-msgstr "Sms"
+msgstr "SMS"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__sms_body
@@ -975,13 +975,13 @@ msgstr "SMS-tekst"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
 msgid "Sms Content"
-msgstr "Sms indhold"
+msgstr "SMS-indhold"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__sms_template_id
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__sms_template_id
 msgid "Sms Template"
-msgstr "Sms skabelon"
+msgstr "SMS-skabelon"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_manual_reminder__subject
@@ -1006,7 +1006,7 @@ msgstr "Tabelværdi"
 #. module: account_followup
 #: model:ir.model.fields,help:account_followup.field_account_move_line__invoice_origin
 msgid "The document(s) that generated the invoice."
-msgstr "Dokument(erne) der oprettede fakturaen."
+msgstr "Dokument(erne), der genererede fakturaen."
 
 #. module: account_followup
 #: model:ir.model.fields,help:account_followup.field_account_followup_followup_line__delay
@@ -1025,7 +1025,9 @@ msgstr ""
 msgid ""
 "The responsible assigned to manual followup activities, if defined in the "
 "level."
-msgstr "Den ansvarlige for manuelle rykkere, hvis dette er angivet i trinnet."
+msgstr ""
+"Den ansvarlige for manuelle rykkere, hvis dette er angivet for det "
+"pågældende trin."
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.customer_statements_tree_view
@@ -1076,7 +1078,7 @@ msgstr "Antal ubetalte fakturaer"
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__unreconciled_aml_ids
 #: model:ir.model.fields,field_description:account_followup.field_res_users__unreconciled_aml_ids
 msgid "Unreconciled Aml"
-msgstr "Ikke-afstemt Aml"
+msgstr "Uafstemt postering"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.missing_information_view_form
@@ -1100,12 +1102,12 @@ msgstr "Med forfaldne fakturaer"
 #. module: account_followup
 #: model:ir.model,name:account_followup.model_account_followup_manual_reminder
 msgid "Wizard for sending manual reminders to clients"
-msgstr "Wizard til at sende manuelle påmindelser til kunder"
+msgstr "Assistent til at sende manuelle påmindelser til kunder"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.manual_reminder_view_form
 msgid "Write your message here..."
-msgstr "Skriv din besked her..."
+msgstr "Skriv din besked her ..."
 
 #. module: account_followup
 #. odoo-python
@@ -1114,8 +1116,8 @@ msgid ""
 "You are trying to send an Email, but no follow-up contact has any email "
 "address set for customer '%s'"
 msgstr ""
-"Du forsøger at sende en email, men ingen rykkerkontakt har angivet en "
-"mailadresse for kunden '%s'"
+"Du forsøger at sende en e-mail, men der er ikke angivet nogen e-mailadresse "
+"for kundens rykkerkontakt '%s'"
 
 #. module: account_followup
 #. odoo-python
@@ -1124,8 +1126,8 @@ msgid ""
 "You are trying to send an SMS, but no follow-up contact has any mobile/phone "
 "number set for customer '%s'"
 msgstr ""
-"Du forsøger at sende en SMS, men ingen rykkerkontakt har angivet mobil/"
-"telefonnummer for kunden '%s'"
+"Du forsøger at sende en SMS, men kundens rykkerkontakt har ikke angivet et "
+"mobil- eller telefonnummer '%s'"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_account_followup_followup_line_form
@@ -1135,13 +1137,13 @@ msgstr "dage efter forfaldsdato"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_account_followup_followup_line_form
 msgid "e.g. First Reminder Email"
-msgstr "fx første påmindelsesmail"
+msgstr "f.eks. første påmindelsesmail"
 
 #. module: account_followup
 #. odoo-python
 #: code:addons/account_followup/models/account_followup_report.py:0
 msgid "payment reminder"
-msgstr "betalings påmindelse"
+msgstr "betalingspåmindelse"
 
 #. module: account_followup
 #: model:mail.template,subject:account_followup.demo_followup_email_template_2
@@ -1152,9 +1154,8 @@ msgid ""
 "object._get_followup_responsible().company_id).name }} Payment Reminder - "
 "{{ object.commercial_company_name }}"
 msgstr ""
-"{{ (object.company_id or "
-"object._get_followup_responsible().company_id).name }} Betalingspåmindelse - "
-"{{ object.commercial_company_name }}"
+"{{ (object.company_id or object._get_followup_responsible().company_id)"
+".name }} Betalingspåmindelse - {{ object.commercial_company_name }}"
 
 #~ msgid "2023-09-06"
 #~ msgstr "2023-09-06"

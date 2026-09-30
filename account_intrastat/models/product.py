@@ -77,7 +77,8 @@ class ProductTemplate(models.Model):
     @api.constrains('product_variant_ids', 'intrastat_code_id')
     def _check_variant_for_intrastat(self):
         for product_template in self:
-            if not product_template.product_variant_ids and product_template.intrastat_code_id:
+            if (not product_template.product_variant_ids and product_template.intrastat_code_id and
+                any(attribute.create_variant == 'dynamic' for attribute in product_template.attribute_line_ids.attribute_id)):
                 raise ValidationError(_("The product template has no products/variants. At least one variant is required to set the Intrastat values."))
 
     @api.onchange('intrastat_code_id')

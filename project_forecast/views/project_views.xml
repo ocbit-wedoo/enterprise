@@ -7,9 +7,7 @@
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="priority">32</field>
         <field name="arch" type="xml">
-            <xpath expr="//group[@name='group_time_managment']" position="attributes">
-                <attribute name="invisible">0</attribute>
-            </xpath>
+            <xpath expr="//group[@name='group_time_managment']" position="inside"/>
         </field>
     </record>
 

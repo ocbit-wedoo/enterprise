@@ -110,3 +110,25 @@ class TestPrintCheck(AccountTestInvoicingCommon):
         })._create_payments()
 
         self.assertEqual(payment.check_amount_in_words, 'Ninety-One Thousand Four Hundred Ninety and 15/100')
+
+    def test_check_printing_rounding_two_decimals(self):
+        """ Test that even with a different rounding factor,
+            The amount in words on the check is still rounded to 2 decimals
+        """
+        self.env.ref('product.decimal_price').digits = 4
+        self.env.company.currency_id.rounding = 0.0001
+
+        vendor_bill = self.init_invoice(
+            move_type='in_invoice',
+            partner=self.partner_a,
+            amounts=[91490.1579],
+            post=True,
+        )
+
+        payment = self.env['account.payment.register'].with_context(
+            active_model='account.move', active_ids=vendor_bill.ids, lang='en_US'
+        ).create({
+            'payment_method_line_id': self.payment_method_line_check.id,
+        })._create_payments()
+
+        self.assertEqual(payment.check_amount_in_words, 'Ninety-One Thousand Four Hundred Ninety and 16/100')

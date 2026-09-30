@@ -208,11 +208,23 @@ class AccountChartTemplate(models.AbstractModel):
         rules_mapping[rule]['debit'] = '5001'
         rules_mapping[rule]['credit'] = '1090'
 
+        rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2000_net')
+        rules_mapping[rule]['debit'] = '5001'
+        rules_mapping[rule]['credit'] = '1090'
+
         rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2005')
         rules_mapping[rule]['debit'] = '5001'
         rules_mapping[rule]['credit'] = '1090'
 
+        rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2005_net')
+        rules_mapping[rule]['debit'] = '5001'
+        rules_mapping[rule]['credit'] = '1090'
+
         rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2010')
+        rules_mapping[rule]['debit'] = '5001'
+        rules_mapping[rule]['credit'] = '1090'
+
+        rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2010_net')
         rules_mapping[rule]['debit'] = '5001'
         rules_mapping[rule]['credit'] = '1090'
 
@@ -221,6 +233,10 @@ class AccountChartTemplate(models.AbstractModel):
         rules_mapping[rule]['credit'] = '1090'
 
         rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2020')
+        rules_mapping[rule]['debit'] = '5001'
+        rules_mapping[rule]['credit'] = '1090'
+
+        rule = self.env.ref('l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_2020_net')
         rules_mapping[rule]['debit'] = '5001'
         rules_mapping[rule]['credit'] = '1090'
 

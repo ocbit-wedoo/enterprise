@@ -1,3 +1,4 @@
+import re
 from lxml import etree
 
 from odoo import api, fields, models
@@ -35,6 +36,13 @@ class AccountJournal(models.Model):
             payment_method_code == 'iso20022_se'
             and self.bank_account_id.acc_type in {'bban_se', 'plusgiro', 'bankgiro'}
         ) or self.env.context.get('bban')
+
+    def _get_organization_id_node_text(self, payment_method_code, postal_address):
+        # EXTENDS account_iso_20022
+        if payment_method_code == 'iso20022_se' and postal_address and self.company_id.company_registry and self.bank_id.bic == 'SWEDSESS':
+            return f"06{re.sub(r'[^0-9]', '', self.company_id.company_registry)}B001"
+
+        return super()._get_organization_id_node_text(payment_method_code, postal_address)
 
     def _get_CtgyPurp(self, payment_method_code):
         if not self._is_se_bban(payment_method_code):
@@ -133,6 +141,20 @@ class AccountJournal(models.Model):
                             RmtdAmt.text = float_repr(ccy.round(payment['amount']), 2)
                         strd.insert(0, RfrdDocAmt)
         return RmtInf
+
+    def _get_PstlAdr(self, partner_id, payment_method_code):
+        # EXTEND account_iso20022
+        if payment_method_code == 'iso20022_se':
+            postal_address = self.get_postal_address(partner_id, payment_method_code)
+            if postal_address is not None:
+                PstlAdr = etree.Element("PstlAdr")
+                for node_name, attr, size in [('StrtNm', 'street', 70), ('PstCd', 'zip', 140), ('TwnNm', 'city', 140), ('Ctry', 'country', 2)]:
+                    if postal_address[attr]:
+                        address_element = etree.SubElement(PstlAdr, node_name)
+                        address_element.text = self._sepa_sanitize_communication(postal_address[attr], size)
+                return PstlAdr
+
+        return super()._get_PstlAdr(partner_id, payment_method_code)
 
     def _skip_CdtrAgt(self, partner_bank, payment_method_code):
         """

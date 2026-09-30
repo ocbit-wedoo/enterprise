@@ -1,6 +1,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from lxml import etree
 from odoo import fields, models
+from odoo.tools import street_split
+
 from odoo.addons.account_batch_payment.models import sepa_mapping
 
 
@@ -10,8 +12,8 @@ class AccountJournal(models.Model):
     def _should_use_pain_09(self, payment_method_code):
         force_iso_20022_pain_09 = bool(self.env['ir.config_parameter'].sudo().get_param('account_iso20022.force_iso_20022_pain_09'))
         return (
-                (payment_method_code in ['sepa_ct', 'iso20022_ch'] and self.sepa_pain_version == "pain.001.001.09") or
-                (payment_method_code == 'iso20022' and force_iso_20022_pain_09)
+            (payment_method_code in ['sepa_ct', 'iso20022_ch', 'iso20022_se'] and self.sepa_pain_version == "pain.001.001.09") or
+            (payment_method_code == 'iso20022' and force_iso_20022_pain_09)
         )
 
     def _get_ReqdExctnDt_content(self, payment_date, payment_method_code):
@@ -51,7 +53,15 @@ class AccountJournal(models.Model):
             postal_address = self.get_postal_address(partner_id, payment_method_code)
             if postal_address is not None:
                 PstlAdr = etree.Element("PstlAdr")
-                for node_name, attr, size in [('StrtNm', 'street', 70), ('PstCd', 'zip', 140), ('TwnNm', 'city', 140), ('Ctry', 'country', 2)]:
+                street_details = street_split(postal_address['street'])
+                if street_name := street_details.get('street_name'):
+                    address_element = etree.SubElement(PstlAdr, 'StrtNm')
+                    address_element.text = self._sepa_sanitize_communication(street_name, 70)
+                if street_number := street_details.get('street_number'):
+                    address_element = etree.SubElement(PstlAdr, 'BldgNb')
+                    address_element.text = self._sepa_sanitize_communication(street_number, 16)
+
+                for node_name, attr, size in [('PstCd', 'zip', 140), ('TwnNm', 'city', 140), ('Ctry', 'country', 2)]:
                     if postal_address[attr]:
                         address_element = etree.SubElement(PstlAdr, node_name)
                         address_element.text = self._sepa_sanitize_communication(postal_address[attr], size)
@@ -79,7 +89,7 @@ class AccountJournal(models.Model):
         if reference_type == 'be':
             return self.get_strd_tree(ref, cd='SCOR', issr='BBA')
         elif reference_type == 'ch':
-            ref = ref.rjust(27, '0')
+            ref = sepa_mapping.sanitize_communication(ref).rjust(27, '0')
             return self.get_strd_tree(ref, prtry='QRR')
         elif reference_type in ('fi', 'no', 'se'):
             return self.get_strd_tree(ref, cd='SCOR')

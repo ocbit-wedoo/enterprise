@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2026-05-17 05:59+0000\n"
+"PO-Revision-Date: 2026-08-24 17:43+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "delivery_usps/bg/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_intl_non_delivery_option__abandon
@@ -87,7 +87,7 @@ msgstr "Експресен"
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_service__first_class
 msgid "First Class"
-msgstr ""
+msgstr "First Class"
 
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_first_class_mail_type__flat
@@ -125,7 +125,7 @@ msgstr "Международен"
 #. module: delivery_usps
 #: model_terms:ir.ui.view,arch_db:delivery_usps.view_delivery_carrier_form_with_provider_usps
 msgid "Label Format"
-msgstr ""
+msgstr "Формат на етикета"
 
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_size_container__large
@@ -197,17 +197,17 @@ msgstr "Пакет"
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_custom_container_girth
 msgid "Package Girth"
-msgstr ""
+msgstr "Обиколка на пакета"
 
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_custom_container_height
 msgid "Package Height"
-msgstr ""
+msgstr "Височина на пакета"
 
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_custom_container_length
 msgid "Package Length"
-msgstr ""
+msgstr "Дължина на пакета"
 
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_first_class_mail_type__package_service
@@ -217,7 +217,7 @@ msgstr "Колетна служба"
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_custom_container_width
 msgid "Package Width"
-msgstr ""
+msgstr "Ширина на пакета"
 
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_domestic_regular_container__padded_flat_rate_envelope
@@ -242,6 +242,7 @@ msgstr ""
 msgid ""
 "Please choose another service (maximum weight of this service is 4 pounds)"
 msgstr ""
+"Моля, изберете друга услуга (максималното тегло за тази услуга е 4 фунта)"
 
 #. module: delivery_usps
 #. odoo-python
@@ -290,13 +291,15 @@ msgstr "Доставчик"
 #. odoo-python
 #: code:addons/delivery_usps/models/usps_request.py:0
 msgid "Quantity for each move line should be less than 1000."
-msgstr ""
+msgstr "Количеството за всеки ред движение трябва да е по-малко от 1000."
 
 #. module: delivery_usps
 #. odoo-python
 #: code:addons/delivery_usps/models/usps_request.py:0
 msgid "Recipient address cannot be found. Please check the address exists."
 msgstr ""
+"Адресът на получателя не може да бъде намерен. Моля, проверете дали адресът "
+"съществува."
 
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__usps_container__rectangular
@@ -338,7 +341,7 @@ msgstr "Мостра"
 #. odoo-python
 #: code:addons/delivery_usps/models/delivery_usps.py:0
 msgid "Shipment #%s has been cancelled"
-msgstr ""
+msgstr "Пратка №%s беше отменена"
 
 #. module: delivery_usps
 #. odoo-python
@@ -350,7 +353,7 @@ msgstr "Пратката е регистрирана в USPS"
 #. odoo-python
 #: code:addons/delivery_usps/models/delivery_usps.py:0
 msgid "Shipment created into USPS <br/> <b>Tracking Number: </b>%s"
-msgstr ""
+msgstr "Пратка, създадена в USPS <br/> <b>Номер на проследяване: </b>%s"
 
 #. module: delivery_usps
 #: model:ir.model,name:delivery_usps.model_delivery_carrier
@@ -390,6 +393,9 @@ msgid ""
 "missing for the following product(s): \n"
 " %s"
 msgstr ""
+"Прогнозната цена за доставка не може да бъде изчислена, защото липсва тегло "
+"за следния(те) продукт(и): \n"
+" %s"
 
 #. module: delivery_usps
 #. odoo-python
@@ -406,12 +412,13 @@ msgstr ""
 #: code:addons/delivery_usps/models/usps_request.py:0
 msgid "The selected USPS service (%s) cannot be used to deliver this package."
 msgstr ""
+"Избраната USPS услуга (%s) не може да се използва за доставка на този пакет."
 
 #. module: delivery_usps
 #. odoo-python
 #: code:addons/delivery_usps/models/delivery_usps.py:0
 msgid "Tracking Number:"
-msgstr ""
+msgstr "Номер за проследяване:"
 
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_international_regular_container
@@ -431,17 +438,17 @@ msgstr "Вид контейнер"
 #. module: delivery_usps
 #: model:ir.model.fields.selection,name:delivery_usps.selection__delivery_carrier__delivery_type__usps
 msgid "USPS (Legacy)"
-msgstr ""
+msgstr "USPS (Legacy)"
 
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_label_file_type
 msgid "USPS (Legacy) Label File Type"
-msgstr ""
+msgstr "USPS (Legacy) тип на файла за етикет"
 
 #. module: delivery_usps
 #: model_terms:ir.ui.view,arch_db:delivery_usps.view_delivery_carrier_form_with_provider_usps
 msgid "USPS Configuration"
-msgstr ""
+msgstr "USPS конфигурация"
 
 #. module: delivery_usps
 #: model:delivery.carrier,name:delivery_usps.delivery_carrier_usps_domestic
@@ -456,6 +463,8 @@ msgid ""
 "USPS Domestic is used only to ship inside of the U.S.A. Please change the "
 "delivery method into USPS International."
 msgstr ""
+"USPS Domestic се използва само за доставки в рамките на САЩ. Моля, променете "
+"метода на доставка на USPS International."
 
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_first_class_mail_type
@@ -475,6 +484,8 @@ msgid ""
 "USPS International is used only to ship outside of the U.S.A. Please change "
 "the delivery method into USPS Domestic."
 msgstr ""
+"USPS International се използва само за доставки извън САЩ. Моля, променете "
+"метода на доставка на USPS Domestic."
 
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_mail_type
@@ -494,15 +505,15 @@ msgstr "ИН на USPS потребител"
 #. module: delivery_usps
 #: model:ir.model.fields,field_description:delivery_usps.field_delivery_carrier__usps_size_container
 msgid "Usps Size Container"
-msgstr ""
+msgstr "Контейнер за размер на Usps"
 
 #. module: delivery_usps
 #. odoo-python
 #: code:addons/delivery_usps/models/usps_request.py:0
 msgid "Your company or recipient ZIP code is incorrect."
-msgstr ""
+msgstr "Пощенският код на вашата компания или на получателя е некоректен."
 
 #. module: delivery_usps
 #: model_terms:ir.ui.view,arch_db:delivery_usps.view_delivery_carrier_form_with_provider_usps
 msgid "inch"
-msgstr ""
+msgstr "инч"

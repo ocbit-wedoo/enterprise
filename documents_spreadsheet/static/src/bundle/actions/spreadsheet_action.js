@@ -111,6 +111,7 @@ export class SpreadsheetAction extends AbstractSpreadsheetAction {
         }
 
         const { freezeOdooData } = odoo.loader.modules.get("@spreadsheet/helpers/model");
+        this.model.dispatch("LOG_DATASOURCE_EXPORT", { action: "freeze" });
         const data = await freezeOdooData(this.model);
 
         const record = await this.orm.call("documents.document", "action_freeze_and_copy", [

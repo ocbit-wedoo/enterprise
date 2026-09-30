@@ -85,6 +85,7 @@ class TestJpkExport(TestAccountReportsCommon):
             # importation invoice
             {
                 'move_type': 'in_invoice',
+                'ref': 'FV/2023/01/0001',
                 'invoice_date': '2023-01-01',
                 'date': '2023-01-01',
                 'partner_id': cls.partner_b.id,

@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 18:54+0000\n"
-"PO-Revision-Date: 2026-04-29 19:39+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"POT-Creation-Date: 2026-06-19 17:50+0000\n"
+"PO-Revision-Date: 2026-07-01 12:15+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "spreadsheet_edition/pl/>\n"
 "Language: pl\n"
@@ -24,25 +24,25 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/list_view/list_renderer.js:0
 msgid "%(field name)s by %(order)s"
-msgstr ""
+msgstr "%(field name)s z %(order)s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/list_init_callback.js:0
 msgid "%(list_name)s (List #%(list_id)s)"
-msgstr ""
+msgstr "%(list_name)s (Lista #%(list_id)s)"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/version_history_action.js:0
 msgid "%(name)s (restored from %(timestamp)s)"
-msgstr ""
+msgstr "%(name)s (przywrócono z %(timestamp)s)"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -54,42 +54,42 @@ msgstr "%(pivot_name)s (Pivot #%(pivot_id)s)"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/pivot_view/pivot_view.js:0
 msgid "%(pivot_title)s by %(group_by)s"
-msgstr ""
+msgstr "%(pivot_title)s z %(group_by)s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/pivot_view/pivot_view.js:0
 msgid "%(pivot_title)s by %(group_by)s (%(granularity)s)"
-msgstr ""
+msgstr "%(pivot_title)s z %(group_by)s (%(granularity)s)"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "%s threads"
-msgstr ""
+msgstr "%s wątki"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/components/locale_status/locale_status.js:0
 msgid "- dates: %s"
-msgstr ""
+msgstr "- daty: %s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/components/locale_status/locale_status.js:0
 msgid "- numbers: %s"
-msgstr ""
+msgstr "- numery: %s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "1 thread"
-msgstr ""
+msgstr "1 wątek"
 
 #. module: spreadsheet_edition
 #: model:ir.model.constraint,message:spreadsheet_edition.constraint_spreadsheet_revision_parent_unique
 msgid "A revision based on the same revision already exists"
-msgstr ""
+msgstr "Istnieje już poprawka oparta na tej samej poprawce"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__message_needaction
@@ -136,7 +136,7 @@ msgstr "Wszystkie arkusze"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.js:0
 msgid "Are you sure you want to delete this list?"
-msgstr ""
+msgstr "Czy na pewno chcesz usunąć tę listę?"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -157,6 +157,8 @@ msgid ""
 "At least one data source has an invalid model. Please delete it before "
 "editing this global filter."
 msgstr ""
+"Co najmniej jedno źródło danych zawiera nieprawidłowy model. Usuń je przed "
+"edycją tego globalnego filtra."
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__message_attachment_count
@@ -173,13 +175,13 @@ msgstr "Automatyczne filtrowanie na podstawie bieżącego okresu"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 msgid "Automatically filter on the current user"
-msgstr ""
+msgstr "Automatyczne filtrowanie według bieżącego użytkownika"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Axis"
-msgstr "Axis"
+msgstr "Oś"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -347,19 +349,19 @@ msgstr "Stopień"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/common/config_panel.xml:0
 msgid "Delete Chart"
-msgstr ""
+msgstr "Usuń graf"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.xml:0
 msgid "Delete List"
-msgstr ""
+msgstr "Usuń listę"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/side_panels/pivot_details_side_panel.xml:0
 msgid "Delete Pivot"
-msgstr ""
+msgstr "Usuń tabelę przestawną"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -374,6 +376,9 @@ msgid ""
 "Difference between user locale (%(user_locale)s) and spreadsheet locale (%"
 "(spreadsheet_locale)s). This spreadsheet is using the formats below:"
 msgstr ""
+"Różnica między ustawieniami regionalnymi użytkownika (%(user_locale)s) a "
+"ustawieniami regionalnymi arkusza kalkulacyjnego (%(spreadsheet_locale)s). W "
+"tym arkuszu kalkulacyjnym stosowane są poniższe formaty:"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__display_name
@@ -444,7 +449,7 @@ msgstr "Dopasowanie pola"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "Filter comments"
-msgstr ""
+msgstr "Filtruj komentarze"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -456,7 +461,7 @@ msgstr "Filtr właściwości"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/text_filter_editor_side_panel.xml:0
 msgid "Filter value"
-msgstr ""
+msgstr "Filtruj wartość"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -479,7 +484,7 @@ msgstr "Obserwujący (partnerzy)"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/date_filter_editor_side_panel.js:0
 msgid "From / To"
-msgstr ""
+msgstr "Od / Do"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__has_message
@@ -490,7 +495,7 @@ msgstr "Ma wiadomość"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/version_history_action.js:0
 msgid "Heads up!"
-msgstr ""
+msgstr "Uwaga!"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -523,24 +528,27 @@ msgid ""
 "If you go ahead, your document will go back to the version from %s.\n"
 "Any changes you've made after that time will disappear. Ready to proceed?"
 msgstr ""
+"Jeśli potwierdzisz, dokument powróci do wersji z dnia %s.\n"
+"Wszelkie zmiany wprowadzone po tej dacie zostaną utracone. Czy chcesz "
+"kontynuować?"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 msgid "Include children"
-msgstr ""
+msgstr "Uwzględnij podrzędne"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/pivot_missing_cell_dialog/pivot_missing_cell_dialog.xml:0
 msgid "Insert a pivot cell"
-msgstr ""
+msgstr "Wstaw komórkę przestawną"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/index.js:0
 msgid "Insert comment"
-msgstr ""
+msgstr "Wstaw komentarz"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -570,7 +578,7 @@ msgstr "Wstaw pierwszy"
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__message_is_follower
 msgid "Is Follower"
-msgstr "Jest obserwatorem"
+msgstr "Jest obserwującym"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -582,7 +590,7 @@ msgstr "Etykieta"
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__write_uid
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__write_uid
 msgid "Last Updated by"
-msgstr "Ostatnio aktualizowane przez"
+msgstr "Ostatnio zaktualizowane przez"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_cell_thread__write_date
@@ -602,7 +610,7 @@ msgstr "Ostatnia aktualizacja w"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/odoo_chart_with_axis/design_panel.xml:0
 msgid "Left"
-msgstr "Lewy"
+msgstr "Na lewo"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -653,12 +661,14 @@ msgid ""
 "List duplicated. Use the \"Re-insert list\" menu item to insert it in a "
 "sheet."
 msgstr ""
+"Lista została powielona. Użyj pozycji menu „Wstaw ponownie listę”, aby "
+"wstawić ją do arkusza."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.js:0
 msgid "List duplication failed"
-msgstr ""
+msgstr "Nie udało się zduplikować listy"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -676,8 +686,9 @@ msgstr "Załaduj więcej"
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/chart/side_panels/common/config_panel.xml:0
+#: code:addons/spreadsheet_edition/static/src/bundle/list/plugins/list_autofill_plugin.js:0
 msgid "Loading..."
-msgstr "Pobieranie..."
+msgstr "Ładuję..."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -696,7 +707,7 @@ msgstr "Utwórz kopię"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/restore_version_dialog/restore_version_dialog.xml:0
 msgid "Make a copy instead"
-msgstr ""
+msgstr "Zamiast tego stwórz kopię"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -724,19 +735,19 @@ msgstr "Wiadomości"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/plugins/list_autofill_plugin.js:0
 msgid "Missing list #%s"
-msgstr ""
+msgstr "Brakująca lista nr%s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/plugins/pivot_autofill_plugin.js:0
 msgid "Missing pivot"
-msgstr ""
+msgstr "Brakująca tabela przestawna"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/plugins/pivot_autofill_plugin.js:0
 msgid "Missing pivot #%s"
-msgstr ""
+msgstr "Brakująca tabela przestawna #%s"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -750,7 +761,7 @@ msgstr "Model"
 #. module: spreadsheet_edition
 #: model:ir.model,name:spreadsheet_edition.model_ir_model
 msgid "Models"
-msgstr "Models"
+msgstr "Modele"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -769,7 +780,7 @@ msgstr "Miesiąc i rok"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/date_filter_editor_side_panel.js:0
 msgid "Month / Quarter"
-msgstr ""
+msgstr "Miesiąc / Kwartał"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -811,13 +822,13 @@ msgstr "Nowy arkusz wstawiony w '%s'"
 #. odoo-python
 #: code:addons/spreadsheet_edition/models/spreadsheet_mixin.py:0
 msgid "New spreadsheet created"
-msgstr ""
+msgstr "Utworzono nowy arkusz kalkulacyjny"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_field_offset.js:0
 msgid "Next"
-msgstr "Następny"
+msgstr "Dalej"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -855,7 +866,7 @@ msgstr "Liczba wiadomości z błędami przy doręczeniu"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/side_panel/version_history_item.xml:0
 msgid "OLD"
-msgstr ""
+msgstr "STARE"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -868,19 +879,19 @@ msgstr "Arkusze kalkulacyjne Odoo"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/components/cell_thread_popover.xml:0
 msgid "Open all comments"
-msgstr ""
+msgstr "Otwórz wszystkie komentarze"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/edit_list_sorting_section/edit_list_sorting_section.xml:0
 msgid "Order"
-msgstr "Zamówienie"
+msgstr "Uporządkuj"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/version_history_action.js:0
 msgid "Original data"
-msgstr ""
+msgstr "Dane źródłowe"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__parent_revision_id
@@ -909,7 +920,7 @@ msgstr "Koło"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/assets/pivot_view/pivot_view.js:0
 msgid "Pivot contains duplicate groupbys"
-msgstr "Pivot zawiera zduplikowane grupy"
+msgstr "Tabela przestawna zawiera powielone grupy"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -928,13 +939,13 @@ msgstr "Wielomian"
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/text_filter_editor_side_panel.xml:0
 msgid "Possible values"
-msgstr ""
+msgstr "Możliwe wartości"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_field_offset.js:0
 msgid "Previous"
-msgstr "Poprzedni"
+msgstr "Wstecz"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -983,7 +994,7 @@ msgstr "Wstaw ponownie listę"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/o_spreadsheet/menu_item_registry.js:0
 msgid "Re-insert pivot cell"
-msgstr ""
+msgstr "Wstaw ponownie komórkę przestawną"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -995,13 +1006,13 @@ msgstr "Ponownie wstaw statyczną tabelę przestawną"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "Re-open this thread"
-msgstr ""
+msgstr "Otwórz ponownie ten wątek"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/plugins/list_autofill_plugin.js:0
 msgid "Record #%(record_number)s"
-msgstr ""
+msgstr "Rekord #%(record_number)s"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__res_id
@@ -1054,41 +1065,41 @@ msgstr "Wymaga wybranego pola"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.js:0
 msgid "Resolve this thread"
-msgstr ""
+msgstr "Rozwiąż ten wątek"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "Resolved"
-msgstr ""
+msgstr "Rozwiązano"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/side_panel/version_history_item.js:0
 msgid "Restore this version"
-msgstr ""
+msgstr "Przywróć tę wersję"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/text_filter_editor_side_panel.xml:0
 msgid "Restrict values to a range"
-msgstr ""
+msgstr "Ogranicz wartości do zakresu"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/relation_filter_editor_side_panel.xml:0
 msgid "Restrict values with a domain"
-msgstr ""
+msgstr "Ogranicz wartości z domeną"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__revision_uuid
 msgid "Revision Uuid"
-msgstr ""
+msgstr "Uuid korekty"
 
 #. module: spreadsheet_edition
 #: model:ir.model.fields,field_description:spreadsheet_edition.field_spreadsheet_revision__name
 msgid "Revision name"
-msgstr ""
+msgstr "Nazwa wersji"
 
 #. module: spreadsheet_edition
 #: model:ir.actions.act_window,name:spreadsheet_edition.spreadsheet_revision_action
@@ -1147,13 +1158,13 @@ msgstr "Zobacz listę właściwości"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/pivot/index.js:0
 msgid "See pivot properties"
-msgstr "Zobacz właściwości pivot"
+msgstr "Zobacz właściwości tabeli przestawnej"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/version_history/index.js:0
 msgid "See version history"
-msgstr ""
+msgstr "Zobacz historię wersji"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1285,6 +1296,8 @@ msgid ""
 "The history of your spreadsheet is corrupted and you are likely missing "
 "recent revisions. This feature cannot be used."
 msgstr ""
+"Historia arkusza kalkulacyjnego jest uszkodzona i prawdopodobnie brakuje w "
+"niej ostatnich zmian. Nie można skorzystać z tej funkcji."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1293,6 +1306,8 @@ msgid ""
 "The model (%(model)s) of this chart is not valid (it may have been renamed/"
 "deleted). Please re-insert a new chart."
 msgstr ""
+"Model (%(model)s) tej tabeli jest nieprawidłowy (być może został "
+"przemianowany lub usunięty). Wstaw nową tabelę."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1301,6 +1316,8 @@ msgid ""
 "The model (%(model)s) of this list is not valid (it may have been renamed/"
 "deleted). Please re-insert a new list."
 msgstr ""
+"Model (%(model)s) tej listy jest nieprawidłowy (być może został "
+"przemianowany lub usunięty). Wstaw nową listę."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1309,6 +1326,8 @@ msgid ""
 "The model (%(model)s) of this pivot is not valid (it may have been renamed/"
 "deleted). Please re-insert a new pivot."
 msgstr ""
+"Model (%(model)s) tego punktu zwrotnego jest nieprawidłowy (być może został "
+"przemianowany lub usunięty). Wstaw ponownie nowy punkt zwrotny."
 
 #. module: spreadsheet_edition
 #. odoo-python
@@ -1317,6 +1336,8 @@ msgid ""
 "The operation could not be applied because of a concurrent update. Please "
 "try again."
 msgstr ""
+"Nie można wykonać operacji z powodu równoczesnej aktualizacji. Spróbuj "
+"ponownie."
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1327,25 +1348,29 @@ msgid ""
 "\n"
 "Would you like to load the more recent modifications?"
 msgstr ""
+"Brakuje niektórych zmian, co uniemożliwia przywrócenie całej historii "
+"edycji.\n"
+"\n"
+"Czy chcesz załadować najnowsze zmiany?"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/side_panel/version_history_side_panel.xml:0
 #: code:addons/spreadsheet_edition/static/src/bundle/version_history/side_panel/version_history_side_panel.xml:0
 msgid "There are no prior revisions for this spreadsheet."
-msgstr ""
+msgstr "Nie ma wcześniejszych wersji tego arkusza kalkulacyjnego."
 
 #. module: spreadsheet_edition
 #: model:ir.model.constraint,message:spreadsheet_edition.constraint_spreadsheet_revision_initial_unique
 msgid "There can be only one initial revision per spreadsheet"
-msgstr ""
+msgstr "W każdym arkuszu kalkulacyjnym może być tylko jedna wstępna korekta"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/list/side_panels/list_details_side_panel.js:0
 #: code:addons/spreadsheet_edition/static/src/bundle/o_spreadsheet/icons.xml:0
 msgid "This list is not used"
-msgstr ""
+msgstr "Ta lista nie jest używana"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1357,7 +1382,7 @@ msgstr "Tabela przestawna nie jest używana"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/comments/side_panel/comment_threads_side_panel.xml:0
 msgid "This sheet"
-msgstr ""
+msgstr "Ten arkusz"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1393,7 +1418,7 @@ msgstr "Nieznany"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/global_filters/components/filter_editor/date_filter_editor_side_panel.xml:0
 msgid "Value options"
-msgstr ""
+msgstr "Opcje wartości"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1406,7 +1431,7 @@ msgstr "Historia wersji"
 #. odoo-python
 #: code:addons/spreadsheet_edition/models/spreadsheet_mixin.py:0
 msgid "Version restored"
-msgstr ""
+msgstr "Przywrócona wersja"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1453,7 +1478,7 @@ msgstr "Rok"
 #. odoo-javascript
 #: code:addons/spreadsheet_edition/static/src/bundle/actions/version_history/restore_version_dialog/restore_version_dialog.xml:0
 msgid "Yes, restore"
-msgstr ""
+msgstr "Tak, przywróć"
 
 #. module: spreadsheet_edition
 #. odoo-javascript
@@ -1488,7 +1513,7 @@ msgstr "lista"
 #. module: spreadsheet_edition
 #: model_terms:ir.ui.view,arch_db:spreadsheet_edition.mail_notification_layout
 msgid "mentioned you in a comment:"
-msgstr "wspomniał o Tobie w komentarzu:"
+msgstr "wspomina o Tobie w komentarzu:"
 
 #. module: spreadsheet_edition
 #. odoo-javascript

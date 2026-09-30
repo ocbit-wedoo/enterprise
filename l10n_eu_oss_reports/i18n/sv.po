@@ -3,13 +3,14 @@
 # * l10n_eu_oss_reports
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 19:02+0000\n"
-"PO-Revision-Date: 2025-11-07 22:23+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-13 09:23+0000\n"
+"Last-Translator: Hanna Kharraziha <hakha@odoo.com>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18-l10n/"
 "l10n_eu_oss_reports/sv/>\n"
 "Language: sv\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model,name:l10n_eu_oss_reports.model_account_tax_report_handler
@@ -27,7 +28,7 @@ msgstr ""
 #. module: l10n_eu_oss_reports
 #: model:ir.model,name:l10n_eu_oss_reports.model_account_report
 msgid "Accounting Report"
-msgstr "Bokföringsrapport"
+msgstr "Redovisningsrapport"
 
 #. module: l10n_eu_oss_reports
 #: model:account.report.column,name:l10n_eu_oss_reports.oss_imports_report_net
@@ -44,7 +45,7 @@ msgstr "Tillgänglighet"
 #. odoo-python
 #: code:addons/l10n_eu_oss_reports/models/account_generic_tax_report.py:0
 msgid "Choose a month or quarter to export the OSS report"
-msgstr ""
+msgstr "Välj en månad eller ett kvartal att exportera OSS-rapporten för"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model,name:l10n_eu_oss_reports.model_res_company
@@ -54,7 +55,7 @@ msgstr "Företag"
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields,field_description:l10n_eu_oss_reports.field_res_company__ioss
 msgid "IOSS Number"
-msgstr ""
+msgstr "IOSS-nummer"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields,help:l10n_eu_oss_reports.field_res_company__ioss
@@ -62,6 +63,8 @@ msgid ""
 "Identification number for companies that import goods and services into the "
 "EU. For use in OSS reports."
 msgstr ""
+"ID-nummer för företag som importerar varor och tjänster till EU. Används i "
+"OSS-rapporter."
 
 #. module: l10n_eu_oss_reports
 #. odoo-python
@@ -70,11 +73,13 @@ msgid ""
 "Inconsistent setup: OSS tax %s is mapped in fiscal positions from different "
 "countries."
 msgstr ""
+"Oregelbunden konfigurering: OSS-skatten %s har använts för skatteområden "
+"från olika länder."
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields,field_description:l10n_eu_oss_reports.field_res_company__intermediary_no
 msgid "Intermediary Number"
-msgstr ""
+msgstr "Interimsnummer"
 
 #. module: l10n_eu_oss_reports
 #: model:account.report,name:l10n_eu_oss_reports.oss_imports_report
@@ -89,22 +94,22 @@ msgstr ""
 #. module: l10n_eu_oss_reports
 #: model:ir.model,name:l10n_eu_oss_reports.model_l10n_eu_oss_tax_report_handler
 msgid "OSS Tax Report Custom Handler"
-msgstr ""
+msgstr "Anpassad hantering av OSS-skatterapporter"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model,name:l10n_eu_oss_reports.model_l10n_eu_oss_imports_tax_report_handler
 msgid "OSS Tax Report Custom Handler (Imports)"
-msgstr ""
+msgstr "Anpassad hantering av OSS-skatterapporter (Importer)"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model,name:l10n_eu_oss_reports.model_l10n_eu_oss_sales_tax_report_handler
 msgid "OSS Tax Report Custom Handler (Sales)"
-msgstr ""
+msgstr "Anpassad hantering av OSS-skatterapporter (Försäljning)"
 
 #. module: l10n_eu_oss_reports
 #: model_terms:ir.ui.view,arch_db:l10n_eu_oss_reports.product_template_form
 msgid "Reporting"
-msgstr "Rapporter"
+msgstr "Rapportering"
 
 #. module: l10n_eu_oss_reports
 #. odoo-python
@@ -113,6 +118,8 @@ msgid ""
 "Tax %s is used on some OSS-tagged journal items in the period, but is not "
 "mapped by any fiscal position with a country set."
 msgstr ""
+"Skatten %s används för vissa OSS-taggade affärshändelser inom perioden, men "
+"är inte kopplad till något skatteområde med ett angivet land."
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields,help:l10n_eu_oss_reports.field_res_company__intermediary_no
@@ -120,16 +127,18 @@ msgid ""
 "Used for companies outside EU that import into the EU via an intermediary "
 "for OSS taxes"
 msgstr ""
+"Används för företag utanför EU som importerar till EU via en mellanhand för "
+"OSS-skatter"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields,help:l10n_eu_oss_reports.field_res_company__voes
 msgid "Used for companies outside EU that want to make use of OSS"
-msgstr ""
+msgstr "Används för företag utanför EU som vill använda sig av OSS"
 
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields.selection,name:l10n_eu_oss_reports.selection__account_report__availability_condition__oss
 msgid "Using OSS"
-msgstr ""
+msgstr "Använder OSS"
 
 #. module: l10n_eu_oss_reports
 #: model:account.report.column,name:l10n_eu_oss_reports.oss_imports_report_tax
@@ -140,7 +149,7 @@ msgstr "Skattenummer"
 #. module: l10n_eu_oss_reports
 #: model:ir.model.fields,field_description:l10n_eu_oss_reports.field_res_company__voes
 msgid "VOES Number"
-msgstr ""
+msgstr "VOES-nummer"
 
 #. module: l10n_eu_oss_reports
 #. odoo-python

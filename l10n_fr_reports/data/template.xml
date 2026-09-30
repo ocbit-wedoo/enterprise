@@ -138,6 +138,7 @@
             <Etablissement t-out="vals.get('bank_code')"/>
             <Agence t-out="vals.get('office_code')"/>
             <TitulaireDesignation t-out="vals.get('holder_name')"/>
+            <TitulaireDesignationSuite t-out="vals.get('holder_name_2')"/>
         </Zone>
     </template>
 </odoo>

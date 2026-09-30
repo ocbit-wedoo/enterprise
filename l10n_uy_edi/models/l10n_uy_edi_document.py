@@ -207,6 +207,10 @@ class L10nUyEdiDocument(models.Model):
                 xml_tag=field_name, xml_tag_len=limit, value_len=len(res), value_content=res))
         return errors
 
+    def _get_origin_record(self):
+        self.ensure_one()
+        return self.move_id
+
     @api.model
     def _get_cfe_tag(self, move):
         move.ensure_one()
@@ -235,7 +239,8 @@ class L10nUyEdiDocument(models.Model):
         res = []
         addendas = move_id.l10n_uy_edi_addenda_ids.filtered(lambda x: x.type == addenda_type)
         for addenda in addendas:
-            res.append("{ %s }" % addenda.content if addenda.is_legend else addenda.content)
+            content = addenda.content.strip()
+            res.append("{ %s }" % content if addenda.is_legend else content)
         return "\n".join(res)
 
     @api.model
@@ -285,7 +290,7 @@ class L10nUyEdiDocument(models.Model):
             self.env.ref('l10n_uy.dc_cn_e_inv_exp') |
             self.env.ref('l10n_uy.dc_dn_e_inv_exp')
         )
-        addenda = self.move_id._l10n_uy_edi_get_addenda()
+        addenda = self._get_origin_record()._l10n_uy_edi_get_addenda()
         parameters = {}
 
         if addenda:

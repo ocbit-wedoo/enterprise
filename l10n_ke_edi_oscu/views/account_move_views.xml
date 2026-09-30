@@ -12,7 +12,7 @@
                         invisible="move_type not in ('in_invoice', 'in_refund') or l10n_ke_oscu_invoice_number or state != 'posted' or country_code != 'KE'"/>
                 </xpath>
                 <xpath expr="//header" position="after">
-                    <div class="m-0" name="warnings">
+                    <div class="m-0" name="warnings" invisible="not l10n_ke_validation_message">
                         <field name="l10n_ke_validation_message" class="o_field_html" widget="actionable_errors" invisible="country_code != 'KE'"/>
                     </div>
                 </xpath>

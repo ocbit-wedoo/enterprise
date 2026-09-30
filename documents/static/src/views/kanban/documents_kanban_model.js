@@ -4,10 +4,7 @@ import { Domain } from "@web/core/domain";
 import { _t } from "@web/core/l10n/translation";
 import { useService } from "@web/core/utils/hooks";
 import { RelationalModel } from "@web/model/relational_model/relational_model";
-import {
-    DocumentsModelMixin,
-    DocumentsRecordMixin,
-} from "../documents_model_mixin";
+import { DocumentsModelMixin, DocumentsRecordMixin } from "../documents_model_mixin";
 
 export class DocumentsKanbanModel extends DocumentsModelMixin(RelationalModel) {
     setup() {
@@ -34,12 +31,22 @@ export class DocumentsKanbanModel extends DocumentsModelMixin(RelationalModel) {
         } else {
             const missingData = await super._loadData({
                 ...config,
-                domain: Domain.and([config.domain, [["id", "=", documentIdToRestore]]]).toList(),
+                domain: Domain.and([
+                    config.domain,
+                    [
+                        ["id", "=", documentIdToRestore],
+                        ["active", "in", [true, false]],
+                    ],
+                ]).toList(),
                 limit: 1,
             });
             if (missingData?.records?.length) {
-                data.records.splice(0, 0, missingData.records[0]); // put it at the top of the list
+                const addedRecord = missingData.records[0];
+                data.records.splice(0, 0, addedRecord); // put it at the top of the list
                 data.records.pop(); // Remove the last item to not overflow page
+                if (!addedRecord.active) {
+                    this.documentService.archivedDocumentRestored = addedRecord;
+                }
                 this.documentService.documentIdToRestore = documentIdToRestore;
             } else {
                 this.notification.add(_t("Document not found or inaccessible."), {

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-03-03 16:48+0000\n"
+"PO-Revision-Date: 2026-09-02 19:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Slovak <https://translate.odoo.com/projects/odoo-18/"
 "stock_barcode/sk/>\n"
@@ -20,21 +20,23 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
-">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
-"X-Generator: Weblate 5.16.1\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && "
+"n >= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "%s can't be inventoried. Only storable products can be inventoried."
 msgstr ""
+"%s nemožno zaevidovať do skladu. V sklade je možné evidovať iba "
+"skladovateľné produkty."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
 msgid "/s"
-msgstr ""
+msgstr "/s"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
@@ -54,6 +56,8 @@ msgid ""
 "<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"Scrap "
 "Location\"/>"
 msgstr ""
+"<i class=\"fa fa-fw fa-lg fa-long-arrow-right me-3\" title=\"Lokácia "
+"vyradenia\"/>"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
@@ -81,27 +85,28 @@ msgstr "<i class=\"fa fa-lg fa-user-o\" title=\"Owner\"/>"
 #: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
 msgid "<i class=\"fa fa-print\"/> Print barcode commands and operation types"
 msgstr ""
+"<i class=\"fa fa-print\"/> Tlačiť príkazy čiarových kódov a typy operácií"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
 msgid "<i class=\"fa fa-print\"/> Print barcode demo sheet"
-msgstr ""
+msgstr "<i class=\"fa fa-print\"/> Tlačiť ukážkový list s čiarovými kódmi"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
 msgid "<i class=\"fa fa-print\"/> Print storage locations"
-msgstr ""
+msgstr "<i class=\"fa fa-print\"/> Tlačiť skladové lokácie"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
 msgid "<i class=\"fa fs-4 fa-tags me-1\" title=\"Product\"/>"
-msgstr ""
+msgstr "<i class=\"fa fs-4 fa-tags me-1\" title=\"Produkt\"/>"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
 msgid "<span>Replenish Quantities</span>"
-msgstr ""
+msgstr "<span>Množstva na doplnenie</span>"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -110,6 +115,8 @@ msgid ""
 "A product tracked by serial numbers can't have multiple quantities for the "
 "same serial number."
 msgstr ""
+"Produkt sledovaný podľa sériových čísel nemôže mať viac kusov s rovnakým "
+"sériovým číslom."
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -121,13 +128,13 @@ msgstr "Pridajte produkt"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/extra_product_dialog.js:0
 msgid "Add extra product?"
-msgstr ""
+msgstr "Pridať ďalší produkt?"
 
 #. module: stock_barcode
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__mandatory
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_dest_location__mandatory
 msgid "After each product"
-msgstr ""
+msgstr "Po každom produkte"
 
 #. module: stock_barcode
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__optional
@@ -139,7 +146,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "All products need to be packed"
-msgstr ""
+msgstr "Všetky výrobky musia byť zabalené"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
@@ -149,12 +156,12 @@ msgstr "Pridelenie"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_allow_extra_product
 msgid "Allow extra products"
-msgstr ""
+msgstr "Povoliť ďalšie produkty"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_full
 msgid "Allow full picking validation"
-msgstr ""
+msgstr "Povoliť potvrdenie celého presunu"
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__barcode_validation_full
@@ -183,6 +190,8 @@ msgid ""
 "An unexisting package type was scanned. This part of the barcode can't be "
 "processed."
 msgstr ""
+"Bol naskenovaný neexistujúci typ balíka. Táto časť čiarového kódu sa nedá "
+"spracovať."
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -194,13 +203,13 @@ msgstr "Použiť"
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
 msgid "Are you sure you want to cancel this operation?"
-msgstr ""
+msgstr "Naozaj chcete túto operáciu zrušiť?"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
 msgid "Backorder"
-msgstr ""
+msgstr "Nevybavená objednávka"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_backorder_confirmation
@@ -220,7 +229,7 @@ msgstr "Čiarový kód"
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
 msgid "Barcode App"
-msgstr ""
+msgstr "Aplikácia Čiarový kód"
 
 #. module: stock_barcode
 #: model:ir.actions.client,name:stock_barcode.stock_barcode_inventory_client_action
@@ -253,12 +262,14 @@ msgstr "Skener čiarových kódov"
 #: code:addons/stock_barcode/static/src/models/barcode_model.js:0
 msgid "Barcode scan is ambiguous with several model: %s. Use the most likely."
 msgstr ""
+"Skenovanie čiarového kódu je nejednoznačné, existuje viacero modelov: %s. "
+"Použite ten najpravdepodobnejší."
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/controllers/stock_barcode.py:0
 msgid "Barcodes are not available."
-msgstr ""
+msgstr "Čiarové kódy nie sú k dispozícii."
 
 #. module: stock_barcode
 #: model:product.template,name:stock_barcode.product_cable_management_box_2_product_template
@@ -275,24 +286,24 @@ msgstr "Zrušené"
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_barcode_cancel_operation
 msgid "Cancel Operation"
-msgstr ""
+msgstr "Zrušiť operáciu"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Cancel Transfer"
-msgstr ""
+msgstr "Zrušiť presun"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
 msgid "Cancel operation"
-msgstr ""
+msgstr "Zrušiť operáciu"
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/models/stock_picking.py:0
 msgid "Cancel this operation?"
-msgstr ""
+msgstr "Chcete túto operáciu zrušiť?"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -329,7 +340,7 @@ msgstr "Kontakt"
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__group_barcode_count_entire_location
 #: model:res.groups,name:stock_barcode.group_barcode_count_entire_location
 msgid "Count Entire Locations"
-msgstr ""
+msgstr "Prepočítať všetky lokácie"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_quant_barcode
@@ -339,7 +350,7 @@ msgstr "Spočítané množstvo"
 #. module: stock_barcode
 #: model_terms:ir.actions.act_window,help:stock_barcode.stock_picking_action_kanban
 msgid "Create a new transfer"
-msgstr ""
+msgstr "Vytvorte nový presun"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__create_uid
@@ -354,12 +365,12 @@ msgstr "Vytvorené"
 #. module: stock_barcode
 #: model:product.template,name:stock_barcode.product_custom_cabinet_metric_product_template
 msgid "Customized Cabinet (Metric)"
-msgstr ""
+msgstr "Skriňa na mieru (metrická)"
 
 #. module: stock_barcode
 #: model:product.template,name:stock_barcode.product_custom_cabinet_usa_product_template
 msgid "Customized Cabinet (USA)"
-msgstr ""
+msgstr "Skriňa na mieru (USA)"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -370,7 +381,7 @@ msgstr "Zmazať"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__stock_barcode_demo_active
 msgid "Demo Data Active"
-msgstr ""
+msgstr "Ukážkové údaje aktívne"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -389,12 +400,12 @@ msgstr "Cieľový balíček"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Destination location must be scanned"
-msgstr ""
+msgstr "Cieľová lokácia musí byť naskenovaná"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
 msgid "Disable sound effect while scanning a barcode."
-msgstr ""
+msgstr "Vypnúť zvukový efekt pri skenovaní čiarového kódu."
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -418,6 +429,8 @@ msgid ""
 "Do you want to permanently remove this message ? It won't appear anymore, so "
 "make sure you don't need the barcodes sheet or you have a copy."
 msgstr ""
+"Chcete túto správu natrvalo odstrániť? Už sa nebude zobrazovať, preto sa "
+"uistite, že list s čiarovými kódmi nepotrebujete alebo že máte jeho kópiu."
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_put_in_pack
@@ -434,31 +447,31 @@ msgstr ""
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_cancel_operation_view
 msgid "Don't cancel"
-msgstr ""
+msgstr "Nezrušovať"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
 msgid "Don't show this message again"
-msgstr ""
+msgstr "Túto správu už nezobrazovať"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
 msgid "Done / To do"
-msgstr ""
+msgstr "Hotové / Na vykonanie"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
 msgid "Download demo data sheet"
-msgstr ""
+msgstr "Stiahnuť ukážkový dátový list"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
 msgid "Download operation barcodes"
-msgstr ""
+msgstr "Stiahnuť čiarové kódy operácií"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__dummy_id
@@ -469,7 +482,7 @@ msgstr "Maketa"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__empty_move_count
 msgid "Empty Move Count"
-msgstr ""
+msgstr "Počet prázdnych presunov"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -486,13 +499,13 @@ msgstr "Finálne schválenie"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Following backorder was created:"
-msgstr ""
+msgstr "Bola vytvorená nasledujúca nevybavená objednávka:"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Following backorders were created:"
-msgstr ""
+msgstr "Boli vytvorené nasledujúce nevybavené objednávky:"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -501,6 +514,8 @@ msgid ""
 "Following scanned products are not reserved for this transfer. Are you sure "
 "you want to add them?"
 msgstr ""
+"Nasledujúce naskenované produkty nie sú určené pre tento presun. Naozaj ich "
+"chcete pridať?"
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__barcode_allow_extra_product
@@ -510,22 +525,22 @@ msgstr ""
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_dest_location
 msgid "Force Destination Location scan?"
-msgstr ""
+msgstr "Vynútiť skenovanie cieľovej lokácie?"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_tracking_number
 msgid "Force Lot/Serial scan?"
-msgstr ""
+msgstr "Vynútiť skenovanie šarží/sériových čísiel?"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_product
 msgid "Force Product scan?"
-msgstr ""
+msgstr "Vynútiť skenovanie produktu?"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_scan_source_location
 msgid "Force Source Location scan?"
-msgstr ""
+msgstr "Vynútiť skenovanie zdrojovej lokácie?"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_after_dest_location
@@ -535,7 +550,7 @@ msgstr ""
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__barcode_validation_all_product_packed
 msgid "Force all products to be packed"
-msgstr ""
+msgstr "Vynútiť balenie všetkých produktov"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__restrict_put_in_pack
@@ -545,7 +560,7 @@ msgstr "Vynútiť vloženie do balenia?"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__formatted_product_barcode
 msgid "Formatted Product Barcode"
-msgstr ""
+msgstr "Formátovaný čiarový kód produktu"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_product_product__has_image
@@ -555,12 +570,12 @@ msgstr "Má obrázok"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__hide_lot
 msgid "Hide Lot"
-msgstr ""
+msgstr "Skryť šaržu"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__hide_lot_name
 msgid "Hide Lot Name"
-msgstr ""
+msgstr "Skryť názov šarže"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__id
@@ -574,6 +589,8 @@ msgid ""
 "If the source location must be scanned, then the destination location must "
 "either be scanned after each product or not scanned at all."
 msgstr ""
+"Ak je potrebné skenovať zdrojovú lokáciu, cieľová lokalizácia sa musí buď "
+"skenovať po každom produkte, alebo sa nesmie skenovať vôbec."
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -581,6 +598,8 @@ msgstr ""
 msgid ""
 "If you validate now, the remaining products will be added to a backorder."
 msgstr ""
+"Ak teraz potvrdíte objednávku, zostávajúce produkty budú pridané do "
+"nevybavenej objednávky."
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__image_1920
@@ -592,7 +611,7 @@ msgstr "Obrázok"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
 msgid "Incomplete Transfer"
-msgstr ""
+msgstr "Neúplný presun"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -626,7 +645,7 @@ msgstr ""
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__is_barcode_picking_type
 msgid "Is Barcode Picking Type"
-msgstr ""
+msgstr "Je typ presunu Barcode"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__write_uid
@@ -642,7 +661,7 @@ msgstr "Naposledy upravované"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
 msgid "Leave it"
-msgstr ""
+msgstr "Nechať tak"
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__restrict_scan_product
@@ -663,7 +682,7 @@ msgstr "Miesto"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__location_processed
 msgid "Location Processed"
-msgstr ""
+msgstr "Lokácia spracovaná"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -681,40 +700,41 @@ msgstr "Šarža/sériové"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Mandatory Destination Location"
-msgstr ""
+msgstr "Povinná cieľová lokácia"
 
 #. module: stock_barcode
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_source_location__mandatory
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_tracking_number__mandatory
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
 msgid "Mandatory Scan"
-msgstr ""
+msgstr "Povinné skenovanie"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Mandatory Source Location"
-msgstr ""
+msgstr "Povinná zdrojová lokácia"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_max_time_between_keys_in_ms
 msgid "Max time between each key"
-msgstr ""
+msgstr "Maximálny čas medzi jednotlivými stlačeniami klávesov"
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_res_config_settings__barcode_max_time_between_keys_in_ms
 msgid "Maximum delay between each key in ms (100 ms by default)"
 msgstr ""
+"Maximálne oneskorenie medzi jednotlivými klávesmi v ms (predvolene 100 ms)"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_separator_regex
 msgid "Multiscan Separator"
-msgstr ""
+msgstr "Oddeľovač Multiscan"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__stock_barcode_mute_sound_notifications
 msgid "Mute Barcode application sounds"
-msgstr ""
+msgstr "Vypnúť zvuky aplikácie Čiarový kód"
 
 #. module: stock_barcode
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_put_in_pack__no
@@ -726,36 +746,39 @@ msgstr "Nie"
 #. odoo-python
 #: code:addons/stock_barcode/models/stock_picking.py:0
 msgid "No %(picking_type)s ready for this %(barcode_type)s"
-msgstr ""
+msgstr "Pre %(barcode_type)s neexistuje pripravený %(picking_type)s"
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/models/stock_move_line.py:0
 msgid "No Barcode"
-msgstr ""
+msgstr "Žiadny čiarový kód"
 
 #. module: stock_barcode
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_source_location__no
 msgid "No Scan"
-msgstr ""
+msgstr "Bez skenovania"
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/controllers/stock_barcode.py:0
 msgid "No internal operation type. Please configure one in warehouse settings."
-msgstr ""
+msgstr "Chýba typ internej operácie. Nastavte ho prosím v nastaveniach skladu."
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/controllers/stock_barcode.py:0
 msgid "No picking or location or product corresponding to barcode %(barcode)s"
 msgstr ""
+"Žiadny skladový presun, lokácia ani produkt zodpovedajúci čiarovému kódu %"
+"(barcode)s"
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/controllers/stock_barcode.py:0
 msgid "No picking or product corresponding to barcode %(barcode)s"
 msgstr ""
+"Žiadny skladový presun ani produkt zodpovedajúci čiarovému kódu %(barcode)s"
 
 #. module: stock_barcode
 #. odoo-python
@@ -767,7 +790,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/apply_quant_dialog.xml:0
 msgid "No, I'll count them later"
-msgstr ""
+msgstr "Nie, spočítam ich neskôr"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_nomenclature_id
@@ -780,14 +803,14 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Not the expected scan"
-msgstr ""
+msgstr "Nie je to očakávaný výsledok skenovania"
 
 #. module: stock_barcode
 #. odoo-python
 #: code:addons/stock_barcode/models/stock_picking.py:0
 #: model:ir.actions.act_window,name:stock_barcode.open_picking
 msgid "Open picking form"
-msgstr ""
+msgstr "Otvoriť formulár skladového presunu"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -801,7 +824,7 @@ msgstr "Operácie"
 #. module: stock_barcode
 #: model:ir.model.fields.selection,name:stock_barcode.selection__stock_picking_type__restrict_scan_tracking_number__optional
 msgid "Optional Scan"
-msgstr ""
+msgstr "Voliteľné skenovanie"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_barcode_view_picking_type_form
@@ -824,7 +847,7 @@ msgstr "Balík"
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "Package type %(type)s applied to the package %(package)s"
-msgstr ""
+msgstr "Na balenie %(package)s sa uplatňuje typ obalu %(type)s"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_quant_package
@@ -839,7 +862,7 @@ msgstr "Balenie"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_packaging_uom_qty
 msgid "Packaging Quantity"
-msgstr ""
+msgstr "Zabalené množstvo"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__parent_location_id
@@ -849,17 +872,17 @@ msgstr "Nadradená lokácia"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__parent_location_dest_id
 msgid "Parent Location Dest"
-msgstr ""
+msgstr "Nadradená cieľová lokácia"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_backorder_confirmation__partial_move_count
 msgid "Partial Move Count"
-msgstr ""
+msgstr "Počet čiastočných presunov"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_picking_barcode
 msgid "Picking Details"
-msgstr ""
+msgstr "Podrobnosti o presune"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_picking_type
@@ -871,12 +894,13 @@ msgstr "Typ výberu"
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Please scan destination location for %s before scanning other product"
 msgstr ""
+"Pred naskenovaním iného produktu prosím naskenujte cieľovú lokáciu pre %s"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/main.js:0
 msgid "Please, Scan again!"
-msgstr ""
+msgstr "Prosím, skenujte znova!"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -894,7 +918,7 @@ msgstr "Tlač"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Print Barcodes"
-msgstr ""
+msgstr "Tlač čiarových kódov"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -906,19 +930,19 @@ msgstr "Tlač dodacieho listu"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "Print Inventory"
-msgstr ""
+msgstr "Tlač inventúry"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Print Packages"
-msgstr ""
+msgstr "Tlač balíkov"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Print Picking Operations"
-msgstr ""
+msgstr "Tlač operácii vyskladnenia"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -930,7 +954,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/main.js:0
 msgid "Processing %(processed)s/%(toProcess)s barcodes"
-msgstr ""
+msgstr "Spracovanie čiarových kódov %(processed)s/%(toProcess)s "
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -962,12 +986,12 @@ msgstr "Produktové balenie"
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_reference_code
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_quant__product_reference_code
 msgid "Product Reference Code"
-msgstr ""
+msgstr "Referenčný kód produktu"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__product_stock_quant_ids
 msgid "Product Stock Quant"
-msgstr ""
+msgstr "Skladová množstvá produktu"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_uom_uom
@@ -993,7 +1017,7 @@ msgstr "Vložiť do balenia"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_move_line__qty_done
 msgid "Qty Done"
-msgstr ""
+msgstr "Spracované množ."
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
@@ -1024,25 +1048,25 @@ msgstr "Kvanty"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__barcode_rfid_batch_time
 msgid "RFID Timer"
-msgstr ""
+msgstr "Časovač RFID"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
 msgid "Read Rate"
-msgstr ""
+msgstr "Rýchlosť čítania"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
 msgid "Read Time"
-msgstr ""
+msgstr "Čas čítania"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/main_menu/main_menu.js:0
 msgid "Remove it"
-msgstr ""
+msgstr "Odstrániť"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1099,25 +1123,25 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a lot number"
-msgstr ""
+msgstr "Naskenujte číslo šarže"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a lot number or a packages then the destination location"
-msgstr ""
+msgstr "Naskenujte číslo šarže alebo balíkov a potom miesto určenia"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a lot number then the destination location"
-msgstr ""
+msgstr "Naskenujte číslo šarže a potom miesto určenia"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a package"
-msgstr ""
+msgstr "Naskenujte balík"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1129,13 +1153,13 @@ msgstr "Balík musí naskenovať alebo vložiť do balenia"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a package or the destination location"
-msgstr ""
+msgstr "Naskenujte balík alebo cieľovú lokáciu"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a package, the destination location or another product"
-msgstr ""
+msgstr "Naskenujte balík, cieľovú lokáciu alebo iný produkt"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1148,7 +1172,7 @@ msgstr "Naskenujte produkt"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product before scanning a tracking number"
-msgstr ""
+msgstr "Najprv naskenujte produkt a až potom sledovacie číslo"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1166,25 +1190,25 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product or a package"
-msgstr ""
+msgstr "Naskenujte produkt alebo balík"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product or another package"
-msgstr ""
+msgstr "Naskenujte produkt alebo iný balík"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product or the destination location."
-msgstr ""
+msgstr "Naskenujte produkt alebo cieľovú lokáciu."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product then the destination location"
-msgstr ""
+msgstr "Naskenujte produkt a potom cieľovú lokáciu"
 
 #. module: stock_barcode
 #. odoo-python
@@ -1197,37 +1221,37 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product, a package or the destination location"
-msgstr ""
+msgstr "Naskenujte produkt, balík alebo cieľovú lokáciu"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a product, a package or the destination location."
-msgstr ""
+msgstr "Naskenujte produkt, balík alebo cieľovú lokáciu."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a serial number"
-msgstr ""
+msgstr "Naskenujte sériové číslo"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a serial number or a package"
-msgstr ""
+msgstr "Naskenujte sériové číslo alebo balík"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a serial number or a package then the destination location"
-msgstr ""
+msgstr "Naskenujte sériové číslo alebo balík a potom cieľovú lokáciu"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan a serial number then the destination location"
-msgstr ""
+msgstr "Naskenujte sériové číslo a potom cieľovú lokáciu"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1239,7 +1263,7 @@ msgstr "Načítajte"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan another serial number"
-msgstr ""
+msgstr "Naskenujte ďalšie sériové číslo"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1251,13 +1275,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan more lot numbers"
-msgstr ""
+msgstr "Naskenujte ďalšie čísla šarží"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan more lot numbers or a package"
-msgstr ""
+msgstr "Naskenujte ďalšie čísla šarží alebo balík"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1275,13 +1299,13 @@ msgstr "Naskenujte ďalšie produkty alebo balík"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan more products, or scan a new source location"
-msgstr ""
+msgstr "Naskenujte ďalšie produkty alebo naskenujte novú zdrojovú lokáciu"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/main_menu/main_menu.xml:0
 msgid "Scan or tap"
-msgstr ""
+msgstr "Naskenujte alebo ťuknite"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1311,7 +1335,7 @@ msgstr "Načítajte zdrojovú lokáciu"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scan the source location or a package"
-msgstr ""
+msgstr "Naskenujte zdrojovú lokáciu alebo balík"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1334,7 +1358,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "Scanning package"
-msgstr ""
+msgstr "Skenujem balík"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1352,7 +1376,7 @@ msgstr "Vyraďovacia lokácia"
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.stock_move_line_product_selector
 msgid "Select a Product"
-msgstr ""
+msgstr "Vyberte produkt"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
@@ -1365,16 +1389,18 @@ msgstr "Sériové číslo/Šarža"
 #: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
 msgid "Set the maximum delay between each key in ms (100 ms by default.)"
 msgstr ""
+"Nastavte maximálne oneskorenie medzi jednotlivými klávesmi v ms (predvolené "
+"nastavenie je 100 ms)."
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__show_barcode_nomenclature
 msgid "Show Barcode Nomenclature"
-msgstr ""
+msgstr "Zobraziť nomenklatúru čiarových kódov"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__show_barcode_validation
 msgid "Show Barcode Validation"
-msgstr ""
+msgstr "Zobraziť potvrdenie čiarového kódu"
 
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_res_config_settings__group_barcode_show_quantity_count
@@ -1385,7 +1411,7 @@ msgstr ""
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_picking_type__show_reserved_sns
 msgid "Show reserved lots/SN"
-msgstr ""
+msgstr "Zobraziť rezervované šarže/SČ"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1397,7 +1423,7 @@ msgstr "E-podpis"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/apply_quant_dialog.xml:0
 msgid "Some serials where not counted, set them as missing?"
-msgstr ""
+msgstr "Niektoré sériové čísla neboli započítané, nastaviť ich ako chýbajúce?"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
@@ -1415,7 +1441,7 @@ msgstr "Zdrojové balenie"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/backorder_dialog.xml:0
 msgid "Stay on transfer"
-msgstr ""
+msgstr "Zostať na presune"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_move
@@ -1425,12 +1451,12 @@ msgstr "Pohyb skladu"
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_request_count
 msgid "Stock Request an Inventory Count"
-msgstr ""
+msgstr "Žiadosť o inventarizáciu skladu"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_package_type
 msgid "Stock package type"
-msgstr ""
+msgstr "Typ skladového balenia"
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_stock_picking_type__is_barcode_picking_type
@@ -1450,25 +1476,25 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "The inventory count has been updated"
-msgstr ""
+msgstr "Počet položiek v sklade bol aktualizovaný"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "The product %s should not be picked in this operation."
-msgstr ""
+msgstr "Produkt %s nemal byť v tejto operácii vybraný."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "The scanned location doesn't belong to this operation's destination"
-msgstr ""
+msgstr "Naskenovaná lokácia nepatrí k cieľu tejto operácie"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "The scanned location doesn't belong to this operation's location"
-msgstr ""
+msgstr "Naskenovaná lokácia nepatrí k lokácii tejto operácie"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1480,31 +1506,31 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_model.js:0
 msgid "The scanned serial number %s is already used."
-msgstr ""
+msgstr "Naskenované sériové číslo %s je už použité."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "The transfer has been cancelled"
-msgstr ""
+msgstr "Presun bol zrušený"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "The transfer has been validated"
-msgstr ""
+msgstr "Presun bol potvrdený"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "There is nothing to apply in this page."
-msgstr ""
+msgstr "Na tejto stránke nie je čo uplatniť."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "There is nothing to print in this page."
-msgstr ""
+msgstr "Na tejto stránke nie je nič na vytlačenie."
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1513,31 +1539,33 @@ msgid ""
 "This package contains extra products and extra products are not allowed on "
 "this operation."
 msgstr ""
+"Tento balík obsahuje ďalšie (extra) produkty, ale tie nie sú v rámci tejto "
+"operácie povolené."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 #: code:addons/stock_barcode/static/src/models/barcode_quant_model.js:0
 msgid "This package is already scanned."
-msgstr ""
+msgstr "Tento balík už bol naskenovaný."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "This picking is already done"
-msgstr ""
+msgstr "Tento skladový presun už je dokončený"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "This picking is cancelled"
-msgstr ""
+msgstr "Tento skladový presun je zrušený"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_model.js:0
 msgid "This product doesn't exist."
-msgstr ""
+msgstr "Tento produkt neexistuje."
 
 #. module: stock_barcode
 #: model:ir.model.fields,help:stock_barcode.field_res_config_settings__barcode_separator_regex
@@ -1547,12 +1575,15 @@ msgid ""
 "barcodes when an aggregate barcode (i.e. single barcode consisting of "
 "multiple barcode encodings) is scanned."
 msgstr ""
+"Tento regulárny výraz sa používa v aplikácii Barcode na oddelenie "
+"jednotlivých čiarových kódov pri naskenovaní agregovaného čiarového kódu (t. "
+"j. jediného čiarového kódu, v ktorom je zakódované viac čiarových kódov)."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_model.js:0
 msgid "This serial number is already used."
-msgstr ""
+msgstr "Toto sériové číslo je už použité."
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.res_config_settings_view_form
@@ -1560,18 +1591,20 @@ msgid ""
 "Time before processing a batch. Used to group communication to the server "
 "and improve global performance at the cost of reactivity."
 msgstr ""
+"Čas pred spracovaním dávky. Používa sa na zoskupovanie komunikácie so "
+"serverom a zlepšenie celkového výkonu na úkor rýchlosti reakcie."
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "To use packages, enable 'Packages' in the settings"
-msgstr ""
+msgstr "Ak chcete používať balíky, v nastaveniach aktivujte možnosť „Balíky“"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
 msgid "Total Reads"
-msgstr ""
+msgstr "Celkom načítané"
 
 #. module: stock_barcode
 #: model:ir.model,name:stock_barcode.model_stock_picking
@@ -1582,7 +1615,7 @@ msgstr "Prevod"
 #. module: stock_barcode
 #: model:ir.model.fields,field_description:stock_barcode.field_stock_barcode_cancel_operation__picking_name
 msgid "Transfer Name"
-msgstr ""
+msgstr "Názov presunu"
 
 #. module: stock_barcode
 #: model_terms:ir.actions.act_window,help:stock_barcode.stock_picking_action_kanban
@@ -1593,7 +1626,7 @@ msgstr "Presuny umožňujú presúvať produkty z jedného miesta na druhé."
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/components/count_screen_rfid.xml:0
 msgid "Unique Tags"
-msgstr ""
+msgstr "Jedinečné tagy"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.scrap_product_selector
@@ -1658,6 +1691,9 @@ msgid ""
 "(locationName)s but this product isn't reserved in this location.\n"
 "Scan the current location to confirm that."
 msgstr ""
+"Chystáte sa vziať produkt %(productName)s z lokácie %(locationName)s, ale "
+"tento produkt nie na tomto mieste rezervovaný.\n"
+"Pre potvrdenie naskenujte aktuálnu lokáciu."
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1680,12 +1716,13 @@ msgstr "Očakáva sa, že načítate %s alebo inú zdrojovú lokáciu"
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "You can't apply a package type. First, scan product or select a line"
 msgstr ""
+"Nemôžete použiť typ balíka. Najskôr naskenujte produkt alebo vyberte riadok"
 
 #. module: stock_barcode
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "You can't register scrap at this state of the operation"
-msgstr ""
+msgstr "V tomto stave operácie nemôžete zaregistrovať vyradené položky"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1693,12 +1730,12 @@ msgstr ""
 msgid ""
 "You have already scanned %s items of this package. Do you want to scan the "
 "whole package?"
-msgstr ""
+msgstr "Už ste skenovali %s položiek tohto balíka. Chcete skenovať celý balík?"
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
 msgid "You have processed less products than the initial demand:"
-msgstr ""
+msgstr "Spracovali ste menej produktov, ako bola pôvodná požiadavka:"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1710,7 +1747,7 @@ msgstr "Balík musíte naskenovať alebo vložiť do balenia"
 #. odoo-javascript
 #: code:addons/stock_barcode/static/src/models/barcode_picking_model.js:0
 msgid "You must scan a product"
-msgstr ""
+msgstr "Musíte naskenovať produkt"
 
 #. module: stock_barcode
 #. odoo-javascript
@@ -1769,12 +1806,12 @@ msgstr "produkt"
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
 msgid "products were not processed at all."
-msgstr ""
+msgstr "produkty neboli vôbec spracované."
 
 #. module: stock_barcode
 #: model_terms:ir.ui.view,arch_db:stock_barcode.view_backorder_confirmation
 msgid "products were partially processed."
-msgstr ""
+msgstr "produkty boli čiastočne spracované."
 
 #. module: stock_barcode
 #. odoo-javascript

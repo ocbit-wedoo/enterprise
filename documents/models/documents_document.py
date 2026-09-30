@@ -839,7 +839,7 @@ class Document(models.Model):
         if len(self.ids) > 1 and notify:
             raise UserError(_("Impossible to invite partners on multiple documents at once."))
 
-        if self.shortcut_document_id:
+        if all(bool(document.shortcut_document_id) for document in self):
             raise UserError(_("You can not update the access of a shortcut, update its target instead."))
 
         # Check inputs as we are going to bypass the ORM in the private method(s)
@@ -1115,11 +1115,15 @@ class Document(models.Model):
     def get_formview_action(self, access_uid=None):
         """Returns the action used to open a many2one field into the documents view."""
         action = self.env["ir.actions.act_window"]._for_xml_id("documents.document_action")
+        default_folder_id = (
+            "TRASH" if not self.active
+            else self.id if self.type == "folder" else self.folder_id.id
+        )
         context = {
             **self.env.context,
             "no_documents_unique_folder_id": True,
-            "searchpanel_default_folder_id": self.id if self.type == "folder" else self.folder_id.id,
-            "documents_init_document_id": self.id if self.type != "folder" else False,
+            "searchpanel_default_folder_id": default_folder_id,
+            "documents_init_document_id": self.id if self.type != "folder" or not self.active else False,
             "documents_show_default_breadcrumb": True,
         }
         action.update({"context": context, "help": _("Upload a file or drag it here")})
@@ -1986,7 +1990,7 @@ class Document(models.Model):
                 raise AccessError(_("You are not allowed to move (some of) these documents."))
 
         if (to_active := vals.get('active')) is not None:
-            if self.env.user.share:
+            if self.env.user.share and not self.env.su:
                 raise UserError(_("You are not allowed to (un)archive documents."))
             if not to_active:
                 self.check_access('unlink')  # As archived gc leads to unlink after `deletion_delay` days.
@@ -2100,6 +2104,10 @@ class Document(models.Model):
                 documents_to_sync._update_company(new_parent_folder.company_id.id)
 
         return write_result
+
+    @api.onchange("attachment_id")
+    def _onchange_attachment_id(self):
+        self.attachment_id.check('read')
 
     @api.model
     def _pdf_split(self, new_files=None, open_files=None, vals=None):

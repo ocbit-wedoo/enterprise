@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
+"PO-Revision-Date: 2026-09-16 05:32+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "stock_barcode_picking_batch/ja/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: stock_barcode_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_move_line_product_selector_inherit
@@ -52,17 +52,17 @@ msgstr "バーコードバッチピッキング顧客アクション"
 #: model:ir.model,name:stock_barcode_picking_batch.model_stock_picking_batch
 #: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_barcode_cancel_operation__batch_id
 msgid "Batch Transfer"
-msgstr "一括転送"
+msgstr "一括移動"
 
 #. module: stock_barcode_picking_batch
 #: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_barcode_cancel_operation__batch_name
 msgid "Batch Transfer Name"
-msgstr "バッチ転送名"
+msgstr "バッチ移動名"
 
 #. module: stock_barcode_picking_batch
 #: model:ir.actions.act_window,name:stock_barcode_picking_batch.stock_barcode_batch_picking_action_kanban
 msgid "Batch Transfers"
-msgstr "バッチ転送"
+msgstr "バッチ移動"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
@@ -74,7 +74,7 @@ msgstr "一括処理"
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "Cancel Batch Transfer"
-msgstr "バッチ転送を取消"
+msgstr "バッチ移動を取消"
 
 #. module: stock_barcode_picking_batch
 #: model:ir.model,name:stock_barcode_picking_batch.model_stock_barcode_cancel_operation
@@ -85,7 +85,7 @@ msgstr "オペレーションを取消"
 #. odoo-python
 #: code:addons/stock_barcode_picking_batch/models/stock_picking_batch.py:0
 msgid "Cancel this batch transfer?"
-msgstr "このバッチ転送を取消しますか？"
+msgstr "このバッチ移動を取消しますか？"
 
 #. module: stock_barcode_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
@@ -129,13 +129,13 @@ msgstr ""
 #. module: stock_barcode_picking_batch
 #: model_terms:ir.actions.act_window,help:stock_barcode_picking_batch.stock_barcode_batch_picking_action_kanban
 msgid "No batch transfer found"
-msgstr "一括転送が見つかりません"
+msgstr "一括移動が見つかりません"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "No ready transfers found"
-msgstr "準備完了した転送が見つかりません"
+msgstr "準備完了した移動が見つかりません"
 
 #. module: stock_barcode_picking_batch
 #. odoo-python
@@ -152,7 +152,7 @@ msgstr "ピッキングタイプ"
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "Print Batch Transfer"
-msgstr "バッチ転送を印刷"
+msgstr "バッチ移動を印刷"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
@@ -163,7 +163,7 @@ msgstr "プロダクトラベルを印刷"
 #. module: stock_barcode_picking_batch
 #: model:ir.model,name:stock_barcode_picking_batch.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr "プロダクトの移動(在庫移動ライン)"
+msgstr "プロダクト移動(在庫移動明細行)"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
@@ -175,19 +175,19 @@ msgstr "梱包%sをスキャン"
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "Select an operation type for batch transfer"
-msgstr "一括転送のオペレーションタイプを選択"
+msgstr "一括移動のオペレーションタイプを選択"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "Select transfers for batch transfer"
-msgstr "一括転送の転送を選択"
+msgstr "一括移動の移動を選択"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "The Batch Transfer has been validated"
-msgstr "一括転送が検証されました"
+msgstr "一括移動が検証されました"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
@@ -206,7 +206,7 @@ msgid ""
 "            help the timing management of operations (tasks to be done at "
 "1pm)."
 msgstr ""
-"バッチ転送の目的は、効率を上げるために、\n"
+"バッチ移動の目的は、効率を上げるために、\n"
 "一緒に行う（必要がある）可能性のある操作をグループ化することです。\n"
 "また、仕事の割り当て（1人＝1バッチ）や、オペレーションのタイミング\n"
 "管理（午後1時に行うべきタスク）にも役立ちます。"
@@ -232,13 +232,13 @@ msgstr "このバッチはすでに完了済です"
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "This batch transfer is already done"
-msgstr "この一括転送は処理済みです"
+msgstr "この一括移動は処理済みです"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/models/barcode_picking_batch_model.js:0
 msgid "This batch transfer is cancelled"
-msgstr "バッチ転送がキャンセルされました"
+msgstr "バッチ移動がキャンセルされました"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
@@ -246,7 +246,7 @@ msgstr "バッチ転送がキャンセルされました"
 msgid ""
 "This batch transfer is still draft, it must be confirmed before being "
 "processed"
-msgstr "この一括転送はまだドラフトです。処理される前に確認して下さい。"
+msgstr "この一括移動はまだ下書きです。処理される前に確認して下さい。"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
@@ -255,21 +255,21 @@ msgid ""
 "This batch transfer is still in draft, scans are disabled until the batch is "
 "confirmed"
 msgstr ""
-"このバッチ転送はまだドラフト状態のため、バッチが確認されるまでスキャンは無効"
-"です"
+"このバッチ移動はまだ下書き状態のため、バッチが確認されるまでスキャンは無効で"
+"す"
 
 #. module: stock_barcode_picking_batch
 #: model:ir.model,name:stock_barcode_picking_batch.model_stock_picking
 #: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_move_line__picking_id
 #: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_move_line_product_selector_inherit
 msgid "Transfer"
-msgstr "転送"
+msgstr "移動"
 
 #. module: stock_barcode_picking_batch
 #. odoo-javascript
 #: code:addons/stock_barcode_picking_batch/static/src/kanban/stock_barcode_kanban_renderer.xml:0
 msgid "Transfers"
-msgstr "転送"
+msgstr "移動"
 
 #. module: stock_barcode_picking_batch
 #: model:ir.model.fields,field_description:stock_barcode_picking_batch.field_stock_picking_batch__picking_type_code
@@ -279,7 +279,7 @@ msgstr "処理タイプ"
 #. module: stock_barcode_picking_batch
 #: model_terms:ir.ui.view,arch_db:stock_barcode_picking_batch.stock_barcode_batch_picking_view_info
 msgid "Unbatch Transfer"
-msgstr "転送のバッチ解除"
+msgstr "移動のバッチ解除"
 
 #. module: stock_barcode_picking_batch
 #. odoo-python
@@ -289,6 +289,6 @@ msgid ""
 "can use the info button on the top right corner of your screen to remove the "
 "transfer in question from the batch."
 msgstr ""
-"数量が引当されていない、または完了もされていない場合、転送を検証することはで"
-"きません。画面右上の情報ボタンを使って、問題となっている転送をバッチから削除"
+"数量が引当されていない、または完了もされていない場合、移動を検証することはで"
+"きません。画面右上の情報ボタンを使って、問題となっている移動をバッチから削除"
 "することができます。"

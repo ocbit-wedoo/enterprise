@@ -522,6 +522,7 @@ class Sign(http.Controller):
                 ('partner_id', '=', request.env.user.partner_id.id),
                 ('state', '=', 'sent'),
                 ('sign_request_id.state', '=', 'sent'),
+                ('is_mail_sent', '=', True),
             ],
             fields=['access_token', 'sign_request_id', 'create_uid', 'create_date'],
             order='create_date DESC',

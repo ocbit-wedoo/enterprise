@@ -1,6 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 from odoo import fields, models
-from odoo.tools import SQL
+from odoo.tools import SQL, Query
 
 
 class BudgetReport(models.Model):
@@ -22,6 +22,18 @@ class BudgetReport(models.Model):
     achieved = fields.Float('Achieved', readonly=True)
     budget_analytic_id = fields.Many2one('budget.analytic', 'Budget Analytic', readonly=True)
     budget_line_id = fields.Many2one('budget.line', 'Budget Line', readonly=True)
+
+    def _shape_join(self, model1, alias1, model2, alias2, shape):
+        plan_fnames = self._get_plan_fnames()
+        return SQL(' AND ').join([
+            SQL(
+                "%(model1)s = %(model2)s",
+                model1=self.env[model1]._field_to_sql(alias1, fname),
+                model2=self.env[model2]._field_to_sql(alias2, fname),
+            )
+            for fname, is_set in zip(plan_fnames, shape)
+            if is_set
+        ]) or SQL('TRUE')
 
     def _get_bl_query(self, plan_fnames):
         budget_line_ids = self.env.context.get('budget_report_budget_line_ids')
@@ -50,6 +62,12 @@ class BudgetReport(models.Model):
         )
 
     def _get_aal_query(self, plan_fnames):
+        def get_query(bl_join, bl_condition):
+            query = Query(self.env, alias='aal', table=SQL.identifier('account_analytic_line'))
+            query.add_join(bl_join, 'bl', 'budget_line', bl_condition)
+            query.add_join('LEFT JOIN', 'ba', 'budget_analytic', SQL("ba.id = bl.budget_analytic_id"))
+            return query
+
         budget_line_ids = self.env.context.get('budget_report_budget_line_ids')
 
         # For performance reasons, we split the query into 3 parts and then UNION ALL the results
@@ -57,68 +75,100 @@ class BudgetReport(models.Model):
         # Q1 - analytic lines with no matching budget line at all.
         # Q2 - analytic lines matched to a null-company budget line.
         # Q3 - analytic lines matched to a company-specific budget line.
-        company_budget_conditions = [
-            (SQL(''), SQL('AND bl.id IS NULL')),
-            (SQL('bl.company_id IS NULL AND'), SQL('AND bl.id IS NOT NULL')),
-            (SQL('aal.company_id = bl.company_id AND'), SQL('AND bl.id IS NOT NULL')),
+
+        select_columns = [
+            "CONCAT('aal', aal.id::TEXT) AS id",
+            "bl.budget_analytic_id AS budget_analytic_id",
+            "bl.id AS budget_line_id",
+            "'account.analytic.line' AS res_model",
+            "aal.id AS res_id",
+            "aal.date AS date",
+            "aal.name AS description",
+            "aal.company_id AS company_id",
+            "aal.user_id AS user_id",
+            "'achieved' AS line_type",
+            "0 AS budget",
+            "aal.amount * CASE WHEN ba.budget_type = 'expense' THEN -1 ELSE 1 END AS committed",
+            "aal.amount * CASE WHEN ba.budget_type = 'expense' THEN -1 ELSE 1 END AS achieved",
+            *(self.env['account.analytic.line']._field_to_sql('aal', fname) for fname in plan_fnames),
         ]
 
-        queries = []
-        for company_condition, budget_line_condition in company_budget_conditions:
-            queries.append(SQL(
+        def where_account_type(query):
+            query.add_join('LEFT JOIN', 'aa', 'account_account', SQL("aa.id = aal.general_account_id"))
+            return SQL(
                 """
-            SELECT CONCAT('aal', aal.id::TEXT) AS id,
-                   bl.budget_analytic_id AS budget_analytic_id,
-                   bl.id AS budget_line_id,
-                   'account.analytic.line' AS res_model,
-                   aal.id AS res_id,
-                   aal.date AS date,
-                   aal.name AS description,
-                   aal.company_id AS company_id,
-                   aal.user_id AS user_id,
-                   'achieved' AS line_type,
-                   0 AS budget,
-                   aal.amount * CASE WHEN ba.budget_type = 'expense' THEN -1 ELSE 1 END AS committed,
-                   aal.amount * CASE WHEN ba.budget_type = 'expense' THEN -1 ELSE 1 END AS achieved,
-                   %(analytic_fields)s
-              FROM account_analytic_line aal
-         LEFT JOIN budget_line bl ON %(company_condition)s
-                                 aal.date >= bl.date_from
-                                 AND aal.date <= bl.date_to
-                                 AND %(condition)s
-         LEFT JOIN account_account aa ON aa.id = aal.general_account_id
-         LEFT JOIN budget_analytic ba ON ba.id = bl.budget_analytic_id
-             WHERE CASE
-                       WHEN ba.budget_type = 'expense' THEN (
-                           SPLIT_PART(aa.account_type, '_', 1) = 'expense'
-                           OR aa.account_type IN ('asset_current', 'asset_non_current', 'asset_fixed')
-                           OR (aa.account_type IS NULL AND aal.category NOT IN ('invoice', 'other'))
-                           OR (aa.account_type IS NULL AND aal.category = 'other' AND aal.amount < 0)
-                       )
-                       WHEN ba.budget_type = 'revenue' THEN (
-                           SPLIT_PART(aa.account_type, '_', 1) = 'income'
-                           OR (aa.account_type IS NULL AND aal.category = 'other' AND aal.amount > 0)
-                       )
-                       ELSE TRUE
-                   END
-                   AND (
-                       SPLIT_PART(aa.account_type, '_', 1) IN ('income', 'expense')
-                       OR aa.account_type IN ('asset_current', 'asset_non_current', 'asset_fixed')
-                       OR aa.account_type IS NULL
-                   )
-                   %(budget_line_condition)s
-                   %(budget_line_ids_condition)s
-                """,
-                company_condition=company_condition,
-                analytic_fields=SQL(', ').join(self.env['account.analytic.line']._field_to_sql('aal', fname) for fname in plan_fnames),
-                condition=SQL(' AND ').join(SQL(
-                    "(%(bl)s IS NULL OR %(aal)s = %(bl)s)",
-                    bl=self.env['budget.line']._field_to_sql('bl', fname),
-                    aal=self.env['budget.line']._field_to_sql('aal', fname),
-                ) for fname in plan_fnames),
-                budget_line_condition=budget_line_condition,
-                budget_line_ids_condition=SQL('AND bl.id = ANY(%(budget_line_ids)s)', budget_line_ids=budget_line_ids) if budget_line_ids else SQL(''),
-            ))
+                (
+                    SPLIT_PART(aa.account_type, '_', 1) IN ('income', 'expense')
+                    OR aa.account_type IN ('asset_current', 'asset_non_current', 'asset_fixed')
+                    OR aa.account_type IS NULL
+                )
+                """
+            )
+
+        bl_domain = [('id', 'in', budget_line_ids)] if budget_line_ids else []
+        budget_lines = self.env['budget.line'].sudo().search(bl_domain)
+
+        # Group budget lines by the shape of their plan fields to optimize the query
+        # For each budget line, we only care which fields are set, not their specific values.
+        shape2budget_lines = budget_lines._by_shape()
+
+        queries = []
+
+        # Q1 - analytic lines with no matching budget line at all.
+        if not budget_line_ids:
+            query = get_query('LEFT JOIN', SQL("FALSE"))
+            # filter it so that we only get the aals that have no bl
+            if shape2budget_lines:
+                query.add_where(SQL(
+                    "NOT EXISTS (SELECT 1 FROM (%(union)s) matched_aal WHERE matched_aal.id = aal.id)",
+                    union=SQL(' UNION ALL ').join([
+                        get_query('JOIN', SQL(
+                            """
+                                aal.date >= bl.date_from
+                                AND aal.date <= bl.date_to
+                                AND bl.id = ANY(%(ids)s)
+                                AND %(shape_join)s
+                            """,
+                            ids=line_ids.ids,
+                            shape_join=self._shape_join('account.analytic.line', 'aal', 'budget.line', 'bl', shape),
+                        )).select("DISTINCT aal.id")
+                        for shape, line_ids in shape2budget_lines.items()
+                    ])
+                ))
+            query.add_where(where_account_type(query))
+            queries.append(query.select(*select_columns))
+
+        # Q2 - analytic lines matched to a null-company budget line.
+        # Q3 - analytic lines matched to a company-specific budget line.
+        company_conditions = [
+            SQL('bl.company_id IS NULL'),
+            SQL('aal.company_id = bl.company_id'),
+        ]
+
+        for company_condition in company_conditions:
+            for shape, line_ids in shape2budget_lines.items():
+                query = get_query('JOIN', SQL(
+                    """
+                        %(company_condition)s
+                        AND aal.date >= bl.date_from
+                        AND aal.date <= bl.date_to
+                        AND bl.id = ANY(%(ids)s)
+                        AND %(shape_join)s
+                    """,
+                    company_condition=company_condition,
+                    ids=line_ids.ids,
+                    shape_join=self._shape_join('account.analytic.line', 'aal', 'budget.line', 'bl', shape),
+                ))
+                query.add_where(SQL(
+                    """CASE
+                        WHEN ba.budget_type = 'expense' THEN ((%(profitability)s) = 'loss')
+                        WHEN ba.budget_type = 'revenue' THEN ((%(profitability)s) = 'revenue')
+                        ELSE TRUE
+                    END""",
+                    profitability=self.env['account.analytic.line']._field_to_sql('aal', 'analytic_profitability', query),
+                ))
+                query.add_where(where_account_type(query))
+                queries.append(query.select(*select_columns))
 
         return SQL(' UNION ALL ').join(queries)
 
@@ -148,58 +198,77 @@ class BudgetReport(models.Model):
              GROUP BY pol.id
         """)
 
+        def get_query(bl_join, bl_condition):
+            query = Query(self.env, alias='pol', table=SQL.identifier('purchase_order_line'))
+            query.add_join('LEFT JOIN', 'qty_invoiced_table', SQL("(%s)", qty_invoiced_table), SQL("qty_invoiced_table.pol_id = pol.id"))
+            query.add_join('JOIN', 'po', 'purchase_order', SQL("pol.order_id = po.id AND po.state in ('purchase', 'done')"))
+            query.add_join('JOIN', 'a', SQL(
+                """
+                LATERAL (
+                    SELECT rate, %(analytic_columns)s
+                      FROM JSONB_TO_RECORDSET(pol.analytic_json) AS x(rate FLOAT, %(field_cast)s)
+                )
+                """,
+                analytic_columns=SQL(', ').join(SQL.identifier(fname) for fname in plan_fnames),
+                field_cast=SQL(', ').join(SQL('%s FLOAT', SQL.identifier(fname)) for fname in plan_fnames),
+            ), SQL("TRUE"))
+            query.add_join(bl_join, 'bl', 'budget_line', bl_condition)
+            query.add_join('LEFT JOIN', 'ba', 'budget_analytic', SQL("ba.id = bl.budget_analytic_id"))
+            return query
+
+        select_columns = [
+            "(pol.id::TEXT || '-' || ROW_NUMBER() OVER (PARTITION BY pol.id ORDER BY pol.id)) AS id",
+            "bl.budget_analytic_id AS budget_analytic_id",
+            "bl.id AS budget_line_id",
+            "'purchase.order' AS res_model",
+            "po.id AS res_id",
+            "po.date_order AS date",
+            "pol.name AS description",
+            "pol.company_id AS company_id",
+            "po.user_id AS user_id",
+            "'committed' AS line_type",
+            "0 AS budget",
+            """
+                COALESCE(pol.price_subtotal::FLOAT, pol.price_unit::FLOAT * pol.product_qty)
+                     / COALESCE(NULLIF(pol.product_qty, 0), 1)
+                     * (pol.product_qty - COALESCE(qty_invoiced_table.qty_invoiced, 0))
+                     / po.currency_rate
+                     * (a.rate)
+                     * CASE WHEN ba.budget_type = 'both' THEN -1 ELSE 1 END AS committed
+            """,
+            "0 AS achieved",
+            *(self.env['account.analytic.line']._field_to_sql('a', fname) for fname in plan_fnames),
+        ]
+
+        bl_domain = [('id', 'in', budget_line_ids)] if budget_line_ids else []
+        budget_lines = self.env['budget.line'].sudo().search(bl_domain)
+        shape2budget_lines = budget_lines._by_shape()
+
+        # Q1 - PO lines matched to a null-company budget line.
+        # Q2 - PO lines matched to a company-specific budget line.
         company_conditions = [
-            SQL('po.company_id = bl.company_id'),
             SQL('bl.company_id IS NULL'),
+            SQL('po.company_id = bl.company_id'),
         ]
 
         queries = []
         for company_condition in company_conditions:
-            queries.append(SQL(
-                """
-            SELECT (pol.id::TEXT || '-' || ROW_NUMBER() OVER (PARTITION BY pol.id ORDER BY pol.id)) AS id,
-                   bl.budget_analytic_id AS budget_analytic_id,
-                   bl.id AS budget_line_id,
-                   'purchase.order' AS res_model,
-                   po.id AS res_id,
-                   po.date_order AS date,
-                   pol.name AS description,
-                   pol.company_id AS company_id,
-                   po.user_id AS user_id,
-                   'committed' AS line_type,
-                   0 AS budget,
-                   COALESCE(pol.price_subtotal::FLOAT, pol.price_unit::FLOAT * pol.product_qty)
-                        / COALESCE(NULLIF(pol.product_qty, 0), 1)
-                        * (pol.product_qty - COALESCE(qty_invoiced_table.qty_invoiced, 0))
-                        / po.currency_rate
-                        * (a.rate)
-                        * CASE WHEN ba.budget_type = 'both' THEN -1 ELSE 1 END AS committed,
-                   0 AS achieved,
-                   %(analytic_fields)s
-              FROM purchase_order_line pol
-         LEFT JOIN (%(qty_invoiced_table)s) qty_invoiced_table ON qty_invoiced_table.pol_id = pol.id
-              JOIN purchase_order po ON pol.order_id = po.id AND po.state in ('purchase', 'done')
-        CROSS JOIN JSONB_TO_RECORDSET(pol.analytic_json) AS a(rate FLOAT, %(field_cast)s)
-         LEFT JOIN budget_line bl ON %(company_condition)s
-                                 AND po.date_order >= bl.date_from
-                                 AND date_trunc('day', po.date_order) <= bl.date_to
-                                 AND %(condition)s
-                                 %(budget_line_ids_condition)s
-         LEFT JOIN budget_analytic ba ON ba.id = bl.budget_analytic_id
-             WHERE pol.product_qty > COALESCE(qty_invoiced_table.qty_invoiced, 0)
-               AND ba.budget_type != 'revenue'
-                """,
-                company_condition=company_condition,
-                analytic_fields=SQL(', ').join(self.env['account.analytic.line']._field_to_sql('a', fname) for fname in plan_fnames),
-                qty_invoiced_table=qty_invoiced_table,
-                field_cast=SQL(', ').join(SQL('%s FLOAT', SQL.identifier(fname)) for fname in plan_fnames),
-                condition=SQL(' AND ').join(SQL(
-                    "(%(bl)s IS NULL OR %(a)s = %(bl)s)",
-                    bl=self.env['budget.line']._field_to_sql('bl', fname),
-                    a=self.env['budget.line']._field_to_sql('a', fname),
-                ) for fname in plan_fnames),
-                budget_line_ids_condition=SQL('AND bl.id = ANY(%(budget_line_ids)s)', budget_line_ids=budget_line_ids) if budget_line_ids else SQL(''),
-            ))
+            for shape, line_ids in shape2budget_lines.items():
+                query = get_query('JOIN', SQL(
+                    """
+                        %(company_condition)s
+                        AND po.date_order >= bl.date_from
+                        AND date_trunc('day', po.date_order) <= bl.date_to
+                        AND bl.id = ANY(%(ids)s)
+                        AND %(shape_join)s
+                    """,
+                    company_condition=company_condition,
+                    ids=line_ids.ids,
+                    shape_join=self._shape_join('budget.line', 'a', 'budget.line', 'bl', shape),
+                ))
+                query.add_where(SQL("pol.product_qty > COALESCE(qty_invoiced_table.qty_invoiced, 0)"))
+                query.add_where(SQL("ba.budget_type != 'revenue'"))
+                queries.append(query.select(*select_columns))
 
         return SQL(' UNION ALL ').join(queries)
 
@@ -216,12 +285,11 @@ class BudgetReport(models.Model):
             for plan in project_plan | other_plans
             if (fname := plan._column_name()) in self
         ]
-        return SQL(
-            "%s UNION ALL %s UNION ALL %s",
+        return SQL(" UNION ALL ").join(filter(None, (
             self._get_bl_query(plan_fnames),
             self._get_aal_query(plan_fnames),
             self._get_pol_query(plan_fnames),
-        )
+        )))
 
     def action_open_reference(self):
         self.ensure_one()

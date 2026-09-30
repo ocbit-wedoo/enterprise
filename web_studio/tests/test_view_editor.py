@@ -2,6 +2,7 @@ import json
 
 import odoo
 from odoo import api
+from odoo.exceptions import ValidationError
 from odoo.tools import DotDict
 from odoo.http import _request_stack
 from odoo.tests.common import TransactionCase
@@ -518,6 +519,49 @@ class TestEditView(TestStudioController):
             </field>
         </form>"""
         self.assertViewArchEqual(base_view.get_combined_arch(), expected_arch)
+
+    def test_edit_view_unlocatable_target_raises_validation_error(self):
+        """ The client may send an operation whose target xpath doesn't match
+        anything in the actual stored arch.
+
+        `normalize()` must not let the resulting ValueError escape as a raw,
+        unhandled exception: it has to be a ValidationError, like any other
+        unlocatable studio spec, so that `edit_view()` can fall back to the
+        un-optimized arch instead of crashing with a traceback.
+        """
+        base_view = self.env['ir.ui.view'].create({
+            'name': 'TestForm',
+            'type': 'form',
+            'model': 'res.partner',
+            'arch': """
+                <form>
+                    <div>
+                        <field name="display_name"/>
+                    </div>
+                </form>""",
+        })
+
+        # There is only one <field/> inside the <div/>: this targets a
+        # second one that doesn't exist, the same situation as a client
+        # xpath computed against a field the server doesn't statically have.
+        operation = {
+            'type': 'attributes',
+            'target': {
+                'tag': 'field',
+                'attrs': {'name': 'display_name'},
+                'xpath_info': [
+                    {'tag': 'form', 'indice': 1},
+                    {'tag': 'div', 'indice': 1},
+                    {'tag': 'field', 'indice': 2},
+                ],
+            },
+            'position': 'attributes',
+            'node': {'tag': 'field', 'attrs': {'name': 'display_name'}},
+            'new_attrs': {'invisible': 'False'},
+        }
+
+        with self.assertRaises(ValidationError):
+            self.edit_view(base_view, operations=[operation])
 
     def test_edit_attribute_studio_groups_tree_column_invisible(self):
         test_group = self.env['res.groups'].create({'name': 'test_group'})

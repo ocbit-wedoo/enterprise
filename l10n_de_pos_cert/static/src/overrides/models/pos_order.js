@@ -10,8 +10,8 @@ patch(PosOrder.prototype, {
         if (this.isCountryGermanyAndFiskaly()) {
             this.uiState = {
                 ...this.uiState,
-                tx_revision: this.uiState.tx_revision || 1,
                 transactionState: this.uiState.transactionState || "inactive",
+                receiptState: this.uiState.receiptState || "inactive",
             };
             this.fiskalyUuid = this.fiskalyUuid || "";
 
@@ -44,6 +44,7 @@ patch(PosOrder.prototype, {
     isCountryGermany() {
         return this.config.is_company_country_germany;
     },
+    // this are useful for restaurants only and will be moved
     isTransactionInactive() {
         return this.uiState.transactionState === "inactive";
     },
@@ -58,6 +59,20 @@ patch(PosOrder.prototype, {
     },
     isTransactionFinished() {
         return this.uiState.transactionState === "finished" || this.l10n_de_fiskaly_time_start;
+    },
+    // Receipt Type
+    get isReceiptInactive() {
+        return this.uiState.receiptState === "inactive";
+    },
+    receiptStarted() {
+        this.uiState.receiptState = "started";
+    },
+    get isReceiptStarted() {
+        return this.uiState.receiptState === "started";
+    },
+    // When we validate the order, we need to move it to finished; otherwise, syncAllOrders will treat it as a blank order and start a new blank order.
+    receiptFinished() {
+        this.uiState.receiptState = "finished";
     },
     // @Override
     export_for_printing(baseUrl, headerData) {
@@ -95,12 +110,6 @@ patch(PosOrder.prototype, {
                     client_serial_number: {
                         name: "Client Serial No.",
                         value: this.l10n_de_fiskaly_client_serial_number,
-                    },
-                    erstBestellung: {
-                        name: "TSE-Erstbestellung",
-                        value: this.get_orderlines().length
-                            ? this.get_orderlines()[0].get_product().display_name
-                            : "Deposit",
                     },
                 };
             } else {

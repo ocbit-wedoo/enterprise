@@ -10,7 +10,7 @@ class HrContract(models.Model):
             return [('id', 'in', self._get_allowed_contract_type_ids())]
         return []
 
-    contract_type_id = fields.Many2one('hr.contract.type', domain=lambda self: self._get_contract_type_domain(), default=lambda self: self.env.ref("l10n_ch_hr_payroll.l10n_ch_contract_type_indefiniteSalaryMth").id)
+    contract_type_id = fields.Many2one('hr.contract.type', domain=lambda self: self._get_contract_type_domain(), default=lambda self: self.env.ref("l10n_ch_hr_payroll.l10n_ch_contract_type_indefiniteSalaryMth").id if self.env.company.country_id.code == 'CH' else False)
     wage_type = fields.Selection(selection_add=[("NoTimeConstraint", "No Time Constraint")],
                                  ondelete={"NoTimeConstraint": 'cascade'}, default="monthly")
     l10n_ch_laa_group = fields.Many2one("l10n.ch.accident.group", string="LAA Code", domain='[("insurance_id.company_id", "=", company_id)]')

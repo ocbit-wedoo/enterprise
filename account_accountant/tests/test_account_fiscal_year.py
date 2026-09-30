@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo.addons.account.tests.common import AccountTestInvoicingCommon
+from odoo.exceptions import ValidationError
 from odoo.tests import tagged
 from odoo import fields
 
@@ -126,3 +127,53 @@ class TestFiscalPosition(AccountTestInvoicingCommon):
             '2017-06-01',
             '2017-09-30',
         )
+
+    def test_fiscal_year_overlap_constrain(self):
+        company = self.env.company
+
+        self.env['account.fiscal.year'].create({
+            'name': 'FY 2026',
+            'date_from': '2026-01-01',
+            'date_to': '2026-12-31',
+            'company_id': company.id
+        })
+
+        with self.assertRaises(ValidationError):
+            self.env['account.fiscal.year'].create({
+                'name': 'FY 2026 (invalid dates)',
+                'date_from': '2026-01-01',
+                'date_to': '2025-12-31',
+                'company_id': company.id
+            })
+
+        with self.assertRaises(ValidationError):
+            self.env['account.fiscal.year'].create({
+                'name': 'FY 2026 (start overlap)',
+                'date_from': '2026-05-01',
+                'date_to': '2027-05-01',
+                'company_id': company.id
+            })
+
+        with self.assertRaises(ValidationError):
+            self.env['account.fiscal.year'].create({
+                'name': 'FY 2026 (end overlap)',
+                'date_from': '2025-05-01',
+                'date_to': '2026-05-01',
+                'company_id': company.id
+            })
+
+        with self.assertRaises(ValidationError):
+            self.env['account.fiscal.year'].create({
+                'name': 'FY 2026 (smaller year)',
+                'date_from': '2026-05-01',
+                'date_to': '2026-08-01',
+                'company_id': company.id
+            })
+
+        with self.assertRaises(ValidationError):
+            self.env['account.fiscal.year'].create({
+                'name': 'FY 2026 (larger year)',
+                'date_from': '2025-05-01',
+                'date_to': '2027-08-01',
+                'company_id': company.id
+            })

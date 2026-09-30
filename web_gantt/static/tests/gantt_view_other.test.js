@@ -34,6 +34,8 @@ import { WebClient } from "@web/webclient/webclient";
 import { GanttController } from "@web_gantt/gantt_controller";
 import { GanttRenderer } from "@web_gantt/gantt_renderer";
 import { GanttRowProgressBar } from "@web_gantt/gantt_row_progress_bar";
+import { localization } from "@web/core/l10n/localization";
+const { DateTime } = luxon;
 
 // Hard-coded daylight saving dates from 2019
 const DST_DATES = {
@@ -1800,3 +1802,31 @@ test("Gantt view should not crash when opening on a DST transition day (Asia/Bei
     expect(columnHeaders.length).toBeGreaterThan(0);
     expect(rows[0].pills).toHaveLength(1);
 });
+
+test("GanttRenderer with weekly scale respects local start of week", async () => {
+    patchWithCleanup(localization, { weekStart: 7, });
+
+    const ISODate = "2026-05-17"
+    const sundayDate = DateTime.fromISO(ISODate + "T10:00:00");
+    const globalStart = DateTime.fromISO(ISODate + "T00:00:00");
+
+    const renderer = new GanttRenderer();
+    renderer.model = {
+        metaData: {
+            globalStart,
+            scale: {
+                interval: "week",
+                cellPart: 1,
+                cellTime: 1,
+                time: "day",
+            },
+        },
+    };
+
+    const { column } = renderer.getSubColumnFromDate(sundayDate);
+    expect(column.toISODate()).toBe(ISODate);
+
+    const [firstCol] = renderer.getGridColumnFromDates(sundayDate, sundayDate);
+    expect(firstCol).toBe(1);
+});
+

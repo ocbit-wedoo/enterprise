@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+import psycopg2.errors
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 
@@ -8,6 +9,7 @@ from odoo import Command
 from odoo.addons.appointment.tests.common import AppointmentCommon
 from odoo.exceptions import ValidationError
 from odoo.tests import Form, tagged, users, warmup
+from odoo.tools import mute_logger
 
 
 @tagged('appointment_resources', 'post_install', '-at_install')
@@ -57,6 +59,36 @@ class AppointmentResource(AppointmentCommon):
             'capacity': 1,
             'name': 'Resource 3',
         }])
+
+    @users('apt_manager')
+    def test_appointment_capacity_used_updated_on_cancel(self):
+        start = datetime(2026, 2, 14, 15, 0, 0)
+        booking = self._create_meetings(
+            self.env.user,
+            [(start, start + timedelta(hours=1), False)],
+            self.appointment_manage_capacity.id,
+            meeting_values={
+                'booking_line_ids': [(0, 0, {
+                    'appointment_resource_id': self.resource_1.id,
+                    'capacity_reserved': 3,
+                })],
+            }
+        )[0]
+        booking_line = booking.booking_line_ids
+
+        with mute_logger('odoo.sql_db'), self.assertRaises(psycopg2.errors.CheckViolation):
+            self.resource_1.capacity = 2
+        self.assertEqual(booking_line.capacity_used, 3, "The capacity used should be 3, the full resource capacity, for active bookings")
+        self.assertEqual(booking_line.capacity_reserved, 3, "The capacity reserved should be 3 for active bookings")
+
+        booking.action_archive()
+
+        self.assertEqual(booking_line.capacity_used, 3, "The capacity used should match the capacity reserved for archived bookings")
+        self.assertEqual(booking_line.capacity_reserved, 3, "The capacity reserved should be kept for archived bookings")
+        # check we can now reduce it past the previously reserved capacity.
+        self.resource_1.capacity = 2
+
+        self.assertEqual(booking_line.capacity_used, booking_line.capacity_reserved, "Capacity used and reserved should be equal for archived bookings")
 
     @users('apt_manager')
     def test_appointment_resource_default_appointment_type(self):
@@ -394,9 +426,9 @@ class AppointmentResourceBookingTest(AppointmentCommon):
 
     @users('apt_manager')
     def test_appointment_resources_combinable_avoid_losing_extra_capacity(self):
-        """ Check that we don't lose capacity with the resource selected.
-            If a capacity needed is greater than the capacity of the resource initially selected
-            we should check if the linked resources of the one selected are not a better fit to avoid losing capacity.
+        """ Check that we always take the closest capacity combination with least elements in various cases
+            of sequences and linked resources.
+            When the first resource has enough capacity, use it (as we do not compute best combination in that case)
         """
 
         nordic, scandinavian, snow = self.env["appointment.resource"].create([{
@@ -422,7 +454,7 @@ class AppointmentResourceBookingTest(AppointmentCommon):
             slots = self.apt_type_resource._get_appointment_slots('UTC', asked_capacity=5)
         resource_slots_c5 = self._filter_appointment_slots(slots)
         available_resources_c5 = [resource['id'] for resource in resource_slots_c5[0]['available_resources']]
-        self.assertListEqual(available_resources_c5, scandinavian.ids)
+        self.assertListEqual(available_resources_c5, snow.ids)
 
         snow.sequence = 1
         with freeze_time(self.reference_now):
@@ -636,14 +668,14 @@ class AppointmentResourceBookingTest(AppointmentCommon):
                 filter_weekdays=[0],
                 filter_resources=table1_c2,
             )
-            table1_c2_c4_slots = self._filter_appointment_slots(
+            table1_c6_slots = self._filter_appointment_slots(
                 slots,
                 filter_weekdays=[0],
-                filter_resources=(table1_c2 + table1_c4),
+                filter_resources=(table1_c6),
             )
             self.assertTrue(len(resource_slots) > 0)
             self.assertEqual(len(table1_c2_slots), 0)
-            self.assertEqual(len(resource_slots), len(table1_c2_c4_slots))
+            self.assertEqual(len(resource_slots), len(table1_c6_slots))
 
     @users('apt_manager')
     def test_appointment_resources_combinable_with_time_resource(self):

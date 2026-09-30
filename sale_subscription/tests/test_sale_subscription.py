@@ -1,7 +1,7 @@
 import datetime
 from dateutil.relativedelta import relativedelta
 from markupsafe import Markup
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 from odoo.addons.account_accountant.tests.test_signature import TestInvoiceSignature
 from odoo.addons.mail.tests.common import MockEmail
@@ -2319,6 +2319,30 @@ class TestSubscription(TestSubscriptionCommon, MockEmail):
                     'qty_delivered': 3,
                     'product_uom': delivered_product_tmpl.product_variant_id.uom_id.id
         })],})
+
+        # Test constraint works when product is added through catalog.
+        # the base _update_order_line_info calls request.update_context() which
+        # requires an active HTTP request. We mock it so the validation logic can be tested.
+        sub3 = self.subscription.copy()
+        sub3.order_line.unlink()
+        sub3.order_line = [Command.create({
+            'name': self.product_tmpl_5.name,
+            'product_id': self.product_tmpl_5.product_variant_id.id,
+            'product_uom_qty': 1,
+            'product_uom': self.product_tmpl_5.product_variant_id.uom_id.id,
+        })]
+        sub3.plan_id = False
+        sub3.action_confirm()
+        with patch('odoo.addons.sale.models.sale_order.request', new=MagicMock()):
+            with self.assertRaisesRegex(UserError, 'Please add a recurring plan on the subscription or remove the recurring product.'):
+                sub3._update_order_line_info(self.product.id, 1)
+
+        # Test adding recurring product in draft SO through catalog should NOT raise.
+        sub4 = self.subscription.copy()
+        sub4.order_line.unlink()
+        sub4.plan_id = False
+        with patch('odoo.addons.sale.models.sale_order.request', new=MagicMock()):
+            sub4._update_order_line_info(self.product.id, 1)
 
     def test_multiple_renew(self):
         """ Prevent to confirm several renewal quotation for the same subscription """

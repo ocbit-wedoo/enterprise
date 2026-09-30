@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-22 17:52+0000\n"
-"PO-Revision-Date: 2026-05-28 12:45+0000\n"
-"Last-Translator: Nusara Boonma <nuboo@odoo.com>\n"
+"PO-Revision-Date: 2026-07-27 17:09+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-18/documents/"
 "th/>\n"
 "Language: th\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: documents
 #. odoo-javascript
@@ -65,7 +65,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "%s documents have been moved."
-msgstr ""
+msgstr "%s เอกสารได้ถูกย้ายแล้ว"
 
 #. module: documents
 #. odoo-javascript
@@ -113,7 +113,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "%s shortcuts have been created."
-msgstr ""
+msgstr "%s ได้สร้างทางลัดแล้ว"
 
 #. module: documents
 #: model_terms:digest.tip,tip_description:documents.digest_tip_documents_0
@@ -174,7 +174,7 @@ msgstr "<br/>สนับสนุนโดย"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.public_folder_page
 msgid "<i class=\"fa fa-download fa-fw\"/> Download All"
-msgstr ""
+msgstr "<i class=\"fa fa-download fa-fw\"/> ดาวน์โหลดทั้งหมด"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
@@ -184,13 +184,14 @@ msgstr "<i class=\"fa fa-download fa-fw\"/> ดาวน์โหลดไฟล
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "<i class=\"fa fa-external-link me-2\" title=\"This is a shortcut\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-external-link me-2\" title=\"This is a shortcut\"/>"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid ""
 "<i class=\"fa fa-external-link text-gray-500\" title=\"This is a shortcut\"/>"
 msgstr ""
+"<i class=\"fa fa-external-link text-gray-500\" title=\"This is a shortcut\"/>"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
@@ -213,7 +214,7 @@ msgstr "<i class=\"fa fa-upload\"/>  ที่อัปโหลด"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.share_file
 msgid "<i class=\"fa fa-upload\"/> Replace file"
-msgstr ""
+msgstr "<i class=\"fa fa-upload\"/> เปลี่ยนไฟล์"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_document_res_partner_view
@@ -590,18 +591,18 @@ msgstr "จำเป็นต้องมีจุดหมายปลายท
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_folder_id_not_id
 msgid "A folder cannot be included in itself"
-msgstr ""
+msgstr "ไม่สามารถใส่โฟลเดอร์เข้าไปในโฟลเดอร์นั้นเองได้"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_shortcut_document_id_not_id
 msgid "A shortcut cannot point to itself"
-msgstr ""
+msgstr "ทางลัดไม่สามารถชี้ไปยังตัวมันเองได้"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "A shortcut has been created."
-msgstr ""
+msgstr "ได้สร้างทางลัดแล้ว"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_form
@@ -624,7 +625,7 @@ msgstr "โทเค็นเข้าถึง"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.portal_my_home_documents
 msgid "Access all your documents"
-msgstr ""
+msgstr "เข้าถึงเอกสารทั้งหมดของคุณ"
 
 #. module: documents
 #. odoo-python
@@ -636,13 +637,13 @@ msgstr "ไม่สามารถเปลี่ยนแปลงเอกส
 #. odoo-javascript
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Access to Automations"
-msgstr ""
+msgstr "การเข้าถึงระบบอัตโนมัติ"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/core/document_service.js:0
 msgid "Access to Server Actions"
-msgstr ""
+msgstr "การเข้าถึงการดำเนินการของเซิร์ฟเวอร์"
 
 #. module: documents
 #. odoo-python
@@ -653,12 +654,12 @@ msgstr ""
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_document_document_token_unique
 msgid "Access tokens already used."
-msgstr ""
+msgstr "โทเค็นการเข้าถึงได้ถูกใช้แล้ว"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_url
 msgid "Access url"
-msgstr ""
+msgstr "ลิงก์เข้าถึง"
 
 #. module: documents
 #. odoo-javascript
@@ -732,7 +733,7 @@ msgstr "ประเภทกิจกรรม"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "Activity assigned to"
-msgstr ""
+msgstr "กิจกรรมที่มอบหมายให้"
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_activity_plan_action_document
@@ -772,7 +773,7 @@ msgstr "เพิ่มไฟล์"
 #. module: documents
 #: model:ir.actions.act_window,name:documents.action_folder_form
 msgid "Add Folder"
-msgstr ""
+msgstr "เพิ่มโฟลเดอร์"
 
 #. module: documents
 #: model:ir.actions.server,name:documents.ir_actions_server_tag_add_bill
@@ -799,7 +800,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.xml:0
 msgid "Add an alias tag..."
-msgstr ""
+msgstr "เพิ่มแท็กนามแฝง..."
 
 #. module: documents
 #. odoo-javascript
@@ -823,19 +824,19 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_item_shortcut.js:0
 msgid "Add shortcut"
-msgstr ""
+msgstr "เพิ่มทางลัด"
 
 #. module: documents
 #. odoo-javascript
 #: code:addons/documents/static/src/views/cog_menu/documents_cog_menu_item_star.js:0
 msgid "Add star"
-msgstr ""
+msgstr "เพิ่มดาว"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Additional documents you have access to."
-msgstr ""
+msgstr "เอกสารเพิ่มเติมที่คุณสามารถเข้าถึงได้"
 
 #. module: documents
 #: model:res.groups,name:documents.group_documents_manager
@@ -885,7 +886,7 @@ msgstr "สถานะนามแฝง"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__alias_tag_ids
 msgid "Alias Tags"
-msgstr ""
+msgstr "แท็กนามแฝง"
 
 #. module: documents
 #: model:ir.model.fields,help:documents.field_documents_document__alias_status
@@ -914,13 +915,13 @@ msgstr "ผู้ใช้ทุกคนที่มีสิทธิ์เข
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__access_ids
 msgid "Allowed Access"
-msgstr ""
+msgstr "สิทธิ์การเข้าถึง"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Already linked Documents: %s"
-msgstr ""
+msgstr "เอกสารที่เชื่อมโยงไว้แล้ว: %s"
 
 #. module: documents
 #: model_terms:digest.tip,tip_description:documents.digest_tip_documents_0
@@ -1061,7 +1062,7 @@ msgstr "ระบบอัตโนมัติ"
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__available_embedded_actions_ids
 msgid "Available Embedded Actions"
-msgstr ""
+msgstr "การดำเนินการในตัวที่พร้อมใช้งาน"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_bill
@@ -1090,6 +1091,7 @@ msgid ""
 "Can configure folders, manage access rights, and oversee all documents "
 "within their areas."
 msgstr ""
+"สามารถกำหนดค่าโฟลเดอร์ จัดการสิทธิ์การเข้าถึง และกำกับดูแลเอกสารทั้งหมดภายในพื้นที่รับผิดชอบ"
 
 #. module: documents
 #: model:res.groups,comment:documents.group_documents_user
@@ -1232,7 +1234,7 @@ msgstr "ติดต่อ"
 #: code:addons/documents/static/src/core/document_service.js:0
 #: code:addons/documents/static/src/views/hooks.js:0
 msgid "Contact your Administrator to get access if needed."
-msgstr ""
+msgstr "ติดต่อผู้ดูแลระบบเพื่อขอสิทธิ์การเข้าถึงหากจำเป็น"
 
 #. module: documents
 #: model:documents.tag,name:documents.documents_tag_contracts
@@ -1255,7 +1257,7 @@ msgstr "คัดลอกลิงก์"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Copy Links"
-msgstr ""
+msgstr "คัดลอกลิงก์"
 
 #. module: documents
 #: model:ir.actions.server,name:documents.ir_actions_server_create_activity
@@ -1266,7 +1268,7 @@ msgstr "สร้างกิจกรรม"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_control_panel.xml:0
 msgid "Create Shortcut"
-msgstr ""
+msgstr "สร้างทางลัด"
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_activity_plan_action_document
@@ -1406,7 +1408,7 @@ msgstr "ละทิ้ง"
 #. odoo-python
 #: code:addons/documents/models/documents_document.py:0
 msgid "Discoverable"
-msgstr ""
+msgstr "ค้นพบได้"
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_access__display_name
@@ -1753,7 +1755,7 @@ msgstr "ส่งออก"
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.documents_request_form_view
 msgid "Extra comments..."
-msgstr ""
+msgstr "ความคิดเห็นเพิ่มเติม..."
 
 #. module: documents
 #: model:ir.model.fields,field_description:documents.field_documents_document__favorited_ids
@@ -1899,7 +1901,7 @@ msgstr "ทั่วไป"
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_access_settings.xml:0
 msgid "General access"
-msgstr ""
+msgstr "การเข้าถึงทั่วไป"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.format_file_size
@@ -2418,7 +2420,7 @@ msgstr "ย้ายไปถังขยะแล้ว"
 #: code:addons/documents/models/documents_document.py:0
 #: model_terms:ir.ui.view,arch_db:documents.document_view_kanban
 msgid "Must have the link to access"
-msgstr ""
+msgstr "ต้องมีลิงก์เพื่อเข้าถึง"
 
 #. module: documents
 #: model_terms:ir.ui.view,arch_db:documents.document_view_search
@@ -2442,7 +2444,7 @@ msgstr "เอกสารของฉัน"
 #: code:addons/documents/static/src/components/documents_details_panel/documents_details_panel.js:0
 #: code:addons/documents/static/src/views/kanban/documents_kanban_record.js:0
 msgid "My Drive"
-msgstr ""
+msgstr "ไดรฟ์ของฉัน"
 
 #. module: documents
 #: model:ir.model.constraint,message:documents.constraint_documents_access_role_or_last_access_date
@@ -2466,7 +2468,7 @@ msgstr "ชื่อ/นามสกุล"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/documents_model_mixin.js:0
 msgid "Name cannot be empty."
-msgstr ""
+msgstr "ชื่อไม่สามารถว่างได้"
 
 #. module: documents
 #. odoo-javascript
@@ -2484,7 +2486,7 @@ msgstr "ไฟล์ใหม่"
 #. odoo-javascript
 #: code:addons/documents/static/src/views/search/documents_search_panel.xml:0
 msgid "New Folder"
-msgstr ""
+msgstr "โฟลเดอร์ใหม่"
 
 #. module: documents
 #. odoo-javascript
@@ -2545,13 +2547,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/documents/static/src/components/documents_permission_panel/documents_access_settings.js:0
 msgid "No one on the internet can access"
-msgstr ""
+msgstr "ไม่มีใครบนอินเทอร์เน็ตสามารถเข้าถึงได้"
 
 #. module: documents
 #. odoo-python
 #: code:addons/documents/models/ir_actions_server.py:0
 msgid "No server actions found for Documents!"
-msgstr ""
+msgstr "ไม่พบการดำเนินการของเซิร์ฟเวอร์สำหรับเอกสาร!"
 
 #. module: documents
 #: model_terms:ir.actions.act_window,help:documents.mail_alias_action

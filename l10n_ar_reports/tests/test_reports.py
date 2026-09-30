@@ -2,7 +2,7 @@
 from odoo import fields
 from odoo.addons.l10n_ar.tests.common import TestArCommon
 from odoo.addons.account_reports.tests.common import TestAccountReportsCommon
-from odoo.tests import Form, tagged
+from odoo.tests import tagged
 from odoo.tools import file_open
 from odoo.fields import Command
 import logging
@@ -216,26 +216,17 @@ class TestArReports(TestArCommon, TestAccountReportsCommon):
         }
 
         for key, values in vendor_bills.items():
-            with Form(self.env['account.move'].with_context(default_move_type=values['move_type'])) as invoice_form:
-                invoice_form.ref = values['ref']
-                invoice_form.partner_id = values['partner_id']
-                invoice_form.invoice_payment_term_id = values['invoice_payment_term_id']
-                invoice_form.invoice_date = values['invoice_date']
-                if values.get('l10n_latam_document_type_id'):
-                    invoice_form.l10n_latam_document_type_id = values['l10n_latam_document_type_id']
-                invoice_form.l10n_latam_document_number = values['l10n_latam_document_number']
-                if values.get('invoice_incoterm_id'):
-                    invoice_form.invoice_incoterm_id = values['invoice_incoterm_id']
-                for line in values['invoice_line_ids']:
-                    with invoice_form.invoice_line_ids.new() as line_form:
-                        line_form.product_id = line.get('product_id')
-                        line_form.price_unit = line.get('price_unit')
-                        line_form.quantity = line.get('quantity')
-                        # TODO: check this lines, should not be necessary to add
-                        line_form.name = 'xxxx'
-                        line_form.account_id = self.company_data['default_account_revenue']
-            invoice = invoice_form.save()
-            self.demo_bills[key] = invoice
+            values['invoice_line_ids'] = [
+                self._prepare_invoice_line(
+                    product_id=line['product_id'],
+                    price_unit=line.get('price_unit', 0.0),
+                    quantity=line['quantity'],
+                    name='xxxx',
+                    account_id=self.company_data['default_account_revenue'],
+                )
+                for line in values['invoice_line_ids']
+            ]
+            self.demo_bills[key] = self._create_invoice(**values)
 
     def _vat_book_report_create_test_data(self):
         purchase_journal = self.env["account.journal"].search([('type', '=', 'purchase'), ('company_id', '=', self.env.company.id)])
@@ -451,3 +442,33 @@ class TestArReports(TestArCommon, TestAccountReportsCommon):
             ],
             options,
         )
+
+    def test_foreign_provider_vat_book_export(self):
+        """ Test that Proveedor del Exterior (code 8) partners with ForeignID
+            use the country-level VAT, just like Cliente del Exterior (code 9).
+        """
+        foreign_partner = self.env['res.partner'].create({
+            'name': 'foreign partner',
+            'is_company': True,
+            'country_id': self.env.ref('base.ie').id,
+            'l10n_latam_identification_type_id': self.env.ref('l10n_latam_base.it_fid').id,
+            'vat': 'IE1234567T',
+            'l10n_ar_afip_responsibility_type_id': self.env.ref('l10n_ar.res_EXT_Prov').id,
+        })
+        invoice = self.env['account.move'].create({
+            'move_type': 'out_invoice',
+            'partner_id': foreign_partner.id,
+            'invoice_date': '2021-03-15',
+            'invoice_line_ids': [
+                Command.create({
+                    'product_id': self.product_iva_exento.id,
+                    'price_unit': 100.0,
+                    'quantity': 1,
+                }),
+            ],
+        })
+        invoice.action_post()
+        self.options['ar_vat_book_tax_type_selected'] = 'sale'
+        self.options['txt_type'] = 'sale'
+        out = self.env['l10n_ar.tax.report.handler']._vat_book_get_txt_files(self.options, 'sale')
+        self.assertTrue(out)

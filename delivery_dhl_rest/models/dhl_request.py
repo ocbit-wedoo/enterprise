@@ -201,7 +201,7 @@ class DHLProvider:
             export_lines.append(item)
         export_declaration['lineItems'] = export_lines
         export_declaration['invoice'] = {
-            'number': carrier.env['ir.sequence'].sudo().next_by_code('delivery_dhl_rest.commercial_invoice'),
+            'number': carrier.env['ir.sequence'].search([('code', '=', 'delivery_dhl_rest.commercial_invoice')]).next_by_id(),
             'date': datetime.today().strftime('%Y-%m-%d'),
         }
         if is_return:

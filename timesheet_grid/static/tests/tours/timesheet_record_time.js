@@ -1,6 +1,5 @@
 /** @odoo-module */
 import { registry } from "@web/core/registry";
-import { delay } from "@odoo/hoot-dom";
 
 registry.category("web_tour.tours").add('timesheet_record_time', {
     url: "/odoo",
@@ -50,10 +49,8 @@ registry.category("web_tour.tours").add('timesheet_overtime_hour_encoding', {
             run: "click"
         },
         {
-            trigger: ".o_grid_row",
-            run: async () => {
-                await delay(300);
-            }
+            trigger: ".o_grid_bar_chart_overtime[title='Total overtime']:contains('+5:00'):not(:visible)",
+            run: "hover",
         },
         {
             trigger: ".o_grid_row",
@@ -66,10 +63,6 @@ registry.category("web_tour.tours").add('timesheet_overtime_hour_encoding', {
                         }
                     });
             },
-        },
-        {
-            trigger: ".o_grid_bar_chart_overtime[title='Total overtime']:contains('+5:00'):not(:visible)",
-            run: "hover",
         },
     ]
 });
@@ -88,10 +81,8 @@ registry.category("web_tour.tours").add('timesheet_overtime_day_encoding', {
             run: "click"
         },
         {
-            trigger: ".o_grid_row",
-            run: async () => {
-                await delay(300);
-            }
+            trigger: ".o_grid_bar_chart_overtime[title='Total overtime']:contains('-0.50'):not(:visible)",
+            run: "hover",
         },
         {
             trigger: ".o_grid_row",
@@ -104,10 +95,6 @@ registry.category("web_tour.tours").add('timesheet_overtime_day_encoding', {
                         }
                     });
             },
-        },
-        {
-            trigger: ".o_grid_bar_chart_overtime[title='Total overtime']:contains('-0.50'):not(:visible)",
-            run: "hover",
         },
     ]
 });

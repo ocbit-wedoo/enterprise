@@ -354,7 +354,8 @@ class MainComponent extends Component {
         }
         if (barcode) {
             this.actionMutex.exec(async () => {
-                return this.env.model.processBarcode(barcode);
+                const cleanedBarcode = this.barcodeService.cleanBarcode(barcode);
+                return this.env.model.processBarcode(cleanedBarcode);
             });
             if ('vibrate' in window.navigator) {
                 window.navigator.vibrate(100);

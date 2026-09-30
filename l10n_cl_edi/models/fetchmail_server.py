@@ -256,7 +256,11 @@ class FetchmailServer(models.Model):
         for dte_xml in xml_content.xpath('//ns0:DTE', namespaces=XML_NAMESPACES):
             document_number = self._get_document_number(dte_xml)
             document_type_code = self._get_document_type_from_xml(dte_xml)
-            xml_total_amount = float(dte_xml.findtext('.//ns0:MntTotal', namespaces=XML_NAMESPACES))
+            xml_total_amount = float(
+                dte_xml.findtext('.//ns0:Moneda', namespaces=XML_NAMESPACES)
+                and dte_xml.findtext('.//ns0:MntTotOtrMnda', namespaces=XML_NAMESPACES)
+                or dte_xml.findtext('.//ns0:MntTotal', namespaces=XML_NAMESPACES)
+            )
             document_type = self.env['l10n_latam.document.type'].search(
                 [('code', '=', document_type_code), ('country_id.code', '=', 'CL')], limit=1)
             if not document_type:
@@ -606,7 +610,8 @@ class FetchmailServer(models.Model):
             # this happens whenever QtyItem is not present in the invoice.
             # See http://www.sii.cl/factura_electronica/formato_dte.pdf row 38 of tag table.
             qty1 = quantity or 1
-            price_unit = float(dte_line.findtext('.//ns0:MontoItem', default=0, namespaces=XML_NAMESPACES)) / qty1
+            xpath_price_unit = './/ns0:MontoItemOtrMnda' if dte_xml.findtext('.//ns0:Moneda', namespaces=XML_NAMESPACES) else './/ns0:MontoItem'
+            price_unit = float(dte_line.findtext(xpath_price_unit, default=0, namespaces=XML_NAMESPACES)) / qty1
             # See http://www.sii.cl/factura_electronica/formato_dte.pdf,
             # where MontoItem is defined as (price_unit * quantity ) - discount + surcharge
             # The amount present in "MontoItem" contains

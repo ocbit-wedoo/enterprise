@@ -42,14 +42,14 @@ class BritishCISTaxReportCustomHandler(models.AbstractModel):
     def _report_custom_engine_cis_materials_purchase(self, expressions, options, date_scope, current_groupby, next_groupby, offset=0, limit=None, warnings=None):
         report = self.env['account.report'].browse(options['report_id'])
         purchase_base_tags = self.env.ref('l10n_uk_reports_cis.account_uk_cis_report_line_purchase_expr_base')._get_matching_tags()
-        domain = f"[('display_type', '=', 'product'), ('move_id.move_type', 'in', ('in_invoice', 'in_refund')), ('tax_tag_ids', 'not in', {purchase_base_tags.ids})]"
+        domain = f"[('display_type', '=', 'product'), ('move_id.move_type', 'in', ('in_invoice', 'in_refund', 'in_receipt')), ('tax_tag_ids', 'not in', {purchase_base_tags.ids})]"
         result = report._compute_formula_batch_with_engine_domain(options, 'strict_range', {domain: expressions}, current_groupby, next_groupby, offset, limit, warnings)
         return result[domain, expressions]
 
     def _report_custom_engine_cis_materials_sales(self, expressions, options, date_scope, current_groupby, next_groupby, offset=0, limit=None, warnings=None):
         report = self.env['account.report'].browse(options['report_id'])
         sales_base_tags = self.env.ref('l10n_uk_reports_cis.account_uk_cis_report_line_sale_expr_base')._get_matching_tags()
-        domain = f"[('display_type', '=', 'product'), ('move_id.move_type', 'in', ('out_invoice', 'out_refund')), ('tax_tag_ids', 'not in', {sales_base_tags.ids})]"
+        domain = f"[('display_type', '=', 'product'), ('move_id.move_type', 'in', ('out_invoice', 'out_refund', 'out_receipt')), ('tax_tag_ids', 'not in', {sales_base_tags.ids})]"
         result = report._compute_formula_batch_with_engine_domain(options, 'strict_range', {domain: expressions}, current_groupby, next_groupby, offset, limit, warnings)
         return result[domain, expressions]
 

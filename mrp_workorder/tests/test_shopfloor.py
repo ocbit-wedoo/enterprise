@@ -2,6 +2,7 @@
 from odoo import Command
 from odoo.tests import Form
 from odoo.tests.common import HttpCase, tagged
+from odoo.tools import mute_logger
 
 @tagged('post_install', '-at_install')
 class TestShopFloor(HttpCase):
@@ -814,6 +815,46 @@ class TestShopFloor(HttpCase):
         self.start_tour(url, "test_mrp_manual_consumption_in_shopfloor", login="admin", timeout=100)
         self.assertEqual(mo.move_raw_ids.picked, False)
         self.assertEqual(mo.workorder_ids.state, 'progress')
+
+    @mute_logger('odoo.http')
+    def test_mrp_lot_not_assigned_manual_consumption(self):
+        """
+        Check that a Manufacturing Order remains accessible on the Shopfloor
+        after a validation error occurs due to unassigned lot numbers for manual consumption components.
+        """
+        self.env.user.groups_id |= self.env.ref('stock.group_production_lot')
+        self.warehouse.manu_type_id.use_create_components_lots = True
+        product_finish, product_component = self.env['product.product'].create([
+            {
+                'name': 'Finish',
+                'is_storable': True,
+                'tracking': 'none'
+            }, {
+                'name': 'Component',
+                'is_storable': True,
+                'tracking': 'lot'
+            }
+        ])
+        warehouse = self.env['stock.warehouse'].search([('company_id', '=', self.env.company.id)], limit=1)
+        self.env['stock.quant']._update_available_quantity(product_component, warehouse.lot_stock_id, 2)
+        bom = self.env['mrp.bom'].create({
+            'product_id': product_finish.id,
+            'product_tmpl_id': product_finish.product_tmpl_id.id,
+            'product_qty': 1,
+            'bom_line_ids': [Command.create({
+                'product_id': product_component.id,
+                'product_qty': 1,
+                'manual_consumption': True,
+            })]
+        })
+        mo = self.env['mrp.production'].create({
+            'name': 'MANUALLOT',
+            'product_id': product_finish.id,
+            'bom_id': bom.id,
+            'product_qty': 2.0,
+        })
+        mo.action_confirm()
+        self.start_tour('/odoo/shop-floor', "test_mrp_lot_not_assigned_manual_consumption", login="admin")
 
     def test_component_registration_on_split_productions(self):
         """

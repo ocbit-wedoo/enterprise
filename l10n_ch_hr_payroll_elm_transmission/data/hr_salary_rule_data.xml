@@ -3219,6 +3219,35 @@ result_name = inputs['WT_2000'].name
         <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
     </record>
 
+    <record id="l10n_ch_elm_2000_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Loss-of-earnings indemnity (APG) (Net compensation)</field>
+        <field name="code">WT_2000_NET</field>
+        <field name="l10n_ch_code">2000</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2000_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2000_NET'].amount
+result_name = inputs['WT_2000_NET'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="True"/>
+        <field name="l10n_ch_laac_included" eval="False"/>
+        <field name="l10n_ch_aanp_included" eval="False"/>
+        <field name="l10n_ch_ijm_included" eval="True"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_wage_statement">Y</field>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
     <record id="l10n_ch_elm_2005" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll.ALW"/>
         <field name="name">Military compensation benefit (CCM)</field>
@@ -3248,6 +3277,35 @@ result_name = inputs['WT_2005'].name
         <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
     </record>
 
+    <record id="l10n_ch_elm_2005_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Military compensation benefit (CCM) (Net compensation)</field>
+        <field name="code">WT_2005_NET</field>
+        <field name="l10n_ch_code">2005</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2005_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2005_NET'].amount
+result_name = inputs['WT_2005_NET'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="True"/>
+        <field name="l10n_ch_laac_included" eval="True"/>
+        <field name="l10n_ch_aanp_included" eval="True"/>
+        <field name="l10n_ch_ijm_included" eval="True"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_wage_statement">Y</field>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
     <record id="l10n_ch_elm_2010" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll.ALW"/>
         <field name="name">Subsidiary military fund</field>
@@ -3260,6 +3318,35 @@ result_name = inputs['WT_2005'].name
         <field name="amount_python_compute">
 result = inputs['WT_2010'].amount
 result_name = inputs['WT_2010'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="True"/>
+        <field name="l10n_ch_laac_included" eval="True"/>
+        <field name="l10n_ch_aanp_included" eval="True"/>
+        <field name="l10n_ch_ijm_included" eval="True"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_wage_statement">Y</field>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
+    <record id="l10n_ch_elm_2010_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Subsidiary military fund (Net compensation)</field>
+        <field name="code">WT_2010_NET</field>
+        <field name="l10n_ch_code">2010</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2010_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2010_NET'].amount
+result_name = inputs['WT_2010_NET'].name
         </field>
         <field name="l10n_ch_gross_included" eval="True"/>
         <field name="l10n_ch_ac_included" eval="True"/>
@@ -3318,6 +3405,35 @@ result_name = inputs['WT_2015'].name
         <field name="amount_python_compute">
 result = inputs['WT_2020'].amount
 result_name = inputs['WT_2020'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="True"/>
+        <field name="l10n_ch_laac_included" eval="False"/>
+        <field name="l10n_ch_aanp_included" eval="False"/>
+        <field name="l10n_ch_ijm_included" eval="True"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_wage_statement">Y</field>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
+    <record id="l10n_ch_elm_2020_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Military insurance compensation (Net compensation)</field>
+        <field name="code">WT_2020_NET</field>
+        <field name="l10n_ch_code">2020</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2020_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2020_NET'].amount
+result_name = inputs['WT_2020_NET'].name
         </field>
         <field name="l10n_ch_gross_included" eval="True"/>
         <field name="l10n_ch_ac_included" eval="True"/>
@@ -3420,6 +3536,35 @@ result_name = inputs['WT_2025'].name
         <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
     </record>
 
+    <record id="l10n_ch_elm_2025_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">DI allowance (Net compensation)</field>
+        <field name="code">WT_2025_NET</field>
+        <field name="l10n_ch_code">2025</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2025_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2025_NET'].amount
+result_name = inputs['WT_2025_NET'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="True"/>
+        <field name="l10n_ch_laac_included" eval="False"/>
+        <field name="l10n_ch_aanp_included" eval="False"/>
+        <field name="l10n_ch_ijm_included" eval="True"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_wage_statement">Y</field>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
     <record id="l10n_ch_elm_2026" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll.ALW"/>
         <field name="name">DI pension</field>
@@ -3488,6 +3633,34 @@ result_name = inputs['WT_2027'].name
         <field name="amount_python_compute">
 result = inputs['WT_2030'].amount
 result_name = inputs['WT_2030'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="False"/>
+        <field name="l10n_ch_laac_included" eval="False"/>
+        <field name="l10n_ch_aanp_included" eval="False"/>
+        <field name="l10n_ch_ijm_included" eval="False"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
+    <record id="l10n_ch_elm_2030_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Accident - daily allowance (Net compensation)</field>
+        <field name="code">WT_2030_NET</field>
+        <field name="l10n_ch_code">2030</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2030_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2030_NET'].amount
+result_name = inputs['WT_2030_NET'].name
         </field>
         <field name="l10n_ch_gross_included" eval="True"/>
         <field name="l10n_ch_ac_included" eval="False"/>
@@ -3588,6 +3761,34 @@ result_name = inputs['WT_2035'].name
         <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
     </record>
 
+    <record id="l10n_ch_elm_2035_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Daily sickness allowance (Net compensation)</field>
+        <field name="code">WT_2035_NET</field>
+        <field name="l10n_ch_code">2035</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2035_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2035_NET'].amount
+result_name = inputs['WT_2035_NET'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="False"/>
+        <field name="l10n_ch_laac_included" eval="False"/>
+        <field name="l10n_ch_aanp_included" eval="False"/>
+        <field name="l10n_ch_ijm_included" eval="False"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
     <record id="l10n_ch_elm_2040" model="hr.salary.rule">
         <field name="category_id" ref="hr_payroll.ALW"/>
         <field name="name">Maternity/Paternity allowance</field>
@@ -3600,6 +3801,35 @@ result_name = inputs['WT_2035'].name
         <field name="amount_python_compute">
 result = inputs['WT_2040'].amount
 result_name = inputs['WT_2040'].name
+        </field>
+        <field name="l10n_ch_gross_included" eval="True"/>
+        <field name="l10n_ch_ac_included" eval="True"/>
+        <field name="l10n_ch_laac_included" eval="False"/>
+        <field name="l10n_ch_aanp_included" eval="False"/>
+        <field name="l10n_ch_ijm_included" eval="True"/>
+        <field name="l10n_ch_lpp_forecast" eval="False"/>
+        <field name="l10n_ch_lpp_factor" eval="0"/>
+        <field name="l10n_ch_lpp_retroactive" eval="False"/>
+        <field name="l10n_ch_source_tax_included" eval="True"/>
+        <field name="l10n_ch_salary_certificate">1</field>
+        <field name="l10n_ch_is_periodic" eval="True"/>
+        <field name="l10n_ch_wage_statement">Y</field>
+        <field name="l10n_ch_13th_month_included" eval="False"/>
+        <field name="struct_id" ref="l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm"/>
+    </record>
+
+    <record id="l10n_ch_elm_2040_net" model="hr.salary.rule">
+        <field name="category_id" ref="hr_payroll.ALW"/>
+        <field name="name">Maternity/Paternity allowance (Net compensation)</field>
+        <field name="code">WT_2040_NET</field>
+        <field name="l10n_ch_code">2040</field>
+        <field name="sequence">20</field>
+        <field name="condition_select">python</field>
+        <field name="condition_python">result = 'WT_2040_NET' in inputs</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">
+result = inputs['WT_2040_NET'].amount
+result_name = inputs['WT_2040_NET'].name
         </field>
         <field name="l10n_ch_gross_included" eval="True"/>
         <field name="l10n_ch_ac_included" eval="True"/>
@@ -4228,11 +4458,14 @@ result_name = inputs['WT_3037'].name
         <field name="l10n_ch_code">4900</field>
         <field name="sequence">20</field>
         <field name="condition_select">python</field>
-        <field name="condition_python">result = 'WT_4900' in inputs</field>
+        <field name="condition_python">result = 'WT_4900' in inputs or any(wage_type in inputs for wage_type in payslip._get_net_compensation_wage_types())</field>
         <field name="amount_select">code</field>
         <field name="amount_python_compute">
-result = inputs['WT_4900'].amount
-result_name = inputs['WT_4900'].name
+if 'WT_4900' in inputs:
+    result = inputs['WT_4900'].amount
+    result_name = inputs['WT_4900'].name
+else:
+    result = payslip._l10n_ch_get_net_compensation()
         </field>
         <field name="l10n_ch_gross_included" eval="True"/>
         <field name="l10n_ch_ac_included" eval="True"/>
@@ -6334,8 +6567,8 @@ if payslip.l10n_ch_is_code and not payslip.l10n_ch_after_departure_payment == 'N
         is_salary = result_rules['ISSALARY']['total']
         is_dt_salary = result_rules['ISDTSALARY']['total']
         min_is, rate = payslip._find_rate(payslip.l10n_ch_is_code, is_dt_salary)
-        is_amount = max(is_salary * rate / 100, 0)
-        result = -max(is_amount, min_is)
+        is_amount = max(is_salary * rate / 100, 0, min_is)
+        result = -is_amount
         payslip._log_is_line(is_canton=canton, municipality=municipality, is_code=code, code='IS', amount=is_amount)
     else:
         total_is = 0

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-13 18:49+0000\n"
-"PO-Revision-Date: 2026-02-27 05:19+0000\n"
+"PO-Revision-Date: 2026-06-30 17:05+0000\n"
 "Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "social_instagram/pl/>\n"
@@ -23,12 +23,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "(between 1.91:1 and 4:5)."
-msgstr ""
+msgstr "(pomiędzy 1.91:1 a 4:5)."
 
 #. module: social_instagram
 #. odoo-python
@@ -37,6 +37,9 @@ msgid ""
 "- Check permissions: Your site's robots.txt might be blocking Instagram from "
 "accessing the media folder (make sure /social_instagram is not blocked)."
 msgstr ""
+"- Sprawdź uprawnienia: Plik robots.txt z Twojej strony może blokować "
+"Instagram przed dostępem do folderu mediów (upewnij się, że /"
+"social_instagram nie jest blokowany)."
 
 #. module: social_instagram
 #. odoo-python
@@ -45,6 +48,8 @@ msgid ""
 "- Check your connection: Your server may be offline or temporarily "
 "unreachable."
 msgstr ""
+"- Sprawdź swoje połączenie: Twój serwer może być offline lub chwilowo "
+"niedostępny."
 
 #. module: social_instagram
 #. odoo-python
@@ -53,6 +58,9 @@ msgid ""
 "- Check your file: Ensure it isn't corrupted and is from 320 to 1440 pixels "
 "wide, 8MB maximum, aspect ratio between 4:5 and 1.91:1."
 msgstr ""
+"- Sprawdź swój plik: Upewnij się, że nie jest uszkodzony i ma szerokość od "
+"320 do 1440 pikseli, ma maksymalnie 8MB oraz proporcję obrazu pomiędzy 4:5 a "
+"1.91:1."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -62,7 +70,7 @@ msgstr "34 SEKUNDY TEMU"
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
-msgstr "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
+msgstr "<i class=\"fa fa-comments me-1\" title=\"Komentarze\"/>"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -70,6 +78,9 @@ msgid ""
 "<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
 "                At least one image is required when posting on Instagram."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
+"                Przy publikowaniu postów na Instagramie wymagane jest co "
+"najmniej jedno zdjęcie."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -77,6 +88,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
 "                You can only post up to 10 images at once."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
+"                Możesz opublikować maksymalnie 10 obrazów na raz."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -85,11 +98,14 @@ msgid ""
 "                Your image appears to be corrupted, please try loading it "
 "again."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle me-1\"/>\n"
+"                Twój obraz zdaje się być uszkodzony, spróbuj załadować go "
+"ponownie."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-heart me-1\" title=\"Likes\"/>"
-msgstr "<i class=\"fa fa-heart me-1\" title=\"Likes\"/>"
+msgstr "<i class=\"fa fa-heart me-1\" title=\"Polubienia\"/>"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -99,7 +115,7 @@ msgstr "<span class=\"fw-bold pe-1\">My_instagram_page</span>"
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "<span class=\"mt-1 fw-bold\">My Instagram Page</span>"
-msgstr "<span class=\"mt-1 fw-bold\">Mój profil Instagram</span>"
+msgstr "<span class=\"mt-1 fw-bold\">Mój profil na Instagramie</span>"
 
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__instagram_access_token
@@ -122,6 +138,7 @@ msgstr "Sekret aplikacji"
 #: code:addons/social_instagram/models/social_post.py:0
 msgid "At least one image is required when posting on Instagram."
 msgstr ""
+"Przy publikowaniu na Instagramie wymagane jest przynajmniej jedno zdjęcie."
 
 #. module: social_instagram
 #. odoo-javascript
@@ -173,7 +190,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__has_instagram_account
 #: model:ir.model.fields,field_description:social_instagram.field_social_post_template__has_instagram_account
 msgid "Has Instagram Account"
-msgstr ""
+msgstr "Ma konto na Instagramie"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.social_post_template_view_form
@@ -200,8 +217,8 @@ msgid ""
 "        It's used to authenticate requests when posting to or reading "
 "information from this account."
 msgstr ""
-"Instagram Access Token dostarczany przez API Facebooka, nigdy nie należy go "
-"ustawiać ręcznie.\n"
+"Token dostępu Instagrama dostarczany przez API Facebooka, nigdy nie powinien "
+"być ustawiany ręcznie.\n"
 "Służy do uwierzytelniania żądań podczas wysyłania na to konto lub "
 "odczytywania z niego informacji."
 
@@ -216,8 +233,8 @@ msgid ""
 "Instagram Account ID provided by the Facebook API, this should never be set "
 "manually."
 msgstr ""
-"Instagram Account ID dostarczany przez API Facebooka, nigdy nie powinien być "
-"ustawiony ręcznie."
+"ID konta na Instagramie dostarczane przez API Facebooka, nigdy nie powinno "
+"być ustawiane ręcznie."
 
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_res_config_settings__instagram_app_id
@@ -227,7 +244,7 @@ msgstr "ID aplikacji Instagrama"
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_res_config_settings__instagram_client_secret
 msgid "Instagram App Secret"
-msgstr "Sekret aplikacji Instagrama"
+msgstr "Klucz aplikacji Instagrama"
 
 #. module: social_instagram
 #. odoo-javascript
@@ -255,7 +272,7 @@ msgstr "Identyfikator autora Instagram Facebook"
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__instagram_image_ids
 #: model:ir.model.fields,field_description:social_instagram.field_social_post_template__instagram_image_ids
 msgid "Instagram Images"
-msgstr ""
+msgstr "Obrazy Instagram"
 
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_social_stream_post__instagram_likes_count
@@ -266,7 +283,7 @@ msgstr "Polubienia na Instagramie"
 #: model:ir.model.fields,field_description:social_instagram.field_social_post__instagram_message
 #: model:ir.model.fields,field_description:social_instagram.field_social_post_template__instagram_message
 msgid "Instagram Message"
-msgstr ""
+msgstr "Wiadomość na Instagramie"
 
 #. module: social_instagram
 #: model:ir.model.fields,field_description:social_instagram.field_social_live_post__instagram_post_id
@@ -317,14 +334,14 @@ msgstr "Wiadomość"
 #: code:addons/social_instagram/models/social_stream_post.py:0
 msgid ""
 "Please confirm that commenting is enabled for this post on the platform."
-msgstr ""
+msgstr "Sprawdź, czy na platformie włączono możliwość komentowania tego wpisu."
 
 #. module: social_instagram
 #. odoo-python
 #: code:addons/social_instagram/models/social_post_template.py:0
 msgid ""
 "Please specify either a Instagram Message or upload some Instagram Images."
-msgstr ""
+msgstr "Napisz wiadomość na Instagramie lub prześlij jakieś obrazy."
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
@@ -335,7 +352,7 @@ msgstr "Opublikuj obraz"
 #. odoo-python
 #: code:addons/social_instagram/controllers/main.py:0
 msgid "Read More about Instagram Accounts"
-msgstr ""
+msgstr "Dowiedz się więcej o kontach Instagram"
 
 #. module: social_instagram
 #: model:ir.model,name:social_instagram.model_social_account
@@ -384,7 +401,7 @@ msgstr ""
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "The following images are not in the correct format (jpg/jpeg)."
-msgstr ""
+msgstr "Następujące obrazy nie są w poprawnym formacie (jpg/jpeg)."
 
 #. module: social_instagram
 #. odoo-python
@@ -394,11 +411,14 @@ msgid ""
 "\n"
 "%(images)s"
 msgstr ""
+"Następujące obrazy nie są w poprawnym formacie (jpg/jpeg).\n"
+"\n"
+"%(images)s"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "The following images do not meet the"
-msgstr ""
+msgstr "Następujące obrazy nie spełniają"
 
 #. module: social_instagram
 #. odoo-python
@@ -409,18 +429,22 @@ msgid ""
 "\n"
 "%(images)s"
 msgstr ""
+"Następujące obrazy nie spełniają wymaganych proporcji obrazu (pomiędzy "
+"1.91:1 a 4:5).\n"
+"\n"
+"%(images)s"
 
 #. module: social_instagram
 #. odoo-python
 #: code:addons/social_instagram/models/social_live_post.py:0
 msgid "The media container expired."
-msgstr ""
+msgstr "Okres ważności kontenera multimedialnego upłynął."
 
 #. module: social_instagram
 #. odoo-python
 #: code:addons/social_instagram/models/social_live_post.py:0
 msgid "The media container failed to process."
-msgstr ""
+msgstr "Nie udało się przetworzyć kontenera multimedialnego."
 
 #. module: social_instagram
 #. odoo-python
@@ -465,7 +489,7 @@ msgstr "Dołączy obrazy do Twoich postów."
 #. odoo-python
 #: code:addons/social_instagram/models/social_post.py:0
 msgid "You can only post up to 10 images at once."
-msgstr ""
+msgstr "Jednorazowo można opublikować maksymalnie 10 zdjęć."
 
 #. module: social_instagram
 #. odoo-python
@@ -481,6 +505,9 @@ msgid ""
 "Odoo Social.\n"
 " Please create one and make sure it is linked to your account."
 msgstr ""
+"Aby publikować posty za pomocą Odoo Media społecznościowe, musisz połączyć "
+"swoją stronę na Instagramie z kontem na Facebooku.\n"
+" Utwórz konto i upewnij się, że jest ono połączone z Twoim kontem."
 
 #. module: social_instagram
 #. odoo-python
@@ -494,8 +521,10 @@ msgstr "Twój obraz wydaje się być uszkodzony, spróbuj załadować go ponowni
 msgid ""
 "Your media didn't go through. This is usually caused by one of the following:"
 msgstr ""
+"Twoje pliki nie zostały przesłane. Zazwyczaj wynika to z jednej z "
+"następujących przyczyn:"
 
 #. module: social_instagram
 #: model_terms:ir.ui.view,arch_db:social_instagram.instagram_preview
 msgid "required aspect ratio"
-msgstr ""
+msgstr "wymagane proporcje obrazu"

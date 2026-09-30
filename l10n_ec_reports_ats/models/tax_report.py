@@ -52,7 +52,9 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
     def _generate_ats(self, options):
         # Generate ATS report
         # 2.1 Company information
-        company = self.env.company
+        report = self.env['account.report'].browse(options['report_id'])
+        company_ids = report.get_report_company_ids(options)
+        company = report._get_sender_company_for_export(options)
         if not company.account_fiscal_country_id.code == 'EC':
             raise ValidationError(_('This report is only available for Ecuadorian companies.'))
         date_start = fields.Date.to_date(options['date']['date_from'])
@@ -60,13 +62,13 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
 
         sale_journals = self.env['account.journal'].search([
             ('type', '=', 'sale'),
-            ('company_id', '=', company.id),
+            ('company_id', 'in', company_ids),
             ('l10n_ec_entity', '!=', False),
         ])
         num_estab_ruc = len(set(sale_journals.mapped('l10n_ec_entity')))
 
         values = {
-            'company': self.env.company,
+            'company': company,
             'latam_identification_type': self._l10n_ec_get_ats_identification_type_code(company.partner_id.l10n_latam_identification_type_id),
             'anio': date_finish.year,
             'mes': f'{date_finish.month:02}',
@@ -75,15 +77,15 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
         }
 
         # Purchase documents
-        purchase_vals, purchase_errors = self._get_purchase_values(date_start, date_finish)
-        sale_vals, sale_errors = self._get_sale_values(date_start, date_finish)
+        purchase_vals, purchase_errors = self._get_purchase_values(date_start, date_finish, company_ids)
+        sale_vals, sale_errors = self._get_sale_values(date_start, date_finish, company_ids)
         withhold_journals = self.env['account.journal'].search([
             ('type', '=', 'general'),
-            ('company_id', '=', company.id),
+            ('company_id', 'in', company_ids),
             ('l10n_ec_withhold_type', '=', 'in_withhold'),
         ]) # In withhold Journals
         journals = sale_journals + withhold_journals
-        void_moves = self._get_void_moves(date_start, date_finish, journals)
+        void_moves = self._get_void_moves(date_start, date_finish, journals, company_ids)
         values.update({
             'purchase_vals': purchase_vals,
             'void_moves': void_moves,
@@ -95,7 +97,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
         return self.env['ir.qweb']._render('l10n_ec_reports_ats.ats_report_template', values), errors
 
     @api.model
-    def _get_purchase_values(self, date_start, date_finish):
+    def _get_purchase_values(self, date_start, date_finish, company_ids):
         """ Provide the values for the purchase section.
         For this section, invoice lines are grouped by invoice and by tax support. """
 
@@ -114,8 +116,8 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
 
         # Get all VAT taxes, including the ones that are archived like 12% since 29/02/2024
         ec_vat_taxes = self.env['account.tax'].with_context(active_test=False).search([
+            *self.env['account.tax']._check_company_domain(company_ids),
             ('tax_group_id.l10n_ec_type', 'not in', (False, 'ice', 'irbpnr', 'other')),
-            ('company_id', '=', self.env.company.id),
         ])
 
         errors = []
@@ -128,7 +130,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
                 ('l10n_latam_document_type_id.code', 'in', LOCAL_PURCHASE_DOCUMENT_CODES),
                 ('date', '>=', date_start),
                 ('date', '<=', date_finish),
-                ('company_id', '=', self.env.company.id)
+                ('company_id', 'in', company_ids)
             ],
             order='invoice_date, move_type, l10n_latam_document_type_id, create_date',
         )
@@ -414,7 +416,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
             'ice_amount': 0.0,  # ICE is not supported yet
         }
 
-    def _get_void_moves(self, date_start, date_finish, journals):
+    def _get_void_moves(self, date_start, date_finish, journals, company_ids):
         # Creates the cancelled document section
         void_invoices = self.env['account.move'].search(
             [
@@ -424,7 +426,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
                 ('l10n_latam_document_type_id.code', 'in', SALE_DOCUMENT_CODES + LOCAL_PURCHASE_DOCUMENT_CODES),
                 ('date', '>=', date_start),
                 ('date', '<=', date_finish),
-                ('company_id', '=', self.env.company.id)
+                ('company_id', 'in', company_ids)
             ],
             order='invoice_date, move_type, l10n_latam_document_type_id, create_date',
         )
@@ -440,7 +442,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
                 ('date', '>=', date_start),
                 ('date', '<=', date_finish),
                 ('l10n_ec_authorization_number', '!=', False),
-                ('company_id', '=', self.env.company.id)
+                ('company_id', 'in', company_ids)
             ],
             order='invoice_date, move_type, l10n_latam_document_type_id, create_date',
         )
@@ -448,10 +450,10 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
         return void_moves
 
     @api.model
-    def _get_sale_values(self, date_start, date_finish):
+    def _get_sale_values(self, date_start, date_finish, company_ids):
         total_sales = 0.0
 
-        invoices_values, errors = self._get_invoices_values(date_start, date_finish)
+        invoices_values, errors = self._get_invoices_values(date_start, date_finish, company_ids)
         # Order sale invoice by partner RUC. _get_sales_info_by_partner groups invoices by partner vat.
         sale_vals, sales_info_errors = self._get_sales_info_by_partner(invoices_values)
         errors += sales_info_errors
@@ -465,7 +467,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
             # Get all the establishments registered at the SRI
             sale_journals = self.env['account.journal'].search([
                 ('type', '=', 'sale'),
-                ('company_id', '=', self.env.company.id),
+                ('company_id', 'in', company_ids),
                 ('l10n_ec_entity', '!=', False),
             ])
             entities = list(set(sale_journals.mapped('l10n_ec_entity')))
@@ -484,15 +486,15 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
         return values, errors
 
     @api.model
-    def _get_invoices_values(self, date_start, date_finish):
+    def _get_invoices_values(self, date_start, date_finish, company_ids):
 
         def get_ec_type(taxes):
             return (taxes & ec_vat_taxes).tax_group_id.l10n_ec_type or 'zero_vat'
 
         # Get all VAT taxes, including the ones that are archived like 12% since 29/02/2024
         ec_vat_taxes = self.env['account.tax'].with_context(active_test=False).search([
+            *self.env['account.tax']._check_company_domain(company_ids),
             ('tax_group_id.l10n_ec_type', 'not in', (False, 'ice', 'irbpnr', 'other')),
-            ('company_id', '=', self.env.company.id),
         ])
 
         errors = []
@@ -503,7 +505,7 @@ class L10nECTaxReportATSCustomHandler(models.AbstractModel):
                 ('l10n_latam_document_type_id.code', 'in', SALE_DOCUMENT_CODES),
                 ('date', '>=', date_start),
                 ('date', '<=', date_finish),
-                ('company_id', '=', self.env.company.id),
+                ('company_id', 'in', company_ids),
             ],
             order='partner_id, l10n_latam_document_type_id, invoice_date, l10n_ec_authorization_number, create_date',
         )

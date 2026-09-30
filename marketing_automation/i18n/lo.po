@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.saas~18+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-16 16:01+0000\n"
-"PO-Revision-Date: 2026-05-20 12:08+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-06-20 09:46+0000\n"
 "Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "marketing_automation/lo/>\n"
@@ -20,7 +20,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "\" <strong>bounced</strong>,"
+msgstr "\" <strong>ຕີກັບ</strong>,"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "\" did <strong>not receive a reply</strong>,"
+msgstr "\" <strong>ບໍ່ໄດ້ຮັບການຕອບກັບ</strong>,"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "\" gets clicked,"
+msgstr "\" ຖືກຄລິກ,"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "\" was <strong>not opened</strong>,"
+msgstr "\" <strong>ບໍ່ໄດ້ຖືກເປີດ</strong>,"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__link_tracker_click_count
@@ -58,6 +78,11 @@ msgid "# of test participants"
 msgstr "# ຂອງຜູ້ເຂົ້າຮ່ວມທົດສອບ"
 
 #. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "<br/>This activity will be"
+msgstr "<br/>ກິດຈະກໍານີ້ຈະຖືກ"
+
+#. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "<i class=\"fa fa-check-circle\"/> Bounced"
 msgstr "<i class=\"fa fa-check-circle\"/> ຕີກັບ (Bounced)"
@@ -79,7 +104,9 @@ msgstr "<i class=\"fa fa-check-circle\"/> ຕອບກັບແລ້ວ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "<i class=\"fa fa-clock-o pe-1\" role=\"img\" aria-label=\"Select time\" title=\"Select time\"/>"
+msgid ""
+"<i class=\"fa fa-clock-o pe-1\" role=\"img\" aria-label=\"Select time\" "
+"title=\"Select time\"/>"
 msgstr ""
 "<i class=\"fa fa-clock-o pe-1\" role=\"img\" aria-label=\"ເລືອກເວລາ\" "
 "title=\"ເລືອກເວລາ\"/>"
@@ -131,7 +158,11 @@ msgstr "<i class=\"fa fa-reply\"/> ຕອບກັບຫຼັງຈາກ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "<i data-trigger-type=\"activity\" class=\"fa fa-code-fork fa-rotate-180 fa-flip-vertical o_ma_text_processed o_add_child_activity text-success\" title=\"Add Another Activity\" role=\"img\" aria-label=\"Add Another Activity\"/>"
+msgid ""
+"<i data-trigger-type=\"activity\" class=\"fa fa-code-fork fa-rotate-180 fa-"
+"flip-vertical o_ma_text_processed o_add_child_activity text-success\" "
+"title=\"Add Another Activity\" role=\"img\" aria-label=\"Add Another "
+"Activity\"/>"
 msgstr ""
 "<i data-trigger-type=\"activity\" class=\"fa fa-code-fork fa-rotate-180 fa-"
 "flip-vertical o_ma_text_processed o_add_child_activity text-success\" "
@@ -139,8 +170,8 @@ msgstr ""
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
-msgid "<span class=\"col-2 px-0 pt-1\">after</span>"
-msgstr "<span class=\"col-2 px-0 pt-1\">ຫຼັງຈາກ</span>"
+msgid "<span class=\"d-inline-block w-25\">after</span>"
+msgstr "<span class=\"d-inline-block w-25\">ຫຼັງຈາກ</span>"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
@@ -150,11 +181,16 @@ msgstr "<span class=\"o_form_label\">ຂໍ້ມູນ (Record)</span>"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid ""
-"<span role=\"img\" title=\"Graph\" aria-label=\"Graph\" class=\"o_ma_activity_tab active\" data-tab-type=\"graph\">\n"
-"                                                            <i class=\"fa fa-pie-chart\"/>\n"
+"<span role=\"img\" title=\"Graph\" aria-label=\"Graph\" "
+"class=\"o_ma_activity_tab active\" data-tab-type=\"graph\">\n"
+"                                                            <i class=\"fa fa-"
+"pie-chart\"/>\n"
 "                                                        </span>\n"
-"                                                        <span title=\"Filter\" role=\"img\" aria-label=\"Filter\" class=\"o_ma_activity_tab\" data-tab-type=\"filter\">\n"
-"                                                            <i class=\"fa fa-filter\"/>\n"
+"                                                        <span "
+"title=\"Filter\" role=\"img\" aria-label=\"Filter\" "
+"class=\"o_ma_activity_tab\" data-tab-type=\"filter\">\n"
+"                                                            <i class=\"fa fa-"
+"filter\"/>\n"
 "                                                        </span>"
 msgstr ""
 "<span role=\"img\" title=\"ແຜນພູມ\" aria-label=\"ແຜນພູມ\" "
@@ -162,9 +198,9 @@ msgstr ""
 "                                                            <i class=\"fa fa-"
 "pie-chart\"/>\n"
 "                                                        </span>\n"
-"                                                        <span title=\"ຕົວກັ່ນຕອ"
-"ງ\" role=\"img\" aria-label=\"ຕົວກັ່ນຕອງ\" class=\"o_ma_activity_tab\" data-tab-"
-"type=\"filter\">\n"
+"                                                        <span "
+"title=\"ຕົວກັ່ນຕອງ\" role=\"img\" aria-label=\"ຕົວກັ່ນຕອງ\" "
+"class=\"o_ma_activity_tab\" data-tab-type=\"filter\">\n"
 "                                                            <i class=\"fa fa-"
 "filter\"/>\n"
 "                                                        </span>"
@@ -183,6 +219,15 @@ msgstr "<span>ກຳລັງດຳເນີນການ</span>"
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_kanban
 msgid "<span>Total</span>"
 msgstr "<span>ທັງໝົດ</span>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid ""
+"<strong>Summary</strong><br/>\n"
+"            Starting from"
+msgstr ""
+"<strong>ບົດສະຫຼຸບ</strong><br/>\n"
+"            ເລີ່ມຈາກ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -239,6 +284,11 @@ msgid "Activity Name"
 msgstr "ຊື່ກິດຈະກຳ"
 
 #. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__activity_summary
+msgid "Activity Summary"
+msgstr "ສະຫຼຸບກິດຈະກຳ"
+
+#. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__activity_type
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__activity_type
 msgid "Activity Type"
@@ -246,10 +296,30 @@ msgstr "ປະເພດກິດຈະກຳ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_activity__domain
-msgid "Activity will only be performed if record satisfies this domain, obtained from the combination of the activity filter and its inherited filter"
+msgid ""
+"Activity will only be performed if record satisfies this domain, obtained "
+"from the combination of the activity filter and its inherited filter"
 msgstr ""
-"ກິດຈະກຳຈະຖືກປະຕິບັດກໍຕໍ່ເມື່ອຂໍ້ມູນສອດຄ່ອງກັບໂດເມນນີ້, ເຊິ່ງໄດ້ມາຈາກການລວມກັນຂອງຕົວກອງກິດຈະກຳ ແລະ ຕົ"
-"ວກອງທີ່ສືບທອດມາ"
+"ກິດຈະກຳຈະຖືກປະຕິບັດກໍຕໍ່ເມື່ອຂໍ້ມູນສອດຄ່ອງກັບໂດເມນນີ້, ເຊິ່ງໄດ້ມາຈາກການລວມກັນຂອງຕົວກອງກິດຈະກຳ ແລະ "
+"ຕົວກອງທີ່ສືບທອດມາ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Add Hot Category"
+msgstr "ເພີ່ມໝວດໝູ່ທີ່ໜ້າສົນໃຈຫຼາຍ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Add Tag"
+msgstr "ເພີ່ມແທັກ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Add To Confirmed List"
+msgstr "ເພີ່ມເຂົ້າໃນລາຍຊື່ທີ່ຢືນຢັນແລ້ວ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -260,6 +330,23 @@ msgstr "ເພີ່ມກິດຈະກຳໃໝ່"
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
 msgid "Add to Templates"
 msgstr "ເພີ່ມເຂົ້າໃນແມ່ແບບ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Add to list"
+msgstr "ເພີ່ມເຂົ້າໃນລາຍຊື່"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
+msgid "Advanced"
+msgstr "ຂັ້ນສູງ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "After 7 days"
+msgstr "ຫຼັງຈາກ 7 ມື້"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_activity__allowed_parent_ids
@@ -282,6 +369,12 @@ msgid "Allows us to filter relevant Campaigns"
 msgstr "ອະນຸຍາດໃຫ້ພວກເຮົາກອງແຄມເປນທີ່ກ່ຽວຂ້ອງ"
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/wizard/marketing_campaign_test.py:0
+msgid "Another test has been launched for this participant"
+msgstr "ການທົດສອບອື່ນໄດ້ຖືກເລີ່ມຕົ້ນສຳລັບຜູ້ເຂົ້າຮ່ວມນີ້ແລ້ວ"
+
+#. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__domain
 msgid "Applied Filter"
 msgstr "ຕົວຕອງທີ່ນຳໃຊ້"
@@ -294,8 +387,10 @@ msgstr "ຈັດເກັບແລ້ວ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "Are you sure you want to proceed?"
-msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການດຳເນີນການຕໍ່?"
+msgid ""
+"Are you sure you want to create a new participant for each matching record "
+"that has not been used yet?"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການສ້າງຜູ້ເຂົ້າຮ່ວມໃໝ່ສຳລັບແຕ່ລະບັນທຶກທີ່ກົງກັນເຊິ່ງຍັງບໍ່ທັນໄດ້ຖືກນຳໃຊ້?"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
@@ -309,10 +404,24 @@ msgstr "ແຄມເປນທີ່ສ້າງຂຶ້ນໂດຍອັດຕ
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "Be aware that participants that had no more activities could be reintroduced into the campaign and new traces could be created for them."
+msgid ""
+"Be aware that participants that had no more activities could be reintroduced "
+"into the campaign and new traces could be created for them."
 msgstr ""
-"ໃຫ້ລະວັງວ່າຜູ້ເຂົ້າຮ່ວມທີ່ບໍ່ມີກິດຈະກຳອີກແລ້ວ ອາດຈະຖືກນຳກັບເຂົ້າມາໃນແຄມເປນຄືນໃໝ່ ແລະ ອາດຈະມີການສ້າງຮ່ອ"
-"ງຮອຍການຕິດຕາມໃໝ່ສຳລັບພວກເຂົາ."
+"ໃຫ້ລະວັງວ່າຜູ້ເຂົ້າຮ່ວມທີ່ບໍ່ມີກິດຈະກຳອີກແລ້ວ ອາດຈະຖືກນຳກັບເຂົ້າມາໃນແຄມເປນຄືນໃໝ່ ແລະ "
+"ອາດຈະມີການສ້າງຮ່ອງຮອຍການຕິດຕາມໃໝ່ສຳລັບພວກເຂົາ."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Blacklist Bounces"
+msgstr "ລາຍຊື່ດຳຂອງອີເມວທີ່ຖືກຕີກັບ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Blacklist record"
+msgstr "ບັນທຶກລາຍຊື່ດຳ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -364,15 +473,31 @@ msgstr "ຍົກເລີກຫຼັງຈາກ"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_trace__state__canceled
-msgid "Canceled"
+msgid "Cancelled"
 msgstr "ຍົກເລີກແລ້ວ"
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Check Bounce Contact"
+msgstr "ກວດສອບຜູ້ຕິດຕໍ່ທີ່ອີເມວຖືກຕີກັບ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Check Email Address"
+msgstr "ກວດສອບທີ່ຢູ່ອີເມວ"
+
+#. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_activity__validity_duration
-msgid "Check this to make sure your actions are not executed after a specific amount of time after the scheduled date. (e.g. Time-limited offer, Upcoming event, …)"
+msgid ""
+"Check this to make sure your actions are not executed after a specific "
+"amount of time after the scheduled date. (e.g. Time-limited offer, Upcoming "
+"event, …)"
 msgstr ""
-"ໝາຍເອົາບ່ອນນີ້ເພື່ອໃຫ້ແນ່ໃຈວ່າການດຳເນີນການຂອງທ່ານຈະບໍ່ຖືກປະຕິບັດ ຫຼັງຈາກຜ່ານໄລຍະເວລາໃດໜຶ່ງທີ່ກຳນົດໄ"
-"ວ້. (ຕົວຢ່າງ: ຂໍ້ສະເໜີທີ່ມີກຳນົດເວລາ, ກິດຈະກຳທີ່ກຳລັງຈະມາເຖິງ, ...)"
+"ໝາຍເອົາບ່ອນນີ້ເພື່ອໃຫ້ແນ່ໃຈວ່າການດຳເນີນການຂອງທ່ານຈະບໍ່ຖືກປະຕິບັດ "
+"ຫຼັງຈາກຜ່ານໄລຍະເວລາໃດໜຶ່ງທີ່ກຳນົດໄວ້. (ຕົວຢ່າງ: ຂໍ້ສະເໜີທີ່ມີກຳນົດເວລາ, "
+"ກິດຈະກຳທີ່ກຳລັງຈະມາເຖິງ, ...)"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__child_ids
@@ -383,11 +508,6 @@ msgstr "ກິດຈະກຳຍ່ອຍ"
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Clicked"
 msgstr "ຄລິກແລ້ວ"
-
-#. module: marketing_automation
-#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__links_click_datetime
-msgid "Clicked On"
-msgstr "ຄລິກເມື່ອ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -402,12 +522,14 @@ msgstr "ດັດຊະນີສີ"
 
 #. module: marketing_automation
 #: model_terms:ir.actions.act_window,help:marketing_automation.marketing_participants_action_reporting
-msgid "Come back later once your campaigns are running to overview your participants."
-msgstr ""
-"ກັບມາເບິ່ງໃໝ່ພາຍຫຼັງ ເມື່ອແຄມເປນຂອງທ່ານເລີ່ມເຮັດວຽກ ເພື່ອເບິ່ງພາບລວມຂອງຜູ້ເຂົ້າຮ່ວມ."
+msgid ""
+"Come back later once your campaigns are running to overview your "
+"participants."
+msgstr "ກັບມາເບິ່ງໃໝ່ພາຍຫຼັງ ເມື່ອແຄມເປນຂອງທ່ານເລີ່ມເຮັດວຽກ ເພື່ອເບິ່ງພາບລວມຂອງຜູ້ເຂົ້າຮ່ວມ."
 
 #. module: marketing_automation
-#: model:utm.campaign,title:marketing_automation.marketing_campaign_1_utm_campaign
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Commercial prospection"
 msgstr "ການຊອກຫາລູກຄ້າທາງການຄ້າ"
 
@@ -424,9 +546,48 @@ msgid "Configuration"
 msgstr "ການຕັ້ງຄ່າ"
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Confirmation"
+msgstr "ການຢືນຢັນ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Confirmed contacts"
+msgstr "ຜູ້ຕິດຕໍ່ທີ່ຢືນຢັນແລ້ວ"
+
+#. module: marketing_automation
+#. odoo-javascript
+#: code:addons/marketing_automation/static/src/components/campaign_template_picker_dialog/campaign_template_picker_dialog.xml:0
+msgid "Create Campaign"
+msgstr "ສ້າງແຄມເປນ"
+
+#. module: marketing_automation
 #: model_terms:ir.actions.act_window,help:marketing_automation.marketing_campaign_action
+msgid "Create a Campaign"
+msgstr "ສ້າງແຄມເປນ"
+
+#. module: marketing_automation
+#. odoo-javascript
+#: code:addons/marketing_automation/static/src/components/campaign_template_picker_dialog/campaign_template_picker_dialog.xml:0
 msgid "Create a Marketing Automation Campaign"
 msgstr "ສ້າງແຄມເປນການຕະຫຼາດອັດຕະໂນມັດ"
+
+#. module: marketing_automation
+#. odoo-javascript
+#: code:addons/marketing_automation/static/src/components/campaign_template_picker_dialog/campaign_template_picker_dialog.xml:0
+msgid "Create one or load a template prepared by our experts."
+msgstr "ສ້າງຂຶ້ນໃໝ່ ຫຼື ໂຫລດແມ່ແບບທີ່ກຽມໄວ້ໂດຍຜູ້ຊ່ຽວຊານຂອງພວກເຮົາ."
+
+#. module: marketing_automation
+#: model_terms:ir.actions.act_window,help:marketing_automation.marketing_campaign_action
+msgid ""
+"Create one or load a template prepared by our experts.<br>\n"
+"                            Then sit down and let Odoo handle the rest!"
+msgstr ""
+"ສ້າງຂຶ້ນໃໝ່ ຫຼື ໂຫລດແມ່ແບບທີ່ກຽມໄວ້ໂດຍຜູ້ຊ່ຽວຊານຂອງພວກເຮົາ.<br>\n"
+"                            ຈາກນັ້ນພັກຜ່ອນ ແລະ ໃຫ້ Odoo ຈັດການສ່ວນທີ່ເຫຼືອ!"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__create_uid
@@ -448,7 +609,8 @@ msgstr "ສ້າງເມື່ອ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_marketing_campaign__ab_testing_schedule_datetime
-msgid "Date that will be used to know when to determine and send the winner mailing"
+msgid ""
+"Date that will be used to know when to determine and send the winner mailing"
 msgstr "ວັນທີທີ່ຈະຖືກນຳໃຊ້ເພື່ອລະບຸ ແລະ ສົ່ງເມລຫາຜູ້ຊະນະ"
 
 #. module: marketing_automation
@@ -456,12 +618,6 @@ msgstr "ວັນທີທີ່ຈະຖືກນຳໃຊ້ເພື່ອລ
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__validity_duration_type__days
 msgid "Days"
 msgstr "ມື້"
-
-#. module: marketing_automation
-#: model_terms:ir.actions.act_window,help:marketing_automation.marketing_campaign_action
-msgid "Define workflows by chaining up activities and let Odoo handle the rest."
-msgstr ""
-"ກຳນົດຂະບວນການເຮັດວຽກໂດຍການເຊື່ອມຕໍ່ກິດຈະກຳຕ່າງໆ ແລະ ໃຫ້ Odoo ຈັດການສ່ວນທີ່ເຫຼືອ."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_type
@@ -478,13 +634,26 @@ msgstr "ລຶບ"
 #. module: marketing_automation
 #. odoo-javascript
 #: code:addons/marketing_automation/static/src/js/marketing_automation_one2many.js:0
-msgid "Deleting this activity will delete ALL its children activities. Are you sure?"
+msgid ""
+"Deleting this activity will delete ALL its children activities. Are you sure?"
 msgstr "ການລຶບກິດຈະກຳນີ້ຈະລຶບກິດຈະກຳຍ່ອຍທັງໝົດຂອງມັນ. ທ່ານແນ່ໃຈບໍ່?"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Design your own marketing campaign from the ground up."
+msgstr "ອອກແບບແຄມເປນການຕະຫຼາດຂອງທ່ານເອງຕັ້ງແຕ່ເລີ່ມຕົ້ນ."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__child_ids
 msgid "Direct child traces"
 msgstr "ຮ່ອງຮອຍການຕິດຕາມລູກໂດຍກົງ"
+
+#. module: marketing_automation
+#. odoo-javascript
+#: code:addons/marketing_automation/static/src/components/campaign_template_picker_dialog/campaign_template_picker_dialog.xml:0
+msgid "Discard"
+msgstr "ຖິ້ມ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__display_name
@@ -516,9 +685,10 @@ msgid "Don't update"
 msgstr "ບໍ່ຕ້ອງອັບເດດ"
 
 #. module: marketing_automation
-#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "Edit"
-msgstr "ແກ້ໄຂ"
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Double Opt-in"
+msgstr "ການຢືນຢັນແບບສອງຂັ້ນຕອນ (Double Opt-in)"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__activity_type__email
@@ -531,8 +701,8 @@ msgstr "ອີເມລ"
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
-msgid "Email canceled"
-msgstr "ອີເມລຖືກຍົກເລີກແລ້ວ"
+msgid "Email cancelled"
+msgstr "ອີເມວຖືກຍົກເລີກ"
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_mail_compose_message
@@ -564,6 +734,12 @@ msgstr "ຜິດພາດ! ທ່ານບໍ່ສາມາດສ້າງລ�
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
+msgid "Error! You can't modify the hierarchy of an active Activity."
+msgstr "ຂໍ້ຜິດພາດ! ທ່ານບໍ່ສາມາດແກ້ໄຂລໍາດັບຂັ້ນຂອງກິດຈະກໍາທີ່ກໍາລັງໃຊ້ງານຢູ່."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Exception in mass mailing: %s"
 msgstr "ຂໍ້ຍົກເວັ້ນໃນການສົ່ງເມລຈຳນວນຫຼາຍ: %s"
 
@@ -578,11 +754,6 @@ msgstr "ຂໍ້ຍົກເວັ້ນໃນການດຳເນີນກາ
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_trace_view_search
 msgid "Exclude Test"
 msgstr "ຍົກເວັ້ນການທົດສອບ"
-
-#. module: marketing_automation
-#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "Execute activities"
-msgstr "ດຳເນີນກິດຈະກຳ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
@@ -606,9 +777,13 @@ msgstr "ໂດເມນຂອງຕົວຕອງທີ່ມັກ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__domain
-#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Filter"
 msgstr "ຕົວຕອງ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Generate Participants"
+msgstr "ສ້າງຜູ້ເຂົ້າຮ່ວມ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -616,9 +791,23 @@ msgid "Generate participants"
 msgstr "ສ້າງຜູ້ເຂົ້າຮ່ວມ"
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Get 10% OFF"
+msgstr "ຮັບສ່ວນຫຼຸດ 10%"
+
+#. module: marketing_automation
 #: model_terms:ir.actions.act_window,help:marketing_automation.marketing_trace_action
-msgid "Here you will be able to check the results of your mailings from all Marketing Automation Campaigns."
+msgid ""
+"Here you will be able to check the results of your mailings from all "
+"Marketing Automation Campaigns."
 msgstr "ຢູ່ນີ້ທ່ານຈະສາມາດກວດສອບຜົນຂອງການສົ່ງເມລຈາກທຸກແຄມເປນການຕະຫຼາດອັດຕະໂນມັດ."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Hot"
+msgstr "ໜ້າສົນໃຈຫຼາຍ"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__interval_type__hours
@@ -644,6 +833,12 @@ msgstr "ແຄມເປນສົ່ງເມລຖືກເປີດໃຊ້ງ
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "It will be generated automatically once you save this record."
 msgstr "ມັນຈະຖືກສ້າງຂຶ້ນໂດຍອັດຕະໂນມັດເມື່ອທ່ານບັນທຶກຂໍ້ມູນນີ້."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Join partnership!"
+msgstr "ເຂົ້າຮ່ວມເປັນພັນທະມິດ!"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__write_uid
@@ -703,9 +898,15 @@ msgstr "ຕົວຕິດຕາມລິ້ງ"
 
 #. module: marketing_automation
 #: model_terms:ir.actions.act_window,help:marketing_automation.link_tracker_action_marketing_campaign
-msgid "Link Trackers are created when mailings with links are sent to track how many clicks they get."
-msgstr ""
-"ຕົວຕິດຕາມລິ້ງຖືກສ້າງຂຶ້ນເມື່ອສົ່ງເມລທີ່ມີລິ້ງ ເພື່ອຕິດຕາມເບິ່ງວ່າລິ້ງນັ້ນຖືກຄລິກຈັກຄັ້ງ."
+msgid ""
+"Link Trackers are created when mailings with links are sent to track how "
+"many clicks they get."
+msgstr "ຕົວຕິດຕາມລິ້ງຖືກສ້າງຂຶ້ນເມື່ອສົ່ງເມລທີ່ມີລິ້ງ ເພື່ອຕິດຕາມເບິ່ງວ່າລິ້ງນັ້ນຖືກຄລິກຈັກຄັ້ງ."
+
+#. module: marketing_automation
+#: model:ir.model.fields,field_description:marketing_automation.field_marketing_trace__links_click_datetime
+msgid "Links Click Datetime"
+msgstr "ວັນທີ ແລະ ເວລາທີ່ຄລິກລິ້ງ"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_category__email
@@ -780,6 +981,16 @@ msgid "Mailings"
 msgstr "ການສົ່ງເມລ"
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/mailing_mailing.py:0
+msgid ""
+"Mailings %(mailing_names)s are used in marketing campaigns. You should take "
+"care of this before unlinking the mailings."
+msgstr ""
+"ການສົ່ງເມວ %(mailing_names)s ແມ່ນຖືກນຳໃຊ້ໃນແຄມເປນການຕະຫຼາດ. "
+"ທ່ານຄວນຈັດການເລື່ອງນີ້ກ່ອນທີ່ຈະຍົກເລີກການເຊື່ອມຕໍ່ການສົ່ງເມວ."
+
+#. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Mails sent and not bounced"
 msgstr "ອີເມລທີ່ສົ່ງແລ້ວ ແລະ ບໍ່ໄດ້ຕີກັບ"
@@ -795,6 +1006,12 @@ msgstr "ດ້ວຍຕົນເອງ"
 #: code:addons/marketing_automation/models/marketing_participant.py:0
 msgid "Marked as completed"
 msgstr "ໝາຍວ່າສຳເລັດແລ້ວ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Marketing"
+msgstr "ການຕະຫຼາດ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_mailing_mailing__marketing_activity_ids
@@ -856,10 +1073,12 @@ msgstr "ການຕິດຕາມການຕະຫຼາດ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,help:marketing_automation.field_mailing_mailing__use_in_marketing_automation
-msgid "Marketing campaigns use mass mailings with some specific behavior; this field is used to indicate its statistics may be suspicious."
+msgid ""
+"Marketing campaigns use mass mailings with some specific behavior; this "
+"field is used to indicate its statistics may be suspicious."
 msgstr ""
-"ແຄມເປນການຕະຫຼາດໃຊ້ການສົ່ງເມລຈຳນວນຫຼາຍທີ່ມີພຶດຕິກຳສະເພາະບາງຢ່າງ; ຊ່ອງຂໍ້ມູນນີ້ໃຊ້ເພື່ອລະບຸວ່າສະຖິຕິຂອງ"
-"ມັນອາດຈະມີຄວາມໜ້າສົງໄສ."
+"ແຄມເປນການຕະຫຼາດໃຊ້ການສົ່ງເມລຈຳນວນຫຼາຍທີ່ມີພຶດຕິກຳສະເພາະບາງຢ່າງ; "
+"ຊ່ອງຂໍ້ມູນນີ້ໃຊ້ເພື່ອລະບຸວ່າສະຖິຕິຂອງມັນອາດຈະມີຄວາມໜ້າສົງໄສ."
 
 #. module: marketing_automation
 #: model:ir.model,name:marketing_automation.model_mailing_mailing
@@ -883,9 +1102,16 @@ msgid "Mass mailing statistics"
 msgstr "ສະຖິຕິການສົ່ງເມລຈຳນວນຫຼາຍ"
 
 #. module: marketing_automation
-#: model:ir.actions.server,name:marketing_automation.ir_action_server_action_message_sales_person
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Message for sales person"
 msgstr "ຂໍ້ຄວາມສຳລັບພະນັກງານຂາຍ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Misc"
+msgstr "ອື່ນໆ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__model_id
@@ -923,6 +1149,12 @@ msgstr "ຊື່"
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_search
 msgid "New"
 msgstr "ໃໝ່"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Next activity: Check Email Address"
+msgstr "ກິດຈະກຳຖັດໄປ: ກວດສອບທີ່ຢູ່ອີເມວ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
@@ -988,8 +1220,23 @@ msgstr "ຈຳນວນການຄລິກທີ່ເກີດຈາກແຄ
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__social_engagement
-msgid "Number of interactions (likes, shares, comments ...) with the social posts"
+msgid ""
+"Number of interactions (likes, shares, comments ...) with the social posts"
 msgstr "ຈຳນວນການມີສ່ວນຮ່ວມ (ໄລ້, ແຊຣ໌, ຄອມເມັ້ນ ...) ກັບໂພສໂຊຊຽວ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Offer free catalog"
+msgstr "ສະເໜີແຄັດຕາລັອກຟຣີ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/mailing_mailing.py:0
+msgid ""
+"Oops! You can't retry sending emails from inside a Marketing Automation "
+"campaign."
+msgstr "ອຸ້ຍ! ທ່ານບໍ່ສາມາດລອງສົ່ງອີເມວໃໝ່ຈາກພາຍໃນແຄມເປນການຕະຫຼາດອັດຕະໂນມັດໄດ້."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1076,23 +1323,23 @@ msgstr "ຜູ້ເຂົ້າຮ່ວມ"
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
-msgid "Participants of %s (%s)"
-msgstr "ຜູ້ເຂົ້າຮ່ວມຂອງ %s (%s)"
+msgid "Participants of %(activity)s (%(filter)s)"
+msgstr "ຜູ້ເຂົ້າຮ່ວມຂອງ %(activity)s (%(filter)s)"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
-msgid "Pick a Server Action"
-msgstr "ເລືອກການດຳເນີນການຂອງເຊີບເວີ"
-
-#. module: marketing_automation
-#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
-msgid "Pick a Template"
-msgstr "ເລືອກແມ່ແບບ"
+msgid "Pick a Server Action..."
+msgstr "ເລືອກການດຳເນີນການຂອງເຊີບເວີ..."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "Pick a record..."
 msgstr "ເລືອກຂໍ້ມູນ..."
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_view_form
+msgid "Pick or Create a Template..."
+msgstr "ເລືອກ ຫຼື ສ້າງແມ່ແບບ..."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_test_view_form
@@ -1209,9 +1456,20 @@ msgid "Responsible"
 msgstr "ຜູ້ຮັບຜິດຊອບ"
 
 #. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_participant_view_form
 msgid "Run"
 msgstr "ດຳເນີນການ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Run Activities"
+msgstr "ດຳເນີນກິດຈະກຳ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
+msgid "Run the next scheduled activity for each participant of this campaign?"
+msgstr "ດຳເນີນກິດຈະກຳທີ່ກຳນົດໄວ້ຖັດໄປສຳລັບຜູ້ເຂົ້າຮ່ວມແຕ່ລະຄົນຂອງແຄມເປນນີ້ບໍ່?"
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_campaign__state__running
@@ -1258,9 +1516,40 @@ msgid "Selection to determine the winner mailing that will be sent."
 msgstr "ການເລືອກເພື່ອລະບຸເມລຜູ້ຊະນະທີ່ຈະຖືກສົ່ງອອກໄປ."
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Send 10% Welcome Discount"
+msgstr "ສົ່ງສ່ວນຫຼຸດຕ້ອນຮັບ 10%"
+
+#. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__ab_testing_schedule_datetime
 msgid "Send Final On"
 msgstr "ສົ່ງຄັ້ງສຸດທ້າຍເມື່ອ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Send Welcome Email"
+msgstr "ສົ່ງອີເມວຕ້ອນຮັບ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Send a free catalog and follow-up according to reactions."
+msgstr "ສົ່ງແຄັດຕາລັອກຟຣີ ແລະ ຕິດຕາມຜົນຕາມການຕອບສະໜອງ."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Send a welcome email to contacts and tag them if they click in it."
+msgstr "ສົ່ງອີເມວຕ້ອນຮັບຫາຜູ້ຕິດຕໍ່ ແລະ ຕິດແທັກພວກເຂົາຫາກພວກເຂົາຄລິກໃສ່ມັນ."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid ""
+"Send a welcome email to new subscribers, remove the addresses that bounced."
+msgstr "ສົ່ງອີເມວຕ້ອນຮັບຫາຜູ້ຕິດຕາມໃໝ່, ລຶບທີ່ຢູ່ທີ່ຖືກຕີກັບອອກ."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_number
@@ -1271,6 +1560,12 @@ msgstr "ສົ່ງຫຼັງຈາກ"
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__interval_standardized
 msgid "Send after (in hours)"
 msgstr "ສົ່ງຫຼັງຈາກ (ເປັນຊົ່ວໂມງ)"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Send an email to new recipients to confirm their consent."
+msgstr "ສົ່ງອີເມວຫາຜູ້ຮັບໃໝ່ເພື່ອຢືນຢັນຄວາມຍິນຍອມຂອງພວກເຂົາ."
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
@@ -1290,10 +1585,12 @@ msgstr "ໂພສໂຊຊຽວມີເດຍ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
-msgid "Some participants are already running on this campaign. Click on 'Update' to apply the modifications you've just made."
+msgid ""
+"Some participants are already running on this campaign. Click on 'Update' to "
+"apply the modifications you've just made."
 msgstr ""
-"ມີຜູ້ເຂົ້າຮ່ວມບາງສ່ວນກຳລັງດຳເນີນການໃນແຄມເປນນີ້ແລ້ວ. ຄລິກທີ່ 'ອັບເດດ' ເພື່ອນຳໃຊ້ການປ່ຽນແປງທີ່ທ່ານຫາກໍ່ເ"
-"ຮັດ."
+"ມີຜູ້ເຂົ້າຮ່ວມບາງສ່ວນກຳລັງດຳເນີນການໃນແຄມເປນນີ້ແລ້ວ. ຄລິກທີ່ 'ອັບເດດ' "
+"ເພື່ອນຳໃຊ້ການປ່ຽນແປງທີ່ທ່ານຫາກໍ່ເຮັດ."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__source_id
@@ -1314,6 +1611,12 @@ msgstr "ຂັ້ນຕອນ"
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form
 msgid "Start"
 msgstr "ເລີ່ມ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Start from scratch"
+msgstr "ເລີ່ມຕົ້ນໃໝ່ແຕ່ທຳອິດ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__state
@@ -1351,16 +1654,6 @@ msgid "Stopped"
 msgstr "ຢຸດແລ້ວ"
 
 #. module: marketing_automation
-#: model:ir.model.fields,help:marketing_automation.field_marketing_trace__links_click_datetime
-msgid "Stores last click datetime in case of multi clicks."
-msgstr "ຈັດເກັບວັນເວລາທີ່ຄລິກຫຼ້າສຸດ ໃນກໍລະນີທີ່ມີການຄລິກຫຼາຍຄັ້ງ."
-
-#. module: marketing_automation
-#: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
-msgid "Subject"
-msgstr "ຫົວຂໍ້"
-
-#. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Success"
@@ -1369,15 +1662,23 @@ msgstr "ສຳເລັດ"
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
-msgid "Switching Target Model invalidates the existing activities. Either update your activity actions to match the new Target Model or delete them."
+msgid ""
+"Switching Target Model invalidates the existing activities. Either update "
+"your activity actions to match the new Target Model or delete them."
 msgstr ""
-"ການປ່ຽນໂມເດວເປົ້າໝາຍຈະເຮັດໃຫ້ກິດຈະກຳທີ່ມີຢູ່ໃຊ້ການບໍ່ໄດ້. ທ່ານຕ້ອງອັບເດດການດຳເນີນກິດຈະກຳຂອງທ່ານໃຫ້ສ"
-"ອດຄ່ອງກັບໂມເດວເປົ້າໝາຍໃໝ່ ຫຼື ລຶບພວກມັນອອກ."
+"ການປ່ຽນໂມເດວເປົ້າໝາຍຈະເຮັດໃຫ້ກິດຈະກຳທີ່ມີຢູ່ໃຊ້ການບໍ່ໄດ້. "
+"ທ່ານຕ້ອງອັບເດດການດຳເນີນກິດຈະກຳຂອງທ່ານໃຫ້ສອດຄ່ອງກັບໂມເດວເປົ້າໝາຍໃໝ່ ຫຼື ລຶບພວກມັນອອກ."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__require_sync
 msgid "Sync of participants is required"
 msgstr "ຈຳເປັນຕ້ອງຊິງໂຄຣໄນຜູ້ເຂົ້າຮ່ວມ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Tag Hot Contacts"
+msgstr "ຕິດແທັກຜູ້ຕິດຕໍ່ທີ່ໜ້າສົນໃຈຫຼາຍ"
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__tag_ids
@@ -1424,15 +1725,25 @@ msgstr "ການທົດສອບ"
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
-msgid "The saved filter targets different model and is incompatible with this campaign."
+msgid ""
+"The saved filter targets different model and is incompatible with this "
+"campaign."
 msgstr "ຕົວຕອງທີ່ບັນທຶກໄວ້ໃຊ້ກັບໂມເດວອື່ນ ແລະ ບໍ່ສາມາດໃຊ້ຮ່ວມກັບແຄມເປນນີ້ໄດ້."
+
+#. module: marketing_automation
+#. odoo-javascript
+#: code:addons/marketing_automation/static/src/components/campaign_template_picker_dialog/campaign_template_picker_dialog.xml:0
+msgid "Then sit down and let Odoo handle the rest!"
+msgstr "ຈາກນັ້ນພັກຜ່ອນ ແລະ ໃຫ້ Odoo ຈັດການສ່ວນທີ່ເຫຼືອ!"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
-msgid "To use this feature you should be an administrator or belong to the marketing automation group."
-msgstr ""
-"ເພື່ອໃຊ້ຟີເຈີນີ້ ທ່ານຄວນເປັນຜູ້ດູແລລະບົບ ຫຼື ຢູ່ໃນກຸ່ມການຕະຫຼາດອັດຕະໂນມັດ."
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid ""
+"To use this feature you should be an administrator or belong to the "
+"marketing automation group."
+msgstr "ເພື່ອໃຊ້ຟີເຈີນີ້ ທ່ານຄວນເປັນຜູ້ດູແລລະບົບ ຫຼື ຢູ່ໃນກຸ່ມການຕະຫຼາດອັດຕະໂນມັດ."
 
 #. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_activity__total_bounce
@@ -1561,6 +1872,18 @@ msgid "Weeks"
 msgstr "ອາທິດ"
 
 #. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Welcome Flow"
+msgstr "ຂັ້ນຕອນການຕ້ອນຮັບ"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_campaign.py:0
+msgid "Welcome!"
+msgstr "ຍິນດີຕ້ອນຮັບ!"
+
+#. module: marketing_automation
 #: model:ir.model.fields,field_description:marketing_automation.field_marketing_campaign__ab_testing_winner_selection
 msgid "Winner Selection"
 msgstr "ການເລືອກຜູ້ຊະນະ"
@@ -1580,33 +1903,37 @@ msgstr "ຂະບວນການເຮັດວຽກເລີ່ມເມື່
 #. odoo-python
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid ""
-"You are trying to set the activity \"%s\" as \"%s\" while its child \"%s\" has the trigger type \"%s\"\n"
+"You are trying to set the activity \"%(parent_activity)s\" as \"%"
+"(parent_type)s\" while its child \"%(activity)s\" has the trigger type \"%"
+"(trigger_type)s\"\n"
 "Please modify one of those activities before saving."
 msgstr ""
-"ທ່ານກຳລັງພະຍາຍາມຕັ້ງຄ່າກິດຈະກຳ \"%s\" ເປັນ \"%s\" ໃນຂະນະທີ່ກິດຈະກຳລູກ \"%s\" ມີປະເພດການກະ"
-"ຕຸ້ນເປັນ \"%s\".\n"
-"ກະລຸນາແກ້ໄຂໜຶ່ງໃນກິດຈະກຳເຫຼົ່ານັ້ນກ່ອນບັນທຶກ."
+"ທ່ານກຳລັງພະຍາຍາມຕັ້ງກິດຈະກຳ \"%(parent_activity)s\" ເປັນ \"%(parent_type)s\" "
+"ໃນຂະນະທີ່ກິດຈະກຳລູກຂອງມັນ \"%(activity)s\" ມີປະເພດຕົວກະຕຸ້ນເປັນ \"%(trigger_type)s\"\n"
+"ກະລຸນາແກ້ໄຂໜຶ່ງໃນກິດຈະກຳເຫຼົ່ານັ້ນກ່ອນທີ່ຈະບັນທຶກ."
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/utm_campaign.py:0
 msgid ""
-"You cannot delete these UTM Campaigns as they are linked to the following marketing campaigns in Marketing Automation:\n"
+"You cannot delete these UTM Campaigns as they are linked to the following "
+"marketing campaigns in Marketing Automation:\n"
 "%(campaign_names)s"
 msgstr ""
-"ທ່ານບໍ່ສາມາດລຶບ ແຄມເປນ UTM ເຫຼົ່ານີ້ໄດ້ ເພາະພວກມັນຖືກເຊື່ອມໂຍງກັບແຄມເປນການຕະຫຼາດຕໍ່ໄປນີ້ໃນ ການຕະຫຼ"
-"າດແບບອັດຕະໂນມັດ:\n"
+"ທ່ານບໍ່ສາມາດລຶບ ແຄມເປນ UTM ເຫຼົ່ານີ້ໄດ້ ເພາະພວກມັນຖືກເຊື່ອມໂຍງກັບແຄມເປນການຕະຫຼາດຕໍ່ໄປນີ້ໃນ "
+"ການຕະຫຼາດແບບອັດຕະໂນມັດ:\n"
 "%(campaign_names)s"
 
 #. module: marketing_automation
 #. odoo-python
 #: code:addons/marketing_automation/models/utm_source.py:0
 msgid ""
-"You cannot delete these UTM Sources as they are linked to the following marketing activities in Marketing Automation:\n"
+"You cannot delete these UTM Sources as they are linked to the following "
+"marketing activities in Marketing Automation:\n"
 "%(activities_names)s"
 msgstr ""
-"ທ່ານບໍ່ສາມາດລຶບ ແຫຼ່ງທີ່ມາ UTM ເຫຼົ່ານີ້ໄດ້ ເພາະພວກມັນຖືກເຊື່ອມໂຍງກັບກິດຈະກຳການຕະຫຼາດຕໍ່ໄປນີ້ໃນ ການຕະຫຼ"
-"າດແບບອັດຕະໂນມັດ:\n"
+"ທ່ານບໍ່ສາມາດລຶບ ແຫຼ່ງທີ່ມາ UTM ເຫຼົ່ານີ້ໄດ້ ເພາະພວກມັນຖືກເຊື່ອມໂຍງກັບກິດຈະກຳການຕະຫຼາດຕໍ່ໄປນີ້ໃນ "
+"ການຕະຫຼາດແບບອັດຕະໂນມັດ:\n"
 "%(activities_names)s"
 
 #. module: marketing_automation
@@ -1614,6 +1941,46 @@ msgstr ""
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "You must set up at least one activity to start this campaign."
 msgstr "ທ່ານຕ້ອງຕັ້ງຄ່າຢ່າງໜ້ອຍໜຶ່ງກິດຈະກຳເພື່ອເລີ່ມແຄມເປນນີ້."
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "after the <strong>Mailing</strong> sent by the Activity \""
+msgstr "ຫຼັງຈາກ <strong>ການສົ່ງເມວ</strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "after the <strong>beginning of the workflow</strong>,<br/>the"
+msgstr "ຫຼັງຈາກ <strong>ການເລີ່ມຕົ້ນຂອງຂັ້ນຕອນການເຮັດວຽກ</strong>,<br/>"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid ""
+"after the Participant <strong>clicked</strong>,<br/>on any link included in "
+"the <strong>Mailing</strong> sent by the Activity \""
+msgstr ""
+"ຫຼັງຈາກຜູ້ເຂົ້າຮ່ວມ <strong>ຄລິກ</strong>,<br/>ໃນລິ້ງໃດໜຶ່ງທີ່ລວມຢູ່ໃນ <strong>ການສົ່ງເມວ</"
+"strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid ""
+"after the Participant <strong>opened</strong> the <strong>Mailing</strong> "
+"sent by the Activity \""
+msgstr ""
+"ຫຼັງຈາກຜູ້ເຂົ້າຮ່ວມ <strong>ເປີດ</strong> <strong>ການສົ່ງເມວ</strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid ""
+"after the Participant <strong>replied</strong> to the <strong>Mailing</"
+"strong> sent by the Activity \""
+msgstr ""
+"ຫຼັງຈາກຜູ້ເຂົ້າຮ່ວມ <strong>ຕອບກັບ</strong> <strong>ການສົ່ງເມວ</strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "after the execution of the Activity \""
+msgstr "ຫຼັງຈາກການປະຕິບັດກິດຈະກຳ \""
 
 #. module: marketing_automation
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__activity
@@ -1624,6 +1991,11 @@ msgstr "ກິດຈະກຳອື່ນ"
 #: model:ir.model.fields.selection,name:marketing_automation.selection__marketing_activity__trigger_type__begin
 msgid "beginning of workflow"
 msgstr "ເລີ່ມຕົ້ນຂະບວນການເຮັດວຽກ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "cancelled, if"
+msgstr "ຖືກຍົກເລີກ, ຖ້າ"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_test_view_form
@@ -1641,6 +2013,91 @@ msgid "e.g. eCommerce Offers Plan"
 msgstr "ຕົວຢ່າງ: ແຜນຂໍ້ສະເໜີ eCommerce"
 
 #. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "have passed since the scheduled date."
+msgstr "ໄດ້ຜ່ານໄປແລ້ວນັບຕັ້ງແຕ່ວັນທີທີ່ກຳນົດໄວ້."
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid ""
+"if no link included in the <strong>Mailing</strong> sent by the Activity \""
+msgstr "ຫາກບໍ່ມີລິ້ງລວມຢູ່ໃນ <strong>ການສົ່ງເມວ</strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "if the <strong>Mailing</strong> sent by the Activity \""
+msgstr "ຫາກ <strong>ການສົ່ງເມວ</strong> ທີ່ສົ່ງໂດຍກິດຈະກຳ \""
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "run"
+msgstr "ດຳເນີນການ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "sent"
+msgstr "ສົ່ງແລ້ວ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "the"
+msgstr "ທີ່"
+
+#. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_test_view_form
 msgid "to generate a Test Participant"
 msgstr "ເພື່ອສ້າງຜູ້ເຂົ້າຮ່ວມທົດສອບ"
+
+#. module: marketing_automation
+#: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
+msgid "will be"
+msgstr "ຈະຖືກ"
+
+#~ msgid "<span class=\"col-2 px-0 pt-1\">after</span>"
+#~ msgstr "<span class=\"col-2 px-0 pt-1\">ຫຼັງຈາກ</span>"
+
+#~ msgid "Are you sure you want to proceed?"
+#~ msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການດຳເນີນການຕໍ່?"
+
+#~ msgid "Canceled"
+#~ msgstr "ຍົກເລີກແລ້ວ"
+
+#~ msgid "Clicked On"
+#~ msgstr "ຄລິກເມື່ອ"
+
+#~ msgid ""
+#~ "Define workflows by chaining up activities and let Odoo handle the rest."
+#~ msgstr "ກຳນົດຂະບວນການເຮັດວຽກໂດຍການເຊື່ອມຕໍ່ກິດຈະກຳຕ່າງໆ ແລະ ໃຫ້ Odoo ຈັດການສ່ວນທີ່ເຫຼືອ."
+
+#~ msgid "Edit"
+#~ msgstr "ແກ້ໄຂ"
+
+#~ msgid "Email canceled"
+#~ msgstr "ອີເມລຖືກຍົກເລີກແລ້ວ"
+
+#~ msgid "Execute activities"
+#~ msgstr "ດຳເນີນກິດຈະກຳ"
+
+#~ msgid "Participants of %s (%s)"
+#~ msgstr "ຜູ້ເຂົ້າຮ່ວມຂອງ %s (%s)"
+
+#~ msgid "Pick a Server Action"
+#~ msgstr "ເລືອກການດຳເນີນການຂອງເຊີບເວີ"
+
+#~ msgid "Pick a Template"
+#~ msgstr "ເລືອກແມ່ແບບ"
+
+#~ msgid "Stores last click datetime in case of multi clicks."
+#~ msgstr "ຈັດເກັບວັນເວລາທີ່ຄລິກຫຼ້າສຸດ ໃນກໍລະນີທີ່ມີການຄລິກຫຼາຍຄັ້ງ."
+
+#~ msgid "Subject"
+#~ msgstr "ຫົວຂໍ້"
+
+#~ msgid ""
+#~ "You are trying to set the activity \"%s\" as \"%s\" while its child "
+#~ "\"%s\" has the trigger type \"%s\"\n"
+#~ "Please modify one of those activities before saving."
+#~ msgstr ""
+#~ "ທ່ານກຳລັງພະຍາຍາມຕັ້ງຄ່າກິດຈະກຳ \"%s\" ເປັນ \"%s\" ໃນຂະນະທີ່ກິດຈະກຳລູກ \"%s\" "
+#~ "ມີປະເພດການກະຕຸ້ນເປັນ \"%s\".\n"
+#~ "ກະລຸນາແກ້ໄຂໜຶ່ງໃນກິດຈະກຳເຫຼົ່ານັ້ນກ່ອນບັນທຶກ."

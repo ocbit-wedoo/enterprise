@@ -301,6 +301,7 @@ class Envia:
                 'description': shorten(commodity.product_id.name, ENVIA_CONTENT_LENGTH_LIMIT, placeholder="..."),
                 'quantity': commodity.qty,
                 'price': unit_price_in_currency,
+                'weight': self.carrier._envia_convert_weight(commodity.product_id.weight),
             }
             if commodity.product_id.hs_code:
                 # Pass international information if it's necessary
@@ -724,8 +725,8 @@ class Envia:
             # not the city name. Keep the l10n_co_edi path as-is, otherwise rely
             # on Envia geocodes to avoid fabricating codes from the raw ZIP.
             zipcode = address_dict['postalCode']
-            if len(zipcode) == 5:
-                zipcode = zipcode.ljust(8, '0')
+            if len(zipcode) in [4, 5]:
+                zipcode = zipcode.rjust(5, '0').ljust(8, '0')
             address_dict['city'] = address_dict['postalCode'] = zipcode
 
         return address_dict

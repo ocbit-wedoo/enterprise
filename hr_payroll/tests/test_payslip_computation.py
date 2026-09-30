@@ -594,3 +594,34 @@ class TestPayslipComputation(TestPayslipContractBase):
             exp_days, exp_hours = expectations[payslip.name]
             self.assertAlmostEqual(line.number_of_days, exp_days, places=2, msg=f"Wrong days for {payslip.name}")
             self.assertAlmostEqual(line.number_of_hours, exp_hours, places=2, msg=f"Wrong hours for {payslip.name}")
+
+    def test_structure_without_worked_days_clears_lines(self):
+        '''Changing the structure type to one that does not use worked days lines should clear the worked days lines immediately.'''
+        no_worked_days_structure = self.env['hr.payroll.structure'].create({
+            'name': '13th Month Structure',
+            'type_id': self.developer_pay_structure.type_id.id,
+            'use_worked_day_lines': False,
+            'country_id': self.env.ref('base.be').id if self.env.ref('base.be', False) else False,
+        })
+
+        self.richard_payslip._compute_worked_days_line_ids()
+        self.assertTrue(
+            self.richard_payslip.worked_days_line_ids,
+            "Initial payslip should have worked day lines generated."
+        )
+
+        with Form(self.richard_payslip) as payslip_form:
+            payslip_form.struct_id = no_worked_days_structure
+
+        self.assertFalse(
+            self.richard_payslip.worked_days_line_ids,
+            "Worked days lines must be cleared immediately when switching to a structure with use_worked_day_lines=False."
+        )
+
+        with Form(self.richard_payslip) as payslip_form:
+            payslip_form.struct_id = self.developer_pay_structure
+
+        self.assertTrue(
+            self.richard_payslip.worked_days_line_ids,
+            "Worked days lines should be re-computed when switching back to a regular structure."
+        )

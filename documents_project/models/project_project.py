@@ -146,7 +146,8 @@ class ProjectProject(models.Model):
             self.documents_folder_id.sudo().name = vals['name']
 
         if new_visibility := vals.get('privacy_visibility'):
-            (self.documents_folder_id | self.document_ids).action_update_access_rights(
+            document_to_update = (self.documents_folder_id | self.document_ids).filtered(lambda doc: not doc.shortcut_document_id)
+            document_to_update.action_update_access_rights(
                 access_internal='none' if new_visibility == 'followers' else 'edit')
 
         res = super().write(vals)
@@ -195,18 +196,14 @@ class ProjectProject(models.Model):
 
     def action_view_documents_project(self):
         self.ensure_one()
-        action = self.env["ir.actions.actions"]._for_xml_id("documents.document_action")
-        return action | {
-            'view_mode': 'kanban,list',
-            'context': {
-                'active_id': self.id,
-                'active_model':  'project.project',
-                'default_res_id': self.id,
-                'default_res_model': 'project.project',
-                'no_documents_unique_folder_id': True,
-                'searchpanel_default_folder_id': self._get_document_folder().id,
-            }
+        action = self.documents_folder_id.get_formview_action()
+        action['context'] |= {
+            'active_id': self.id,
+            'active_model':  'project.project',
+            'default_res_id': self.id,
+            'default_res_model': 'project.project',
         }
+        return action
 
     def _get_document_access_ids(self):
         return False

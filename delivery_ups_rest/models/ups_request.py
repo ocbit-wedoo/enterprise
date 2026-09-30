@@ -95,6 +95,9 @@ class UPSRequest:
     def _clean_phone_number(self, phone):
         return re.sub('[^0-9]', '', phone)
 
+    def _check_phone_number(self, phone):
+        return 1 <= len(self._clean_phone_number(phone)) <= 15
+
     def _save_label(self, image64, label_file_type='GIF'):
         img_decoded = base64.decodebytes(image64.encode('utf-8'))
         if label_file_type == 'GIF':
@@ -132,8 +135,8 @@ class UPSRequest:
             res.append('ZIP code')
         if res:
             return _("The address of your company is missing or wrong.\n(Missing field(s) : %s)", ",".join(res))
-        if len(self._clean_phone_number(shipper.phone)) < 10:
-            return _("Shipper Phone must be at least 10 alphanumeric characters.")
+        if not self._check_phone_number(shipper.phone):
+            return _("Shipper Phone must be between 1 and 15 alphanumeric characters.")
         # Check required field for warehouse address
         res = [required_field[field] for field in required_field if not ship_from[field]]
         if ship_from.country_id.code in ('US', 'CA', 'IE') and not ship_from.state_id.code:
@@ -144,8 +147,8 @@ class UPSRequest:
             res.append('ZIP code')
         if res:
             return _("The address of your warehouse is missing or wrong.\n(Missing field(s) : %s)", ",".join(res))
-        if len(self._clean_phone_number(ship_from.phone)) < 10:
-            return _("Warehouse Phone must be at least 10 alphanumeric characters."),
+        if not self._check_phone_number(ship_from.phone):
+            return _("Warehouse Phone must be between 1 and 15 alphanumeric characters.")
         # Check required field for recipient address
         res = [required_field[field] for field in required_field if field != 'phone' and not ship_to[field]]
         if ship_to.country_id.code in ('US', 'CA', 'IE') and not ship_to.state_id.code:
@@ -179,8 +182,8 @@ class UPSRequest:
             res.append('Phone')
         if res:
             return _("The recipient address is missing or wrong.\n(Missing field(s) : %s)", ",".join(res))
-        if phone and len(self._clean_phone_number(phone)) < 10:
-            return _("Recipient Phone must be at least 10 alphanumeric characters."),
+        if phone and not self._check_phone_number(phone):
+            return _("Recipient Phone must be between 1 and 15 alphanumeric characters.")
         return False
 
     def _set_package_details(self, packages, carrier, ship_from, ship_to, cod_info, ship=False, is_return=False):
@@ -309,6 +312,7 @@ class UPSRequest:
             'alert_message': self._process_alerts(res['RateResponse']['Response']),
         }
 
+    # NOTE: `ship_to` should actually be the invoicing partner_id and not the delivery partner_id
     def _set_invoice(self, shipment_info, commodities, ship_to, is_return):
         invoice_products = []
         for commodity in commodities:
@@ -332,7 +336,7 @@ class UPSRequest:
         contacts = {
             'SoldTo': {
                 'Name': ship_to.commercial_partner_id.name,
-                'AttentionName': ship_to.name,
+                'AttentionName': ship_to.name or ship_to.commercial_partner_id.name,
                 'Address': {
                     'AddressLine': [line for line in (ship_to.street, ship_to.street2) if line],
                     'City': ship_to.city,
@@ -377,8 +381,21 @@ class UPSRequest:
             })
         shipment_service_options = {}
         if shipment_info.get('require_invoice'):
+            picking = packages[0].picking_id
+            if picking.sale_id:
+                sold_to = picking.sale_id.partner_invoice_id
+            else:
+                sold_to = ship_to.commercial_partner_id
+            if sold_to.country_id != ship_to.country_id:
+                msg = _('Detected a problem when validating delivery %(delivery_name)s. Invoicing address of the commercial invoice has been defaulted to %(ship_to_partner)s instead of %(sold_to_partner)s to avoid the following error from UPS: "The Sold To party\'s country code must be the same as the Ship To party\'s country code with the exception of Canada and satellite countries."', delivery_name=picking._get_html_link(), ship_to_partner=ship_to._get_html_link(), sold_to_partner=sold_to._get_html_link())
+                record_to_notify = picking.sale_id or picking
+                record_to_notify.message_post(
+                    body=msg,
+                    message_type='notification',
+                )
+                sold_to = ship_to
             shipment_service_options['InternationalForms'] = self._set_invoice(shipment_info, [c for pkg in packages for c in pkg.commodities],
-                                                                               ship_to, is_return)
+                                                                               sold_to, is_return)
             shipment_service_options['InternationalForms']['PurchaseOrderNumber'] = shipment_info.get('purchase_order_number')
             shipment_service_options['InternationalForms']['TermsOfShipment'] = shipment_info.get('terms_of_shipment')
             shipment_service_options['InternationalForms']['FreightCharges'] = {'MonetaryValue': float_repr(shipment_info.get('freight_charge', 0.0), 2)}

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-01-31 09:15+0000\n"
+"PO-Revision-Date: 2026-09-04 08:44+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "quality_control/ja/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
@@ -378,7 +378,7 @@ msgstr "現在のチェック"
 #: model:ir.model.fields,field_description:quality_control.field_quality_check_spreadsheet__current_revision_uuid
 #: model:ir.model.fields,field_description:quality_control.field_quality_spreadsheet_template__current_revision_uuid
 msgid "Current Revision Uuid"
-msgstr "現在の改訂Uuid"
+msgstr "現在のリビジョンUUID"
 
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_spreadsheet_template_view_list
@@ -620,7 +620,7 @@ msgstr "最終更新日"
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
 msgid "Late Activities"
-msgstr "遅れた活動"
+msgstr "期限超過の活動"
 
 #. module: quality_control
 #: model:ir.model.fields,field_description:quality_control.field_quality_check__lot_line_id
@@ -673,7 +673,7 @@ msgstr "最大許容値"
 #: model:quality.point.test_type,name:quality_control.test_type_measure
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
 msgid "Measure"
-msgstr "測定"
+msgstr "測定値"
 
 #. module: quality_control
 #: model:ir.model.fields,field_description:quality_control.field_quality_point__measure_frequency_unit
@@ -790,7 +790,7 @@ msgstr "メモ"
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_form
 msgid "Notes"
-msgstr "ノート"
+msgstr "メモ"
 
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_check_wizard_form_failure
@@ -934,7 +934,7 @@ msgstr "プロダクト"
 #. module: quality_control
 #: model:ir.model,name:quality_control.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr "プロダクトの移動(在庫移動ライン)"
+msgstr "プロダクト移動(在庫移動明細行)"
 
 #. module: quality_control
 #: model:ir.model.fields,field_description:quality_control.field_quality_check__uom_id
@@ -1461,7 +1461,7 @@ msgstr "件名"
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_check_view_search
 msgid "Today Activities"
-msgstr "本日の活動"
+msgstr "今日の活動"
 
 #. module: quality_control
 #: model_terms:ir.ui.view,arch_db:quality_control.quality_point_view_form_inherit_quality_control
@@ -1564,8 +1564,7 @@ msgstr "品質検査メモを書く..."
 #: code:addons/quality_control/wizard/on_demand_quality_check_wizard.py:0
 msgid ""
 "You can not create quality check for a draft, done or cancelled transfer."
-msgstr ""
-"ドラフト、完了済、取消済の運送に対して品質検査を作成することはできません。"
+msgstr "下書き、完了済、取消済の運送に対して品質検査を作成することはできません。"
 
 #. module: quality_control
 #. odoo-python

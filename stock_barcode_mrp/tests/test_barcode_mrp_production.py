@@ -1,6 +1,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import Command
+from odoo.tools import mute_logger
 from odoo.tests import Form, tagged
 from odoo.addons.stock_barcode.tests.test_barcode_client_action import TestBarcodeClientAction
 
@@ -327,6 +328,10 @@ class TestMRPBarcodeClientAction(TestBarcodeClientAction):
 
         url = f'/odoo/{mo.id}/action-stock_barcode_mrp.stock_barcode_mo_client_action?debug=assets'
         self.start_tour(url, 'test_mo_scrap_digipad_view', login='admin', timeout=180)
+
+        # Run same test without existing MO
+        url = '/odoo/action-stock_barcode_mrp.stock_barcode_mo_client_action'
+        self.start_tour(url, 'test_mo_scrap_digipad_view', login='admin')
 
     def test_barcode_production_components_reservation_state(self):
         """ When components are unreserved, they should not be visible in the
@@ -876,6 +881,7 @@ class TestMRPBarcodeClientAction(TestBarcodeClientAction):
         self.start_tour(url, 'test_add_product_with_different_uom', login='admin')
         self.assertEqual(mo.state, "done")
 
+    @mute_logger('odoo.http')
     def test_not_allowing_component_lot_creation(self):
         """
         Check that you can not assign nonexistent lots to components of an MO

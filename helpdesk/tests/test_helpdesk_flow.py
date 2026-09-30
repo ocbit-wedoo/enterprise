@@ -821,15 +821,27 @@ should be in the ticket's description
                         self.env.ref('base.group_partner_manager').id])],
         })
 
-        self.assertFalse(self.helpdesk_user.partner_id.phone)
-        ticket = self.env['helpdesk.ticket'].with_user(user).create({
+        self.helpdesk_user.partner_id.phone = '123'
+
+        # An internal user can create a ticket using another internal user as customer
+        self.env['helpdesk.ticket'].with_user(user).create({
             'name': 'test ticket 1',
             'team_id': self.test_team.id,
             'partner_id': self.helpdesk_user.partner_id.id,
-            'partner_phone': '123'
         })
-        self.assertEqual(self.helpdesk_user.partner_id.phone, ticket.partner_phone)
-        ticket = self.env['helpdesk.ticket'].with_user(self.helpdesk_user).create({
+
+        # An internal user cannot overwrite the phone number of another internal user
+        with self.assertRaises(AccessError):
+            self.env['helpdesk.ticket'].with_user(user).create({
+                'name': 'test ticket 1',
+                'team_id': self.test_team.id,
+                'partner_id': self.helpdesk_user.partner_id.id,
+                'partner_phone': '456',
+            })
+
+        # An internal user can create a ticket using another internal user as customer with an empty phone number
+        # and it must not remove the phone number of the other internal user
+        self.env['helpdesk.ticket'].with_user(self.helpdesk_user).create({
             'name': 'test ticket 2',
             'team_id': self.test_team.id,
             'partner_id': self.helpdesk_user.partner_id.id,
@@ -1021,3 +1033,13 @@ should be in the ticket's description
             datetime(2024, 6, 1, 10, 0, 0),
             "Ticket created in a closed stage should have close_date set to the current datetime"
         )
+
+    def test_get_empty_list_context_pollution(self):
+        """ Test that context pollution from another model doesn't crash the ticket view action. """
+        team = self.env['helpdesk.team'].create({'name': 'Test Team'})
+        bad_context = {
+            'active_model': 'mail.alias',
+            'active_id': 9999,
+        }
+        action = team.with_context(bad_context).action_view_ticket()
+        self.assertEqual(action.get('type'), 'ir.actions.act_window')

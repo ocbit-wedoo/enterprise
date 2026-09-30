@@ -38,7 +38,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-15 17:52+0000\n"
-"PO-Revision-Date: 2026-04-29 19:18+0000\n"
+"PO-Revision-Date: 2026-08-12 07:12+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "hr_contract_salary/fi/>\n"
@@ -47,7 +47,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_contract_salary
 #: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_personal_info__impacts_net_salary
@@ -561,7 +561,7 @@ msgstr "Kontakti"
 #. odoo-python
 #: code:addons/hr_contract_salary/models/hr_contract_salary_offer.py:0
 msgid "Contact Email"
-msgstr "Kontaktin sähköpostiosoite"
+msgstr "Yhteystiedon sähköposti"
 
 #. module: hr_contract_salary
 #. odoo-python
@@ -613,13 +613,13 @@ msgstr "Sopimuksen alkamispäivä"
 #: model:ir.model.fields,field_description:hr_contract_salary.field_hr_job__default_contract_id
 #: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_salary_offer_view_search
 msgid "Contract Template"
-msgstr "Sopimusmalli"
+msgstr "Sopimuspohja"
 
 #. module: hr_contract_salary
 #: model:ir.actions.act_window,name:hr_contract_salary.action_hr_contract_templates
 #: model:ir.ui.menu,name:hr_contract_salary.hr_recruitment_menu_contract_templates
 msgid "Contract Templates"
-msgstr "Sopimusmallit"
+msgstr "Sopimuspohjat"
 
 #. module: hr_contract_salary
 #. odoo-python
@@ -917,7 +917,7 @@ msgstr "Doctor"
 #. module: hr_contract_salary
 #: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_personal_info__display_type__document
 msgid "Document"
-msgstr "Dokumentti"
+msgstr "Asiakirja"
 
 #. module: hr_contract_salary
 #: model:ir.model.fields,help:hr_contract_salary.field_hr_contract_salary_benefit__sign_template_id
@@ -1711,7 +1711,7 @@ msgstr "Muu"
 #. module: hr_contract_salary
 #: model_terms:ir.ui.view,arch_db:hr_contract_salary.hr_contract_view_form
 msgid "PDF Template"
-msgstr "PDF malli"
+msgstr "PDF-mallipohja"
 
 #. module: hr_contract_salary
 #: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__parent_id
@@ -1811,7 +1811,7 @@ msgstr "Syntymäpaikka"
 #. module: hr_contract_salary
 #: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__placeholder
 msgid "Placeholder"
-msgstr "Paikanpitäjä"
+msgstr "Paikkamerkki"
 
 #. module: hr_contract_salary
 #: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_salary_personal_info__position
@@ -2337,7 +2337,7 @@ msgstr "Allekirjoitettava malli"
 #. module: hr_contract_salary
 #: model:ir.ui.menu,name:hr_contract_salary.hr_menu_contract_templates
 msgid "Templates"
-msgstr "Mallit"
+msgstr "Mallipohjat"
 
 #. module: hr_contract_salary
 #: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_benefit__display_type__text
@@ -2590,7 +2590,7 @@ msgstr "Kirjoita viestisi tähän, niin palaamme asiaan."
 #: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_benefit_type__periodicity__yearly
 #: model:ir.model.fields.selection,name:hr_contract_salary.selection__hr_contract_salary_resume_category__periodicity__yearly
 msgid "Yearly"
-msgstr "Vuosittainen"
+msgstr "Vuosittain"
 
 #. module: hr_contract_salary
 #: model:ir.model.fields,field_description:hr_contract_salary.field_hr_contract_history__reference_yearly_cost

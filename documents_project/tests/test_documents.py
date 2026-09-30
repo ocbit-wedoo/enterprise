@@ -256,6 +256,29 @@ class TestDocumentsBridgeProject(TestProjectCommon, TransactionCaseDocuments):
         project.use_documents = True
         self.assertEqual(documents_folder, project.documents_folder_id, "No workspace should be created when enablind the documents feature if the project already has a workspace")
 
+    def test_change_visibility_updates_document_access(self):
+        """Changing project visibility updates document access when its folder
+        contains a shortcut."""
+        folder = self.project_pigs.documents_folder_id
+        document = self.env['documents.document'].create({
+            'datas': TEXT,
+            'name': 'in_folder.txt',
+            'mimetype': 'text/plain',
+            'folder_id': folder.id,
+        })
+        shortcut = self.document_txt_2.action_create_shortcut(location_folder_id=folder.id)
+        self.assertEqual(shortcut.folder_id, folder)
+        self.assertEqual(folder.access_internal, 'edit')
+        self.assertEqual(document.access_internal, 'edit')
+        self.assertEqual(shortcut.access_internal, 'view')
+        self.assertEqual(self.document_txt_2.access_internal, 'view')
+
+        self.project_pigs.privacy_visibility = 'followers'
+        self.assertEqual(folder.access_internal, 'none')
+        self.assertEqual(document.access_internal, 'none')
+        self.assertEqual(shortcut.access_internal, 'view')
+        self.assertEqual(self.document_txt_2.access_internal, 'view')
+
     def test_project_task_access_document(self):
         """
         Tests that 'MissingRecord' error should not be rasied when trying to switch

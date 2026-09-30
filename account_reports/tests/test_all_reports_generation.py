@@ -53,7 +53,10 @@ class TestAllReportsGeneration(AccountTestInvoicingCommon):
             'AU': {'vat': '11225459588', 'street': 'Arrow Street', 'zip': '1348', 'city': 'Starling City', 'state_id': self.env.ref('base.state_au_1').id},
             'DE': {'vat': 'DE123456788', 'l10n_de_stnr': '151/815/08156', 'state_id': self.env.ref('base.state_de_th').id},
             'NO': {'vat': 'NO123456785', 'l10n_no_bronnoysund_number': '987654325'},
-            'PL': {'l10n_pl_reports_tax_office_id': l10n_pl_reports_tax_office and l10n_pl_reports_tax_office.id},
+            'PL': {
+                'vat': 'PL1234567883',
+                'l10n_pl_reports_tax_office_id': l10n_pl_reports_tax_office and l10n_pl_reports_tax_office.id,
+            },
             'BD': {'l10n_bd_corporate_tax_liability': l10n_bd_corporate_tax_liability, 'l10n_bd_corporate_tax_expense': l10n_bd_corporate_tax_liability},
             'AE': {'l10n_ae_tax_report_liabilities_account': l10n_ae_liability_account, 'l10n_ae_tax_report_counterpart_account': l10n_ae_liability_account},
             'CZ': {'l10n_cz_tax_office_id': l10n_cz_reports_tax_office and l10n_cz_reports_tax_office.id}

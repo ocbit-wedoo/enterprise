@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* appointment_account_payment
+# * appointment_account_payment
 #
 # Translators:
 # Igor Sheludko <igor.sheludko@gmail.com>, 2024
@@ -18,20 +18,22 @@
 # Margarita Katzeva, 2024
 # Milena Georgieva, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Maria Boyadjieva <marabo2000@gmail.com>, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-04 03:11+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"appointment_account_payment/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment_account_payment
 #. odoo-python
@@ -60,7 +62,7 @@ msgstr "Срещата запазена!"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "<i class=\"fa fa-pencil fa-fw me-1\"/>Edit my appointment"
-msgstr ""
+msgstr "<i class=\"fa fa-pencil fa-fw me-1\"/>Редактиране на моята среща"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
@@ -68,12 +70,13 @@ msgid ""
 "<i class=\"fa fa-pencil-square-o text-warning me-3\"/>Appointment waiting "
 "for payment"
 msgstr ""
+"<i class=\"fa fa-pencil-square-o text-warning me-3\"/>Среща, чакаща плащане"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
 msgid ""
 "<i class=\"fa fa-times-circle text-danger me-3\"/>Appointment Unavailable!"
-msgstr ""
+msgstr "<i class=\"fa fa-times-circle text-danger me-3\"/>Срещата е недостъпна!"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_type_view_form
@@ -81,6 +84,8 @@ msgid ""
 "<i class=\"oi oi-fw o_button_icon oi-arrow-right\"/> Configure Payment "
 "Providers"
 msgstr ""
+"<i class=\"oi oi-fw o_button_icon oi-arrow-right\"/> Конфигуриране на "
+"доставчици на плащане"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_type_view_form
@@ -103,6 +108,9 @@ msgid ""
 "            <span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-"
 "muted fs-5\"/>"
 msgstr ""
+"<span>Плащане</span>\n"
+"            <span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-"
+"muted fs-5\"/>"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
@@ -110,16 +118,18 @@ msgid ""
 "<strong>Warning</strong> Make sure you are logged in as the right partner "
 "before making this payment."
 msgstr ""
+"<strong>Внимание</strong> Уверете се, че сте влезли като правилния партньор, "
+"преди да извършите това плащане."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "<strong>Warning</strong> The currency is missing or incorrect."
-msgstr ""
+msgstr "<strong>Внимание</strong> Валутата липсва или е неправилна."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "<strong>Warning</strong> You must be logged in to pay."
-msgstr ""
+msgstr "<strong>Внимание</strong> Трябва да сте влезли, за да платите."
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__booking_token
@@ -129,7 +139,7 @@ msgstr "Токен за достъп"
 #. module: appointment_account_payment
 #: model:ir.model.constraint,message:appointment_account_payment.constraint_appointment_type_check_product_and_payment_step
 msgid "Activating the payment step requires a product"
-msgstr ""
+msgstr "Активирането на стъпката за плащане изисква продукт"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
@@ -144,7 +154,7 @@ msgstr "Отговори"
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_appointment_answer_input
 msgid "Appointment Answer Inputs"
-msgstr ""
+msgstr "Входове за отговори при запис"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__appointment_answer_input_ids
@@ -159,7 +169,7 @@ msgstr "Покана за среща"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__account_move_id
 msgid "Appointment Invoice"
-msgstr ""
+msgstr "Фактура за среща"
 
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_appointment_type
@@ -170,7 +180,7 @@ msgstr "Тип среща"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__asked_capacity
 msgid "Asked Capacity"
-msgstr ""
+msgstr "Заявен капацитет"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
@@ -185,17 +195,17 @@ msgstr "Резервация"
 #. module: appointment_account_payment
 #: model:product.template,name:appointment_account_payment.default_booking_product_product_template
 msgid "Booking Fees"
-msgstr ""
+msgstr "Такси за резервация"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__booking_line_ids
 msgid "Booking Lines"
-msgstr ""
+msgstr "Редове на резервацията"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__product_id
 msgid "Booking Product"
-msgstr ""
+msgstr "Продукт за резервация"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_answer_input__calendar_event_id
@@ -250,6 +260,8 @@ msgid ""
 "Discover the secrets kept in high-end kitchens with one of our starred "
 "chefs, from the comfort of your own home."
 msgstr ""
+"Открийте тайните на висококласните кухни с някой от нашите отличени готвачи, "
+"без да напускате дома си."
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__display_name
@@ -282,7 +294,7 @@ msgstr "ID"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__not_available
 msgid "Is Not Available"
-msgstr ""
+msgstr "Не е наличен"
 
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_account_move
@@ -325,7 +337,7 @@ msgstr "Среща"
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_answer_input__calendar_booking_id
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking_line__calendar_booking_id
 msgid "Meeting Booking"
-msgstr ""
+msgstr "Резервация на среща"
 
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_calendar_booking_line
@@ -341,7 +353,7 @@ msgstr "Онлайн урок по готварство"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
 msgid "Oops! Paid appointment cannot be cancelled via our website.<br/>"
-msgstr ""
+msgstr "Опа! Платена среща не може да бъде отменена през нашия уебсайт.<br/>"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__staff_user_id
@@ -352,28 +364,28 @@ msgstr "Оператор"
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Paid Consultation"
-msgstr ""
+msgstr "Платена консултация"
 
 #. module: appointment_account_payment
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Paid Seats"
-msgstr ""
+msgstr "Платени места"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "Payment for \""
-msgstr ""
+msgstr "Плащане за \""
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_type_view_form
 msgid "Pick a Product"
-msgstr ""
+msgstr "Изберете продукт"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_form
 msgid "Proceed to Payment"
-msgstr ""
+msgstr "Към плащане"
 
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_product_template
@@ -389,7 +401,7 @@ msgstr "Продуктов вариант"
 #. module: appointment_account_payment
 #: model:ir.model.fields,help:appointment_account_payment.field_appointment_type__has_payment_step
 msgid "Require visitors to pay to confirm their booking"
-msgstr ""
+msgstr "Изисквайте от посетителите да платят, за да потвърдят резервацията си"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking_line__appointment_resource_id
@@ -406,7 +418,7 @@ msgstr "Ресурси"
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Room %s"
-msgstr ""
+msgstr "Зала %s"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__product_lst_price
@@ -441,6 +453,7 @@ msgstr ""
 #: model:ir.model.constraint,message:appointment_account_payment.constraint_appointment_answer_input_check_event_or_booking
 msgid "The answer inputs must be linked to a meeting or to a booking"
 msgstr ""
+"Входящите данни за отговори трябва да са свързани със среща или с резервация"
 
 #. module: appointment_account_payment
 #. odoo-python
@@ -449,6 +462,8 @@ msgid ""
 "The following booking was not confirmed due to insufficient availability or "
 "configuration changes: %s"
 msgstr ""
+"Следната резервация не беше потвърдена поради недостатъчна наличност или "
+"промени в конфигурацията: %s"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,help:appointment_account_payment.field_appointment_type__product_lst_price
@@ -456,31 +471,34 @@ msgid ""
 "The sale price is managed from the product template. Click on the 'Configure "
 "Variants' button to set the extra attribute prices."
 msgstr ""
+"Продажната цена се управлява от шаблона на продукта. Кликнете върху бутона „"
+"Конфигуриране на варианти“, за да зададете цените на допълнителните атрибути."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "There is nothing to pay."
-msgstr ""
+msgstr "Няма нищо за плащане."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "This invoice is already paid for."
-msgstr ""
+msgstr "Тази фактура вече е платена."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "This is a preview of the customer appointment payment form."
 msgstr ""
+"Това е предварителен преглед на формуляра за плащане на клиентска среща."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
 msgid "To make any changes, please contact"
-msgstr ""
+msgstr "За да направите промени, моля свържете се с"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
 msgid "To make any changes, please contact us."
-msgstr ""
+msgstr "За да направите промени, моля свържете се с нас."
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
@@ -488,11 +506,13 @@ msgid ""
 "Unfortunately, it looks like this booking is not possible anymore. Please "
 "contact us to find an alternative."
 msgstr ""
+"За съжаление изглежда, че тази резервация вече не е възможна. Моля, свържете "
+"се с нас, за да намерим алтернатива."
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__has_payment_step
 msgid "Up-front Payment"
-msgstr ""
+msgstr "Авансово плащане"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
@@ -502,14 +522,14 @@ msgstr "Кога"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
 msgid "Where"
-msgstr ""
+msgstr "Къде"
 
 #. module: appointment_account_payment
 #. odoo-python
 #: code:addons/appointment_account_payment/models/product_product.py:0
 #: code:addons/appointment_account_payment/models/product_template.py:0
 msgid "You cannot delete the default booking product"
-msgstr ""
+msgstr "Не можете да изтриете продукта за резервация по подразбиране"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
@@ -524,9 +544,9 @@ msgstr "или"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
 msgid "people"
-msgstr ""
+msgstr "души"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_info
 msgid "per seat"
-msgstr ""
+msgstr "на място"

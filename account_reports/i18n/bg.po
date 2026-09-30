@@ -29,8 +29,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 17:48+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-13 12:09+0000\n"
+"Last-Translator: \"v.kanev\" <v.kanev@tutanota.com>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "account_reports/bg/>\n"
 "Language: bg\n"
@@ -38,31 +38,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "\" account balance is affected by"
-msgstr ""
+msgstr "\" салдото по сметката е повлияно от"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_journal_report.py:0
 msgid "%(journal)s - %(account)s"
-msgstr ""
+msgstr "%(journal)s - %(account)s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "%(names)s and %(remaining)s others"
-msgstr ""
+msgstr "%(names)s и още %(remaining)s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "%(names)s and one other"
-msgstr ""
+msgstr "%(names)s и още един"
 
 #. module: account_reports
 #. odoo-python
@@ -80,13 +80,13 @@ msgstr "%s (копие)"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "%s is not a numeric value"
-msgstr ""
+msgstr "%s не е числова стойност"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "%s selected"
-msgstr ""
+msgstr "%s избрани"
 
 #. module: account_reports
 #. odoo-python
@@ -103,52 +103,54 @@ msgid ""
 "'View Bank Statement' caret option is only available for report lines "
 "targeting bank statements."
 msgstr ""
+"Опцията 'View Bank Statement' е достъпна само за редове на отчета, насочени "
+"към банкови извлечения."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "'external' engine does not support groupby, limit nor offset."
-msgstr ""
+msgstr "Двигателят 'external' не поддържа groupby, limit, нито offset."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "(%s lines)"
-msgstr ""
+msgstr "(%s реда)"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.outstanding_receipts
 msgid "(+) Outstanding Receipts"
-msgstr ""
+msgstr "(+) Неприключени постъпления"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.outstanding_payments
 msgid "(-) Outstanding Payments"
-msgstr ""
+msgstr "(-) Неприключени плащания"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "(1 line)"
-msgstr ""
+msgstr "(1 ред)"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_deferred_reports.py:0
 msgid "(No %s)"
-msgstr ""
+msgstr "(Без „ %s “)"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "(No Group)"
-msgstr ""
+msgstr "(Без група)"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid ", leading to an unexplained difference of"
-msgstr ""
+msgstr ", което води до необяснена разлика от"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_move_form_vat_return
@@ -180,6 +182,27 @@ msgid ""
 "            </div>\n"
 "        "
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px;\">\n"
+"                    <t t-if=\"object.id != object.commercial_partner_id.id\">"
+"Уважаеми <t t-out=\"object.name or ''\"/> (<t t-"
+"out=\"object.commercial_partner_id.name or ''\"/>),</t>\n"
+"                    <t t-else=\"\">Уважаеми <t t-out=\"object.name or ''\"/>"
+",</t>\n"
+"                    <br/>\n"
+"                    Моля, намерете приложено извлечението на вашата сметка.\n"
+"                    <br/>\n"
+"                    Не се колебайте да се свържете с нас, ако имате "
+"въпроси.\n"
+"                    <br/>\n"
+"                    С уважение,\n"
+"                    <br/>\n"
+"\t                <t t-out=\"object._get_followup_responsible().name if "
+"is_html_empty(object._get_followup_responsible().signature) else "
+"object._get_followup_responsible().signature\"/>\n"
+"                </p>\n"
+"            </div>\n"
+"        "
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_send_form
@@ -188,6 +211,9 @@ msgid ""
 "title=\"The email address is unknown on the partner\" invisible=\"not "
 "send_mail_readonly\"/>"
 msgstr ""
+"<i class=\"fa fa-question-circle ml4\" role=\"img\" aria-"
+"label=\"Предупреждение\" title=\"Имейл адресът не е известен за партньора\" "
+"invisible=\"not send_mail_readonly\"/>"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_report_file_download_error_wizard_form
@@ -195,6 +221,8 @@ msgid ""
 "<i>Errors marked with <i class=\"fa fa-warning\"/> are critical and prevent "
 "the file generation.</i>"
 msgstr ""
+"<i>Грешките, отбелязани с <i class=\"fa fa-warning\"/>, са критични и пречат "
+"на генерирането на файла.</i>"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
@@ -205,17 +233,18 @@ msgstr "<span role=\"separator\">Равнение</span>"
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_report_file_download_error_wizard_form
 msgid "<span>One or more error(s) occurred during file generation:</span>"
 msgstr ""
+"<span>Възникнаха една или повече грешки при генерирането на файла:</span>"
 
 #. module: account_reports
 #: model:ir.model.constraint,message:account_reports.constraint_account_report_horizontal_group_name_uniq
 msgid "A horizontal group with the same name already exists."
-msgstr ""
+msgstr "Хоризонтална група със същото име вече съществува."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/widgets/account_report_x2many/account_report_x2many.js:0
 msgid "A line with a 'Group By' value cannot have children."
-msgstr ""
+msgstr "Ред със стойност „Групиране по\" не може да има подчинени елементи."
 
 #. module: account_reports
 #. odoo-python
@@ -224,6 +253,8 @@ msgid ""
 "A tax unit can only be created between companies sharing the same main "
 "currency."
 msgstr ""
+"Данъчна единица може да бъде създадена само между фирми, които споделят една "
+"и съща основна валута."
 
 #. module: account_reports
 #. odoo-python
@@ -232,6 +263,8 @@ msgid ""
 "A tax unit must contain a minimum of two companies. You might want to delete "
 "the unit."
 msgstr ""
+"Данъчната група трябва да съдържа поне две фирми. Може да искате да изтриете "
+"групата."
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_total_assets0
@@ -261,24 +294,24 @@ msgstr "Шаблон за схема на сметката"
 #. odoo-python
 #: code:addons/account_reports/models/account_journal_report.py:0
 msgid "Account Code"
-msgstr ""
+msgstr "Код на сметка"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Account Code / Tag"
-msgstr ""
+msgstr "Код на сметка / Етикет"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_company__account_display_representative_field
 msgid "Account Display Representative Field"
-msgstr ""
+msgstr "Поле-представител за показване на сметка"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_journal_report.py:0
 msgid "Account Label"
-msgstr ""
+msgstr "Етикет на сметка"
 
 #. module: account_reports
 #. odoo-python
@@ -289,22 +322,22 @@ msgstr "Име на сметка"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_annotation
 msgid "Account Report Annotation"
-msgstr ""
+msgstr "Анотация на счетоводен отчет"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_custom_handler
 msgid "Account Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик на счетоводен отчет"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_tax_report_handler
 msgid "Account Report Handler for Tax Reports"
-msgstr ""
+msgstr "Обработчик на счетоводен отчет за данъчни справки"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_send
 msgid "Account Report Send"
-msgstr ""
+msgstr "Изпращане на счетоводен отчет"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_config_settings__account_reports_show_per_company_setting
@@ -315,23 +348,23 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_reports.field_res_partner__account_represented_company_ids
 #: model:ir.model.fields,field_description:account_reports.field_res_users__account_represented_company_ids
 msgid "Account Represented Company"
-msgstr ""
+msgstr "Представлявана фирма от сметката"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_company__account_revaluation_journal_id
 msgid "Account Revaluation Journal"
-msgstr ""
+msgstr "Дневник за преоценка на сметки"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_account_type.xml:0
 msgid "Account:"
-msgstr ""
+msgstr "Сметка:"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_company__account_representative_id
 msgid "Accounting Firm"
-msgstr ""
+msgstr "Счетоводна кантора"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report
@@ -341,12 +374,12 @@ msgstr "Счетоводни Отчети"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_budget
 msgid "Accounting Report Budget"
-msgstr ""
+msgstr "Бюджет на счетоводен отчет"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_budget_item
 msgid "Accounting Report Budget Item"
-msgstr ""
+msgstr "Бюджетна позиция на счетоводен отчет"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_expression
@@ -382,18 +415,18 @@ msgstr "Сметки"
 #: code:addons/account_reports/models/account_report.py:0
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_form
 msgid "Accounts Coverage Report"
-msgstr ""
+msgstr "Отчет за покритие на сметките"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.multicurrency_revaluation_to_adjust
 msgid "Accounts To Adjust"
-msgstr ""
+msgstr "Сметки за коригиране"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Accounts coverage"
-msgstr ""
+msgstr "Покритие на сметки"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_mail_activity_type__category
@@ -474,7 +507,7 @@ msgstr "Разширени"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_aged_partner_balance_report_handler
 msgid "Aged Partner Balance Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за салда на партньори по давност"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.aged_payable_report
@@ -487,7 +520,7 @@ msgstr "Сметка задължения към доставчици с нат�
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_aged_payable_report_handler
 msgid "Aged Payable Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за задължения по давност"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
@@ -505,7 +538,7 @@ msgstr "Сметка вземания от клиенти с натрупван�
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_aged_receivable_report_handler
 msgid "Aged Receivable Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за вземания по давност"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
@@ -526,25 +559,25 @@ msgstr "Всичко"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "All Journals"
-msgstr ""
+msgstr "Всички дневници"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "All Payable"
-msgstr ""
+msgstr "Всички задължения"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "All Receivable"
-msgstr ""
+msgstr "Всички вземания"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "All Report Variants"
-msgstr ""
+msgstr "Всички варианти на отчета"
 
 #. module: account_reports
 #. odoo-javascript
@@ -553,6 +586,8 @@ msgid ""
 "All selected companies or branches do not share the same Tax ID. Please "
 "check the Tax ID of the selected companies."
 msgstr ""
+"Не всички избрани фирми или клонове имат един и същ данъчен номер. Моля, "
+"проверете данъчния номер на избраните фирми."
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.account_financial_report_ec_sales_amount
@@ -561,7 +596,7 @@ msgstr ""
 #: model:account.report.column,name:account_reports.followup_report_amount
 #: model:ir.model.fields,field_description:account_reports.field_account_report_budget_item__amount
 msgid "Amount"
-msgstr "Количество"
+msgstr "Сума"
 
 #. module: account_reports
 #. odoo-python
@@ -579,25 +614,25 @@ msgstr "Количество Валута"
 #. odoo-python
 #: code:addons/account_reports/models/account_journal_report.py:0
 msgid "Amount in currency: %s"
-msgstr ""
+msgstr "Сума във валута: %s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Amounts in Lakhs"
-msgstr ""
+msgstr "Суми в лакхи"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Amounts in Millions"
-msgstr ""
+msgstr "Суми в милиони"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Amounts in Thousands"
-msgstr ""
+msgstr "Суми в хиляди"
 
 #. module: account_reports
 #. odoo-javascript
@@ -610,12 +645,12 @@ msgstr "Аналитичност"
 #: model:ir.model.fields,field_description:account_reports.field_account_analytic_line__analytic_coverage
 #: model:ir.model.fields,field_description:account_reports.field_account_move_line__analytic_coverage
 msgid "Analytic Coverage"
-msgstr ""
+msgstr "Аналитично покритие"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report__filter_analytic_groupby
 msgid "Analytic Group By"
-msgstr ""
+msgstr "Аналитично групиране по"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_analytic_line
@@ -626,14 +661,14 @@ msgstr "Аналитичен Ред"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_extra_options.xml:0
 msgid "Analytic Simulations"
-msgstr ""
+msgstr "Аналитични симулации"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/header/header.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_main_table_header
 msgid "Analytic coverage"
-msgstr ""
+msgstr "Аналитично покритие"
 
 #. module: account_reports
 #. odoo-javascript
@@ -662,7 +697,7 @@ msgstr "Като на %s"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Ascending"
-msgstr ""
+msgstr "Възходящ"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.aged_payable_report_period0
@@ -682,12 +717,12 @@ msgstr "Прикачи файл"
 #: code:addons/account_reports/static/src/components/journal_report/line/line.xml:0
 #: code:addons/account_reports/static/src/components/journal_report/line_name.xml:0
 msgid "Audit"
-msgstr ""
+msgstr "Одит"
 
 #. module: account_reports
 #: model:ir.ui.menu,name:account_reports.account_reports_audit_reports_menu
 msgid "Audit Reports"
-msgstr ""
+msgstr "Одитни доклади"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_avgcre0
@@ -703,7 +738,7 @@ msgstr "Осреднени дни на длъжниците"
 #. odoo-python
 #: code:addons/account_reports/models/account_journal_report.py:0
 msgid "B: %s"
-msgstr ""
+msgstr "B: %s"
 
 #. module: account_reports
 #. odoo-python
@@ -732,39 +767,39 @@ msgstr "Счетоводен Баланс"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_balance_sheet_report_handler
 msgid "Balance Sheet Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик на баланса"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.multicurrency_revaluation_report_balance_current
 msgid "Balance at Current Rate"
-msgstr ""
+msgstr "Салдо по текущ курс"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.multicurrency_revaluation_report_balance_operation
 msgid "Balance at Operation Rate"
-msgstr ""
+msgstr "Салдо по курс на операцията"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.multicurrency_revaluation_report_balance_currency
 msgid "Balance in Foreign Currency"
-msgstr ""
+msgstr "Салдо в чуждестранна валута"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/bank_reconciliation_report.py:0
 msgid "Balance of '%s'"
-msgstr ""
+msgstr "Салдо на „%s“"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.balance_bank
 msgid "Balance of Bank"
-msgstr ""
+msgstr "Салдо на банката"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 msgid "Balance tax advance payment account"
-msgstr ""
+msgstr "Салдо по сметка за авансово плащане на данък"
 
 #. module: account_reports
 #. odoo-python
@@ -776,7 +811,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 msgid "Balance tax current account (receivable)"
-msgstr ""
+msgstr "Салдо по текуща данъчна сметка (вземане)"
 
 #. module: account_reports
 #: model:ir.actions.client,name:account_reports.action_account_report_bank_reconciliation
@@ -786,12 +821,12 @@ msgstr "Банкови Разчети"
 #. module: account_reports
 #: model:account.report,name:account_reports.bank_reconciliation_report
 msgid "Bank Reconciliation Report"
-msgstr ""
+msgstr "Справка за банково съпоставяне"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_bank_reconciliation_report_handler
 msgid "Bank Reconciliation Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик на справката за банково съпоставяне"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_bank_view0
@@ -801,7 +836,7 @@ msgstr "Банкови и парични сметки"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.bank_information_customer_report
 msgid "Bank:"
-msgstr ""
+msgstr "Банка:"
 
 #. module: account_reports
 #. odoo-javascript
@@ -835,7 +870,7 @@ msgstr "Бюджет"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_account__budget_item_ids
 msgid "Budget Item"
-msgstr ""
+msgstr "Бюджетна позиция"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_budget_form
@@ -853,19 +888,19 @@ msgstr "Име на бюджет"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Budget items can only be edited from account lines."
-msgstr ""
+msgstr "Бюджетните позиции могат да се редактират само от счетоводните редове."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_general_ledger.py:0
 msgid "CSV"
-msgstr ""
+msgstr "CSV"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_general_ledger.py:0
 msgid "CSV export only works with one column group"
-msgstr ""
+msgstr "Експортът в CSV работи само с една група колони"
 
 #. module: account_reports
 #. odoo-javascript
@@ -880,7 +915,7 @@ msgstr "Отказ"
 #. odoo-python
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 msgid "Cannot audit tax from another model than account.tax."
-msgstr ""
+msgstr "Не може да се одитира данък от модел, различен от account.tax."
 
 #. module: account_reports
 #. odoo-python
@@ -892,31 +927,31 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/line_cell/popover/carryover_popover.xml:0
 msgid "Carryover"
-msgstr ""
+msgstr "Пренасяне"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Carryover adjustment for tax unit"
-msgstr ""
+msgstr "Корекция за пренасяне за данъчна единица"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Carryover can only be generated for a single column group."
-msgstr ""
+msgstr "Пренасяне може да се генерира само за една група колони."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Carryover from %(date_from)s to %(date_to)s"
-msgstr ""
+msgstr "Пренасяне от %(date_from)s до %(date_to)s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Carryover lines for: %s"
-msgstr ""
+msgstr "Редове за пренасяне за: %s"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_cash0
@@ -926,7 +961,7 @@ msgstr "В брой"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_cash_flow_report_handler
 msgid "Cash Flow Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран манипулатор за отчет за паричните потоци"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.cash_flow_report
@@ -987,7 +1022,7 @@ msgstr "Идходящи пари в брой"
 #. odoo-python
 #: code:addons/account_reports/models/account_cash_flow_report.py:0
 msgid "Cash paid for operating activities"
-msgstr ""
+msgstr "Платени парични средства за оперативна дейност"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_cash_received0
@@ -998,7 +1033,7 @@ msgstr "Постъпили пари в брой"
 #. odoo-python
 #: code:addons/account_reports/models/account_cash_flow_report.py:0
 msgid "Cash received from operating activities"
-msgstr ""
+msgstr "Получени парични средства от оперативна дейност"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_cash_spent0
@@ -1019,7 +1054,7 @@ msgstr "Промяна на датата на заключване"
 #. odoo-python
 #: code:addons/account_reports/wizard/account_report_send.py:0
 msgid "Check Partner(s) Email(s)"
-msgstr ""
+msgstr "Проверете имейл адреса(ите) на партньора(ите)"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1036,7 +1071,7 @@ msgstr "Затвори"
 #. odoo-python
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 msgid "Closing Entry"
-msgstr ""
+msgstr "Приключвателен запис"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_closing_bank_balance0
@@ -1055,7 +1090,7 @@ msgstr "Код"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/filters/filter_code.xml:0
 msgid "Codes:"
-msgstr ""
+msgstr "Кодове:"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_form
@@ -1090,6 +1125,9 @@ msgid ""
 "Company %(company)s already belongs to a tax unit in %(country)s. A company "
 "can at most be part of one tax unit per country."
 msgstr ""
+"Дружество %(company)s вече принадлежи към данъчна единица в %(country)s. "
+"Една дружество може да бъде част най-много от една данъчна единица за всяка "
+"държава."
 
 #. module: account_reports
 #. odoo-python
@@ -1102,13 +1140,13 @@ msgstr "Валута на компания"
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_tax_unit.xml:0
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Company Only"
-msgstr ""
+msgstr "Само дружество"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Company Settings"
-msgstr ""
+msgstr "Настройки на фирмата"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1141,7 +1179,7 @@ msgstr ""
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
 msgid "Configure your tax accounts"
-msgstr ""
+msgstr "Конфигурирайте вашите данъчни сметки"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_res_partner
@@ -1170,6 +1208,8 @@ msgid ""
 "Could not expand term %(term)s while evaluating formula %"
 "(unexpanded_formula)s"
 msgstr ""
+"Терминът %(term)s не може да бъде разгърнат при изчисляване на формулата %"
+"(unexpanded_formula)s"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1196,7 +1236,7 @@ msgstr "Създай"
 #. module: account_reports
 #: model:ir.actions.server,name:account_reports.action_create_composite_report_list
 msgid "Create Composite Report"
-msgstr ""
+msgstr "Създаване на съставен отчет"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_multicurrency_revaluation_wizard
@@ -1206,7 +1246,7 @@ msgstr "Създаване на запис"
 #. module: account_reports
 #: model:ir.actions.server,name:account_reports.action_create_report_menu
 msgid "Create Menu Item"
-msgstr ""
+msgstr "Създаване на елемент от меню"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_multicurrency_revaluation_wizard__create_uid
@@ -1261,18 +1301,18 @@ msgstr "Валута"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Currency Code"
-msgstr ""
+msgstr "Код на валута"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_multicurrency_revaluation_report.py:0
 msgid "Currency Rates (%s)"
-msgstr ""
+msgstr "Валутни курсове (%s)"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filters
 msgid "Currency:"
-msgstr ""
+msgstr "Валута:"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.deferred_expense_current
@@ -1312,17 +1352,17 @@ msgstr "Текущи активи към пасиви"
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_comparison.xml:0
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_date.xml:0
 msgid "Custom Dates"
-msgstr ""
+msgstr "Персонализирани дати"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report__custom_handler_model_id
 msgid "Custom Handler Model"
-msgstr ""
+msgstr "Персонализиран модел на обработчик"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report__custom_handler_model_name
 msgid "Custom Handler Model Name"
-msgstr ""
+msgstr "Име на персонализирания модел на обработчик"
 
 #. module: account_reports
 #. odoo-python
@@ -1331,18 +1371,20 @@ msgid ""
 "Custom engine _report_custom_engine_last_statement_balance_amount does not "
 "support groupby"
 msgstr ""
+"Персонализираният механизъм "
+"_report_custom_engine_last_statement_balance_amount не поддържа групиране"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.customer_statement_report
 #: model:ir.actions.client,name:account_reports.action_account_report_customer_statement
 #: model:mail.template,name:account_reports.email_template_customer_statement
 msgid "Customer Statement"
-msgstr ""
+msgstr "Извлечение по сметка на клиент"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_customer_statement_report_handler
 msgid "Customer Statement Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за извлечение по сметка на клиент"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1359,12 +1401,12 @@ msgstr "Дата"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Date cannot be empty"
-msgstr ""
+msgstr "Датата не може да е празна"
 
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_account_report_annotation__date
 msgid "Date considered as annotated by the annotation."
-msgstr ""
+msgstr "Дата, считана за анотирана от анотацията."
 
 #. module: account_reports
 #. odoo-javascript
@@ -1390,19 +1432,19 @@ msgstr "Дебит"
 #: code:addons/account_reports/static/src/components/journal_report/line/line.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_journal_report_taxes_summary
 msgid "Deductible"
-msgstr ""
+msgstr "Признат"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/deferred_reports/warnings.xml:0
 msgid "Deferrals have not yet been completely generated for this period."
-msgstr ""
+msgstr "Отсрочванията все още не са напълно генерирани за този период."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/deferred_reports/warnings.xml:0
 msgid "Deferrals have not yet been generated for this period."
-msgstr ""
+msgstr "Отсрочванията все още не са генерирани за този период."
 
 #. module: account_reports
 #. odoo-python
@@ -1420,17 +1462,17 @@ msgstr "Отложен разход"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_deferred_expense_report_handler
 msgid "Deferred Expense Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за отсрочени разходи"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.deferred_expense_report
 msgid "Deferred Expense Report"
-msgstr ""
+msgstr "Отчет за отсрочени разходи"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_deferred_report_handler
 msgid "Deferred Expense Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за отчет за отсрочени разходи"
 
 #. module: account_reports
 #: model:ir.actions.client,name:account_reports.action_account_report_deferred_revenue
@@ -1441,12 +1483,12 @@ msgstr "Отложени приходи"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_deferred_revenue_report_handler
 msgid "Deferred Revenue Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за отсрочени приходи"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.deferred_revenue_report
 msgid "Deferred Revenue Report"
-msgstr ""
+msgstr "Отчет за отсрочени приходи"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_expression_form
@@ -1456,7 +1498,7 @@ msgstr "Определение"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_company__account_tax_periodicity
 msgid "Delay units"
-msgstr ""
+msgstr "Единици за забавяне"
 
 #. module: account_reports
 #. odoo-python
@@ -1468,23 +1510,23 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Descending"
-msgstr ""
+msgstr "Низходящо"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 msgid "Difference from rounding taxes"
-msgstr ""
+msgstr "Разлика от закръгляване на данъци"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_line__display_custom_groupby_warning
 msgid "Display Custom Groupby Warning"
-msgstr ""
+msgstr "Показване на предупреждение за персонализирано групиране"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__display_mail_composer
 msgid "Display Mail Composer"
-msgstr ""
+msgstr "Показване на композитора за имейли"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_multicurrency_revaluation_wizard__display_name
@@ -1519,7 +1561,7 @@ msgstr "Документ"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_reports_export_wizard__doc_name
 msgid "Documents Name"
-msgstr ""
+msgstr "Име на документи"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_horizontal_group_rule__domain
@@ -1541,12 +1583,12 @@ msgstr "Изтеглете от системата"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_report_file_download_error_wizard_form
 msgid "Download Anyway"
-msgstr ""
+msgstr "Изтегли въпреки това"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
 msgid "Download the Data Inalterability Check Report"
-msgstr ""
+msgstr "Изтеглете отчета за проверка на неизменяемостта на данните"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1583,24 +1625,24 @@ msgstr "Дължима дата"
 #: model:ir.actions.client,name:account_reports.action_account_report_sales
 #: model:ir.ui.menu,name:account_reports.menu_action_account_report_sales
 msgid "EC Sales List"
-msgstr ""
+msgstr "VIES декларация"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_ec_sales_report_handler
 msgid "EC Sales Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик на ЕС отчет за продажби"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_sales_report.py:0
 msgid "EC tax on non EC countries"
-msgstr ""
+msgstr "Данък за ЕС върху държави извън ЕС"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_sales_report.py:0
 msgid "EC tax on same country"
-msgstr ""
+msgstr "Данък за ЕС в същата държава"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_equity0
@@ -1622,6 +1664,8 @@ msgid ""
 "Editing a manual report line is not allowed when multiple companies are "
 "selected."
 msgstr ""
+"Редактирането на ръчен ред от отчета не е разрешено, когато са избрани "
+"няколко фирми."
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__checkbox_send_mail
@@ -1636,30 +1680,30 @@ msgstr "Имейл образец"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__enable_download
 msgid "Enable Download"
-msgstr ""
+msgstr "Активиране на изтегляне"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Enable Sections"
-msgstr ""
+msgstr "Активиране на секции"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__enable_send_mail
 msgid "Enable Send Mail"
-msgstr ""
+msgstr "Активиране на изпращане на поща"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_variant.xml:0
 msgid "Enable more ..."
-msgstr ""
+msgstr "Активиране на още ..."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_trial_balance_report.py:0
 msgid "End Balance"
-msgstr ""
+msgstr "Крайно салдо"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1671,13 +1715,13 @@ msgstr "Край на месеца"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "End of Quarter"
-msgstr ""
+msgstr "Край на тримесечието"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "End of Year"
-msgstr ""
+msgstr "Край на годината"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1689,7 +1733,7 @@ msgstr "Двигател"
 #. odoo-python
 #: code:addons/account_reports/models/account_sales_report.py:0
 msgid "Entries with partners with no VAT"
-msgstr ""
+msgstr "Записи с партньори без ДДС номер"
 
 #. module: account_reports
 #. odoo-python
@@ -1706,27 +1750,27 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/multicurrency_revaluation_report/filters/filter_exchange_rate.xml:0
 msgid "Exchange Rates"
-msgstr ""
+msgstr "Валутни курсове"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_move_line__exclude_bank_lines
 msgid "Exclude Bank Lines"
-msgstr ""
+msgstr "Изключване на банкови редове"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_journal_report_audit_move_line_search
 msgid "Exclude Bank lines"
-msgstr ""
+msgstr "Изключване на банкови редове"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_account__exclude_provision_currency_ids
 msgid "Exclude Provision Currency"
-msgstr ""
+msgstr "Изключване на валута на провизия"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.multicurrency_revaluation_excluded
 msgid "Excluded Accounts"
-msgstr ""
+msgstr "Изключени сметки"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.executive_summary
@@ -1743,13 +1787,13 @@ msgstr "Разходна сметка"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_company__account_revaluation_expense_provision_account_id
 msgid "Expense Provision Account"
-msgstr ""
+msgstr "Сметка за провизия за разходи"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/multicurrency_revaluation.py:0
 msgid "Expense Provision for %s"
-msgstr ""
+msgstr "Провизия за разход за %s"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_expenses0
@@ -1764,22 +1808,22 @@ msgstr "Износ"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_reports_export_wizard_format
 msgid "Export format for accounting's reports"
-msgstr ""
+msgstr "Формат за експортиране на счетоводните отчети"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_reports_export_wizard__export_format_ids
 msgid "Export to"
-msgstr ""
+msgstr "Експортиране към"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_reports_export_wizard
 msgid "Export wizard for accounting's reports"
-msgstr ""
+msgstr "Помощник за експортиране на счетоводните отчети"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_expression_form
 msgid "Expression"
-msgstr ""
+msgstr "Израз"
 
 #. module: account_reports
 #. odoo-python
@@ -1789,6 +1833,10 @@ msgid ""
 "computing the current report. Make sure the cross-report aggregations of "
 "this report only reference terms belonging to other reports."
 msgstr ""
+"Изразът с етикет „%(label)s\" от ред „%(line)s\" се презаписва при "
+"изчисляване на текущия отчет. Уверете се, че кръстосаните агрегации между "
+"отчети на този отчет препращат само към термини, принадлежащи на други "
+"отчети."
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_horizontal_group_rule__field_name
@@ -1802,18 +1850,20 @@ msgid ""
 "Field %s does not exist on account.move.line, and is not supported by this "
 "report's custom handler."
 msgstr ""
+"Полето %s не съществува в account.move.line и не се поддържа от "
+"персонализирания обработчик на този отчет."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Field %s does not exist on account.move.line."
-msgstr ""
+msgstr "Полето %s не съществува в account.move.line."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Field %s of account.move.line cannot be used in a groupby expression."
-msgstr ""
+msgstr "Полето %s на account.move.line не може да се използва в groupby израз."
 
 #. module: account_reports
 #. odoo-python
@@ -1822,6 +1872,8 @@ msgid ""
 "Field %s of account.move.line is not searchable and can therefore not be "
 "used in a groupby expression."
 msgstr ""
+"Полето %s на account.move.line не е търсимо и затова не може да се използва "
+"в groupby израз."
 
 #. module: account_reports
 #. odoo-python
@@ -1829,16 +1881,18 @@ msgstr ""
 msgid ""
 "Field 'Custom Handler Model' can only reference records inheriting from [%s]."
 msgstr ""
+"Полето „Модел на персонализиран обработчик\" може да препраща само към "
+"записи, наследяващи от [%s]."
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_file_download_error_wizard__file_content
 msgid "File Content"
-msgstr ""
+msgstr "Съдържание на файла"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_report_file_download_error_wizard_form
 msgid "File Download Errors"
-msgstr ""
+msgstr "Грешки при изтегляне на файлове"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_file_download_error_wizard__file_name
@@ -1857,13 +1911,13 @@ msgstr "Филтри"
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_aml_ir_filters.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filters
 msgid "Filters:"
-msgstr ""
+msgstr "Филтри:"
 
 #. module: account_reports
 #: model:ir.actions.act_window,name:account_reports.action_account_report_budget_tree
 #: model:ir.ui.menu,name:account_reports.menu_action_account_report_budget_tree
 msgid "Financial Budgets"
-msgstr ""
+msgstr "Финансови бюджети"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_fiscal_position
@@ -1880,7 +1934,7 @@ msgstr ""
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_tax_unit__fpos_synced
 msgid "Fiscal Positions Synchronised"
-msgstr ""
+msgstr "Синхронизирани фискални позиции"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_tax_unit_form
@@ -1888,22 +1942,24 @@ msgid ""
 "Fiscal Positions should apply to all companies of the tax unit. You may want "
 "to"
 msgstr ""
+"Фискалните позиции трябва да се прилагат за всички фирми от данъчната "
+"единица. Може да искате да"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.followup_report
 msgid "Follow-Up Report"
-msgstr ""
+msgstr "Отчет за проследяване"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_followup_report_handler
 msgid "Follow-Up Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик на отчета за проследяване"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/multicurrency_revaluation.py:0
 msgid "Foreign currencies adjustment entry as of %s"
-msgstr ""
+msgstr "Запис за корекция на чуждестранни валути към %s"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1922,12 +1978,12 @@ msgstr ""
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_reports_export_wizard_format__fun_param
 msgid "Function Parameter"
-msgstr ""
+msgstr "Параметър на функцията"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_reports_export_wizard_format__fun_to_call
 msgid "Function to Call"
-msgstr ""
+msgstr "Функция за извикване"
 
 #. module: account_reports
 #. odoo-javascript
@@ -1945,19 +2001,19 @@ msgstr "Главна счетоводна книга"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_general_ledger_report_handler
 msgid "General Ledger Custom Handler"
-msgstr ""
+msgstr "Custom Handler за главна счетоводна книга"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_deferred_reports.py:0
 msgid "Generate entry"
-msgstr ""
+msgstr "Генериране на запис"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/report_export_wizard.py:0
 msgid "Generated Documents"
-msgstr ""
+msgstr "Генерирани документи"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.generic_ec_sales_report
@@ -1967,24 +2023,24 @@ msgstr ""
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_generic_tax_report_handler
 msgid "Generic Tax Report Custom Handler"
-msgstr ""
+msgstr "Обща обработка на данъчен отчет"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_generic_tax_report_handler_account_tax
 msgid "Generic Tax Report Custom Handler (Account -> Tax)"
-msgstr ""
+msgstr "Персонализиран обработчик за общ данъчен отчет (Сметка -> Данък)"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_generic_tax_report_handler_tax_account
 msgid "Generic Tax Report Custom Handler (Tax -> Account)"
-msgstr ""
+msgstr "Персонализиран обработчик за общ данъчен отчет (Данък -> Сметка)"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_journal_report.py:0
 #: model_terms:ir.ui.view,arch_db:account_reports.journal_report_pdf_export_main
 msgid "Global Tax Summary"
-msgstr ""
+msgstr "Обобщение на глобалните данъци"
 
 #. module: account_reports
 #. odoo-python
@@ -2037,7 +2093,7 @@ msgstr "Групирайте по"
 #. odoo-python
 #: code:addons/account_reports/models/account_deferred_reports.py:0
 msgid "Grouped Deferral Entry of %s"
-msgstr ""
+msgstr "Групиран запис за разсрочване на %s"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2055,7 +2111,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_extra_options.xml:0
 msgid "Hide lines at 0"
-msgstr ""
+msgstr "Скриване на редове с 0"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2068,13 +2124,13 @@ msgstr "Йерархия и междинни суми"
 #: code:addons/account_reports/models/account_report.py:0
 #: model:ir.model.fields,field_description:account_reports.field_account_report_horizontal_group_rule__horizontal_group_id
 msgid "Horizontal Group"
-msgstr ""
+msgstr "Хоризонтална група"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_horizontal_groups.xml:0
 msgid "Horizontal Group:"
-msgstr ""
+msgstr "Хоризонтална група:"
 
 #. module: account_reports
 #: model:ir.actions.act_window,name:account_reports.action_account_report_horizontal_groups
@@ -2086,22 +2142,22 @@ msgstr "Хоризонтални групи"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_horizontal_group
 msgid "Horizontal group for reports"
-msgstr ""
+msgstr "Хоризонтална група за отчети"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_horizontal_group_rule
 msgid "Horizontal group rule for reports"
-msgstr ""
+msgstr "Правило за хоризонтална група за отчети"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filters
 msgid "Horizontal:"
-msgstr ""
+msgstr "Хоризонтално:"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
 msgid "How often tax returns have to be made"
-msgstr ""
+msgstr "Колко често трябва да се подават данъчни декларации"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_multicurrency_revaluation_wizard__id
@@ -2125,20 +2181,20 @@ msgstr "ID"
 #: code:addons/account_reports/static/src/components/journal_report/line/line.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_journal_report_taxes_summary
 msgid "Impact On Grid"
-msgstr ""
+msgstr "Влияние върху данъчните клетки"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/journal_report/line/line.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_journal_report_taxes_summary
 msgid "Impacted Tax Grids"
-msgstr ""
+msgstr "Засегнати данъчни клетки"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "In %s"
-msgstr ""
+msgstr "В %s"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_report_search
@@ -2149,7 +2205,7 @@ msgstr "Неактивен"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/journal_report/filter_extra_options.xml:0
 msgid "Include Payments"
-msgstr ""
+msgstr "Включване на плащания"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2158,19 +2214,19 @@ msgstr ""
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filter_extra_options_template
 msgid "Including Analytic Simulations"
-msgstr ""
+msgstr "Включително аналитични симулации"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.no_statement_unreconciled_payments
 #: model:account.report.line,name:account_reports.unreconciled_last_statement_payments
 msgid "Including Unreconciled Payments"
-msgstr ""
+msgstr "Включително неприключени плащания"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.no_statement_unreconciled_receipt
 #: model:account.report.line,name:account_reports.unreconciled_last_statement_receipts
 msgid "Including Unreconciled Receipts"
-msgstr ""
+msgstr "Включително неприключени постъпления"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_multicurrency_revaluation_wizard__income_provision_account_id
@@ -2180,19 +2236,19 @@ msgstr "Приходна сметка"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_res_company__account_revaluation_income_provision_account_id
 msgid "Income Provision Account"
-msgstr ""
+msgstr "Сметка за провизии за приходи"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/multicurrency_revaluation.py:0
 msgid "Income Provision for %s"
-msgstr ""
+msgstr "Провизия за приходи за %s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/bank_reconciliation_report.py:0
 msgid "Inconsistent Statements"
-msgstr ""
+msgstr "Несъответстващи извлечения"
 
 #. module: account_reports
 #. odoo-python
@@ -2201,6 +2257,8 @@ msgid ""
 "Inconsistent data: more than one external value at the same date for a "
 "'most_recent' external line."
 msgstr ""
+"Несъответстващи данни: повече от една външна стойност на същата дата за "
+"'most_recent' външен ред."
 
 #. module: account_reports
 #. odoo-python
@@ -2209,6 +2267,8 @@ msgid ""
 "Inconsistent report_id in options dictionary. Options says %"
 "(options_report)s; report is %(report)s."
 msgstr ""
+"Несъответстващ report_id в речника с опции. Опциите казват %(options_report)"
+"s; отчетът е %(report)s."
 
 #. module: account_reports
 #. odoo-python
@@ -2222,19 +2282,19 @@ msgstr "Начално салдо"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_extra_options.xml:0
 msgid "Integer Rounding"
-msgstr ""
+msgstr "Закръгляване до цяло число"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/aged_partner_balance/filters.js:0
 msgid "Intervals cannot be smaller than 1"
-msgstr ""
+msgstr "Интервалите не могат да бъдат по-малки от 1"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "Intra-community taxes are applied on"
-msgstr ""
+msgstr "Вътреобщностните данъци се прилагат върху"
 
 #. module: account_reports
 #. odoo-python
@@ -2243,12 +2303,14 @@ msgid ""
 "Invalid domain formula in expression \"%(expression)s\" of line \"%"
 "(line)s\": %(formula)s"
 msgstr ""
+"Невалидна domain формула в израз „%(expression)s“ на ред „%(line)s“: %"
+"(formula)s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Invalid method “%s”"
-msgstr ""
+msgstr "Невалиден метод „%s“"
 
 #. module: account_reports
 #. odoo-python
@@ -2257,12 +2319,14 @@ msgid ""
 "Invalid subformula in expression \"%(expression)s\" of line \"%(line)s\": %"
 "(subformula)s"
 msgstr ""
+"Невалидна под-формула в израз „%(expression)s“ на ред „%(line)s“: %"
+"(subformula)s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Invalid token '%(token)s' in account_codes formula '%(formula)s'"
-msgstr ""
+msgstr "Невалиден токен '%(token)s' във формула на account_codes '%(formula)s'"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2283,7 +2347,7 @@ msgstr "Редове във фактурата"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report__is_account_coverage_report_available
 msgid "Is Account Coverage Report Available"
-msgstr ""
+msgstr "Наличен ли е отчет за покритие на сметки"
 
 #. module: account_reports
 #. odoo-python
@@ -2324,7 +2388,7 @@ msgstr "Дневник"
 #: model:ir.actions.client,name:account_reports.action_account_report_ja
 #: model:ir.ui.menu,name:account_reports.menu_action_account_report_ja
 msgid "Journal Audit"
-msgstr ""
+msgstr "Одит на дневника"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_move
@@ -2353,23 +2417,23 @@ msgstr "Счетоводна операция"
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 #: code:addons/account_reports/models/account_journal_report.py:0
 msgid "Journal Items for Tax Audit"
-msgstr ""
+msgstr "Дневникови редове за данъчен одит"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.journal_report
 msgid "Journal Report"
-msgstr ""
+msgstr "Отчет за дневник"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_journal_report_handler
 msgid "Journal Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за отчет на дневник"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_generic_tax_report.py:0
 msgid "Journal items with archived tax tags"
-msgstr ""
+msgstr "Дневникови редове с архивирани данъчни етикети"
 
 #. module: account_reports
 #. odoo-python
@@ -2390,7 +2454,7 @@ msgstr "ПАСИВИ"
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_liabilities_and_equity_view0
 msgid "LIABILITIES + EQUITY"
-msgstr ""
+msgstr "ПАСИВИ + СОБСТВЕН КАПИТАЛ"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2409,7 +2473,7 @@ msgstr "Език"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
 msgid "Last Statement balance + Transactions since statement"
-msgstr ""
+msgstr "Баланс по последното извлечение + Транзакции след извлечението"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_multicurrency_revaluation_wizard__write_uid
@@ -2444,7 +2508,7 @@ msgstr "Последно актуализирано на"
 #. module: account_reports
 #: model:account.report.line,name:account_reports.last_statement_balance
 msgid "Last statement balance"
-msgstr ""
+msgstr "Салдо по последно извлечение"
 
 #. module: account_reports
 #. odoo-python
@@ -2455,17 +2519,17 @@ msgstr "По-късно"
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_cost_sales0
 msgid "Less Costs of Revenue"
-msgstr ""
+msgstr "Минус разходи за приходи"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_expense0
 msgid "Less Operating Expenses"
-msgstr ""
+msgstr "Минус оперативни разходи"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_depreciation0
 msgid "Less Other Expenses"
-msgstr ""
+msgstr "Минус други разходи"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_annotation__line_id
@@ -2479,6 +2543,8 @@ msgid ""
 "Line '%(child)s' is configured to appear before its parent '%(parent)s'. "
 "This is not allowed."
 msgstr ""
+"Ред '%(child)s' е конфигуриран да се появи преди родителя си '%(parent)s'. "
+"Това не е разрешено."
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_form
@@ -2489,47 +2555,49 @@ msgstr "Линии"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Load more..."
-msgstr ""
+msgstr "Зареди още..."
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__mail_attachments_widget
 msgid "Mail Attachments Widget"
-msgstr ""
+msgstr "Джаджа за пощенски прикачени файлове"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_tax_unit__main_company_id
 msgid "Main Company"
-msgstr ""
+msgstr "Основна фирма"
 
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_account_tax_unit__main_company_id
 msgid ""
 "Main company of this unit; the one actually reporting and paying the taxes."
 msgstr ""
+"Основна фирма на тази единица; тази, която реално отчита и плаща данъците."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_multicurrency_revaluation_report.py:0
 #: model_terms:ir.ui.view,arch_db:account_reports.view_account_multicurrency_revaluation_wizard
 msgid "Make Adjustment Entry"
-msgstr ""
+msgstr "Създай запис на корекция"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_report_file_download_error_wizard
 msgid "Manage the file generation errors from report exports."
 msgstr ""
+"Управление на грешките при генериране на файлове от експорти на справки."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Manual value"
-msgstr ""
+msgstr "Ръчна стойност"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Manual values"
-msgstr ""
+msgstr "Ръчни стойности"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.partner_ledger_report_matching_number
@@ -2539,18 +2607,18 @@ msgstr "Съгласуване"
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_account_tax_unit__company_ids
 msgid "Members of this unit"
-msgstr ""
+msgstr "Членове на тази единица"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Method '%(method_name)s' must start with the '%(prefix)s' prefix."
-msgstr ""
+msgstr "Методът '%(method_name)s' трябва да започва с префикса '%(prefix)s'."
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.misc_operations
 msgid "Misc. operations"
-msgstr ""
+msgstr "Разни операции"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_report_send__mode
@@ -2576,28 +2644,28 @@ msgstr "Месеци"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filters
 msgid "Multi-Ledger:"
-msgstr ""
+msgstr "Мулти-главна книга:"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Multi-ledger"
-msgstr ""
+msgstr "Мулти-главна книга"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_multicurrency_revaluation_report_handler
 msgid "Multicurrency Revaluation Report Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик на отчет за преоценка в чужда валута"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_multicurrency_revaluation_wizard
 msgid "Multicurrency Revaluation Wizard"
-msgstr ""
+msgstr "Помощник за преоценка в чужда валута"
 
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__account_report_send__mode__multi
 msgid "Multiple Recipients"
-msgstr ""
+msgstr "Множество получатели"
 
 #. module: account_reports
 #. odoo-python
@@ -2637,7 +2705,7 @@ msgstr "Име"
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_account_reports_export_wizard__doc_name
 msgid "Name to give to the generated documents."
-msgstr ""
+msgstr "Име, което да се даде на генерираните документи."
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_profit0
@@ -2659,7 +2727,7 @@ msgstr "Нетно увеличение на парите в брой и пар�
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_npmargin0
 msgid "Net profit margin (net profit / revenue)"
-msgstr ""
+msgstr "Норма на нетна печалба (нетна печалба / приходи)"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_reports_journal_dashboard_kanban_view
@@ -2684,25 +2752,25 @@ msgstr "Липсва сравняване"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "No Journal"
-msgstr ""
+msgstr "Няма дневник"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "No VAT number associated with your company. Please define one."
-msgstr ""
+msgstr "Няма ДДС номер, свързан с вашата фирма. Моля, задайте такъв."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/multicurrency_revaluation.py:0
 msgid "No adjustment needed"
-msgstr ""
+msgstr "Не е необходимо коригиране"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/account_report.xml:0
 msgid "No data to display !"
-msgstr ""
+msgstr "Няма данни за показване!"
 
 #. module: account_reports
 #. odoo-python
@@ -2714,31 +2782,31 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_reports/models/account_deferred_reports.py:0
 msgid "No entry to generate."
-msgstr ""
+msgstr "Няма запис за генериране."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/multicurrency_revaluation.py:0
 msgid "No provision needed was found."
-msgstr ""
+msgstr "Не е намерена необходима провизия."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Non Trade Partners"
-msgstr ""
+msgstr "Нетърговски партньори"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Non Trade Payable"
-msgstr ""
+msgstr "Нетърговски задължения"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Non Trade Receivable"
-msgstr ""
+msgstr "Нетърговски вземания"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2747,7 +2815,7 @@ msgstr ""
 #: code:addons/account_reports/static/src/components/journal_report/line/line.xml:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_journal_report_taxes_summary
 msgid "Non-Deductible"
-msgstr ""
+msgstr "Без право на данъчен кредит"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2762,25 +2830,25 @@ msgstr "Никакъв"
 #. odoo-python
 #: code:addons/account_reports/models/account_deferred_reports.py:0
 msgid "Not Started"
-msgstr ""
+msgstr "Незапочнати"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Number of periods cannot be smaller than 1"
-msgstr ""
+msgstr "Броят на периодите не може да бъде по-малък от 1"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_off_sheet
 msgid "OFF BALANCE SHEET ACCOUNTS"
-msgstr ""
+msgstr "ЗАДБАЛАНСОВИ СМЕТКИ"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 #: code:addons/account_reports/static/src/components/aged_partner_balance/filters.js:0
 msgid "Odoo Warning"
-msgstr ""
+msgstr "Предупреждение на Odoo"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.aged_payable_report_period5
@@ -2792,7 +2860,7 @@ msgstr "Предишен"
 #. odoo-python
 #: code:addons/account_reports/wizard/report_export_wizard.py:0
 msgid "One of the formats chosen can not be exported in the DMS"
-msgstr ""
+msgstr "Един от избраните формати не може да бъде експортиран в DMS"
 
 #. module: account_reports
 #. odoo-python
@@ -2803,17 +2871,17 @@ msgstr "Само администраторите имат прави да пр�
 #. module: account_reports
 #: model:ir.actions.server,name:account_reports.action_account_reports_customer_statements
 msgid "Open Customer Statements"
-msgstr ""
+msgstr "Отваряне на извлечения на клиенти"
 
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_financial_year_op
 msgid "Opening Balance of Financial Year"
-msgstr ""
+msgstr "Начален баланс на финансовата година"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_operating_income0
 msgid "Operating Income (or Loss)"
-msgstr ""
+msgstr "Оперативен резултат (печалба или загуба)"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2828,12 +2896,12 @@ msgstr "Настройки"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filter_extra_options_template
 msgid "Options:"
-msgstr ""
+msgstr "Опции:"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.outstanding
 msgid "Outstanding Receipts/Payments"
-msgstr ""
+msgstr "Неприключени постъпления/плащания"
 
 #. module: account_reports
 #. odoo-python
@@ -2850,12 +2918,12 @@ msgstr "PDF"
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_reports_export_wizard__report_id
 msgid "Parent Report Id"
-msgstr ""
+msgstr "ID на основния отчет"
 
 #. module: account_reports
 #: model:ir.model.fields,field_description:account_reports.field_account_reports_export_wizard_format__export_wizard_id
 msgid "Parent Wizard"
-msgstr ""
+msgstr "Основен помощник"
 
 #. module: account_reports
 #. odoo-javascript
@@ -2870,7 +2938,7 @@ msgstr "Партньор"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Partner Categories"
-msgstr ""
+msgstr "Категории на партньори"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.partner_ledger_report
@@ -2882,27 +2950,27 @@ msgstr "Счетоводна книга - контрагенти"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_partner_ledger_report_handler
 msgid "Partner Ledger Custom Handler"
-msgstr ""
+msgstr "Персонализиран обработчик за главна книга на партньор"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/aged_partner_balance/line_name/line_name.xml:0
 #: code:addons/account_reports/static/src/components/partner_ledger/line_name.xml:0
 msgid "Partner is bad"
-msgstr ""
+msgstr "Партньорът е лош"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/aged_partner_balance/line_name/line_name.xml:0
 #: code:addons/account_reports/static/src/components/partner_ledger/line_name.xml:0
 msgid "Partner is good"
-msgstr ""
+msgstr "Партньорът е добър"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/account_report_send.py:0
 msgid "Partner(s) should have an email address."
-msgstr ""
+msgstr "Партньорът(ите) трябва да имат имейл адрес."
 
 #. module: account_reports
 #. odoo-javascript
@@ -2915,13 +2983,13 @@ msgstr "Контрагенти"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filters
 msgid "Partners Categories:"
-msgstr ""
+msgstr "Категории на партньори:"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_sales_report.py:0
 msgid "Partners with duplicated VAT numbers"
-msgstr ""
+msgstr "Партньори с дублирани ДДС номера"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filters
@@ -3037,7 +3105,7 @@ msgstr "Моля, въведете валидно име на бюджет."
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/multicurrency_revaluation_report/filters/filters.js:0
 msgid "Please enter a valid number."
-msgstr ""
+msgstr "Моля, въведете валидно число."
 
 #. module: account_reports
 #. odoo-python
@@ -3434,7 +3502,7 @@ msgstr "Отбелязване като отметнато"
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.duplicated_vat_partner_tree_view
 msgid "Set as main"
-msgstr ""
+msgstr "Задай като основен"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_report_executivesummary_st_cash_forecast0
@@ -3778,7 +3846,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_reports/models/account_partner_ledger.py:0
 msgid "The column '%s' is not available for this report."
-msgstr ""
+msgstr "Колоната '%s' не е налична за тази справка."
 
 #. module: account_reports
 #. odoo-python
@@ -3787,6 +3855,8 @@ msgid ""
 "The country detected for this VAT number does not match the one set on this "
 "Tax Unit."
 msgstr ""
+"Държавата, открита за този ДДС номер, не съвпада с тази, зададена на тази "
+"данъчна група."
 
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_account_tax_unit__country_id
@@ -3794,18 +3864,20 @@ msgid ""
 "The country in which this tax unit is used to group your companies' tax "
 "reports declaration."
 msgstr ""
+"Държавата, в която тази данъчна група се използва за групиране на "
+"декларацията на данъчните справки на вашите фирми."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_multicurrency_revaluation_report.py:0
 msgid "The currency rate cannot be equal to zero"
-msgstr ""
+msgstr "Валутният курс не може да бъде равен на нула"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "The current balance in the"
-msgstr ""
+msgstr "Текущото салдо в"
 
 #. module: account_reports
 #. odoo-python
@@ -3835,41 +3907,45 @@ msgstr ""
 #: model:ir.model.fields,help:account_reports.field_account_tax_unit__vat
 msgid "The identifier to be used when submitting a report for this unit."
 msgstr ""
+"Идентификаторът, който да се използва при подаване на справка за тази "
+"единица."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_tax.py:0
 msgid "The main company of a tax unit has to be part of it."
-msgstr ""
+msgstr "Главната фирма на данъчна група трябва да е част от нея."
 
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_res_company__account_tax_unit_ids
 msgid "The tax units this company belongs to."
-msgstr ""
+msgstr "Данъчните единици, към които принадлежи тази фирма."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "The used operator is not supported for this expression."
-msgstr ""
+msgstr "Използваният оператор не се поддържа за този израз."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/warnings.xml:0
 msgid "There are"
-msgstr ""
+msgstr "Има"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/account_report_send.py:0
 msgid "There are currently reports waiting to be sent, please try again later."
 msgstr ""
+"В момента има отчети, чакащи да бъдат изпратени, моля опитайте отново по-"
+"късно."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/account_report.xml:0
 msgid "There is no data to display for the given filters."
-msgstr ""
+msgstr "Няма данни за показване за зададените филтри."
 
 #. module: account_reports
 #. odoo-python
@@ -3878,6 +3954,8 @@ msgid ""
 "This account exists in the Chart of Accounts but is not mentioned in any "
 "line of the report"
 msgstr ""
+"Тази сметка съществува в сметкоплана, но не е спомената в нито един ред на "
+"отчета"
 
 #. module: account_reports
 #. odoo-python
@@ -3885,25 +3963,27 @@ msgstr ""
 msgid ""
 "This account is reported in a line of the report but does not exist in the "
 "Chart of Accounts"
-msgstr ""
+msgstr "Тази сметка е отчетена в ред на отчета, но не съществува в сметкоплана"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "This account is reported in multiple lines of the report"
-msgstr ""
+msgstr "Тази сметка е отчетена в няколко реда на отчета"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "This account is reported multiple times on the same line of the report"
-msgstr ""
+msgstr "Тази сметка е отчетена няколко пъти на същия ред на отчета"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
 msgid ""
 "This allows you to choose the position of totals in your financial reports."
 msgstr ""
+"Това ви позволява да изберете позицията на общите суми във вашите финансови "
+"отчети."
 
 #. module: account_reports
 #. odoo-javascript
@@ -3912,6 +3992,8 @@ msgid ""
 "This company is part of a tax unit. You're currently not viewing the whole "
 "unit."
 msgstr ""
+"Тази фирма е част от данъчна единица. В момента не разглеждате цялата "
+"единица."
 
 #. module: account_reports
 #. odoo-javascript
@@ -3920,12 +4002,14 @@ msgid ""
 "This line and all its children will be deleted. Are you sure you want to "
 "proceed?"
 msgstr ""
+"Този ред и всички негови подчинени ще бъдат изтрити. Сигурни ли сте, че "
+"искате да продължите?"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/widgets/account_report_x2many/account_report_x2many.xml:0
 msgid "This line is out of sequence."
-msgstr ""
+msgstr "Този ред е извън последователността."
 
 #. module: account_reports
 #. odoo-javascript
@@ -3934,22 +4018,26 @@ msgid ""
 "This line is placed before its parent, which is not allowed. You can fix it "
 "by dragging it to the proper position."
 msgstr ""
+"Този ред е поставен преди своя родител, което не е позволено. Можете да го "
+"поправите, като го преместите на правилната позиция."
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_line_form
 msgid "This line uses a custom user-defined 'Group By' value."
 msgstr ""
+"Този ред използва персонализирана, дефинирана от потребителя стойност за "
+"'Групиране по'."
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_form
 msgid "This option hides lines with a value of 0"
-msgstr ""
+msgstr "Тази опция скрива редове със стойност 0"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "This report already has a menuitem."
-msgstr ""
+msgstr "Тази справка вече има елемент от меню."
 
 #. module: account_reports
 #. odoo-javascript
@@ -3958,12 +4046,14 @@ msgid ""
 "This report contains inconsistencies. The affected lines are marked with a "
 "warning."
 msgstr ""
+"Тази справка съдържа несъответствия. Засегнатите редове са маркирани с "
+"предупреждение."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/multicurrency_revaluation_report/warnings.xml:0
 msgid "This report only displays the data of the active company."
-msgstr ""
+msgstr "Тази справка показва само данните на активната фирма."
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.account_report_form
@@ -3972,6 +4062,9 @@ msgid ""
 "                        You can customize it manually, but any change in the "
 "parameters used for its computation could lead to errors."
 msgstr ""
+"Този отчет използва специфичен за отчета код.\n"
+"                        Можете да го персонализирате ръчно, но всяка промяна "
+"в параметрите, използвани за неговото изчисляване, може да доведе до грешки."
 
 #. module: account_reports
 #. odoo-javascript
@@ -3981,12 +4074,15 @@ msgid ""
 "using different currencies,\n"
 "        which can lead the report to be unbalanced."
 msgstr ""
+"Този отчет използва метода на конверсия CTA за консолидиране на множество "
+"фирми, използващи различни валути,\n"
+"        което може да доведе до небалансиран отчет."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "This subformula references an unknown expression: %s"
-msgstr ""
+msgstr "Тази подформула препраща към непознат израз: %s"
 
 #. module: account_reports
 #. odoo-python
@@ -3995,6 +4091,8 @@ msgid ""
 "This tag is reported in a line of the report but is not linked to any "
 "account of the Chart of Accounts"
 msgstr ""
+"Този етикет е отчетен в ред на справката, но не е свързан с никоя сметка от "
+"сметкоплана"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_move_form_vat_return
@@ -4033,12 +4131,12 @@ msgstr "Общо 1%s"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 msgid "Trade Partners"
-msgstr ""
+msgstr "Търговски партньори"
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.transaction_without_statement
 msgid "Transactions without statement"
-msgstr ""
+msgstr "Транзакции без извлечение"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.trial_balance_report
@@ -4050,13 +4148,13 @@ msgstr "Оборотна ведомодст"
 #. module: account_reports
 #: model:ir.model,name:account_reports.model_account_trial_balance_report_handler
 msgid "Trial Balance Custom Handler"
-msgstr ""
+msgstr "Персонализиран манипулатор на оборотна ведомост"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_sales_report.py:0
 msgid "Triangular"
-msgstr ""
+msgstr "Триъгълна"
 
 #. module: account_reports
 #. odoo-python
@@ -4065,6 +4163,7 @@ msgid ""
 "Trying to dispatch an action on a report not compatible with the provided "
 "options."
 msgstr ""
+"Опит за изпращане на действие към отчет, несъвместим с предоставените опции."
 
 #. module: account_reports
 #. odoo-python
@@ -4073,18 +4172,21 @@ msgid ""
 "Trying to expand a group for a line which was not generated by a report "
 "line: %s"
 msgstr ""
+"Опит за разширяване на група за ред, който не е генериран от ред на отчет: %s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Trying to expand a line without an expansion function."
-msgstr ""
+msgstr "Опит за разширяване на ред без функция за разширяване."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Trying to expand groupby results on lines without a groupby value."
 msgstr ""
+"Опит за разширяване на резултати от групиране на редове без стойност за "
+"групиране."
 
 #. module: account_reports
 #: model:account.report.line,name:account_reports.account_financial_unaffected_earnings0
@@ -4101,7 +4203,7 @@ msgstr "Неопределен"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/filters/filter_extra_options.xml:0
 msgid "Unfold All"
-msgstr ""
+msgstr "Разгъни всичко"
 
 #. module: account_reports
 #. odoo-python
@@ -4120,20 +4222,20 @@ msgstr "Непознат контрагент"
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Unknown bound criterium: %s"
-msgstr ""
+msgstr "Неизвестен граничен критерий: %s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Unknown date scope: %s"
-msgstr ""
+msgstr "Неизвестен времеви обхват: %s"
 
 #. module: account_reports
 #: model:account.report,name:account_reports.multicurrency_revaluation_report
 #: model:ir.actions.client,name:account_reports.action_account_report_multicurrency_revaluation
 #: model:ir.ui.menu,name:account_reports.menu_action_account_report_multicurrency_revaluation
 msgid "Unrealized Currency Gains/Losses"
-msgstr ""
+msgstr "Нереализирани валутни печалби/загуби"
 
 #. module: account_reports
 #. odoo-javascript
@@ -4143,7 +4245,7 @@ msgstr ""
 #: code:addons/account_reports/static/src/components/account_report/filters/filters.js:0
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_filter_extra_options_template
 msgid "Unreconciled Entries"
-msgstr ""
+msgstr "Несъпоставени записи"
 
 #. module: account_reports
 #: model:account.report.column,name:account_reports.account_financial_report_ec_sales_vat
@@ -4182,7 +4284,7 @@ msgstr "Вижте банково извлечение"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/line_cell/popover/carryover_popover.xml:0
 msgid "View Carryover Lines"
-msgstr ""
+msgstr "Преглед на пренесените редове"
 
 #. module: account_reports
 #. odoo-python
@@ -4196,13 +4298,13 @@ msgstr "Вижте запис в журнал"
 #: code:addons/account_reports/models/account_sales_report.py:0
 #: model_terms:ir.ui.view,arch_db:account_reports.view_journal_report_audit_move_line_tree
 msgid "View Partner"
-msgstr ""
+msgstr "Преглед на партньора"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/wizard/account_report_send.py:0
 msgid "View Partner(s)"
-msgstr ""
+msgstr "Преглед на контрагент(и)"
 
 #. module: account_reports
 #. odoo-python
@@ -4220,6 +4322,8 @@ msgstr "Предупреждения"
 msgid ""
 "When ticked, totals and subtotals appear below the sections of the report"
 msgstr ""
+"Когато е отметнато, общите и междинните суми се показват под секциите на "
+"отчета"
 
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_res_company__totals_below_sections
@@ -4227,13 +4331,15 @@ msgstr ""
 msgid ""
 "When ticked, totals and subtotals appear below the sections of the report."
 msgstr ""
+"Когато е отметнато, общите суми и междинните суми се показват под секциите "
+"на отчета."
 
 #. module: account_reports
 #: model:ir.model.fields,help:account_reports.field_account_account__exclude_provision_currency_ids
 msgid ""
 "Whether or not we have to make provisions for the selected foreign "
 "currencies."
-msgstr ""
+msgstr "Дали трябва да правим провизии за избраните чуждестранни валути."
 
 #. module: account_reports
 #. odoo-javascript
@@ -4255,18 +4361,20 @@ msgstr ""
 #: code:addons/account_reports/models/account_partner_ledger.py:0
 msgid "Wrong ID for partner ledger line to expand: %s"
 msgstr ""
+"Грешен идентификатор за разширяване на ред в партньорската счетоводна книга: "
+"%s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "Wrong format for if_other_expr_above/if_other_expr_below formula: %s"
-msgstr ""
+msgstr "Грешен формат на формулата if_other_expr_above/if_other_expr_below: %s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "XLSX"
-msgstr ""
+msgstr "XLSX"
 
 #. module: account_reports
 #. odoo-javascript
@@ -4286,7 +4394,7 @@ msgstr "Да"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/multicurrency_revaluation_report/warnings.xml:0
 msgid "You are using custom exchange rates."
-msgstr ""
+msgstr "Използвате персонализирани валутни курсове."
 
 #. module: account_reports
 #. odoo-python
@@ -4298,7 +4406,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_reports/models/account_move_line.py:0
 msgid "You cannot add taxes on a tax closing move line."
-msgstr ""
+msgstr "Не можете да добавяте данъци към ред от приключващо данъчно движение."
 
 #. module: account_reports
 #. odoo-python
@@ -4307,12 +4415,13 @@ msgid ""
 "You cannot generate entries for a period that does not end at the end of the "
 "month."
 msgstr ""
+"Не можете да генерирате записи за период, който не завършва в края на месеца."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_deferred_reports.py:0
 msgid "You cannot generate entries for a period that is locked."
-msgstr ""
+msgstr "Не можете да генерирате записи за период, който е заключен."
 
 #. module: account_reports
 #. odoo-python
@@ -4330,18 +4439,24 @@ msgid ""
 "values impacting the tax report of a locked period. Please change the "
 "following lock dates to proceed: %(lock_date_info)s."
 msgstr ""
+"Не можете да върнете този приключващ запис в чернова, тъй като това би "
+"изтрило прехвърлени стойности, влияещи върху справката-декларация за ДДС на "
+"заключен период. Моля, променете следните дати на заключване, за да "
+"продължите: %(lock_date_info)s."
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_report.py:0
 msgid "You cannot update this value as it's locked by: %s"
-msgstr ""
+msgstr "Не можете да актуализирате тази стойност, тъй като е заключена от: %s"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_multicurrency_revaluation_report.py:0
 msgid "You need to activate more than one currency to access this report."
 msgstr ""
+"Трябва да активирате повече от една валута, за да получите достъп до тази "
+"справка."
 
 #. module: account_reports
 #. odoo-python
@@ -4356,13 +4471,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_main
 #: model_terms:ir.ui.view,arch_db:account_reports.pdf_export_main_customer_report
 msgid "[Draft]"
-msgstr ""
+msgstr "[Чернова]"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "addressed to"
-msgstr ""
+msgstr "адресирано до"
 
 #. module: account_reports
 #. odoo-javascript
@@ -4374,7 +4489,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/tax_report/warnings.xml:0
 msgid "and correct their tax tags if necessary."
-msgstr ""
+msgstr "и коригирайте техните данъчни етикети, ако е необходимо."
 
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__res_company__account_tax_periodicity__year
@@ -4385,13 +4500,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account_reports.res_config_settings_view_form
 #: model_terms:ir.ui.view,arch_db:account_reports.setup_financial_year_opening_form
 msgid "days after period"
-msgstr ""
+msgstr "дни след периода"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "doesn't match the balance of your"
-msgstr ""
+msgstr "не съответства на салдото на Вашия"
 
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__res_company__account_tax_periodicity__2_months
@@ -4407,13 +4522,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "have a starting balance different from the previous ending balance."
-msgstr ""
+msgstr "имат начално салдо, различно от предходното крайно салдо."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/line_cell/popover/carryover_popover.xml:0
 msgid "in the next period."
-msgstr ""
+msgstr "през следващия период."
 
 #. module: account_reports
 #. odoo-javascript
@@ -4425,18 +4540,18 @@ msgstr "фактури"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "journal items"
-msgstr ""
+msgstr "счетоводни записвания"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "last bank statement"
-msgstr ""
+msgstr "последно банково извлечение"
 
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__res_company__account_tax_periodicity__monthly
 msgid "monthly"
-msgstr ""
+msgstr "месечно"
 
 #. module: account_reports
 #. odoo-python
@@ -4448,46 +4563,46 @@ msgstr "n/a"
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "partners"
-msgstr ""
+msgstr "партньори"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/warnings.xml:0
 msgid "prior or included in this period."
-msgstr ""
+msgstr "предходни или включени в този период."
 
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__res_company__account_tax_periodicity__trimester
 msgid "quarterly"
-msgstr ""
+msgstr "на тримесечие"
 
 #. module: account_reports
 #: model:ir.model.fields.selection,name:account_reports.selection__res_company__account_tax_periodicity__semester
 msgid "semi-annually"
-msgstr ""
+msgstr "на полугодие"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "statements"
-msgstr ""
+msgstr "извлечения"
 
 #. module: account_reports
 #: model_terms:ir.ui.view,arch_db:account_reports.view_tax_unit_form
 msgid "synchronize fiscal positions"
-msgstr ""
+msgstr "синхронизиране на фискалните позиции"
 
 #. module: account_reports
 #. odoo-python
 #: code:addons/account_reports/models/account_tax.py:0
 msgid "tax unit [%s]"
-msgstr ""
+msgstr "данъчна единица [%s]"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "that are not established abroad."
-msgstr ""
+msgstr "които не са установени в чужбина."
 
 #. module: account_reports
 #. odoo-javascript
@@ -4506,43 +4621,43 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/warnings.xml:0
 msgid "unposted Journal Entries"
-msgstr ""
+msgstr "неосчетоводени счетоводни записи"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/line_cell/popover/carryover_popover.xml:0
 msgid "were carried over to this line from previous period."
-msgstr ""
+msgstr "бяха пренесени в този ред от предходния период."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/bank_reconciliation_report/warnings.xml:0
 msgid "which don't originate from a bank statement nor payment."
-msgstr ""
+msgstr "които не произхождат нито от банково извлечение, нито от плащане."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "who are not established in any of the EC countries."
-msgstr ""
+msgstr "които не са установени в нито една от страните от ЕО."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/line_cell/popover/carryover_popover.xml:0
 msgid "will be carried over to"
-msgstr ""
+msgstr "ще бъде пренесено в"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/account_report/line_cell/popover/carryover_popover.xml:0
 msgid "will be carried over to this line in the next period."
-msgstr ""
+msgstr "ще бъде пренесено в този ред през следващия период."
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/sales_report/warnings.xml:0
 msgid "without a valid intra-community VAT number."
-msgstr ""
+msgstr "без валиден вътреобщностен ДДС номер."
 
 #. module: account_reports
 #: model:mail.template,subject:account_reports.email_template_customer_statement
@@ -4551,9 +4666,11 @@ msgid ""
 "object._get_followup_responsible().company_id).name }} Statement - "
 "{{ object.commercial_company_name }}"
 msgstr ""
+"{{ (object.company_id or object._get_followup_responsible().company_id)"
+".name }} Извлечение - {{ object.commercial_company_name }}"
 
 #. module: account_reports
 #. odoo-javascript
 #: code:addons/account_reports/static/src/components/multicurrency_revaluation_report/warnings.xml:0
 msgid "⇒ Reset to Odoo’s Rate"
-msgstr ""
+msgstr "⇒ Възстанови към курса на Odoo"

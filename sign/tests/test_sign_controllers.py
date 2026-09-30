@@ -12,6 +12,7 @@ from odoo.exceptions import AccessError, ValidationError
 from odoo.addons.website.tools import MockRequest
 from odoo.tests import tagged
 from odoo.tools import formataddr
+from odoo import Command
 
 class TestSignControllerCommon(SignRequestCommon, HttpCaseWithUserDemo):
     def setUp(self):
@@ -226,3 +227,42 @@ class TestSignController(TestSignControllerCommon):
                          "Log partner_id should match partner_1")
         self.assertEqual(sign_cancel_log.sign_request_item_id.id, sign_request_item.id,
                          "Log should reference the correct request item")
+
+    def test_sequential_signing_non_consecutive(self):
+        """ A -> B -> A: A's second turn (role_company, order 3) must stay
+        blocked and hidden until B (role_employee, order 2) has signed. """
+        sign_request = self.env['sign.request'].create({
+            'template_id': self.template_3_roles.id,
+            'reference': self.template_3_roles.display_name,
+            'request_item_ids': [Command.create({
+                'partner_id': self.partner_1.id,
+                'role_id': self.role_customer.id,
+                'mail_sent_order': 1,
+            }), Command.create({
+                'partner_id': self.partner_2.id,
+                'role_id': self.role_employee.id,
+                'mail_sent_order': 2,
+            }), Command.create({
+                'partner_id': self.partner_1.id,
+                'role_id': self.role_company.id,
+                'mail_sent_order': 3,
+            })],
+        })
+        role2item = {sri.role_id: sri for sri in sign_request.request_item_ids}
+        item_customer = role2item[self.role_customer]   # A, step 1
+        item_employee = role2item[self.role_employee]   # B, step 2
+        item_company = role2item[self.role_company]     # A, step 3
+
+        self.assertTrue(item_customer.is_mail_sent, 'Step 1 should be sent immediately')
+        self.assertFalse(item_employee.is_mail_sent, 'Step 2 should not be sent yet')
+        self.assertFalse(item_company.is_mail_sent, 'Step 3 (A again) should not be sent yet')
+        item_customer._edit_and_sign(self.customer_sign_values)
+        self.assertEqual(item_customer.state, 'completed')
+        self.assertTrue(item_employee.is_mail_sent, 'Step 2 should be sent once step 1 is done')
+        self.assertFalse(item_company.is_mail_sent, 'Step 3 (A again) must stay hidden until step 2 completes')
+        item_employee._edit_and_sign(self.employee_sign_values)
+        self.assertEqual(item_employee.state, 'completed')
+        self.assertTrue(item_company.is_mail_sent, 'Step 3 should be sent once step 2 completes')
+        item_company._edit_and_sign(self.company_sign_values)
+        self.assertEqual(item_company.state, 'completed')
+        self.assertEqual(sign_request.state, 'signed')

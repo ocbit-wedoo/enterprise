@@ -97,3 +97,29 @@ class TestStockPickingManual(common.TestUyEdiStock):
         # Check addenda is included
         addenda_content = picking._l10n_uy_edi_get_addenda()
         self.assertIn(addenda.content, addenda_content, "Addenda content should be included")
+
+    def test_50_dedicated_addenda_page(self):
+        """ Verify that a dedicated addenda page is requested when the addenda are too long. """
+
+        def assert_note_extra_params(picking, note, dedicated_addenda):
+            expected_extra_params = {}
+            if dedicated_addenda:
+                expected_extra_params = {
+                    'nombreParametros': {'string': ['adenda']},
+                    'valoresParametros': {'string': ['true']}
+                }
+
+            picking.note = note
+            _params, extra_params = picking.l10n_uy_edi_document_id._get_report_params()
+            self.assertEqual(extra_params, expected_extra_params)
+
+        picking = self._create_stock_picking()
+        self._validate_and_create_delivery_guide(picking)
+        line_length = 140
+        max_lines = 6
+
+        # Test addenda with exactly the maximum allowed lines (no dedicated page required)
+        assert_note_extra_params(picking, 'A' * line_length * max_lines, False)  # 6 lines
+        # Test addenda exceeding the maximum allowed lines (dedicated page required)
+        assert_note_extra_params(picking, 'A' * (line_length * max_lines + 10), True)  # 6 lines and 10 chars
+        assert_note_extra_params(picking, 'A\nA\nA' + 'A' * line_length * 4, True)  # 7 lines

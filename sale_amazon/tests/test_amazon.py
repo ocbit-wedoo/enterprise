@@ -183,28 +183,20 @@ class TestAmazon(common.TestAmazonCommon):
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mocked response without making an actual call to the SP-API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            if operation_ == 'getOrders':
-                response_ = dict(base_response_, payload={
-                    'LastUpdatedBefore': '2020-01-01T00:00:00Z',
-                    'Orders': [common.ORDER_MOCK, dict(
-                        common.ORDER_MOCK,
-                        AmazonOrderId={'value': '987654321'},
-                        LastUpdateDate='2019-01-20T00:00:00Z',
-                    )],
-                })
-            elif operation_ == 'getOrderItems':
-                response_ = base_response_
-                self.get_order_items_count += 1
-                if self.get_order_items_count == 2:
-                    raise amazon_utils.AmazonRateLimitError(operation_)
-            else:
-                response_ = base_response_
-            return response_
+            if operation_ == 'searchOrders':
+                self.search_orders_count += 1
+                # Page 1: Return the base mock and include a pagination token to trigger a second
+                # API call.
+                if self.search_orders_count == 1:
+                    return {**base_response_, "paginationToken": "dummy_token_for_page_2"}
+                # Page > 1: Simulate the API rate limit hitting on the subsequent request.
+                raise amazon_utils.AmazonRateLimitError(operation_)
+            return base_response_
 
         with patch(
             'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
         ):
-            self.get_order_items_count = 0
+            self.search_orders_count = 0
             self.account._sync_orders(auto_commit=False)
             self.assertEqual(
                 self.account.last_orders_sync,
@@ -220,7 +212,7 @@ class TestAmazon(common.TestAmazonCommon):
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mocked response or raise an AmazonRateLimitError without making an actual
             call to the SP-API. """
-            if operation_ != 'getOrderItems':
+            if operation_ != 'searchOrders':
                 return common.OPERATIONS_RESPONSES_MAP[operation_]
             else:
                 raise amazon_utils.AmazonRateLimitError(operation_)
@@ -258,15 +250,21 @@ class TestAmazon(common.TestAmazonCommon):
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mocked response without making an actual call to the SP-API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            if operation_ == 'getOrders':
-                return dict(base_response_, payload={
-                    'LastUpdatedBefore': base_response_['payload']['LastUpdatedBefore'],
-                    'Orders': [
-                        dict(common.ORDER_MOCK, OrderStatus='Shipped', FulfillmentChannel='AFN')
+            if operation_ == 'searchOrders':
+                order_mock = base_response_["orders"][0]
+                return {
+                    **base_response_,
+                    "orders": [
+                        {
+                            **order_mock,
+                            "fulfillment": {
+                                "fulfillmentStatus": "SHIPPED",
+                                "fulfilledBy": "AMAZON",
+                            },
+                        }
                     ],
-                })
-            else:
-                return base_response_
+                }
+            return base_response_
 
         def find_matching_product_mock(
             _self, product_code_, _default_xmlid, default_name_, default_type_
@@ -321,94 +319,28 @@ class TestAmazon(common.TestAmazonCommon):
             )
 
     @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
-    def test_sync_orders_europe(self):
-        """ Test the orders synchronization with a European marketplace. """
-
-        def get_sp_api_response_mock(_account, operation_, **_kwargs):
-            """ Return a mocked response without making an actual call to the SP-API. """
-            base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            if operation_ == 'getOrders':
-                response_ = dict(base_response_, payload={
-                    'LastUpdatedBefore': base_response_['payload']['LastUpdatedBefore'],
-                    'Orders': [dict(common.ORDER_MOCK, MarketplaceId='A13V1IB3VIYZZH')]
-                })
-            else:
-                response_ = base_response_
-            return response_
-
-        def find_matching_product_mock(
-            _self, product_code_, _default_xmlid, default_name_, default_type_
-        ):
-            """ Return a product created on-the-fly with the product code as internal reference. """
-            product_ = self.env['product.product'].create({
-                'name': default_name_,
-                'type': default_type_,
-                'list_price': 0.0,
-                'sale_ok': False,
-                'purchase_ok': False,
-                'default_code': product_code_,
-            })
-            product_.product_tmpl_id.taxes_id = [Command.clear()]
-            return product_
-
-        with patch(
-            'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
-        ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._recompute_subtotal',
-            new=lambda self_, subtotal_, *args_, **kwargs_: subtotal_,
-        ), patch(
-            'odoo.addons.sale_amazon.models.amazon_account.AmazonAccount._find_matching_product',
-            new=find_matching_product_mock,
-        ):
-            europe_mp = self.env['amazon.marketplace'].search([('api_ref', '=', 'A13V1IB3VIYZZH')])
-            self.account.base_marketplace_id = europe_mp.id
-            self.account.available_marketplace_ids = [europe_mp.id]
-            self.account.active_marketplace_ids = [europe_mp.id]
-
-            self.account._sync_orders(auto_commit=False)
-            order_lines = self.env['sale.order.line'].search(
-                [('order_id.amazon_order_ref', '=', '123456789')]
-            )
-            product_line = order_lines.filtered(lambda l: l.product_id.default_code == 'TEST')
-            shipping_line = order_lines.filtered(
-                lambda l: l.product_id.default_code == 'SHIPPING-CODE'
-            )
-            gift_wrapping_line = order_lines.filtered(
-                lambda l: l.product_id.default_code == 'WRAP-CODE'
-            )
-            self.assertEqual(
-                product_line.price_unit,
-                40,  # (100 - 20)/2
-                msg="Tax amounts should be deducted from the item price for European marketplaces.",
-            )
-            self.assertEqual(
-                shipping_line.price_unit,
-                10,  # 12.50 - 2.50
-                msg="Tax amounts should be deducted from the shipping price for European "
-                    "marketplaces.",
-            )
-            self.assertEqual(
-                gift_wrapping_line.price_unit,
-                2,  # 3.33 - 1.33
-                msg="Tax amounts should be deducted from the gift wrap price for European "
-                    "marketplaces.",
-            )
-
-    @mute_logger('odoo.addons.sale_amazon.models.amazon_account')
     def test_sync_orders_cancel(self):
         """ Test the orders synchronization with cancellation from Amazon. """
 
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mocked response without making an actual call to the SP-API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            order_status_ = 'Unshipped' if not order_created else 'Canceled'
-            if operation_ == 'getOrders':
-                return dict(base_response_, payload={
-                    'LastUpdatedBefore': base_response_['payload']['LastUpdatedBefore'],
-                    'Orders': [dict(common.ORDER_MOCK, OrderStatus=order_status_)],
-                })
-            else:
-                return base_response_
+            order_status_ = 'UNSHIPPED' if not order_created else 'CANCELLED'
+            if operation_ == 'searchOrders':
+                order_mock = base_response_['orders'][0]
+                return {
+                    **base_response_,
+                    "orders": [
+                        {
+                            **order_mock,
+                            "fulfillment": {
+                                **order_mock["fulfillment"],
+                                "fulfillmentStatus": order_status_,
+                            },
+                        }
+                    ],
+                }
+            return base_response_
 
         with patch(
             'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
@@ -435,15 +367,22 @@ class TestAmazon(common.TestAmazonCommon):
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mock response without making an actual call to the Selling Partner API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            order_status_ = 'Unshipped' if not self.order_canceled else 'Canceled'
-            if operation_ == 'getOrders':
-                response_ = dict(base_response_, payload={
-                    'LastUpdatedBefore': base_response_['payload']['LastUpdatedBefore'],
-                    'Orders': [dict(common.ORDER_MOCK, OrderStatus=order_status_)]
-                })
-            else:
-                response_ = base_response_
-            return response_
+            order_status_ = 'UNSHIPPED' if not self.order_canceled else 'CANCELLED'
+            if operation_ == 'searchOrders':
+                order_mock = base_response_["orders"][0]
+                return {
+                    **base_response_,
+                    "orders": [
+                        {
+                            **order_mock,
+                            "fulfillment": {
+                                **order_mock["fulfillment"],
+                                "fulfillmentStatus": order_status_,
+                            },
+                        }
+                    ],
+                }
+            return base_response_
 
         with patch(
             'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
@@ -469,33 +408,49 @@ class TestAmazon(common.TestAmazonCommon):
         """ Test handling of Amazon replacement orders without currency. """
 
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
-            """ Return a mocked response without making an actual call to the SP-API. """
-            base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            if operation_ == 'getOrders':
-                response_ = dict(base_response_, payload={
-                    'LastUpdatedBefore': base_response_['payload']['LastUpdatedBefore'],
-                    'Orders': [dict(
-                        common.ORDER_MOCK,
-                        IsReplacementOrder='true',
-                        ReplacedOrderId='replaced_order',
-                        OrderTotal=dict(Amount='0'),
-                    )],
-                })
-            elif operation_ == 'getOrderItems':
-                response_ = dict(base_response_, payload={
-                    'AmazonOrderId': base_response_['payload']['AmazonOrderId'],
-                    'OrderItems': [dict(
-                        ItemPrice=dict(Amount='0'),
-                        ShippingPrice=dict(Amount='0'),
-                        SellerSKU='TEST',
-                        Title='Run Test, Run!',
-                        QuantityOrdered=2,
-                        OrderItemId='987654321',
-                    )],
-                })
-            else:
-                response_ = base_response_
-            return response_
+            """Return a mocked response without making an actual call to the SP-API."""
+            base_response_ = common.OPERATIONS_RESPONSES_MAP.get(operation_)
+            if operation_ == "searchOrders":
+                order_mock = base_response_["orders"][0]
+                order_items = order_mock["orderItems"][0]
+                return {
+                    **base_response_,
+                    "orders": [
+                        {
+                            **order_mock,
+                            "associatedOrders": [
+                                {
+                                    "orderId": "replaced_order",
+                                    "associationType": "REPLACEMENT_ORIGINAL_ID",
+                                }
+                            ],
+                            "proceeds": {
+                                # No currencyCode
+                            },
+                            "orderItems": [
+                                {
+                                    **order_items,
+                                    "orderItemId": "987654321",
+                                    "quantityOrdered": 2,
+                                    "product": {
+                                        **order_items.get("product", {}),
+                                        "sellerSku": "TEST",
+                                        "title": "Run Test, Run!",
+                                    },
+                                    "proceeds": {
+                                        **order_items.get("proceeds", {}),
+                                        "breakdowns": [
+                                            {"type": "ITEM", "subtotal": {"amount": "0"}},
+                                            {"type": "SHIPPING", "subtotal": {"amount": "0"}},
+                                        ],
+                                    },
+                                }
+                            ],
+                        }
+                    ],
+                }
+
+            return base_response_
 
         def find_matching_product_mock(
             _self, product_code_, _default_xmlid, default_name_, default_type_
@@ -768,7 +723,7 @@ class TestAmazon(common.TestAmazonCommon):
                 'amazon_email': 'iliketurtles@marketplace.amazon.com',
             })
             contacts_count = self.env['res.partner'].search_count([])
-            order_data = common.OPERATIONS_RESPONSES_MAP['getOrders']['payload']['Orders'][0]
+            order_data = common.OPERATIONS_RESPONSES_MAP['searchOrders']['orders'][0]
             contact, delivery = self.account._find_or_create_partners_from_data(order_data)
             self.assertEqual(self.env['res.partner'].search_count([]), contacts_count)
             self.assertEqual(contact.id, delivery.id)
@@ -800,9 +755,15 @@ class TestAmazon(common.TestAmazonCommon):
             parent_id=contact.id,
         ))
         partners_count = self.env['res.partner'].search_count([])
-        order_data = dict(common.ORDER_MOCK, ShippingAddress=dict(
-            common.ORDER_ADDRESS_MOCK, Name='Gederic Frilson Delivery'
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "recipient": {
+                "deliveryAddress": {
+                    **common.GET_ORDER_MOCK["recipient"]["deliveryAddress"],
+                    "name": "Gederic Frilson Delivery",
+                }
+            },
+        }
         contact, delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertEqual(self.env['res.partner'].search_count([]), partners_count)
         self.assertNotEqual(contact.id, delivery.id)
@@ -816,21 +777,29 @@ class TestAmazon(common.TestAmazonCommon):
         def get_sp_api_response_mock(_account, operation_, **_kwargs):
             """ Return a mocked response without making an actual call to the SP-API. """
             base_response_ = common.OPERATIONS_RESPONSES_MAP[operation_]
-            if operation_ == 'getOrderAddress':
-                return dict(base_response_, payload={
-                    'ShippingAddress': {
-                        'AddressLine1': '123 RainBowMan Street',
-                        'Phone': '+1 234-567-8910 ext. 12345',
-                        'PostalCode': '12345-1234',
-                        'City': 'New Duck City DC',
-                        'StateOrRegion': 'CA',
-                        'CountryCode': 'US',
-                        'Name': 'Gederic Frilson Delivery',
-                        'AddressType': 'Commercial',
-                    }
-                })
-            else:
-                return base_response_
+            if operation_ == 'searchOrders':
+                order_mock = base_response_["orders"][0]
+                return {
+                    **base_response_,
+                    "orders": [
+                        {
+                            **order_mock,
+                            "recipient": {
+                                "deliveryAddress": {
+                                    "addressLine1": "123 RainBowMan Street",
+                                    "phone": "+1 234-567-8910 ext. 12345",
+                                    "postalCode": "12345-1234",
+                                    "city": "New Duck City DC",
+                                    "stateOrRegion": "CA",
+                                    "countryCode": "US",
+                                    "name": "Gederic Frilson Delivery",
+                                    "addressType": "Commercial",
+                                }
+                            },
+                        }
+                    ],
+                }
+            return base_response_
 
         with patch(
             'odoo.addons.sale_amazon.utils.make_sp_api_request', new=get_sp_api_response_mock
@@ -841,7 +810,7 @@ class TestAmazon(common.TestAmazonCommon):
                 'amazon_email': 'iliketurtles@marketplace.amazon.com',
             })
             partners_count = self.env['res.partner'].search_count([])
-            order_data = common.OPERATIONS_RESPONSES_MAP['getOrders']['payload']['Orders'][0]
+            order_data = common.OPERATIONS_RESPONSES_MAP['searchOrders']['orders'][0]
             contact, delivery = self.account._find_or_create_partners_from_data(order_data)
             self.assertEqual(
                 self.env['res.partner'].search_count([]),
@@ -862,7 +831,7 @@ class TestAmazon(common.TestAmazonCommon):
             new=lambda account_, operation_, **kwargs: common.OPERATIONS_RESPONSES_MAP[operation_],
         ):
             partners_count = self.env['res.partner'].search_count([])
-            order_data = common.OPERATIONS_RESPONSES_MAP['getOrders']['payload']['Orders'][0]
+            order_data = common.OPERATIONS_RESPONSES_MAP['searchOrders']['orders'][0]
             contact, delivery = self.account._find_or_create_partners_from_data(order_data)
             self.assertEqual(
                 self.env['res.partner'].search_count([]),
@@ -888,9 +857,10 @@ class TestAmazon(common.TestAmazonCommon):
     def test_get_partners_creation_contact_delivery(self):
         """ Test the partners search with creation of the contact and delivery. """
         partners_count = self.env['res.partner'].search_count([])
-        order_data = dict(common.ORDER_MOCK, BuyerInfo=dict(
-            common.ORDER_BUYER_INFO_MOCK, BuyerName='Not Gederic Frilson'
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "buyer": {**common.GET_ORDER_MOCK["buyer"], "buyerName": "Not Gederic Frilson"},
+        }
         contact, delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertEqual(
             self.env['res.partner'].search_count([]),
@@ -913,9 +883,10 @@ class TestAmazon(common.TestAmazonCommon):
             'amazon_email': 'iliketurtles@marketplace.amazon.com',
         })
         partners_count = self.env['res.partner'].search_count([])
-        order_data = dict(common.ORDER_MOCK, BuyerInfo=dict(
-            common.ORDER_BUYER_INFO_MOCK, BuyerName=None
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "buyer": {**common.GET_ORDER_MOCK["buyer"], "buyerName": None},
+        }
         contact, delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertEqual(
             self.env['res.partner'].search_count([]),
@@ -944,9 +915,10 @@ class TestAmazon(common.TestAmazonCommon):
             'amazon_email': 'iliketurtles@marketplace.amazon.com',
         })
         partners_count = self.env['res.partner'].search_count([])
-        order_data = dict(common.ORDER_MOCK, BuyerInfo=dict(
-            common.ORDER_BUYER_INFO_MOCK, BuyerEmail=None
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "buyer": {**common.GET_ORDER_MOCK["buyer"], "buyerEmail": None},
+        }
         contact, _delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertEqual(
             self.env['res.partner'].search_count([]),
@@ -957,9 +929,16 @@ class TestAmazon(common.TestAmazonCommon):
 
     def test_get_partners_arbitrary_fields(self):
         """ Test the partners search with all PII filled but in arbitrary fields. """
-        order_data = dict(common.ORDER_MOCK, ShippingAddress=dict(
-            common.ORDER_ADDRESS_MOCK, AddressLine1=None, AddressLine2='123 test Street',
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "recipient": {
+                "deliveryAddress": {
+                    **common.GET_ORDER_MOCK["recipient"]["deliveryAddress"],
+                    "addressLine1": None,
+                    "addressLine2": "123 test Street",
+                }
+            },
+        }
         contact, _delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertFalse(contact.street)
         self.assertTrue(contact.street2)
@@ -980,9 +959,15 @@ class TestAmazon(common.TestAmazonCommon):
         """ Test activity created for the salesman if the state received in the Amazon data
         didn't match any existing state when creating a partner.
         """
-        order_data = dict(common.ORDER_MOCK, ShippingAddress=dict(
-            common.ORDER_ADDRESS_MOCK, StateOrRegion="dummy_state"
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "recipient": {
+                "deliveryAddress": {
+                    **common.GET_ORDER_MOCK["recipient"]["deliveryAddress"],
+                    "stateOrRegion": "dummy_state",
+                }
+            },
+        }
         contact, delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertEqual(self._get_activity_count(contact), 1)
         self.assertEqual(self._get_activity_count(delivery), 1)
@@ -991,9 +976,15 @@ class TestAmazon(common.TestAmazonCommon):
         """ Test no activity created for the salesman if there is no state received in the Amazon
         data.
         """
-        order_data = dict(common.ORDER_MOCK, ShippingAddress=dict(
-            common.ORDER_ADDRESS_MOCK, StateOrRegion=None,
-        ))
+        order_data = {
+            **common.GET_ORDER_MOCK,
+            "recipient": {
+                "deliveryAddress": {
+                    **common.GET_ORDER_MOCK["recipient"]["deliveryAddress"],
+                    "stateOrRegion": None,
+                }
+            },
+        }
         contact, delivery = self.account._find_or_create_partners_from_data(order_data)
         self.assertFalse(self._get_activity_count(contact))
         self.assertFalse(self._get_activity_count(delivery))

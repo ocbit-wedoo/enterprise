@@ -50,12 +50,14 @@ class TestUi(TestMxEdiPosCommon, TestPointOfSaleHttpCommon):
             'is_storable': True,
             'list_price': 10.0,
             'taxes_id': False,
+            'available_in_pos': True,
         })
         self.product_discount = self.env['product.product'].create({
             'name': 'Test Discount',
             'is_storable': False,
             'list_price': -0.10,
             'taxes_id': False,
+            'available_in_pos': True,
         })
         self.main_pos_config.open_ui()
         self.pos_order = self.env['pos.order'].create({
@@ -99,11 +101,6 @@ class TestUi(TestMxEdiPosCommon, TestPointOfSaleHttpCommon):
             It also makes sure that the invoice is correctly created.
         """
         self.authenticate(None, None)
-        self.new_partner = self.env['res.partner'].create({
-            'name': 'AAA Partner',
-            'zip': '12345',
-            'country_id': self.env.company.country_id.id,
-        })
         self.product1 = self.env['product.product'].create({
             'name': 'Test Product 1',
             'is_storable': True,
@@ -114,7 +111,6 @@ class TestUi(TestMxEdiPosCommon, TestPointOfSaleHttpCommon):
         self.pos_order = self.env['pos.order'].create({
             'company_id': self.env.company.id,
             'session_id': self.main_pos_config.current_session_id.id,
-            'partner_id': self.new_partner.id,
             'access_token': '1234567890',
             'lines': [(0, 0, {
                 'name': "OL/0001",
@@ -132,16 +128,16 @@ class TestUi(TestMxEdiPosCommon, TestPointOfSaleHttpCommon):
             'amount_return': 10.0,
         })
         self.main_pos_config.current_session_id.close_session_from_ui()
+
         get_invoice_data = {
             'access_token': self.pos_order.access_token,
-            'name': self.new_partner.name,
+            'name': 'AAA Partner',
             'email': "test@test.com",
-            'company_name': self.new_partner.company_name,
+            'company_name': 'AAA Company',
             'street': "Test street",
             'city': "Test City",
-            'zipcode': self.new_partner.zip,
-            'country_id': self.new_partner.country_id.id,
-            'state_id': self.new_partner.state_id,
+            'zipcode': '12345',
+            'country_id': self.env.company.country_id.id,
             'phone': "123456789",
             'vat': 'GODE561231GR8',
             'invoice_l10n_mx_edi_usage': 'D10',
@@ -152,7 +148,7 @@ class TestUi(TestMxEdiPosCommon, TestPointOfSaleHttpCommon):
         self.assertEqual(self.env['res.partner'].sudo().search_count([('name', '=', 'AAA Partner')]), 1)
         self.assertTrue(self.pos_order.is_invoiced, "The pos order should have an invoice")
         self.assertEqual(self.pos_order.account_move.l10n_mx_edi_usage, 'D10', 'Invoice values not saved')
-        self.assertEqual(self.new_partner.l10n_mx_edi_fiscal_regime, '624', 'Partner values not saved')
+        self.assertEqual(self.pos_order.partner_id.l10n_mx_edi_fiscal_regime, '624', 'Partner values not saved')
 
     def test_settle_account_mx(self):
         if self.env['ir.module.module']._get('pos_settle_due').state != 'installed':

@@ -40,8 +40,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:45+0000\n"
-"PO-Revision-Date: 2026-04-18 09:16+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-09-26 09:33+0000\n"
+"Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "hr_payroll/fi/>\n"
 "Language: fi\n"
@@ -49,13 +49,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: hr_payroll
 #. odoo-python
 #: code:addons/hr_payroll/models/hr_payslip_worked_days.py:0
 msgid " (Half-Day)"
-msgstr " (puolipäiväinen)"
+msgstr " (puoli päivää)"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_report__count
@@ -1440,7 +1440,7 @@ msgstr "Päivittäin"
 #: model:ir.ui.menu,name:hr_payroll.menu_hr_payroll_dashboard_configuration
 #: model:ir.ui.menu,name:hr_payroll.menu_hr_payroll_dashboard_root
 msgid "Dashboard"
-msgstr "Työpöytä"
+msgstr "Koontinäyttö"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_payslip_line_view_search_register
@@ -1621,7 +1621,7 @@ msgstr "Kuvaus"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__disabled
 msgid "Disabled"
-msgstr "Pois käytöstä"
+msgstr "Toimintarajoitteinen"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_payroll_edit_payslip_lines_form_wizard
@@ -1676,7 +1676,7 @@ msgstr "Näytä palkkalaskelma PDF"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_attachment__attachment
 msgid "Document"
-msgstr "Dokumentti"
+msgstr "Asiakirja"
 
 #. module: hr_payroll
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_payslip__state__done
@@ -2199,7 +2199,7 @@ msgstr "Ryhmittele palkkakuitin näyttö"
 #. module: hr_payroll
 #: model:ir.model,name:hr_payroll.model_hr_payroll_payment_report_wizard
 msgid "HR Payroll Payment Report Wizard"
-msgstr "Ohjattu HR-palkanmaksuraportti"
+msgstr "Ohjattu HR-palkanlaskennan maksuraporttitoiminto"
 
 #. module: hr_payroll
 #: model:ir.model,name:hr_payroll.model_hr_work_entry
@@ -3286,7 +3286,7 @@ msgstr "Maksuraportin tiedostonimi"
 #: model_terms:ir.ui.view,arch_db:hr_payroll.payroll_hr_employee_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll.res_config_settings_view_form
 msgid "Payroll"
-msgstr "Palkkahallinto"
+msgstr "Palkanlaskenta"
 
 #. module: hr_payroll
 #: model:ir.actions.server,name:hr_payroll.action_reset_work_entries
@@ -4352,7 +4352,7 @@ msgstr "Veronalainen palkka"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_structure__report_id
 msgid "Template"
-msgstr "Malli"
+msgstr "Mallipohja"
 
 #. module: hr_payroll
 #: model:ir.model.fields,help:hr_payroll.field_hr_payslip__country_code
@@ -4665,7 +4665,7 @@ msgstr "Laskeminen"
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.view_hr_payslip_filter
 msgid "To Confirm"
-msgstr "Vahvistettavaksi"
+msgstr "Vahvistettavaa"
 
 #. module: hr_payroll
 #: model:ir.ui.menu,name:hr_payroll.menu_hr_payroll_employee_payslips_to_pay
@@ -4983,7 +4983,7 @@ msgstr "Viikko %(week_number)s vuonna %(year)s"
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_contract__schedule_pay__weekly
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_payroll_structure_type__default_schedule_pay__weekly
 msgid "Weekly"
-msgstr "Viikottainen"
+msgstr "Viikoittain"
 
 #. module: hr_payroll
 #. odoo-python
@@ -5469,7 +5469,7 @@ msgstr "https://www.odoo.com/fr_FR/slides/slide/manage-payroll-1002"
 #: model_terms:ir.ui.view,arch_db:hr_payroll.report_light_payslip
 #: model_terms:ir.ui.view,arch_db:hr_payroll.report_payslip
 msgid "of"
-msgstr "of"
+msgstr " "
 
 #. module: hr_payroll
 #: model:ir.model.fields,help:hr_payroll.field_hr_salary_rule__amount_percentage_base

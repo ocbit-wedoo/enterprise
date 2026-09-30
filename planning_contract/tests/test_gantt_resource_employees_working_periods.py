@@ -169,6 +169,32 @@ class TestPlanningGanttResourceEmployeeWorkingPeriods(TestPlanningContractCommon
             "The working period for that resource should be the whole gantt periods displayed since it is inside the contract period."
         )
 
+    def test_with_multiple_rows_for_same_employee(self):
+        """
+        Check the working periods are added to every gantt row of a resource when that resource
+        appears in several rows (e.g. grouped by another dimension such as project).
+        """
+        self.employee_joseph.contract_id.state = "open"
+        PlanningSlot = self.env["planning.slot"].with_context(self.context_dates_inside_contracts)
+        gantt_row_id = [{
+            "resource_id": [
+                self.resource_joseph.id,
+                self.resource_joseph.name,
+            ],
+        }]
+        gantt_rows = PlanningSlot.gantt_resource_employees_working_periods([
+            {"id": json.dumps(gantt_row_id)},
+            {"id": json.dumps(gantt_row_id)},
+        ])
+
+        self.assertEqual(len(gantt_rows), 2)
+        for gantt_row in gantt_rows:
+            working_periods = gantt_row['working_periods']
+            self.assertDictEqual(
+                working_periods[0],
+                {'start': self.contract_start_date, 'end': self.contract_end_date},
+            )
+
     def test_with_contract_closed(self):
         """ Check the working period is only inside the contract period of the resource
 

@@ -11,13 +11,14 @@
 # Wil Odoo, 2025
 # Sanne Kristensen <sanne@vkdata.dk>, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-12-09 17:35+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:27+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "account_loans/da/>\n"
 "Language: da\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_loans
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_form_view
@@ -148,7 +149,7 @@ msgstr "Aktivgruppe"
 #. module: account_loans
 #: model:ir.model,name:account_loans.model_account_asset
 msgid "Asset/Revenue Recognition"
-msgstr "Aktiv/omsætning anerkendelse"
+msgstr "Bogføring af aktiv/omsætning"
 
 #. module: account_loans
 #: model:ir.model.fields.selection,name:account_loans.selection__account_loan_compute_wizard__payment_end_of_month__at_anniversary
@@ -279,7 +280,7 @@ msgstr "Valuta"
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_line_search_view
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_search_view
 msgid "Current"
-msgstr "Aktuel"
+msgstr "Nuværende"
 
 #. module: account_loans
 #. odoo-python
@@ -300,12 +301,12 @@ msgstr "Kassér"
 #: model:ir.model.fields,field_description:account_loans.field_account_loan_compute_wizard__display_name
 #: model:ir.model.fields,field_description:account_loans.field_account_loan_line__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: account_loans
 #: model:ir.model.fields.selection,name:account_loans.selection__account_loan__state__draft
 msgid "Draft"
-msgstr "Udkast"
+msgstr "Kladde"
 
 #. module: account_loans
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_line_search_view
@@ -333,7 +334,7 @@ msgstr "Varighedsforskel"
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan__end_date
 msgid "End Date"
-msgstr "Slut dato"
+msgstr "Slutdato"
 
 #. module: account_loans
 #: model:ir.model.fields.selection,name:account_loans.selection__account_loan_compute_wizard__payment_end_of_month__end_of_month
@@ -348,7 +349,7 @@ msgstr "Posteringer, som vi har genereret fra denne lånelinje"
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan__expense_account_id
 msgid "Expense Account"
-msgstr "Vareforbrugskonto"
+msgstr "Udgiftskonto"
 
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan_compute_wizard__first_payment_date
@@ -398,13 +399,14 @@ msgstr "ID"
 #. module: account_loans
 #: model:ir.model.fields,help:account_loans.field_account_loan__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Hvis afkrydset, kræver nye beskeder din opmærksomhed "
+msgstr "Hvis dette felt er markeret, kræver nye beskeder din opmærksomhed."
 
 #. module: account_loans
 #: model:ir.model.fields,help:account_loans.field_account_loan__message_has_error
 #: model:ir.model.fields,help:account_loans.field_account_loan__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Hvis afkrydset har nogle beskeder en leveringsfejl"
+msgstr ""
+"Hvis dette felt er markeret, indeholder nogle beskeder en leveringsfejl."
 
 #. module: account_loans
 #. odoo-python
@@ -467,7 +469,7 @@ msgstr "Journal"
 #. module: account_loans
 #: model:ir.model,name:account_loans.model_account_move
 msgid "Journal Entry"
-msgstr "Journalbilag"
+msgstr "Journalpostering"
 
 #. module: account_loans
 #: model:account.journal,name:account_loans.account_loans_journal_loan
@@ -609,7 +611,7 @@ msgstr "Lån"
 #: model:ir.ui.menu,name:account_loans.menu_action_loans_analysis
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_line_pivot_view
 msgid "Loans Analysis"
-msgstr "Lånanalyse"
+msgstr "Låneoversigt"
 
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan__long_term_account_id
@@ -665,7 +667,7 @@ msgstr "Antal fejl"
 #. module: account_loans
 #: model:ir.model.fields,help:account_loans.field_account_loan__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Antal meddelelser der kræver handling"
+msgstr "Antal meddelelser, der kræver handling"
 
 #. module: account_loans
 #: model:ir.model.fields,help:account_loans.field_account_loan__message_has_error_counter
@@ -706,13 +708,13 @@ msgstr "Tilføj venligst et navn, før lånet beregnes"
 #. module: account_loans
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_form_view
 msgid "Posted Entries"
-msgstr "Posteret posteringer"
+msgstr "Bogførte posteringer"
 
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan_compute_wizard__preview
 #: model_terms:ir.ui.view,arch_db:account_loans.view_account_loan_compute_wizard
 msgid "Preview"
-msgstr "Eksempel"
+msgstr "Forhåndsvisning"
 
 #. module: account_loans
 #. odoo-python
@@ -790,7 +792,7 @@ msgstr "Kører"
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "SMS leveringsfejl"
+msgstr "Fejl ved SMS-levering"
 
 #. module: account_loans
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_line_search_view
@@ -832,7 +834,7 @@ msgstr "Spring over til"
 #: model:ir.model.fields,field_description:account_loans.field_account_loan_compute_wizard__start_date
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_list_view
 msgid "Start Date"
-msgstr "Start dato"
+msgstr "Startdato"
 
 #. module: account_loans
 #: model:ir.model.fields,field_description:account_loans.field_account_loan__state
@@ -915,13 +917,13 @@ msgstr "Lånets navn skal være konfigureret."
 #. odoo-python
 #: code:addons/account_loans/models/account_loan.py:0
 msgid "This entry has been %s"
-msgstr "Denne post har været %s"
+msgstr "Denne postering har været %s"
 
 #. module: account_loans
 #. odoo-python
 #: code:addons/account_loans/models/account_loan.py:0
 msgid "This entry has been reversed from %s"
-msgstr "Denne post er blevet tilbageført fra %s"
+msgstr "Denne postering er blevet tilbageført fra %s"
 
 #. module: account_loans
 #: model_terms:ir.ui.view,arch_db:account_loans.account_loan_list_view
@@ -979,7 +981,7 @@ msgstr "Beskeder fra hjemmesiden"
 #. module: account_loans
 #: model:ir.model.fields,help:account_loans.field_account_loan__website_message_ids
 msgid "Website communication history"
-msgstr "Hjemmesidens kommunikations historik"
+msgstr "Hjemmesidens kommunikationshistorik"
 
 #. module: account_loans
 #: model_terms:ir.ui.view,arch_db:account_loans.view_account_loan_close_wizard

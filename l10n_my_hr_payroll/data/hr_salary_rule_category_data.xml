@@ -5,6 +5,12 @@
         <field name="parent_id" ref="hr_payroll.DED"/>
     </record>
 
+    <record id="hr_payroll_socso_employee_info" model="hr.salary.rule.category">
+        <field name="name">SOCSO Employee Share Information</field>
+        <field name="code">SOCSO_EMP_INFO</field>
+        <field name="parent_id" eval="False"/>
+    </record>
+
     <record id="hr_payroll_socso_employer" model="hr.salary.rule.category">
         <field name="name">SOCSO Employer Share</field>
         <field name="code">SOCSO_EMPLR</field>

@@ -3,7 +3,7 @@
 # * sale_timesheet_enterprise
 #
 # Translators:
-# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2024, 2026.
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 # Yana Bystrytska <yana.bystrytska@erp.co.ua>, 2026.
@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 18:53+0000\n"
-"PO-Revision-Date: 2026-03-30 16:47+0000\n"
-"Last-Translator: Yana Bystrytska <yana.bystrytska@erp.co.ua>\n"
+"PO-Revision-Date: 2026-06-22 09:23+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
 "sale_timesheet_enterprise/uk/>\n"
 "Language: uk\n"
@@ -24,7 +24,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -54,7 +54,7 @@ msgstr "%(percentage)s%"
 #. odoo-javascript
 #: code:addons/sale_timesheet_enterprise/static/src/components/timesheet_leaderboard/timesheet_leaderboard.js:0
 msgid "%(totalTime)s d"
-msgstr ""
+msgstr "%(totalTime)s дні"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -66,13 +66,13 @@ msgstr "%(totalTime)s днів"
 #. odoo-javascript
 #: code:addons/sale_timesheet_enterprise/static/src/components/timesheet_leaderboard/timesheet_leaderboard.js:0
 msgid "%(totalTime)s h"
-msgstr ""
+msgstr "%(totalTime)s год."
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
 #: code:addons/sale_timesheet_enterprise/static/src/components/timesheet_leaderboard/timesheet_leaderboard.js:0
 msgid "%(totalTime)s hours"
-msgstr ""
+msgstr "%(totalTime)s години"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -116,7 +116,7 @@ msgstr "Аватар"
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_res_config_settings__timesheet_show_rates
 msgid "Billing Rate Indicators"
-msgstr ""
+msgstr "Індикатори тарифів"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -189,6 +189,9 @@ msgid ""
 "order line and the %(uom)s spent (%(worked_hours)s) on all related projects "
 "and tasks"
 msgstr ""
+"Різниця між виділеними %(uom)s (%(allocated_hours)s) у рядку замовлення на "
+"продаж та %(uom)s витраченими (%(worked_hours)s) на всі пов'язані проєкти та "
+"завдання"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_hr_timesheet_tip__display_name
@@ -293,14 +296,13 @@ msgstr "Прогрес"
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_project_project
 msgid "Project"
-msgstr "Проект"
+msgstr "Проєкт"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
 #: code:addons/sale_timesheet_enterprise/static/src/components/timesheet_leaderboard/timesheet_leaderboard.xml:0
 msgid "Record timesheets to determine your billing rate!"
-msgstr ""
-"Записуйте табелі для визначення вашої ставки для виставлення у рахунку!"
+msgstr "Записуйте табелі для визначення вашої ставки для виставлення у рахунку!"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -324,11 +326,14 @@ msgid ""
 "Set a billable time target for your employees. If their current rate falls "
 "below their target, it will be highlighted in red."
 msgstr ""
+"Встановіть цільовий показник оплачуваного часу для своїх співробітників. "
+"Якщо їхня поточна ставка падає нижче цільового показника, вона буде виділена "
+"червоним кольором."
 
 #. module: sale_timesheet_enterprise
 #: model_terms:ir.ui.view,arch_db:sale_timesheet_enterprise.res_config_settings_view_form
 msgid "Set employee billable time targets"
-msgstr ""
+msgstr "Встановіть цільові показники оплачуваного часу для працівників"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -345,7 +350,7 @@ msgstr "Показувати більше"
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,help:sale_timesheet_enterprise.field_res_config_settings__timesheet_show_rates
 msgid "Show the billing indicators on My Timesheets view"
-msgstr ""
+msgstr "Відображення індикаторів виставлення рахунків у перегляді Мої табелі"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,help:sale_timesheet_enterprise.field_res_config_settings__timesheet_show_leaderboard
@@ -367,6 +372,8 @@ msgstr "Цільовий час для виставлення у рахунок 
 #: code:addons/sale_timesheet_enterprise/models/project_task.py:0
 msgid "This Sale Order Item doesn't have a target value of planned hours."
 msgstr ""
+"Цей елемент замовлення на продаж не має цільового значення запланованих "
+"годин."
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -410,7 +417,7 @@ msgstr "Час, витрачений на це завдання, включаю�
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_hr_employee__show_billable_time_target
 msgid "Timesheet Show Rates"
-msgstr ""
+msgstr "Ставки показу табелів"
 
 #. module: sale_timesheet_enterprise
 #: model_terms:ir.ui.view,arch_db:sale_timesheet_enterprise.timesheet_view_grid_by_invoice_type

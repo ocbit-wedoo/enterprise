@@ -19,12 +19,13 @@
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
 # Wil Odoo, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-09-12 17:32+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/planning/"
 "sv/>\n"
@@ -33,7 +34,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: planning
 #. odoo-python
@@ -586,6 +587,121 @@ msgid ""
 "                </div>\n"
 "            </body>"
 msgstr ""
+"<style>\n"
+"                    .planning_mail_template_button {\n"
+"                        padding: 5px 10px;\n"
+"                        text-decoration: none;\n"
+"                        border: 1px;\n"
+"                        border-radius: 3px;\n"
+"                        text-align: center;\n"
+"                        color: #374151;\n"
+"                        background-color: #E7E9ED;\n"
+"                        border: solid #E7E9ED;\n"
+"                        flex: 1 1 40%;\n"
+"                    }\n"
+"                    .top_button {\n"
+"                        color: #FFFFFF;\n"
+"                        background-color: #714B67;\n"
+"                        border: solid #714B67;\n"
+"                        flex: 1 1 60%;\n"
+"                    }\n"
+"                    .button_box {\n"
+"                        display: flex;\n"
+"                        flex-wrap: wrap;\n"
+"                        gap: 10px;\n"
+"                        margin: 20px 15px 0px 15px;\n"
+"                    }\n"
+"                </style>\n"
+"                <body><div>\n"
+"                    <p t-if=\"ctx.get('employee_name')\"> Hej <t t-"
+"out=\"ctx['employee_name']\">Anita Oliver</t>,</p>\n"
+"                    <p t-else=\"\">Hej,</p>\n"
+"                    <br/>\n"
+"                    <p t-if=\"ctx.get('open_shift_available')\">Det finns "
+"ett nytt ledigt arbetspass:</p>\n"
+"                    <p t-else=\"\">Du har blivit tilldelad följande "
+"arbetspass:</p>\n"
+"                    <table style=\"margin-left: 30px;\">\n"
+"                        <tr t-if=\"(ctx.get('start_datetime') and ctx.get"
+"('end_datetime'))                                   or ctx.get"
+"('allocated_hours')                                   or ctx.get"
+"('allocated_percentage')\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"Datum</th>\n"
+"                            <td style=\"padding: 5px;\">\n"
+"                                <span t-if=\"ctx.get('start_datetime') and "
+"ctx.get('end_datetime')\" t-out=\"'%s ⟶ %s' % "
+"(                                     "
+"ctx['start_datetime'],                                     "
+"ctx['end_datetime'],                                 )\">\n"
+"                                    05/31/2021, 8:00 AM ⟶ 05/31/2021, 4:00 "
+"PM\n"
+"                                </span>\n"
+"                                <span t-if=\"ctx.get('allocated_hours')\" "
+"style=\"opacity: 0.5;\">\n"
+"                                    (<t t-out=\"ctx['allocated_hours']\">"
+"4:00</t> timmar)\n"
+"                                </span>\n"
+"                                <span t-if=\"ctx.get('allocated_percentage') "
+"and ctx['allocated_percentage'] != '100'\" style=\"opacity: 0.5;\">\n"
+"                                    (<t t-"
+"out=\"ctx['allocated_percentage']\">50</t>%)\n"
+"                                </span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.role_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"Roll</th>\n"
+"                            <td style=\"padding: 5px;\" t-"
+"out=\"object.role_id.name or ''\">Bartender</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'project_id') and "
+"object.project_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"Projekt</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.sudo()"
+".project_id.name or ''\">Samling</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'sale_line_id') and "
+"object.sale_line_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"Verifikationsrad</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.sudo()"
+".sale_line_id.name or ''\">Kaffe</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'name') and object.name\">"
+"\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"Anteckning</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.name "
+"or ''\">/</td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <div class=\"button_box\">\n"
+"                        <a t-if=\"ctx.get('available_link')\" t-att-"
+"href=\"ctx['available_link']\" target=\"_blank\" "
+"class=\"planning_mail_template_button top_button\">Jag är tillgänglig, "
+"tilldela mig arbetspasset</a>\n"
+"                        <a t-if=\"ctx.get('unavailable_link')\" t-att-"
+"href=\"ctx['unavailable_link']\" target=\"_blank\" "
+"class=\"planning_mail_template_button top_button\">Jag är inte tillgänglig</"
+"a>\n"
+"                        <a t-if=\"ctx.get('google_url')\" t-att-"
+"href=\"ctx['google_url']\" target=\"_blank\" "
+"class=\"planning_mail_template_button\">Lägg till i Google Kalender</a>\n"
+"                        <a t-if=\"ctx.get('iCal_url')\" t-att-"
+"href=\"ctx['iCal_url']\" target=\"_blank\" "
+"class=\"planning_mail_template_button\">Lägg till i iCal/Outlook</a>\n"
+"                    </div>\n"
+"                    <br/>\n"
+"                    <p t-if=\"ctx.get('open_shift_available')\">Om du är "
+"tillgänglig och är intresserad av att jobba på arbetspasset, vänligen "
+"markera dig själv som tillgänglig.</p>\n"
+"                    <p t-else=\"\">Om du inte är tillgänglig för att jobba "
+"på arbetspasset så ber vi dig att ordna en ersättare, till exempel genom att "
+"byta arbetspass med en annan kollega.</p>\n"
+"                </div>\n"
+"            </body>"
 
 #. module: planning
 #: model:mail.template,body_html:planning.email_template_planning_planning
@@ -774,7 +890,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_form
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_search
 msgid "Archived"
-msgstr "Arkiverad"
+msgstr "Arkiverade"
 
 #. module: planning
 #. odoo-javascript
@@ -837,7 +953,7 @@ msgstr "Uppdragstagare"
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
 msgid "Auto Plan"
-msgstr ""
+msgstr "Planera automatiskt"
 
 #. module: planning
 #. odoo-javascript
@@ -865,12 +981,12 @@ msgstr "Grundläggande anställd"
 #. module: planning
 #: model:ir.ui.menu,name:planning.planning_menu_schedule_by_resource
 msgid "By Resource"
-msgstr ""
+msgstr "Per resurs"
 
 #. module: planning
 #: model:ir.ui.menu,name:planning.planning_menu_schedule_by_role
 msgid "By Role"
-msgstr ""
+msgstr "Per roll"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.unwanted_slots_list_template
@@ -942,14 +1058,14 @@ msgstr "Bekräfta"
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_calendar/planning_calendar_controller.xml:0
 msgid "Copy previous"
-msgstr ""
+msgstr "Kopiera föregående"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_calendar/planning_calendar_controller.xml:0
 #: code:addons/planning/static/src/views/planning_gantt/planning_gantt_controller.xml:0
 msgid "Copy previous week"
-msgstr ""
+msgstr "Kopiera föregående vecka"
 
 #. module: planning
 #: model:planning.role,name:planning.planning_role_crane
@@ -1133,7 +1249,7 @@ msgstr ""
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot__duration
 msgid "Duration"
-msgstr "Varaktighet"
+msgstr "Tidsperiod"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__duration_days
@@ -1552,25 +1668,25 @@ msgstr "Min avdelning"
 #: model:ir.actions.act_window,name:planning.planning_action_open_shift
 #: model:ir.ui.menu,name:planning.planning_menu_my_planning
 msgid "My Planning"
-msgstr ""
+msgstr "Mitt schema"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_search
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_search
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "My Roles"
-msgstr ""
+msgstr "Mina roller"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "My Shifts"
-msgstr ""
+msgstr "Mina arbetspass"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_search
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "My Team"
-msgstr "Mitt lag"
+msgstr "Mitt team"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_role__name
@@ -1595,7 +1711,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/planning/controllers/main.py:0
 msgid "New_Shift"
-msgstr ""
+msgstr "New_Shift"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
@@ -1626,7 +1742,7 @@ msgstr ""
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_roles
 msgid "No roles found. Let's create one!"
-msgstr ""
+msgstr "Inga roller hittades. Låt oss skapa en!"
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_shift_template
@@ -1686,7 +1802,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 #: model_terms:ir.ui.view,arch_db:planning.slot_report
 msgid "Open Shifts"
-msgstr ""
+msgstr "Lediga arbetspass"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.open_slots_list_template
@@ -1776,7 +1892,7 @@ msgstr "Planering"
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_report_view_graph
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_report_view_pivot
 msgid "Planning Analysis"
-msgstr ""
+msgstr "Planeringsanalys"
 
 #. module: planning
 #: model:ir.model,name:planning.model_planning_analysis_report
@@ -1894,7 +2010,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:planning.field_planning_slot__slot_properties
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search
 msgid "Properties"
-msgstr "Fastigheter"
+msgstr "Egenskaper"
 
 #. module: planning
 #. odoo-javascript
@@ -2020,7 +2136,7 @@ msgstr "Rapportering"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "Requests to Switch"
-msgstr ""
+msgstr "Bytesförfrågningar"
 
 #. module: planning
 #: model:ir.actions.server,name:planning.model_planning_slot_action_reset_to_draft
@@ -2144,12 +2260,12 @@ msgstr "Skanner"
 #: model:ir.ui.menu,name:planning.planning_menu_schedule
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_gantt
 msgid "Schedule"
-msgstr "Schemalägg"
+msgstr "Schema"
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_schedule_by_resource
 msgid "Schedule by Resource"
-msgstr ""
+msgstr "Schema per resurs"
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_schedule_by_role
@@ -2236,7 +2352,7 @@ msgstr ""
 #. module: planning
 #: model:ir.model,name:planning.model_planning_slot_template
 msgid "Shift Template"
-msgstr ""
+msgstr "Mall för arbetspass"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_form
@@ -2253,7 +2369,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:planning.field_planning_slot__template_id
 #: model:ir.ui.menu,name:planning.planning_menu_settings_shift_template
 msgid "Shift Templates"
-msgstr "Mallar för arbetspass"
+msgstr "Arbetspassmallar"
 
 #. module: planning
 #. odoo-javascript
@@ -2282,7 +2398,7 @@ msgstr ""
 #: code:addons/planning/models/planning.py:0
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "Shifts in Conflict"
-msgstr ""
+msgstr "Krockande arbetspass"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
@@ -2443,7 +2559,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
-"The start hour cannot be before the end hour for a one-day shift template."
+"The start hour cannot be after the end hour for a one-day shift template."
 msgstr ""
 
 #. module: planning

@@ -93,7 +93,7 @@ class HelpdeskTicket(models.Model):
     properties = fields.Properties(
         'Properties', definition='team_id.ticket_properties',
         copy=True)
-    partner_id = fields.Many2one('res.partner', string='Customer', domain="[ '|', ('company_id', '=', False), ('company_id', '=', company_id) ]", tracking=True, index=True)
+    partner_id = fields.Many2one('res.partner', string='Customer', tracking=True, index=True)
     partner_ticket_ids = fields.Many2many('helpdesk.ticket', compute='_compute_partner_ticket_count', string="Partner Tickets")
     partner_ticket_count = fields.Integer('Number of other tickets from the same partner', compute='_compute_partner_ticket_count')
     partner_open_ticket_count = fields.Integer('Number of other open tickets from the same partner', compute='_compute_partner_ticket_count')
@@ -189,7 +189,7 @@ class HelpdeskTicket(models.Model):
     @api.depends('sla_status_ids.deadline', 'sla_status_ids.reached_datetime')
     def _compute_sla_reached(self):
         sla_status_read_group = self.env['helpdesk.sla.status']._read_group(
-            [('exceeded_hours', '<', 0), ('ticket_id', 'in', self.ids)],
+            [('reached_datetime', '!=', False), ('ticket_id', 'in', self.ids)],
             ['ticket_id'],
         )
         sla_status_ids_per_ticket = {ticket.id for [ticket] in sla_status_read_group}
@@ -283,7 +283,7 @@ class HelpdeskTicket(models.Model):
 
     def _inverse_partner_email(self):
         for ticket in self:
-            if ticket._get_partner_email_update():
+            if self.env.context.get('helpdesk_partner_sync', True) and ticket._get_partner_email_update():
                 ticket.partner_id.email = ticket.partner_email
 
     @api.depends('partner_id.phone')
@@ -295,8 +295,7 @@ class HelpdeskTicket(models.Model):
 
     def _inverse_partner_phone(self):
         for ticket in self:
-            if (ticket._get_partner_phone_update() or not ticket.partner_id.phone) and ticket.partner_phone:
-                ticket = ticket.sudo()
+            if self.env.context.get('helpdesk_partner_sync', True) and (ticket._get_partner_phone_update() or not ticket.partner_id.phone) and ticket.partner_phone:
                 ticket.partner_id.phone = ticket.partner_phone
 
     @api.depends('partner_id', 'partner_email', 'partner_phone')

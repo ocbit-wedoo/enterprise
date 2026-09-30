@@ -22,61 +22,27 @@ API_DOMAINS_MAPPING = {
 }
 
 
-# Mapping of API operations to URL paths, restricted resource paths, and restricted data elements.
+# Mapping of API operations to URL paths
 API_OPERATIONS_MAPPING = {
-    'createFeed': {
-        'url_path': '/feeds/2021-06-30/feeds',
-        'restricted_resource_path': None,
+    "createFeed": {"url_path": "/feeds/2021-06-30/feeds"},
+    "createFeedDocument": {"url_path": "/feeds/2021-06-30/documents"},
+    "createRestrictedDataToken": {
+        "url_path": "/tokens/2021-03-01/restrictedDataToken",
+        "log_response": False,
     },
-    'createFeedDocument': {
-        'url_path': '/feeds/2021-06-30/documents',
-        'restricted_resource_path': None,
-    },
-    'createRestrictedDataToken': {
-        'url_path': '/tokens/2021-03-01/restrictedDataToken',
-        'restricted_resource_path': None,
-        'log_response': False,
-    },
-    'getFeed': {
-        'url_path': '/feeds/2021-06-30/feeds/{param}',
-        'restricted_resource_path': None,
-    },
-    'getFeedDocument': {
-        'url_path': '/feeds/2021-06-30/documents/{param}',
-        'restricted_resource_path': None,
-    },
-    'getMarketplaceParticipations': {
-        'url_path': '/sellers/v1/marketplaceParticipations',
-        'restricted_resource_path': None,
-    },
-    'getOrder': {
-        'url_path': '/orders/v0/orders/{param}',
-        # Amazon requires the path to include the placeholder "{orderID}" to grant the RDT.
-        'restricted_resource_path': '/orders/v0/orders/{orderId}',
-        'restricted_resource_data_elements': ['buyerInfo', 'shippingAddress'],
-    },
-    'getOrders': {
-        'url_path': '/orders/v0/orders',
-        'restricted_resource_path': '/orders/v0/orders',
-        'restricted_resource_data_elements': ['buyerInfo', 'shippingAddress'],
-    },
-    'getOrderItems': {
-        'url_path': '/orders/v0/orders/{param}/orderItems',
-        # Amazon requires the path to include the placeholder "{orderID}" to grant the RDT.
-        'restricted_resource_path': '/orders/v0/orders/{orderId}/orderItems',
-        'restricted_resource_data_elements': ['buyerInfo']
-    },
-    'searchListingsItems': {
-        'url_path': '/listings/2021-08-01/items/{param}',
-        'restricted_resource_path': None,
-    },
+    "getFeed": {"url_path": "/feeds/2021-06-30/feeds/{param}"},
+    "getFeedDocument": {"url_path": "/feeds/2021-06-30/documents/{param}"},
+    "getMarketplaceParticipations": {"url_path": "/sellers/v1/marketplaceParticipations"},
+    "getOrder": {"url_path": "/orders/2026-01-01/orders/{param}"},
+    "searchOrders": {"url_path": "/orders/2026-01-01/orders/{param}"},
+    "searchListingsItems": {"url_path": "/listings/2021-08-01/items/{param}"},
 }
 
 
 # Mapping of Amazon fulfillment channels to Amazon status to synchronize.
 STATUS_TO_SYNCHRONIZE = {
-    'AFN': ['Shipped'],
-    'MFN': ['Unshipped'],
+    'AMAZON': ['SHIPPED'],
+    'MERCHANT': ['UNSHIPPED'],
 }
 
 

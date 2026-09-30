@@ -7,7 +7,7 @@
                     <table>
                         <tr>
                             <td>Date:</td>
-                            <td><t t-out="doc.l10n_din5008_date" t-options="{'widget': 'date'}"/></td>
+                            <td><t t-out="doc.l10n_din5008_date" t-options="{'widget': 'date', 'format': 'dd.MM.yyyy'}"/></td>
                         </tr>
                         <t t-set="partner_addr" t-value="doc.env['res.partner'].browse(doc.address_get(['invoice'])['invoice']) or doc"/>
                         <tr t-if="partner_addr.ref">

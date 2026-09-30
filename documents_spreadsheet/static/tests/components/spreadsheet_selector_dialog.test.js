@@ -40,7 +40,6 @@ serverData.models["documents.document"].records = [
         name: "My image",
         spreadsheet_data: "{}",
         folder_id: 1,
-        handler: "image",
         is_favorited: false,
     },
 ];

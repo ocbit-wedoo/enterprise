@@ -23,10 +23,7 @@ class HrJob(models.Model):
             'res_model': 'documents.document',
             'name': _('Documents'),
             'view_mode': 'kanban,list,form',
-            'domain': ['|',
-                '&', ('res_model', '=', 'hr.job'), ('res_id', 'in', self.ids),
-                '&', ('res_model', '=', 'hr.applicant'), ('res_id', 'in', self.application_ids.ids),
-            ],
+            'domain': self._get_attachments_domain(),
             'context': {
                 'searchpanel_default_folder_id': self._get_document_folder().id,
                 'default_res_model': 'hr.job',

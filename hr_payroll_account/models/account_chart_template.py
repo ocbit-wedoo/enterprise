@@ -15,7 +15,8 @@ class AccountChartTemplate(models.AbstractModel):
 
     def _post_load_data(self, template_code, company, template_data):
         super()._post_load_data(template_code, company, template_data)
-        self._load_payroll_accounts(template_code, company)
+        if self.env.context.get('chart_template_load'):
+            self._load_payroll_accounts(template_code, company)
 
     def _load_payroll_accounts(self, template_code, companies):
         config_method = getattr(self, f'_configure_payroll_account_{template_code}', None)

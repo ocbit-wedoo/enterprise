@@ -181,6 +181,58 @@ class TestAtsReport(TestEcEdiCommon, TestAccountReportsCommon):
             xml_content_ats = self._get_ats_xml_content()
             self.assert_xml_ats_equal(xml_content_ats, 'ats_purchase_reimbursements.xml')
 
+    def test_ats_sale_branches(self):
+        """ Test ATS export with branches. """
+        parent = self.company_data['company']
+        branch = self.env['res.company'].create({
+            'name': "EC Test Branch",
+            'parent_id': parent.id,
+            'vat': parent.vat,
+            'l10n_ec_legal_name': "EC Test Branch",
+        })
+        self.env.cr.precommit.run()
+
+        branch_journal = self.env['account.journal'].create({
+            'name': '002-001 Facturas de cliente',
+            'type': 'sale',
+            'code': 'INVB',
+            'company_id': branch.id,
+            'l10n_ec_entity': '002',
+            'l10n_ec_emission': '001',
+            'l10n_ec_emission_address_id': branch.partner_id.id,
+            'default_account_id': self.journal_inv_three.default_account_id.id,
+            'l10n_latam_use_documents': True,
+            'refund_sequence': True,
+            'edi_format_ids': [Command.unlink(self.env.ref('l10n_ec_edi.ecuadorian_edi_format').id)],
+        })
+
+        with freeze_time(self.frozen_today):
+            # Pre-printed invoices, as electronic ones are excluded from the establishment totals
+            invoice_vals = {
+                'move_type': 'out_invoice',
+                'partner_id': self.partner_ruc.id,
+                'l10n_ec_sri_payment_id': self.sri_payment_id,
+                'invoice_date': self.frozen_today,
+            }
+            parent_invoice = self.env['account.move'].create({
+                **invoice_vals,
+                'journal_id': self.journal_inv_three.id,
+                'l10n_latam_document_number': '001-003-000000001',
+                'l10n_ec_authorization_number': '1234567890',
+                'invoice_line_ids': [self._get_invoice_line_with_price_vals(price_unit=750)],
+            })
+            branch_invoice = self.env['account.move'].with_company(branch).create({
+                **invoice_vals,
+                'journal_id': branch_journal.id,
+                'l10n_latam_document_number': '002-001-000000001',
+                'l10n_ec_authorization_number': '1234567891',
+                'invoice_line_ids': [self._get_invoice_line_with_price_vals(price_unit=250)],
+            })
+            (parent_invoice + branch_invoice).action_post()
+
+            xml_content_ats = self._get_ats_xml_content(companies=parent + branch)
+            self.assert_xml_ats_equal(xml_content_ats, 'ats_sale_branches.xml')
+
     # ============== HELPERS: SALE ==============
 
     def _generate_sale_invoices(self):
@@ -596,11 +648,13 @@ class TestAtsReport(TestEcEdiCommon, TestAccountReportsCommon):
             debit_note = self.env['account.move'].browse(action['res_id'])
             debit_note.action_post()
 
-    def _get_ats_xml_content(self):
+    def _get_ats_xml_content(self, companies=None):
         # Generate xml content of ats
         report = self.env.ref('l10n_ec.tax_report_104')
+        if companies:
+            report = report.with_context(allowed_company_ids=companies.ids)
         options = self._generate_options(report, fields.Date.to_date('2022-01-01'), fields.Date.to_date('2023-01-01'))
-        set_time_interval_function = self.env[report._get_custom_handler_model()].l10n_ec_export_ats
+        set_time_interval_function = report.env[report._get_custom_handler_model()].l10n_ec_export_ats
         xml_content_ats = set_time_interval_function(options)
         return xml_content_ats['file_content']
 

@@ -63,6 +63,8 @@ class purchase_order(models.Model):
             # lines are browse as sudo to access all data required to be copied on SO line (mainly for company dependent field like taxes)
             for line in rec.order_line.sudo():
                 sale_order_data['order_line'] += [(0, 0, rec._prepare_sale_order_line_data(line, company))]
+
+            rec._set_pcavs_from_order(sale_order_data['order_line'])
             sale_order = self.env['sale.order'].with_context(
                 allowed_company_ids=company.ids,
                 in_rental_app=False,  # avoid creating rental orders if PO is accessed via Rental
@@ -132,3 +134,6 @@ class purchase_order(models.Model):
             'company_id': company.id,
             'display_type': line.display_type,
         }
+
+    def _set_pcavs_from_order(self, so_lines):
+        pass

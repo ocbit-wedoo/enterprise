@@ -301,3 +301,42 @@ class TestDeliveryEnvia(TransactionCase):
             # Check that we the PDF is there with the correct title.
             pdf = picking.message_ids.attachment_ids.filtered(lambda m: m.description == 'LabelShipping-envia-1Z48746Q48746.PDF')
             self.assertNotEqual(pdf, self.env['ir.attachment'], "The label should be present as a pdf attachment.")
+
+
+@tagged('post_install', '-at_install')
+class TestDeliveryEnviaWithLocalisations(TestDeliveryEnvia):
+
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+
+        required_locas = [
+            'l10n_co_edi',
+        ]
+
+        if not all(loca.state == 'installed' for loca in cls.env['ir.module.module'].search([('name', 'in', required_locas)])):
+            cls.skipTest(cls, "This class requires for localisations to be installed")
+
+        cls.co_partner_2 = cls.env['res.partner'].create({
+            'name': 'Colombia Partner in Medellin',
+            'street': 'Cra. 25a #1 A Sur 45 local 1009',
+            'street2': '',
+            'city': '',
+            'zip': '050011',
+            'city_id': cls.env.ref('l10n_co_edi.city_co_01').id,
+            'country_id': cls.env.ref('base.co').id,
+            'state_id': cls.env.ref('base.state_co_01').id,
+            'email': 'colombia@example.com',
+            'phone': '+57 310 3460239',
+        })
+
+    def test_prepare_address_values(self):
+        envia_request = Envia(self.envia, prod_environment=True, debug_logger=lambda *args, **kwargs: None)
+
+        with _mock_envia_call():
+            address = envia_request._prepare_address_values(self.co_partner_2, is_cust=True)
+
+        self.assertEqual(address['city'], '05001000')
+        self.assertEqual(address['city_select'], 'MEDELLÍN')
+        self.assertEqual(address['postalCode'], '05001000')
+        self.assertEqual(address['state'], self.co_partner_2.state_id.code)

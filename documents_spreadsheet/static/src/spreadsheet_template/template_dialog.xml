@@ -18,10 +18,10 @@
                         </select>
                     </div>
                     <div class="ms-auto w-50">
-                        <SearchBar/>
+                        <SearchBar t-if="this.hasTemplatesAccess"/>
                     </div>
                 </div>
-                <div class="o-pager">
+                <div class="o-spreadsheet-selector-pager">
                     <Pager
                         t-if="state.templatesCount"
                         total="state.templatesCount"

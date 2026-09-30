@@ -88,8 +88,8 @@
                                     <pago20:RetencionesDR t-if="invoice_values['retenciones_list']">
                                         <t t-foreach="invoice_values['retenciones_list']" t-as="tax_values">
                                             <pago20:RetencionDR
-                                                t-att-BaseDR="invoice_values['format_float'](tax_values['base'])"
-                                                t-att-ImporteDR="invoice_values['format_float'](tax_values['importe'])"
+                                                t-att-BaseDR="invoice_values['format_float'](tax_values['base'], precision=6)"
+                                                t-att-ImporteDR="invoice_values['format_float'](tax_values['importe'], precision=6)"
                                                 t-att-ImpuestoDR="tax_values['impuesto']"
                                                 t-att-TipoFactorDR="tax_values['tipo_factor']"
                                                 t-att-TasaOCuotaDR="invoice_values['format_float'](tax_values['tasa_o_cuota'], precision=6)"
@@ -99,8 +99,8 @@
                                     <pago20:TrasladosDR t-if="invoice_values['traslados_list']">
                                         <t t-foreach="invoice_values['traslados_list']" t-as="tax_values">
                                             <pago20:TrasladoDR
-                                                t-att-BaseDR="invoice_values['format_float'](tax_values['base'])"
-                                                t-att-ImporteDR="invoice_values['format_float'](tax_values['importe'])"
+                                                t-att-BaseDR="invoice_values['format_float'](tax_values['base'], precision=6)"
+                                                t-att-ImporteDR="invoice_values['format_float'](tax_values['importe'], precision=6)"
                                                 t-att-ImpuestoDR="tax_values['impuesto']"
                                                 t-att-TipoFactorDR="tax_values['tipo_factor']"
                                                 t-att-TasaOCuotaDR="invoice_values['format_float'](tax_values['tasa_o_cuota'], precision=6)"
@@ -114,7 +114,7 @@
                             <pago20:RetencionesP t-if="retenciones_list">
                                 <t t-foreach="retenciones_list" t-as="tax_values">
                                     <pago20:RetencionP
-                                        t-att-ImporteP="format_float(tax_values['importe'])"
+                                        t-att-ImporteP="format_float(tax_values['importe'], precision=6)"
                                         t-att-ImpuestoP="tax_values['impuesto']"
                                     />
                                 </t>

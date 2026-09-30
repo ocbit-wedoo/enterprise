@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:48+0000\n"
-"PO-Revision-Date: 2026-05-13 14:39+0000\n"
+"PO-Revision-Date: 2026-09-10 09:11+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "account_accountant/ja/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: account_accountant
 #. odoo-python
@@ -654,7 +654,7 @@ msgstr "会社通貨"
 #. module: account_accountant
 #: model:ir.model,name:account_accountant.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: account_accountant
 #. odoo-javascript
@@ -986,7 +986,7 @@ msgstr "ドキュメント"
 #. odoo-python
 #: code:addons/account_accountant/wizard/account_change_lock_date.py:0
 msgid "Draft Entries"
-msgstr "仕訳をドラフト"
+msgstr "仕訳を下書き"
 
 #. module: account_accountant
 #: model:ir.model.fields,field_description:account_accountant.field_account_reconcile_wizard__edit_mode
@@ -1237,7 +1237,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:account_accountant.field_account_bank_statement__message_has_error
 #: model:ir.model.fields,help:account_accountant.field_account_bank_statement__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: account_accountant
 #: model:ir.model.fields,help:account_accountant.field_bank_rec_widget__st_line_checked
@@ -1497,7 +1497,7 @@ msgstr "ダッシュボードに戻りましょう。"
 #: model:ir.model.fields,field_description:account_accountant.field_account_auto_reconcile_wizard__line_ids
 #: model:ir.model.fields,field_description:account_accountant.field_bank_rec_widget__line_ids
 msgid "Line"
-msgstr "ライン"
+msgstr "明細行"
 
 #. module: account_accountant
 #: model:ir.model,name:account_accountant.model_bank_rec_widget_line
@@ -1797,7 +1797,7 @@ msgstr "ロックされていません"
 #: model_terms:ir.ui.view,arch_db:account_accountant.view_bank_statement_line_search_bank_rec_widget
 #: model_terms:ir.ui.view,arch_db:account_accountant.view_bank_statement_line_tree_bank_rec_widget
 msgid "Notes"
-msgstr "ノート"
+msgstr "メモ"
 
 #. module: account_accountant
 #: model_terms:ir.actions.act_window,help:account_accountant.action_bank_statement_line_transactions
@@ -1824,7 +1824,7 @@ msgstr "エラー数"
 #. module: account_accountant
 #: model:ir.model.fields,help:account_accountant.field_account_bank_statement__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: account_accountant
 #: model:ir.model.fields,help:account_accountant.field_account_bank_statement__message_has_error_counter
@@ -2198,7 +2198,7 @@ msgstr "支払参照番号を設定します。"
 #. module: account_accountant
 #: model:ir.model.fields,field_description:account_accountant.field_account_change_lock_date__show_draft_entries_warning
 msgid "Show Draft Entries Warning"
-msgstr "ドラフト仕訳警告を表示"
+msgstr "下書き仕訳警告を表示"
 
 #. module: account_accountant
 #: model:ir.model.fields,field_description:account_accountant.field_account_bank_statement_line__show_signature_area
@@ -2302,7 +2302,7 @@ msgstr "会計年度に含まれる開始日。"
 #. module: account_accountant
 #: model:ir.model.fields,field_description:account_accountant.field_bank_rec_widget__state
 msgid "State"
-msgstr "都道府県・州"
+msgstr "ステータス"
 
 #. module: account_accountant
 #: model:ir.actions.server,name:account_accountant.action_bank_statement_attachment
@@ -2497,7 +2497,7 @@ msgid ""
 "There are still draft entries in the period you want to lock.\n"
 "                                You should either post or delete them."
 msgstr ""
-"ロックしたい期間にはまだドラフト仕訳が残っています。\n"
+"ロックしたい期間にはまだ下書き仕訳が残っています。\n"
 "                                記帳するか、削除して下さい。"
 
 #. module: account_accountant
@@ -2618,7 +2618,7 @@ msgstr "取引詳細"
 #: model_terms:ir.ui.view,arch_db:account_accountant.account_journal_dashboard_kanban_view
 #: model_terms:ir.ui.view,arch_db:account_accountant.view_bank_statement_tree
 msgid "Transactions"
-msgstr "取引明細書"
+msgstr "取引"
 
 #. module: account_accountant
 #. odoo-python
@@ -2781,8 +2781,8 @@ msgid ""
 "You cannot reset to draft an invoice that is grouped in deferral entry. You "
 "can create a credit note instead."
 msgstr ""
-"繰延仕訳でグループ化された請求書を再設定してドラフトすることはできません。代"
-"わりにクレジットノートを作成することができます。"
+"繰延仕訳でグループ化された請求書を再設定して下書きすることはできません。代わ"
+"りにクレジットノートを作成することができます。"
 
 #. module: account_accountant
 #. odoo-python

@@ -241,6 +241,55 @@ class SpreadsheetMixin(models.AbstractModel):
             return json.loads(self.spreadsheet_data or '{}')
         return json.loads(snapshot_attachment.raw or '{}')
 
+    def _get_binary_field_hash(self, field_name):
+        """sha1 of a binary field's content, read from the attachment metadata
+        so that the content itself is never loaded in memory.
+
+        :return: the hexadecimal digest, or False if the field is empty
+        """
+        self.ensure_one()
+        attachment = self.env["ir.attachment"].sudo().search([
+            ("res_model", "=", self._name),
+            ("res_field", "=", field_name),
+            ("res_id", "=", self.id),
+        ], limit=1)
+        return attachment.checksum or False
+
+    def _get_spreadsheet_data_hash(self):
+        """sha1 of the `spreadsheet_data` content, without loading it.
+        Overridden by models storing the data somewhere else than in the
+        `spreadsheet_binary_data` attachment.
+        """
+        return self._get_binary_field_hash("spreadsheet_binary_data")
+
+    def _get_spreadsheet_snapshot_hash(self):
+        """sha1 of the `spreadsheet_snapshot` content, without loading it."""
+        return self._get_binary_field_hash("spreadsheet_snapshot")
+
+    def _can_replay_complete_history(self):
+        """Whether the whole edition history can be restored from
+        `spreadsheet_data`.
+
+        A snapshot is built from `spreadsheet_data` plus the revisions, which
+        are archived when the snapshot is taken. The history can be restored as
+        long as the snapshot did not diverge from `spreadsheet_data`, or as long
+        as archived revisions still bridge them. Otherwise `spreadsheet_data` is
+        stale and callers must work from the snapshot only.
+        """
+        self.ensure_one()
+        snapshot_hash = self._get_spreadsheet_snapshot_hash()
+        if not snapshot_hash or snapshot_hash == self._get_spreadsheet_data_hash():
+            # without a snapshot, `_get_spreadsheet_snapshot` falls back on
+            # `spreadsheet_data`: there is nothing to diverge from
+            return True
+        # count instead of browsing `spreadsheet_revision_ids`, which would
+        # prefetch the (potentially large) `commands` of every revision
+        return bool(self.env["spreadsheet.revision"].sudo().search_count([
+            ("res_model", "=", self._name),
+            ("res_id", "=", self.id),
+            ("active", "=", False),
+        ]))
+
     def _should_be_snapshotted(self):
         if not self.spreadsheet_revision_ids:
             return False
@@ -384,6 +433,8 @@ class SpreadsheetMixin(models.AbstractModel):
         self._check_collaborative_spreadsheet_access("read")
         spreadsheet_sudo = self.sudo()
         initial_date = spreadsheet_sudo.create_date
+
+        from_snapshot = from_snapshot or not spreadsheet_sudo._can_replay_complete_history()
 
         if from_snapshot:
             data = spreadsheet_sudo._get_spreadsheet_snapshot()

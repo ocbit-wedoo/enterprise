@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import json
-
+from collections import defaultdict
 from dateutil.relativedelta import relativedelta
 
 from odoo import api, fields, models
@@ -18,7 +18,7 @@ class Planning(models.Model):
             return rows
         start_time = fields.Datetime.to_datetime(self._context.get('default_start_datetime'))
         end_time = fields.Datetime.to_datetime(self._context.get('default_end_datetime'))
-        row_per_employee_id = {}
+        rows_per_employee_id = defaultdict(list)
         for row in rows:
             if ("rows" in row):
                 row["rows"] = self.gantt_resource_employees_working_periods(row["rows"])
@@ -30,9 +30,9 @@ class Planning(models.Model):
             if not resource.employee_id:
                 continue
             row['working_periods'] = []
-            row_per_employee_id[resource.employee_id.id] = row
-        if row_per_employee_id:
-            employees_sudo = self.env["hr.employee"].browse(row_per_employee_id.keys()).sudo()
+            rows_per_employee_id[resource.employee_id.id].append(row)
+        if rows_per_employee_id:
+            employees_sudo = self.env["hr.employee"].browse(rows_per_employee_id.keys()).sudo()
             employees_with_contract = dict(
                 self.env["hr.contract"].sudo()._read_group(
                     domain=[
@@ -59,17 +59,19 @@ class Planning(models.Model):
                     end_datetime = user_tz.localize(end_datetime).astimezone(pytz.utc).replace(tzinfo=None)
                     end_datetime = fields.Datetime.to_string(end_datetime)
                 employees_with_contract_in_current_scale.append(employee)
-                row_per_employee_id[employee]["working_periods"].append({
-                    "start": fields.Datetime.to_string(contract.date_start),
-                    "end": end_datetime,
-                })
+                for row in rows_per_employee_id[employee]:
+                    row["working_periods"].append({
+                        "start": fields.Datetime.to_string(contract.date_start),
+                        "end": end_datetime,
+                    })
             for employee in employees_sudo - self.env["hr.employee"].browse(employees_with_contract_in_current_scale):
                 if employees_with_contract.get(employee, 0):
                     continue
-                row_per_employee_id[employee.id]["working_periods"].append({
-                    "start": self.env.context.get("default_start_datetime"),
-                    "end": self.env.context.get("default_end_datetime"),
-                })
+                for row in rows_per_employee_id[employee.id]:
+                    row["working_periods"].append({
+                        "start": self.env.context.get("default_start_datetime"),
+                        "end": self.env.context.get("default_end_datetime"),
+                    })
         return rows
 
     def _get_working_hours_over_period(self, start_utc, end_utc, work_intervals, calendar_intervals):

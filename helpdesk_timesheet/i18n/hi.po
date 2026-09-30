@@ -9,13 +9,13 @@
 # Manav Shah, 2025
 # Ujjawal Pathak, 2025
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-12-01 16:27+0000\n"
+"PO-Revision-Date: 2026-08-01 17:09+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
 "helpdesk_timesheet/hi/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_project_project__ticket_count
@@ -35,7 +35,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/helpdesk_timesheet/wizard/timesheet_merge_wizard.py:0
 msgid "All timesheets must be linked to the same helpdesk ticket."
-msgstr ""
+msgstr "सभी टाइमशीट एक ही हेल्पडेस्क टिकट से जुड़ी होनी चाहिए।"
 
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_ticket__analytic_account_id
@@ -51,17 +51,17 @@ msgstr "एनालिटिक लाइन"
 #. odoo-python
 #: code:addons/helpdesk_timesheet/models/helpdesk_ticket.py:0
 msgid "Confirm Time Spent"
-msgstr ""
+msgstr "बीते हुए समय की पुष्टि करें"
 
 #. module: helpdesk_timesheet
 #: model:ir.model,name:helpdesk_timesheet.model_helpdesk_ticket_convert_wizard
 msgid "Convert Helpdesk Tickets to Tasks"
-msgstr ""
+msgstr "हेल्पडेस्क टिकट को टास्क में बदलें"
 
 #. module: helpdesk_timesheet
 #: model:ir.model,name:helpdesk_timesheet.model_project_task_convert_wizard
 msgid "Convert Project Tasks to Tickets"
-msgstr ""
+msgstr "प्रोजेक्ट टास्क को टिकट में बदलें"
 
 #. module: helpdesk_timesheet
 #: model:ir.model,name:helpdesk_timesheet.model_helpdesk_ticket_create_timesheet
@@ -112,7 +112,7 @@ msgstr "डिस्प्ले नाम"
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_ticket__display_timesheet_timer
 msgid "Display Timesheet Time"
-msgstr ""
+msgstr "टाइमशीट का समय दिखाएं"
 
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_sla_report_analysis__employee_id
@@ -138,7 +138,7 @@ msgstr "हेल्पडेस्क टिकट"
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_sla_report_analysis__total_hours_spent
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_ticket_report_analysis__total_hours_spent
 msgid "Hours Spent (Timesheets)"
-msgstr ""
+msgstr "बिताए गए घंटे (टाइमशीट)"
 
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_ticket_create_timesheet__id
@@ -148,7 +148,7 @@ msgstr "आईडी"
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.timesheet_table
 msgid "Issue with new portal system"
-msgstr ""
+msgstr "नए पोर्टल सिस्टम के साथ परेशानी"
 
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_ticket_create_timesheet__write_uid
@@ -184,6 +184,9 @@ msgid ""
 "timesheet drafts in the original helpdesk team. Although they won't be "
 "visible here, you can still edit them using the Timesheets app."
 msgstr ""
+"इस टास्क को बिना टाइमशीट सपोर्ट वाली हेल्पडेस्क टीम में ट्रांसफ़र करने पर, टाइमशीट ड्राफ़्ट "
+"ओरिजिनल हेल्पडेस्क टीम में ही सुरक्षित रहेंगे. हालांकि, वे यहां दिखाई नहीं देंगे, लेकिन आप "
+"टाइमशीट ऐप का उपयोग करके उनमें बदलाव कर सकते हैं।"
 
 #. module: helpdesk_timesheet
 #. odoo-python
@@ -217,6 +220,7 @@ msgid ""
 "Project to which the timesheets of this helpdesk team's tickets will be "
 "linked."
 msgstr ""
+"वह प्रोजेक्ट जिससे इस हेल्पडेस्क टीम के टिकट की टाइमशीट को लिंक किया जाएगा।"
 
 #. module: helpdesk_timesheet
 #: model_terms:ir.actions.act_window,help:helpdesk_timesheet.act_hr_timesheet_line_helpdesk
@@ -226,7 +230,7 @@ msgstr "नई गतिविधि रिकॉर्ड करें"
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.helpdesk_team_view_form_inherit_helpdesk_timesheet
 msgid "Recorded"
-msgstr ""
+msgstr "रिकॉर्ड हो गया"
 
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet
@@ -261,7 +265,7 @@ msgstr "रोकें"
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.timesheet_table
 msgid "Task/Ticket"
-msgstr ""
+msgstr "टास्क या टिकट"
 
 #. module: helpdesk_timesheet
 #: model:project.project,label_tasks:helpdesk_timesheet.helpdesk_team3_projet
@@ -293,7 +297,7 @@ msgstr ""
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.report_timesheet_ticket
 msgid "Ticket:"
-msgstr ""
+msgstr "टिकट:"
 
 #. module: helpdesk_timesheet
 #. odoo-python
@@ -319,7 +323,7 @@ msgstr "बिताया गया समय"
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.helpdesk_ticket_view_graph_main_inherit_helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.helpdesk_ticket_view_pivot_main_inherit_helpdesk_timesheet
 msgid "Time Spent (Timesheets)"
-msgstr ""
+msgstr "बिताया गया समय (टाइमशीट)"
 
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,help:helpdesk_timesheet.field_helpdesk_ticket__timesheet_ids
@@ -328,6 +332,9 @@ msgid ""
 "sales order item of your ticket.\n"
 "Remove the sales order item to make your timesheet entries non billable."
 msgstr ""
+"इस टिकट पर काम करने में जितना समय लगा है, वह डिफ़ॉल्ट रूप से सेल्स ऑर्डर से जुड़ जाएगा, "
+"ताकि उसका बिल बनाया जा सके. अगर आप इस काम के पैसे ग्राहक से नहीं लेना चाहते हैं, तो सेल्स "
+"ऑर्डर आइटम को हटा दें।"
 
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_timesheet
@@ -337,7 +344,7 @@ msgstr "टाइमशीट ऐक्टिविटीज़"
 #. module: helpdesk_timesheet
 #: model:ir.model.fields,field_description:helpdesk_timesheet.field_helpdesk_ticket__use_helpdesk_timesheet
 msgid "Timesheet activated on Team"
-msgstr ""
+msgstr "टीम के लिए टाइमशीट चालू कर दी गई है"
 
 #. module: helpdesk_timesheet
 #: model:ir.actions.act_window,name:helpdesk_timesheet.act_hr_timesheet_line_helpdesk
@@ -385,6 +392,7 @@ msgstr "चेतावनी"
 msgid ""
 "You cannot link a timesheet entry to a task and a ticket at the same time."
 msgstr ""
+"आप एक साथ किसी टाइमशीट एंट्री को किसी टास्क और टिकट से लिंक नहीं कर सकते।"
 
 #. module: helpdesk_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_timesheet.report_timesheet_ticket

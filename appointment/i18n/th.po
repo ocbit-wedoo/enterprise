@@ -7,12 +7,13 @@
 # Wil Odoo, 2025
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Nusara Boonma <nuboo@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-03-21 18:31+0000\n"
+"PO-Revision-Date: 2026-08-20 18:42+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Thai <https://translate.odoo.com/projects/odoo-18/appointment/"
 "th/>\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -39,7 +40,7 @@ msgstr "# การนัดหมาย"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count_request
 msgid "# Appointments To Confirm"
-msgstr ""
+msgstr "# การนัดหมายที่ต้องยืนยัน"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__calendar_event_count
@@ -66,7 +67,7 @@ msgstr "#ผู้ใช้ที่เป็นพนักงาน"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count_upcoming
 msgid "# Upcoming Appointments"
-msgstr ""
+msgstr "# การนัดหมายที่จะมาถึง"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_calendar
@@ -95,7 +96,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/appointment/controllers/calendar_view.py:0
 msgid "%(name)s - My availabilities"
-msgstr ""
+msgstr "%(name)s - เวลาว่างของฉัน"
 
 #. module: appointment
 #. odoo-python
@@ -163,7 +164,6 @@ msgstr ""
 
 #. module: appointment
 #: model:mail.template,body_html:appointment.attendee_invitation_mail_template
-#, fuzzy
 msgid ""
 "<div>\n"
 "    <t t-set=\"colors\" t-value=\"{'needsAction': 'grey', 'accepted': "
@@ -411,23 +411,23 @@ msgstr ""
 "<div>\n"
 "    <t t-set=\"colors\" t-value=\"{'needsAction': 'grey', 'accepted': "
 "'green', 'tentative': '#FFFF00', 'declined': 'red'}\"></t>\n"
-"    <t t-set=\"recurrent\" t-value=\"object.recurrence_id and not "
-"ctx.get('calendar_template_ignore_recurrence')\"></t>\n"
-"    <t t-set=\"mail_tz\" t-value=\"object._get_mail_tz() or "
-"ctx.get('mail_tz')\"></t>\n"
+"    <t t-set=\"recurrent\" t-value=\"object.recurrence_id and not ctx.get"
+"('calendar_template_ignore_recurrence')\"></t>\n"
+"    <t t-set=\"mail_tz\" t-value=\"object._get_mail_tz() or ctx.get"
+"('mail_tz')\"></t>\n"
 "    <t t-set=\"attendee_description\" t-"
 "value=\"object._get_attendee_description()\"></t>\n"
 "    <p>\n"
-"    จองการนัดหมาย <t t-out=\"object.appointment_type_id.name or "
-"''\">การสาธิตทางเทคนิค</t>\n"
+"    จองการนัดหมาย <t t-out=\"object.appointment_type_id.name or ''\">การสาธิตทา"
+"งเทคนิค</t>\n"
 "    <t t-if=\"object.appointment_type_id.category != 'custom' and "
 "object.appointment_type_id.schedule_based_on == 'users'\"> กับ <t t-"
 "out=\"object.partner_id.name or ''\">Brandon Freeman</t></t>\n"
 "    </p>\n"
 "    <div style=\"text-align: center; padding: 16px 0px 16px 0px;\">\n"
-"        <a t-attf-href=\"/calendar/meeting/join?"
-"token={{ object.access_token }}\" style=\"padding: 5px 10px; color: #FFFFFF; "
-"text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
+"        <a t-attf-href=\"/calendar/meeting/join?token={{ "
+"object.access_token }}\" style=\"padding: 5px 10px; color: #FFFFFF; text-"
+"decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
 "border-radius: 3px\">\n"
 "            เข้าร่วม</a>\n"
 "        <a t-attf-href=\"/odoo/calendar.event/{{ object.id }}\" "
@@ -497,8 +497,8 @@ msgstr ""
 "                        <li t-foreach=\"object.attendee_ids\" t-"
 "as=\"attendee\">\n"
 "                            <div t-attf-style=\"display: inline-block; "
-"border-radius: 50%; width: 10px; height: 10px; background:"
-"{{ colors.get(attendee.state) or 'white' }};\"> </div>\n"
+"border-radius: 50%; width: 10px; height: 10px; background:{{ colors.get"
+"(attendee.state) or 'white' }};\"> </div>\n"
 "                            <t t-if=\"attendee.common_name\">\n"
 "                                <span style=\"margin-left:5px\" t-"
 "out=\"attendee.common_name or ''\">Mitchell Admin</span>\n"
@@ -520,18 +520,18 @@ msgstr ""
 "                            <li t-"
 "foreach=\"object.appointment_resource_ids\" t-as=\"resource\">\n"
 "                                <span style=\"margin-left:5px\" t-"
-"out=\"resource.name or ''\">โต๊ะ 1</span>\n"
+"out=\"resource.name or ''\">ตารางที่ 1</span>\n"
 "                            </li>\n"
 "                        </ul>\n"
 "                    </li>\n"
 "                    <li t-if=\"object.videocall_redirection\">\n"
 "                        วิธีการเข้าร่วม:\n"
-"                        <t t-if=\"object.videocall_source == 'discuss'\"> "
-"เข้าร่วมที่ Odoo แชท</t>\n"
+"                        <t t-if=\"object.videocall_source == 'discuss'\"> เข้า"
+"ร่วมที่ Odoo แชท</t>\n"
 "                        <t t-else=\"\"> เข้าร่วมที่</t><br>\n"
 "                        <a t-attf-href=\"{{ object.videocall_redirection }}"
-"\" target=\"_blank\" t-out=\"object.videocall_redirection or "
-"''\">www.mycompany.com/calendar/videocall/xyz</a>\n"
+"\" target=\"_blank\" t-out=\"object.videocall_redirection or ''\">"
+"www.mycompany.com/calendar/videocall/xyz</a>\n"
 "                    </li>\n"
 "                </ul>\n"
 "            </td>\n"
@@ -539,9 +539,9 @@ msgstr ""
 "    <div t-if=\"attendee_description\" style=\"color:#000000;\">\n"
 "        คำอธิบายกิจกรรม:<div t-out=\"attendee_description\"></div>\n"
 "    </div>\n"
-"    <t t-set=\"upcoming_appointments\" t-"
-"value=\"(object.appointment_booker_id.upcoming_appointment_ids - "
-"object).sorted('start')\"></t>\n"
+"    <t t-set=\"upcoming_appointments\" t-value=\""
+"(object.appointment_booker_id.upcoming_appointment_ids - object).sorted"
+"('start')\"></t>\n"
 "    <div t-if=\"upcoming_appointments\">\n"
 "        <t t-set=\"appointment_booker_id\" t-"
 "value=\"object.appointment_booker_id.id\"></t>\n"
@@ -553,13 +553,13 @@ msgstr ""
 "                    <span style=\"margin-right: 4px\" t-"
 "out=\"upcoming_appointment.appointment_type_id.name or ''\">การสาธิตทางเทคนิค</"
 "span>\n"
-"                    (<span t-out=\"upcoming_appointment.start\" t-"
-"options='{\"widget\": \"datetime\", \"format\": \"medium\", \"tz_name\": "
-"mail_tz}'></span>)\n"
-"                    <a t-attf-href=\"/calendar/view/"
-"#{upcoming_appointment.access_token}?partner_id=#{appointment_booker_id}\" "
-"target=\"_blank\" style=\"margin-left: auto; margin-right: 8px;"
-"\">ดูรายละเอียด</a>\n"
+"                    (<span t-out=\"upcoming_appointment.start\" t-options='"
+"{\"widget\": \"datetime\", \"format\": \"medium\", \"tz_name\": mail_tz}'></"
+"span>)\n"
+"                    <a t-attf-href=\"/calendar/view/#"
+"{upcoming_appointment.access_token}?partner_id=#{appointment_booker_id}\" "
+"target=\"_blank\" style=\"margin-left: auto; margin-right: 8px;\">ดูรายละเอีย"
+"ด</a>\n"
 "                </span>\n"
 "            </li>\n"
 "        </ul>\n"
@@ -733,23 +733,23 @@ msgstr ""
 "<div>\n"
 "    <t t-set=\"colors\" t-value=\"{'needsAction': 'grey', 'accepted': "
 "'green', 'tentative': '#FFFF00', 'declined': 'red'}\"></t>\n"
-"    <t t-set=\"recurrent\" t-value=\"object.recurrence_id and not "
-"ctx.get('calendar_template_ignore_recurrence')\"></t>\n"
-"    <t t-set=\"mail_tz\" t-value=\"object._get_mail_tz() or "
-"ctx.get('mail_tz')\"></t>\n"
+"    <t t-set=\"recurrent\" t-value=\"object.recurrence_id and not ctx.get"
+"('calendar_template_ignore_recurrence')\"></t>\n"
+"    <t t-set=\"mail_tz\" t-value=\"object._get_mail_tz() or ctx.get"
+"('mail_tz')\"></t>\n"
 "    <t t-set=\"attendee_description\" t-"
 "value=\"object._get_attendee_description()\"></t>\n"
 "    <p>\n"
-"    จองการนัดหมาย <t t-out=\"object.appointment_type_id.name or "
-"''\">การสาธิตทางเทคนิค</t>\n"
+"    จองการนัดหมาย <t t-out=\"object.appointment_type_id.name or ''\">การสาธิตทา"
+"งเทคนิค</t>\n"
 "    <t t-if=\"object.appointment_type_id.category != 'custom' and "
 "object.appointment_type_id.schedule_based_on == 'users'\"> กับ <t t-"
 "out=\"object.partner_id.name or ''\">Brandon Freeman</t></t>\n"
 "    </p>\n"
 "    <div style=\"text-align: center; padding: 16px 0px 16px 0px;\">\n"
-"        <a t-attf-href=\"/calendar/meeting/join?"
-"token={{ object.access_token }}\" style=\"padding: 5px 10px; color: #FFFFFF; "
-"text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
+"        <a t-attf-href=\"/calendar/meeting/join?token={{ "
+"object.access_token }}\" style=\"padding: 5px 10px; color: #FFFFFF; text-"
+"decoration: none; background-color: #875A7B; border: 1px solid #875A7B; "
 "border-radius: 3px\">\n"
 "            เข้าร่วม</a>\n"
 "        <a t-attf-href=\"/odoo/calendar.event/{{ object.id }}\" "
@@ -819,8 +819,8 @@ msgstr ""
 "                        <li t-foreach=\"object.attendee_ids\" t-"
 "as=\"attendee\">\n"
 "                            <div t-attf-style=\"display: inline-block; "
-"border-radius: 50%; width: 10px; height: 10px; background:"
-"{{ colors.get(attendee.state) or 'white' }};\"> </div>\n"
+"border-radius: 50%; width: 10px; height: 10px; background:{{ colors.get"
+"(attendee.state) or 'white' }};\"> </div>\n"
 "                            <t t-if=\"attendee.common_name\">\n"
 "                                <span style=\"margin-left:5px\" t-"
 "out=\"attendee.common_name or ''\">Mitchell Admin</span>\n"
@@ -842,18 +842,18 @@ msgstr ""
 "                            <li t-"
 "foreach=\"object.appointment_resource_ids\" t-as=\"resource\">\n"
 "                                <span style=\"margin-left:5px\" t-"
-"out=\"resource.name or ''\">โต๊ะ 1</span>\n"
+"out=\"resource.name or ''\">ตารางที่ 1</span>\n"
 "                            </li>\n"
 "                        </ul>\n"
 "                    </li>\n"
 "                    <li t-if=\"object.videocall_redirection\">\n"
 "                        วิธีการเข้าร่วม:\n"
-"                        <t t-if=\"object.videocall_source == 'discuss'\"> "
-"เข้าร่วมที่ Odoo แชท</t>\n"
+"                        <t t-if=\"object.videocall_source == 'discuss'\"> เข้า"
+"ร่วมที่ Odoo แชท</t>\n"
 "                        <t t-else=\"\"> เข้าร่วมที่</t><br>\n"
 "                        <a t-attf-href=\"{{ object.videocall_redirection }}"
-"\" target=\"_blank\" t-out=\"object.videocall_redirection or "
-"''\">www.mycompany.com/calendar/videocall/xyz</a>\n"
+"\" target=\"_blank\" t-out=\"object.videocall_redirection or ''\">"
+"www.mycompany.com/calendar/videocall/xyz</a>\n"
 "                    </li>\n"
 "                </ul>\n"
 "            </td>\n"
@@ -861,9 +861,9 @@ msgstr ""
 "    <div t-if=\"attendee_description\" style=\"color:#000000;\">\n"
 "        คำอธิบายกิจกรรม:<div t-out=\"attendee_description\"></div>\n"
 "    </div>\n"
-"    <t t-set=\"upcoming_appointments\" t-"
-"value=\"(object.appointment_booker_id.upcoming_appointment_ids - "
-"object).sorted('start')\"></t>\n"
+"    <t t-set=\"upcoming_appointments\" t-value=\""
+"(object.appointment_booker_id.upcoming_appointment_ids - object).sorted"
+"('start')\"></t>\n"
 "    <div t-if=\"upcoming_appointments\">\n"
 "        <t t-set=\"appointment_booker_id\" t-"
 "value=\"object.appointment_booker_id.id\"></t>\n"
@@ -875,13 +875,13 @@ msgstr ""
 "                    <span style=\"margin-right: 4px\" t-"
 "out=\"upcoming_appointment.appointment_type_id.name or ''\">การสาธิตทางเทคนิค</"
 "span>\n"
-"                    (<span t-out=\"upcoming_appointment.start\" t-"
-"options='{\"widget\": \"datetime\", \"format\": \"medium\", \"tz_name\": "
-"mail_tz}'></span>)\n"
-"                    <a t-attf-href=\"/calendar/view/"
-"#{upcoming_appointment.access_token}?partner_id=#{appointment_booker_id}\" "
-"target=\"_blank\" style=\"margin-left: auto; margin-right: 8px;"
-"\">ดูรายละเอียด</a>\n"
+"                    (<span t-out=\"upcoming_appointment.start\" t-options='"
+"{\"widget\": \"datetime\", \"format\": \"medium\", \"tz_name\": mail_tz}'></"
+"span>)\n"
+"                    <a t-attf-href=\"/calendar/view/#"
+"{upcoming_appointment.access_token}?partner_id=#{appointment_booker_id}\" "
+"target=\"_blank\" style=\"margin-left: auto; margin-right: 8px;\">ดูรายละเอีย"
+"ด</a>\n"
 "                </span>\n"
 "            </li>\n"
 "        </ul>\n"
@@ -1278,7 +1278,7 @@ msgstr "<span class=\"me-1\">คุณกำลังกำหนดเวลา
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "<span class=\"mx-1\">or</span>"
-msgstr ""
+msgstr "<span class=\"mx-1\">หรือ</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -1334,7 +1334,7 @@ msgstr "<span>ชั่วโมง</span>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "<span>Add more details about you</span>"
-msgstr ""
+msgstr "<span>เพิ่มรายละเอียดเพิ่มเติมเกี่ยวกับตัวคุณ</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -1786,7 +1786,7 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_status
 msgid "Appointment Status"
-msgstr ""
+msgstr "สถานะการนัดหมาย"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__name
@@ -1985,7 +1985,7 @@ msgstr "URL ลิงก์ฐาน"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Book a Resource"
-msgstr ""
+msgstr "จองการใช้ทรัพยากร"
 
 #. module: appointment
 #. odoo-python
@@ -2024,7 +2024,7 @@ msgstr "รายละเอียดการจอง"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__booked_mail_template_id
 msgid "Booking Email"
-msgstr ""
+msgstr "อีเมลการจอง"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__event_stop
@@ -2227,7 +2227,7 @@ msgstr "เชื่อมต่อ"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__connectors_displayed
 msgid "Connectors Displayed"
-msgstr ""
+msgstr "คำเชื่อมที่แสดง"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_res_partner
@@ -2289,7 +2289,7 @@ msgstr "สร้างตารางเวลาจากศูนย์หร
 #: code:addons/appointment/models/appointment_type.py:0
 #: code:addons/appointment/static/src/views/appointment_invite/appointment_share_link_list_controller.js:0
 msgid "Create a Share Link"
-msgstr ""
+msgstr "สร้างลิงก์แชร์"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_resource_action
@@ -2424,7 +2424,7 @@ msgstr "การดูแลทันตกรรม"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Describe what you need"
-msgstr ""
+msgstr "อธิบายสิ่งที่คุณต้องการ"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__description
@@ -2676,7 +2676,7 @@ msgstr "โปรดทราบ คุณได้จองการนัด�
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__hide_duration
 msgid "Hide Duration"
-msgstr ""
+msgstr "ซ่อนระยะเวลา"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__hide_timezone
@@ -3080,7 +3080,7 @@ msgstr "การนำทาง"
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Need to reschedule?"
-msgstr ""
+msgstr "ต้องการเปลี่ยนกำหนดการใหม่หรือไม่?"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_alarm__default_for_new_appointment_type
@@ -3364,7 +3364,7 @@ msgstr "คำถาม"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__radio
 msgid "Radio (one answer)"
-msgstr "วิทยุ (หนึ่งคำตอบ)"
+msgstr "ปุ่มตัวเลือก (หนึ่งคำตอบ)"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__rating_ids
@@ -3375,7 +3375,7 @@ msgstr "การให้คะแนน"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_type_action_helper/appointment_type_action_helper.xml:0
 msgid "Ready to make scheduling easy?"
-msgstr ""
+msgstr "พร้อมที่จะทำให้การจัดตารางเวลาเป็นเรื่องง่ายแล้วหรือยัง?"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_manage_leaves__reason
@@ -3432,7 +3432,7 @@ msgstr "ทรัพยากร"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Resource %s"
-msgstr ""
+msgstr "ทรัพยากร %s"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.calendar_event_action_view_bookings_resources
@@ -3510,7 +3510,7 @@ msgstr "จำกัดเฉพาะผู้ใช้"
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Review Booking"
-msgstr ""
+msgstr "ตรวจสอบการจอง"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -3616,12 +3616,12 @@ msgstr "ค้นหาในความรับผิดชอบ"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid "Select Appointments to share..."
-msgstr ""
+msgstr "เลือกการนัดหมายเพื่อแบ่งปัน..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
 msgid "Select Resources"
-msgstr ""
+msgstr "เลือกทรัพยากร"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -3705,7 +3705,7 @@ msgstr "แชร์"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/kanban/kanban_controller.js:0
 msgid "Share Appointment"
-msgstr ""
+msgstr "แชร์การนัดหมาย"
 
 #. module: appointment
 #. odoo-javascript
@@ -3839,7 +3839,7 @@ msgstr "การรวมแหล่งที่มา"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__custom
 msgid "Specific Slots"
-msgstr ""
+msgstr "ช่องเฉพาะ"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__specific_resources
@@ -3933,7 +3933,7 @@ msgstr "อาการ"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Synchronize your Calendar to avoid double-booking"
-msgstr ""
+msgstr "ซิงโครไนซ์ปฏิทินของคุณเพื่อหลีกเลี่ยงการจองทับซ้อน"
 
 #. module: appointment
 #. odoo-python
@@ -3945,7 +3945,7 @@ msgstr "ตาราง"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Table %s"
-msgstr ""
+msgstr "ตาราง %s"
 
 #. module: appointment
 #. odoo-python
@@ -4249,13 +4249,13 @@ msgstr "กำลังจะมาถึง"
 #: model:ir.model.fields,field_description:appointment.field_res_partner__upcoming_appointment_ids
 #: model:ir.model.fields,field_description:appointment.field_res_users__upcoming_appointment_ids
 msgid "Upcoming Appointments"
-msgstr ""
+msgstr "การนัดหมายที่จะมาถึง"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_invite/appointment_share_link_list_controller.js:0
 msgid "Update a Share Link"
-msgstr ""
+msgstr "อัปเดตลิงก์แชร์"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_calendar_alarm__default_for_new_appointment_type

@@ -753,7 +753,10 @@ class WhatsAppTemplate(models.Model):
             return None
         parameters = []
         free_text_count = 1
-        for body_val in self.variable_ids.filtered(lambda line: line.line_type == 'body'):
+        body_variables = self.variable_ids.filtered(
+            lambda line: line.line_type == 'body'
+        ).sorted(key=lambda variable: variable._extract_variable_index())
+        for body_val in body_variables:
             free_text_value = body_val.field_type == 'free_text' and free_text_json.get(f'free_text_{free_text_count}') or False
             parameters.append({
                 'type': 'text',

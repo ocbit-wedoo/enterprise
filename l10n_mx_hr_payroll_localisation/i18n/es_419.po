@@ -3,13 +3,14 @@
 # * l10n_mx_hr_payroll_localisation
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 19:03+0000\n"
-"PO-Revision-Date: 2025-11-07 22:23+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-18 22:10+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_mx_hr_payroll_localisation/es_419/>\n"
 "Language: es_419\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_schedule_pay_temp__10_days
@@ -29,7 +30,7 @@ msgstr "10 días"
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_schedule_pay_temp__14_days
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_payroll_structure_type__l10n_mx_default_schedule_pay__14_days
 msgid "14 Days"
-msgstr ""
+msgstr "14 días"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.l10n_mx_hr_infonavit_form
@@ -39,7 +40,7 @@ msgstr "<span class=\"oe_inline\">%</span>"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.report_payslip_mx_temp
 msgid "<strong class=\"me-2\">Integration Factor:</strong>"
-msgstr ""
+msgstr "<strong class=\"me-2\">Factor de integración:</strong>"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,help:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_external_annual_declaration
@@ -47,6 +48,8 @@ msgid ""
 "Activate this box if the employee will make the annual tax return on their "
 "own. By activating it, the annual ISR adjustment will not be applied."
 msgstr ""
+"Marca esta casilla si el empleado realizará la declaración anual por su "
+"cuenta. Al hacerlo, no se aplicará el ajuste anual del ISR."
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_schedule_pay_temp__bi_monthly
@@ -86,7 +89,7 @@ msgstr "Código del país"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.l10n_mx_hr_infonavit_form
 msgid "Create an Infonavit Credit"
-msgstr ""
+msgstr "Crear Crédito Infonavit"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_fonacot__create_uid
@@ -128,7 +131,7 @@ msgstr "Define la frecuencia del pago de salario."
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_infonavit__discount_factor
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__l10n_mx_hr_infonavit__infonavit_type__discount_factor
 msgid "Discount Factor"
-msgstr ""
+msgstr "Factor de descuento"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_fonacot__display_name
@@ -144,34 +147,34 @@ msgstr "Contrato del empleado"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "External Annual Declaration"
-msgstr ""
+msgstr "Declaración anual externa"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_fonacot__extra_fixed_monthly_contribution
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_infonavit__extra_fixed_monthly_contribution
 msgid "Extra Fixed Monthly Contribution"
-msgstr ""
+msgstr "Contribución Mensual Fija Extra"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Extra Monthly Contribution"
-msgstr ""
+msgstr "Contribución Mensual Extra"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_infonavit__fixed_monetary_fee
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__l10n_mx_hr_infonavit__infonavit_type__fixed_monetary_fee
 msgid "Fixed Monetary Fee"
-msgstr ""
+msgstr "Tarifa Monetaria Fija"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Fonacot"
-msgstr ""
+msgstr "Fonacot"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Gasoline Vouchers"
-msgstr ""
+msgstr "Vales de gasolina"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_fonacot__id
@@ -193,27 +196,27 @@ msgstr "En progreso"
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_payment_period_vouchers__in_period
 msgid "In the period"
-msgstr ""
+msgstr "En el periodo"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Infonavit"
-msgstr ""
+msgstr "Infonavit"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Infonavit / Fonacot"
-msgstr ""
+msgstr "Infonavit / Fonacot"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_payment_period_vouchers
 msgid "L10N Mx Payment Period Vouchers"
-msgstr ""
+msgstr "Vales del periodo de pago"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_payment_period_vouchers__last_day_of_month
 msgid "Last Day of the Month"
-msgstr ""
+msgstr "Último Día del Mes"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_fonacot__write_uid
@@ -230,73 +233,73 @@ msgstr "Última actualización el"
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_payslip__l10n_mx_daily_salary
 msgid "MX: Daily Salary"
-msgstr ""
+msgstr "Salario Diario"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_payslip__l10n_mx_days_of_year
 msgid "MX: Days of the Year"
-msgstr ""
+msgstr "Días del Año"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_payroll_structure__l10n_mx_schedule_pay
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_payroll_structure_type__l10n_mx_default_schedule_pay
 msgid "MX: Default Scheduled Pay"
-msgstr ""
+msgstr "Paga programada predeterminada"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_external_annual_declaration
 msgid "MX: External Annual Declaration"
-msgstr ""
+msgstr "Declaración anual externa"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_fonacot
 msgid "MX: Fonacot"
-msgstr ""
+msgstr "Fonacot"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_gasoline_amount
 msgid "MX: Gasoline Amount"
-msgstr ""
+msgstr "Monto de Gasolina"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_infonavit
 msgid "MX: Infonavit"
-msgstr ""
+msgstr "Infonavit"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_payslip__l10n_mx_integration_factor
 msgid "MX: Integration Factor"
-msgstr ""
+msgstr "Factor de Integración"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_meal_voucher_amount
 msgid "MX: Meal Vouchers"
-msgstr ""
+msgstr "Vales de despensa"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_savings_fund
 msgid "MX: Savings Fund"
-msgstr ""
+msgstr "Fondo de ahorro"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_schedule_pay_temp
 msgid "MX: Schedule Pay (Temp)"
-msgstr ""
+msgstr "Programar pago (temp)"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_contract__l10n_mx_transport_amount
 msgid "MX: Transport Amount"
-msgstr ""
+msgstr "Monto de Transporte"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_hr_payslip__l10n_mx_years_worked
 msgid "MX: Years Worked"
-msgstr ""
+msgstr "Años Trabajados"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Meal Vouchers"
-msgstr ""
+msgstr "Vales de despensa"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_schedule_pay_temp__monthly
@@ -307,7 +310,7 @@ msgstr "Mensualmente"
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_infonavit__monthly_insurance
 msgid "Monthly Insurance"
-msgstr ""
+msgstr "Seguro Mensual"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model,name:l10n_mx_hr_payroll_localisation.model_hr_payslip
@@ -317,7 +320,7 @@ msgstr "Recibo de nómina"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Payment Period"
-msgstr ""
+msgstr "Periodo de pago"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model,name:l10n_mx_hr_payroll_localisation.model_hr_payslip_worked_days
@@ -343,7 +346,7 @@ msgstr "Tipo de estructura salarial"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Savings Fund"
-msgstr ""
+msgstr "Fondo de ahorros"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
@@ -359,7 +362,7 @@ msgstr "Estado"
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_hr_contract_christmas_bonus_rate
 msgid "The Christmas Bonus rate must be between 0 and 100"
-msgstr ""
+msgstr "La tasa del aguinaldo debe ser un porcentaje entre 0 y 100"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,help:l10n_mx_hr_payroll_localisation.field_hr_payroll_structure__country_code
@@ -373,58 +376,58 @@ msgstr ""
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_infonavit_positive_discount_factor
 msgid "The discount factor cannot be negative"
-msgstr ""
+msgstr "El factor de descuento no puede ser negativo"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_fonacot_positive_extra_fixed_monthly_contribution
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_infonavit_positive_extra_fixed_monthly_contribution
 msgid "The extra fixed monthly contribution cannot be negative"
-msgstr ""
+msgstr "La contribución mensual extra fija no puede ser negativa"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_infonavit_positive_fixed_monetary_fee
 msgid "The fixed monetary fee cannot be negative"
-msgstr ""
+msgstr "La tarifa monetaria fija no puede ser negativa"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_fonacot_positive_monthly_import
 msgid "The monthly import cannot be negative"
-msgstr ""
+msgstr "El importe mensual no puede ser negativo"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_infonavit_positive_monthly_insurance
 msgid "The monthly insurance cannot be negative"
-msgstr ""
+msgstr "El seguro mensual no puede ser negativo"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.constraint,message:l10n_mx_hr_payroll_localisation.constraint_l10n_mx_hr_infonavit_percentage
 msgid "The percentage must be between 0 and 100"
-msgstr ""
+msgstr "El porcentaje debe ser entre 0 y 100"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Total Extra Monthly Contribution"
-msgstr ""
+msgstr "Contribución extra mensual total"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Total Fixed Monetary Fee"
-msgstr ""
+msgstr "Tarifa monetaria fija total"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Total Monthly Import"
-msgstr ""
+msgstr "Importe mensual total"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Total Monthly Insurance"
-msgstr ""
+msgstr "Seguro mensual total"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Transport Vouchers"
-msgstr ""
+msgstr "Vales de transporte"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields,field_description:l10n_mx_hr_payroll_localisation.field_l10n_mx_hr_infonavit__infonavit_type
@@ -434,7 +437,7 @@ msgstr "Tipo"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "Vouchers"
-msgstr ""
+msgstr "Vales"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model.fields.selection,name:l10n_mx_hr_payroll_localisation.selection__hr_contract__l10n_mx_schedule_pay_temp__weekly
@@ -445,14 +448,14 @@ msgstr "Semanal"
 #. module: l10n_mx_hr_payroll_localisation
 #: model_terms:ir.ui.view,arch_db:l10n_mx_hr_payroll_localisation.hr_contract_view_form
 msgid "an Infonavit Credit"
-msgstr ""
+msgstr "un Crédito Infonavit"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model,name:l10n_mx_hr_payroll_localisation.model_l10n_mx_hr_fonacot
 msgid "fonacot"
-msgstr ""
+msgstr "Fonacot"
 
 #. module: l10n_mx_hr_payroll_localisation
 #: model:ir.model,name:l10n_mx_hr_payroll_localisation.model_l10n_mx_hr_infonavit
 msgid "infonavit"
-msgstr ""
+msgstr "Infonavit"

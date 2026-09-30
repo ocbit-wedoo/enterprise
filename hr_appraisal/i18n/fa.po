@@ -1,31 +1,34 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_appraisal
+# * hr_appraisal
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 # Naser mars, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Naser mars, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-09-02 16:08+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"hr_appraisal/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "%(user)s decided, as %(role)s, to publish the employee's feedback"
-msgstr ""
+msgstr "%(user)s تصمیم گرفت به عنوان %(role)s بازخورد کارمند را منتشر کند"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -37,7 +40,7 @@ msgstr "%s (کپی)"
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "%s's Goals"
-msgstr ""
+msgstr "اهداف %s"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -223,7 +226,7 @@ msgstr ""
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
 msgid "<em>Autonomy</em>"
-msgstr ""
+msgstr "<em>استقلال کاری</em>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -301,12 +304,12 @@ msgstr ""
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
 msgid "<em>Teamwork</em>"
-msgstr ""
+msgstr "<em>کار تیمی</em>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
 msgid "<em>Time Management</em>"
-msgstr ""
+msgstr "<em>مدیریت زمان</em>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -367,17 +370,20 @@ msgid ""
 "                            Last Appraisal\n"
 "                        </span>"
 msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            آخرین ارزیابی\n"
+"                        </span>"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "<span class=\"o_stat_text\">Appraisals</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">ارزیابی</span>"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_employee_view_form
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "<span class=\"o_stat_text\">Goals</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">هدف</span>"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
@@ -418,6 +424,9 @@ msgid ""
 "                        Evaluation\n"
 "                    </span>"
 msgstr ""
+"<span style=\"font-weight: bolder;\">\n"
+"                        ارزیابی\n"
+"                    </span>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -426,6 +435,9 @@ msgid ""
 "                        Feedback\n"
 "                    </span>"
 msgstr ""
+"<span style=\"font-weight: bolder;\">\n"
+"                        بازخورد\n"
+"                    </span>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -434,6 +446,9 @@ msgid ""
 "                        Improvements\n"
 "                    </span>"
 msgstr ""
+"<span style=\"font-weight: bolder;\">\n"
+"                        بهبودها\n"
+"                    </span>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -442,6 +457,9 @@ msgid ""
 "                        My feelings\n"
 "                    </span>"
 msgstr ""
+"<span style=\"font-weight: bolder;\">\n"
+"                        احساسات من\n"
+"                    </span>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -450,6 +468,9 @@ msgid ""
 "                        My future\n"
 "                    </span>"
 msgstr ""
+"<span style=\"font-weight: bolder;\">\n"
+"                        آینده من\n"
+"                    </span>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -458,6 +479,9 @@ msgid ""
 "                        My work\n"
 "                    </span>"
 msgstr ""
+"<span style=\"font-weight: bolder;\">\n"
+"                        کار من\n"
+"                    </span>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_probationary_period_template
@@ -528,7 +552,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_report_view_gantt
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_view_gantt
 msgid "<strong>Date — </strong>"
-msgstr ""
+msgstr "<strong>تاریخ — </strong>"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_yearly_template
@@ -827,12 +851,12 @@ msgstr "یک برچسب با نام مشابه از قبل موجود است."
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__accessible_employee_feedback
 msgid "Accessible Employee Feedback"
-msgstr ""
+msgstr "بازخورد کارمند در دسترس"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__accessible_manager_feedback
 msgid "Accessible Manager Feedback"
-msgstr ""
+msgstr "بازخورد مدیر در دسترس"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__message_needaction
@@ -872,7 +896,7 @@ msgstr "آیکون نوع فعالیت"
 #. module: hr_appraisal
 #: model_terms:ir.actions.act_window,help:hr_appraisal.hr_appraisal_config_templates_action
 msgid "Add a new template"
-msgstr ""
+msgstr "قالب جدیدی ایجاد اضافه کنید"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.request_appraisal_view_form
@@ -887,7 +911,7 @@ msgstr "مدیر"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "Another appraisal with the same people is already ongoing."
-msgstr ""
+msgstr "ارزیابی دیگری با همین افراد در حال انجام است."
 
 #. module: hr_appraisal
 #: model:ir.actions.act_window,name:hr_appraisal.hr_appraisal_action
@@ -921,19 +945,19 @@ msgstr "یادداشت ارزیابی"
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_res_company__appraisal_confirm_mail_template
 msgid "Appraisal Confirm Mail Template"
-msgstr ""
+msgstr "قالب ایمیل تأیید ارزیابی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__employee_appraisal_count
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_employee__appraisal_count
 msgid "Appraisal Count"
-msgstr ""
+msgstr "تعداد ارزیابی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__date_close
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_search
 msgid "Appraisal Date"
-msgstr ""
+msgstr "تاریخ ارزیابی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_request_appraisal__employee_id
@@ -954,29 +978,29 @@ msgstr "هدف ارزیابی"
 #. module: hr_appraisal
 #: model:ir.model,name:hr_appraisal.model_hr_appraisal_goal_tag
 msgid "Appraisal Goal Tags"
-msgstr ""
+msgstr "برچسب‌های هدف ارزیابی"
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Appraisal Officer"
-msgstr ""
+msgstr "مسئول ارزیابی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__appraisal_plan_posted
 msgid "Appraisal Plan Posted"
-msgstr ""
+msgstr "برنامه ارزیابی ارسال شد"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_department__appraisal_properties_definition
 msgid "Appraisal Properties"
-msgstr ""
+msgstr "ویژگی‌های ارزیابی"
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Appraisal Request"
-msgstr ""
+msgstr "درخواست ارزیابی"
 
 #. module: hr_appraisal
 #: model:mail.template,subject:hr_appraisal.mail_template_appraisal_request
@@ -1003,14 +1027,14 @@ msgstr "آمار ارزیابی"
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_template_form
 msgid "Appraisal Template"
-msgstr ""
+msgstr "قالب ارزیابی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_department__custom_appraisal_template_id
 #: model:ir.ui.menu,name:hr_appraisal.hr_appraisal_template_menu
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 msgid "Appraisal Templates"
-msgstr ""
+msgstr "قالب‌های ارزیابی"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -1019,30 +1043,32 @@ msgid ""
 "Appraisal for %(appraisal_title)s should be using template \"%"
 "(template_name)s\" instead of \"%(wrong_template_name)s\""
 msgstr ""
+"ارزیابی %(appraisal_title)s باید از قالب «%(template_name)s» به جای «%"
+"(wrong_template_name)s» استفاده کند."
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Appraisal for %(employee)s on %(date)s"
-msgstr ""
+msgstr "ارزیابی %(employee)s در تاریخ %(date)s"
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Appraisal for %s to fill"
-msgstr ""
+msgstr "ارزیابی %s جهت تکمیل"
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Appraisal of %s"
-msgstr ""
+msgstr "ارزیابی %s"
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Appraisal to fill"
-msgstr ""
+msgstr "ارزیابی جهت تکمیل"
 
 #. module: hr_appraisal
 #: model:ir.actions.act_window,name:hr_appraisal.hr_appraisal_action_from_department
@@ -1068,12 +1094,12 @@ msgstr "ارزیابی‌ها"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 msgid "Appraisals Automation"
-msgstr ""
+msgstr "اتوماسیون ارزیابی‌ها"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 msgid "Appraisals Plans"
-msgstr ""
+msgstr "طرح‌های ارزیابی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_department__appraisals_to_process_count
@@ -1102,6 +1128,8 @@ msgid ""
 "Assign Goals to motivate your Employees and keep track of their objectives "
 "between Appraisals."
 msgstr ""
+"برای انگیزه دادن به کارمندان هدف تعیین کنید و اهداف آنها را بین ارزیابی‌ها "
+"پیگیری کنید."
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__message_attachment_count
@@ -1126,6 +1154,8 @@ msgid ""
 "Automatically creates the confirmed appraisals when Next Appraisal Date is "
 "reached"
 msgstr ""
+"هنگامی که تاریخ ارزیابی بعدی فرا می‌رسد، به طور خودکار ارزیابی‌های تأیید شده "
+"را ایجاد می‌کند."
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__avatar_1920
@@ -1161,7 +1191,7 @@ msgstr "امکان ویرایش محتوا"
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_employee__can_request_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_employee_public__can_request_appraisal
 msgid "Can Request Appraisal"
-msgstr ""
+msgstr "درخواست ارزیابی مجاز است"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__can_see_employee_publish
@@ -1199,7 +1229,7 @@ msgstr "لغو شد"
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__date_close
 msgid "Closing date of the current appraisal"
-msgstr ""
+msgstr "تاریخ بستن ارزیابی فعلی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__previous_appraisal_date
@@ -1292,12 +1322,12 @@ msgstr "ایجاد ارزیابی بعد از استخدام"
 #. module: hr_appraisal
 #: model_terms:ir.actions.act_window,help:hr_appraisal.action_hr_appraisal_goal
 msgid "Create new goals"
-msgstr ""
+msgstr "اهداف جدیدی ایجاد کنید"
 
 #. module: hr_appraisal
 #: model_terms:ir.actions.act_window,help:hr_appraisal.hr_appraisal_goal_tag_action
 msgid "Create new tags to use on Employee's goals"
-msgstr ""
+msgstr "برچسب‌های جدیدی برای استفاده در اهداف کارمند ایجاد کنید"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_goal_view_search
@@ -1338,7 +1368,7 @@ msgstr "تاریخ ایجاد"
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__next_appraisal_date
 msgid "Date where the new appraisal will be automatically created"
-msgstr ""
+msgstr "تاریخی که ارزیابی جدید به طور خودکار ایجاد خواهد شد"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal_goal__deadline
@@ -1350,7 +1380,7 @@ msgstr "آخرین مهلت"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_appraisal_report_search
 msgid "Deadline Date"
-msgstr ""
+msgstr "تاریخ سررسید"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_view_activity
@@ -1372,7 +1402,7 @@ msgstr "قالب پیشفرض"
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 msgid ""
 "Define the next appraisal date automatically based on Appraisal's History"
-msgstr ""
+msgstr "تاریخ ارزیابی بعدی را بر اساس تاریخچه ارزیابی به طور خودکار تعیین کنید"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_goal_view_kanban
@@ -1454,7 +1484,7 @@ msgstr "ارزیابی کارمند"
 #. module: hr_appraisal
 #: model:ir.model,name:hr_appraisal.model_hr_appraisal_template
 msgid "Employee Appraisal Template"
-msgstr ""
+msgstr "قالب ارزیابی کارمند"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__employee_autocomplete_ids
@@ -1487,7 +1517,7 @@ msgstr "نام کارمند"
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__employee_user_id
 msgid "Employee User"
-msgstr ""
+msgstr "کاربر کارمند"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
@@ -1527,7 +1557,7 @@ msgstr "خارجی"
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Fill appraisal for %s"
-msgstr ""
+msgstr "تکمیل فرم ارزیابی برای %s"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__date_final_interview
@@ -1542,7 +1572,7 @@ msgstr "تاریخ مصاحبه نهایی"
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__assessment_note
 msgid "Final Rating"
-msgstr ""
+msgstr "امتیاز نهایی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__message_follower_ids
@@ -1573,6 +1603,7 @@ msgid ""
 "Give one positive achievement that convinced you of the employee's\n"
 "                    value."
 msgstr ""
+"یک دستاورد مثبت که شما را نسبت به ارزش کارمند متقاعد کرده است بیان کنید."
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_goal_view_form
@@ -1583,7 +1614,7 @@ msgstr "هدف"
 #. module: hr_appraisal
 #: model:ir.actions.act_window,name:hr_appraisal.hr_appraisal_goal_tag_action
 msgid "Goal Tags"
-msgstr ""
+msgstr "برچسب‌های هدف"
 
 #. module: hr_appraisal
 #: model:ir.actions.act_window,name:hr_appraisal.action_hr_appraisal_goal
@@ -1595,7 +1626,7 @@ msgstr "اهداف"
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_employee__goals_count
 msgid "Goals Count"
-msgstr ""
+msgstr "تعداد اهداف"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_appraisal_report_search
@@ -1641,7 +1672,7 @@ msgstr "آیا دارای پیام است"
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
 msgid "How could the employee improve?"
-msgstr ""
+msgstr "کارمند چگونه می‌تواند پیشرفت کند؟"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -1804,13 +1835,13 @@ msgstr "فعالیتهای اخیر"
 #. module: hr_appraisal
 #: model:ir.actions.server,name:hr_appraisal.action_load_appraisal_demo_data
 msgid "Load appraisal scenario"
-msgstr ""
+msgstr "بارگذاری سناریوی ارزیابی"
 
 #. module: hr_appraisal
 #. odoo-javascript
 #: code:addons/hr_appraisal/static/src/views/appraisal_helper_view.xml:0
 msgid "Load sample data"
-msgstr ""
+msgstr "بارگذاری داده‌های نمونه"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -1836,7 +1867,7 @@ msgstr "مدیر"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "Manager Assessment will show here"
-msgstr ""
+msgstr "ارزیابی مدیر در اینجا نمایش داده خواهد شد"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__manager_feedback
@@ -1863,7 +1894,7 @@ msgstr ""
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "Manager's Feedback"
-msgstr ""
+msgstr "بازخورد مدیر"
 
 #. module: hr_appraisal
 #: model:ir.actions.server,name:hr_appraisal.action_mark_as_done
@@ -1936,7 +1967,7 @@ msgstr "نیازمند بهبود"
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_employee_base.py:0
 msgid "New and Pending Appraisals"
-msgstr ""
+msgstr "ارزیابی‌های جدید و در انتظار"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__activity_calendar_event_id
@@ -1965,7 +1996,7 @@ msgstr "نوع فعالیت بعدی"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_employee_view_search
 msgid "Next Appraisal"
-msgstr ""
+msgstr "ارزیابی بعدی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__next_appraisal_date
@@ -2026,7 +2057,7 @@ msgstr "تعداد پیامهای با خطای تحویل"
 #. module: hr_appraisal
 #: model:res.groups,name:hr_appraisal.group_hr_appraisal_user
 msgid "Officer: Access all appraisals"
-msgstr ""
+msgstr "مسئول: دسترسی به تمام ارزیابی‌ها"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_employee_view_form
@@ -2039,7 +2070,7 @@ msgstr "در دست اقدام"
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_employee_public__ongoing_appraisal_count
 #: model:ir.model.fields,field_description:hr_appraisal.field_res_users__ongoing_appraisal_count
 msgid "Ongoing Appraisal Count"
-msgstr ""
+msgstr "تعداد ارزیابی‌های در حال انجام"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2092,18 +2123,19 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Previous Appraisals"
-msgstr ""
+msgstr "ارزیابی‌های قبلی"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__note
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "Private Note"
-msgstr ""
+msgstr "یادداشت خصوصی"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "Private note (only accessible to people set as managers)"
 msgstr ""
+"یادداشت خصوصی (فقط برای افرادی که به عنوان مدیر تنظیم شده‌اند قابل دسترس است)"
 
 #. module: hr_appraisal
 #: model:hr.appraisal.goal.tag,name:hr_appraisal.hr_appraisal_goal_tag_programming
@@ -2205,7 +2237,7 @@ msgstr "جستجوی ارزیابی"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "Self Assessment will show here"
-msgstr ""
+msgstr "خودارزیابی در اینجا نمایش داده خواهد شد"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.request_appraisal_view_form
@@ -2222,6 +2254,8 @@ msgstr "ارسال از طریق ایمیل"
 msgid ""
 "Sent automatically to both employee and manager when appraisal is confirmed"
 msgstr ""
+"زمانی که ارزیابی تأیید شود، به طور خودکار هم برای کارمند و هم مدیر ارسال "
+"می‌شود"
 
 #. module: hr_appraisal
 #: model:mail.template,description:hr_appraisal.mail_template_appraisal_request_from_employee
@@ -2253,17 +2287,17 @@ msgstr "تنظیمات"
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
 msgid "Short term (6-months) actions / decisions / objectives"
-msgstr ""
+msgstr "فعالیت‌ها/تصمیم‌ها/اهداف کوتاه مدت (6 ماهه)"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__show_employee_feedback_full
 msgid "Show Employee Feedback Full"
-msgstr ""
+msgstr "نمایش بازخورد کامل کارمند"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__show_manager_feedback_full
 msgid "Show Manager Feedback Full"
-msgstr ""
+msgstr "نمایش بازخورد کامل مدیر"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_search
@@ -2273,7 +2307,7 @@ msgstr "تمام رکوردهایی که تاریخ اقدام بعدی آن ق�
 #. module: hr_appraisal
 #: model:hr.appraisal.goal.tag,name:hr_appraisal.hr_appraisal_goal_tag_softskills
 msgid "Soft Skills"
-msgstr ""
+msgstr "مهارت‌های نرم"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__state
@@ -2335,6 +2369,7 @@ msgid ""
 "Template %(template_name)s is necessary for appraisal requests and may not "
 "be removed."
 msgstr ""
+"قالب %(template_name)s برای درخواست‌های ارزیابی ضروری است و نمی‌تواند حذف شود."
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2343,18 +2378,20 @@ msgid ""
 "Thanks to your Appraisal Plan, without any new manual Appraisal, the new "
 "Appraisal will be automatically created on %s."
 msgstr ""
+"بر اساس طرح ارزیابی شما، ارزیابی جدید بدون نیاز به ارزیابی دستی جدید، به طور "
+"خودکار در %s ایجاد خواهد شد."
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "The \"Manager Feedback Published\" cannot be changed by an employee."
-msgstr ""
+msgstr "«انتشار بازخورد مدیر» توسط کارمند قابل تغییر نیست."
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "The appraisal's status has been set to Done by %s"
-msgstr ""
+msgstr "وضعیت ارزیابی توسط %s به انجام شده تغییر یافت"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__last_appraisal_date
@@ -2376,7 +2413,7 @@ msgstr ""
 #. module: hr_appraisal
 #: model:ir.model.constraint,message:hr_appraisal.constraint_res_company_positif_number_months
 msgid "The duration time must be bigger or equal to 1 month."
-msgstr ""
+msgstr "مدت زمان باید بزرگ‌تر یا مساوی ۱ ماه باشد."
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2385,12 +2422,14 @@ msgid ""
 "The employee %(employee)s arrived %(months)s months ago. The appraisal is "
 "created and you can fill it here."
 msgstr ""
+"کارمند %(employee)s %(months)s ماه پیش ملحق شده است. ارزیابی ایجاد شده و "
+"می‌توانید آن را اینجا تکمیل کنید."
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "The employee feedback cannot be changed by managers."
-msgstr ""
+msgstr "امکان تغییر بازخورد کارمند توسط مدیران وجود ندارد."
 
 #. module: hr_appraisal
 #. odoo-javascript
@@ -2399,6 +2438,8 @@ msgid ""
 "The employee's feedback will be published without their consent. Do you "
 "really want to publish it? This action will be logged in the chatter."
 msgstr ""
+"بازخورد کارمند بدون رضایت او منتشر خواهد شد. آیا واقعاً می‌خواهید آن را منتشر "
+"کنید؟ این عمل در کادر پیام‌ها ثبت می‌شود."
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2407,17 +2448,19 @@ msgid ""
 "The last appraisal of %(employee)s was %(months)s months ago. The appraisal "
 "is created and you can fill it here."
 msgstr ""
+"آخرین ارزیابی %(employee)s %(months)s ماه پیش بود. ارزیابی ایجاد شده و "
+"می‌توانید آن را اینجا تکمیل کنید."
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "The manager feedback cannot be changed by an employee."
-msgstr ""
+msgstr "امکان تغییر بازخورد مدیر توسط کارمند وجود ندارد."
 
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__assessment_note
 msgid "This field is not visible to the Employee."
-msgstr ""
+msgstr "این فیلد برای کارمند قابل مشاهده نیست."
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_employee_feedback_template:hr_appraisal.hr_appraisal_yearly_template
@@ -2461,7 +2504,7 @@ msgstr "آموزش"
 #. odoo-javascript
 #: code:addons/hr_appraisal/static/src/views/appraisal_helper_view.xml:0
 msgid "Try the backend and reporting:"
-msgstr ""
+msgstr "امتحان بک‌اند و گزارش‌گیری:"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__activity_exception_decoration
@@ -2473,7 +2516,7 @@ msgstr "نوع فعالیت استثنایی برای رکورد."
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__uncomplete_goals_count
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_employee__uncomplete_goals_count
 msgid "Uncomplete Goals Count"
-msgstr ""
+msgstr "تعداد اهداف تکمیل نشده"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2484,7 +2527,7 @@ msgstr "منتشر نشده"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_employee_view_search
 msgid "Upcoming Appraisals"
-msgstr ""
+msgstr "ارزیابی‌های آینده"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_template_form
@@ -2493,6 +2536,9 @@ msgid ""
 "Employee.                                         You can use a lot of "
 "options with the html editor, accessible by pressing / on the keyboard."
 msgstr ""
+"از این قسمت برای نوشتن محتوایی که برای کارمند نمایش داده می‌شود استفاده "
+"کنید.                                         می‌توانید از گزینه‌های زیادی با "
+"استفاده از ویرایشگر HTML که با تایپ / در دسترس است استفاده کنید."
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_template_form
@@ -2501,6 +2547,9 @@ msgid ""
 "Manager.                                         You can use a lot of "
 "options with the html editor, accessible by pressing / on the keyboard."
 msgstr ""
+"از این قسمت برای نوشتن محتوایی که برای مدیر نمایش داده می‌شود استفاده "
+"کنید.                                         می‌توانید از گزینه‌های زیادی با "
+"استفاده از ویرایشگر HTML که با تایپ / در دسترس است استفاده کنید."
 
 #. module: hr_appraisal
 #: model:ir.model,name:hr_appraisal.model_res_users
@@ -2511,7 +2560,7 @@ msgstr "کاربر"
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_request_appraisal__user_body
 msgid "User Contents"
-msgstr ""
+msgstr "محتوای کاربر"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__waiting_feedback
@@ -2579,6 +2628,8 @@ msgid ""
 "You arrived %s months ago. Your appraisal is created and you can fill it "
 "here."
 msgstr ""
+"شما %s ماه پیش به شرکت ملحق شدید. ارزیابی شما ایجاد شده و می‌توانید آن را در "
+"اینجا تکمیل کنید."
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2586,6 +2637,7 @@ msgstr ""
 msgid ""
 "You cannot delete an employee who is a goal's manager, archive it instead."
 msgstr ""
+"نمی‌توانید کارمندی که مدیر یک هدف است را حذف کنید. در عوض آن را بایگانی کنید."
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2597,13 +2649,13 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_employee.py:0
 msgid "You cannot set 'Next Appraisal Date' in the past."
-msgstr ""
+msgstr "نمی‌توانید «تاریخ ارزیابی بعدی» را در گذشته تنظیم کنید."
 
 #. module: hr_appraisal
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "Your Appraisal has been completed"
-msgstr ""
+msgstr "ارزیابی شما تکمیل شده است"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2612,6 +2664,8 @@ msgid ""
 "Your last appraisal was %s months ago. Your appraisal is created and you can "
 "fill it here."
 msgstr ""
+"آخرین ارزیابی شما %s ماه پیش بود. یک ارزیابی برای شما ایجاد شده و می‌توانید "
+"آن را در اینجا تکمیل کنید."
 
 #. module: hr_appraisal
 #. odoo-javascript
@@ -2622,12 +2676,12 @@ msgstr ""
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_template_form
 msgid "e.g. Annual Appraisal"
-msgstr ""
+msgstr "مثال: ارزیابی سالانه"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_goal_view_form
 msgid "e.g. Improve your English level"
-msgstr ""
+msgstr "مثال: سطح انگلیسی خود را بهبود دهید"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
@@ -2637,17 +2691,17 @@ msgstr "برای مثال محمد احمدی"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_goal_tag_view_tree
 msgid "e.g. Remediation, Team, Improvement plan, Career change, ..."
-msgstr ""
+msgstr "مثال: اصلاح، تیم، برنامه بهبود، تغییر شغل، ..."
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 msgid "months after recruitment, then after"
-msgstr ""
+msgstr "ماه پس از استخدام، سپس بعد از"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
 msgid "months, then every"
-msgstr ""
+msgstr "ماه، سپس هر"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.res_config_settings_view_employee_form
@@ -2657,7 +2711,7 @@ msgstr "ماه"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "once published"
-msgstr ""
+msgstr "(بعد از انتشار)"
 
 #. module: hr_appraisal
 #. odoo-javascript
@@ -2670,11 +2724,12 @@ msgstr "یا"
 msgid ""
 "{{ hasattr(object, 'name') and object.name or '' }} requests an Appraisal"
 msgstr ""
+"{{ hasattr(object, 'name') and object.name or '' }} درخواست ارزیابی دارد"
 
 #. module: hr_appraisal
 #: model:mail.template,subject:hr_appraisal.mail_template_appraisal_confirm
 msgid "{{ object.employee_id.name }}: Appraisal Confirmed"
-msgstr ""
+msgstr "{{ object.employee_id.name }}: ارزیابی تأیید شد"
 
 #~ msgid "100%"
 #~ msgstr "100%"

@@ -61,8 +61,9 @@ class WorksheetTemplate(models.Model):
     @api.model
     def _create_demo_data_quality(self):
         # create demo data in batch for performance reasons (avoid multiple calls to setup_models)
-        model_id = self.env.ref('quality_control_worksheet.quality_control_worksheet_template1').model_id.id
-        self.env['ir.model.fields'].create([{
+        model = self.env.ref('quality_control_worksheet.quality_control_worksheet_template1').model_id
+        model_id = model.id
+        fields = self.env['ir.model.fields'].create([{
             'name': 'x_date',
             'ttype': 'date',
             'field_description': 'Date',
@@ -92,6 +93,13 @@ class WorksheetTemplate(models.Model):
             'selection': "[('short','1.80m ~ 1.85m'), ('medium','1.86m ~ 1.90m'), ('long', '1.91m ~ 2.00m')]",
             'model_id': model_id,
         }])
+        self.env['ir.model.data'].create([{
+            'name': f'{model.model}_ir_model_fields_{field.name}',
+            'module': 'quality_control_worksheet',
+            'model': 'ir.model.fields',
+            'res_id': field.id,
+            'noupdate': True,
+        } for field in fields])
 
     def get_x_model_form_action(self):
         action = super().get_x_model_form_action()

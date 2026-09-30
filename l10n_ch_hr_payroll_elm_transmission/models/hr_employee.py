@@ -210,7 +210,7 @@ It involves additional information required to account for the specific characte
     def write(self, vals):
         vals = super().write(vals)
         # Recompute open payslips automatically on each update since almost all fields cause a change in computation
-        pending_computation_slips = self.slip_ids.filtered(lambda p: p.state in ['draft', 'verify'] and p.struct_id.code == "CHMONTHLYELM")
+        pending_computation_slips = self.sudo().slip_ids.filtered(lambda p: p.state in ['draft', 'verify'] and p.struct_id.code == "CHMONTHLYELM")
         if pending_computation_slips:
             pending_computation_slips.action_refresh_from_work_entries()
         else:
@@ -297,9 +297,9 @@ It involves additional information required to account for the specific characte
             })
 
         if vals:
-            existing_snapshots += self.env['l10n.ch.employee.yearly.values'].create(vals)
+            existing_snapshots += self.sudo().env['l10n.ch.employee.yearly.values'].create(vals)
 
-        existing_snapshots += self.env["l10n.ch.employee.yearly.values"].search([
+        existing_snapshots += self.sudo().env["l10n.ch.employee.yearly.values"].search([
             ('year', '>', year),
             ('employee_id', 'in', self.ids)
         ])

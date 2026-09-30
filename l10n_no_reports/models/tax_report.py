@@ -138,6 +138,7 @@ class AccountGenericTaxReport(models.AbstractModel):
             JOIN res_country tax_country ON tax_country.id = tax.country_id
             WHERE tdr.tax_exigible
             GROUP BY tdr.tax_repartition_line_id, tax.id, report_line.code
+            ORDER BY (SUBSTRING(report_line.code, '[0-9]+'))::integer, tdr.tax_repartition_line_id
             ''',
             tax_name=tax_name,
             tax_details_query=tax_details_query,

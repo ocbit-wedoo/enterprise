@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 18:51+0000\n"
-"PO-Revision-Date: 2026-04-17 09:57+0000\n"
+"PO-Revision-Date: 2026-08-31 03:09+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "hr_expense_extract/ja/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: hr_expense_extract
 #. odoo-javascript
@@ -89,7 +89,7 @@ msgstr "会社"
 #. module: hr_expense_extract
 #: model:ir.model,name:hr_expense_extract.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: hr_expense_extract
 #: model_terms:ir.ui.view,arch_db:hr_expense_extract.expense_sample_register_view_form
@@ -241,7 +241,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_has_error
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,field_description:hr_expense_extract.field_hr_expense__message_is_follower
@@ -341,7 +341,7 @@ msgstr "エラー数"
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: hr_expense_extract
 #: model:ir.model.fields,help:hr_expense_extract.field_hr_expense__message_has_error_counter
@@ -463,7 +463,7 @@ msgstr "サンプル経費と通常経費を混ぜることはできません"
 #. odoo-python
 #: code:addons/hr_expense_extract/models/hr_expense.py:0
 msgid "You cannot send a expense that is not in draft state!"
-msgstr "ドラフト状態でない経費を送信することはできません！"
+msgstr "下書き状態でない経費を送信することはできません！"
 
 #. module: hr_expense_extract
 #. odoo-javascript

@@ -8,13 +8,14 @@
 # Sanne Kristensen <sanne@vkdata.dk>, 2024
 # Martin Trigaux, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2025-11-27 16:49+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:57+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "account_base_import/da/>\n"
 "Language: da\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
@@ -53,7 +54,7 @@ msgstr "Sammendrag af kontoimport"
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
 msgid "Accounting Import"
-msgstr "Regnskab Import"
+msgstr "Regnskabsimport"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -66,12 +67,12 @@ msgstr "Guide til import af regnskab"
 #. odoo-javascript
 #: code:addons/account_base_import/static/src/xml/account_import.xml:0
 msgid "Accounting Import Options"
-msgstr "Regnskab importmuligheder"
+msgstr "Importindstillinger for regnskab"
 
 #. module: account_base_import
 #: model:ir.model,name:account_base_import.model_base_import_import
 msgid "Base Import"
-msgstr "Basis import"
+msgstr "Basisimport"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -104,7 +105,7 @@ msgstr "Kunder"
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -128,7 +129,7 @@ msgstr "FEC"
 #. odoo-javascript
 #: code:addons/account_base_import/static/src/xml/account_import.xml:0
 msgid "FEC Import module"
-msgstr "FEC importer modul"
+msgstr "FEC-importmodul"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__id
@@ -140,7 +141,7 @@ msgstr "ID"
 #: model_terms:ir.ui.view,arch_db:account_base_import.view_account_base_import_list
 #: model_terms:ir.ui.view,arch_db:account_base_import.view_account_setup_base_import_list
 msgid "Import"
-msgstr "Importer"
+msgstr "Importér"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -297,8 +298,7 @@ msgstr "Ingen data blev importeret."
 #. odoo-javascript
 #: code:addons/account_base_import/static/src/xml/account_import.xml:0
 msgid "Optional, but useful to import open receivables & payables using a"
-msgstr ""
-"Valgfri, men nyttig til at importere åben tilgodehavende og gæld med et"
+msgstr "Valgfri, men nyttig til at importere åben tilgodehavende og gæld med et"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -365,8 +365,8 @@ msgid ""
 "import. Only use the Journal Items import for unreconciled entries in your "
 "Payable and Receivable Accounts."
 msgstr ""
-"Tip: Vi anbefaler, at du importerer dine startbalancer via kontoplanen. Brug "
-"kun import af bogføringslinjer til ikke-afstemte poster i kreditor- og "
+"Tip: Vi anbefaler, at du importerer dine åbningsbalancer via kontoplanen. "
+"Brug kun import af bogføringslinjer til ikke-afstemte poster i kreditor- og "
 "debitorregnskabet."
 
 #. module: account_base_import
@@ -457,8 +457,8 @@ msgstr ""
 "er påkrævet for import af SIE 5- og SIE 5-indtastningsfiler.\n"
 "                                    For generel SIE 5-import oprettes "
 "kontoplanbalancer, journaler, partnere og historiske journalposteringer\n"
-"                                    (journaldata skal være til stede i "
-"filen).\n"
+"                                    (journaldata skal være til stede i filen)"
+".\n"
 "                                    For SIE 5-indtastning oprettes kun "
 "posteringer og partnere; resten af dataene skal allerede findes i systemet."
 

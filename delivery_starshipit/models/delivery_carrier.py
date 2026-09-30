@@ -73,12 +73,30 @@ class DeliveryCarrier(models.Model):
         """ Get the rates for the given order, according to the selected service code for this carrier.
         This method is used when getting the rate for a specific shipping.method.
         """
+        check_value = self._starshipit_check_required_value(
+            order.partner_shipping_id, order.warehouse_id.partner_id
+        )
+        if check_value:
+            return {
+                'success': False,
+                'price': 0.0,
+                'error_message': check_value,
+                'warning_message': False,
+            }
         starshipit = self._get_starshipit()
 
-        rates = starshipit._rate_shipment(
-            self._starshipit_get_package_information(order=order)[0],
-            order=order,
-        )
+        try:
+            rates = starshipit._rate_shipment(
+                self._starshipit_get_package_information(order=order)[0],
+                order=order,
+            )
+        except UserError as e:
+            return {
+                'success': False,
+                'price': 0.0,
+                'error_message': e.args[0],
+                'warning_message': False,
+            }
         rate = rates['success'] and rates['rates'].get(self.starshipit_service_code)
         if rate:
             return {
@@ -94,6 +112,35 @@ class DeliveryCarrier(models.Model):
                 'error_message': _('Error: this delivery method is not available for this order.'),
                 'warning_message': False,
             }
+
+    def _starshipit_check_required_value(self, recipient, shipper):
+        """ Check that the addresses hold the fields starshipit requires to rate a shipment.
+        Returns an error message if a field is missing, an empty string otherwise.
+        """
+        required_fields = ['city', 'zip', 'country_id', 'state_id']
+
+        res = [field for field in required_fields if not recipient[field]]
+        if res:
+            return _(
+                "The recipient address is incomplete or wrong (Missing field(s):  \n %s)",
+                ", ".join(res).replace("_id", ""),
+            )
+        if not recipient.street and not recipient.street2:
+            if recipient._context.get('express_checkout_partial_delivery_address', False):
+                return _('Error: this delivery method is not available for this order.')
+            return _(
+                "The recipient address is incomplete or wrong (Missing field(s):  \n %s)", "street"
+            )
+
+        res = [field for field in required_fields if not shipper[field]]
+        if not shipper.street and not shipper.street2:
+            res.append('street')
+        if res:
+            return _(
+                "The address of your company/warehouse is incomplete or wrong (Missing field(s):  \n %s)",
+                ", ".join(res).replace("_id", ""),
+            )
+        return ''
 
     def starshipit_send_shipping(self, pickings, is_return=False):
         """ For a given picking, this method will execute a few API calls in order to get the order to be sent to the carrier.

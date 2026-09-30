@@ -9,6 +9,20 @@ from math import copysign
 class AccountReconcileModelLine(models.Model):
     _inherit = 'account.reconcile.model.line'
 
+    def _get_aml_name(self):
+        """ Return the label to write on the journal item created from this reconcile model line.
+
+        'label' is a translatable field, so its value depends on the language of whoever applies
+        the model: a user working in another language, or the auto-reconciliation cron, which runs
+        as OdooBot. The same model then writes a different label depending on who applied it. The
+        journal item belongs to the company, so the company language is used to read the label.
+
+        :return: The label, in the language of the company.
+        """
+        self.ensure_one()
+        lang = self.company_id.partner_id.lang
+        return self.with_context(lang=lang).label if lang else self.label
+
     def _prepare_aml_vals(self, partner):
         """ Prepare a dictionary that will be used later to create a new journal item (account.move.line) for the
         given reconcile model line.
@@ -25,7 +39,7 @@ class AccountReconcileModelLine(models.Model):
                 taxes = fiscal_position.map_tax(taxes)
 
         values = {
-            'name': self.label,
+            'name': self._get_aml_name(),
             'partner_id': partner.id,
             'analytic_distribution': self.analytic_distribution,
             'tax_ids': [Command.set(taxes.ids)],

@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* pos_tyro
+# * pos_tyro
 #
 # Translators:
 # Petko Karamotchev, 2025
@@ -8,25 +8,27 @@
 # Martin Trigaux, 2025
 # Maria Boyadjieva <marabo2000@gmail.com>, 2025
 # Milena Georgieva, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2025-05-09 07:01+0000\n"
-"Last-Translator: Milena Georgieva, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-03 17:13+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"pos_tyro/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_always_print_merchant_receipt
 msgid "Always print merchant receipts"
-msgstr ""
+msgstr "Винаги печатай търговско копие на бележката"
 
 #. module: pos_tyro
 #: model:ir.model.fields,help:pos_tyro.field_pos_payment_method__tyro_always_print_merchant_receipt
@@ -34,12 +36,15 @@ msgid ""
 "By default, merchant copies are only printed when a signature is required. "
 "Enable this setting to always print the merchant copy."
 msgstr ""
+"По подразбиране търговските копия се отпечатват само когато се изисква "
+"подпис. Активирайте тази настройка, за да отпечатвате винаги търговското "
+"копие."
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/overrides/app/store/pos_store.js:0
 msgid "Cannot cancel order"
-msgstr ""
+msgstr "Поръчката не може да бъде отказана"
 
 #. module: pos_tyro
 #. odoo-javascript
@@ -52,7 +57,7 @@ msgstr "Затвори"
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/actions/get_tyro_report.xml:0
 msgid "Detailed"
-msgstr ""
+msgstr "Подробно"
 
 #. module: pos_tyro
 #: model:ir.model.fields,help:pos_tyro.field_pos_payment_method__tyro_integrated_receipts
@@ -60,16 +65,19 @@ msgid ""
 "If enabled, the Tyro receipt will be embedded in the Odoo receipt. Otherwise "
 "the terminal will print a separate payment receipt."
 msgstr ""
+"Ако е активирано, касовата бележка на Tyro ще бъде вградена в касовата "
+"бележка на Odoo. В противен случай терминалът ще отпечата отделна бележка за "
+"плащане."
 
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_integrated_receipts
 msgid "Integrated Receipts"
-msgstr ""
+msgstr "Вградени бележки"
 
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_integration_key
 msgid "Integration Key"
-msgstr ""
+msgstr "Интеграционен ключ"
 
 #. module: pos_tyro
 #: model_terms:ir.ui.view,arch_db:pos_tyro.pos_payment_method_view_form_inherit_pos_tyro
@@ -85,27 +93,27 @@ msgstr "OK"
 #. module: pos_tyro
 #: model_terms:ir.ui.view,arch_db:pos_tyro.pos_payment_method_view_form_inherit_pos_tyro
 msgid "Pair Terminal"
-msgstr ""
+msgstr "Сдвояване на терминал"
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/overrides/app/order_tabs/order_tabs.js:0
 #: code:addons/pos_tyro/static/src/overrides/app/store/pos_store.js:0
 msgid "Payment in progress"
-msgstr ""
+msgstr "Плащане в процес"
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/overrides/screens/payment_screen/payment_lines/payment_lines.xml:0
 msgid "Payments available to refund:"
-msgstr ""
+msgstr "Плащания, налични за връщане:"
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/overrides/app/order_tabs/order_tabs.js:0
 #: code:addons/pos_tyro/static/src/overrides/app/store/pos_store.js:0
 msgid "Please complete or cancel the payment before navigatating away."
-msgstr ""
+msgstr "Моля, завършете или откажете плащането, преди да продължите."
 
 #. module: pos_tyro
 #: model:ir.model,name:pos_tyro.model_pos_config
@@ -126,7 +134,7 @@ msgstr "Разпечатайте касова бележка"
 #. module: pos_tyro
 #: model:ir.model.fields.selection,name:pos_tyro.selection__pos_payment_method__tyro_mode__prod
 msgid "Production Mode"
-msgstr ""
+msgstr "Производствен режим"
 
 #. module: pos_tyro
 #: model_terms:ir.ui.view,arch_db:pos_tyro.pos_payment_method_view_form_inherit_pos_tyro
@@ -137,18 +145,18 @@ msgstr "Отчети"
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/actions/get_tyro_report.xml:0
 msgid "Select a report type..."
-msgstr ""
+msgstr "Изберете тип отчет..."
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/actions/get_tyro_report.xml:0
 msgid "Select date"
-msgstr ""
+msgstr "Изберете дата"
 
 #. module: pos_tyro
 #: model:ir.model.fields.selection,name:pos_tyro.selection__pos_payment_method__tyro_mode__simulator
 msgid "Simulator Mode"
-msgstr ""
+msgstr "Симулационен режим"
 
 #. module: pos_tyro
 #. odoo-javascript
@@ -159,7 +167,7 @@ msgstr "Обобщение"
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_surcharge_product_id
 msgid "Surcharge Product"
-msgstr ""
+msgstr "Продукт за доплащане"
 
 #. module: pos_tyro
 #: model:ir.model.fields.selection,name:pos_tyro.selection__pos_payment_method__tyro_mode__test
@@ -173,56 +181,58 @@ msgid ""
 "This order has one or more completed payments, please refund them before "
 "cancelling."
 msgstr ""
+"Тази поръчка има едно или повече завършени плащания, моля, върнете ги преди "
+"отказване."
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/app/components/question_dialog.xml:0
 msgid "Tyro"
-msgstr ""
+msgstr "Tyro"
 
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_merchant_id
 msgid "Tyro Merchant ID"
-msgstr ""
+msgstr "Tyro търговски номер (Merchant ID)"
 
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_mode
 msgid "Tyro Mode"
-msgstr ""
+msgstr "Режим на Tyro"
 
 #. module: pos_tyro
 #: model_terms:ir.ui.view,arch_db:pos_tyro.pos_payment_method_view_form_inherit_pos_tyro
 msgid "Tyro Settings"
-msgstr ""
+msgstr "Настройки на Tyro"
 
 #. module: pos_tyro
 #: model:product.template,name:pos_tyro.product_product_tyro_surcharge_product_template
 msgid "Tyro Surcharge"
-msgstr ""
+msgstr "Tyro доплащане"
 
 #. module: pos_tyro
 #: model:ir.model.fields,field_description:pos_tyro.field_pos_payment_method__tyro_terminal_id
 msgid "Tyro Terminal ID"
-msgstr ""
+msgstr "Tyro номер на терминал (Terminal ID)"
 
 #. module: pos_tyro
 #: model_terms:ir.ui.view,arch_db:pos_tyro.pos_payment_method_view_form_inherit_pos_tyro
 msgid "Tyro logs"
-msgstr ""
+msgstr "Tyro дневници"
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/app/components/failure_dialog.xml:0
 msgid "Tyro payment failed"
-msgstr ""
+msgstr "Плащането с Tyro е неуспешно"
 
 #. module: pos_tyro
 #: model_terms:ir.ui.view,arch_db:pos_tyro.pos_payment_method_view_form_inherit_pos_tyro
 msgid "View Reports"
-msgstr ""
+msgstr "Преглед на отчети"
 
 #. module: pos_tyro
 #. odoo-javascript
 #: code:addons/pos_tyro/static/src/overrides/screens/payment_screen/payment_lines/payment_lines.xml:0
 msgid "Waiting for card"
-msgstr ""
+msgstr "Изчакване на карта"

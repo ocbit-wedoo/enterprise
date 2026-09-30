@@ -723,7 +723,7 @@ class ResCompany(models.Model):
         ''' This method is used to update the currencies by using
         BNR service provider. Rates are given against RON
         '''
-        request_url = "https://www.bnr.ro/nbrfxrates.xml"
+        request_url = "https://curs.bnr.ro/nbrfxrates.xml"
         response = requests.get(request_url, timeout=30)
         response.raise_for_status()
 
@@ -886,6 +886,7 @@ class ResCompany(models.Model):
         - USD, AUD, DKK, EUR, GBP, CHF, SEK, CAD, KWD, NOK, SAR,
         - JPY, BGN, RON, RUB, IRR, CNY, PKR, QAR, KRW, AZN, AED
         """
+        # For TCMB, the selling rate is used instead of the average of buying and selling rates.
         server_url = 'https://www.tcmb.gov.tr/kurlar/today.xml'
         available_currency_names = set(available_currencies.mapped('name'))
 
@@ -900,7 +901,7 @@ class ResCompany(models.Model):
         root = etree.fromstring(res.text.encode())
         rate_date = fields.Date.to_string(datetime.datetime.strptime(root.attrib['Date'], '%m/%d/%Y'))
         rslt = {
-            currency.attrib['Kod']: (2 / (float(currency.find('ForexBuying').text) + float(currency.find('ForexSelling').text)), rate_date)
+            currency.attrib['Kod']: (1 / float(currency.find('ForexSelling').text), rate_date)
             for currency in root
             if currency.attrib['Kod'] in available_currency_names
         }

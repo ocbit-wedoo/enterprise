@@ -60,7 +60,8 @@ class CrmLeadConvert2Ticket(models.TransientModel):
 
         # create and add a specific creation message
         ticket_sudo = self.env['helpdesk.ticket'].with_context(
-            mail_create_nosubscribe=True, mail_create_nolog=True
+            mail_create_nosubscribe=True, mail_create_nolog=True,
+            helpdesk_partner_sync=False,
         ).sudo().create(vals)
         ticket_sudo.message_post_with_source(
             'mail.message_origin_link',

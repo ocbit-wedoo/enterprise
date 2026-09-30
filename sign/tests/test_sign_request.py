@@ -407,6 +407,8 @@ class TestSignRequest(SignRequestCommon):
                 'mail_sent_order': 2,
             })],
         })
+        self.partner_4.user_ids.notification_type = 'inbox'
+        sign_request_3_roles.message_subscribe(partner_ids=[self.partner_4.id])
         role2sign_request_item = dict([(sign_request_item.role_id, sign_request_item) for sign_request_item in sign_request_3_roles.request_item_ids])
         sign_request_item_customer = role2sign_request_item[self.role_customer]
         sign_request_item_employee = role2sign_request_item[self.role_employee]
@@ -429,6 +431,8 @@ class TestSignRequest(SignRequestCommon):
         sign_request_item_employee._edit_and_sign(self.employee_sign_values)
         sign_request_item_company._edit_and_sign(self.company_sign_values)
         self.assertEqual(sign_request_3_roles.state, 'signed', 'The sign request should be signed')
+        notification = self.env['mail.message'].search([('partner_ids', '=', self.partner_4.id)])
+        self.assertEqual(notification.subject, 'template_3_roles has been signed')
 
     def test_sign_request_mail_reply_to_exists(self):
         sign_request = self.create_sign_request_1_role(self.partner_1, self.env['res.partner'])

@@ -5,13 +5,13 @@
 # Translators:
 # Wil Odoo, 2024
 # Jaisal Shah <jaisal13shah@gmail.com>, 2025
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2025-12-17 18:08+0000\n"
+"PO-Revision-Date: 2026-06-20 09:16+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
 "sale_project_forecast/hi/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_project_forecast
 #: model:ir.model.fields,help:sale_project_forecast.field_product_product__planning_enabled
@@ -34,12 +34,18 @@ msgid ""
 "planned.                 You can also manually schedule open shifts for your "
 "Sales Order or assign them to any employee you prefer."
 msgstr ""
+"अगर चालू किया गया है, तो सेल्स ऑर्डर की पुष्टि करते समय चुनी गई भूमिका के लिए एक शिफ्ट "
+"अपने आप जेनरेट हो जाएगी.                 'ऑटो प्लान' फ़ीचर के साथ, सिर्फ़ इस भूमिका "
+"वाले कर्मचारियों को ही इस सर्विस वाले सेल्स ऑर्डर्स के लिए ऑटोमैटिक रूप से शिफ्ट असाइन की "
+"जाएंगी.                 सिस्टम कर्मचारी की उपलब्धता और प्लान किए जाने वाले बाकी समय "
+"का ध्यान रखेगा.                 आप अपने सेल्स ऑर्डर के लिए ओपन शिफ्ट को मैन्युअल रूप से "
+"भी शेड्यूल कर सकते हैं या उन्हें अपनी पसंद के किसी भी कर्मचारी को सौंप सकते हैं।"
 
 #. module: sale_project_forecast
 #: model:ir.model.fields,field_description:sale_project_forecast.field_product_product__planning_enabled
 #: model:ir.model.fields,field_description:sale_project_forecast.field_product_template__planning_enabled
 msgid "Plan Services"
-msgstr ""
+msgstr "प्लान सर्विस"
 
 #. module: sale_project_forecast
 #: model:ir.model,name:sale_project_forecast.model_planning_slot
@@ -68,3 +74,5 @@ msgid ""
 "are automatically planned, the remaining hours of the sales order item, as "
 "well as the role defined on the service, are taken into account."
 msgstr ""
+"सेल्स ऑर्डर आइटम जिसके लिए यह शिफ्ट की जाएगी. जब सेल्स ऑर्डर ऑटोमैटिक रूप से प्लान होते "
+"हैं, तो सेल्स ऑर्डर आइटम के बचे हुए घंटे और सर्विस पर तय रोल को ध्यान में रखा जाता है।"

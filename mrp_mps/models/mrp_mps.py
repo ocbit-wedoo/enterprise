@@ -700,7 +700,7 @@ class MrpProductionSchedule(models.Model):
                     break
                 forecast.write({'forecast_qty': 0})
             if quantity_to_add < 0:
-                new_qty = float_round(new_qty, precision_rounding=self.product_uom_id.rounding)
+                new_qty = float_round(quantity_to_add, precision_rounding=self.product_uom_id.rounding)
                 first_forecast.write({'forecast_qty': new_qty})
         return True
 

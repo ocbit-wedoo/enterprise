@@ -684,6 +684,7 @@ class TestDocumentsAccess(TransactionCaseDocuments):
         self.assertFalse(self.folder_a.active)
         with self.assertRaises(UserError):
             self.folder_a.with_user(self.portal_user).action_unarchive()
+        self.folder_a.with_user(self.portal_user).sudo().action_unarchive()
 
     @mute_logger('odoo.addons.base.models.ir_rule')
     def test_archiving_with_children(self):

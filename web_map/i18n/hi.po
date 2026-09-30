@@ -13,16 +13,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-02-27 05:19+0000\n"
+"PO-Revision-Date: 2026-08-24 17:48+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
-"Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/web_map/hi/"
-">\n"
+"Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/web_map/"
+"hi/>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: web_map
 #. odoo-javascript
@@ -32,6 +32,9 @@ msgid ""
 "                .st1{fill:currentColor;stroke:#1A1919;stroke-width:3;stroke-"
 "miterlimit:10;}"
 msgstr ""
+".st0{opacity:0.3;enable-background:new;}\n"
+"                .st1{fill:currentColor;stroke:#1A1919;stroke-width:3;stroke-"
+"miterlimit:10;}"
 
 #. module: web_map
 #: model_terms:ir.ui.view,arch_db:web_map.res_config_settings_view_form
@@ -77,7 +80,7 @@ msgstr "संपर्क"
 #: model:ir.model.fields,field_description:web_map.field_res_partner__contact_address_complete
 #: model:ir.model.fields,field_description:web_map.field_res_users__contact_address_complete
 msgid "Contact Address Complete"
-msgstr ""
+msgstr "संपर्क पता पूरा हुआ"
 
 #. module: web_map
 #: model:ir.model,name:web_map.model_ir_http
@@ -94,7 +97,7 @@ msgstr "आइटम "
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_renderer.xml:0
 msgid "Locating new addresses..."
-msgstr ""
+msgstr "नए पते लोकेट किए जा रहे हैं..।"
 
 #. module: web_map
 #: model:ir.model.fields.selection,name:web_map.selection__ir_actions_act_window_view__view_mode__map
@@ -105,13 +108,13 @@ msgstr "मैप"
 #. module: web_map
 #: model_terms:ir.ui.view,arch_db:web_map.res_config_settings_view_form
 msgid "Map Routes"
-msgstr ""
+msgstr "मैप रूट"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "MapBox servers unreachable"
-msgstr ""
+msgstr "MapBox सर्वर तक नहीं पहुंचा जा सका"
 
 #. module: web_map
 #. odoo-javascript
@@ -123,12 +126,12 @@ msgstr "नाम"
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_renderer.xml:0
 msgid "Navigate to"
-msgstr ""
+msgstr "पर नेविगेट करें"
 
 #. module: web_map
 #: model:ir.model.fields,help:web_map.field_res_config_settings__map_box_token
 msgid "Necessary for some functionalities in the map view"
-msgstr ""
+msgstr "मैप में कुछ फ़ीचर्स का इस्तेमाल करने के लिए यह ज़रूरी है"
 
 #. module: web_map
 #. odoo-javascript
@@ -153,35 +156,36 @@ msgstr "ओपेन"
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "OpenStreetMap's request limit exceeded, try again later."
 msgstr ""
+"OpenStreetMap की रिक्वेस्ट लिमिट समाप्त हो गई है, बाद में फिर प्रयास करें।"
 
 #. module: web_map
 #: model_terms:ir.ui.view,arch_db:web_map.res_config_settings_view_form
 msgid "Set a MapBox account to activate routes and style"
-msgstr ""
+msgstr "रूट्स और स्टाइल को ऐक्टिवेट करने के लिए MapBox अकाउंट सेट करें"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_renderer.xml:0
 msgid "Set up token"
-msgstr ""
+msgstr "टोकन सेट अप करें"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "Some routing points are too far apart"
-msgstr ""
+msgstr "कुछ रूटिंग पॉइंट एक-दूसरे से बहुत दूर हैं"
 
 #. module: web_map
 #. odoo-python
 #: code:addons/web_map/models/res_config_settings.py:0
 msgid "The MapBox server is unreachable"
-msgstr ""
+msgstr "MapBox सर्वर से संपर्क नहीं हो पा रहा है"
 
 #. module: web_map
 #. odoo-python
 #: code:addons/web_map/models/res_config_settings.py:0
 msgid "The token input is not valid"
-msgstr ""
+msgstr "टोकन इनपुट मान्य नहीं है"
 
 #. module: web_map
 #. odoo-javascript
@@ -189,12 +193,13 @@ msgstr ""
 msgid ""
 "The view has switched to another provider but functionalities will be limited"
 msgstr ""
+"व्यू किसी अन्य प्रोवाइडर पर स्विच हो गया है, लेकिन फ़ंक्शनैलिटीज़ सीमित रहेंगी"
 
 #. module: web_map
 #. odoo-python
 #: code:addons/web_map/models/res_config_settings.py:0
 msgid "This referer is not authorized"
-msgstr ""
+msgstr "इस रेफ़रर को अनुमति नहीं मिली है"
 
 #. module: web_map
 #. odoo-javascript
@@ -203,6 +208,7 @@ msgid ""
 "To get routing on your map, you first need to set up your MapBox token. It's "
 "free."
 msgstr ""
+"अपने मैप पर रूटिंग पाने के लिए, आपको पहले अपना MapBox टोकन सेट करना होगा. यह मुफ़्त है।"
 
 #. module: web_map
 #: model_terms:ir.ui.view,arch_db:web_map.res_config_settings_view_form
@@ -212,31 +218,31 @@ msgstr "टोकन"
 #. module: web_map
 #: model:ir.model.fields,field_description:web_map.field_res_config_settings__map_box_token
 msgid "Token Map Box"
-msgstr ""
+msgstr "टोकन मैप बॉक्स"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "Token invalid"
-msgstr ""
+msgstr "टोकन अमान्य है"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "Too many requests, try again in a few minutes"
-msgstr ""
+msgstr "बहुत ज़्यादा बार कोशिश की गई है, कुछ मिनटों बाद फिर प्रयास करें"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "Too many routing points (maximum 25)"
-msgstr ""
+msgstr "बहुत ज़्यादा रूटिंग पॉइंट (अधिकतम 25)"
 
 #. module: web_map
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_model.js:0
 msgid "Unauthorized connection"
-msgstr ""
+msgstr "ऐसा कनेक्शन जिसको अनुमति नहीं है"
 
 #. module: web_map
 #. odoo-javascript
@@ -248,7 +254,7 @@ msgstr "अभी तक तय नहीं"
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_renderer.xml:0
 msgid "Unsuccessful routing request:"
-msgstr ""
+msgstr "असफल रूटिंग अनुरोध:"
 
 #. module: web_map
 #. odoo-javascript
@@ -271,7 +277,7 @@ msgstr "टाइप देखें"
 #. odoo-javascript
 #: code:addons/web_map/static/src/map_view/map_renderer.xml:0
 msgid "View in Google Maps"
-msgstr ""
+msgstr "Google Maps में देखें"
 
 #. module: web_map
 #. odoo-javascript
@@ -284,3 +290,4 @@ msgstr "हाँ"
 #: code:addons/web_map/models/models.py:0
 msgid "You need to set a Contact field on this model to use the Map View"
 msgstr ""
+"मैप व्यू का उपयोग करने के लिए आपको इस मॉडल पर एक कॉन्टैक्ट फ़ील्ड सेट करना होगा"

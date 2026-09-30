@@ -7,13 +7,14 @@
 # Wil Odoo, 2025
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Marta (wacm)" <wacm@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-13 16:53+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-04 10:18+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "documents_project/pl/>\n"
 "Language: pl\n"
@@ -23,27 +24,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_tag_add_draft
 msgid "Add Tag Draft"
-msgstr ""
+msgstr "Dodaj tag Wersja robocza"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_tag_add_to_validate
 msgid "Add Tag To Validate"
-msgstr ""
+msgstr "Dodaj tag, aby zatwierdzić"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_tag_add_validated
 msgid "Add Tag Validated"
-msgstr "Dodaj znacznik Zatwierdzony"
+msgstr "Dodaj tag Zatwierdzono"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_ask_for_validation_code
 msgid "Ask For Validation - Check conditions"
-msgstr ""
+msgstr "Poproś o zatwierdzenie - Sprawdź warunki"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_ask_for_validation
@@ -69,7 +70,7 @@ msgstr "Utwórz zadanie"
 #. module: documents_project
 #: model:ir.model.fields,field_description:documents_project.field_project_project__documents_tag_ids
 msgid "Default Tags"
-msgstr "Domyślne znaczniki"
+msgstr "Domyślne tagi"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_create_project_deprecate
@@ -81,7 +82,7 @@ msgstr "przestarzały"
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_deprecate_code
 msgid "Deprecate - Check conditions"
-msgstr ""
+msgstr "Odrzuć - Sprawdź warunki"
 
 #. module: documents_project
 #: model:ir.model,name:documents_project.model_documents_document
@@ -115,7 +116,7 @@ msgstr "Dokumenty i analityka"
 #. odoo-python
 #: code:addons/documents_project/models/documents_document.py:0
 msgid "Documents already linked to a task."
-msgstr ""
+msgstr "Dokumenty już powiązane z zadaniem."
 
 #. module: documents_project
 #: model:ir.model.fields,field_description:documents_project.field_project_project__documents_folder_id
@@ -130,12 +131,15 @@ msgid ""
 "All of the attachments of your tasks will be automatically added as "
 "documents in this workspace as well."
 msgstr ""
+"Folder, w którym będą kategoryzowane wszystkie dokumenty tego projektu. "
+"Wszystkie załączniki do Twoich zadań zostaną również automatycznie dodane "
+"jako dokumenty w tym obszarze roboczym."
 
 #. module: documents_project
 #. odoo-python
 #: code:addons/documents_project/models/documents_document.py:0
 msgid "Impossible to create a task on a deprecated document"
-msgstr ""
+msgstr "Nie można utworzyć zadania na podstawie przestarzałego dokumentu"
 
 #. module: documents_project
 #. odoo-python
@@ -144,6 +148,9 @@ msgid ""
 "Impossible to update write `res_id` without `access_internal` for records "
 "with different `res_models` when some are linked to projects or tasks."
 msgstr ""
+"Nie można zaktualizować `res_id` bez `access_internal` dla rekordów o "
+"różnych `res_models`, gdy niektóre z nich są powiązane z projektami lub "
+"zadaniami."
 
 #. module: documents_project
 #. odoo-python
@@ -160,7 +167,7 @@ msgstr "Nieprawidłowe zadanie wyszukiwania"
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_mark_as_draft_code
 msgid "Mark As Draft - Check conditions"
-msgstr ""
+msgstr "Zaznacz jako wersję roboczą - Sprawdź warunki"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_mark_as_draft
@@ -187,7 +194,7 @@ msgstr "Projekty"
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_tag_remove_draft
 msgid "Remove Tag Draft"
-msgstr ""
+msgstr "Usuń tag Wersja robocza"
 
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_tag_remove_to_validate
@@ -197,7 +204,7 @@ msgstr "Usuń tag Do zatwierdzenia"
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_tag_remove_validated
 msgid "Remove Tag Validated"
-msgstr ""
+msgstr "Usuń tag Zatwierdzono"
 
 #. module: documents_project
 #: model:ir.model,name:documents_project.model_documents_tag
@@ -282,6 +289,9 @@ msgid ""
 "to which it is linked. Please update the company of the \"%(project)s\" "
 "project, or leave the company of this workspace empty."
 msgstr ""
+"Ten folder powinien pozostać w tej samej firmie, co projekt „%(project)s ”, "
+"z którym jest powiązany. Zaktualizuj firmę projektu „%(project)s ” lub "
+"pozostaw pole firmy w tym obszarze roboczym puste."
 
 #. module: documents_project
 #. odoo-python
@@ -294,6 +304,12 @@ msgid ""
 "Please update the company of those projects, or leave the company of this "
 "workspace empty."
 msgstr ""
+"Ten folder powinien pozostać w tej samej firmie, co poniższe projekty, z "
+"którymi jest powiązany:\n"
+"%s\n"
+"\n"
+"Zaktualizuj firmę tych projektów lub pozostaw pole firmy w tym obszarze "
+"roboczym puste."
 
 #. module: documents_project
 #: model_terms:ir.actions.act_window,help:documents_project.action_view_documents_project_project
@@ -318,7 +334,7 @@ msgstr "Zatwierdź"
 #. module: documents_project
 #: model:ir.actions.server,name:documents_project.ir_actions_server_validate_code
 msgid "Validate - Check conditions"
-msgstr ""
+msgstr "Zatwierdź - Sprawdź warunki"
 
 #. module: documents_project
 #. odoo-python
@@ -346,7 +362,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/documents_project/models/documents_document.py:0
 msgid "You cannot create a task from a folder."
-msgstr ""
+msgstr "Nie można utworzyć zadania z poziomu folderu."
 
 #. module: documents_project
 #. odoo-python

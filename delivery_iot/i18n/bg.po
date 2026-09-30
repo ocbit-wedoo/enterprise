@@ -5,13 +5,13 @@
 # Translators:
 # Albena Mincheva <albena_vicheva@abv.bg>, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2025-11-17 16:31+0000\n"
+"PO-Revision-Date: 2026-08-18 16:09+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "delivery_iot/bg/>\n"
@@ -20,28 +20,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_iot
 #: model:ir.actions.report,print_report_name:delivery_iot.action_report_shipping_docs
 #: model:ir.actions.report,print_report_name:delivery_iot.action_report_shipping_labels
 msgid "'Empty Report - Used for assigning IoT printer'"
-msgstr ""
+msgstr "'Empty Report - Used for assigning IoT printer'"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__auto_print_carrier_labels
 msgid "Auto Print Carrier Labels"
-msgstr ""
+msgstr "Автоматичен печат на етикети на превозвача"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__auto_print_export_documents
 msgid "Auto Print Export Documents"
-msgstr ""
+msgstr "Автоматичен печат на експортни документи"
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Carrier Labels"
-msgstr ""
+msgstr "Етикети на превозвача"
 
 #. module: delivery_iot
 #: model:ir.model.fields,help:delivery_iot.field_choose_delivery_package__available_scale_ids
@@ -50,11 +50,13 @@ msgid ""
 "Choose the scales you want to use for this operation type. Those scales can "
 "be used to weigh the packages created."
 msgstr ""
+"Изберете везните, които искате да използвате за този тип операция. Тези "
+"везни могат да се използват за претегляне на създадените опаковки."
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Connect Scale"
-msgstr ""
+msgstr "Свържи везна"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_choose_delivery_package
@@ -64,22 +66,22 @@ msgstr "Помощник за избор на пакет за доставка"
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_choose_delivery_package__iot_ip
 msgid "Domain Address"
-msgstr ""
+msgstr "Адрес на домейн"
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Export Documents"
-msgstr ""
+msgstr "Експортни документи"
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "How to connect scales?"
-msgstr ""
+msgstr "Как да свържа везни?"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_iot_device
 msgid "IOT Device"
-msgstr ""
+msgstr "IoT устройство"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_choose_delivery_package__iot_device_identifier
@@ -93,6 +95,9 @@ msgid ""
 "of the picking when they are created. Note this requires a printer to be "
 "assigned to this report."
 msgstr ""
+"Ако това поле е отметнато, Odoo автоматично ще печата етикетите на "
+"превозвача за складовата операция при тяхното създаване. Имайте предвид, че "
+"това изисква принтер, зачислен към тази справка."
 
 #. module: delivery_iot
 #: model:ir.model.fields,help:delivery_iot.field_stock_picking_type__auto_print_export_documents
@@ -102,6 +107,10 @@ msgid ""
 "documents depends on the carrier and the destination. Note this requires a "
 "printer to be assigned to this report. "
 msgstr ""
+"Ако това поле е отметнато, Odoo автоматично ще печата експортните документи "
+"за складовата операция при тяхното създаване. Наличието на експортни "
+"документи зависи от превозвача и местоназначението. Имайте предвид, че това "
+"изисква принтер, зачислен към тази справка. "
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
@@ -112,21 +121,26 @@ msgid ""
 "                            you do a \"Put in Pack\" operation.\n"
 "                            <br/>"
 msgstr ""
+"Ако свържете везните си през приложението IoT,\n"
+"                            теглото на опаковката ще се зададе автоматично, "
+"когато\n"
+"                            извършите операция „Поставяне в опаковка“.\n"
+"                            <br/>"
 
 #. module: delivery_iot
 #: model_terms:ir.ui.view,arch_db:delivery_iot.iot_device_view_form_inherit
 msgid "Linked Operation Types"
-msgstr ""
+msgstr "Свързани типове операции"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_choose_delivery_package__manual_measurement
 msgid "Manual Measurement"
-msgstr ""
+msgstr "Ръчно измерване"
 
 #. module: delivery_iot
 #: model:ir.model.fields,help:delivery_iot.field_choose_delivery_package__manual_measurement
 msgid "Manually read the measurement from the device"
-msgstr ""
+msgstr "Ръчно отчитане на измерването от устройството"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_iot_device__picking_type_ids
@@ -142,7 +156,7 @@ msgstr "Вид пикинг"
 #. odoo-javascript
 #: code:addons/delivery_iot/static/src/field_many2one_iot_scale.xml:0
 msgid "Read weight"
-msgstr ""
+msgstr "Прочети теглото"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_ir_actions_report
@@ -157,7 +171,7 @@ msgstr "Отчитане"
 #. module: delivery_iot
 #: model:ir.ui.menu,name:delivery_iot.iot_cached_printers_action
 msgid "Reset Linked Printers"
-msgstr ""
+msgstr "Нулиране на свързаните принтери"
 
 #. module: delivery_iot
 #: model:ir.model.fields,field_description:delivery_iot.field_choose_delivery_package__iot_device_id
@@ -169,17 +183,17 @@ msgstr "Везна"
 #: model:ir.model.fields,field_description:delivery_iot.field_stock_picking_type__iot_scale_ids
 #: model_terms:ir.ui.view,arch_db:delivery_iot.view_picking_type_form_inherit
 msgid "Scales"
-msgstr ""
+msgstr "Везни"
 
 #. module: delivery_iot
 #: model:ir.actions.report,name:delivery_iot.action_report_shipping_docs
 msgid "Shipping Documents"
-msgstr ""
+msgstr "Документи за доставка"
 
 #. module: delivery_iot
 #: model:ir.actions.report,name:delivery_iot.action_report_shipping_labels
 msgid "Shipping Labels"
-msgstr ""
+msgstr "Транспортни етикети"
 
 #. module: delivery_iot
 #: model:ir.model,name:delivery_iot.model_stock_picking

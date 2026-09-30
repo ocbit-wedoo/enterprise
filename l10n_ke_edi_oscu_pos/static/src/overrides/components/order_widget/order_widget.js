@@ -26,6 +26,7 @@ patch(OrderWidget.prototype, {
             lines.filter(
                 (line) =>
                     line.order_id?.config_id.is_kenyan &&
+                    !line.product_id?.isCombo() &&
                     (!line.product_id?.checkEtimsFields() || line.tax_ids?.length === 0)
             ).length > 0
         );

@@ -1,24 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_base_import
+# * account_base_import
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:43+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-27 17:24+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"account_base_import/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
@@ -44,7 +47,7 @@ msgstr "ماژول وارد کردن حساب Winbook "
 #. module: account_base_import
 #: model:ir.model,name:account_base_import.model_account_import_summary
 msgid "Account import summary view"
-msgstr ""
+msgstr "نمای خلاصه ایمپورت حسابداری"
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
@@ -173,37 +176,37 @@ msgstr "وارد کردن همکاران"
 #. odoo-python
 #: code:addons/account_base_import/wizard/account_import_summary.py:0
 msgid "Import Summary"
-msgstr ""
+msgstr "خلاصه ایمپورت"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_account_ids
 msgid "Import Summary Account"
-msgstr ""
+msgstr "خلاصه ایمپورت حساب"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_journal_ids
 msgid "Import Summary Journal"
-msgstr ""
+msgstr "خلاصه ایمپورت دفتر روزنامه"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_move_ids
 msgid "Import Summary Move"
-msgstr ""
+msgstr "خلاصه ایمپورت انتقال"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_name
 msgid "Import Summary Name"
-msgstr ""
+msgstr "خلاصه ایمپورت نام"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_partner_ids
 msgid "Import Summary Partner"
-msgstr ""
+msgstr "خلاصه ایمپورت طرف همکار"
 
 #. module: account_base_import
 #: model:ir.model.fields,field_description:account_base_import.field_account_import_summary__import_summary_tax_ids
 msgid "Import Summary Tax"
-msgstr ""
+msgstr "خلاصه ایمپورت مالیات"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -227,7 +230,7 @@ msgstr "وارد کردن جدول حساب‌ها و ترازهای اولیه 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "Imported Data"
-msgstr ""
+msgstr "داده ایمپورت شده"
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.res_config_settings_import_view_form
@@ -286,7 +289,7 @@ msgstr ""
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "No data was imported."
-msgstr ""
+msgstr "داده‌ای ایمپورت نشد."
 
 #. module: account_base_import
 #. odoo-javascript
@@ -319,7 +322,7 @@ msgstr "ماژول وارد کردن SAF-T"
 #. odoo-javascript
 #: code:addons/account_base_import/static/src/xml/account_import.xml:0
 msgid "SIE 4 Import module"
-msgstr ""
+msgstr "ماژول ایمپورت SIE 4"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -331,7 +334,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/account_base_import/static/src/xml/account_import.xml:0
 msgid "SIE 5 Import module"
-msgstr ""
+msgstr "ماژول ایمپورت SIE 5"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -342,6 +345,9 @@ msgid ""
 "                            from and to other accounting applications. Odoo "
 "support importing data from both type 4 and 5 of SIE."
 msgstr ""
+"فرمت فایل استاندارد SIE در سوئد برای چند منظور مانند حسابرسی، ایمپورت و "
+"اکسپورت داده‌ها از و به سایر برنامه‌های حسابداری بسیار رایج است. اودو از "
+"ایمپورت داده‌ها از هر دو نوع ۴ و ۵ SIE پشتیبانی می‌کند."
 
 #. module: account_base_import
 #. odoo-python
@@ -409,11 +415,13 @@ msgid ""
 "You must provide both the `code_mapping_ids/company_id` and the "
 "`code_mapping_ids/code` columns."
 msgstr ""
+"باید هر دو ستون code_mapping_ids/company_id و code_mapping_ids/code را ارائه "
+"کنید."
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "accounts imported"
-msgstr ""
+msgstr "حساب ایمپورت شدند"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -425,6 +433,10 @@ msgid ""
 "                                    This import will not validate the "
 "correctness of the file."
 msgstr ""
+"برای ایمپورت فایل‌های SIE 4 الزامی است.  \n"
+"به‌طور طراحی، این قابلیت با نسخه‌های قبلی SIE (از نسخه ۱ تا ۳) نیز سازگاری "
+"دارد.  \n"
+"این ایمپورت، صحت فایل را تأیید نخواهد کرد."
 
 #. module: account_base_import
 #. odoo-javascript
@@ -439,16 +451,22 @@ msgid ""
 "                                    For the SIE 5 entry, only entries and "
 "partners will be created, the rest must already be present in the system."
 msgstr ""
+"برای ایمپورت فایل‌های SIE 5 و SIE 5 entry، الزامی است.\n"
+"برای SIE 5 عمومی، جدول حساب‌ها، ترازها، دفاتر روزنامه، طرف‌های همکار و تاریخچه "
+"اسناد حسابداری (داده‌های دفتر روزنامه باید در فایل موجود باشد) را تنظیم "
+"خواهیم کرد.\n"
+"برای ثبت SIE 5، فقط ثبت‌ها و طرف‌های همکار ایجاد خواهند شد و بقیه موارد باید "
+"از قبل در سیستم موجود باشند."
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "journals imported"
-msgstr ""
+msgstr "دفتر روزنامه ایمپورت شدند"
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "moves imported"
-msgstr ""
+msgstr "انتقال ایمپورت شدند"
 
 #. module: account_base_import
 #. odoo-javascript
@@ -459,12 +477,12 @@ msgstr "یا"
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "partners imported"
-msgstr ""
+msgstr "طرف همکار ایمپورت شدند"
 
 #. module: account_base_import
 #: model_terms:ir.ui.view,arch_db:account_base_import.account_import_summary_form
 msgid "taxes imported"
-msgstr ""
+msgstr "مالیات ایمپورت شدند"
 
 #. module: account_base_import
 #. odoo-javascript

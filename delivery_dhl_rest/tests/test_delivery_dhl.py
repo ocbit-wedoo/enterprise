@@ -362,7 +362,7 @@ class TestDeliveryDHL(TestDeliveryDHLCommon):
 
 
 @contextmanager
-def _mock_request_call():
+def _mock_request_call(specific_dhl_check=None):
     RATE_MOCK_RESPONSE = {
         "products": [
             {
@@ -811,6 +811,8 @@ def _mock_request_call():
 
         for endpoint, content in responses.items():
             if endpoint in url:
+                if specific_dhl_check:
+                    specific_dhl_check(endpoint, kwargs['json'])
                 response = requests.Response()
                 response._content = json.dumps(content).encode()
                 response.status_code = 200
@@ -883,3 +885,26 @@ class TestMockedDeliveryDHL(TestDeliveryDHLCommon):
         weight_needs_rounding = 1.23456789
         rounded_weight_precise = self.delivery_carrier_dhl_eu_intl._dhl_convert_weight(weight_needs_rounding)
         self.assertEqual(rounded_weight_precise, 1.235)
+
+    def test_dhl_basic_international_flow_multi_company(self):
+        def commercial_invoice_data_check(endpoint, payload):
+            if endpoint == 'shipments':
+                invoice_number_string = payload['content']['exportDeclaration']['invoice']['number']
+                self.assertIsInstance(invoice_number_string, str)
+                invoice_number_int = int(''.join(filter(str.isnumeric, invoice_number_string)))
+                sequence = self.env['ir.sequence'].search([('code', '=', 'delivery_dhl_rest.commercial_invoice')])
+                self.assertEqual(invoice_number_int + sequence.number_increment, sequence.number_next_actual)
+
+        self.env.company = self.env['res.company'].create({
+            'name': 'Fish n Chips Co',
+            'street': 'Downing street 10',
+            'street2': '',
+            'city': 'London',
+            'zip': 'SW1A 2AA',
+            'state_id': False,
+            'country_id': self.env.ref('base.uk').id,
+            'phone': '+1 555-555-5555',
+        })
+
+        with _mock_request_call(commercial_invoice_data_check):
+            super().dhl_basic_international_flow()

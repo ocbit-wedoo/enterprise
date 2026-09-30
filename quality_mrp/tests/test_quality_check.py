@@ -459,3 +459,34 @@ class TestQualityCheck(TestQualityMrpCommon):
         # Check that the move is not switched to 'make_to_stock'
         self.assertEqual(mo_2.finished_move_line_ids.location_dest_id.ids, qcp.failure_location_ids.ids)
         self.assertEqual(picking_2.move_ids.procure_method, 'make_to_order')
+
+    def test_merge_mo_unlinks_cancelled_mo_quality_checks(self):
+        """Test quality checks of the source MOs unlinks after a merge."""
+        quality_point = self.env['quality.point'].create({
+            'product_ids': [Command.link(self.product.id)],
+            'picking_type_ids': [Command.link(self.picking_type_id)],
+        })
+        productions = self.env['mrp.production'].create([{
+            'product_id': self.product.id,
+            'bom_id': self.bom.id,
+            'product_qty': 1,
+            'product_uom_id': self.product.uom_id.id,
+            'picking_type_id': self.picking_type_id,
+        }, {
+            'product_id': self.product.id,
+            'bom_id': self.bom.id,
+            'product_qty': 2,
+            'product_uom_id': self.product.uom_id.id,
+            'picking_type_id': self.picking_type_id,
+        }])
+        productions.action_confirm()
+        source_checks = productions.check_ids
+        self.assertEqual(len(source_checks), 2)
+
+        action = productions.action_merge()
+        merged_production = self.env['mrp.production'].browse(action['res_id'])
+
+        self.assertEqual(productions.mapped('state'), ['cancel', 'cancel'])
+        self.assertFalse(source_checks.exists())
+        self.assertEqual(merged_production.product_qty, 3)
+        self.assertEqual(merged_production.check_ids.point_id, quality_point)

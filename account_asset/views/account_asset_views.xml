@@ -344,7 +344,7 @@
         <field name="name">account.asset.list</field>
         <field name="model">account.asset</field>
         <field name="arch" type="xml">
-            <list string="Assets" decoration-info="(state == 'draft')" decoration-muted="(state in ['close', 'cancelled'])" decoration-warning="(state == 'close' and value_residual != 0)" sample="1">
+            <list string="Assets" decoration-info="(state == 'draft')" decoration-muted="(state in ['close', 'cancelled'])" decoration-warning="(state == 'close' and value_residual != 0)" sample="1" edit="true" multi_edit="1">
                 <field name="name"/>
                 <field name="parent_id" optional="hide"/>
                 <field name="acquisition_date" readonly="state != 'draft'"/>
@@ -352,7 +352,7 @@
                 <field name="method" readonly="state not in ['draft', 'model']"/>
                 <field name="book_value"/>
                 <field name="value_residual" widget="monetary"/>
-                <field name="account_asset_id" optional="hide" readonly="state == 'close'"/>
+                <field name="account_asset_id" optional="show" readonly="state == 'close'"/>
                 <field name="account_depreciation_id" optional="hide" readonly="state == 'close'"/>
                 <field name="account_depreciation_expense_id" optional="hide" readonly="state == 'close'"/>
                 <field name="currency_id" groups="base.group_multi_currency" optional="hide"/>

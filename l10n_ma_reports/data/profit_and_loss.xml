@@ -19,7 +19,7 @@
             </record>
             <record id="account_financial_report_pl_column_cur_tot" model="account.report.column">
                 <field name="name">Totals</field>
-                <field name="expression_label">cur_tot</field>
+                <field name="expression_label">balance</field>
             </record>
         </field>
         <field name="line_ids">
@@ -49,7 +49,7 @@
                                 <field name="formula">-7118</field>
                             </record>
                             <record id="account_financial_report_pl_i_sg_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-711</field>
                             </record>
@@ -72,7 +72,7 @@
                                 <field name="formula">-7128</field>
                             </record>
                             <record id="account_financial_report_pl_i_sgsp_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-712</field>
                             </record>
@@ -94,9 +94,9 @@
                                 <field name="formula">MA_PL_I_SG.prev_op + MA_PL_I_SGSP.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_i_sr_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_I_SG.cur_tot + MA_PL_I_SGSP.cur_tot</field>
+                                <field name="formula">MA_PL_I_SG.balance + MA_PL_I_SGSP.balance</field>
                             </record>
                         </field>
                     </record>
@@ -112,7 +112,7 @@
                                 <field name="formula">-713</field>
                             </record>
                             <record id="account_financial_report_pl_i_cip_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-713</field>
                             </record>
@@ -135,7 +135,7 @@
                                 <field name="formula">-7148</field>
                             </record>
                             <record id="account_financial_report_pl_i_ncapcou_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-714</field>
                             </record>
@@ -158,7 +158,7 @@
                                 <field name="formula">-7168</field>
                             </record>
                             <record id="account_financial_report_pl_i_os_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-716</field>
                             </record>
@@ -181,7 +181,7 @@
                                 <field name="formula">-7188</field>
                             </record>
                             <record id="account_financial_report_pl_i_ooi_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-718</field>
                             </record>
@@ -204,7 +204,7 @@
                                 <field name="formula">-7198</field>
                             </record>
                             <record id="account_financial_report_pl_i_oret_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-719</field>
                             </record>
@@ -226,9 +226,9 @@
                                 <field name="formula">MA_PL_I_SG.prev_op + MA_PL_I_SGSP.prev_op + MA_PL_I_NCAPCOU.prev_op + MA_PL_I_OS.prev_op + MA_PL_I_OOI.prev_op + MA_PL_I_ORET.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_total_i_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_I_SG.cur_tot + MA_PL_I_SGSP.cur_tot + MA_PL_I_CIP.cur_tot + MA_PL_I_NCAPCOU.cur_tot + MA_PL_I_OS.cur_tot + MA_PL_I_OOI.cur_tot + MA_PL_I_ORET.cur_tot</field>
+                                <field name="formula">MA_PL_I_SG.balance + MA_PL_I_SGSP.balance + MA_PL_I_CIP.balance + MA_PL_I_NCAPCOU.balance + MA_PL_I_OS.balance + MA_PL_I_OOI.balance + MA_PL_I_ORET.balance</field>
                             </record>
                         </field>
                     </record>
@@ -255,7 +255,7 @@
                                 <field name="formula">6118</field>
                             </record>
                             <record id="account_financial_report_pl_ii_pgr_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">611</field>
                             </record>
@@ -278,7 +278,7 @@
                                 <field name="formula">6128 + 61298</field>
                             </record>
                             <record id="account_financial_report_pl_ii_pmsc_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">612</field>
                             </record>
@@ -301,7 +301,7 @@
                                 <field name="formula">6148</field>
                             </record>
                             <record id="account_financial_report_pl_ii_oee_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">613 + 614</field>
                             </record>
@@ -324,7 +324,7 @@
                                 <field name="formula">6168</field>
                             </record>
                             <record id="account_financial_report_pl_ii_td_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">616</field>
                             </record>
@@ -347,7 +347,7 @@
                                 <field name="formula">6178</field>
                             </record>
                             <record id="account_financial_report_pl_ii_pe_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">617</field>
                             </record>
@@ -370,7 +370,7 @@
                                 <field name="formula">6188</field>
                             </record>
                             <record id="account_financial_report_pl_ii_ooe_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">618</field>
                             </record>
@@ -393,7 +393,7 @@
                                 <field name="formula">6198</field>
                             </record>
                             <record id="account_financial_report_pl_ii_oa_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">619</field>
                             </record>
@@ -415,9 +415,9 @@
                                 <field name="formula">MA_PL_II_PGR.prev_op + MA_PL_II_PMSC.prev_op + MA_PL_II_OEE.prev_op + MA_PL_II_TD.prev_op + MA_PL_II_PE.prev_op + MA_PL_II_OOE.prev_op + MA_PL_II_OA.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_total_ii_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_II_PGR.cur_tot + MA_PL_II_PMSC.cur_tot + MA_PL_II_OEE.cur_tot + MA_PL_II_TD.cur_tot + MA_PL_II_PE.cur_tot + MA_PL_II_OOE.cur_tot + MA_PL_II_OA.cur_tot</field>
+                                <field name="formula">MA_PL_II_PGR.balance + MA_PL_II_PMSC.balance + MA_PL_II_OEE.balance + MA_PL_II_TD.balance + MA_PL_II_PE.balance + MA_PL_II_OOE.balance + MA_PL_II_OA.balance</field>
                             </record>
                         </field>
                     </record>
@@ -428,9 +428,9 @@
                 <field name="code">MA_PL_III</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_iii_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_TOTAL_I.cur_tot - MA_PL_TOTAL_II.cur_tot</field>
+                        <field name="formula">MA_PL_TOTAL_I.balance - MA_PL_TOTAL_II.balance</field>
                     </record>
                 </field>
             </record>
@@ -460,7 +460,7 @@
                                 <field name="formula">-7328</field>
                             </record>
                             <record id="account_financial_report_pl_iv_iesonca_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-732</field>
                             </record>
@@ -483,7 +483,7 @@
                                 <field name="formula">-7338</field>
                             </record>
                             <record id="account_financial_report_pl_iv_feg_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-733</field>
                             </record>
@@ -506,7 +506,7 @@
                                 <field name="formula">-7388</field>
                             </record>
                             <record id="account_financial_report_pl_iv_iofi_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-738</field>
                             </record>
@@ -529,7 +529,7 @@
                                 <field name="formula">-7398</field>
                             </record>
                             <record id="account_financial_report_pl_iv_fret_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-739</field>
                             </record>
@@ -551,9 +551,9 @@
                                 <field name="formula">MA_PL_IV_IESONCA.prev_op + MA_PL_IV_FEG.prev_op + MA_PL_IV_IOFI.prev_op + MA_PL_IV_FRET.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_total_iv_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_IV_IESONCA.cur_tot + MA_PL_IV_FEG.cur_tot + MA_PL_IV_IOFI.cur_tot + MA_PL_IV_FRET.cur_tot</field>
+                                <field name="formula">MA_PL_IV_IESONCA.balance + MA_PL_IV_FEG.balance + MA_PL_IV_IOFI.balance + MA_PL_IV_FRET.balance</field>
                             </record>
                         </field>
                     </record>
@@ -580,7 +580,7 @@
                                 <field name="formula">6318</field>
                             </record>
                             <record id="account_financial_report_pl_v_ie_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">631</field>
                             </record>
@@ -603,7 +603,7 @@
                                 <field name="formula">6338</field>
                             </record>
                             <record id="account_financial_report_pl_v_fel_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">633</field>
                             </record>
@@ -626,7 +626,7 @@
                                 <field name="formula">6388</field>
                             </record>
                             <record id="account_financial_report_pl_v_ofe_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">638</field>
                             </record>
@@ -649,7 +649,7 @@
                                 <field name="formula">6398</field>
                             </record>
                             <record id="account_financial_report_pl_v_fa_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">639</field>
                             </record>
@@ -671,9 +671,9 @@
                                 <field name="formula">MA_PL_V_IE.prev_op + MA_PL_V_FEL.prev_op + MA_PL_V_OFE.prev_op + MA_PL_V_FA.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_total_v_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_V_IE.cur_tot + MA_PL_V_FEL.cur_tot + MA_PL_V_OFE.cur_tot + MA_PL_V_FA.cur_tot</field>
+                                <field name="formula">MA_PL_V_IE.balance + MA_PL_V_FEL.balance + MA_PL_V_OFE.balance + MA_PL_V_FA.balance</field>
                             </record>
                         </field>
                     </record>
@@ -684,9 +684,9 @@
                 <field name="code">MA_PL_VI</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_vi_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_TOTAL_IV.cur_tot - MA_PL_TOTAL_V.cur_tot</field>
+                        <field name="formula">MA_PL_TOTAL_IV.balance - MA_PL_TOTAL_V.balance</field>
                     </record>
                 </field>
             </record>
@@ -700,9 +700,9 @@
                 <field name="code">MA_PL_VII</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_vii_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_III.cur_tot + MA_PL_VI.cur_tot</field>
+                        <field name="formula">MA_PL_III.balance + MA_PL_VI.balance</field>
                     </record>
                 </field>
             </record>
@@ -732,7 +732,7 @@
                                 <field name="formula">-7518</field>
                             </record>
                             <record id="account_financial_report_pl_viii_idnca_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-751</field>
                             </record>
@@ -755,7 +755,7 @@
                                 <field name="formula">-7568</field>
                             </record>
                             <record id="account_financial_report_pl_viii_bs_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-756</field>
                             </record>
@@ -778,7 +778,7 @@
                                 <field name="formula">-7578</field>
                             </record>
                             <record id="account_financial_report_pl_viii_ris_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-757</field>
                             </record>
@@ -801,7 +801,7 @@
                                 <field name="formula">-7588</field>
                             </record>
                             <record id="account_financial_report_pl_viii_onci_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-758</field>
                             </record>
@@ -824,7 +824,7 @@
                                 <field name="formula">-7598</field>
                             </record>
                             <record id="account_financial_report_pl_viii_ncret_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">-759</field>
                             </record>
@@ -846,9 +846,9 @@
                                 <field name="formula">MA_PL_VIII_IDNCA.prev_op + MA_PL_VIII_BS.prev_op + MA_PL_VIII_RIS.prev_op + MA_PL_VIII_ONCI.prev_op + MA_PL_VIII_NCRET.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_total_viii_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_VIII_IDNCA.cur_tot + MA_PL_VIII_BS.cur_tot + MA_PL_VIII_RIS.cur_tot + MA_PL_VIII_ONCI.cur_tot + MA_PL_VIII_NCRET.cur_tot</field>
+                                <field name="formula">MA_PL_VIII_IDNCA.balance + MA_PL_VIII_BS.balance + MA_PL_VIII_RIS.balance + MA_PL_VIII_ONCI.balance + MA_PL_VIII_NCRET.balance</field>
                             </record>
                         </field>
                     </record>
@@ -875,7 +875,7 @@
                                 <field name="formula">6518</field>
                             </record>
                             <record id="account_financial_report_pl_ix_ndvncas_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">651</field>
                             </record>
@@ -898,7 +898,7 @@
                                 <field name="formula">6568</field>
                             </record>
                             <record id="account_financial_report_pl_ix_sg_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">656</field>
                             </record>
@@ -921,7 +921,7 @@
                                 <field name="formula">6588</field>
                             </record>
                             <record id="account_financial_report_pl_ix_once_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">658</field>
                             </record>
@@ -944,7 +944,7 @@
                                 <field name="formula">6598</field>
                             </record>
                             <record id="account_financial_report_pl_ix_ncadp_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">account_codes</field>
                                 <field name="formula">659</field>
                             </record>
@@ -966,9 +966,9 @@
                                 <field name="formula">MA_PL_IX_NDVNCAS.prev_op + MA_PL_IX_SG.prev_op + MA_PL_IX_ONCE.prev_op + MA_PL_IX_NCADP.prev_op</field>
                             </record>
                             <record id="account_financial_report_pl_total_ix_cur_tot" model="account.report.expression">
-                                <field name="label">cur_tot</field>
+                                <field name="label">balance</field>
                                 <field name="engine">aggregation</field>
-                                <field name="formula">MA_PL_IX_NDVNCAS.cur_tot + MA_PL_IX_SG.cur_tot + MA_PL_IX_ONCE.cur_tot + MA_PL_IX_NCADP.cur_tot</field>
+                                <field name="formula">MA_PL_IX_NDVNCAS.balance + MA_PL_IX_SG.balance + MA_PL_IX_ONCE.balance + MA_PL_IX_NCADP.balance</field>
                             </record>
                         </field>
                     </record>
@@ -979,9 +979,9 @@
                 <field name="code">MA_PL_X</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_x_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_TOTAL_VIII.cur_tot - MA_PL_TOTAL_IX.cur_tot</field>
+                        <field name="formula">MA_PL_TOTAL_VIII.balance - MA_PL_TOTAL_IX.balance</field>
                     </record>
                 </field>
             </record>
@@ -995,9 +995,9 @@
                 <field name="code">MA_PL_XI</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_xi_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_VII.cur_tot + MA_PL_X.cur_tot</field>
+                        <field name="formula">MA_PL_VII.balance + MA_PL_X.balance</field>
                     </record>
                 </field>
             </record>
@@ -1008,7 +1008,7 @@
                 <field name="foldable" eval="True"/>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_xii_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">account_codes</field>
                         <field name="formula">67</field>
                     </record>
@@ -1019,9 +1019,9 @@
                 <field name="code">MA_PL_XIII</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_xiii_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_XI.cur_tot - MA_PL_XII.cur_tot</field>
+                        <field name="formula">MA_PL_XI.balance - MA_PL_XII.balance</field>
                     </record>
                 </field>
             </record>
@@ -1034,9 +1034,9 @@
                 <field name="code">MA_PL_XIV</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_xiv_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_TOTAL_I.cur_tot + MA_PL_TOTAL_IV.cur_tot + MA_PL_TOTAL_VIII.cur_tot</field>
+                        <field name="formula">MA_PL_TOTAL_I.balance + MA_PL_TOTAL_IV.balance + MA_PL_TOTAL_VIII.balance</field>
                     </record>
                 </field>
             </record>
@@ -1045,9 +1045,9 @@
                 <field name="code">MA_PL_XV</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_xv_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_TOTAL_II.cur_tot + MA_PL_TOTAL_V.cur_tot + MA_PL_TOTAL_IX.cur_tot + MA_PL_XII.cur_tot</field>
+                        <field name="formula">MA_PL_TOTAL_II.balance + MA_PL_TOTAL_V.balance + MA_PL_TOTAL_IX.balance + MA_PL_XII.balance</field>
                     </record>
                 </field>
             </record>
@@ -1056,9 +1056,9 @@
                 <field name="code">MA_PL_XVI</field>
                 <field name="expression_ids">
                     <record id="account_financial_report_pl_xvi_cur_tot" model="account.report.expression">
-                        <field name="label">cur_tot</field>
+                        <field name="label">balance</field>
                         <field name="engine">aggregation</field>
-                        <field name="formula">MA_PL_XIV.cur_tot - MA_PL_XV.cur_tot</field>
+                        <field name="formula">MA_PL_XIV.balance - MA_PL_XV.balance</field>
                     </record>
                 </field>
             </record>

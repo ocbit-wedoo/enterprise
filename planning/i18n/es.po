@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-05-06 21:38+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-08-04 08:29+0000\n"
 "Last-Translator: \"Noemi Pla Garcia (nopl)\" <nopl@odoo.com>\n"
 "Language-Team: Spanish <https://translate.odoo.com/projects/odoo-18/planning/"
 "es/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: planning
 #. odoo-python
@@ -308,8 +308,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
 msgid ""
 "<i class=\"fa fa-check-circle\"/> This shift is no longer assigned to you."
-msgstr ""
-"<i class=\"fa fa-check-circle\"/> Este turno ya no está asignado a usted."
+msgstr "<i class=\"fa fa-check-circle\"/> Ya no tiene asignado este turno."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
@@ -317,8 +316,8 @@ msgid ""
 "<i class=\"fa fa-check-circle\"/> You were successfully assigned this open "
 "shift."
 msgstr ""
-"<i class=\"fa fa-check-circle\"/> Se le ha asignado con éxito este turno "
-"abierto."
+"<i class=\"fa fa-check-circle\"/> Se le ha asignado correctamente este turno "
+"disponible."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_kanban
@@ -1464,7 +1463,7 @@ msgstr "Duración"
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__duration_days
 msgid "Duration Days"
-msgstr "Días de duración"
+msgstr "Duración en días"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_kanban
@@ -1677,7 +1676,7 @@ msgstr "No estoy disponible"
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "I Take It"
-msgstr "Lo Tomo"
+msgstr "Aceptar"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
@@ -2681,7 +2680,7 @@ msgstr "Turnos restablecidos a borrador"
 #. module: planning
 #: model:planning.role,name:planning.planning_shipping_associate
 msgid "Shipping Associate"
-msgstr "Socio de envíos"
+msgstr "Operario de expediciones"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_gantt
@@ -2824,10 +2823,10 @@ msgstr "La hora de inicio no puede ser negativa."
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
-"The start hour cannot be before the end hour for a one-day shift template."
+"The start hour cannot be after the end hour for a one-day shift template."
 msgstr ""
-"La hora de inicio no puede estar antes de la hora de finalización en una "
-"plantilla de un turno de un día."
+"La hora de inicio no puede ser posterior a la hora de finalización en una "
+"plantilla de turno de un solo día."
 
 #. module: planning
 #. odoo-python
@@ -3226,6 +3225,12 @@ msgstr "a"
 #: model:mail.template,subject:planning.email_template_slot_single
 msgid "{{ ctx.get('mail_subject', '') }} {{ ctx.get('start_datetime' , '') }}"
 msgstr "{{ ctx.get('mail_subject', '') }} {{ ctx.get('start_datetime' , '') }}"
+
+#~ msgid ""
+#~ "The start hour cannot be before the end hour for a one-day shift template."
+#~ msgstr ""
+#~ "La hora de inicio no puede ser posterior a la hora de finalización en una "
+#~ "plantilla de turno de un solo día."
 
 #~ msgid "04:00"
 #~ msgstr "04:00"

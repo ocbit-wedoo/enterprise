@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2026-03-30 06:13+0000\n"
+"PO-Revision-Date: 2026-08-20 12:11+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "sale_stock_renting/fi/>\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_stock_renting
 #. odoo-python
@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 "<i class=\"fa fa-warning\"/>\n"
 "                        <span>\n"
-"                            Joillakin tuotteilla ei ole pyydettyä määrää "
+"                            Joitain tuotteita ei ole pyydettyä määrää "
 "noudettavaksi\n"
 "                        </span>"
 
@@ -64,7 +64,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:sale_stock_renting.res_config_settings_inherit_view_form
 msgid "Activate to use stock deliveries and receipts for rental orders"
 msgstr ""
-"Aktivoi käyttääksesi varastotoimituksia ja kuitteja vuokratilauksia varten"
+"Aktivoi käyttääksesi varastotoimituksia ja vastaanottoja vuokratilauksille"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,help:sale_stock_renting.field_res_company__padding_time
@@ -119,7 +119,7 @@ msgstr "Asetukset"
 #. module: sale_stock_renting
 #: model_terms:ir.ui.view,arch_db:sale_stock_renting.res_config_settings_inherit_view_form
 msgid "Default Padding Time"
-msgstr "Oletusarvoinen turvamarginaaliaika"
+msgstr "Puskuriajan oletusarvo"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,help:sale_stock_renting.field_rental_order_wizard_line__tracking
@@ -288,7 +288,7 @@ msgstr "Varatut erät eivät ole käytettävissä"
 #. module: sale_stock_renting
 #: model:ir.model,name:sale_stock_renting.model_stock_return_picking
 msgid "Return Picking"
-msgstr "Palauta keräily"
+msgstr "Palautuskeräily"
 
 #. module: sale_stock_renting
 #: model:ir.model.fields,field_description:sale_stock_renting.field_rental_order_wizard_line__returnable_lot_ids

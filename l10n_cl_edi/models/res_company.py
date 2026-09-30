@@ -3,7 +3,7 @@
 import base64
 
 from odoo import api, fields, models
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
 from odoo.tools import misc
 from odoo.tools.translate import _
 
@@ -177,6 +177,14 @@ class ResCompany(models.Model):
         if not shared_certificates:
             raise UserError(_('There is not a valid certificate for the company: %s') % self.name)
         return shared_certificates[0]
+
+    @api.constrains('l10n_cl_company_activity_ids')
+    def _check_l10n_cl_company_activity_ids_limit(self):
+        for company in self:
+            if len(company.l10n_cl_company_activity_ids) > 4:
+                raise ValidationError(self.env._(
+                    "The maximum amount of Activities Names is 4. Please select only 4 or less options."
+                ))
 
     @api.depends('l10n_cl_dte_service_provider')
     def _compute_is_there_shared_cert(self):

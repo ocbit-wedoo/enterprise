@@ -3,13 +3,14 @@
 # * hr_recruitment_reports
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2026-05-17 06:00+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 10:26+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "hr_recruitment_reports/lo/>\n"
 "Language: lo\n"
@@ -17,12 +18,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
 msgid "Analysis"
-msgstr ""
+msgstr "ການວິເຄາະ"
 
 #. module: hr_recruitment_reports
 #. odoo-python
@@ -30,12 +31,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__count
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__applicant_id
 msgid "Applicant"
-msgstr ""
+msgstr "ຜູ້ສະໝັກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_action
 msgid "Applicant Analysis"
-msgstr ""
+msgstr "ການວິເຄາະຜູ້ສະໝັກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__name
@@ -43,19 +44,19 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Applicant Name"
-msgstr ""
+msgstr "ຊື່ຜູ້ສະໝັກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__create_date
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Application Date"
-msgstr ""
+msgstr "ວັນທີສະໝັກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__archived
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Archived"
-msgstr ""
+msgstr "ເກັບໄວ້"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__company_id
@@ -68,30 +69,30 @@ msgstr "ບໍລິສັດ"
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__create_uid
 msgid "Creator"
-msgstr ""
+msgstr "ຜູ້ສ້າງ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__days_in_stage
 msgid "Days In Stage"
-msgstr ""
+msgstr "ຈຳນວນວັນໃນຂັ້ນຕອນ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__display_name
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "ຊື່ທີ່ສະແດງ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__date_closed
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__date_end
 msgid "End Date"
-msgstr ""
+msgstr "ວັນທີສິ້ນສຸດ"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Group By"
-msgstr ""
+msgstr "ຈັດກຸ່ມໂດຍ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__hired
@@ -99,65 +100,65 @@ msgstr ""
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__is_hired
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Hired"
-msgstr ""
+msgstr "ຮັບເຂົ້າເຮັດວຽກແລ້ວ"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Hired Date"
-msgstr ""
+msgstr "ວັນທີຮັບເຂົ້າເຮັດວຽກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__hiring_ratio
 msgid "Hired Ratio"
-msgstr ""
+msgstr "ອັດຕາສ່ວນການຮັບເຂົ້າເຮັດວຽກ"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Hiring ratio"
-msgstr ""
+msgstr "ອັດຕາສ່ວນການຮັບເຂົ້າເຮັດວຽກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__id
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__id
 msgid "ID"
-msgstr ""
+msgstr "ໄອດີ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__in_progress
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_report__state__in_progress
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__in_progress
 msgid "In Progress"
-msgstr ""
+msgstr "ພວມດຳເນີນການ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__job_id
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__job_id
 msgid "Job"
-msgstr ""
+msgstr "ວຽກ"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Job Position"
-msgstr ""
+msgstr "ຕຳແໜ່ງງານ"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Last 365 Days Applicant"
-msgstr ""
+msgstr "ຜູ້ສະໝັກໃນ 365 ວັນຜ່ານມາ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__medium_id
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Medium"
-msgstr ""
+msgstr "ຊ່ອງທາງ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__meetings_amount
 msgid "Meetings"
-msgstr ""
+msgstr "ການນັດໝາຍ"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_action
@@ -167,17 +168,17 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_stage_report_action
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_stage_report_job_action
 msgid "No data to display"
-msgstr ""
+msgstr "ບໍ່ມີຂໍ້ມູນທີ່ຈະສະແດງ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__process_duration
 msgid "Process Duration"
-msgstr ""
+msgstr "ໄລຍະເວລາຂອງຂະບວນການ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__user_id
 msgid "Recruiter"
-msgstr ""
+msgstr "ຜູ້ຮັບສະໝັກ"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_job_action
@@ -186,22 +187,22 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_pivot
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Recruitment Analysis"
-msgstr ""
+msgstr "ການວິເຄາະການຮັບສະໝັກງານ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model,name:hr_recruitment_reports.model_hr_recruitment_report
 msgid "Recruitment Analysis Report"
-msgstr ""
+msgstr "ລາຍງານການວິເຄາະການຮັບສະໝັກງານ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model,name:hr_recruitment_reports.model_hr_recruitment_stage_report
 msgid "Recruitment Stage Analysis"
-msgstr ""
+msgstr "ການວິເຄາະຂັ້ນຕອນການຮັບສະໝັກງານ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__refuse_reason_id
 msgid "Refuse Reason"
-msgstr ""
+msgstr "ເຫດຜົນການປະຕິເສດ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__refused
@@ -209,14 +210,14 @@ msgstr ""
 #: model:ir.model.fields.selection,name:hr_recruitment_reports.selection__hr_recruitment_stage_report__state__refused
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Refused"
-msgstr ""
+msgstr "ຖືກປະຕິເສດ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__source_id
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_search
 msgid "Source"
-msgstr ""
+msgstr "ແຫຼ່ງທີ່ມາ"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_source_action
@@ -226,19 +227,19 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_team_view_graph
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_report_view_source_pivot
 msgid "Source Analysis"
-msgstr ""
+msgstr "ການວິເຄາະແຫຼ່ງທີ່ມາ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__stage_id
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__stage_id
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Stage"
-msgstr ""
+msgstr "ຂັ້ນຕອນ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_stage_report__date_begin
 msgid "Start Date"
-msgstr ""
+msgstr "ວັນທີເລີ່ມຕົ້ນ"
 
 #. module: hr_recruitment_reports
 #: model:ir.model.fields,field_description:hr_recruitment_reports.field_hr_recruitment_report__state
@@ -252,7 +253,7 @@ msgstr "ສະພາບ"
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_report_team_action
 #: model:ir.ui.menu,name:hr_recruitment_reports.hr_applicant_report_team_menu
 msgid "Team Performance"
-msgstr ""
+msgstr "ຜົນງານຂອງທີມ"
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_stage_report_action
@@ -261,12 +262,14 @@ msgid ""
 "This report allows you to check the more time-consuming stages of your pipes"
 " and optimize your recruitment flow."
 msgstr ""
+"ລາຍງານນີ້ຊ່ວຍໃຫ້ທ່ານສາມາດກວດສອບຂັ້ນຕອນທີ່ໃຊ້ເວລາຫຼາຍໃນຂະບວນການຂອງທ່ານ ແລະ ປັບປຸງຂັ້ນຕອນການຮັບສ"
+"ະໝັກງານໃຫ້ມີປະສິດທິພາບຂຶ້ນ."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_team_action
 msgid ""
 "This report allows you to compare the recruiters and their performances."
-msgstr ""
+msgstr "ລາຍງານນີ້ຊ່ວຍໃຫ້ທ່ານສາມາດປຽບທຽບຜູ້ຮັບສະໝັກ ແລະ ຜົນງານຂອງພວກເຂົາ."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_source_action
@@ -275,6 +278,8 @@ msgid ""
 "This report allows you to compare various measures grouped by your sources "
 "of applicants (e.g. LinkedIn, Monster, etc.)."
 msgstr ""
+"ລາຍງານນີ້ຊ່ວຍໃຫ້ທ່ານສາມາດປຽບທຽບການວັດແທກຕ່າງໆ ໂດຍຈັດກຸ່ມຕາມແຫຼ່ງທີ່ມາຂອງຜູ້ສະໝັກ (ເຊັ່ນ: "
+"LinkedIn, Monster ແລະ ອື່ນໆ)."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_action
@@ -282,16 +287,18 @@ msgid ""
 "This report allows you to follow the evolution of the number of applicants "
 "and hired employees over time."
 msgstr ""
+"ລາຍງານນີ້ຊ່ວຍໃຫ້ທ່ານສາມາດຕິດຕາມການປ່ຽນແປງຂອງຈຳນວນຜູ້ສະໝັກ ແລະ ພະນັກງານທີ່ຖືກຮັບເຂົ້າເຮັດວຽກຕາມໄ"
+"ລຍະເວລາ."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.actions.act_window,help:hr_recruitment_reports.recruitment_report_job_action
 msgid "This report performs analysis on your recruitment."
-msgstr ""
+msgstr "ລາຍງານນີ້ເຮັດການວິເຄາະກ່ຽວກັບການຮັບສະໝັກງານຂອງທ່ານ."
 
 #. module: hr_recruitment_reports
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.hr_recruitment_report_inherit_kanban_view
 msgid "Time By Stages"
-msgstr ""
+msgstr "ເວລາຕາມຂັ້ນຕອນ"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_stage_report_job_action
@@ -299,28 +306,28 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_pivot
 #: model_terms:ir.ui.view,arch_db:hr_recruitment_reports.recruitment_stage_report_view_search
 msgid "Time In Stage Analysis"
-msgstr ""
+msgstr "ການວິເຄາະເວລາໃນຂັ້ນຕອນ"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total Hired"
-msgstr ""
+msgstr "ຮັບເຂົ້າເຮັດວຽກທັງໝົດ"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total Meetings"
-msgstr ""
+msgstr "ການນັດໝາຍທັງໝົດ"
 
 #. module: hr_recruitment_reports
 #. odoo-python
 #: code:addons/hr_recruitment_reports/report/hr_recruitment_report.py:0
 msgid "Total applicants"
-msgstr ""
+msgstr "ຜູ້ສະໝັກທັງໝົດ"
 
 #. module: hr_recruitment_reports
 #: model:ir.actions.act_window,name:hr_recruitment_reports.recruitment_stage_report_action
 #: model:ir.ui.menu,name:hr_recruitment_reports.hr_applicant_stage_report_menu
 msgid "Velocity Analysis"
-msgstr ""
+msgstr "ການວິເຄາະຄວາມໄວ"

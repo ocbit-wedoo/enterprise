@@ -7,13 +7,13 @@
 # Martin Trigaux, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Milena Georgieva, 2024
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2025-12-31 11:51+0000\n"
+"PO-Revision-Date: 2026-07-25 17:16+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "pos_pricer/bg/>\n"
@@ -22,27 +22,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_pricer
 #: model:ir.model.constraint,message:pos_pricer.constraint_pricer_tag_name_unique
 msgid "A Pricer tag with this barcode id already exists"
-msgstr ""
+msgstr "Етикет на Pricer с този баркод идентификатор вече съществува"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__pricer_store_id
 msgid "Associated Pricer Store"
-msgstr ""
+msgstr "Свързан магазин на Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__product_id
 msgid "Associated Product"
-msgstr ""
+msgstr "Свързан продукт"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__auth_url
 msgid "Auth Url"
-msgstr ""
+msgstr "URL за удостоверяване"
 
 #. module: pos_pricer
 #: model:product.pricelist,name:pos_pricer.pricer_demo_pricelist
@@ -57,7 +57,7 @@ msgstr "Контакт"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_or_update_products_url
 msgid "Create Or Update Products Url"
-msgstr ""
+msgstr "URL за създаване или обновяване на продукти"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__create_uid
@@ -74,7 +74,7 @@ msgstr "Създадено на"
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__last_update_datetime
 msgid "Date and time of the last synchronization with Pricer"
-msgstr ""
+msgstr "Дата и час на последната синхронизация с Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__display_name
@@ -92,13 +92,15 @@ msgstr ""
 #. odoo-python
 #: code:addons/pos_pricer/models/pricer_store.py:0
 msgid "Error: check Pricer credentials"
-msgstr ""
+msgstr "Грешка: проверете идентификационните данни за Pricer"
 
 #. module: pos_pricer
 #. odoo-python
 #: code:addons/pos_pricer/models/pricer_store.py:0
 msgid "Failed to unlink Pricer tag %(pricer_tag)s at API url %(api_url)s"
 msgstr ""
+"Неуспешно премахване на връзката към Pricer етикет %(pricer_tag)s на API "
+"адрес %(api_url)s"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__id
@@ -109,7 +111,7 @@ msgstr "ID"
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_store_identifier
 msgid "Identifier of the store in the Pricer system"
-msgstr ""
+msgstr "Идентификатор на магазина в системата Pricer"
 
 #. module: pos_pricer
 #. odoo-javascript
@@ -118,11 +120,13 @@ msgid ""
 "Invalid tag name. Should be 1 letter followed by 16 digits. Example: "
 "'N4081315789813275'"
 msgstr ""
+"Невалидно име на етикет. Трябва да е 1 буква, последвана от 16 цифри. "
+"Пример: 'N4081315789813275'"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_tag__name
 msgid "It is recommended to use a barcode scanner for input"
-msgstr ""
+msgstr "Препоръчва се да използвате баркод скенер за въвеждане"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__last_update_datetime
@@ -132,7 +136,7 @@ msgstr "Последна актуализация"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__last_update_status_message
 msgid "Last Update Status"
-msgstr ""
+msgstr "Статус на последното обновяване"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__write_uid
@@ -149,33 +153,33 @@ msgstr "Последно актуализирано на"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__link_tags_url
 msgid "Link Tags Url"
-msgstr ""
+msgstr "URL за свързване на етикети"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_login
 msgid "Login of your Pricer account"
-msgstr ""
+msgstr "Потребителско име на вашия Pricer акаунт"
 
 #. module: pos_pricer
 #. odoo-javascript
 #: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
 msgid "No product found for barcode '%s'"
-msgstr ""
+msgstr "Не е намерен продукт за баркод '%s'"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__on_sale_price
 msgid "On Sale Price"
-msgstr ""
+msgstr "Промоционална цена"
 
 #. module: pos_pricer
 #: model:ir.actions.server,name:pos_pricer.pricer_sync_cron_ir_actions_server
 msgid "POS Pricer: tags update synchronization "
-msgstr ""
+msgstr "POS Pricer: синхронизация на обновяването на етикети "
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_password
 msgid "Password of your Pricer account"
-msgstr ""
+msgstr "Парола на вашия Pricer акаунт"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_pos_config
@@ -185,55 +189,55 @@ msgstr "Конфигурация на център за продажби"
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_product_product__on_sale_price
 msgid "Price after setting a Pricer Sales Pricelist"
-msgstr ""
+msgstr "Цена след задаване на ценоразпис за промоции в Pricer"
 
 #. module: pos_pricer
 #: model:ir.ui.menu,name:pos_pricer.pos_menu_pricer_configuration
 #: model_terms:ir.ui.view,arch_db:pos_pricer.product_product_form_view_pricers
 msgid "Pricer"
-msgstr ""
+msgstr "Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_display_price
 msgid "Pricer Display Price"
-msgstr ""
+msgstr "Цена за показване в Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_login
 msgid "Pricer Login"
-msgstr ""
+msgstr "Pricer вход"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_password
 msgid "Pricer Password"
-msgstr ""
+msgstr "Pricer парола"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_product_to_create_or_update
 msgid "Pricer Product To Create Or Update"
-msgstr ""
+msgstr "Pricer продукт за създаване или обновяване"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__pricer_product_to_link
 msgid "Pricer Product To Link"
-msgstr ""
+msgstr "Pricer продукт за свързване"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_sale_pricelist_id
 msgid "Pricer Sales Pricelist"
-msgstr ""
+msgstr "Ценоразпис за промоции в Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_store_id
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_form_view
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
 msgid "Pricer Store"
-msgstr ""
+msgstr "Магазин в Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_store_identifier
 msgid "Pricer Store ID"
-msgstr ""
+msgstr "Идентификатор на магазина в Pricer"
 
 #. module: pos_pricer
 #. odoo-python
@@ -242,59 +246,61 @@ msgid ""
 "Pricer Store ID must only contain lowercase a-z, 0-9 or '-' and not start "
 "with '-'"
 msgstr ""
+"Идентификаторът на магазина в Pricer трябва да съдържа само малки букви a-z, "
+"0-9 или '-' и да не започва с '-'"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__name
 msgid "Pricer Store name in Odoo database"
-msgstr ""
+msgstr "Име на магазина в Pricer в базата данни на Odoo"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_pricer_store
 msgid "Pricer Store regrouping pricer tags"
-msgstr ""
+msgstr "Магазин в Pricer, групиращ Pricer етикети"
 
 #. module: pos_pricer
 #: model:ir.actions.act_window,name:pos_pricer.action_open_pricer_stores
 #: model:ir.ui.menu,name:pos_pricer.menu_pos_pricer_stores
 msgid "Pricer Stores"
-msgstr ""
+msgstr "Магазини в Pricer"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_tag__name
 msgid "Pricer Tag Barcode ID"
-msgstr ""
+msgstr "Баркод идентификатор на Pricer етикет"
 
 #. module: pos_pricer
 #: model:ir.actions.act_window,name:pos_pricer.action_open_pricer_tags
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_tag_ids
 #: model:ir.ui.menu,name:pos_pricer.menu_pos_pricer_tags
 msgid "Pricer Tags"
-msgstr ""
+msgstr "Pricer етикети"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__pricer_tenant_name
 msgid "Pricer Tenant Name"
-msgstr ""
+msgstr "Име на наемателя в Pricer"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_pricer_tag
 msgid "Pricer electronic tag"
-msgstr ""
+msgstr "Електронен етикет на Pricer"
 
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_tag_view_list
 msgid "Pricer tag"
-msgstr ""
+msgstr "Pricer етикет"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__dummy_tag_barcode
 msgid "Pricer tag barcode"
-msgstr ""
+msgstr "Баркод на Pricer етикет"
 
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_product_product__pricer_tag_ids
 msgid "Pricer tags ids"
-msgstr ""
+msgstr "Идентификатори на Pricer етикети"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_product_template
@@ -305,7 +311,7 @@ msgstr "Продукт"
 #. odoo-javascript
 #: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
 msgid "Product '%s' found"
-msgstr ""
+msgstr "Намерен е продукт '%s'"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_product_product
@@ -325,22 +331,22 @@ msgstr "Продукти"
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_form_view
 msgid "Quick pairing"
-msgstr ""
+msgstr "Бързо сдвояване"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__dummy_tag_barcode
 msgid "Scan the Pricer tag barcode here"
-msgstr ""
+msgstr "Сканирайте баркода на Pricer етикета тук"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__dummy_prod_barcode
 msgid "Scan the product barcode here"
-msgstr ""
+msgstr "Сканирайте баркода на продукта тук"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__last_update_status_message
 msgid "Status message of the last synchronization with Pricer"
-msgstr ""
+msgstr "Съобщение за състоянието на последната синхронизация с Pricer"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_stock_move
@@ -350,7 +356,7 @@ msgstr "Движение в склада"
 #. module: pos_pricer
 #: model:ir.model.fields,field_description:pos_pricer.field_pricer_store__name
 msgid "Store Name"
-msgstr ""
+msgstr "Име на магазина"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_product_supplierinfo
@@ -361,19 +367,19 @@ msgstr "Ценова листа на доставчик"
 #. odoo-javascript
 #: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
 msgid "Tag '%s' found"
-msgstr ""
+msgstr "Намерен е етикет '%s'"
 
 #. module: pos_pricer
 #. odoo-javascript
 #: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
 msgid "Tag '%s' not found, creating it"
-msgstr ""
+msgstr "Етикет '%s' не е намерен, създава се"
 
 #. module: pos_pricer
 #. odoo-javascript
 #: code:addons/pos_pricer/static/src/views/pricer_quick_pairing_form_view.js:0
 msgid "Tag '%s' successfully linked with product '%s'"
-msgstr ""
+msgstr "Етикет '%s' е успешно свързан с продукт '%s'"
 
 #. module: pos_pricer
 #. odoo-python
@@ -382,6 +388,8 @@ msgid ""
 "Tag id should be a 17 characters string composed of a letter followed by 16 "
 "digits"
 msgstr ""
+"Идентификаторът на етикета трябва да е низ от 17 символа, съставен от буква, "
+"последвана от 16 цифри"
 
 #. module: pos_pricer
 #: model:ir.model,name:pos_pricer.model_account_tax
@@ -393,6 +401,8 @@ msgstr "Данък"
 msgid ""
 "This pricelist will be used to set sales on Pricer tags for this product"
 msgstr ""
+"Този ценоразпис ще се използва за задаване на промоции върху Pricer "
+"етикетите за този продукт"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_tag__pricer_store_id
@@ -401,6 +411,8 @@ msgid ""
 "This product will be linked to and displayed on the Pricer tags of the store "
 "selected here"
 msgstr ""
+"Този продукт ще бъде свързан и показан на Pricer етикетите на избрания тук "
+"магазин"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_product_product__pricer_tag_ids
@@ -408,6 +420,8 @@ msgid ""
 "This product will be linked to and displayed on the Pricer tags with ids "
 "listed here. It is recommended to use a barcode scanner"
 msgstr ""
+"Този продукт ще бъде свързан и показан на Pricer етикетите с изброените тук "
+"идентификатори. Препоръчва се да използвате баркод скенер"
 
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
@@ -418,14 +432,14 @@ msgstr ""
 #. odoo-python
 #: code:addons/pos_pricer/models/pricer_store.py:0
 msgid "Update successfully sent to Pricer"
-msgstr ""
+msgstr "Обновлението е успешно изпратено към Pricer"
 
 #. module: pos_pricer
 #: model_terms:ir.ui.view,arch_db:pos_pricer.pricer_pricer_store_view_list
 msgid "Update tags"
-msgstr ""
+msgstr "Обнови етикетите"
 
 #. module: pos_pricer
 #: model:ir.model.fields,help:pos_pricer.field_pricer_store__pricer_tenant_name
 msgid "Your company identifier at Pricer"
-msgstr ""
+msgstr "Идентификатор на вашата фирма в Pricer"

@@ -30,7 +30,7 @@ class DeliveryCarrier(models.Model):
     sendcloud_can_batch_shipping = fields.Boolean(
         related="sendcloud_shipping_id.has_multicollo")
     sendcloud_use_batch_shipping = fields.Boolean(
-        string="Use Batch Shipping",
+        string="Use Multicollo",
         help="When sending multiple parcels, combine them in one shipment. Not supported for international shipping requiring customs' documentation",)
 
     @api.constrains('delivery_type', 'sendcloud_public_key', 'sendcloud_secret_key')

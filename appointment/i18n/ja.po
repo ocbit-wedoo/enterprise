@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-05-06 21:40+0000\n"
+"PO-Revision-Date: 2026-08-31 03:09+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "appointment/ja/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -2848,7 +2848,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_error
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -3305,7 +3305,7 @@ msgstr "エラー数"
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__message_has_error_counter
@@ -3674,7 +3674,7 @@ msgstr "保存して閉じる"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/custom_appointment_form_dialog/custom_appointment_form_dialog.xml:0
 msgid "Save & Copy Link"
-msgstr "保存&コピー"
+msgstr "保存&リンクをコピー"
 
 #. module: appointment
 #. odoo-javascript
@@ -4067,7 +4067,7 @@ msgstr "症状"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Synchronize your Calendar to avoid double-booking"
-msgstr "ダブルブッキングを避けるためカレンダを同期して下さい"
+msgstr "二重予約を防ぐためにカレンダーを同期してください"
 
 #. module: appointment
 #. odoo-python
@@ -4384,7 +4384,7 @@ msgstr "限度(最大)"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Up to"
-msgstr "以下まで:"
+msgstr "最大："
 
 #. module: appointment
 #. odoo-python
@@ -4596,7 +4596,7 @@ msgstr "例: +1(605)691-3277"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
 msgid "e.g. Inventory count and valuation"
-msgstr "例: 在庫カウントと評価"
+msgstr "例：棚卸と在庫評価"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form

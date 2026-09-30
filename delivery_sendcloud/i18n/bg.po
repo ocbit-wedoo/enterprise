@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* delivery_sendcloud
+# * delivery_sendcloud
 #
 # Translators:
 # Petko Karamotchev, 2024
@@ -11,20 +11,22 @@
 # Albena Mincheva <albena_vicheva@abv.bg>, 2024
 # Milena Georgieva, 2024
 # Martin Dinovski, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Martin Dinovski, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-19 18:21+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"delivery_sendcloud/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -38,6 +40,13 @@ msgid ""
 "possible or choose another carrier:\n"
 "\t%s"
 msgstr ""
+"\n"
+"Допълнително, някои отделни продукт(и) са твърде тежки за най-тежкия наличен "
+"метод за доставка.\n"
+"                             \n"
+"Разпределете количеството на следния(те) продукт(и) между пакетите си, ако е "
+"възможно, или изберете друг куриер:\n"
+"\t%s"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -47,6 +56,9 @@ msgid ""
 "Try to distribute your products across your packages so that they weigh less "
 "than %(max_weight)s %(unit)s or choose another carrier."
 msgstr ""
+"\n"
+"Опитайте да разпределите продуктите си между пакетите, така че всеки да тежи "
+"по-малко от %(max_weight)s %(unit)s, или изберете друг куриер."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -55,18 +67,20 @@ msgid ""
 " Please make sure there is an address with the same name under \"Address "
 "Name (optional)\" in your Sendcloud Address configuration."
 msgstr ""
+" Моля, уверете се, че има адрес със същото име в полето \"Име на адрес (по "
+"избор)\" във вашата конфигурация на адреси в Sendcloud."
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "%(partner_name)s email required"
-msgstr ""
+msgstr "%(partner_name)s изисква имейл"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "%(partner_name)s phone required"
-msgstr ""
+msgstr "%(partner_name)s изисква телефон"
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
@@ -74,6 +88,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-triangle\"/> Do not forget to load your "
 "SendCloud shipping products for a valid configuration."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle\"/> Не забравяйте да заредите своите "
+"продукти за доставка от SendCloud за валидна конфигурация."
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
@@ -82,6 +98,9 @@ msgid ""
 "charges, your shippings are automatically <b>cancelled</b> after the label "
 "creation."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle\"/> В тестова среда, за да се избегнат "
+"таксувания, вашите доставки автоматично се <b>отменят</b> след създаването "
+"на етикета."
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
@@ -89,6 +108,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-triangle\"/> Only administrators can configure "
 "the public and private keys."
 msgstr ""
+"<i class=\"fa fa-exclamation-triangle\"/> Само администратори могат да "
+"конфигурират публичния и частния ключ."
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_shipping_method_sendcloud
@@ -96,6 +117,8 @@ msgid ""
 "<i class=\"fa fa-info-circle\"/> Available shipping products depend on "
 "enabled carriers in your Sendcloud account."
 msgstr ""
+"<i class=\"fa fa-info-circle\"/> Наличните продукти за доставка зависят от "
+"активираните куриери във вашия Sendcloud акаунт."
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_wizard__sendcloud_products_code
@@ -129,17 +152,17 @@ msgstr "Превозвач"
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "Choose Sendcloud Shipping Products"
-msgstr ""
+msgstr "Изберете продукти за доставка от Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model,name:delivery_sendcloud.model_sendcloud_shipping_wizard
 msgid "Choose from the available sendcloud shipping methods"
-msgstr ""
+msgstr "Изберете от наличните методи за доставка на sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model,name:delivery_sendcloud.model_sendcloud_shipping_product
 msgid "Choose from the available sendcloud shipping products"
-msgstr ""
+msgstr "Изберете от наличните продукти за доставка на sendcloud"
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_shipping_method_sendcloud
@@ -150,13 +173,13 @@ msgstr "Потвърждение"
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "Could not find currency %s"
-msgstr ""
+msgstr "Не може да се намери валута %s"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "Could not get document!"
-msgstr ""
+msgstr "Документът не може да бъде получен!"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__create_uid
@@ -178,7 +201,7 @@ msgstr "Стандартен тип опаковка"
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_default_package_type_id
 msgid "Default Package Type for Sendcloud"
-msgstr ""
+msgstr "Тип пакет по подразбиране за Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_wizard__carrier_id
@@ -198,6 +221,10 @@ msgid ""
 "weight, value, etc.\n"
 "Rules can override shipping product selected in Odoo"
 msgstr ""
+"В зависимост от типа на вашия Sendcloud акаунт, чрез правила можете да "
+"дефинирате метода за доставка, който да се използва, в зависимост от "
+"различни условия като дестинация, тегло, стойност и др.\n"
+"Правилата могат да заменят продукта за доставка, избран в Odoo"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__display_name
@@ -212,6 +239,8 @@ msgid ""
 "Each address line can only contain a maximum of 75 characters. You can split "
 "the address into multiple lines to try to avoid this limitation."
 msgstr ""
+"Всеки ред от адреса може да съдържа максимум 75 символа. Можете да разделите "
+"адреса на няколко реда, за да опитате да избегнете това ограничение."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -220,18 +249,20 @@ msgid ""
 "Ensure picking has shipping weight, if using packages, each package should "
 "have a shipping weight"
 msgstr ""
+"Уверете се, че складовата операция има тегло за доставка; ако използвате "
+"пакети, всеки пакет трябва да има тегло за доставка"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "Failed to create the return label!"
-msgstr ""
+msgstr "Неуспешно създаване на етикет за връщане!"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "Failed to get the actual price!"
-msgstr ""
+msgstr "Неуспешно получаване на действителната цена!"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_product_functionalities
@@ -253,7 +284,7 @@ msgstr "Отидете на продукта за доставка"
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_can_batch_shipping
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__has_multicollo
 msgid "Has Multicollo"
-msgstr ""
+msgstr "Има Multicollo"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__id
@@ -281,7 +312,7 @@ msgstr "Последно актуализирано на"
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
 msgid "Load your products"
-msgstr ""
+msgstr "Заредете своите продукти"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -324,19 +355,19 @@ msgstr "Минимално тегло"
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "Must be a Sendcloud carrier!"
-msgstr ""
+msgstr "Трябва да бъде Sendcloud куриер!"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "No address found with contact name %s on your sendcloud account."
-msgstr ""
+msgstr "Не е намерен адрес с име на контакт %s във вашия sendcloud акаунт."
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "No picking or order provided"
-msgstr ""
+msgstr "Не е предоставена складова операция или поръчка"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -345,6 +376,8 @@ msgid ""
 "Note that a unit of the product '%s' is heavier than the maximum weight "
 "allowed by the shipping method."
 msgstr ""
+"Обърнете внимание, че единица от продукта '%s' е по-тежка от максималното "
+"тегло, разрешено от метода за доставка."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -353,6 +386,8 @@ msgid ""
 "Note that this price is for %s packages since the order weight is more than "
 "the maximum weight allowed by the shipping method."
 msgstr ""
+"Обърнете внимание, че тази цена е за %s пакета, тъй като теглото на "
+"поръчката надвишава максималното тегло, разрешено от метода за доставка."
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
@@ -379,6 +414,9 @@ msgid ""
 "product. For some products, you can be charged for return labels printed but "
 "not used."
 msgstr ""
+"Моля, проверете документацията за продукти за връщане на SendCloud, преди да "
+"изберете продукт за връщане. За някои продукти може да бъдете таксувани за "
+"етикети за връщане, които са отпечатани, но не са използвани."
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__delivery_type
@@ -388,7 +426,7 @@ msgstr "Доставчик"
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_shipping_method_sendcloud
 msgid "Return Product"
-msgstr ""
+msgstr "Продукт за връщане"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_wizard__return_products
@@ -398,105 +436,107 @@ msgstr "Върнете продукти"
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__country_id
 msgid "Select the country to be used by this delivery method"
-msgstr ""
+msgstr "Изберете държавата, която да се използва от този метод за доставка"
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_delivery_carrier_form
 msgid "SendCloud Configuration"
-msgstr ""
+msgstr "Конфигурация на SendCloud"
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.res_config_settings_view_form_sale
 msgid "SendCloud Shipping Methods"
-msgstr ""
+msgstr "Методи за доставка на SendCloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields.selection,name:delivery_sendcloud.selection__delivery_carrier__delivery_type__sendcloud
 #: model:ir.model.fields.selection,name:delivery_sendcloud.selection__stock_package_type__package_carrier_type__sendcloud
 msgid "Sendcloud"
-msgstr ""
+msgstr "Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__sendcloud_public_key
 msgid "Sendcloud API Integration Public key"
-msgstr ""
+msgstr "Публичен ключ за API интеграция със Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__sendcloud_secret_key
 msgid "Sendcloud API Integration Secret key"
-msgstr ""
+msgstr "Таен ключ за API интеграция със Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_stock_picking__sendcloud_parcel_ref
 msgid "Sendcloud Parcel Reference"
-msgstr ""
+msgstr "Референция на пратка в Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__sendcloud_code
 msgid "Sendcloud Product Identifier"
-msgstr ""
+msgstr "Идентификатор на продукт в Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_public_key
 msgid "Sendcloud Public Key"
-msgstr ""
+msgstr "Публичен ключ за Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_return_id
 msgid "Sendcloud Return"
-msgstr ""
+msgstr "Връщане чрез Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_stock_picking__sendcloud_return_parcel_ref
 msgid "Sendcloud Return Parcel Ref"
-msgstr ""
+msgstr "Референция на пратка за връщане в Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_return_name
 msgid "Sendcloud Return Shipping Product"
-msgstr ""
+msgstr "Продукт за доставка при връщане чрез Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_secret_key
 msgid "Sendcloud Secret Key"
-msgstr ""
+msgstr "Таен ключ за Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_shipping_id
 msgid "Sendcloud Shipping"
-msgstr ""
+msgstr "Доставка чрез Sendcloud"
 
 #. module: delivery_sendcloud
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.res_config_settings_view_form_stock
 msgid "Sendcloud Shipping Methods"
-msgstr ""
+msgstr "Методи за доставка на Sendcloud"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_shipping_name
 msgid "Sendcloud Shipping Product"
-msgstr ""
+msgstr "Продукт за доставка на Sendcloud"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "Sendcloud is not responding. Check your credentials and/or retry later."
 msgstr ""
+"Sendcloud не отговаря. Проверете идентификационните си данни и/или опитайте "
+"отново по-късно."
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__country_id
 msgid "Ship From"
-msgstr ""
+msgstr "Изпращане от"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "Shipment %s cancelled"
-msgstr ""
+msgstr "Пратка %s е отменена"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__carrier
 msgid "Shipping Carrier"
-msgstr ""
+msgstr "Куриер"
 
 #. module: delivery_sendcloud
 #: model:ir.model,name:delivery_sendcloud.model_delivery_carrier
@@ -507,12 +547,12 @@ msgstr "Начини на доставка"
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_product__name
 #: model_terms:ir.ui.view,arch_db:delivery_sendcloud.view_shipping_method_sendcloud
 msgid "Shipping Product"
-msgstr ""
+msgstr "Продукт за доставка"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_sendcloud_shipping_wizard__shipping_products
 msgid "Shipping Products"
-msgstr ""
+msgstr "Продукти за доставка"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__sendcloud_default_package_type_id
@@ -520,6 +560,8 @@ msgid ""
 "Some carriers require package dimensions, you can define these in a package "
 "type that you set as default"
 msgstr ""
+"Някои куриери изискват размери на пакета; можете да ги дефинирате в тип "
+"пакет, който задавате по подразбиране"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -528,6 +570,8 @@ msgid ""
 "Some packages in your transfer are too heavy for the heaviest available "
 "shipping method."
 msgstr ""
+"Някои пакети във вашето прехвърляне са твърде тежки за най-тежкия наличен "
+"метод за доставка."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -536,17 +580,19 @@ msgid ""
 "Something went wrong, parcel not returned from Sendcloud:\n"
 " %s'."
 msgstr ""
+"Нещо се обърка, пратката не е върната от Sendcloud:\n"
+" %s'."
 
 #. module: delivery_sendcloud
 #: model:ir.model,name:delivery_sendcloud.model_stock_package_type
 msgid "Stock package type"
-msgstr ""
+msgstr "Тип на пакета за съхранение"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/sendcloud_service.py:0
 msgid "The %s address needs to have the street, city, zip, and country"
-msgstr ""
+msgstr "%s адресът трябва да съдържа улица, град, пощенски код и държава"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -557,6 +603,10 @@ msgid ""
 "delivery partner via the delivery order and make sure the parent of the "
 "delivery partner is the partner you want to ship to."
 msgstr ""
+"Адресът за доставка на клиента е премахнат от мястото на вземане. Тази "
+"информация се изисква от Sendcloud. Моля, отидете на партньора за доставка "
+"през поръчката за доставка и се уверете, че родителят на партньора за "
+"доставка е партньорът, до когото искате да изпратите."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -566,12 +616,17 @@ msgid ""
 "missing for the following product(s): \n"
 " %s"
 msgstr ""
+"Прогнозната цена за доставка не може да бъде изчислена, защото липсва тегло "
+"за следния(те) продукт(и): \n"
+" %s"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "The shipping product actually configured can't handle this delivery"
 msgstr ""
+"Конфигурираният в момента продукт за доставка не може да обработи тази "
+"доставка"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -580,6 +635,8 @@ msgid ""
 "The total weight of your transfer is too heavy for the heaviest available "
 "shipping method."
 msgstr ""
+"Общото тегло на вашето прехвърляне е твърде голямо за най-тежкия наличен "
+"метод за доставка."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -588,13 +645,15 @@ msgid ""
 "There are no shipping products available, please update the 'Shipping From' "
 "field or activate suitable carriers in your sendcloud account"
 msgstr ""
+"Няма налични продукти за доставка; моля, актуализирайте полето 'Изпращане "
+"от' или активирайте подходящи куриери във вашия sendcloud акаунт"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid ""
 "There is no rate available for this order with the selected shipping product."
-msgstr ""
+msgstr "Няма налична тарифа за тази поръчка с избрания продукт за доставка."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -602,7 +661,7 @@ msgstr ""
 msgid ""
 "There is no shipping method available for this order with the selected "
 "carrier"
-msgstr ""
+msgstr "Няма наличен метод за доставка за тази поръчка с избрания куриер"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -611,6 +670,7 @@ msgid ""
 "There is no shipping method available for this picking with the selected "
 "carrier"
 msgstr ""
+"Няма наличен метод за доставка за тази складова операция с избрания куриер"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -621,6 +681,10 @@ msgid ""
 "You can either choose another carrier, change your filters or redefine the "
 "content of your package(s)."
 msgstr ""
+"Няма метод със съответстващ диапазон на теглото за пакетите:\n"
+"%s\n"
+"Можете или да изберете друг куриер, да промените филтрите си, или да "
+"предефинирате съдържанието на пакета(ите) си."
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -629,12 +693,14 @@ msgid ""
 "There's no shipping method matching all your selected filters for this "
 "picking/order."
 msgstr ""
+"Няма метод за доставка, който да съответства на всички избрани от вас филтри "
+"за тази складова операция/поръчка."
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "There's no unit of measure with the name \"%s\"."
-msgstr ""
+msgstr "Няма мерна единица с име \"%s\"."
 
 #. module: delivery_sendcloud
 #: model:ir.model,name:delivery_sendcloud.model_stock_picking
@@ -649,13 +715,13 @@ msgstr ""
 #. module: delivery_sendcloud
 #: model:ir.model.fields,field_description:delivery_sendcloud.field_delivery_carrier__sendcloud_shipping_rules
 msgid "Use Sendcloud shipping rules"
-msgstr ""
+msgstr "Използване на правила за доставка на Sendcloud"
 
 #. module: delivery_sendcloud
 #. odoo-javascript
 #: code:addons/delivery_sendcloud/static/src/views/sendcloud_product_selection_widget.xml:0
 msgid "Weight range"
-msgstr ""
+msgstr "Диапазон на теглото"
 
 #. module: delivery_sendcloud
 #: model:ir.model.fields,help:delivery_sendcloud.field_delivery_carrier__sendcloud_use_batch_shipping
@@ -663,12 +729,15 @@ msgid ""
 "When sending multiple parcels, combine them in one shipment. Not supported "
 "for international shipping requiring customs' documentation"
 msgstr ""
+"При изпращане на множество колети ги обединете в една пратка. Не се поддържа "
+"за международни доставки, изискващи митническа документация"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "You must add your public and secret key for sendcloud delivery type!"
 msgstr ""
+"Трябва да добавите вашия публичен и таен ключ за тип доставка sendcloud!"
 
 #. module: delivery_sendcloud
 #. odoo-python
@@ -677,12 +746,14 @@ msgid ""
 "You must assign the required 'Shipping From' field in order to search for "
 "available products"
 msgstr ""
+"Трябва да зададете задължителното поле 'Изпращане от', за да търсите налични "
+"продукти"
 
 #. module: delivery_sendcloud
 #. odoo-python
 #: code:addons/delivery_sendcloud/models/delivery_carrier.py:0
 msgid "You must have a shipping product configured!"
-msgstr ""
+msgstr "Трябва да имате конфигуриран продукт за доставка!"
 
 #. module: delivery_sendcloud
 #. odoo-javascript
@@ -696,9 +767,11 @@ msgid ""
 "created in Sendcloud. <br/>\n"
 "            <b>Tracking Numbers:</b>"
 msgstr ""
+"създадена в Sendcloud. <br/>\n"
+"            <b>Номера за проследяване:</b>"
 
 #. module: delivery_sendcloud
 #. odoo-javascript
 #: code:addons/delivery_sendcloud/static/src/views/sendcloud_product_selection_widget.xml:0
 msgid "g"
-msgstr ""
+msgstr "г"

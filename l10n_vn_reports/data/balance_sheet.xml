@@ -8,6 +8,7 @@
         <field name="filter_unfold_all" eval="True"/>
         <field name="filter_journals" eval="True"/>
         <field name="filter_multi_company">selector</field>
+        <field name="filter_growth_comparison" eval="False"/>
         <field name="default_opening_date_filter">today</field>
         <field name="country_id" ref="base.vn"/>
         <field name="column_ids">
@@ -91,7 +92,7 @@
                                     <record id="account_financial_report_l10n_vn_bs_ce_balance" model="account.report.expression">
                                         <field name="label">balance</field>
                                         <field name="engine">account_codes</field>
-                                        <field name="formula">12811 + 12881 + 12831</field>
+                                        <field name="formula">12811 + 12881</field>
                                     </record>
                                 </field>
                             </record>
@@ -161,7 +162,7 @@
                                     <record id="account_financial_report_l10n_vn_bs_hmi_balance" model="account.report.expression">
                                         <field name="label">balance</field>
                                         <field name="engine">account_codes</field>
-                                        <field name="formula">12812 + 12822 + 12882 + 12832 + 13812</field>
+                                        <field name="formula">12812 + 12822 + 12882 + 12832 + 13812 + 12831</field>
                                     </record>
                                 </field>
                             </record>

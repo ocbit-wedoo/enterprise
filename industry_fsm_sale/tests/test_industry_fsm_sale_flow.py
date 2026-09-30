@@ -503,3 +503,36 @@ class TestFsmFlowSale(TestFsmFlowSaleCommon):
         (task | fsm_task).sale_line_id = False
         self.assertFalse(task.sale_order_id.id)
         self.assertTrue(fsm_task.sale_order_id.id)
+
+    def test_fsm_message_post_returns_recordset(self):
+        """
+        Ensure `message_post` returns an empty `mail.message` recordset
+        when `fsm_no_message_post` is set, avoiding crashes in automation
+        wrappers expecting a recordset.
+        """
+        fsm_product = self.service_product_ordered
+        fsm_product.service_tracking = 'task_global_project'
+        fsm_product.project_id = self.fsm_project
+
+        sale_order = self.env['sale.order'].create({
+            'partner_id': self.partner_1.id,
+            'order_line': [
+                Command.create({
+                    'product_id': fsm_product.id,
+                    'product_uom_qty': 1,
+                }),
+            ],
+        })
+        sale_order.action_confirm()
+        task = sale_order.tasks_ids
+        self.assertTrue(task)
+
+        # Verify message_post returns a mail.message recordset
+        # when the fsm_no_message_post context flag is set.
+        result = sale_order.with_context(fsm_no_message_post=True).message_post(body="test")
+        self.assertTrue(isinstance(result, self.env.registry['mail.message']))
+        self.assertFalse(result)
+        product_ctx = fsm_product.with_context(fsm_task_id=task.id)
+        product_ctx.set_fsm_quantity(5)
+        sol = sale_order.order_line.filtered(lambda l: l.product_id == fsm_product)
+        self.assertEqual(sol.product_uom_qty, 5)

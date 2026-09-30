@@ -56,6 +56,8 @@ export class DocumentsSearchModel extends SearchModel {
                 folderId = false;
             }
             this.toggleCategoryValue(folderSection.id, folderId);
+        } else {
+            this.documentService.currentFolderAccessToken = undefined;
         }
     }
 

@@ -68,10 +68,11 @@ result = contract.l10n_lu_bik_vehicle
         <field name="amount_select">code</field>
         <field name="amount_python_compute">
 result_qty = inputs['WAGE_SUPPLEMENT_70'].amount
+indexed_wage = contract._get_l10n_lu_indexed_wage(payslip.date_to)
 if contract.wage_type == 'monthly':
-    result = contract.l10n_lu_indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 0.7
+    result = indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 0.7
 else:
-    result = contract.l10n_lu_indexed_wage
+    result = indexed_wage
         </field>
         <field name="struct_id" ref="l10n_lu_hr_payroll.hr_payroll_structure_lux_employee_salary"/>
     </record>
@@ -86,10 +87,11 @@ else:
         <field name="amount_select">code</field>
         <field name="amount_python_compute">
 result_qty = inputs['OVERTIME'].amount
+indexed_wage = contract._get_l10n_lu_indexed_wage(payslip.date_to)
 if contract.wage_type == 'monthly':
-    result = contract.l10n_lu_indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month')
+    result = indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month')
 else:
-    result = contract.l10n_lu_indexed_wage
+    result = indexed_wage
         </field>
         <field name="struct_id" ref="l10n_lu_hr_payroll.hr_payroll_structure_lux_employee_salary"/>
     </record>
@@ -104,10 +106,11 @@ else:
         <field name="amount_select">code</field>
         <field name="amount_python_compute">
 result_qty = inputs['OVERTIME_SUPPLEMENT_40'].amount
+indexed_wage = contract._get_l10n_lu_indexed_wage(payslip.date_to)
 if contract.wage_type == 'monthly':
-    result = contract.l10n_lu_indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 0.4
+    result = indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 0.4
 else:
-    result = contract.l10n_lu_indexed_wage
+    result = indexed_wage
         </field>
         <field name="struct_id" ref="l10n_lu_hr_payroll.hr_payroll_structure_lux_employee_salary"/>
     </record>
@@ -122,10 +125,11 @@ else:
         <field name="amount_select">code</field>
         <field name="amount_python_compute">
 result_qty = inputs['OVERTIME_SUPPLEMENT_150'].amount
+indexed_wage = contract._get_l10n_lu_indexed_wage(payslip.date_to)
 if contract.wage_type == 'monthly':
-    result = contract.l10n_lu_indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 1.5
+    result = indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 1.5
 else:
-    result = contract.l10n_lu_indexed_wage
+    result = indexed_wage
         </field>
         <field name="struct_id" ref="l10n_lu_hr_payroll.hr_payroll_structure_lux_employee_salary"/>
     </record>
@@ -140,10 +144,11 @@ else:
         <field name="amount_select">code</field>
         <field name="amount_python_compute">
 result_qty = inputs['OVERTIME_SUPPLEMENT_150'].amount
+indexed_wage = contract._get_l10n_lu_indexed_wage(payslip.date_to)
 if contract.wage_type == 'monthly':
-    result = contract.l10n_lu_indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 2
+    result = indexed_wage / payslip._rule_parameter('l10n_lu_hours_per_month') * 2
 else:
-    result = contract.l10n_lu_indexed_wage
+    result = indexed_wage
         </field>
         <field name="struct_id" ref="l10n_lu_hr_payroll.hr_payroll_structure_lux_employee_salary"/>
     </record>
@@ -599,11 +604,13 @@ lower_bound = payslip._rule_parameter('l10n_lu_cissm_lower_bound')
 middle_bound = payslip._rule_parameter('l10n_lu_cissm_middle_bound')
 upper_bound = payslip._rule_parameter('l10n_lu_cissm_upper_bound')
 
+indexed_wage = contract._get_l10n_lu_indexed_wage(payslip.date_to)
+
 if contract.wage_type == 'monthly':
-    fte_monthly_wage = int(contract.l10n_lu_indexed_wage / contract.work_time_rate) if contract.work_time_rate else 0
+    fte_monthly_wage = int(indexed_wage / contract.work_time_rate) if contract.work_time_rate else 0
 else:
     worked_hours = payslip._get_paid_worked_days_line_number_of_hours()
-    fte_monthly_wage = int(contract.l10n_lu_indexed_wage * worked_hours / contract.work_time_rate) if contract.work_time_rate else 0
+    fte_monthly_wage = int(indexed_wage * worked_hours / contract.work_time_rate) if contract.work_time_rate else 0
 
 if lower_bound &lt;= fte_monthly_wage &lt;= middle_bound:
     cissm = max_amount

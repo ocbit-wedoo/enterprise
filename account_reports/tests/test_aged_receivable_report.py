@@ -863,3 +863,30 @@ class TestAgedReceivableReport(TestAccountReportsCommon):
             ],
             options
         )
+
+    def test_aged_receivable_horizontal_groups(self):
+        horizontal_group = self.env['account.report.horizontal.group'].create({
+            'name': 'Horizontal Group total',
+            'rule_ids': [
+                Command.create({
+                    'field_name': 'company_id',
+                    'domain': f"[('id', 'in', {(self.company_data['company'] + self.company_data_2['company']).ids})]",
+                }),
+            ],
+            'report_ids': self.report
+        })
+        options = self._generate_options(self.report, '2017-03-01', '2017-04-01', default_options={'selected_horizontal_group_id': horizontal_group.id})
+        self.env.company.totals_below_sections = False
+
+        self.assertLinesValues(
+            # pylint: disable=C0326
+            self.report._get_lines(options),
+            #   Name                 At Date      1 - 30     31 - 60     61 - 90    91 - 120       Older        Total      At Date      1 - 30     31 - 60     61 - 90    91 - 120       Older        Total
+            [   0,                         3,          4,          5,          6,          7,          8,           9,          12,         13,         14,         15,         16,         17,          18],
+            [
+            ('Aged Receivable',          0.0,        0.0,      100.0,      100.0,      100.0,     1000.0,      1300.0,         0.0,        0.0,       50.0,       50.0,       50.0,      500.0,       650.0),
+                ('partner_a',            0.0,        0.0,      100.0,      100.0,      100.0,     1000.0,      1300.0,         0.0,        0.0,        0.0,        0.0,        0.0,        0.0,         0.0),
+                ('partner_b',            0.0,        0.0,        0.0,        0.0,        0.0,        0.0,         0.0,         0.0,        0.0,       50.0,       50.0,       50.0,      500.0,       650.0),
+            ],
+            options,
+        )

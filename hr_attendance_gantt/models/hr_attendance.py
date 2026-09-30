@@ -1,5 +1,6 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from collections import defaultdict
 from datetime import datetime
 
 from dateutil.relativedelta import relativedelta
@@ -9,7 +10,7 @@ from odoo import api, fields, models
 from odoo.osv import expression
 from odoo.tools import float_is_zero
 
-from odoo.addons.resource.models.utils import timezone_datetime
+from odoo.addons.resource.models.utils import Intervals, timezone_datetime
 
 
 class HrAttendance(models.Model):
@@ -118,7 +119,26 @@ class HrAttendance(models.Model):
             timezone_datetime(stop),
         )
 
-        unavailable_intervals = employees.resource_id._get_unavailable_intervals(start, stop)
+        resources_per_calendar = defaultdict(lambda: self.env['resource.resource'])
+        for employee in employees:
+            for (start_period, stop_period, calendar) in calendar_periods_by_employee[employee]:
+                resources_per_calendar[calendar] += employee.resource_id
+
+        unavailable_intervals_by_calendar = {}
+        for calendar, resources in resources_per_calendar.items():
+            unavailable_intervals_by_calendar[calendar] = calendar._unavailable_intervals_batch(
+                timezone_datetime(start), timezone_datetime(stop), resources, tz=timezone(calendar.tz)
+            )
+
+        unavailable_intervals = {}
+        for employee in employees:
+            employee_intervals = Intervals([])
+            for (start_period, stop_period, calendar) in calendar_periods_by_employee[employee]:
+                resource_intervals = unavailable_intervals_by_calendar[calendar].get(employee.resource_id.id, [])
+                calendar_intervals = Intervals([(i[0], i[1], self.env['resource.calendar']) for i in resource_intervals])
+                validity_interval = Intervals([(start_period, stop_period, self.env['resource.calendar'])])
+                employee_intervals |= calendar_intervals & validity_interval
+            unavailable_intervals[employee.resource_id.id] = [(i[0], i[1]) for i in employee_intervals]
 
         result = {}
         for employee in employees:
@@ -133,7 +153,7 @@ class HrAttendance(models.Model):
 
             intervals = unavailable_intervals.get(employee.resource_id.id, [])
             result[employee.id] = [
-                {'start': inv[0], 'stop': inv[1]}
+                {'start': inv[0].astimezone(UTC), 'stop': inv[1].astimezone(UTC)}
                 for inv in intervals
             ]
 

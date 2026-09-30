@@ -332,11 +332,42 @@ class SpreadsheetMixinTest(SpreadsheetTestCase):
             self.assertEqual(revision["user"], (user.id, user.name))
 
         # from snapshot
-        data = spreadsheet.get_spreadsheet_history(True)
+        data = spreadsheet.get_spreadsheet_history(from_snapshot=True)
         revisions = data["revisions"]
         self.assertEqual(len(revisions), 1)
         self.assertEqual(revisions[0]["timestamp"], datetime(2020, 2, 2, 0, 0, 0))
         self.assertEqual(revisions[0]["user"], (user.id, user.name))
+
+    def test_can_replay_complete_history(self):
+        spreadsheet = self.env["spreadsheet.test"].create({})
+        self.assertTrue(spreadsheet._can_replay_complete_history())
+
+        spreadsheet.dispatch_spreadsheet_message(self.new_revision_data(spreadsheet))
+        snapshot_data = {"sheets": [], "revisionId": "snapshot-revision-id"}
+        self.snapshot(
+            spreadsheet,
+            spreadsheet.current_revision_uuid, "snapshot-revision-id", snapshot_data,
+        )
+        # one revision after the snapshot, still active
+        spreadsheet.dispatch_spreadsheet_message(self.new_revision_data(spreadsheet))
+
+        # the snapshot diverged from `spreadsheet_data`, but the archived
+        # revisions bridging them are still there
+        self.assertTrue(spreadsheet._can_replay_complete_history())
+        data = spreadsheet.get_spreadsheet_history()
+        self.assertEqual(data["data"], json.loads(spreadsheet.spreadsheet_data))
+        self.assertEqual(len(data["revisions"]), 3)
+
+        # drop the archived revisions: `spreadsheet_data` can no longer be
+        # replayed up to the snapshot
+        spreadsheet.with_context(active_test=False).spreadsheet_revision_ids.filtered(
+            lambda revision: not revision.active
+        ).unlink()
+
+        self.assertFalse(spreadsheet._can_replay_complete_history())
+        data = spreadsheet.get_spreadsheet_history()
+        self.assertEqual(data["data"], snapshot_data)
+        self.assertEqual(len(data["revisions"]), 1)
 
     def test_currency_passed_to_spreadsheet_history(self):
         spreadsheet = self.env["spreadsheet.test"].create({})

@@ -16,7 +16,7 @@ Manage user and manager notifications
     'sequence': 160,
     'version': '1.0',
 
-    'depends': ['sale'],
+    'depends': ['sale', 'web_gantt'],
 
     'data': [
         'security/ir.model.access.csv',

@@ -1,24 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* industry_fsm_sale
+# * industry_fsm_sale
 #
 # Translators:
 # Tiffany Chang, 2025
 # Naser mars, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Naser mars, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-12 16:33+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"industry_fsm_sale/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: industry_fsm_sale
 #. odoo-python
@@ -30,7 +33,7 @@ msgstr "%(project_name)s - %(task_name)s"
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "<b>Click to edit."
-msgstr ""
+msgstr "<b>برای ویرایش کلیک کنید."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
@@ -43,13 +46,13 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "<b>Review and sign</b> the <b>task report</b> with your customer."
-msgstr ""
+msgstr "<b>گزارش وظیفه</b>را به همراه مشتری<b>بررسی و امضاء کنید</b>."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "<b>Send your task report</b> to your customer."
-msgstr ""
+msgstr "<b>گزارش وظیفه</b>را به مشتری<b>ارسال کنید</b>."
 
 #. module: industry_fsm_sale
 #. odoo-python
@@ -85,6 +88,10 @@ msgid ""
 "time is billed based on their expertise, skills or experience.\n"
 "                </span>"
 msgstr ""
+"<span invisible=\"not is_fsm\">\n"
+"                    خدمات و نرخی که بر اساس تخصص، مهارت‌ها یا تجربه کارمند "
+"برای زمان او اعمال می‌شود را تعریف کنید.\n"
+"                </span>"
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.worksheet_time_and_material
@@ -156,7 +163,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/industry_fsm_sale/wizard/sale_make_invoice_advance.py:0
 msgid "An invoice has been created: %s"
-msgstr ""
+msgstr "یک فاکتور ایجاد شده است: %s"
 
 #. module: industry_fsm_sale
 #: model:ir.model,name:industry_fsm_sale.model_account_analytic_line
@@ -175,6 +182,8 @@ msgid ""
 "By saving this change, all timesheet entries will be linked to the selected "
 "Sales Order Item without distinction."
 msgstr ""
+"با ذخیره این تغییر، همه ثبت‌های ساعات کارکرد بدون تمایز به آیتم سفارش فروش "
+"انتخاب شده مرتبط می‌شوند."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
@@ -183,6 +192,8 @@ msgid ""
 "Choose a <b>name</b> for your product <i>(e.g. Bolts, Screws, Boiler, etc.)."
 "</i>"
 msgstr ""
+"یک <b>نام</b> برای محصول خود <i>انتخاب کنید (مانند پیچ، مهره، دیگ بخار و "
+"غیره).</i>"
 
 #. module: industry_fsm_sale
 #. odoo-javascript
@@ -191,6 +202,8 @@ msgid ""
 "Click on a product to add it to your <b>list of materials</b>. <i>Tip: for "
 "large quantities, click on the number to edit it directly.</i>"
 msgstr ""
+"برای افزودن محصول به لیست مواد بر روی محصول مورد نظر کلیک کنید. <i> نکته: "
+"برای مقادیر بالا، بر روی عدد کلیک کنید تا مستقیماً آن را ویرایش کنید. </i>"
 
 #. module: industry_fsm_sale
 #: model:ir.model,name:industry_fsm_sale.model_res_config_settings
@@ -201,7 +214,7 @@ msgstr "تنظیمات پیکربندی"
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Confirm the creation of your <b>invoice</b>."
-msgstr ""
+msgstr "ایجاد <b>فاکتور</b> را تأیید کنید."
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.project_task_view_list_fsm_sale_inherit
@@ -212,7 +225,7 @@ msgstr "ایجاد فاکتور"
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.project_view_form_inherit
 msgid "Create new quotations directly from tasks"
-msgstr ""
+msgstr "پیش‌فاکتورهای جدید را مستقیماً از وظایف ایجاد کنید"
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_task__currency_id
@@ -223,7 +236,7 @@ msgstr "ارز"
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Customize your <b>layout</b>."
-msgstr ""
+msgstr "<b>طرح چیدمان</b> خود را سفارشی‌سازی کنید."
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.project_view_form_inherit
@@ -234,17 +247,17 @@ msgstr "سرویس پیش فرض"
 #. odoo-python
 #: code:addons/industry_fsm_sale/models/sale_order.py:0
 msgid "Extra Quotation Created: %s"
-msgstr ""
+msgstr "پیش‌فاکتور اضافی ایجاد شد: %s"
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_project__allow_quotations
 msgid "Extra Quotations"
-msgstr ""
+msgstr "پیش‌فاکتورهای بیشتر"
 
 #. module: industry_fsm_sale
 #: model:ir.model,name:industry_fsm_sale.model_report_project_task_user_fsm
 msgid "FSM Tasks Analysis"
-msgstr ""
+msgstr "تحلیل وظایف FSM"
 
 #. module: industry_fsm_sale
 #: model:product.template,name:industry_fsm_sale.field_service_product_product_template
@@ -260,7 +273,7 @@ msgstr "به‌طور کامل فاکتور شده"
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Go back to your Field Service <b>task</b>."
-msgstr ""
+msgstr "به <b>وظیفه</b>خدمات در محل برگردید."
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,help:industry_fsm_sale.field_project_task__under_warranty
@@ -269,6 +282,8 @@ msgid ""
 "the customer. However, the inventory of consumed materials will still be "
 "updated."
 msgstr ""
+"اگر علامت‌گذاری شود، زمان و مواد مصرفی برای این وظیفه به مشتری صورت‌حساب نخواهد "
+"شد. ولی، موجودی مواد مصرف شده همچنان به‌روز خواهد شد."
 
 #. module: industry_fsm_sale
 #. odoo-python
@@ -286,7 +301,7 @@ msgstr "مقدار نامعتبر: %s"
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Invite your customer to <b>validate and sign your task report</b>."
-msgstr ""
+msgstr "از مشتری دعوت کنید تا<b>گزارش وظیفه شما را تأیید و امضاء کند</b>."
 
 #. module: industry_fsm_sale
 #. odoo-python
@@ -309,7 +324,7 @@ msgstr "وضعیت فاکتور"
 #: model_terms:ir.actions.act_window,help:industry_fsm_sale.project_task_action_to_invoice_fsm2
 msgid ""
 "Invoice your time and material to your customers once your tasks are done."
-msgstr ""
+msgstr "پس از انجام وظایف، زمان و مواد مصرفی را برای مشتریان فاکتور کنید."
 
 #. module: industry_fsm_sale
 #. odoo-python
@@ -323,23 +338,23 @@ msgstr "فاکتورها"
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Let's <b>track the material</b> you use for your task."
-msgstr ""
+msgstr "<b>موادی</b> که برای انجام وظیفه مصرف می‌شود را رهگیری کنید."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Let's create a new <b>product</b>."
-msgstr ""
+msgstr "یک <b>محصول</b> جدید ایجاد کنید."
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_task__material_line_total_price
 msgid "Material Line Total Price"
-msgstr ""
+msgstr "قیمت کل سطر مواد"
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_product_product__fsm_quantity
 msgid "Material Quantity"
-msgstr ""
+msgstr "تعداد مواد"
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.view_task_form2_inherit
@@ -349,7 +364,7 @@ msgstr "پیش‌فاکتور جدید"
 #. module: industry_fsm_sale
 #: model_terms:ir.actions.act_window,help:industry_fsm_sale.product_action_fsm
 msgid "No products found. Let's create one!"
-msgstr ""
+msgstr "محصولی یافت نشد. محصول جدیدی ایجاد کنید!"
 
 #. module: industry_fsm_sale
 #: model_terms:ir.actions.act_window,help:industry_fsm_sale.project_task_action_to_invoice_fsm
@@ -381,18 +396,18 @@ msgstr ""
 #. odoo-python
 #: code:addons/industry_fsm_sale/models/project_task.py:0
 msgid "Portal Invoices"
-msgstr ""
+msgstr "فاکتورهای پورتال"
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_task__portal_quotation_count
 msgid "Portal Quotation Count"
-msgstr ""
+msgstr "تعداد پیش‌فاکتور پورتال"
 
 #. module: industry_fsm_sale
 #. odoo-python
 #: code:addons/industry_fsm_sale/models/project_task.py:0
 msgid "Portal Quotations"
-msgstr ""
+msgstr "پیش‌فاکتورهای پورتال"
 
 #. module: industry_fsm_sale
 #: model:ir.model,name:industry_fsm_sale.model_product_template
@@ -415,7 +430,7 @@ msgstr "محصولات"
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_project__allow_material
 msgid "Products on Tasks"
-msgstr ""
+msgstr "محصولات در وظایف"
 
 #. module: industry_fsm_sale
 #: model:ir.model,name:industry_fsm_sale.model_project_project
@@ -427,7 +442,7 @@ msgstr "پروژه"
 #. module: industry_fsm_sale
 #: model:ir.model,name:industry_fsm_sale.model_project_sale_line_employee_map
 msgid "Project Sales line, employee mapping"
-msgstr ""
+msgstr "سطر سفارش فروش پروژه، نگاشت کارکنان"
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.worksheet_time_and_material
@@ -456,7 +471,7 @@ msgstr "پیش‌فاکتور"
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.view_order_form_inherit_sale_project
 msgid "Related Task"
-msgstr ""
+msgstr "وظیفه مرتبط"
 
 #. module: industry_fsm_sale
 #: model:product.template,name:industry_fsm_sale.field_service_product_zero_cost_2_product_template
@@ -492,12 +507,16 @@ msgid ""
 "It can be modified on each task and timesheet entry individually if "
 "necessary."
 msgstr ""
+"آیتم سفارش فروشی که به طور پیش‌فرض در وظایف و ساعات کارکرد این پروژه انتخاب "
+"خواهد شد، به استثناء مواردی که کارمند تنظیم شده برای ساعات کارکرد به صراحت "
+"به آیتم سفارش فروش دیگری در پروژه متصل باشد.\n"
+"در صورت نیاز می‌توان در هر وظیفه یا ثبت ساعات کارکرد آن را تغییر داد."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Save time by automatically generating a <b>signature</b>."
-msgstr ""
+msgstr "با ایجاد خودکار <b>امضاء</b>در زمان صرفه‌جویی کنید."
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_sale_line_employee_map__timesheet_product_id
@@ -518,13 +537,13 @@ msgstr "تکرار وظیفه"
 #. module: industry_fsm_sale
 #: model:ir.model.fields,help:industry_fsm_sale.field_sale_order__task_id
 msgid "Task from which this quotation have been created"
-msgstr ""
+msgstr "وظیفه‌ای که این پیش‌فاکتور از آن ایجاد شده است"
 
 #. module: industry_fsm_sale
 #. odoo-python
 #: code:addons/industry_fsm_sale/models/project_task.py:0
 msgid "Tasks need to be linked to a sales order to be invoiced."
-msgstr ""
+msgstr "وظایف نیازمند صدور فاکتور باید به یک سفارش فروش مرتبط باشند."
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.worksheet_time_and_material
@@ -538,11 +557,13 @@ msgid ""
 "The following products are currently associated with a Field Service "
 "project, you cannot change their Invoicing Policy or Type:%s"
 msgstr ""
+"محصولات زیر در حال حاضر به یک پروژه خدمات در محل مرتبط هستند و نمی‌توانید "
+"سیاست صدور فاکتور یا نوع آنها را تغییر دهید: %s"
 
 #. module: industry_fsm_sale
 #: model:ir.model.constraint,message:industry_fsm_sale.constraint_project_project_material_imply_billable
 msgid "The material can be allowed only when the task can be billed."
-msgstr ""
+msgstr "مواد فقط در صورتی مجاز است که وظیفه قابل فاکتور باشد."
 
 #. module: industry_fsm_sale
 #: model:ir.model.constraint,message:industry_fsm_sale.constraint_project_project_timesheet_product_required_if_billable_and_time
@@ -550,12 +571,14 @@ msgid ""
 "The timesheet product is required when the fsm project can be billed and "
 "timesheets are allowed."
 msgstr ""
+"هرگاه پروژه خدمات در محل قابل فاکتور و ثبت ساعات کارکرد برای آن مجاز باشد، "
+"محصول ساعت کارکرد الزامی است."
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.portal_my_task
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.worksheet_custom_page
 msgid "Time &amp; Material"
-msgstr ""
+msgstr "زمان و مواد"
 
 #. module: industry_fsm_sale
 #: model:ir.actions.act_window,name:industry_fsm_sale.project_task_action_to_invoice_fsm
@@ -569,22 +592,22 @@ msgstr "قابل فاکتور"
 #. module: industry_fsm_sale
 #: model:ir.actions.server,name:industry_fsm_sale.project_task_to_invoice_fsm_server_action
 msgid "To Invoice Server Action"
-msgstr ""
+msgstr "عملیات سرور برای فاکتور"
 
 #. module: industry_fsm_sale
 #: model_terms:ir.actions.act_window,help:industry_fsm_sale.product_action_fsm
 msgid "Track and bill the material used to complete your tasks."
-msgstr ""
+msgstr "مواد مصرف شده برای انجام وظایف را رهگیری و فاکتور کنید."
 
 #. module: industry_fsm_sale
 #: model_terms:ir.ui.view,arch_db:industry_fsm_sale.project_view_form_inherit
 msgid "Track the material used to complete tasks"
-msgstr ""
+msgstr "مواد مصرف شده برای انجام وظایف را رهگیری کنید"
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_task__under_warranty
 msgid "Under Warranty"
-msgstr ""
+msgstr "تحت ضمانت"
 
 #. module: industry_fsm_sale
 #: model:ir.model.fields,field_description:industry_fsm_sale.field_project_sale_line_employee_map__price_unit
@@ -602,24 +625,25 @@ msgstr "فرصت فروش تعدادی بیشتر"
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Use the breadcrumbs to navigate to your <b>list of products</b>."
 msgstr ""
+"برای رفتن به <b>لیست محصولات</b> از مسیر راهنمای بالای صفحه استفاده کنید."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Use the breadcrumbs to return to your <b>task</b>."
-msgstr ""
+msgstr "برای برگشت به<b>وظایف</b>از مسیر راهنمای بالای صفحه استفاده کنید."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Validate the <b>signature</b>."
-msgstr ""
+msgstr "<b>امضاء</b> را تأیید کنید."
 
 #. module: industry_fsm_sale
 #. odoo-javascript
 #: code:addons/industry_fsm_sale/static/src/js/tours/industry_fsm_sale_tour.js:0
 msgid "Wait for the invoice to show up"
-msgstr ""
+msgstr "کمی صبر کنید تا فاکتور نمایش داده شود"
 
 #. module: industry_fsm_sale
 #: model:product.template,name:industry_fsm_sale.field_service_product_zero_cost_3_product_template

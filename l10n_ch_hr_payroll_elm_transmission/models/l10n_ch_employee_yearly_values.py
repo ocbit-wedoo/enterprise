@@ -55,7 +55,7 @@ ANNUITY_RULE_MAPPING = {
 IS_REASON_MAPPING = {
     'entryCompany': ('Entry', 'entryCompany'),
     'entryCanton': ('Entry', 'cantonChange'),
-    'entryOther': ('Entry', 'entryOther'),
+    'entryOther': ('Entry', 'others'),
     'withdrawalCompany': ('Withdrawal', 'withdrawalCompany'),
     'withdrawalNat': ('Withdrawal', 'naturalization'),
     'withdrawalSettled': ('Withdrawal', 'settled-C'),
@@ -1087,6 +1087,21 @@ class L10nCHEmployeeYearlySnapshot(models.Model):
     def _generate_certificate_uuid(self):
         return uuid.uuid4().hex
 
+    def _get_certificate_remark(self, current_certificate, relevant_tax_slips, year_delta):
+        """ Section 15: the additional text of the certificate profile, followed by the total of each
+        salary rule declared in the remarks, named after its payslip lines, which an input can rename. """
+        remarks = [current_certificate.l10n_ch_cs_additional_text] if current_certificate.l10n_ch_cs_additional_text else []
+        remark_lines = relevant_tax_slips.filtered(
+            lambda p: p.l10n_ch_after_departure_payment if year_delta else True).line_ids.filtered(
+            lambda pl: pl.salary_rule_id.l10n_ch_salary_certificate == '15')
+        lines_by_rule = remark_lines.grouped('salary_rule_id')
+        for rule in remark_lines.salary_rule_id.sorted():
+            total = sum(lines_by_rule[rule].mapped('total'))
+            if total:
+                text = ', '.join(sorted(set(lines_by_rule[rule].mapped('name'))))
+                remarks.append(f"{text}: {self._amount2str(total)} CHF")
+        return "\n".join(remarks)
+
     def _create_wage_statement(self, current_certificate, period_from, period_to, relevant_tax_slips, line_values, last_monthly_value, rules_grouped_by_certificate_section, year_delta, rectificate_original_id=None, rectificate_original_date=None):
         if last_monthly_value.person:
             last_valid_activity_rate = float(last_monthly_value.person.get("Work", {}).get("WorkingTime", {}).get("Steady", {}).get("ActivityRate", "100"))
@@ -1155,8 +1170,9 @@ class L10nCHEmployeeYearlySnapshot(models.Model):
 
             if current_certificate.l10n_ch_source_tax_settlement_letter:
                 standard_remarks["TaxAtSourcePeriodForObjection"] = XSD_SKIP_VALUE
-            if current_certificate.l10n_ch_cs_additional_text:
-                salary_certificate["Remark"] = current_certificate.l10n_ch_cs_additional_text
+            remark = self._get_certificate_remark(current_certificate, relevant_tax_slips, year_delta)
+            if remark:
+                salary_certificate["Remark"] = remark
 
             if current_certificate.l10n_ch_cs_expense_policy:
                 if current_certificate.l10n_ch_cs_expense_policy == "approved":
@@ -1291,8 +1307,9 @@ class L10nCHEmployeeYearlySnapshot(models.Model):
         salary_certificate["NetIncome"] = self._amount2str(float(salary_certificate.get("GrossIncome", "0.00")))
 
         # 14 - 15 : Standard Remarks
-        if current_certificate.l10n_ch_cs_additional_text:
-            salary_certificate["Remark"] = current_certificate.l10n_ch_cs_additional_text
+        remark = self._get_certificate_remark(current_certificate, relevant_tax_slips, year_delta)
+        if remark:
+            salary_certificate["Remark"] = remark
         standard_remarks = dict()
         if rectificate_original_id and rectificate_original_date:
             standard_remarks["Rectificate"] = {

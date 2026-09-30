@@ -179,12 +179,21 @@ class TestAccountAvalaraInternal(TestAccountAvalaraInternalCommon):
             'move_type': 'in_invoice',
             'invoice_date': '2017-01-01',
             'partner_id': self.partner.id,
-            'invoice_line_ids': [(0, 0, {'product_id': self.product_user.id, 'price_unit': 123.0, 'tax_ids': []})],
+            'invoice_line_ids': [
+                Command.create({
+                    'product_id': self.product_user.id,
+                    'price_unit': 100.0,
+                    'tax_ids': [self.tax_purchase_a.id],
+                })],
         })
+
+        tax_line = vendor_bill.line_ids.filtered('tax_line_id')
+        tax_line.balance += 5.0  # 15 -> 20
 
         with self._capture_request(return_value={'lines': [], 'summary': []}) as capture:
             vendor_bill.action_post()
             self.assertIsNone(capture.val, "Posting a vendor bill should not send anything to Avatax.")
+            self.assertEqual(vendor_bill.tax_totals['tax_amount_currency'], 20.0, "Manual tax override should not be recomputed from rate")
 
             vendor_bill.button_draft()
             self.assertIsNone(capture.val, "Resetting a vendor bill to draft should not send anything to Avatax.")

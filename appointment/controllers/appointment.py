@@ -342,7 +342,11 @@ class AppointmentController(http.Controller):
                 resource_selected = request.env['appointment.resource'].sudo().browse(resource_selected_id)
             elif appointment_type.assign_method == 'resource_time':
                 resource_default = resources_possible[0]
-        max_capacity_possible = self._get_max_capacity_possible(
+
+        if kwargs.get('skip_resource_selection_reset_resources'):
+            resource_default = resource_selected = request.env['appointment.resource']
+
+        max_capacity_possible = self._get_max_capacity_possible_fast(
             resources_possible,
             resource_selected_id=(resource_selected or resource_default).id,
         )
@@ -837,6 +841,7 @@ class AppointmentController(http.Controller):
             return cookie
         return appointment_type.appointment_tz
 
+    # Remove in master. Use _get_max_capacity_possible_fast instead.
     def _get_max_capacity_possible(self, resources, resource_selected_id=False):
         """
             Returns the maximum capacity possible considering the resources given.
@@ -854,6 +859,26 @@ class AppointmentController(http.Controller):
             if not resource_selected_id or int(resource_selected_id) in resource_ids
         }
         return max(capacity_to_resources.values()) if capacity_to_resources else 1
+
+    def _get_max_capacity_possible_fast(self, resources, resource_selected_id=False):
+        """
+            Returns the maximum capacity possible considering the resources given (resources).
+            We consider all the combinations of linked resources and their capacities.
+            If the selected resource is present in resources, only consider that
+            one as it is then manually selected and slots will be computed using it alone.
+
+            :param resources: an appointment.resource recordset
+            :param resource_selected_id: id of the selected resource
+            :return: int, the maximum capacity possible with the resources given
+        """
+        if not resources:
+            return 1
+        if resource_selected_id and (
+            resource_selected := resources.filtered(lambda r: r.id == int(resource_selected_id))
+        ):
+            return resource_selected.capacity
+        possible_combinations = resources._get_best_combination_per_capacity(1, {})
+        return possible_combinations[-1][1] if possible_combinations else 1
 
     # ------------------------------------------------------------
     # APPOINTMENT TYPE JSON DATA
@@ -959,7 +984,7 @@ class AppointmentController(http.Controller):
         if appointment_type.schedule_based_on != 'resources' or not appointment_type.resource_manage_capacity:
             max_possible_capacity = 1
         else:
-            max_possible_capacity = self._get_max_capacity_possible(filter_resources, resource_selected_id)
+            max_possible_capacity = self._get_max_capacity_possible_fast(filter_resources, resource_selected_id)
 
         return request.env['ir.qweb']._render('appointment.appointment_calendar', {
             'appointment_type': appointment_type,

@@ -130,7 +130,7 @@ class MaintenanceRequest(models.Model):
 
     @api.model_create_multi
     def create(self, vals_list):
-        allowed_to_raise = not self.id  # self.copy() has an id, model.create() does not
+        allowed_to_raise = not self  # self is empty during create; it contains records during copy.
         res = super().create(vals_list)
         res._recreate_leaves(raise_on_schedule_date_already_planned=allowed_to_raise)  # do not raise when copying recurrent request
         return res

@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
         <field name="arch" type="xml">
             <xpath expr='//div[@name="bank_customer_payment"]' position="before">
-                <div t-if="journal_type == 'bank'">
+                <div t-if="['bank', 'credit', 'cash'].includes(journal_type)">
                     <widget name="account_file_uploader" title="Import File" btnClass="file_upload_kanban_action_a mb-0"/>
                 </div>
             </xpath>

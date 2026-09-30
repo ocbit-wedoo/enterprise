@@ -294,6 +294,31 @@ class TestFetchmailServer(TestL10nClEdiCommon):
         self.assertEqual(move.partner_id, partner_sii_same_company)
         self.assertEqual(move.company_id, self.company_data['company'])
 
+    def test_create_invoice_33_from_attachment_other_currency(self):
+        """DTE with other currency """
+        att_name = 'incoming_invoice_33_with_other_currency.xml'
+        from_address = 'incoming_dte@test.com'
+        att_content = misc.file_open(f'l10n_cl_edi/tests/fetchmail_dtes/{att_name}', filter_ext=('.xml',)).read()
+        moves = self.env['fetchmail.server']._create_document_from_attachment(
+          att_content, att_name, from_address, self.company_data['company'].id)
+        move = moves[0]
+        self.assertEqual(move.amount_total, 119.0)
+        self.assertEqual(move.currency_id, self.env.ref('l10n_cl.UF'))
+        self.assertEqual(move.invoice_line_ids.price_unit, 100.0)
+        self.assertEqual(move.invoice_line_ids.price_total, 119.0)
+
+    def test_create_invoice_33_other_currency_no_header_total(self):
+        """DTE with line-level Moneda but without the total MntTotOtrMnda"""
+        att_name = 'incoming_invoice_33_other_currency_no_header_total.xml'
+        from_address = 'incoming_dte@test.com'
+        att_content = misc.file_open(f'l10n_cl_edi/tests/fetchmail_dtes/{att_name}', filter_ext=('.xml',)).read()
+        moves = self.env['fetchmail.server']._create_document_from_attachment(
+            att_content, att_name, from_address, self.company_data['company'].id)
+        move = moves[0]
+        self.assertEqual(move.currency_id, self.env.ref('l10n_cl.UF'))
+        self.assertEqual(move.invoice_line_ids.price_unit, 100.0)
+        self.assertEqual(move.amount_total, 119.0)
+
     def test_create_invoice_34_from_attachment(self):
         """Include Invoice Reference"""
         att_name = 'incoming_invoice_34.xml'

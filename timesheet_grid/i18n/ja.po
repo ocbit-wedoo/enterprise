@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-05-15 16:23+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-24 04:14+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "timesheet_grid/ja/>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: timesheet_grid
 #: model_terms:ir.ui.view,arch_db:timesheet_grid.project_task_view_kanban
@@ -593,7 +593,7 @@ msgstr "会社"
 #. module: timesheet_grid
 #: model:ir.model,name:timesheet_grid.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: timesheet_grid
 #: model:mail.template,description:timesheet_grid.mail_template_timesheet_reminder
@@ -745,7 +745,7 @@ msgstr "表示名"
 #: model:ir.model.fields.selection,name:timesheet_grid.selection__timesheets_analysis_report__validated_status__draft
 #: model_terms:ir.ui.view,arch_db:timesheet_grid.timesheet_view_search
 msgid "Draft"
-msgstr "ドラフト"
+msgstr "下書き"
 
 #. module: timesheet_grid
 #: model:ir.model,name:timesheet_grid.model_hr_employee
@@ -879,9 +879,9 @@ msgid ""
 "timesheet drafts in the original project. Although they won't be visible "
 "here, you can still edit them using the Timesheets app."
 msgstr ""
-"このタスクをタイムシートサポートのないプロジェクトに移動しても、元のプロジェ"
-"クトにはタイムシートのドラフトが残ります。ここでは表示されませんが、タイム"
-"シートアプリを使用して編集することができます。"
+"このタスクをタイムシートサポートのないプロジェクトに移動しても、元の"
+"プロジェクトにはタイムシートの下書きが残ります。ここでは表示されませんが、"
+"タイムシートアプリを使用して編集することができます。"
 
 #. module: timesheet_grid
 #: model_terms:ir.ui.view,arch_db:timesheet_grid.timesheet_view_search
@@ -997,7 +997,7 @@ msgstr "チームのタイムシート検証のリマインダ"
 #: model:ir.actions.server,name:timesheet_grid.invalidate_timesheet_action
 #: model_terms:ir.ui.view,arch_db:timesheet_grid.timesheet_form_view
 msgid "Reset to draft"
-msgstr "ドラフトに戻す"
+msgstr "下書きに戻す"
 
 #. module: timesheet_grid
 #: model_terms:ir.ui.view,arch_db:timesheet_grid.project_task_view_form
@@ -1152,7 +1152,7 @@ msgstr "タイムシートが正常にマージされました。"
 #. odoo-python
 #: code:addons/timesheet_grid/models/analytic.py:0
 msgid "The timesheets have successfully been reset to draft."
-msgstr "タイムシートが正常にドラフトに戻されました。"
+msgstr "タイムシートが正常に下書きに戻されました。"
 
 #. module: timesheet_grid
 #. odoo-python
@@ -1177,7 +1177,7 @@ msgstr "マージするタイムシートがありません。"
 #: code:addons/timesheet_grid/models/analytic.py:0
 msgid ""
 "There are no timesheets to reset to draft or they have already been invoiced."
-msgstr "ドラフトに戻すタイムシートがないか、すでに請求されています。"
+msgstr "下書きに戻すタイムシートがないか、すでに請求されています。"
 
 #. module: timesheet_grid
 #. odoo-python
@@ -1381,7 +1381,7 @@ msgstr "週"
 #. module: timesheet_grid
 #: model:ir.model.fields,help:timesheet_grid.field_account_analytic_line__user_can_validate
 msgid "Whether or not the current user can validate/reset to draft the record."
-msgstr "現在のユーザがそのレコードを検証/ドラフトに戻せるかどうか。"
+msgstr "現在のユーザがそのレコードを検証/下書きに戻せるかどうか。"
 
 #. module: timesheet_grid
 #. odoo-python
@@ -1397,8 +1397,8 @@ msgid ""
 "You can only reset to draft the timesheets of employees of whom you are the "
 "manager or the timesheet approver."
 msgstr ""
-"マネジャーまたはタイムシート承認者である場合のみ、従業員のタイムシートのみ"
-"ドラフトに戻すことができます。"
+"マネジャーまたはタイムシート承認者である場合のみ、従業員のタイムシートのみ下"
+"書きに戻すことができます。"
 
 #. module: timesheet_grid
 #. odoo-python

@@ -18,7 +18,7 @@ Key Features
 """,
     'category': 'Sales/Sales',
     'sequence': 320,
-    'version': '1.1',
+    'version': '2.0',
     'application': True,
     'depends': ['sale_management', 'stock_delivery'],
     'data': [

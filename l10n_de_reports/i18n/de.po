@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server saas~16.1+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 19:02+0000\n"
-"PO-Revision-Date: 2026-04-15 13:12+0000\n"
+"PO-Revision-Date: 2026-07-23 10:08+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18-l10n/"
 "l10n_de_reports/de/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_de_reports
 #: model:account.report.line,name:l10n_de_reports.skr_bs_liabilities_2023_b_1
@@ -575,11 +575,11 @@ msgid ""
 "partner will be added to a multiple of ten starting by the number 1.The "
 "account code's length can be specified in the company settings."
 msgstr ""
-"Im Datev-Export des Hauptbuchs wird jeder Kunde durch diesen Kennung "
+"Im DATEV-Export des Hauptbuchs wird jeder Kunde anhand dieser Kennung "
 "identifiziert. Wenn diese Kennung nicht festgelegt ist, wird die Datenbank-"
-"ID des Partners zu einem Vielfachen von zehn addiert, beginnend mit der Zahl "
-"7. Die Länge des Kontocodes kann in den Unternehmenseinstellungen festgelegt "
-"werden."
+"ID des Partners verwendet und auf ein Vielfaches von zehn aufgerundet, "
+"beginnend mit der Nummer 1. Die Länge des Kontocodes kann in den "
+"Unternehmenseinstellungen festgelegt werden."
 
 #. module: l10n_de_reports
 #: model:ir.model.fields,help:l10n_de_reports.field_res_partner__l10n_de_datev_identifier
@@ -590,11 +590,11 @@ msgid ""
 "partner will be added to a multiple of ten starting by the number 7.The "
 "account code's length can be specified in the company settings."
 msgstr ""
-"Im Datev-Export des Hauptbuchs wird jeder Lieferant durch diesen Kennung "
+"Im DATEV-Export des Hauptbuchs wird jeder Kunde anhand dieser Kennung "
 "identifiziert. Wenn diese Kennung nicht festgelegt ist, wird die Datenbank-"
-"ID des Partners zu einem Vielfachen von zehn addiert, beginnend mit der Zahl "
-"7. Die Länge des Kontocodes kann in den Unternehmenseinstellungen festgelegt "
-"werden."
+"ID des Partners verwendet und auf ein Vielfaches von zehn aufgerundet, "
+"beginnend mit der Nummer 1. Die Länge des Kontocodes kann in den "
+"Unternehmenseinstellungen festgelegt werden."
 
 #. module: l10n_de_reports
 #: model:account.report.line,name:l10n_de_reports.skr_pl_line_expense_4_2
@@ -680,7 +680,7 @@ msgstr "Abgabenordnung"
 #. module: l10n_de_reports
 #: model_terms:ir.ui.view,arch_db:l10n_de_reports.res_config_settings_view_form
 msgid "The number of digits for the account code in the DateV export"
-msgstr "Die Anzahl der Ziffern für den Kontocode im Datev-Export"
+msgstr "Die Anzahl der Ziffern für den Kontocode im DATEV-Export"
 
 #. module: l10n_de_reports
 #: model:account.report.line,name:l10n_de_reports.skr_bs_liabilities_a_v

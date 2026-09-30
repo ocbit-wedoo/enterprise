@@ -65,6 +65,8 @@ class MrpWorkcenterProductivity(models.Model):
     @api.depends('employee_id.hourly_cost')
     def _compute_employee_cost(self):
         for time in self:
+            if time.workorder_id.state == 'done' and not time.currency_id.is_zero(time.employee_cost):
+                continue
             time.employee_cost = time.employee_id.hourly_cost if time.employee_id else time.workcenter_id.employee_costs_hour
 
     @api.depends('duration', 'employee_cost')

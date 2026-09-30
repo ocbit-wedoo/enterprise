@@ -19,4 +19,12 @@ export class TimerTimesheetGridController extends TimesheetGridController {
         // display `Add a line` button si create inline is disabled or if there is no content
         return super.displayAddALine && (!this.props.archInfo.createInline || this.displayNoContent);
     }
+
+    createRecord(params) {
+        super.createRecord({
+            ...(params || {}),
+            expandedFormRef: "hr_timesheet.hr_timesheet_line_form",
+        });
+    }
+
 }

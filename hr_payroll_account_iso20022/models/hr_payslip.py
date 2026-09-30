@@ -24,7 +24,7 @@ class HrPayslip(models.Model):
             'journal_id': journal_id.id,
             'currency_id': journal_id.currency_id.id,
             'payment_type': 'outbound',
-            'memo': self.number,
+            'memo': self._get_iso20022_communication(),
             'partner_id': self.employee_id.work_contact_id.id,
             'partner_bank_id': self.employee_id.bank_account_id.id,
         }
@@ -36,14 +36,24 @@ class HrPayslip(models.Model):
 
         return payment_vals
 
+    def _get_iso20022_communication(self):
+        """ Communication displayed to the employee on their bank statement (RmtInf/Ustrd). """
+        self.ensure_one()
+        return self.number
+
     def action_payslip_payment_report(self, export_format='sepa'):
         action = super().action_payslip_payment_report()
-        if self.company_id.currency_id.name != 'EUR':
-            return action
-        action.update({
-            'context': {
-                **action['context'],
-                'default_export_format': export_format,
-            },
-        })
+        default_export_format = None
+        if self.company_id.country_code == 'CH':
+            default_export_format = 'iso20022_ch'
+        elif self.company_id.currency_id.name == 'EUR':
+            default_export_format = export_format
+
+        if default_export_format:
+            action.update({
+                'context': {
+                    **action['context'],
+                    'default_export_format': default_export_format,
+                },
+            })
         return action

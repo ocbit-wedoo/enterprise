@@ -3,7 +3,7 @@
 import { formatText } from '@mail/js/emojis_mixin';
 
 export const SocialPostFormatterRegex = {
-    REGEX_AT: /\B@([\w\dÀ-ÿ-.]+)/g,
+    REGEX_AT: /(?<=^|\s|<br>)@([\w\dÀ-ÿ-.]+)/g,
     REGEX_HASHTAG: /(^|\s|<br>)#([a-zA-Z\d\-_]+)/g,
     REGEX_URL: /http(s)?:\/\/(www\.)?[a-zA-Z0-9@:%_+~#=?&/\-;!.,()'*$]{3,2000}/g,
 };

@@ -815,25 +815,16 @@ class TestSingleTouchPayroll(L10nPayrollAccountCommon):
         data_2 = stp_2._get_complex_rendering_data()
         remuneration_collection = data_2[self.employee_1.id]["Remuneration"]
         remuneration_collection = sorted(remuneration_collection, key=lambda x: x["IncomeStreamTypeC"])
-        self.assertEqual(len(remuneration_collection), 2)
+        self.assertEqual(len(remuneration_collection), 1)
         self.assertStpTupleEqual(
             remuneration_collection[0],
             {
-                "GrossA": 12000,
-                "IncomeStreamTypeC": "SAW",
-                "IncomeTaxPayAsYouGoWithholdingTaxWithheldA": 3402.0,
+                "GrossA": 17000.0,
+                "IncomeStreamTypeC": "WHM",
+                "IncomeTaxPayAsYouGoWithholdingTaxWithheldA": 4368.0,
 
             }
         )
-        self.assertStpTupleEqual(
-            remuneration_collection[1],
-            {
-                "GrossA": 5000,
-                "IncomeStreamTypeC": "WHM",
-                "IncomeTaxPayAsYouGoWithholdingTaxWithheldA": 966.0,
-            }
-        )
-        self.assertStpTupleEqual(remuneration_collection[0], data[self.employee_1.id]["Remuneration"][0])
         self._submit_stp(stp_2)
 
     def test_finalisation(self):
@@ -939,3 +930,15 @@ class TestSingleTouchPayroll(L10nPayrollAccountCommon):
                 "ytd_rfbae": 502
             }])
             self._submit_stp(stp)
+
+    def test_stp_without_payslips_and_employees(self):
+        stp = self.env["l10n_au.stp"].create({
+            "company_id": self.company.id,
+            "payevent_type": "submit",
+        })
+        with self.assertRaisesRegex(ValidationError, "There are no payslips for STP submission."):
+            stp.submit()
+
+        stp.payevent_type = "update"
+        with self.assertRaisesRegex(ValidationError, "There are no employees for STP submission."):
+            stp.submit()

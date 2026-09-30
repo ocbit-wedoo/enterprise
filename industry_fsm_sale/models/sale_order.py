@@ -22,7 +22,7 @@ class SaleOrder(models.Model):
     @api.returns('mail.message', lambda value: value.id)
     def message_post(self, **kwargs):
         if self.env.context.get('fsm_no_message_post'):
-            return False
+            return self.env['mail.message']
         return super().message_post(**kwargs)
 
     def action_confirm(self):

@@ -94,23 +94,18 @@ class SocialStreamTwitter(models.Model):
                 # no error code is returned by the Twitter API in that case
                 # it's probably because the Twitter account we tried to add
                 # is private
-                error_message = _(
+                raise UserError(_(
                     "You cannot create a Stream from this X account.\n"
                     "It may be because it's protected. To solve this, please make sure you follow it before trying again."
-                )
+                ))
             elif response.status_code == 400 and result.get('errors', [{}])[0].get('parameters', {}).get('query'):
                 # invalid query
-                error_message = _("The keyword you've typed in does not look valid. Please try again with other words.")
+                raise UserError(_("X: The keyword you've typed in does not look valid. Please try again with other words."))
+            elif result.get('status') == 429:
+                raise UserError(_("X: Looks like you've made too many requests. Please wait a few minutes before giving it another try."))
             else:
-                error_code = result.get('status')
-                error_message = result.get('title')
-                ERROR_MESSAGES = {
-                    429: _("Looks like you've made too many requests. Please wait a few minutes before giving it another try."),
-                }
-                error_message = ERROR_MESSAGES.get(error_code, error_message)
-
-            if error_message:
-                raise UserError(error_message)
+                self.account_id._action_disconnect_accounts(result.get('detail') or result)
+                return False
 
         if isinstance(result, dict) and not result.get('data') and result.get('errors') or result is None:
             self.account_id._action_disconnect_accounts(result)
@@ -158,6 +153,7 @@ class SocialStreamTwitter(models.Model):
                 'author_name': user_info.get('name'),
                 'published_date': created_date,
                 'twitter_likes_count': public_metrics.get('like_count'),
+                'twitter_comments_count': public_metrics.get('reply_count'),
                 'twitter_retweet_count': public_metrics.get('retweet_count'),
                 'twitter_tweet_id': twitter_tweet_id,
                 'twitter_conversation_id': tweet.get('conversation_id'),

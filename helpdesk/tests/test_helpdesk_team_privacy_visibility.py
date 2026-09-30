@@ -3,6 +3,7 @@
 
 from .common import HelpdeskCommon
 from odoo.addons.mail.tests.common import mail_new_test_user
+from odoo.exceptions import AccessError
 
 
 class TestHelpdeskTeamPrivacyVisibility(HelpdeskCommon):
@@ -92,3 +93,17 @@ class TestHelpdeskTeamPrivacyVisibility(HelpdeskCommon):
         self.ticket.message_subscribe([self.portal_partner.id])
 
         self.assertTrue(self.search_test_ticket_with_user(self.portal_user), "A Portal User following the ticket should see it.")
+
+    def test_helpdesk_team_subscribe_portal(self):
+        self.test_team.privacy_visibility = 'portal'
+
+        with self.assertRaises(AccessError):
+            self.test_team.with_user(self.portal_user).message_subscribe(
+                partner_ids=[self.portal_partner.id]
+            )
+        self.assertFalse(self.search_test_ticket_with_user(self.portal_user))
+
+        self.test_team.with_user(self.helpdesk_manager).message_subscribe(
+            partner_ids=[self.portal_partner.id]
+        )
+        self.assertTrue(self.search_test_ticket_with_user(self.portal_user))

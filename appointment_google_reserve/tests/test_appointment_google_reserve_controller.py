@@ -281,6 +281,7 @@ class AppointmentGoogleReserveControllerTest(GoogleReserveCommon, common.HttpCas
         self.assertEqual(calendar_event.appointment_type_id, self.apt_type_resource_google)
         self.assertEqual(calendar_event.resource_total_capacity_reserved, 4)
         self.assertEqual(calendar_event.start, start_slot)
+        self.assertEqual(calendar_event.appointment_booker_id.name, 'John Doe')
 
         self.assertEqual(update_availabilities.call_count, 1)
         args, _kwargs = update_availabilities.call_args_list[0]

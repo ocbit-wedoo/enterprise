@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-05-07 10:20+0000\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-09-02 11:11+0000\n"
 "Last-Translator: \"Nurul Aini Akrima Sabila (nuaas)\" <nuaas@odoo.com>\n"
 "Language-Team: Indonesian <https://translate.odoo.com/projects/odoo-18/"
 "marketing_automation/id/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_activity_summary_template
@@ -332,7 +332,7 @@ msgstr "Tambahkan kegiatan baru"
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.mailing_mailing_view_form_marketing_activity
 msgid "Add to Templates"
-msgstr "Tambahkan ke Templat-Templat"
+msgstr "Tambahkan ke Template"
 
 #. module: marketing_automation
 #. odoo-python
@@ -741,6 +741,12 @@ msgstr "Pesan Error"
 #: code:addons/marketing_automation/models/marketing_activity.py:0
 msgid "Error! You can't create recursive hierarchy of Activity."
 msgstr "Error! Anda tidak boleh membuat Kegiatan dengan hirarki rekursi."
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/marketing_activity.py:0
+msgid "Error! You can't modify the hierarchy of an active Activity."
+msgstr ""
 
 #. module: marketing_automation
 #. odoo-python
@@ -1239,6 +1245,14 @@ msgstr "Jumlah interaksi (like, share, komentar ...) dengan post sosmed"
 #: code:addons/marketing_automation/models/marketing_campaign.py:0
 msgid "Offer free catalog"
 msgstr "Tawarkan katalog gratis"
+
+#. module: marketing_automation
+#. odoo-python
+#: code:addons/marketing_automation/models/mailing_mailing.py:0
+msgid ""
+"Oops! You can't retry sending emails from inside a Marketing Automation "
+"campaign."
+msgstr ""
 
 #. module: marketing_automation
 #: model_terms:ir.ui.view,arch_db:marketing_automation.marketing_campaign_view_form

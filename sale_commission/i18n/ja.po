@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2026-04-17 09:58+0000\n"
+"PO-Revision-Date: 2026-08-31 03:09+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "sale_commission/ja/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: sale_commission
 #. odoo-python
@@ -335,7 +335,7 @@ msgstr "販売担当者の実績と目標額に基づいて販売コミッショ
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_plan
@@ -438,7 +438,7 @@ msgstr "完了"
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_plan__state__draft
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_search
 msgid "Draft"
-msgstr "ドラフト"
+msgstr "下書き"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
@@ -541,7 +541,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:sale_commission.field_sale_commission_plan__message_has_error
 #: model:ir.model.fields,help:sale_commission.field_sale_commission_plan__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__message_is_follower
@@ -663,7 +663,7 @@ msgstr "エラー数"
 #. module: sale_commission
 #: model:ir.model.fields,help:sale_commission.field_sale_commission_plan__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: sale_commission
 #: model:ir.model.fields,help:sale_commission.field_sale_commission_plan__message_has_error_counter
@@ -722,7 +722,7 @@ msgstr "期間"
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__periodicity
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_search
 msgid "Periodicity"
-msgstr "周期設定"
+msgstr "周期"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
@@ -789,7 +789,7 @@ msgstr "関連コミッション"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Reset to draft"
-msgstr "ドラフトにリセット"
+msgstr "下書きにリセット"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__message_has_sms_error
@@ -861,7 +861,7 @@ msgstr "開始日"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__state
 msgid "State"
-msgstr "状態"
+msgstr "ステータス"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_user_wizard

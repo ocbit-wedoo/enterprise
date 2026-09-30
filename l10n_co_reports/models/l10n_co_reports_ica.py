@@ -38,14 +38,7 @@ class ICAReportCustomHandler(models.AbstractModel):
                 SELECT
                     %(column_group_key)s AS column_group_key,
                     SUM(account_move_line.credit - account_move_line.debit) AS balance,
-                    SUM(CASE
-                        WHEN account_move_line.credit > 0
-                            THEN account_move_line.tax_base_amount
-                        WHEN account_move_line.debit > 0
-                            THEN account_move_line.tax_base_amount * -1
-                        ELSE 0
-                        END
-                    ) AS tax_base_amount,
+                    SUM(account_move_line.tax_base_amount) AS tax_base_amount,
                     %(bimestre_column)s
                     rp.id AS partner_id,
                     rp.name AS partner_name

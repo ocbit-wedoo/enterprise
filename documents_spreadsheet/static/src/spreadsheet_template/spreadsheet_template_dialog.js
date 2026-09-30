@@ -7,6 +7,7 @@ import { SpreadsheetSelectorGrid } from "@spreadsheet_edition/assets/components/
 
 import { KeepLast } from "@web/core/utils/concurrency";
 import { SearchModel } from "@web/search/search_model";
+import { user } from "@web/core/user";
 import { useBus, useService } from "@web/core/utils/hooks";
 import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
 import { getDefaultConfig } from "@web/views/view";
@@ -54,6 +55,9 @@ export class TemplateDialog extends Component {
         this.model = new SearchModel(this.env, {
             orm: this.orm,
             view: useService("view"),
+            field: useService("field"),
+            name: useService("name"),
+            dialog: useService("dialog"),
         });
         useChildSubEnv({
             searchModel: this.model,
@@ -68,21 +72,27 @@ export class TemplateDialog extends Component {
                 ["document_spreadsheet_folder_id"]
             );
             this.documentsSpreadsheetFolderId = defaultFolder[0].document_spreadsheet_folder_id[0];
-            const views = await this.viewService.loadViews({
-                resModel: "spreadsheet.template",
-                context: this.props.context,
-                views: [[false, "search"]],
-            });
-            await this.model.load({
-                resModel: "spreadsheet.template",
-                context: this.props.context,
-                orderBy: "id",
-                searchMenuTypes: [],
-                searchViewArch: views.views.search.arch,
-                searchViewId: views.views.search.id,
-                searchViewFields: views.fields,
-            });
-            await this._fetchTemplates();
+            this.hasTemplatesAccess = await user.checkAccessRight("spreadsheet.template", "read");
+            if (this.hasTemplatesAccess) {
+                const views = await this.viewService.loadViews({
+                    resModel: "spreadsheet.template",
+                    context: this.props.context,
+                    views: [[false, "search"]],
+                });
+                await this.model.load({
+                    resModel: "spreadsheet.template",
+                    context: this.props.context,
+                    orderBy: "id",
+                    searchMenuTypes: [],
+                    searchViewArch: views.views.search.arch,
+                    searchViewId: views.views.search.id,
+                    searchViewFields: views.fields,
+                });
+                await this._fetchTemplates();
+            } else {
+                this.state.templates = [];
+                this.state.templatesCount = 0;
+            }
         });
 
         useEffect(

@@ -7,12 +7,13 @@
 # Junko Augias, 2025
 #
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:48+0000\n"
-"PO-Revision-Date: 2026-04-29 19:56+0000\n"
+"POT-Creation-Date: 2026-06-19 17:47+0000\n"
+"PO-Revision-Date: 2026-09-01 03:08+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "account_sepa_direct_debit/ja/>\n"
@@ -21,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.sdd_mandate_form
@@ -1034,7 +1035,7 @@ msgstr "ダウンロード"
 #: model:ir.model.fields.selection,name:account_sepa_direct_debit.selection__sdd_mandate__state__draft
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_sdd_mandate_search_view
 msgid "Draft"
-msgstr "ドラフト"
+msgstr "下書き"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__state
@@ -1046,13 +1047,13 @@ msgid ""
 "valid.\n"
 "Revoked: Fraudulent mandates. Previous invoices might need reimbursement.\n"
 msgstr ""
-"ドラフト: 使用前に検証して下さい。\n"
+"下書き: 使用前に検証して下さい。\n"
 "有効: 支払を回収するのに有効な同意書。\n"
 "取消済: 同意書は検証されていません。\n"
 "クローズ済: 期限切れまたは手動でクローズされた同意書。以前の取引は有効のまま"
 "です。\n"
-"撤回済: 不正な請求。以前の顧客請求書については、払戻しが必要な場合がありま"
-"す。\n"
+"撤回済: 不正な請求。以前の顧客請求書については、払戻しが必要な場合があります"
+"。\n"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate_send__checkbox_send_mail
@@ -1179,7 +1180,7 @@ msgstr "識別子コード"
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__name
 msgid "Identifier"
-msgstr "保管ロット"
+msgstr "識別子"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_needaction
@@ -1190,7 +1191,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_has_error
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__payment_ids
@@ -1289,6 +1290,12 @@ msgid "Mandate Form PDF"
 msgstr "同意書フォームPDF"
 
 #. module: account_sepa_direct_debit
+#. odoo-python
+#: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
+msgid "Mandate customer and bank account need to match."
+msgstr "顧客と銀行口座の情報が一致している必要があります。"
+
+#. module: account_sepa_direct_debit
 #: model:ir.actions.report,name:account_sepa_direct_debit.sdd_mandate_form_report_main
 msgid "Mandate form"
 msgstr "以下からの同意書："
@@ -1379,7 +1386,7 @@ msgstr "この同意書によって支払われる請求書の数"
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__message_has_error_counter
@@ -1439,7 +1446,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account_sepa_direct_debit/models/sdd_mandate.py:0
 msgid "Only mandates in draft state can be deleted."
-msgstr "ドラフト状態の同意書のみ削除できます。"
+msgstr "下書き状態の同意書のみ削除できます。"
 
 #. module: account_sepa_direct_debit
 #: model_terms:ir.ui.view,arch_db:account_sepa_direct_debit.account_payment_register_form_inherit_account_sepa_direct_debit
@@ -1860,7 +1867,7 @@ msgstr "開始日"
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,field_description:account_sepa_direct_debit.field_sdd_mandate__state
 msgid "State"
-msgstr "状態"
+msgstr "ステータス"
 
 #. module: account_sepa_direct_debit
 #: model:ir.model.fields,help:account_sepa_direct_debit.field_sdd_mandate__activity_state

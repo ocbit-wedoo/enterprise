@@ -3,13 +3,14 @@
 # * l10n_mx_edi
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# "Fernanda Alvarez (mfar)" <mfar@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.3alpha1+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 19:09+0000\n"
-"PO-Revision-Date: 2025-11-19 20:12+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-27 02:59+0000\n"
+"Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_mx_edi/es_419/>\n"
 "Language: es_419\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_mx_edi
 #: model:ir.model.fields.selection,name:l10n_mx_edi.selection__account_move__l10n_mx_edi_invoice_cancellation_reason__01
@@ -237,7 +238,7 @@ msgstr "Se debe respetar un plazo de 2 horas antes de realizar la cancelación"
 #. module: l10n_mx_edi
 #: model:ir.model.constraint,message:l10n_mx_edi.constraint_l10n_mx_edi_payment_method_code_unique
 msgid "A payment method with the same code already exists."
-msgstr ""
+msgstr "Ya existe un método de pago con el mismo código."
 
 #. module: l10n_mx_edi
 #: model_terms:ir.ui.view,arch_db:l10n_mx_edi.report_payment_document
@@ -675,13 +676,13 @@ msgstr "Creado el"
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_product_product__l10n_mx_edi_predial_account
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_product_template__l10n_mx_edi_predial_account
 msgid "Cuenta predial"
-msgstr ""
+msgstr "Cuenta predial"
 
 #. module: l10n_mx_edi
 #. odoo-python
 #: code:addons/l10n_mx_edi/models/product.py:0
 msgid "Cuenta predial should be alphanumeric!"
-msgstr ""
+msgstr "La cuenta predial debe ser un valor alfanumérico."
 
 #. module: l10n_mx_edi
 #: model:ir.model,name:l10n_mx_edi.model_res_currency
@@ -887,13 +888,13 @@ msgstr "Factura global"
 #. module: l10n_mx_edi
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_res_company__l10n_mx_edi_global_invoice_sequence_id
 msgid "Global Invoice Sequence"
-msgstr ""
+msgstr "Secuencia de la factura global"
 
 #. module: l10n_mx_edi
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_res_company__l10n_mx_edi_global_invoice_sequence_prefix
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_res_config_settings__l10n_mx_edi_global_invoice_sequence_prefix
 msgid "Global Invoice Serie"
-msgstr ""
+msgstr "Serie de la factura global"
 
 #. module: l10n_mx_edi
 #: model:ir.model.fields.selection,name:l10n_mx_edi.selection__res_company__l10n_mx_edi_fiscal_regime__628
@@ -978,9 +979,9 @@ msgid ""
 "Cash, Nominal Check, Credit Card, etc. Leave empty if unkown and the XML "
 "will show 'Unidentified'."
 msgstr ""
-"Indica la forma en que se pagó o se pagará la factura, donde las opciones "
-"podrían ser: Efectivo, Cheque nominal, Tarjeta de crédito, etc. Deje el "
-"campo en blanco si no lo conoce y en el XML se mostrará 'No identificado'."
+"Indica la forma en que se pagó o se pagará la factura. Las opciones pueden "
+"ser: efectivo, cheque nominativo, tarjeta de crédito, etc. Déjalo vacío si "
+"no conoces el método de pago y el XML mostrará 'No identificado'."
 
 #. module: l10n_mx_edi
 #: model:ir.model.fields,help:l10n_mx_edi.field_account_journal__l10n_mx_edi_payment_method_id
@@ -1110,7 +1111,7 @@ msgstr "¿Se necesita el CFDI?"
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_res_partner__l10n_mx_edi_partner_address_complete
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_res_users__l10n_mx_edi_partner_address_complete
 msgid "L10N Mx Edi Partner Address Complete"
-msgstr ""
+msgstr "Completar la dirección del contacto en EDI"
 
 #. module: l10n_mx_edi
 #: model:ir.model.fields,field_description:l10n_mx_edi.field_account_bank_statement_line__l10n_mx_edi_payment_document_ids
@@ -1482,7 +1483,7 @@ msgstr "Producto"
 #. module: l10n_mx_edi
 #: model:ir.model.fields.selection,name:l10n_mx_edi.selection__res_company__l10n_mx_edi_pac__finkok
 msgid "Quadrum"
-msgstr ""
+msgstr "Quadrum"
 
 #. module: l10n_mx_edi
 #: model:ir.model.fields.selection,name:l10n_mx_edi.selection__account_move__l10n_mx_edi_usage__d05
@@ -1564,9 +1565,8 @@ msgstr ""
 #. module: l10n_mx_edi
 #: model:ir.model.fields.selection,name:l10n_mx_edi.selection__res_company__l10n_mx_edi_fiscal_regime__615
 #: model:ir.model.fields.selection,name:l10n_mx_edi.selection__res_partner__l10n_mx_edi_fiscal_regime__615
-#, fuzzy
 msgid "Régimen de los ingresos por obtención de premios"
-msgstr "Ingresos por la Obtención de Préstamos"
+msgstr "Régimen de los ingresos por obtención de premios"
 
 #. module: l10n_mx_edi
 #: model_terms:ir.ui.view,arch_db:l10n_mx_edi.report_invoice_document
@@ -1704,7 +1704,6 @@ msgstr "RFC del proveedor"
 #. module: l10n_mx_edi
 #. odoo-python
 #: code:addons/l10n_mx_edi/models/account_move.py:0
-#, fuzzy
 msgid "Tax ID %s can not be imported"
 msgstr "El RFC %s no se puede importar"
 
@@ -2010,13 +2009,13 @@ msgstr "Sin obligaciones fiscales"
 #. odoo-python
 #: code:addons/l10n_mx_edi/models/account_move.py:0
 msgid "XML CFDI"
-msgstr ""
+msgstr "XML CFDI"
 
 #. module: l10n_mx_edi
 #. odoo-python
 #: code:addons/l10n_mx_edi/models/l10n_mx_edi_document.py:0
 msgid "You can no longer send a CFDI for a PUE payment."
-msgstr ""
+msgstr "Ya no es posible enviar un CFDI para un pago PUE."
 
 #. module: l10n_mx_edi
 #. odoo-python
@@ -2055,7 +2054,6 @@ msgstr ""
 #. module: l10n_mx_edi
 #. odoo-python
 #: code:addons/l10n_mx_edi/wizard/account_move_reversal.py:0
-#, fuzzy
 msgid ""
 "You cannot reverse directly the cash basis entry, reverse the source move "
 "instead."

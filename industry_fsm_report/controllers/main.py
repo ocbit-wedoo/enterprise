@@ -9,7 +9,7 @@ class WebStudioController(main.WebStudioController):
     def edit_view(self, view_id, studio_view_arch, operations=None, model=None, context=None):
         action = super().edit_view(view_id, studio_view_arch, operations, model, context)
         model = model or request.env['ir.ui.view'].browse(view_id).model
-        worksheet_template_to_change = request.env['worksheet.template'].sudo().search([('model_id', '=', model)])
+        worksheet_template_to_change = request.env['worksheet.template'].sudo().search([('model_id', '=', model), ('company_id', '=', request.env.company.id)])
         if worksheet_template_to_change:
             worksheet_template_to_change._generate_qweb_report_template()
         return action

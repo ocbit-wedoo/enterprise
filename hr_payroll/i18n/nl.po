@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:45+0000\n"
-"PO-Revision-Date: 2026-05-27 15:25+0000\n"
+"PO-Revision-Date: 2026-09-15 06:54+0000\n"
 "Last-Translator: Bren Driesen <brdri@odoo.com>\n"
 "Language-Team: Dutch <https://translate.odoo.com/projects/odoo-18/hr_payroll/"
 "nl/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: hr_payroll
 #. odoo-python
@@ -93,7 +93,7 @@ msgstr "%s (kopie)"
 #: model:ir.actions.report,print_report_name:hr_payroll.action_report_light_payslip
 #: model:ir.actions.report,print_report_name:hr_payroll.action_report_payslip
 msgid "'Payslip - %s' % (object.name)"
-msgstr "'Loonbriefje - %s' % (object.name)"
+msgstr "'Loonstrook - %s' % (object.name)"
 
 #. module: hr_payroll
 #. odoo-python
@@ -418,7 +418,7 @@ msgid ""
 "explore the Payroll app by yourself.</strong>"
 msgstr ""
 "<strong>Gefeliciteerd, je eerste loonstrook is nu klaar. Het is tijd om de "
-"Payroll app zelf te verkennen.</strong>"
+"Loonadministratie-app zelf te verkennen.</strong>"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.contribution_register
@@ -719,12 +719,12 @@ msgstr "Aantal bijlagen"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_attachment__attachment_name
 msgid "Attachment Name"
-msgstr "Naam loonaanpassing"
+msgstr "Naam loonbeslag"
 
 #. module: hr_payroll
 #: model:hr.salary.rule,name:hr_payroll.default_attachment_of_salary_rule
 msgid "Attachment of Salary"
-msgstr "Loonaanpassing"
+msgstr "Loonbeslag"
 
 #. module: hr_payroll
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_payroll_report__work_entry_source__attendance
@@ -794,7 +794,7 @@ msgstr "Basis"
 #: code:addons/hr_payroll/models/hr_payslip.py:0
 #: model:hr.salary.rule,name:hr_payroll.default_basic_salary_rule
 msgid "Basic Salary"
-msgstr "Basis salaris"
+msgstr "Basisloon"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_report__basic_wage
@@ -950,7 +950,7 @@ msgstr "Kinderbijslag"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_rule_category__children_ids
 msgid "Children"
-msgstr "Onderliggende"
+msgstr "Kinderen"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.res_config_settings_view_form
@@ -978,7 +978,7 @@ msgstr ""
 msgid ""
 "Click on <strong>Salary Information</strong> to access additional fields."
 msgstr ""
-"Klik op <strong>Salarisinformatie</strong> om toegang te krijgen tot extra "
+"Klik op <strong>Looninformatie</strong> om toegang te krijgen tot extra "
 "velden."
 
 #. module: hr_payroll
@@ -1025,7 +1025,7 @@ msgstr "Sluitingsdatum"
 #. module: hr_payroll
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_work_entry_type__round_days_type__half-up
 msgid "Closest"
-msgstr "Dichtste bij"
+msgstr "Dichtstbijzijnde"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_edit_payslip_line__code
@@ -2436,7 +2436,9 @@ msgstr "Indische loonadministratie"
 #. module: hr_payroll
 #: model:ir.model.fields,help:hr_payroll.field_hr_payslip__credit_note
 msgid "Indicates this payslip has a refund of another"
-msgstr "Geeft aan dat dit loonstrook een credit heeft van een andere"
+msgstr ""
+"Geeft aan dat deze loonstrook een terugbetaling heeft van een andere "
+"loonstrook"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.view_hr_payslip_form
@@ -2484,7 +2486,7 @@ msgstr "Is regelmatig"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip__is_superuser
 msgid "Is Superuser"
-msgstr "Is superuser"
+msgstr "Is supergebruiker"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip__is_wrong_duration
@@ -2495,7 +2497,7 @@ msgstr "Is de verkeerde duur"
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip_input_type__is_quantity
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_attachment__is_quantity
 msgid "Is quantity?"
-msgstr "Is kwaliteit?"
+msgstr "Is hoeveelheid?"
 
 #. module: hr_payroll
 #: model:ir.model.fields,help:hr_payroll.field_hr_salary_rule__quantity
@@ -2660,7 +2662,7 @@ msgid ""
 "Linking a salary category to its parent is used only for the reporting "
 "purpose."
 msgstr ""
-"Alleen voor rapportage doeleinden wordt een salariscategorie aan een "
+"Een salariscategorie wordt enkel voor rapportagedoeleinden aan haar "
 "bovenliggende categorie gekoppeld."
 
 #. module: hr_payroll
@@ -2837,7 +2839,7 @@ msgstr "Netto -"
 #: code:addons/hr_payroll/models/hr_payslip.py:0
 #: model:hr.salary.rule,name:hr_payroll.default_net_salary
 msgid "Net Salary"
-msgstr "Netto salaris"
+msgstr "Nettoloon"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payroll_report__net_wage
@@ -3796,7 +3798,7 @@ msgstr "Terugbetaling: %(payslip)s"
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_attachment_view_search
 msgid "Refunds"
-msgstr "Retouren"
+msgstr "Terugbetalingen"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__registration_number
@@ -3818,7 +3820,7 @@ msgstr "Standaard werkdag"
 #: code:addons/hr_payroll/models/hr_payslip.py:0
 #: model:hr.salary.rule,name:hr_payroll.default_reimbursement_salary_rule
 msgid "Reimbursement"
-msgstr "Vergoeden"
+msgstr "Vergoeding"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_attachment_view_tree
@@ -3925,7 +3927,7 @@ msgstr "Actief"
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__sim_card
 msgid "SIM Card Copy"
-msgstr "SIM kaart kopie"
+msgstr "Kopie simkaart"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip__message_has_sms_error
@@ -3981,7 +3983,7 @@ msgstr "Loonaanpassingen"
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_rule_category_form
 msgid "Salary Categories"
-msgstr "Salaris categorie"
+msgstr "Looncategorieën"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.view_hr_payslip_form
@@ -3991,7 +3993,7 @@ msgstr "Salarisberekening"
 #. module: hr_payroll
 #: model:ir.model,name:hr_payroll.model_hr_salary_rule
 msgid "Salary Rule"
-msgstr "Salarisregel"
+msgstr "Loonregel"
 
 #. module: hr_payroll
 #: model:ir.actions.act_window,name:hr_payroll.action_hr_salary_rule_category
@@ -4389,8 +4391,8 @@ msgid ""
 "The code of salary rules can be used as reference in computation of other "
 "rules. In that case, it is case sensitive."
 msgstr ""
-"De code van het salaris regels kan worden gebruikt als referentie berekening "
-"voor andere regels. In dat geval is het hoofdlettergevoelig."
+"De code van loonregels kan worden gebruikt als referentie voor de berekening "
+"van andere regels. In dat geval is het hoofdlettergevoelig."
 
 #. module: hr_payroll
 #: model:ir.model.fields,help:hr_payroll.field_hr_payslip_input__code
@@ -4884,7 +4886,7 @@ msgstr "Loon op loonstrook"
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_contract_history__wage_type
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip__wage_type
 msgid "Wage Type"
-msgstr "Salaristype"
+msgstr "Loontype"
 
 #. module: hr_payroll
 #. odoo-python
@@ -5486,8 +5488,7 @@ msgstr "xxxxxxxxxxxx"
 #: model:mail.template,subject:hr_payroll.mail_template_new_payslip
 msgid "{{ object.employee_id.name }}, a new payslip is available for you"
 msgstr ""
-"{{ object.employee_id.name }}, er is een nieuwe loonstrook voor je "
-"beschikbaar"
+"{{ object.employee_id.name }}, er staat een nieuwe loonstrook voor je klaar"
 
 #~ msgid "The period selected does not match the contract validity period."
 #~ msgstr ""

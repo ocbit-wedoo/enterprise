@@ -1,26 +1,29 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* social_push_notifications
+# * social_push_notifications
 #
 # Translators:
 # Wil Odoo, 2024
 #
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
-"Language-Team: Ukrainian (https://app.transifex.com/odoo/teams/41243/uk/)\n"
+"PO-Revision-Date: 2026-06-23 09:07+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
+"Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
+"social_push_notifications/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
-"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
-"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
-"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 "
+"? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
+"14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
+"100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_push_notifications
 #: model_terms:ir.ui.view,arch_db:social_push_notifications.res_config_settings_view_form
@@ -145,7 +148,7 @@ msgstr "Маршрутизація HTTP"
 #: model:ir.model.fields,field_description:social_push_notifications.field_social_post__has_push_notifications_account
 #: model:ir.model.fields,field_description:social_push_notifications.field_social_post_template__has_push_notifications_account
 msgid "Has Push Notifications Account"
-msgstr ""
+msgstr "Є обліковий запис сповіщень"
 
 #. module: social_push_notifications
 #: model:ir.model.fields,field_description:social_push_notifications.field_website_visitor_push_subscription__id
@@ -240,12 +243,12 @@ msgstr "Кількість Push-сповіщень"
 #. odoo-python
 #: code:addons/social_push_notifications/models/social_post_template.py:0
 msgid "Please specify a Notification Message."
-msgstr ""
+msgstr "Вкажіть повідомлення сповіщення."
 
 #. module: social_push_notifications
 #: model_terms:ir.ui.view,arch_db:social_push_notifications.res_config_settings_view_form
 msgid "Project ID"
-msgstr "ID проекту"
+msgstr "ID проєкту"
 
 #. module: social_push_notifications
 #: model_terms:ir.ui.view,arch_db:social_push_notifications.website_visitor_view_kanban
@@ -267,7 +270,7 @@ msgstr "Зображення іконки сповіщення"
 #. module: social_push_notifications
 #: model_terms:ir.ui.view,arch_db:social_push_notifications.social_post_template_view_form
 msgid "Push Notification"
-msgstr ""
+msgstr "Сповіщення"
 
 #. module: social_push_notifications
 #: model_terms:ir.ui.view,arch_db:social_push_notifications.website_visitor_view_search
@@ -309,7 +312,7 @@ msgstr "Включені спливаючі сповіщення"
 #: model:ir.model.fields,field_description:social_push_notifications.field_social_post__push_notification_message
 #: model:ir.model.fields,field_description:social_push_notifications.field_social_post_template__push_notification_message
 msgid "Push Notifications Message"
-msgstr ""
+msgstr "Повідомлення сповіщення"
 
 #. module: social_push_notifications
 #: model:ir.model.fields,field_description:social_push_notifications.field_social_post__push_notifications_preview
@@ -429,8 +432,7 @@ msgstr "Це налаштування для цього веб-сайту."
 #. module: social_push_notifications
 #: model:ir.model.fields,help:social_push_notifications.field_social_account__website_id
 msgid "This firebase configuration will only be used for the specified website"
-msgstr ""
-"Налаштування firebase будуть застосовані лише для конкретного веб-сайту"
+msgstr "Налаштування firebase будуть застосовані лише для конкретного веб-сайту"
 
 #. module: social_push_notifications
 #: model:ir.model.fields,help:social_push_notifications.field_social_live_post__push_notification_image
@@ -469,6 +471,8 @@ msgid ""
 "Used to make comparisons when we need to restrict some features to a "
 "specific media ('facebook', 'x', ...)."
 msgstr ""
+"Використовується для порівнянь, коли нам потрібно обмежити деякі функції "
+"певним медіафайлом («facebook», «x» тощо)."
 
 #. module: social_push_notifications
 #: model:ir.model.fields,field_description:social_push_notifications.field_social_post__visitor_domain

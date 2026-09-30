@@ -6,13 +6,13 @@
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
-# Weblate <noreply-mt-weblate@weblate.org>, 2025.
+# Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2025-11-17 16:26+0000\n"
+"PO-Revision-Date: 2026-08-15 13:09+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
 "industry_fsm_stock/fa/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: industry_fsm_stock
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.view_task_form2_inherit
@@ -30,6 +30,9 @@ msgid ""
 "                            to Pick up\n"
 "                        </span>"
 msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            برای برداشت\n"
+"                        </span>"
 
 #. module: industry_fsm_stock
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.view_task_form2_inherit
@@ -44,11 +47,14 @@ msgid ""
 "Your current access rights do not allow you to perform these actions. Please "
 "contact your administrator to request the necessary permissions."
 msgstr ""
+"افزودن یا به‌روزرسانی این محصول به دلیل وضعیت رهگیری آن محدود شده است. سطح "
+"دسترسی فعلی به شما اجازه انجام این کارها را نمی‌دهد. لطفاً برای درخواست "
+"مجوزهای لازم با مدیر خود تماس بگیرید."
 
 #. module: industry_fsm_stock
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.fsm_stock_tracking_line_view_form
 msgid "Already Delivered"
-msgstr ""
+msgstr "تحویل داده شده است"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__create_uid
@@ -77,7 +83,7 @@ msgstr "نام نمایش داده شده"
 #. odoo-python
 #: code:addons/industry_fsm_stock/wizard/fsm_stock_tracking.py:0
 msgid "Each line needs a Lot/Serial Number"
-msgstr ""
+msgstr "هر سطر نیازمند یک سری ساخت/شماره سریال است"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,help:industry_fsm_stock.field_fsm_stock_tracking__tracking
@@ -87,7 +93,7 @@ msgstr "از قابلیت ردیابی یک محصول قابل نگهداری �
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_sale_order_line__fsm_lot_id
 msgid "Fsm Lot"
-msgstr ""
+msgstr "سری ساخت FSM"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__id
@@ -110,7 +116,7 @@ msgstr "آخرین بروز رسانی در"
 #. module: industry_fsm_stock
 #: model:ir.model,name:industry_fsm_stock.model_fsm_stock_tracking_line
 msgid "Lines for FSM Stock Tracking"
-msgstr ""
+msgstr "سطرهای رهگیری موجودی FSM"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking_line__lot_id
@@ -121,13 +127,13 @@ msgstr "سری ساخت/شماره سریال"
 #. odoo-javascript
 #: code:addons/industry_fsm_stock/static/src/js/product_catalog/sale_order_line/sale_order_line.xml:0
 msgid "Lot/Serial number"
-msgstr ""
+msgstr "سری ساخت/شماره سریال"
 
 #. module: industry_fsm_stock
 #. odoo-python
 #: code:addons/industry_fsm_stock/models/project_task.py:0
 msgid "Pick Up Material"
-msgstr ""
+msgstr "برداشت مواد"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__product_id
@@ -172,7 +178,7 @@ msgstr "انتقال موجودی"
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_project_task__stock_move_customer_product_count
 msgid "Stock Move Customer Product Count"
-msgstr ""
+msgstr "تعداد محصول مشتری در انتقال محصول"
 
 #. module: industry_fsm_stock
 #: model:ir.model,name:industry_fsm_stock.model_project_task
@@ -195,7 +201,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.fsm_stock_tracking_line_line_view_form
 #: model_terms:ir.ui.view,arch_db:industry_fsm_stock.fsm_stock_tracking_line_view_form
 msgid "Track Stock"
-msgstr ""
+msgstr "رهگیری موجودی"
 
 #. module: industry_fsm_stock
 #: model:ir.model.fields,field_description:industry_fsm_stock.field_fsm_stock_tracking__tracking
@@ -211,4 +217,4 @@ msgstr "تایید اعتبار"
 #. odoo-python
 #: code:addons/industry_fsm_stock/models/product.py:0
 msgid "Validate Lot/Serial Number"
-msgstr ""
+msgstr "تأیید سری ساخت/شماره سریال"

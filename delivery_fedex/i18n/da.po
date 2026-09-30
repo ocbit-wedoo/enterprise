@@ -9,13 +9,14 @@
 # Mads Søndergaard, 2024
 # lhmflexerp <lhm@flexerp.dk>, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2026-02-21 10:03+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 14:15+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "delivery_fedex/da/>\n"
 "Language: da\n"
@@ -23,12 +24,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid ", click on \"Get Production Key\" and follow all the steps."
-msgstr ", Klik på \"Få produktionsnøgle\" og følg alle trin."
+msgstr ", Klik på \"Få produktionsnøgle\", og følg alle trin."
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -52,8 +53,8 @@ msgid ""
 "'LB'\">IN</span>"
 msgstr ""
 "<span invisible=\"fedex_weight_unit != 'KG'\">CM</span>\n"
-"                                <span invisible=\"fedex_weight_unit != 'LB'\""
-">IN</span>"
+"                                <span invisible=\"fedex_weight_unit != "
+"'LB'\">IN</span>"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -63,12 +64,12 @@ msgstr "Kontonummer"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Advanced Services with Label Certification"
-msgstr "Avancerede tjenester med mærkat certificering"
+msgstr "Avancerede tjenester med etiketcertificering"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Advanced Services without Label Certification"
-msgstr "Avancerede tjenester uden mærkat certificering"
+msgstr "Avancerede tjenester uden etiketcertificering"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_droppoff_type__business_service_center
@@ -78,17 +79,17 @@ msgstr "BUSINESS_SERVICE_CENTER"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_stock_package_type__package_carrier_type
 msgid "Carrier"
-msgstr "Fragtfirma"
+msgstr "Transportfirma"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Certification Process"
-msgstr "Certificerings proces"
+msgstr "Certificeringsproces"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_document_stock_type
 msgid "Commercial Invoice Type"
-msgstr "Kommerciel faktura type"
+msgstr "Kommerciel fakturatype"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_droppoff_type__drop_box
@@ -98,7 +99,7 @@ msgstr "DROP_BOX"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_developer_key
 msgid "Developer Key"
-msgstr "Udvikler nøgle"
+msgstr "Udviklernøgle"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -143,7 +144,7 @@ msgstr "Supplerende oplysninger om forsendelser (legacy)"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_label_file_type
 msgid "FEDEX Label File Type"
-msgstr "FEDEX mærkat fil type"
+msgstr "Filtype for FEDEX-etiket"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__fedex_2_day
@@ -259,17 +260,17 @@ msgstr "FedEx Legacy-kundenummer"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_saturday_delivery
 msgid "FedEx Saturday Delivery"
-msgstr "FedEx Lørdags levering"
+msgstr "FedEx-lørdagslevering"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "FedEx Web Services \"Move to Production\""
-msgstr "FedEx Hjemmeside tjenester \"Flyt til produktion\""
+msgstr "FedEx-hjemmesidetjenester \"Flyt til produktion\""
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Fedex Configuration"
-msgstr "Fedex Konfiguration"
+msgstr "FedEx-konfiguration"
 
 #. module: delivery_fedex
 #. odoo-python
@@ -280,49 +281,49 @@ msgstr "FedEx-dokumenter"
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_droppoff_type
 msgid "Fedex Drop-Off Type"
-msgstr "Fedex Drop-Off Type"
+msgstr "FedEx-leveringstype"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_duty_payment
 msgid "Fedex Duty Payment"
-msgstr "Fedex Told betaling"
+msgstr "FedEx-betaling af afgifter"
 
 #. module: delivery_fedex
 #: model:delivery.carrier,name:delivery_fedex.delivery_carrier_fedex_inter
 #: model:product.template,name:delivery_fedex.product_product_delivery_fedex_inter_product_template
 msgid "Fedex International"
-msgstr "Fedex International"
+msgstr "FedEx International"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_default_package_type_id
 msgid "Fedex Package Type"
-msgstr "Fedex Pakketype"
+msgstr "FedEx-pakketype"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_service_type
 msgid "Fedex Service Type"
-msgstr "Fedex Service Type"
+msgstr "FedEx-tjenestetype"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Fedex Tutorial"
-msgstr "Fedex Guide"
+msgstr "FedEx-vejledning"
 
 #. module: delivery_fedex
 #: model:delivery.carrier,name:delivery_fedex.delivery_carrier_fedex_us
 #: model:product.template,name:delivery_fedex.product_product_delivery_fedex_us_product_template
 msgid "Fedex US"
-msgstr "Fedex US"
+msgstr "FedEx US"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Fedex Website"
-msgstr "Fedex Hjemmeside"
+msgstr "FedEx-hjemmeside"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_weight_unit
 msgid "Fedex Weight Unit"
-msgstr "Fedex vægtenhed"
+msgstr "FedEx-vægtenhed"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -358,17 +359,17 @@ msgstr "LB"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Label Format"
-msgstr "Mærkat Format"
+msgstr "Etiketformat"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_label_stock_type
 msgid "Label Type"
-msgstr "Mærkat type"
+msgstr "Etikettype"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_meter_number
 msgid "Meter Number"
-msgstr "Meter tal"
+msgstr "Målertal"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
@@ -446,7 +447,7 @@ msgstr "PRIORITY_OVERNIGHT"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Package Weight Unit"
-msgstr "Pakke vægtenhed"
+msgstr "Pakkens vægtenhed"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,field_description:delivery_fedex.field_delivery_carrier__fedex_developer_password
@@ -477,7 +478,7 @@ msgstr "Modtager"
 #. odoo-python
 #: code:addons/delivery_fedex/models/delivery_fedex.py:0
 msgid "Return Label"
-msgstr "Refunderings mærkat"
+msgstr "Returseddel"
 
 #. module: delivery_fedex
 #: model:ir.model.fields.selection,name:delivery_fedex.selection__delivery_carrier__fedex_service_type__standard_overnight
@@ -556,7 +557,7 @@ msgstr "Afsender"
 #. odoo-python
 #: code:addons/delivery_fedex/models/delivery_fedex.py:0
 msgid "Shipment #%s has been cancelled"
-msgstr "Forsendelse #%s er blevet annulleret"
+msgstr "Forsendelsen #%s blev annulleret"
 
 #. module: delivery_fedex
 #. odoo-python
@@ -571,7 +572,7 @@ msgstr ""
 #. module: delivery_fedex
 #: model:ir.model,name:delivery_fedex.model_delivery_carrier
 msgid "Shipping Methods"
-msgstr "Leveringsmetoder"
+msgstr "Forsendelsesmetoder"
 
 #. module: delivery_fedex
 #: model:ir.model.fields,help:delivery_fedex.field_delivery_carrier__fedex_saturday_delivery
@@ -585,20 +586,22 @@ msgid ""
 "                                                                                 3.INTERNATIONAL_PRIORITY.\n"
 "(To Select Countries)"
 msgstr ""
-"Særlig tjeneste: Lørdags levering, kan efterspørges på følgende dage.\n"
-"                                                                                     Torsdag:\n"
+"Særlig tjeneste: Lørdagslevering kan vælges på følgende dage.\n"
+"                                                                                 "
+"Torsdag:\n"
 "1.FEDEX_2_DAY.\n"
 "Fredag:\n"
 "1.PRIORITY_OVERNIGHT.\n"
 "2.FIRST_OVERNIGHT\n"
 "\n"
+"                                                                                 "
 "3.INTERNATIONAL_PRIORITY.\n"
 "(Til udvalgte lande)"
 
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "Standard Services"
-msgstr "Standard Servicer"
+msgstr "Standardtjenester"
 
 #. module: delivery_fedex
 #: model:ir.model,name:delivery_fedex.model_stock_package_type
@@ -651,8 +654,8 @@ msgid ""
 "These certifications usually require that you contact the FedEx support team "
 "by email."
 msgstr ""
-"Disse certificeringer kræver normalt at du kontakter FedEx support teamet "
-"via email."
+"Disse certificeringer kræver som regel, at du kontakter FedEx’ supportteam "
+"via e-mail."
 
 #. module: delivery_fedex
 #. odoo-python
@@ -672,4 +675,4 @@ msgstr "ZPLII"
 #. module: delivery_fedex
 #: model_terms:ir.ui.view,arch_db:delivery_fedex.view_delivery_carrier_form_with_provider_fedex
 msgid "to create a FedEx account of the following type:"
-msgstr "for at oprette en FedEx konto af følgende type:"
+msgstr "for at oprette en FedEx-konto af følgende type:"

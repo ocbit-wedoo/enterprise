@@ -180,7 +180,7 @@ class IntrastatReportCustomHandler(models.AbstractModel):
             missing_required_values['region_code'].append(item['grouping_key'])
 
         if not item['transport_code']:
-            missing_required_values['transport_code'].append(item['move_id'])
+            missing_required_values['transport_code'].append(item['grouping_key'])
 
         # default intrastat use QV OR QN for missing partner VAT code but France does not accept this notation
         if item['system'] == '21' and (not item['partner_vat'] or item['partner_vat'].startswith('QV') or item['partner_vat'].startswith('QN')):
@@ -209,6 +209,7 @@ class IntrastatReportCustomHandler(models.AbstractModel):
                     context={**self.env.context, 'create': False, 'delete': False, 'expand': True},
                     views=[(move_lines_view.id, "list"), (False, 'form')],
                     options=options,
+                    domain=[('id', '=', move_lines.ids)],
                 ),
             }
 
@@ -233,6 +234,7 @@ class IntrastatReportCustomHandler(models.AbstractModel):
                     name=_('Invalid transaction intrastat code entries.'),
                     context={**self.env.context, 'create': False, 'delete': False, 'expand': True},
                     views=[(move_lines_view.id, "list"), (False, 'form')],
+                    domain=[('id', '=', move_lines.ids)],
                 ),
             }
 
@@ -258,6 +260,7 @@ class IntrastatReportCustomHandler(models.AbstractModel):
                     name=_('Invalid transaction intrastat code entries.'),
                     context={**self.env.context, 'create': False, 'delete': False, 'expand': True},
                     views=[(move_lines_view.id, "list"), (False, 'form')],
+                    domain=[('id', '=', move_lines.ids)],
                 ),
             }
 

@@ -882,7 +882,7 @@ class BankRecWidget(models.Model):
         if line.flag != 'new_aml':
             return []
         account, exchange_diff_balance = self._lines_get_account_balance_exchange_diff(line.currency_id, line.balance, line.amount_currency)
-        if line.currency_id.is_zero(exchange_diff_balance):
+        if self.company_currency_id.is_zero(exchange_diff_balance):
             return []
         return [{
             'flag': 'exchange_diff',

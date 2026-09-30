@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-03-04 12:08+0000\n"
+"PO-Revision-Date: 2026-08-21 07:08+0000\n"
 "Last-Translator: Saara Hakanen <sahak@odoo.com>\n"
 "Language-Team: Finnish <https://translate.odoo.com/projects/odoo-18/"
 "sale_shopee/fi/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.1\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_shopee
 #: model:mail.template,body_html:sale_shopee.order_sync_failure
@@ -688,8 +688,8 @@ msgid ""
 "If the sale is locked, you can not modify it anymore. However, you will "
 "still be able to invoice or deliver."
 msgstr ""
-"Jos myyntitilaus on lukittu, et voi enää muuttaa sitä. Voit silti vielä "
-"laskuttaa ja toimittaa tälle myyntitilaukselle."
+"Jos myynti on lukittu, et voi enää muokata sitä. Voit kuitenkin edelleen "
+"laskuttaa tai toimittaa."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_account__company_ids
@@ -838,7 +838,7 @@ msgstr "Valmis lähetyksen järjestämiseen Shopeen kautta"
 #. module: sale_shopee
 #: model:ir.model.fields,field_description:sale_shopee.field_shopee_shop__refresh_token
 msgid "Refresh Token"
-msgstr "Uudista pääsytunniste"
+msgstr "Päivitä tunniste"
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__refresh_token
@@ -1210,7 +1210,7 @@ msgstr "Tallennettu"
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
 msgid "Sync Inventory"
-msgstr "Synkronoi Inventaario"
+msgstr "Synkronoi varastointi"
 
 #. module: sale_shopee
 #: model_terms:ir.ui.view,arch_db:sale_shopee.shopee_shop_view_form
@@ -1349,12 +1349,12 @@ msgid ""
 "- Stored: The shipping label has been downloaded and stored.\n"
 "- Failed: The shipping label creation failed."
 msgstr ""
-"Lähetysetikettien tila:\n"
-"- Ei saatavilla: Lähetysetiketti ei ole vielä saatavilla.\n"
-"- Käsittelyssä:  Lähetysetikettejä käsittellään.\n"
-"- Valmis: Lähetysetiketti on valmis ladattavaksi.\n"
-"- Tallennettu: Lähetysetiketit on ladattu ja tallennettu.\n"
-"- Epäonnistunut: Lähetysetikettien luominen epäonnistui."
+"Lähetystarran tila:\n"
+"- Ei saatavilla: Lähetystarra ei ole vielä saatavilla.\n"
+"- Käsittelyssä: Lähetystarraa käsittellään.\n"
+"- Valmis: Lähetystarra on valmis ladattavaksi.\n"
+"- Tallennettu: Lähetystarra on ladattu ja tallennettu.\n"
+"- Epäonnistunut: Lähetystarran luominen epäonnistui."
 
 #. module: sale_shopee
 #: model:ir.model.fields,help:sale_shopee.field_shopee_shop__fbs_location_id

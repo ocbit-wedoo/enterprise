@@ -99,19 +99,35 @@ export class DocumentsListRenderer extends DocumentsRendererMixin(ListRenderer) 
     }
 
     get editableColumns() {
-        return ["name", "tag_ids", "partner_id", "owner_id", "company_id", "folder_id"];
+        const standardEditable = ["name", "tag_ids", "partner_id", "owner_id", "company_id", "folder_id"];
+        const customEditable = this.columns
+            .filter(col => col.name.startsWith("x_") && !col.readonly)
+            .map(col => col.name);
+        return standardEditable.concat(customEditable);
     }
 
     /**
      * Called when a click event is triggered.
      */
     onGlobalClick(ev) {
-        // We have to check that we are indeed clicking in the list view as on mobile,
-        // the inspector renders above the renderer but it still triggers this event.
-        if (ev.target.closest(".o_data_row") || !ev.target.closest(".o_list_renderer")) {
+        const target = ev.target;
+        // A tag's delete button only exists while the cell is editable, leaving
+        // edit mode here would destroy it before its callback runs
+        if (target.closest(".o_data_row.o_selected_row")) {
             return;
         }
-        if (ev.target.closest(".o_documents_view thead")) {
+        // Ignore clicks in an overlay above us (e.g. a "Search More..." dialog)
+        if (this.activeElement !== this.uiService.activeElement) {
+            return;
+        }
+        this.props.list.leaveEditMode();
+
+        // We have to check that we are indeed clicking in the list view as on mobile,
+        // the inspector renders above the renderer but it still triggers this event.
+        if (target.closest(".o_data_row") || !this.root.el?.contains(target)) {
+            return;
+        }
+        if (target.closest(".o_documents_view thead")) {
             return; // We then have to check that we are not clicking on the header
         }
         this.props.list.selection.forEach((el) => el.toggleSelection(false));

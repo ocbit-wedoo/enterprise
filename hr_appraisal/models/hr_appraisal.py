@@ -431,12 +431,13 @@ class HrAppraisal(models.Model):
                 vals['manager_feedback_published'] = True
                 self._appraisal_plan_post()
                 body = _("The appraisal's status has been set to Done by %s", self.env.user.name)
-                self.message_notify(
-                    body=body,
-                    subject=_("Your Appraisal has been completed"),
-                    partner_ids=appraisal.message_partner_ids.ids,
-                )
-                self.message_post(body=body)
+                for appraisal in self:
+                    appraisal.message_notify(
+                        body=body,
+                        subject=_("Your Appraisal has been completed"),
+                        partner_ids=appraisal.message_partner_ids.ids,
+                    )
+                    appraisal.message_post(body=body)
         elif vals.get('state') == 'cancel':
             self.meeting_ids.unlink()
             self.activity_unlink(['mail.mail_activity_data_meeting', 'mail.mail_activity_data_todo'])

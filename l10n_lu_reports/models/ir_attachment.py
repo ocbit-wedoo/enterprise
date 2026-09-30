@@ -12,7 +12,7 @@ XSD_INFO = {
     },
     'saft': {
         'name': 'FAIA_v_2.01_reduced_version_A.xsd',
-        'url': 'https://pfi.public.lu/dam-assets/backup/FAIA/FAIA/XSD_Files.zip',
+        'url': 'https://pfi.public.lu/content/dam/pfi/backup/FAIA/FAIA/XSD_Files.zip',
         'prefix': 'l10n_lu_reports',
     }
 }

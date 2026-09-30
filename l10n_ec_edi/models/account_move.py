@@ -453,7 +453,7 @@ class AccountMove(models.Model):
     def _is_manual_document_number(self):
         # EXTEND l10n_latam_invoice_document to exclude purchase liquidations and include sales withhold
         self.ensure_one()
-        if self.journal_id.company_id.account_fiscal_country_id.code == 'EC':
+        if self.journal_id.country_code == 'EC':
             if self.journal_id.l10n_ec_is_purchase_liquidation:
                 return False
         return super()._is_manual_document_number()
@@ -516,11 +516,17 @@ class AccountMove(models.Model):
             payment_data.append(payment_vals)
         return payment_data
 
+    @api.model
+    def _l10n_ec_get_provider_vat(self):
+        """ Return the RUC of the software provider."""
+        return self.env['ir.config_parameter'].sudo().get_param('l10n_ec_edi.provider_vat', '')
+
     def _l10n_ec_get_invoice_additional_info(self):
         return {
             "Referencia": self.name,  # Reference
             "Vendedor": self.invoice_user_id.name or '',  # Salesperson
             "E-mail": self.invoice_user_id.email or '',
+            "RUC Proveedor": self._l10n_ec_get_provider_vat() or '',
         }
 
     def _l10n_ec_get_taxes_grouped(self, extra_group='tax_group'):
@@ -588,6 +594,8 @@ class AccountMove(models.Model):
             data["Email"] = self.commercial_partner_id.email
         if self.commercial_partner_id.phone:
             data['Telefono'] = self.commercial_partner_id.phone
+        if provider_vat := self._l10n_ec_get_provider_vat():
+            data["RUC Proveedor"] = provider_vat
         return data
 
     def _l10n_ec_get_withhold_edi_data(self):
@@ -818,7 +826,10 @@ class AccountMove(models.Model):
         emission = '1'  # corresponds to "normal" emission, "contingencia" no longer supported
 
         if not (document_code_sri and company.partner_id.vat and environment
-                and serie and sequential and num_filler and emission):
+                and serie and sequential and num_filler and emission
+                and (company.partner_id.l10n_latam_identification_type_id == self.env.ref("l10n_ec.ec_ruc", False))
+                and len(company.partner_id.vat) == 13
+                and company.partner_id.vat.isdecimal()):
             return ''
 
         now_date = (self.l10n_ec_withhold_date if self._l10n_ec_is_withholding() else self.invoice_date).strftime('%d%m%Y')

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 17.2alpha1+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 19:07+0000\n"
-"PO-Revision-Date: 2026-04-11 09:32+0000\n"
+"PO-Revision-Date: 2026-08-28 19:18+0000\n"
 "Last-Translator: \"Fernanda Alvarez (mfar)\" <mfar@odoo.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.odoo.com/projects/"
 "odoo-18-l10n/l10n_ec_edi/es_419/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields.selection,name:l10n_ec_edi.selection__account_move__l10n_ec_withhold_foreign_regime__01
@@ -197,6 +197,44 @@ msgid ""
 "</div>\n"
 "            "
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        Apreciable\n"
+"        <t t-if=\"object.partner_id.parent_id\">\n"
+"            <t t-out=\"object.partner_id.name or ''\">Brandon Freeman</t> "
+"(<t t-out=\"object.partner_id.parent_id.name or ''\">Azure Interior</t>),\n"
+"        </t>\n"
+"        <t t-else=\"\">\n"
+"            <t t-out=\"object.partner_id.name or ''\">Brandon Freeman</t>,\n"
+"        </t>\n"
+"        <br/><br/>\n"
+"        Este es tu\n"
+"        <t t-if=\"object.name\">\n"
+"            documento <strong t-out=\"object.name or ''\">001-001-000000001</"
+"strong>\n"
+"        </t>\n"
+"        <t t-else=\"\">\n"
+"            documento\n"
+"        </t>\n"
+"        <t t-if=\"object.invoice_origin\">\n"
+"            (con referencia: <t t-out=\"object.invoice_origin or ''\">"
+"SUB003</t>)\n"
+"        </t>\n"
+"        por un total de <strong t-out=\"format_amount(object.amount_total, "
+"object.currency_id) or ''\">$143,750.00</strong>\n"
+"        de <t t-out=\"object.company_id.name or ''\">TuEmpresa</t>.\n"
+"        <br/><br/>\n"
+"        Contáctanos si tienes alguna pregunta.\n"
+"        <t t-if=\"object.invoice_user_id.signature\" data-o-mail-quote-"
+"container=\"1\">\n"
+"            <br/>\n"
+"            <t t-out=\"object.invoice_user_id.signature or ''\" data-o-mail-"
+"quote=\"1\">--<br data-o-mail-quote=\"1\"/>Mitchell Admin</t>\n"
+"        </t>\n"
+"    </p>\n"
+"\n"
+"</div>\n"
+"            "
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.account_move_form_invoice_and_withhold_view
@@ -210,6 +248,9 @@ msgid ""
 "                      The selected partner has a different type of "
 "identification than RUC and VAT."
 msgstr ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                  El contacto seleccionado tiene un tipo de identificación "
+"distinto de RUC e IVA."
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.view_account_l10n_ec_reimbursement_client_form
@@ -312,28 +353,28 @@ msgstr "<strong>Ambiente: </strong>"
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_document
 msgid "<strong>Modified document</strong>"
-msgstr ""
+msgstr "<strong>Documento modificado</strong>"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_document
 msgid "<strong>Original Issue Date</strong>"
-msgstr ""
+msgstr "<strong>Fecha de emisión original</strong>"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_document
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_withhold_document
 msgid "<strong>Partner</strong>"
-msgstr ""
+msgstr "<strong>Razón Social/Nombres y Apellidos</strong>"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_header
 msgid "<strong>RIMPE Regime: </strong>"
-msgstr ""
+msgstr "<strong>Régimen RIMPE: </strong>"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_document
 msgid "<strong>Reason for Modification</strong>"
-msgstr ""
+msgstr "<strong>Motivo de la modificación</strong>"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_header
@@ -348,12 +389,12 @@ msgstr "<strong>Agente de Retención Resolución No.: </strong>"
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_withhold_document
 msgid "<strong>Withhold Date</strong>"
-msgstr ""
+msgstr "<strong>Fecha de retención</strong>"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.res_config_settings_l10n_ec_edi
 msgid "<sup title=\"Last 8 digits\">?</sup>"
-msgstr ""
+msgstr "<sup title=\"Últimos 8 dígitos\">?</sup>"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_res_country__l10n_ec_code_ats
@@ -368,7 +409,7 @@ msgstr "Código ATS Paraíso Fiscal"
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.authorization_template
 msgid "AUTORIZADO"
-msgstr ""
+msgstr "AUTORIZADO"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_header
@@ -471,7 +512,7 @@ msgstr "Fecha de autorización"
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_account_move__l10n_ec_authorization_number
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_l10n_ec_reimbursement__authorization_number
 msgid "Authorization number"
-msgstr "Numero de autorización"
+msgstr "Número de autorización"
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -480,6 +521,8 @@ msgid ""
 "Authorization number %(authorization_number)s does not match document's %"
 "(document_number)s"
 msgstr ""
+"El número de autorización %(authorization_number)s no coincide con el del "
+"documento %(document_number)s"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,help:l10n_ec_edi.field_l10n_ec_reimbursement__authorization_number
@@ -487,6 +530,8 @@ msgid ""
 "Authorization number for issuing the tributary document, assigned by SRI, "
 "can be 10 numbers long, 41, or 49."
 msgstr ""
+"El número de autorización para emitir el documento tributario, asignado por "
+"el SRI, puede tener 10, 41 o 49 dígitos."
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_product_product__l10n_ec_auxiliary_code
@@ -659,7 +704,7 @@ msgstr "Divisa"
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.common_info_template
 msgid "DOLAR"
-msgstr ""
+msgstr "DÓLAR"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_l10n_ec_reimbursement__date
@@ -756,7 +801,7 @@ msgstr "Formato EDI"
 #. module: l10n_ec_edi
 #: model:ir.model,name:l10n_ec_edi.model_account_tax
 msgid "ETA tax codes mixin"
-msgstr ""
+msgstr "Mixin de códigos tributarios"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,help:l10n_ec_edi.field_account_journal__l10n_ec_is_purchase_liquidation
@@ -798,6 +843,8 @@ msgid ""
 "Ecuador: Select if you want to use this Journal to create Purchase or Sales "
 "withholdings."
 msgstr ""
+"Ecuador: Selecciona si quieres usar este diario para crear retenciones de "
+"compras o ventas."
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,help:l10n_ec_edi.field_res_partner__l10n_ec_related_party
@@ -808,6 +855,11 @@ msgid ""
 "indirectly in the management, administration, control or capital of your "
 "company. An example of a related part might be a shareholder of the company."
 msgstr ""
+"Ecuador: Selecciona esta opción si el contacto es una parte relacionada. Las "
+"partes relacionadas son otras empresas o personas que participan de forma "
+"directa o indirecta en la gestión, administración, control o capital de tu "
+"empresa. Un ejemplo de parte relacionada podría ser un accionista de la "
+"empresa."
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,help:l10n_ec_edi.field_res_partner__l10n_ec_taxpayer_type_id
@@ -1198,12 +1250,12 @@ msgstr "Retención de compra"
 #. module: l10n_ec_edi
 #: model:ir.model.fields.selection,name:l10n_ec_edi.selection__res_company__l10n_ec_regime__rimpe
 msgid "RIMPE Regime - Deprecated"
-msgstr ""
+msgstr "Régimen RIMPE - Obsoleto"
 
 #. module: l10n_ec_edi
 #: model:l10n_ec.taxpayer.type,name:l10n_ec_edi.l10n_ec_taxpayer_type_13
 msgid "RIMPE Regime Entrepreneur"
-msgstr ""
+msgstr "Régimen RIMPE Emprendedor"
 
 #. module: l10n_ec_edi
 #: model:l10n_ec.taxpayer.type,name:l10n_ec_edi.l10n_ec_taxpayer_type_15
@@ -1213,19 +1265,19 @@ msgstr "Régimen RIMPE Popular Empresarial"
 #. module: l10n_ec_edi
 #: model:ir.model.fields.selection,name:l10n_ec_edi.selection__res_company__l10n_ec_regime__rimpe_emprendedor
 msgid "RIMPE taxpayer - Entrepreneur"
-msgstr ""
+msgstr "Contribuyente de RIMPE - Emprendedor"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields.selection,name:l10n_ec_edi.selection__res_company__l10n_ec_regime__rimpe_negocio_popular
 msgid "RIMPE taxpayer - Popular Business"
-msgstr ""
+msgstr "Contribuyente de RIMPE - Negocio popular"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_document
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_header
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_withhold_document
 msgid "RUC/Cédula"
-msgstr ""
+msgstr "RUC/Cédula"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_res_company__l10n_ec_regime
@@ -1242,7 +1294,7 @@ msgstr "Régimen Regular (sin mensajes adicionales en el RIDE)"
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_account_bank_statement_line__l10n_ec_reimbursement_ids
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_account_move__l10n_ec_reimbursement_ids
 msgid "Reimbursement Line"
-msgstr ""
+msgstr "Línea de reembolso"
 
 #. module: l10n_ec_edi
 #: model:ir.model,name:l10n_ec_edi.model_l10n_ec_reimbursement
@@ -1255,7 +1307,7 @@ msgstr "Lineas de Reembolso"
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_account_bank_statement_line__reimbursement_totals
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_account_move__reimbursement_totals
 msgid "Reimbursement Totals"
-msgstr ""
+msgstr "Totales de reembolso"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_l10n_ec_wizard_account_withhold__related_invoices_count
@@ -1266,7 +1318,7 @@ msgstr "Recuento de facturas relacionadas"
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_res_partner__l10n_ec_related_party
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_res_users__l10n_ec_related_party
 msgid "Related Party"
-msgstr ""
+msgstr "Parte relacionada"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,field_description:l10n_ec_edi.field_account_bank_statement_line__l10n_ec_related_withhold_line_ids
@@ -1400,6 +1452,8 @@ msgid ""
 "Tax support %(tax_support_code)s is not in the tax supports of the original "
 "invoice %(invoice)s"
 msgstr ""
+"El sustento tributario %(tax_support_code)s no está entre los sustentos "
+"tributarios de la factura original %(invoice)s"
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -1515,12 +1569,14 @@ msgstr ""
 #. module: l10n_ec_edi
 #: model:ir.model.fields,help:l10n_ec_edi.field_l10n_ec_reimbursement__partner_id
 msgid "The partner associated to the purchase document"
-msgstr ""
+msgstr "El contacto asociado al documento de compra"
 
 #. module: l10n_ec_edi
 #: model:ir.model.fields,help:l10n_ec_edi.field_l10n_ec_reimbursement__partner_vat_number
 msgid "The partner vat number that will be showed in EDI and ATS"
 msgstr ""
+"El número de identificación fiscal del contacto que aparecerá en el EDI y el "
+"ATS"
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -1567,6 +1623,8 @@ msgid ""
 "The tax value of purchase invoice.It's editable because could be unbalanced "
 "by decimals"
 msgstr ""
+"El valor del impuesto de la factura de compra; puedes editarlo porque los "
+"decimales pueden causar un desbalance"
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -1715,10 +1773,9 @@ msgid ""
 "REGIMEN RIMPE', select it if your company is in the SRI Excel registry, It "
 "doesn't affect the computation of withholds. "
 msgstr ""
-"Mostrará una etiqueta adicional en el RIDE y el XML llamada 'REGIMEN "
-"CONTRIBUYENTE RIMPE', \n"
-"selecciónelo si su empresa está en el registro de Excel SRI, \n"
-"No afecta el cómputo de retenciones\n"
+"Mostrará una etiqueta adicional en el RIDE y el XML llamada 'CONTRIBUYENTE "
+"RÉGIMEN RIMPE'. Selecciónala si tu empresa aparece en el registro de Excel "
+"del SRI. Esto no afecta el cálculo de las retenciones. "
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -1860,7 +1917,7 @@ msgstr "Asistente"
 #. odoo-python
 #: code:addons/l10n_ec_edi/models/account_edi_format.py:0
 msgid "Wrong tax (%(tax)s) for document %(document)s"
-msgstr ""
+msgstr "Impuesto incorrecto (%(tax)s) para el documento %(document)s"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.report_invoice_header
@@ -1880,6 +1937,8 @@ msgid ""
 "You cannot cancel a document that is still authorized (%"
 "(authorization_num)s, %(authorization_date)s), check the SRI portal"
 msgstr ""
+"No puedes cancelar un documento que aún tiene autorización (%"
+"(authorization_num)s, %(authorization_date)s), revisa el portal del SRI"
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -1888,8 +1947,8 @@ msgid ""
 "You cannot create reimbursements with document number, tax group and partner "
 "duplicated in the same invoice."
 msgstr ""
-"No puedes crear reembolsos con numero de documento, impuesto y contacto "
-"duplicados en la misma factura"
+"No puedes crear reembolsos con el número de documento, el grupo de impuestos "
+"y el contacto duplicados en la misma factura."
 
 #. module: l10n_ec_edi
 #. odoo-python
@@ -2012,12 +2071,12 @@ msgstr "Debe setear el Método de Pago del SRI en el documento %s"
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.ec_edi_signature
 msgid "contenido comprobante"
-msgstr ""
+msgstr "contenido comprobante"
 
 #. module: l10n_ec_edi
 #: model_terms:ir.ui.view,arch_db:l10n_ec_edi.ec_edi_signature
 msgid "text/xml"
-msgstr ""
+msgstr "text/xml"
 
 #. module: l10n_ec_edi
 #: model:mail.template,subject:l10n_ec_edi.email_template_edi_withhold

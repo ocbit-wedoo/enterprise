@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 19:07+0000\n"
-"PO-Revision-Date: 2026-04-15 09:55+0000\n"
+"POT-Creation-Date: 2026-06-12 18:08+0000\n"
+"PO-Revision-Date: 2026-09-15 12:32+0000\n"
 "Last-Translator: \"Larissa Manderfeld (lman)\" <lman@odoo.com>\n"
 "Language-Team: German <https://translate.odoo.com/projects/odoo-18-l10n/"
 "l10n_ch_hr_payroll_elm_transmission/de/>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,help:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_salary_certificate_profile__l10n_ch_cs_free_meals
@@ -223,7 +223,7 @@ msgstr "0 - Nicht versichert"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_contract__laa_solution_number__1
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_payslip__laa_solution_number__1
 msgid "1 - Occupational and Non-Occupational Insured, with deductions"
-msgstr "1 - Berufs- und Nichtberufsunfallversichung, mit Abzügen"
+msgstr "1 - Gegen Berufs- und Nichtberufsunfälle versichert, mit Abzügen"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_salary_certificate__1
@@ -326,7 +326,7 @@ msgstr "14. Monat"
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_contract__laa_solution_number__2
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_payslip__laa_solution_number__2
 msgid "2 - Occupational and Non-Occupational Insured, without deductions"
-msgstr "1 - Berufs- und Nichtberufsunfallversichung, ohne Abzüge"
+msgstr "2 - Gegen Berufs- und Nichtberufsunfälle versichert, ohne Abzüge"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__hr_salary_rule__l10n_ch_salary_certificate__2_1
@@ -760,6 +760,11 @@ msgid "<strong>Source-Tax Code: </strong>"
 msgstr "<strong>Quellensteuercode: </strong>"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
+#: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_report_payslip
+msgid "<strong>Source-Tax Rate: </strong>"
+msgstr "<strong>Quellensteuersatz: </strong>"
+
+#. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.report_company_master_data_document
 msgid "<strong>Sub-Number:</strong>"
 msgstr "<strong>Unternummer:</strong>"
@@ -1083,7 +1088,7 @@ msgstr "Unfall – Taggeld"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.hr_contract_view_form
 msgid "Accident Insurance"
-msgstr "Krankenhausversicherung"
+msgstr "Unfallversicherung"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:hr.salary.rule,note:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5040
@@ -1611,7 +1616,7 @@ msgstr "Nachzahlung Ausbildungszulage"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3015_fcf
 msgid "Backpayment Education allowance paid by FCF (Geneva)"
-msgstr "Nachzahlung der Ausbildungszulage durch FCF (Genf)"
+msgstr "Nachzahlung der Ausbildungszulage durch FAK (Genf)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3033
@@ -1947,7 +1952,7 @@ msgstr ""
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_salary_certificate_profile__l10n_ch_child_allowance_indirect
 msgid "Child Allowances paid by FCF"
-msgstr "Zahlung des Kindergeldes durch FCF"
+msgstr "Zahlung des Kindergeldes durch FAK"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3000
@@ -1957,12 +1962,12 @@ msgstr "Kindergeld"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3005_fcf
 msgid "Child allowance back payment paid by FCF (Geneva)"
-msgstr "Nachzahlung des Kindergeldes durch FCF (Genf)"
+msgstr "Nachzahlung des Kindergeldes durch FAK (Genf)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3004_fcf
 msgid "Child allowance paid by FCF (Geneva)"
-msgstr "Zahlung des Kindergeldes durch FCF (Genf)"
+msgstr "Zahlung des Kindergeldes durch FAK (Genf)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3034
@@ -1972,7 +1977,7 @@ msgstr "Geburtszulage"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3038
 msgid "Childbirth allowance paid by FCF (Geneva)"
-msgstr "Zahlung der Geburtszulage durch FCF (Genf)"
+msgstr "Zahlung der Geburtszulage durch FAK (Genf)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_hr_employee_is_line_correction__children
@@ -3207,7 +3212,7 @@ msgstr "Ausbildungszulage"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_3014_fcf
 msgid "Education allowance paid by FCF (Geneva)"
-msgstr "Zahlung der Ausbildungszulage durch FCF (Genf)"
+msgstr "Zahlung der Ausbildungszulage durch FAK (Genf)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_salary_certificate_profile__l10n_ch_cs_expense_policy__rz52
@@ -3551,12 +3556,12 @@ msgstr "Beitragspflichtiges FAK-CAF-Gehalt:"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_5070
 msgid "FCF Contribution"
-msgstr "FCF-Beitrag"
+msgstr "FAK-Beitrag"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_7070
 msgid "FCF Employer Contribution"
-msgstr "FCF-Arbeitgeberbeitrag"
+msgstr "FAK-Arbeitgeberbeitrag"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__l10n_ch_tax_rate_import_wizard__canton__fr
@@ -4323,13 +4328,13 @@ msgstr "KTG-Hauptversicherung für Gehalt"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_ijm_salary_max_1
 msgid "IJM Salary Maximum Main Insurance"
-msgstr "KTG-Hauptversicherung für Höchstgehalt"
+msgstr "KTG-Hauptversicherung für Höchstlohn"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_ijm_salary_max_2
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_ijm_salary_min_2
 msgid "IJM Salary Maximum Second Insurance"
-msgstr "Zweite KTG-Versicherung für Höchstgehalt"
+msgstr "Zweite KTG-Versicherung für Höchstlohn"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_ijm_salary_min_1
@@ -4934,7 +4939,7 @@ msgstr "L10N Ch: AHV/ALV-Grenze"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_l10n_ch_social_insurance__l10n_ch_avs_acc_threshold_ids
 msgid "L10N Ch Avs Acc Threshold"
-msgstr "L10N Ch: AHV/UVG-Grenze"
+msgstr "Schwellenwert für die AHV/Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields,field_description:l10n_ch_hr_payroll_elm_transmission.field_res_company__l10n_ch_avs_institution_ids
@@ -5331,12 +5336,12 @@ msgstr "UVGZ-Hauptversicherung für Gehalt"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_laac_salary_max_1
 msgid "LAAC Salary Maximum Main Insurance"
-msgstr "UVGZ-Hauptversicherung für Höchstgehalt"
+msgstr "UVGZ-Hauptversicherung für Höchstlohn"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_laac_salary_max_2
 msgid "LAAC Salary Maximum Second Insurance"
-msgstr "Zweite UVGZ-Versicherung für Höchstgehalt"
+msgstr "Zweite UVGZ-Versicherung für Höchstlohn"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_rule_laac_salary_min_1
@@ -6326,7 +6331,7 @@ msgstr "Nichtberufsunfallquote"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_accident_insurance_group_view_form
 msgid "Non-Occupational Rate (%)"
-msgstr "Nichtberufsunfallquote (%)"
+msgstr "Satz für Nichtberufsunfälle (%)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:hr.salary.rule,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_elm_1131
@@ -6522,7 +6527,7 @@ msgstr "Berufsunfallquote"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_accident_insurance_group_view_form
 msgid "Occupational Rate (%)"
-msgstr "Berufsunfallquote (%)"
+msgstr "Satz für Berufsunfälle (%)"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.model.fields.selection,name:l10n_ch_hr_payroll_elm_transmission.selection__ch_yearly_report__month__10
@@ -9768,12 +9773,12 @@ msgstr "Jahr, für das die Steuersatzdatei heruntergeladen werden soll"
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_social_insurance_view_form
 msgid "Yearly AC Maximum Salary"
-msgstr "Jährliches ALV-Höchstgehalt"
+msgstr "Jährlicher Höchstlohn für die ALV"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model_terms:ir.ui.view,arch_db:l10n_ch_hr_payroll_elm_transmission.l10n_ch_social_insurance_view_form
 msgid "Yearly ACC Maximum Salary"
-msgstr "Jährliches ALV-Höchstgehalt"
+msgstr "Jährlicher Höchstlohn für die Zusatz-ALV"
 
 #. module: l10n_ch_hr_payroll_elm_transmission
 #: model:ir.actions.act_window,name:l10n_ch_hr_payroll_elm_transmission.l10n_ch_yearly_retrospective_action

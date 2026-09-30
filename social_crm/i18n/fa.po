@@ -1,34 +1,37 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* social_crm
+# * social_crm
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-09-06 17:11+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"social_crm/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_description
 msgid "<span class=\"me-1\">posted on</span>"
-msgstr ""
+msgstr "<span class=\"me-1\">ارسال در</span>"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_description
 msgid "<span class=\"ms-1\">at</span>"
-msgstr ""
+msgstr "<span class=\"ms-1\">در</span>"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_view_form
@@ -49,7 +52,7 @@ msgstr "لغو"
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__conversion_source
 msgid "Conversion Source"
-msgstr ""
+msgstr "مبدأ تبدیل"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_view_form
@@ -60,12 +63,12 @@ msgstr "تبدیل کردن"
 #: model:ir.actions.act_window,name:social_crm.social_post_to_lead_action
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_view_form
 msgid "Convert Post to Lead"
-msgstr ""
+msgstr "تبدیل پست به سرنخ"
 
 #. module: social_crm
 #: model:ir.model,name:social_crm.model_social_post_to_lead
 msgid "Convert Social Post to Lead"
-msgstr ""
+msgstr "تبدیل پست شبکه اجتماعی به سرنخ"
 
 #. module: social_crm
 #. odoo-javascript
@@ -107,12 +110,12 @@ msgstr "به مشتری لینک نکنید"
 #. module: social_crm
 #: model:ir.model.fields.selection,name:social_crm.selection__social_post_to_lead__conversion_source__comment
 msgid "From a comment"
-msgstr ""
+msgstr "از یک دیدگاه"
 
 #. module: social_crm
 #: model:ir.model.fields.selection,name:social_crm.selection__social_post_to_lead__conversion_source__stream_post
 msgid "From a stream post"
-msgstr ""
+msgstr "از یک پست استریم"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__id
@@ -132,12 +135,12 @@ msgstr "آخرین بروز رسانی در"
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post__leads_opportunities_count
 msgid "Leads / Opportunities count"
-msgstr ""
+msgstr "تعداد سرنخ‌ها/فرصت‌ها"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_view_kanban
 msgid "Leads:"
-msgstr ""
+msgstr "سرنخ‌ها:"
 
 #. module: social_crm
 #: model:ir.model.fields.selection,name:social_crm.selection__social_post_to_lead__action__exist
@@ -147,32 +150,32 @@ msgstr "لینک به مشتری موجود"
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_view_kanban
 msgid "Opportunities:"
-msgstr ""
+msgstr "فرصت‌ها:"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__author_name
 msgid "Post Author Name"
-msgstr ""
+msgstr "نام نویسنده پست"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__post_content
 msgid "Post Content"
-msgstr ""
+msgstr "محتوای پست"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__post_datetime
 msgid "Post Datetime"
-msgstr ""
+msgstr "تاریخ و زمان پست"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__post_image_urls
 msgid "Post Images URLs"
-msgstr ""
+msgstr "آدرس‌های URL تصاویر پست"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__post_link
 msgid "Post Link"
-msgstr ""
+msgstr "لینک پست"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__action
@@ -183,17 +186,17 @@ msgstr "مشتری مرتبط"
 #. odoo-python
 #: code:addons/social_crm/wizard/social_post_to_lead.py:0
 msgid "Request from %s"
-msgstr ""
+msgstr "درخواست از %s"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__social_account_id
 msgid "Social Account"
-msgstr ""
+msgstr "حساب کاربری رسانه اجتماعی"
 
 #. module: social_crm
 #: model:ir.model,name:social_crm.model_social_post
 msgid "Social Post"
-msgstr ""
+msgstr "پست شبکه اجتماعی"
 
 #. module: social_crm
 #: model_terms:ir.ui.view,arch_db:social_crm.social_post_to_lead_description
@@ -203,13 +206,13 @@ msgstr ""
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__social_stream_post_id
 msgid "Social Stream Post"
-msgstr ""
+msgstr "پست استریم شبکه اجتماعی"
 
 #. module: social_crm
 #. odoo-python
 #: code:addons/social_crm/wizard/social_post_to_lead.py:0
 msgid "The lead has been created successfully."
-msgstr ""
+msgstr "سرنخ با موفقیت ایجاد شد."
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post__use_leads
@@ -219,14 +222,14 @@ msgstr "استفاده از سرنخ"
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__utm_campaign_id
 msgid "Utm Campaign"
-msgstr ""
+msgstr "کمپین UTM"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__utm_medium_id
 msgid "Utm Medium"
-msgstr ""
+msgstr "رسانه UTM"
 
 #. module: social_crm
 #: model:ir.model.fields,field_description:social_crm.field_social_post_to_lead__utm_source_id
 msgid "Utm Source"
-msgstr ""
+msgstr "منبع UTM"

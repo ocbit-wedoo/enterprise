@@ -138,6 +138,18 @@ class TestPlanning(TestCommonPlanning, MockEmail):
         self.assertEqual(defaults.get('start_datetime'), datetime(2019, 6, 27, 9, 0), 'It should be adjusted to employee calendar: 0am -> 9pm')
         self.assertEqual(defaults.get('end_datetime'), datetime(2019, 6, 27, 18, 0), 'It should be adjusted to employee calendar: 0am -> 18pm')
 
+    def test_set_overnight_template(self):
+        template = self.env['planning.slot.template'].create({
+            'start_time': 23,
+            'end_time': 1,
+            'duration_days': 2,
+        })
+        self.employee_joseph.resource_calendar_id = self.company_calendar
+        self.slot.resource_id = self.employee_joseph.resource_id
+        self.slot.template_id = template
+        self.assertEqual(self.slot.start_datetime, datetime(2019, 6, 27, 23, 0))
+        self.assertEqual(self.slot.end_datetime, datetime(2019, 6, 28, 1, 0))
+
     def test_specific_time_creation(self):
         self.env.user.tz = 'UTC'
         PlanningSlot = self.env['planning.slot'].with_context(
@@ -586,6 +598,50 @@ class TestPlanning(TestCommonPlanning, MockEmail):
         self.assertEqual(night_shift.resource_id, night_employee.resource_id, 'The night shift should be assigned to the night employee')
         self.assertEqual(night_shift.allocated_hours, 8, 'The allocated hours should remain the same')
         self.assertEqual(night_shift.allocated_percentage, 100, 'The allocated percentage should be 100% as the resource will work the allocated hours')
+
+    def test_auto_plan_undo_preserves_allocated_hours(self):
+        """
+            When undoing auto-plan, the system should preserve the original allocated_hours.
+            Test Case:
+            =========
+            1) Create an open shift with 6 allocated hours.
+            2) Auto-plan the shift to assign it to a resource.
+            3) Verify the shift is assigned and allocated_hours remains 6.
+            4) Undo the auto-plan assignment.
+            5) Check allocated_hours is still 6.
+        """
+        start_dt = datetime(2025, 12, 25, 9, 0, 0)
+        end_dt = datetime(2025, 12, 25, 17, 0, 0)
+        role = self.env['planning.role'].create({'name': 'Developer Test Role'})
+        self.employee_joseph.default_planning_role_id = role.id
+        open_shift = self.env['planning.slot'].create({
+            'start_datetime': start_dt,
+            'end_datetime': end_dt,
+            'allocated_hours': 6.0,
+            'resource_id': False,
+            'role_id': role.id,
+        })
+
+        self.assertEqual(open_shift.allocated_hours, 6.0, 'Initial allocated_hours should be 6.0')
+        self.assertFalse(open_shift.resource_id, 'Should be an open shift')
+
+        result = self.env['planning.slot'].with_context(
+            default_start_datetime=start_dt,
+            default_end_datetime=end_dt,
+        ).auto_plan_ids([('id', '=', open_shift.id)])
+
+        open_shift_assigned = result.get('open_shift_assigned', [])
+
+        self.assertEqual(len(open_shift_assigned), 1, 'One shift should be assigned')
+        open_shift.invalidate_recordset()
+        self.assertTrue(open_shift.resource_id, 'Shift should be assigned to a resource')
+        self.assertEqual(open_shift.allocated_hours, 6.0, 'allocated_hours should still be 6.0 after auto-plan')
+
+        self.env['planning.slot'].action_rollback_auto_plan_ids(result)
+
+        open_shift.invalidate_recordset()
+        self.assertFalse(open_shift.resource_id, 'Shift should be back to open state')
+        self.assertEqual(open_shift.allocated_hours, 6.0, 'allocated_hours should be preserved at 6.0 after undo')
 
     def test_write_multiple_slots(self):
         """ Test that we can write a resource_id on multiple slots at once. """

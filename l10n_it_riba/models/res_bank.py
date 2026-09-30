@@ -32,4 +32,4 @@ class ResPartnerBank(models.Model):
         iban = normalize_iban(self.acc_number)
         country_code = iban[:2].lower()
         template = _map_iban_template.get(country_code, '').replace(' ', '')
-        return template and "".join(c for c, t in zip(iban, template) if t == mask_char)
+        return template and "".join(c for c, t in zip(iban[2:], template[2:]) if t == mask_char)

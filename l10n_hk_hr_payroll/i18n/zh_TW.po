@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 19:08+0000\n"
-"PO-Revision-Date: 2026-05-16 09:04+0000\n"
+"PO-Revision-Date: 2026-06-06 09:14+0000\n"
 "Last-Translator: \"Tony Ng (ngto)\" <ngto@odoo.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://translate.odoo.com/"
 "projects/odoo-18-l10n/l10n_hk_hr_payroll/zh_Hant/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
@@ -849,7 +849,7 @@ msgstr "<strong>56F</strong>"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,help:l10n_hk_hr_payroll.field_hr_contract__l10n_hk_internet
 msgid "A benefit in kind is paid for the employee's internet subcription."
-msgstr ""
+msgstr "員工的網絡服務費用，以實物福利形式支付。"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_rental__active
@@ -1015,7 +1015,7 @@ msgstr "八月"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__authorisation_type
 msgid "Authorisation Type"
-msgstr ""
+msgstr "授權類型"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payroll_report__l10n_hk_autopay_gross
@@ -1091,13 +1091,13 @@ msgstr "銀行賬戶"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_res_bank__l10n_hk_bank_code
 msgid "Bank Code"
-msgstr ""
+msgstr "銀行編號"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/res_bank.py:0
 msgid "Bank code length must be 3 letters."
-msgstr ""
+msgstr "銀行編號長度必須為 3 位。"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__batch_type
@@ -1122,7 +1122,7 @@ msgstr "已取消"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_employee__l10n_hk_mpf_vc_option__max
 msgid "Cap 5% VC"
-msgstr ""
+msgstr "自願供款上限 5%"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.report_ir56b
@@ -1140,7 +1140,7 @@ msgstr "從退休計劃支付的若干款項"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__cheque_no
 msgid "Cheque No."
-msgstr ""
+msgstr "支票號碼"
 
 #. module: l10n_hk_hr_payroll
 #: model:hr.salary.rule,name:l10n_hk_hr_payroll.cap57_employees_salary_fixed_commission
@@ -1207,12 +1207,12 @@ msgstr "建立滙豐自動轉賬報告"
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.res_config_settings_view_form
 msgid "Create HSBC payment"
-msgstr ""
+msgstr "建立滙豐付款"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.l10n_hk_manulife_mpf_view_form
 msgid "Create XLSX"
-msgstr ""
+msgstr "建立 XLSX"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.l10n_hk_ir56b_view_form
@@ -1255,7 +1255,7 @@ msgstr "建立於"
 #: model:ir.model.fields,help:l10n_hk_hr_payroll.field_hr_payslip_run__l10n_hk_autopay_export_first_batch_date
 #: model:ir.model.fields,help:l10n_hk_hr_payroll.field_hr_payslip_run__l10n_hk_autopay_export_second_batch_date
 msgid "Creation date of the payment file"
-msgstr ""
+msgstr "付款檔案的建立日期"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_ir56b__currency_id
@@ -1302,7 +1302,7 @@ msgstr "日期："
 #. module: l10n_hk_hr_payroll
 #: model:hr.departure.reason,name:l10n_hk_hr_payroll.hr_departure_reason_death
 msgid "Death"
-msgstr ""
+msgstr "死亡/身故"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_ir56b__end_month__12
@@ -1365,7 +1365,7 @@ msgstr "由 4 月 1 日起至停止受僱日期止的詳細入息："
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__digital_pic_id
 msgid "Digital Picture ID"
-msgstr ""
+msgstr "數碼身份證明照片"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.report_ir56b
@@ -1574,7 +1574,7 @@ msgstr "年終酬金"
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/hr_employee.py:0
 msgid "Enter VC Percentage between 0% and 5%."
-msgstr ""
+msgstr "請輸入自願供款百分比，數值為 0% 至 5% 之間。"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_ir56b__error_message
@@ -1647,12 +1647,12 @@ msgstr "二月"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_payslip_run_hsbc_autopay_wizard__authorisation_type__f
 msgid "File Level Authorisation"
-msgstr ""
+msgstr "檔案層級授權"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_payslip_run_hsbc_autopay_wizard__authorisation_type__v
 msgid "File Level Authorisation with ability to view instructions"
-msgstr ""
+msgstr "檔案層級授權，可檢視指示內容"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__file_name
@@ -1662,22 +1662,22 @@ msgstr "檔案名稱"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run__l10n_hk_autopay_export_first_batch_filename
 msgid "File Name - First Batch"
-msgstr ""
+msgstr "檔案名稱 - 第一批"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run__l10n_hk_autopay_export_second_batch_filename
 msgid "File Name - Second Batch"
-msgstr ""
+msgstr "檔案名稱 - 第二批"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_payslip_run_hsbc_autopay_wizard__batch_type__first
 msgid "First Batch"
-msgstr ""
+msgstr "第一批"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__ref
 msgid "First Party Reference"
-msgstr ""
+msgstr "第一方參考編號"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_rental__nature__flat
@@ -1730,12 +1730,12 @@ msgstr "完成生成"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_given_name
 msgid "Given Name"
-msgstr ""
+msgstr "名字"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__res_company__l10n_hk_autopay_type__h2h
 msgid "H2H Submission"
-msgstr ""
+msgstr "H2H 提交"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,help:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__autopay_type
@@ -1744,7 +1744,7 @@ msgstr ""
 msgid ""
 "H2H Submission: Directly submit to HSBC. HSBCnet File Upload: Upload file to "
 "HSBCnet."
-msgstr ""
+msgstr "H2H 提交：直接提交至 HSBC 滙豐。HSBCnet 檔案上載：將檔案上載至 HSBCnet。"
 
 #. module: l10n_hk_hr_payroll
 #: model:hr.leave.type,name:l10n_hk_hr_payroll.holiday_type_hk_annual_leave
@@ -1815,12 +1815,12 @@ msgstr "香港：上網服務費"
 #. module: l10n_hk_hr_payroll
 #: model:ir.actions.report,name:l10n_hk_hr_payroll.action_report_payslip_hk
 msgid "HK: Payslip"
-msgstr ""
+msgstr "香港：工資單"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.actions.report,name:l10n_hk_hr_payroll.action_report_light_payslip_hk
 msgid "HK: Payslip (Light)"
-msgstr ""
+msgstr "香港：工資單（簡版）"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_employee__l10n_hk_autopay_account_type__hkid
@@ -2020,7 +2020,7 @@ msgstr "IR56G 表格"
 #: code:addons/l10n_hk_hr_payroll/models/l10n_hk_ird.py:0
 #: model:ir.model,name:l10n_hk_hr_payroll.model_l10n_hk_ird
 msgid "IRD Sheet"
-msgstr ""
+msgstr "稅務局表格"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.report_ir56b
@@ -2062,12 +2062,12 @@ msgstr ""
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_payslip_run_hsbc_autopay_wizard__authorisation_type__p
 msgid "Instruction Level Authorisation"
-msgstr ""
+msgstr "指示層級授權"
 
 #. module: l10n_hk_hr_payroll
 #: model:hr.salary.rule,name:l10n_hk_hr_payroll.cap57_employees_salary_internet
 msgid "Internet Allowance"
-msgstr ""
+msgstr "上網費津貼"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.hr_contract_view_form
@@ -2215,7 +2215,7 @@ msgstr "資料行數目"
 #: model:hr.payroll.structure,payslip_name:l10n_hk_hr_payroll.hr_payroll_structure_cap57_long_service_payment
 #: model:hr.salary.rule,name:l10n_hk_hr_payroll.cap57_employees_long_service_payment
 msgid "Long Service Payment"
-msgstr ""
+msgstr "長期服務金"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_employee__l10n_hk_autopay_account_type__mobn
@@ -2380,7 +2380,7 @@ msgstr "名稱"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_name_in_chinese
 msgid "Name in Chinese"
-msgstr ""
+msgstr "中文姓名"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.report_ir56e
@@ -2443,7 +2443,7 @@ msgstr "淨額"
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/l10n_hk_manulife_mpf.py:0
 msgid "No employees to generate the report for."
-msgstr ""
+msgstr "沒有可以產生該報告的員工資料。"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
@@ -2454,7 +2454,7 @@ msgstr "沒有適用的工資單可產生滙豐自動轉賬報告。"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_work_entry_type__l10n_hk_non_full_pay
 msgid "Non-full pay"
-msgstr ""
+msgstr "非全薪"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_ir56b__end_month__11
@@ -2489,12 +2489,12 @@ msgstr "十月"
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.res_config_settings_view_form
 msgid "Official Company Information"
-msgstr ""
+msgstr "官方公司資料"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_employee__l10n_hk_mpf_vc_option__none
 msgid "Only Mandatory Contribution"
-msgstr ""
+msgstr "只限強制性供款"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
@@ -2612,13 +2612,13 @@ msgstr "付款日期"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip_run_hsbc_autopay_wizard__payment_set_code
 msgid "Payment Set Code"
-msgstr ""
+msgstr "付款組合代碼"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/wizards/hr_payroll_hsbc_autopay_wizard.py:0
 msgid "Payment Set Code length must be 3 letters."
-msgstr ""
+msgstr "付款組合代碼長度必須為 3 位。"
 
 #. module: l10n_hk_hr_payroll
 #: model:hr.payroll.structure,payslip_name:l10n_hk_hr_payroll.hr_payroll_structure_cap57_payment_in_lieu_of_notice
@@ -2742,7 +2742,7 @@ msgstr "通訊地址（如與上列第 7 項不同）："
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_payslip_run_hsbc_autopay_wizard__authorisation_type__a
 msgid "Pre-Authorised"
-msgstr ""
+msgstr "預先授權"
 
 #. module: l10n_hk_hr_payroll
 #: model:hr.work.entry.type,name:l10n_hk_hr_payroll.work_entry_type_public_holiday
@@ -2933,7 +2933,7 @@ msgstr "返回原居地"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_rental__state__open
 msgid "Running"
-msgstr "執行中"
+msgstr "生效中"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_employee__l10n_hk_autopay_account_type__svid
@@ -2959,7 +2959,7 @@ msgstr "由僱主承擔的薪俸稅"
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/l10n_hk_ird.py:0
 msgid "Salary structure 'CAP57: Employees Monthly Pay' not found."
-msgstr ""
+msgstr "找不到「CAP57 員工月薪」薪酬結構。"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__manulife_mpf_scheme
@@ -2969,18 +2969,18 @@ msgstr "計劃編號"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_payslip_run_hsbc_autopay_wizard__batch_type__second
 msgid "Second Batch"
-msgstr ""
+msgstr "第二批"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payroll_report__l10n_hk_second_batch_autopay_gross
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip__l10n_hk_second_batch_autopay_gross
 msgid "Second Batch AutoPay Gross"
-msgstr ""
+msgstr "第二批自動轉賬總額"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__second_cheque_no
 msgid "Second Cheque No."
-msgstr ""
+msgstr "第二張支票號碼"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_ir56g_line__reason_departure__secondment
@@ -3005,13 +3005,13 @@ msgstr "九月"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__sequence_no
 msgid "Sequence No."
-msgstr ""
+msgstr "序號"
 
 #. module: l10n_hk_hr_payroll
 #: model:hr.payroll.structure,payslip_name:l10n_hk_hr_payroll.hr_payroll_structure_cap57_severance_payment
 #: model:hr.salary.rule,name:l10n_hk_hr_payroll.cap57_employees_severance_payment
 msgid "Severance Payment"
-msgstr ""
+msgstr "遣散費"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.report_ir56b
@@ -3069,7 +3069,7 @@ msgstr "部份銀行賬戶沒有銀行賬戶名稱：%s。"
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/hr_payslip.py:0
 msgid "Some banks (%s) don't have a bank code"
-msgstr ""
+msgstr "部份銀行（%s）未設定銀行編號。"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
@@ -3078,6 +3078,8 @@ msgid ""
 "Some employee don't have any contract.:\n"
 "%s"
 msgstr ""
+"部份員工沒有任何合約：\n"
+"%s"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
@@ -3099,12 +3101,12 @@ msgstr "部份員工沒有銀行賬戶：%s。"
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/hr_payslip.py:0
 msgid "Some employees (%s) haven't set the autopay type."
-msgstr ""
+msgstr "部份員工（%s）未設定自動轉賬類型。"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_spouse_identification_id
 msgid "Spouse Identification No"
-msgstr ""
+msgstr "配偶身份證明文件號碼"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_spouse_passport_id
@@ -3180,12 +3182,12 @@ msgstr "補充"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf_line__surcharge_percentage
 msgid "Surcharge Percentage"
-msgstr ""
+msgstr "附加費百分比"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_surname
 msgid "Surname"
-msgstr ""
+msgstr "姓氏"
 
 #. module: l10n_hk_hr_payroll
 #: model_terms:ir.ui.view,arch_db:l10n_hk_hr_payroll.report_ir56e
@@ -3276,7 +3278,7 @@ msgstr "表格類型"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_work_entry_type__l10n_hk_use_713
 msgid "Use 713"
-msgstr ""
+msgstr "使用 713"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_ir56b__xml_validation_state__done
@@ -3290,12 +3292,12 @@ msgstr "有效"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_mpf_vc_percentage
 msgid "Volunteer Contribution %"
-msgstr ""
+msgstr "自願供款 %"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_employee__l10n_hk_mpf_vc_option
 msgid "Volunteer Contribution Option"
-msgstr ""
+msgstr "自願供款選項"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__l10n_hk_ir56b__state__waiting
@@ -3366,33 +3368,33 @@ msgstr "會返回香港"
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields.selection,name:l10n_hk_hr_payroll.selection__hr_employee__l10n_hk_mpf_vc_option__custom
 msgid "With Fixed %VC"
-msgstr ""
+msgstr "使用固定自願供款 %"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_hr_payslip__l10n_hk_worked_days_leaves_count
 msgid "Worked Days Leaves Count"
-msgstr ""
+msgstr "已工作日數假期數目"
 
 #. module: l10n_hk_hr_payroll
 #. odoo-python
 #: code:addons/l10n_hk_hr_payroll/models/hr_payroll_employee_declaration.py:0
 msgid "Wrong Model"
-msgstr ""
+msgstr "錯誤模型"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__xlsx_attachment_id
 msgid "XLSX Attachment"
-msgstr ""
+msgstr "XLSX 附件"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__xlsx_file
 msgid "XLSX File"
-msgstr ""
+msgstr "XLSX 檔案"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_manulife_mpf__xlsx_filename
 msgid "XLSX Filename"
-msgstr ""
+msgstr "XLSX 檔案名稱"
 
 #. module: l10n_hk_hr_payroll
 #: model:ir.model.fields,field_description:l10n_hk_hr_payroll.field_l10n_hk_ir56b__xml_file

@@ -1,29 +1,32 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* hr_payroll_account
+# * hr_payroll_account
 #
 # Translators:
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-17 17:10+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"hr_payroll_account/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_bank_statement_line__payslip_count
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_move__payslip_count
 msgid "# of Payslips"
-msgstr ""
+msgstr "تعداد فیش‌های حقوقی"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_run_view_form
@@ -36,11 +39,17 @@ msgid ""
 "                        <span class=\"o_stat_text\" invisible=\"move_state !"
 "= 'cancel'\">Journal Entry <br/>(Canceled)</span>"
 msgstr ""
+"<span class=\"o_stat_text\" invisible=\"move_state != 'draft'\">سند حسابداری "
+"<br/>(پیش‌نویس)</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"move_state "
+"!= 'posted'\">سند حسابداری <br/>(پست شده)</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"move_state "
+"!= 'cancel'\">سند حسابداری <br/>(لغو شده)</span>"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.view_move_form_inherit
 msgid "<span class=\"o_stat_text\">Payslip</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">فیش حقوقی</span>"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_chart_template
@@ -51,7 +60,7 @@ msgstr "قالب جدول حساب"
 #. odoo-python
 #: code:addons/hr_payroll_account/models/account_chart_template.py:0
 msgid "Account Payslip Houserental"
-msgstr ""
+msgstr "حساب فیش اجاره مسکن"
 
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_contract_view_form
@@ -81,7 +90,7 @@ msgstr "حساب تحلیلی"
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_run_view_form
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.hr_payslip_view_form
 msgid "Are you sure you want to proceed?"
-msgstr ""
+msgstr "از ادامه مطمئن هستید؟"
 
 #. module: hr_payroll_account
 #: model:ir.actions.act_window,name:hr_payroll_account.action_res_partner_bank_account_form
@@ -93,14 +102,14 @@ msgstr "حساب‌های بانکی"
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.res_config_settings_view_form
 msgid "Batch Account Move Lines"
-msgstr ""
+msgstr "سطرهای دسته‌ای انتقال حساب"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__batch_payroll_move_lines
 #: model:ir.model.fields,field_description:hr_payroll_account.field_res_company__batch_payroll_move_lines
 #: model:ir.model.fields,field_description:hr_payroll_account.field_res_config_settings__batch_payroll_move_lines
 msgid "Batch Payroll Move Lines"
-msgstr ""
+msgstr "سطرهای انتقال دسته‌ای حقوق و دستمزد"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_res_company
@@ -137,7 +146,7 @@ msgstr "حساب بستانکاری"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_line__credit_tag_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__credit_tag_ids
 msgid "Credit Tax Grids"
-msgstr ""
+msgstr "جداول مالیاتی بستانکاری"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip__date
@@ -153,7 +162,7 @@ msgstr "حساب بدهی"
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_line__debit_tag_ids
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__debit_tag_ids
 msgid "Debit Tax Grids"
-msgstr ""
+msgstr "جداول مالیاتی بدهکاری"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_contract
@@ -173,6 +182,9 @@ msgid ""
 "into a single account move line. This will anonymize the accounting entries "
 "but also disable single payment generations."
 msgstr ""
+"فعال کردن این گزینه باعث ادغام تمام ثبت‌های حسابداری برای یک دوره مشابه به یک "
+"سطر انتقال حساب واحد می‌شود. این کار باعث ناشناس شدن ثبت‌های حسابداری می‌شود، "
+"اما همچنین امکان ایجاد پرداخت‌های تکی را غیرفعال می‌کند."
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,help:hr_payroll_account.field_hr_salary_rule__split_move_lines
@@ -187,17 +199,19 @@ msgstr ""
 msgid ""
 "From here you can manage all bank accounts linked to you and your contacts."
 msgstr ""
+"از اینجا می‌توانید تمام حساب‌های بانکی مرتبط با شما و مخاطبان خود را مدیریت "
+"کنید."
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_hr_payroll_payment_report_wizard
 msgid "HR Payroll Payment Report Wizard"
-msgstr ""
+msgstr "ویزارد گزارش پرداخت حقوق کارکنان"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_account_setup_bank_manual_config__has_alt_bank_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_res_partner_bank__has_alt_bank_account
 msgid "Has Alt Bank Account"
-msgstr ""
+msgstr "حساب بانکی جایگزین دارد"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -212,7 +226,7 @@ msgstr "دفترروزنامه نادرست: دفترروزنامه باید ب�
 msgid ""
 "Invalid IBAN for the following employees:\n"
 "%s"
-msgstr ""
+msgstr "شماره IBAN این کارمندان معتبر نیست:%s"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_journal
@@ -240,7 +254,7 @@ msgstr "جابجایی"
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payslip_run__move_state
 msgid "Move State"
-msgstr ""
+msgstr "وضعیت انتقال"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_salary_rule__not_computed_in_net
@@ -268,7 +282,7 @@ msgstr "فیش پرداخت"
 #. odoo-python
 #: code:addons/hr_payroll_account/wizard/account_payment_register.py:0
 msgid "Payment done at %s"
-msgstr ""
+msgstr "پرداخت در %s انجام شده است"
 
 #. module: hr_payroll_account
 #: model:ir.model,name:hr_payroll_account.model_account_payment
@@ -301,7 +315,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_payroll_account/models/account_chart_template.py:0
 msgid "Salaries"
-msgstr ""
+msgstr "حقوق‌ها"
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,field_description:hr_payroll_account.field_hr_payroll_structure__journal_id
@@ -332,6 +346,9 @@ msgid ""
 "into an accounting journal entry.They will be applied on the credit account "
 "line in the journal entry."
 msgstr ""
+"برچسب‌هایی که به این سطر اختصاص داده شده‌اند، با تبدیل به سند حسابداری در دفتر "
+"روزنامه، بر گزارش‌های مالی تأثیر خواهند گذاشت. این برچسب‌ها بر روی سطر حساب "
+"بستانکار در سند حسابداری اعمال خواهند شد."
 
 #. module: hr_payroll_account
 #: model:ir.model.fields,help:hr_payroll_account.field_hr_payslip_line__debit_tag_ids
@@ -341,19 +358,22 @@ msgid ""
 "into an accounting journal entry.They will be applied on the debit account "
 "line in the journal entry."
 msgstr ""
+"برچسب‌هایی که به این سطر اختصاص داده شده‌اند، با تبدیل به سند حسابداری در دفتر "
+"روزنامه، بر گزارش‌های مالی تأثیر خواهند گذاشت. این برچسب‌ها بر روی سطر حساب "
+"بدهکار در سند حسابداری اعمال خواهند شد."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid ""
 "The Expense Journal \"%s\" has not properly configured the default Account!"
-msgstr ""
+msgstr "دفتر هزینه «%s» به درستی حساب پیش‌فرض را پیکربندی نکرده است!"
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "The credit account on the NET salary rule is not reconciliable"
-msgstr ""
+msgstr "حساب بستانکار در قانون حقوق خالص قابل مغایرت‌گیری نیست"
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -377,7 +397,7 @@ msgstr ""
 #. module: hr_payroll_account
 #: model_terms:ir.ui.view,arch_db:hr_payroll_account.view_partner_bank_form_inherit_hr_payroll_account
 msgid "This will replace the employee existing bank account."
-msgstr ""
+msgstr "با این کار حساب بانکی فعلی کارمند جایگزین خواهد شد."
 
 #. module: hr_payroll_account
 #. odoo-python
@@ -389,19 +409,19 @@ msgstr "شما فقط می توانید پرداخت را برای نوشته ه
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "You can only register payments for unpaid documents."
-msgstr ""
+msgstr "فقط می‌توانید پرداخت‌های اسناد پرداخت نشده را ثبت کنید."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/hr_payslip.py:0
 msgid "You can't create a journal entry for a paid payslip."
-msgstr ""
+msgstr "برای فیش‌های حقوقی پرداخت شده نمی‌توانید سند حسابداری ایجاد کنید."
 
 #. module: hr_payroll_account
 #. odoo-python
 #: code:addons/hr_payroll_account/models/account_journal.py:0
 msgid "You cannot delete the journal linked to a Salary Structure"
-msgstr ""
+msgstr "دفتر روزنامه لینک شده به یک ساختار حقوق و دستمزد را نمی‌توانید حذف کنید"
 
 #~ msgid "One of the payroll structures has no account journal defined on it."
 #~ msgstr "یکی از ساختارهای حقوق‌ودستمزد فاقد دفترروزنامه حساب در آن است."

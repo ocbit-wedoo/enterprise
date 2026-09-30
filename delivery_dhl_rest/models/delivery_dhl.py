@@ -275,8 +275,9 @@ class ProviderDHL(models.Model):
         if self.dhl_dutiable:
             rating_request['monetaryAmount'] = srm._get_dutiable_vals(total_value, currency_id.name)
         rating_request['unitOfMeasurement'] = self.dhl_unit_system
-        if planned_date <= fields.Datetime.now():
-            raise UserError(_("The planned date for the shipment must be in the future."))
+        if not planned_date or planned_date <= fields.Datetime.now():
+            # DHL requires a planned date in the future => +1 hr to now
+            planned_date = fields.Datetime.now() + timedelta(hours=1)
         rating_request['plannedShippingDateAndTime'] = self._convert_to_utc_string(planned_date)
         rating_request['nextBusinessDay'] = True
         rating_request['accounts'] = srm._get_billing_vals(account_number, "shipper")
@@ -343,10 +344,11 @@ class ProviderDHL(models.Model):
             srm = DHLProvider(self)
             account_number = self.sudo().dhl_account_number
             planned_date = picking.scheduled_date
-            if planned_date <= fields.Datetime.now():
-                raise UserError(_("The planned date for the shipment must be in the future."))
+            if not planned_date or planned_date <= fields.Datetime.now():
+                # DHL requires a planned date in the future => +1 hr to now
+                planned_date = fields.Datetime.now() + timedelta(hours=1)
             shipment_request['plannedShippingDateAndTime'] = self._convert_to_utc_string(planned_date)
-            shipment_request['pickup'] = {'isRequested': True}
+            shipment_request['pickup'] = {'isRequested': False}
             shipment_request['accounts'] = srm._get_billing_vals(account_number, "shipper")
             shipment_request['customerDetails'] = {}
             shipment_request['customerDetails']['receiverDetails'] = srm._get_consignee_vals(picking.partner_id)
@@ -419,8 +421,9 @@ class ProviderDHL(models.Model):
         srm = DHLProvider(self)
         account_number = self.sudo().dhl_account_number
         planned_date = picking.scheduled_date
-        if planned_date <= fields.Datetime.now():
-            raise UserError(_("The planned date for the shipment must be in the future."))
+        if not planned_date or planned_date <= fields.Datetime.now():
+            # DHL requires a planned date in the future => +1 hr to now
+            planned_date = fields.Datetime.now() + timedelta(hours=1)
         shipment_request['plannedShippingDateAndTime'] = self._convert_to_utc_string(planned_date)
         shipment_request['pickup'] = {'isRequested': False}
         shipment_request['accounts'] = srm._get_billing_vals(account_number, "shipper")

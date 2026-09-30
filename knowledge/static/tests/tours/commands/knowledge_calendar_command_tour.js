@@ -8,6 +8,7 @@ import {
 } from "../knowledge_tour_utils.js";
 import { stepUtils } from "@web_tour/tour_service/tour_utils";
 import { patch } from "@web/core/utils/patch";
+import { CalendarModel } from "@web/views/calendar/calendar_model";
 import { animationFrame, hover, queryFirst } from "@odoo/hoot-dom";
 
 const embeddedViewPatchUtil = embeddedViewPatchFunctions();
@@ -35,7 +36,26 @@ function clickDate(el) {
     el.dispatchEvent(new MouseEvent('mouseup', eventParams));
 }
 
-function dragDate(el, target) {
+function patchCalendarModelUpdateRecord(targetEventId) {
+    const { promise, resolve } = Promise.withResolvers();
+    const eventId = Number(targetEventId);
+    const unpatchUpdateRecord = patch(CalendarModel.prototype, {
+        async updateRecord(record) {
+            const updateResult = await super.updateRecord(...arguments);
+            if(eventId === record.id) {
+                resolve();
+            }
+            return updateResult;
+        },
+    });
+    return { updateRecordPromise: promise, unpatchUpdateRecord };
+}
+
+async function dragDate(el, target) {
+    const eventParent = el.closest(".fc-event");
+    const eventId = eventParent.dataset.eventId;
+    const { updateRecordPromise, unpatchUpdateRecord } = patchCalendarModelUpdateRecord(eventId);
+
     // Cannot use drag_and_drop because it uses the center of the elements
     const elRect = el.getBoundingClientRect();
     el.dispatchEvent(new MouseEvent('mousedown', {
@@ -54,6 +74,12 @@ function dragDate(el, target) {
         clientX: targetRect.left + 1,
         clientY: targetRect.top + 1,
     }));
+
+    // FullCalendar schedules execution of callback handlers on the next macro-task slice.
+    // Since this is an implementation detail we wait (more robustly) until the update request 
+    // has been processed by the server.
+    await updateRecordPromise;
+    unpatchUpdateRecord();
 }
 
 registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
@@ -387,13 +413,13 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
     run: 'click',
 }, { // Move the item in the calendar
     trigger: '.fc-timegrid-event .o_event_title:contains("Item Article")',
-    run: function () {
+    async run() {
         const target = document.querySelector('.fc-timegrid-slot.fc-timegrid-slot-lane[data-time="09:00:00"]');
-        dragDate(this.anchor, target);
+        await dragDate(this.anchor, target);
     },
 }, { // Resize the item
     trigger: '.fc-timegrid-event:contains("Item Article")',
-    run: async () => {
+    async run() {
         // Make resizer visible
         await hover(`.fc-event-main:first`, { root: this.anchor });
         await animationFrame();
@@ -404,7 +430,7 @@ registry.category("web_tour.tours").add('knowledge_calendar_command_tour', {
             bottom: "0",
         });
         const target = queryFirst('.fc-timegrid-slot.fc-timegrid-slot-lane[data-time="11:00:00"]');
-        dragDate(resizer, target);
+        await dragDate(resizer, target);
     },
 }, {
     //----------------------------------------------------------------------

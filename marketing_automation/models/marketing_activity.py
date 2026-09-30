@@ -254,6 +254,10 @@ class MarketingActivity(models.Model):
     def write(self, values):
         if any(activity.campaign_id.state == 'running' for activity in self) and any(field in values for field in ('interval_number', 'interval_type')):
             values['require_sync'] = True
+        if 'parent_id' in values and self.trace_ids and not all(t.is_test for t in self.trace_ids):
+            # Prevent modifying relationships when real traces exist, as it could create duplicates
+            # and would require a full trace resynchronization in some cases.
+            raise ValidationError(_("Error! You can't modify the hierarchy of an active Activity."))
         return super(MarketingActivity, self).write(values)
 
     def _get_full_statistics(self):

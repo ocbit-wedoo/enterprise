@@ -202,16 +202,22 @@ class BankReconciliationReportCustomHandler(models.AbstractModel):
             ('account_id', '=', journal.default_account_id.id),  # There should be only 1 line per move with that account
         ])
 
+        join_clause = SQL(
+            "JOIN account_bank_statement_line st_line ON st_line.move_id = account_move_line.move_id "
+            "JOIN account_move move ON move.id = st_line.move_id"
+        )
+
         if from_last_statement:
-            last_statement_id = self._get_last_bank_statement(journal, options).id
-            if last_statement_id:
-                last_statement_id_condition = SQL("st_line.statement_id = %s", last_statement_id)
+            last_statement = self._get_last_bank_statement(journal, options)
+            if last_statement:
+                join_clause = SQL("%s %s", join_clause, SQL("JOIN account_bank_statement statement ON statement.id = st_line.statement_id"))
+                last_statement_condition = SQL("statement.date <= %s", last_statement.date)
             else:
                 # If there is no last statement, the last statement section must be empty and the other must have all
                 # transaction
                 return self._compute_result([], current_groupby, build_result_dict)
         else:
-            last_statement_id_condition = SQL("st_line.statement_id IS NULL")
+            last_statement_condition = SQL("st_line.statement_id IS NULL")
 
         if internal_type == 'receipts':
             st_line_amount_condition = SQL("AND st_line.amount > 0")
@@ -236,12 +242,11 @@ class BankReconciliationReportCustomHandler(models.AbstractModel):
                   st_line.amount_currency,
                   st_line.foreign_currency_id
              FROM %(table_references)s
-             JOIN account_bank_statement_line st_line ON st_line.move_id = account_move_line.move_id
-             JOIN account_move move ON move.id = st_line.move_id
+             %(join_clause)s
             WHERE %(search_condition)s
                   %(is_unreconciled)s
                   %(st_line_amount_condition)s
-              AND %(last_statement_id_condition)s
+              AND %(last_statement_condition)s
          GROUP BY %(group_by)s,
                   st_line.id,
                   move.id
@@ -249,10 +254,11 @@ class BankReconciliationReportCustomHandler(models.AbstractModel):
             select_from_groupby=SQL("%s AS grouping_key", groupby_field_sql),
             table_references=query.from_clause,
             search_condition=query.where_clause,
+            join_clause=join_clause,
             is_receipt=SQL("st_line.amount > 0") if internal_type == "receipts" else SQL("st_line.amount < 0"),
             is_unreconciled=SQL("AND NOT st_line.is_reconciled") if unreconciled else SQL(""),
             st_line_amount_condition=st_line_amount_condition,
-            last_statement_id_condition=last_statement_id_condition,
+            last_statement_condition=last_statement_condition,
             group_by=groupby_field_sql if current_groupby else SQL('st_line.id'),  # Same key in the groupby because we can't put a null key in a group by
         )
 

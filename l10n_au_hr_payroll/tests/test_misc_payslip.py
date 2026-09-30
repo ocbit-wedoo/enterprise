@@ -767,3 +767,47 @@ class TestPayrollMisc(TestPayrollCommon):
             },
             ]
         )
+
+    def test_misc_payslip_20_recompute_income_stream_type(self):
+        self.tax_treatment_category = 'R'
+        employee, contract = self._create_employee(contract_info={
+            'employee': 'Test Employee',
+            'employment_basis_code': 'C',
+            'tfn_declaration': '111111111',
+            'wage_type': 'monthly',
+            'wage': 5000,
+            'casual_loading': 0,
+        })
+
+        payslip = self.env["hr.payslip"].create({
+            "name": "Test payslip",
+            "employee_id": employee.id,
+            "contract_id": contract.id,
+            "struct_id": self.default_payroll_structure.id,
+            "date_from": date(2024, 7, 1),
+            "date_to": date(2024, 7, 31),
+        })
+        self.assertEqual(payslip.l10n_au_income_stream_type, 'SAW')
+        employee.l10n_au_income_stream_type = 'OSP'
+        payslip.compute_sheet()
+        self.assertEqual(payslip.l10n_au_income_stream_type, employee.l10n_au_income_stream_type)
+
+        self._test_payslip(
+            employee,
+            contract,
+            payslip=payslip,
+            expected_worked_days=[
+                # (work_entry_type_id.id, number_of_day, number_of_hours, amount)
+                (self.work_entry_types["WORK100"].id, 23, 174.8, 5000),
+            ],
+            expected_lines=[
+                # (code, total)
+                ('BASIC', 5000),
+                ('OTE', 5000),
+                ('GROSS', 5000),
+                ('WITHHOLD', -1317),
+                ('WITHHOLD.TOTAL', -1317),
+                ('NET', 3683),
+                ('SUPER', 575),
+            ],
+        )

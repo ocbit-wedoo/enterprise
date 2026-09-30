@@ -11,13 +11,14 @@
 # Wil Odoo, 2025
 # Kira Petersen, 2025
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-02-20 18:53+0000\n"
-"PO-Revision-Date: 2026-02-21 18:31+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 13:46+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "sale_timesheet_enterprise/da/>\n"
 "Language: da\n"
@@ -25,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14.3\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -106,7 +107,7 @@ msgstr "Alle registrerede timesedler"
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_account_analytic_line
 msgid "Analytic Line"
-msgstr "Analytisk linje"
+msgstr "Analyselinje"
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript
@@ -160,7 +161,7 @@ msgstr "Virksomheder"
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_res_config_settings
 msgid "Config Settings"
-msgstr "Konfigurer opsætning"
+msgstr "Konfigurationsindstillinger"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.ui.menu,name:sale_timesheet_enterprise.hr_timesheet_menu_configuration_settings
@@ -197,7 +198,7 @@ msgstr ""
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_hr_timesheet_tip__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,help:sale_timesheet_enterprise.field_project_task__portal_progress
@@ -252,7 +253,7 @@ msgstr ""
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_account_move_line
 msgid "Journal Item"
-msgstr "Journalpost"
+msgstr "Posteringslinje"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_hr_timesheet_tip__write_uid
@@ -279,7 +280,7 @@ msgstr "Måned"
 #. module: sale_timesheet_enterprise
 #: model_terms:ir.actions.act_window,help:sale_timesheet_enterprise.hr_timesheet_tip_action
 msgid "Motivate employees to fill timesheets with these tips."
-msgstr "Motiver medarbejderne til at udfylde timesedler med disse tips."
+msgstr "Motivér medarbejderne til at udfylde timesedler med disse tips."
 
 #. module: sale_timesheet_enterprise
 #: model_terms:ir.actions.act_window,help:sale_timesheet_enterprise.hr_timesheet_tip_action
@@ -312,7 +313,7 @@ msgstr "Registrér timesedler for at stige i ranglisten!"
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_sale_advance_payment_inv
 msgid "Sales Advance Payment Invoice"
-msgstr "Salgsfaktura på forudbetaling"
+msgstr "Salgsfaktura for forudbetaling"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_sale_order_line
@@ -398,18 +399,17 @@ msgstr "Tidsforbrug på delopgaver"
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,help:sale_timesheet_enterprise.field_project_task__portal_subtask_effective_hours
 msgid "Time spent on the sub-tasks (and their own sub-tasks) of this task."
-msgstr ""
-"Tid brugt på under-opgaver (og deres egne under-opgaver) for denne opgave."
+msgstr "Tid brugt på delopgaver (og deres egne delopgaver) for denne opgave."
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,help:sale_timesheet_enterprise.field_project_task__portal_effective_hours
 msgid "Time spent on this task, excluding its sub-tasks."
-msgstr "Tid brugt på denne opgave, eksklusiv dens under-opgaver."
+msgstr "Tid brugt på denne opgave, eksklusive delopgaver."
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,help:sale_timesheet_enterprise.field_project_task__portal_total_hours_spent
 msgid "Time spent on this task, including its sub-tasks."
-msgstr "Tid brugt på denne opgave, inklusiv dens under-opgaver."
+msgstr "Tid brugt på denne opgave, inklusiv dens delopgaver."
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_hr_employee__show_billable_time_target
@@ -419,12 +419,12 @@ msgstr "Vis tidsregistreringer med priser"
 #. module: sale_timesheet_enterprise
 #: model_terms:ir.ui.view,arch_db:sale_timesheet_enterprise.timesheet_view_grid_by_invoice_type
 msgid "Timesheets"
-msgstr "Timesedler"
+msgstr "Tidsregistreringer"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model.fields,field_description:sale_timesheet_enterprise.field_res_config_settings__invoiced_timesheet
 msgid "Timesheets Invoicing"
-msgstr "Fakturering af timesedler"
+msgstr "Fakturering af tidsregistrering"
 
 #. module: sale_timesheet_enterprise
 #: model:ir.model,name:sale_timesheet_enterprise.model_hr_timesheet_tip
@@ -481,8 +481,8 @@ msgid ""
 "Total remaining time, can be re-estimated periodically by the assignee of "
 "the task."
 msgstr ""
-"Den samlede tilbageværende tid kan genberegnes periodisk af den "
-"opgaveansvarlige."
+"Den samlede tilbageværende tid kan genberegnes periodisk af opgavens "
+"ansvarshavende."
 
 #. module: sale_timesheet_enterprise
 #. odoo-javascript

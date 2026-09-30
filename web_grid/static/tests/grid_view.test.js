@@ -2086,6 +2086,26 @@ describe("grid_view_desktop", () => {
         expect(".scale_button_selection").toHaveText("Year");
         expect.verifySteps(["scale_year"]);
     });
+
+    test("Selection field label is displayed instead of its key when clicking on cell magnifier", async () => {
+        Line._views["grid"] = `<grid>
+            <field name="selection_field" type="row"/>
+            <field name="task_id" type="col"/>
+            <field name="unit_amount" type="measure" widget="float_time"/>
+        </grid>`;
+        await mountWithCleanup(WebClient);
+        await getService("action").doAction({
+            res_model: "analytic.line",
+            type: "ir.actions.act_window",
+            views: [[false, "grid"]],
+        });
+
+        await hover(".o_grid_row .o_grid_cell_readonly:eq(3)");
+        await contains(".o_grid_cell button.o_grid_search_btn").click();
+        expect(queryAllTexts(".o_control_panel_breadcrumbs .o_last_breadcrumb_item")).toEqual([
+            "GHI (BS task)",
+        ]);
+    });
 });
 describe.tags("mobile");
 describe("grid_view_mobile", () => {

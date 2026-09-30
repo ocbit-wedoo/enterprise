@@ -372,6 +372,55 @@ class TestUserAccess(HttpCase):
 
         self.assertNotIn(slot, send.slot_ids, "User should not be able to send planning to users from other companies")
 
+    def test_multicompany_overlap_no_access_error(self):
+        """ Test that overlap computation correctly respects multi-company access. """
+        main_company = self.env.company
+        other_company = self.env['res.company'].create({'name': 'Other Co'})
+
+        self.planning_mgr.write({'company_ids': [Command.link(other_company.id)]})
+
+        slots = self.env['planning.slot'].create([
+            {
+                'start_datetime': datetime(2026, 9, 21, 8, 0, 0),
+                'end_datetime': datetime(2026, 9, 21, 17, 0, 0),
+                'resource_id': self.res_planning_user.id,
+                'company_id': main_company.id,
+            },
+            {
+                'start_datetime': datetime(2026, 9, 21, 8, 0, 0),
+                'end_datetime': datetime(2026, 9, 21, 17, 0, 0),
+                'resource_id': self.res_planning_user.id,
+                'company_id': other_company.id,
+            }
+        ])
+        slot_in_main_company = slots[0]
+
+        slot_in_main_company.with_user(self.planning_mgr).with_context(
+            allowed_company_ids=[main_company.id],
+        )._compute_overlap_slot_count()
+
+        self.assertEqual(
+            slot_in_main_company.overlap_slot_count, 0,
+            "The overlap count should be 0 because the conflicting shift is in a hidden company."
+        )
+        self.assertFalse(
+            slot_in_main_company.conflicting_slot_ids,
+            "There should be no conflicting shifts listed from hidden companies."
+        )
+
+        slot_in_main_company.with_user(self.planning_mgr).with_context(
+            allowed_company_ids=[main_company.id, other_company.id],
+        )._compute_overlap_slot_count()
+
+        self.assertEqual(
+            slot_in_main_company.overlap_slot_count, 1,
+            "The overlap count should be 1 because the user has access to both companies."
+        )
+        self.assertTrue(
+            slot_in_main_company.conflicting_slot_ids,
+            "The conflicting shift should be listed because the user has access to its company."
+        )
+
     def test_user_can_archive_another_employee(self):
         """
         Test user may archive another employee with no access right to planning.

@@ -3,13 +3,14 @@
 # * hr_payroll_expense
 #
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Bone NI <bounkirdni@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2026-05-20 23:46+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 11:04+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
 "Language-Team: Lao <https://translate.odoo.com/projects/odoo-18/"
 "hr_payroll_expense/lo/>\n"
 "Language: lo\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll_expense
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.view_account_payment_register_form_inherit_hr_payroll_expense
@@ -26,11 +27,15 @@ msgid ""
 "                            The expenses will already be reimbursed in a payslip. Make sure this payment is intended.\n"
 "                        </span>"
 msgstr ""
+"<span class=\"fw-bold\">\n"
+"                            ລາຍຈ່າຍຈະຖືກຈ່າຍຄືນໃນໃບເງິນເດືອນແລ້ວ. ກະລຸນາກວດສອບໃຫ້ແນ່ໃຈວ່"
+"າການຈ່າຍເງິນນີ້ແມ່ນຖືກຕ້ອງຕາມຄວາມຕ້ອງການ.\n"
+"                        </span>"
 
 #. module: hr_payroll_expense
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.hr_expense_sheet_view_form_inherit_payroll
 msgid "<span class=\"o_stat_text\">Payslip</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">ໃບເງິນເດືອນ</span>"
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_hr_expense_sheet
@@ -44,18 +49,20 @@ msgid ""
 "Expense reimbursement rule needs to be configured to add expenses to payslips.\n"
 "Please create one salary rule with the \"%(code)s\" code on the relevant salary structures."
 msgstr ""
+"ຕ້ອງມີການກຳນົດຄ່າກົດລະບຽບການຈ່າຍຄືນລາຍຈ່າຍ ເພື່ອເພີ່ມລາຍຈ່າຍເຂົ້າໃນໃບເງິນເດືອນ.\n"
+"ກະລຸນາສ້າງກົດລະບຽບເງິນເດືອນໜຶ່ງອັນດ້ວຍລະຫັດ \"%(code)s\" ໃນໂຄງສ້າງເງິນເດືອນທີ່ກ່ຽວຂ້ອງ."
 
 #. module: hr_payroll_expense
 #. odoo-python
 #: code:addons/hr_payroll_expense/models/hr_expense_sheet.py:0
 msgid "Expense report (\"%(name)s\") was removed from the next payslip."
-msgstr ""
+msgstr "ລາຍງານລາຍຈ່າຍ (\"%(name)s\") ໄດ້ຖືກຖອນອອກຈາກໃບເງິນເດືອນຄັ້ງຖັດໄປແລ້ວ."
 
 #. module: hr_payroll_expense
 #. odoo-python
 #: code:addons/hr_payroll_expense/models/hr_expense_sheet.py:0
 msgid "Expense report (\"%(name)s\") will be added to the next payslip."
-msgstr ""
+msgstr "ລາຍງານລາຍຈ່າຍ (\"%(name)s\") ຈະຖືກເພີ່ມເຂົ້າໃນໃບເງິນເດືອນຄັ້ງຖັດໄປ."
 
 #. module: hr_payroll_expense
 #: model:ir.model.fields,field_description:hr_payroll_expense.field_hr_payslip__expense_sheet_ids
@@ -66,17 +73,17 @@ msgstr "ລາຍຈ່າຍ"
 #. module: hr_payroll_expense
 #: model:ir.model.fields,field_description:hr_payroll_expense.field_hr_payslip__expenses_count
 msgid "Expenses Count"
-msgstr ""
+msgstr "ຈຳນວນລາຍຈ່າຍ"
 
 #. module: hr_payroll_expense
 #: model:hr.salary.rule,name:hr_payroll_expense.hr_salary_rule_expense_refund
 msgid "Expenses Reimbursement"
-msgstr ""
+msgstr "ການຈ່າຍຄືນລາຍຈ່າຍ"
 
 #. module: hr_payroll_expense
 #: model:ir.model.fields,help:hr_payroll_expense.field_hr_payslip__expense_sheet_ids
 msgid "Expenses to reimburse to employee."
-msgstr ""
+msgstr "ລາຍຈ່າຍທີ່ຈະຈ່າຍຄືນໃຫ້ພະນັກງານ."
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_hr_payslip_employees
@@ -87,12 +94,12 @@ msgstr "ສ້າງໃບເງິນເດືອນສຳລັບພະນັ
 #. odoo-python
 #: code:addons/hr_payroll_expense/models/hr_expense_sheet.py:0
 msgid "Go to salary rules"
-msgstr ""
+msgstr "ໄປທີ່ກົດລະບຽບເງິນເດືອນ"
 
 #. module: hr_payroll_expense
 #: model:ir.model.fields,field_description:hr_payroll_expense.field_account_payment_register__is_already_paid_through_a_payslip
 msgid "Is Already Paid Through A Payslip"
-msgstr ""
+msgstr "ໄດ້ຖືກຈ່າຍຜ່ານໃບເງິນເດືອນແລ້ວ"
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_account_move
@@ -107,6 +114,8 @@ msgid ""
 "add a payable debit account to be able to create an accounting entry for the"
 " expense reports linked to this payslip."
 msgstr ""
+"ບໍ່ພົບບັນຊີເດບິດໃນກົດລະບຽບເງິນເດືອນ '%(rule_name)s'. ກະລຸນາເພີ່ມບັນຊີເດບິດປະເພດໜີ້ຕ້ອງຈ່າຍ ເພື່ອໃຫ້"
+"ສາມາດສ້າງລາຍການບັນຊີສຳລັບລາຍງານລາຍຈ່າຍທີ່ເຊື່ອມໂຍງກັບໃບເງິນເດືອນນີ້."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -115,6 +124,7 @@ msgid ""
 "No salary rule was found to handle expenses in structure "
 "'%(structure_name)s'."
 msgstr ""
+"ບໍ່ພົບກົດລະບຽບເງິນເດືອນເພື່ອຈັດການລາຍຈ່າຍໃນໂຄງສ້າງ '%(structure_name)s'."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -123,6 +133,8 @@ msgid ""
 "Only approved expense reports that were paid by an employee can be "
 "reimbursed in a payslip."
 msgstr ""
+"ສະເພາະລາຍງານລາຍຈ່າຍທີ່ໄດ້ຮັບອະນຸມັດ ແລະ ຈ່າຍໂດຍພະນັກງານເທົ່ານັ້ນ ທີ່ສາມາດນຳມາຈ່າຍຄືນໃນໃບເງິນເດືອ"
+"ນໄດ້."
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_account_payment_register
@@ -144,24 +156,24 @@ msgstr "ໃບເງິນເດືອນ"
 #. module: hr_payroll_expense
 #: model:ir.model.fields,field_description:hr_payroll_expense.field_hr_expense_sheet__refund_in_payslip
 msgid "Reimburse In Next Payslip"
-msgstr ""
+msgstr "ຈ່າຍຄືນໃນໃບເງິນເດືອນຄັ້ງຖັດໄປ"
 
 #. module: hr_payroll_expense
 #. odoo-python
 #: code:addons/hr_payroll_expense/models/hr_payslip.py:0
 msgid "Reimbursed Expenses"
-msgstr ""
+msgstr "ລາຍຈ່າຍທີ່ໄດ້ຈ່າຍຄືນແລ້ວ"
 
 #. module: hr_payroll_expense
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.hr_expense_sheet_view_form_inherit_payroll
 msgid "Remove from Payslip"
-msgstr ""
+msgstr "ຖອນອອກຈາກໃບເງິນເດືອນ"
 
 #. module: hr_payroll_expense
 #: model:ir.actions.server,name:hr_payroll_expense.hr_expense_add_to_payslip_action_server
 #: model_terms:ir.ui.view,arch_db:hr_payroll_expense.hr_expense_sheet_view_form_inherit_payroll
 msgid "Report in Next Payslip"
-msgstr ""
+msgstr "ລາຍງານໃນໃບເງິນເດືອນຄັ້ງຖັດໄປ"
 
 #. module: hr_payroll_expense
 #: model:ir.model,name:hr_payroll_expense.model_hr_payroll_structure
@@ -175,6 +187,8 @@ msgid ""
 "The '%(account_name)s' account for the salary rule '%(rule_name)s' must be "
 "of type 'Payable'."
 msgstr ""
+"ບັນຊີ '%(account_name)s' ສຳລັບກົດລະບຽບເງິນເດືອນ '%(rule_name)s' ຕ້ອງແມ່ນປະເພດ 'ໜີ້ຕ້ອງຈ່າ"
+"ຍ' (Payable)."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -184,6 +198,8 @@ msgid ""
 "be able to properly reimburse the linked expenses. This must be an account "
 "of type 'Payable'."
 msgstr ""
+"ກົດລະບຽບເງິນເດືອນທີ່ມີລະຫັດ 'EXPENSES' ຕ້ອງໄດ້ກຳນົດບັນຊີເດບິດ ເພື່ອໃຫ້ສາມາດຈ່າຍຄືນລາຍຈ່າຍທີ່ເຊື່ອມໂຍ"
+"ງໄດ້ຢ່າງຖືກຕ້ອງ. ນີ້ຕ້ອງແມ່ນບັນຊີປະເພດ 'ໜີ້ຕ້ອງຈ່າຍ' (Payable)."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -192,12 +208,13 @@ msgid ""
 "The state of the accounting entries linked to this expense report do not "
 "allow it to be reimbursed through a payslip."
 msgstr ""
+"ສະຖານະຂອງລາຍການບັນຊີທີ່ເຊື່ອມໂຍງກັບລາຍງານລາຍຈ່າຍນີ້ ບໍ່ອະນຸຍາດໃຫ້ຈ່າຍຄືນຜ່ານໃບເງິນເດືອນໄດ້."
 
 #. module: hr_payroll_expense
 #. odoo-python
 #: code:addons/hr_payroll_expense/models/hr_expense_sheet.py:0
 msgid "There are no valid expense sheets selected."
-msgstr ""
+msgstr "ບໍ່ມີໃບລາຍຈ່າຍທີ່ຖືກຕ້ອງຖືກເລືອກ."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -206,6 +223,8 @@ msgid ""
 "You cannot remove an expense from a payslip that has already been validated.\n"
 "Expenses can only be removed from draft or canceled payslips."
 msgstr ""
+"ທ່ານບໍ່ສາມາດຖອນລາຍຈ່າຍອອກຈາກໃບເງິນເດືອນທີ່ໄດ້ຮັບການຢືນຢັນແລ້ວ.\n"
+"ລາຍຈ່າຍສາມາດຖອນອອກໄດ້ສະເພາະຈາກໃບເງິນເດືອນທີ່ເປັນສະບັບຮ່າງ ຫຼື ຖືກຍົກເລີກເທົ່ານັ້ນ."
 
 #. module: hr_payroll_expense
 #. odoo-python
@@ -214,6 +233,8 @@ msgid ""
 "You don't have the access rights to link an expense report to a payslip. You"
 " need to be a payroll officer to do that."
 msgstr ""
+"ທ່ານບໍ່ມີສິດເຂົ້າເຖິງໃນການເຊື່ອມໂຍງລາຍງານລາຍຈ່າຍເຂົ້າກັບໃບເງິນເດືອນ. ທ່ານຕ້ອງເປັນເຈົ້າໜ້າທີ່ຄິດໄລ່ເງິນເດື"
+"ອນເພື່ອດຳເນີນການນີ້."
 
 #. module: hr_payroll_expense
 #. odoo-python

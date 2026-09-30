@@ -29,7 +29,15 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
             txt_result = ""
             if data:
                 output = io.StringIO()
-                writer = csv.DictWriter(output, delimiter="|", skipinitialspace=True, lineterminator='|\n', fieldnames=data[0].keys())
+                fieldnames = list(data[0].keys()) + ['']
+                writer = csv.DictWriter(
+                    output,
+                    delimiter="|",
+                    skipinitialspace=True,
+                    lineterminator='\n',
+                    fieldnames=fieldnames,
+                    restval='',
+                )
                 writer.writerows(data)
                 txt_result = output.getvalue()
             filename = "LE%s%s%02d%02d%s011111.txt" % (

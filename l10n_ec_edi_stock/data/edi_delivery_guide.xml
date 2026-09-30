@@ -49,9 +49,10 @@
                         </detalles>
                     </destinatario>
                 </destinatarios>
-                <infoAdicional t-if="note or origin">
+                <infoAdicional t-if="note or origin or provider_vat">
                     <campoAdicional nombre="Novedades" t-out="note"/>
                     <campoAdicional nombre="Pedido" t-out="origin"/>
+                    <campoAdicional nombre="RUC Proveedor" t-out="provider_vat"/>
                 </infoAdicional>
             </guiaRemision>
         </template>

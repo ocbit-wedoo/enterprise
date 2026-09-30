@@ -107,7 +107,7 @@ class SocialAccountLinkedin(models.Model):
         if response.status_code != 200:
             return {}
 
-        data = response.json().get('elements', [{}])[0].get('totalShareStatistics', {})
+        data = (response.json().get('elements') or [{}])[0].get('totalShareStatistics', {})
 
         return {
             'audience': self._linkedin_fetch_followers_count(),

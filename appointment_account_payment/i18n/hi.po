@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2026-05-21 19:08+0000\n"
+"PO-Revision-Date: 2026-07-21 17:11+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Hindi <https://translate.odoo.com/projects/odoo-18/"
 "appointment_account_payment/hi/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment_account_payment
 #. odoo-python
@@ -52,7 +52,7 @@ msgstr ""
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "<i class=\"fa fa-pencil fa-fw me-1\"/>Edit my appointment"
-msgstr ""
+msgstr "<i class=\"fa fa-pencil fa-fw me-1\"/>मेरी अपॉइंटमेंट में बदलाव करें"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
@@ -60,6 +60,8 @@ msgid ""
 "<i class=\"fa fa-pencil-square-o text-warning me-3\"/>Appointment waiting "
 "for payment"
 msgstr ""
+"<i class=\"fa fa-pencil-square-o text-warning me-3\"/>अपॉइंटमेंट जिसके लिए पेमेंट "
+"होना बाकी है"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
@@ -73,6 +75,8 @@ msgid ""
 "<i class=\"oi oi-fw o_button_icon oi-arrow-right\"/> Configure Payment "
 "Providers"
 msgstr ""
+"<i class=\"oi oi-fw o_button_icon oi-arrow-right\"/> पेमेंट प्रोवाइडर को कॉन्फ़िगर "
+"करें"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_type_view_form
@@ -95,6 +99,9 @@ msgid ""
 "            <span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-"
 "muted fs-5\"/>"
 msgstr ""
+"<span>पेमेंट</span>\n"
+"            <span class=\"d-inline-block mx-sm-3 fa fa-angle-right text-"
+"muted fs-5\"/>"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
@@ -102,6 +109,8 @@ msgid ""
 "<strong>Warning</strong> Make sure you are logged in as the right partner "
 "before making this payment."
 msgstr ""
+"<strong>चेतावनी</strong> यह सुनिश्चित करें कि इस पेमेंट से पहले आप सही पार्टनर के रूप में "
+"लॉग इन हैं।"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
@@ -121,7 +130,7 @@ msgstr "ऐक्सेस टोकन"
 #. module: appointment_account_payment
 #: model:ir.model.constraint,message:appointment_account_payment.constraint_appointment_type_check_product_and_payment_step
 msgid "Activating the payment step requires a product"
-msgstr ""
+msgstr "पेमेंट चरण को सक्रिय करने के लिए एक प्रॉडक्ट की आवश्यकता है"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
@@ -151,7 +160,7 @@ msgstr "अपॉइंटमेंट इन्वाइट"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__account_move_id
 msgid "Appointment Invoice"
-msgstr ""
+msgstr "अपॉइंटमेंट इनवॉइस"
 
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_appointment_type
@@ -187,7 +196,7 @@ msgstr "बुकिंग लाइन"
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__product_id
 msgid "Booking Product"
-msgstr ""
+msgstr "बुकिंग प्रॉडक्ट"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_answer_input__calendar_event_id
@@ -242,6 +251,7 @@ msgid ""
 "Discover the secrets kept in high-end kitchens with one of our starred "
 "chefs, from the comfort of your own home."
 msgstr ""
+"अपने घर बैठे ही हमारे किसी स्टार शेफ के साथ आलीशान रसोइयों के रहस्यों को जानें।"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__display_name
@@ -297,13 +307,14 @@ msgstr "आखिरी बार अपडेट हुआ"
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Make customers pay a fee per person when booking your resources"
-msgstr ""
+msgstr "अपने रिसोर्स की बुकिंग करते समय ग्राहकों से प्रति व्यक्ति शुल्क वसूलें"
 
 #. module: appointment_account_payment
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Make sure customers pay before they can take a slot in your calendar"
 msgstr ""
+"सुनिश्चित करें कि ग्राहक आपके कैलेंडर में कोई स्लॉट लेने से पहले पेमेंट कर दें"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__calendar_event_id
@@ -322,18 +333,20 @@ msgstr ""
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_calendar_booking_line
 msgid "Meeting Resource Booking"
-msgstr ""
+msgstr "मीटिंग रिसोर्स बुकिंग"
 
 #. module: appointment_account_payment
 #: model:appointment.type,name:appointment_account_payment.appointment_type_online_cooking_lesson
 #: model:product.template,name:appointment_account_payment.product_appointment_type_online_cooking_lesson_product_template
 msgid "Online Cooking Lesson"
-msgstr ""
+msgstr "ऑनलाइन कुकिंग क्लास"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
 msgid "Oops! Paid appointment cannot be cancelled via our website.<br/>"
 msgstr ""
+"ओह! भुगतान किया गया अपॉइंटमेंट हमारी वेबसाइट के माध्यम से रद्द नहीं किया जा सकता "
+"है.<br/>"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking__staff_user_id
@@ -344,28 +357,28 @@ msgstr "ऑपरेटर"
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Paid Consultation"
-msgstr ""
+msgstr "पैसे देकर लिया जाने वाला कंसल्टेशन"
 
 #. module: appointment_account_payment
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Paid Seats"
-msgstr ""
+msgstr "पेमेंट की गई सीटें"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "Payment for \""
-msgstr ""
+msgstr "पेमेंट के लिए \""
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_type_view_form
 msgid "Pick a Product"
-msgstr ""
+msgstr "एक प्रॉडक्ट चुनें"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_form
 msgid "Proceed to Payment"
-msgstr ""
+msgstr "पेमेंट पर जाएं"
 
 #. module: appointment_account_payment
 #: model:ir.model,name:appointment_account_payment.model_product_template
@@ -381,7 +394,7 @@ msgstr "उत्पाद प्रकार"
 #. module: appointment_account_payment
 #: model:ir.model.fields,help:appointment_account_payment.field_appointment_type__has_payment_step
 msgid "Require visitors to pay to confirm their booking"
-msgstr ""
+msgstr "ग्राहकों को अपनी बुकिंग की पुष्टि करने के लिए पेमेंट करने के लिए कहें"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_calendar_booking_line__appointment_resource_id
@@ -398,7 +411,7 @@ msgstr "संसाधन"
 #. odoo-python
 #: code:addons/appointment_account_payment/models/templates/appointment_type.py:0
 msgid "Room %s"
-msgstr ""
+msgstr "रूम%s"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__product_lst_price
@@ -426,11 +439,12 @@ msgid ""
 "Thank you for your reservation. We will soon contact you to discuss menu "
 "options."
 msgstr ""
+"आपकी बुकिंग के लिए धन्यवाद. मेन्यू विकल्पों पर चर्चा करने के लिए हम जल्द ही आपसे संपर्क करेंगे।"
 
 #. module: appointment_account_payment
 #: model:ir.model.constraint,message:appointment_account_payment.constraint_appointment_answer_input_check_event_or_booking
 msgid "The answer inputs must be linked to a meeting or to a booking"
-msgstr ""
+msgstr "जवाबों का किसी मीटिंग या बुकिंग से जुड़ा होना ज़रूरी है"
 
 #. module: appointment_account_payment
 #. odoo-python
@@ -439,6 +453,8 @@ msgid ""
 "The following booking was not confirmed due to insufficient availability or "
 "configuration changes: %s"
 msgstr ""
+"उपलब्धता की कमी या कॉन्फ़िगरेशन में बदलाव के कारण नीचे दी गई बुकिंग की पुष्टि नहीं की गई: "
+"%s"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,help:appointment_account_payment.field_appointment_type__product_lst_price
@@ -457,12 +473,12 @@ msgstr "पेमेंट करने के लिए कुछ भी नह
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "This invoice is already paid for."
-msgstr ""
+msgstr "इनवॉइस का पेमेंट किया जा चुका है।"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_payment
 msgid "This is a preview of the customer appointment payment form."
-msgstr ""
+msgstr "यह ग्राहक अपॉइंटमेंट पेमेंट फ़ॉर्म का प्रीव्यू है।"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated
@@ -480,6 +496,8 @@ msgid ""
 "Unfortunately, it looks like this booking is not possible anymore. Please "
 "contact us to find an alternative."
 msgstr ""
+"दुर्भाग्य से, ऐसा लगता है कि यह बुकिंग अब संभव नहीं है. कृपया कोई वैकल्पिक व्यवस्था खोजने के "
+"लिए हमसे संपर्क करें।"
 
 #. module: appointment_account_payment
 #: model:ir.model.fields,field_description:appointment_account_payment.field_appointment_type__has_payment_step
@@ -494,14 +512,14 @@ msgstr "कब"
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.calendar_booking_view
 msgid "Where"
-msgstr ""
+msgstr "जहां"
 
 #. module: appointment_account_payment
 #. odoo-python
 #: code:addons/appointment_account_payment/models/product_product.py:0
 #: code:addons/appointment_account_payment/models/product_template.py:0
 msgid "You cannot delete the default booking product"
-msgstr ""
+msgstr "आप डिफ़ॉल्ट बुकिंग प्रॉडक्ट नहीं हटा सकते"
 
 #. module: appointment_account_payment
 #: model_terms:ir.ui.view,arch_db:appointment_account_payment.appointment_validated

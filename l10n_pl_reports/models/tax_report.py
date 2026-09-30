@@ -178,6 +178,7 @@ class PolishTaxReportCustomHandler(models.AbstractModel):
                    country.code AS country_code,
                    partn.complete_name AS partner_complete_name,
                    "account_move_line__move_id".name AS move_name,
+                   "account_move_line__move_id".ref AS reference,
                    "account_move_line__move_id".id AS move_id,
                     %(ksef_number_sql)s AS ksef_number,
                    min(partial_reconcile_date.invoice_date_due) AS reversed_move_date_due,

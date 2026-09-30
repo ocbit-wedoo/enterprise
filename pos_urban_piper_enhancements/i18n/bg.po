@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* pos_urban_piper_enhancements
+# * pos_urban_piper_enhancements
 #
 # Translators:
 # Martin Trigaux, 2025
@@ -11,35 +11,37 @@
 # Milena Georgieva, 2025
 # Maria Boyadjieva <marabo2000@gmail.com>, 2025
 # Petko Karamotchev, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2025-01-28 08:25+0000\n"
-"Last-Translator: Petko Karamotchev, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-05 17:56+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"pos_urban_piper_enhancements/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: pos_urban_piper_enhancements
 #: model_terms:ir.actions.act_window,help:pos_urban_piper_enhancements.action_pos_store_timing
 msgid "Add a store timing"
-msgstr ""
+msgstr "Добавяне на работно време на магазин"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_product_template_attribute_value__urbanpiper_pos_config_ids
 msgid "Available on Food Delivery"
-msgstr ""
+msgstr "Налично за доставка на храна"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,help:pos_urban_piper_enhancements.field_product_template_attribute_value__urbanpiper_pos_config_ids
 msgid "Check this if the value is available for food delivery."
-msgstr ""
+msgstr "Отметнете, ако стойността е налична за доставка на храна."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model,name:pos_urban_piper_enhancements.model_res_config_settings
@@ -64,7 +66,7 @@ msgstr "Създадено на"
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_order__delivery_datetime
 msgid "Delivery Datetime"
-msgstr ""
+msgstr "Дата и час на доставка"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_store_timing__display_name
@@ -81,11 +83,12 @@ msgstr "Краен час"
 #: code:addons/pos_urban_piper_enhancements/static/src/point_of_sale_override/store/pos_store.js:0
 msgid "Error to send delivery order in preparation display."
 msgstr ""
+"Грешка при изпращане на поръчката за доставка към дисплея за приготвяне."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,help:pos_urban_piper_enhancements.field_pos_order__is_notified
 msgid "Flag indicating if the delivery notification has been sent."
-msgstr ""
+msgstr "Флаг, указващ дали известието за доставка е изпратено."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields.selection,name:pos_urban_piper_enhancements.selection__pos_store_timing__weekday__friday
@@ -100,7 +103,7 @@ msgstr "ID"
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_order__is_notified
 msgid "Is Notified"
-msgstr ""
+msgstr "Известено"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_store_timing__write_uid
@@ -116,6 +119,7 @@ msgstr "Последно актуализирано на"
 #: model_terms:ir.actions.act_window,help:pos_urban_piper_enhancements.action_pos_store_timing
 msgid "Manage store timings for POS delivery order(s)."
 msgstr ""
+"Управление на работното време на магазина за поръчки за доставка от POS."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_config__urbanpiper_minimum_preparation_time
@@ -131,7 +135,7 @@ msgstr "Понеделник"
 #. module: pos_urban_piper_enhancements
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper_enhancements.view_pos_order_form_inherit_pos_urban_piper
 msgid "Online Order ID"
-msgstr ""
+msgstr "Номер на онлайн поръчка"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model,name:pos_urban_piper_enhancements.model_pos_config
@@ -151,12 +155,12 @@ msgstr "Сесия на център за продажби"
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_store_timing__config_ids
 msgid "Point of Sale accociated to this timing"
-msgstr ""
+msgstr "Каса, свързана с това работно време"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model,name:pos_urban_piper_enhancements.model_pos_store_timing
 msgid "Pos Store Timings"
-msgstr ""
+msgstr "POS работно време на магазин"
 
 #. module: pos_urban_piper_enhancements
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper_enhancements.res_config_settings_view_form_pos_urban_piper_enhancements
@@ -176,7 +180,7 @@ msgstr "Продукт"
 #. module: pos_urban_piper_enhancements
 #: model:ir.model,name:pos_urban_piper_enhancements.model_product_template_attribute_value
 msgid "Product Template Attribute Value"
-msgstr ""
+msgstr "Стойност на характеристика на продуктов шаблон"
 
 #. module: pos_urban_piper_enhancements
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper_enhancements.report_invoice_document_pos_urban_piper_enhancements
@@ -192,30 +196,30 @@ msgstr "Събота"
 #. odoo-javascript
 #: code:addons/pos_urban_piper_enhancements/static/src/pos_preparation_display_override/components/order/order.xml:0
 msgid "Scheduled At:"
-msgstr ""
+msgstr "Насрочено за:"
 
 #. module: pos_urban_piper_enhancements
 #. odoo-javascript
 #: code:addons/pos_urban_piper_enhancements/static/src/point_of_sale_override/store/pos_store.js:0
 msgid "Scheduled Order"
-msgstr ""
+msgstr "Насрочена поръчка"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,help:pos_urban_piper_enhancements.field_pos_order__delivery_datetime
 msgid "Scheduled delivery datetime for the delivery order."
-msgstr ""
+msgstr "Насрочена дата и час за доставка на поръчката."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_store_timing__start_hour
 msgid "Starting Hour"
-msgstr ""
+msgstr "Начален час"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.actions.act_window,name:pos_urban_piper_enhancements.action_pos_store_timing
 #: model:ir.ui.menu,name:pos_urban_piper_enhancements.menu_products_pos_store_timing
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper_enhancements.view_pos_store_timing_list
 msgid "Store Timings"
-msgstr ""
+msgstr "Работно време на магазин"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields.selection,name:pos_urban_piper_enhancements.selection__pos_store_timing__weekday__sunday
@@ -225,7 +229,7 @@ msgstr "Неделя"
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.constraint,message:pos_urban_piper_enhancements.constraint_pos_store_timing_check_start_and_end_hour
 msgid "The end time must be later than the start time."
-msgstr ""
+msgstr "Крайният час трябва да е по-късен от началния час."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,help:pos_urban_piper_enhancements.field_pos_config__urbanpiper_minimum_preparation_time
@@ -234,12 +238,14 @@ msgid ""
 "The minimum amount of time the customer must wait for the order to be "
 "prepared."
 msgstr ""
+"Минималното време, което клиентът трябва да изчака, докато поръчката бъде "
+"приготвена."
 
 #. module: pos_urban_piper_enhancements
 #. odoo-javascript
 #: code:addons/pos_urban_piper_enhancements/static/src/point_of_sale_override/screens/ticket_screen/ticket_screen.xml:0
 msgid "This order is scheduled order."
-msgstr ""
+msgstr "Тази поръчка е насрочена поръчка."
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields.selection,name:pos_urban_piper_enhancements.selection__pos_store_timing__weekday__thursday
@@ -254,17 +260,17 @@ msgstr "Вторник"
 #. module: pos_urban_piper_enhancements
 #: model_terms:ir.ui.view,arch_db:pos_urban_piper_enhancements.view_pos_order_form_inherit_pos_urban_piper
 msgid "Urban Piper"
-msgstr ""
+msgstr "Urban Piper"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.ui.menu,name:pos_urban_piper_enhancements.pos_menu_urban_piper_configuration
 msgid "UrbanPiper"
-msgstr ""
+msgstr "UrbanPiper"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.actions.server,name:pos_urban_piper_enhancements.cron_check_future_delivery_orders_ir_actions_server
 msgid "UrbanPiper: Notify future delivery orders"
-msgstr ""
+msgstr "UrbanPiper: Известяване за бъдещи поръчки за доставка"
 
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields.selection,name:pos_urban_piper_enhancements.selection__pos_store_timing__weekday__wednesday
@@ -274,4 +280,4 @@ msgstr "Сряда"
 #. module: pos_urban_piper_enhancements
 #: model:ir.model.fields,field_description:pos_urban_piper_enhancements.field_pos_store_timing__weekday
 msgid "Week Day"
-msgstr ""
+msgstr "Ден от седмицата"

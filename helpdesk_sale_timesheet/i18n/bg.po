@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* helpdesk_sale_timesheet
+# * helpdesk_sale_timesheet
 #
 # Translators:
 # Petko Karamotchev, 2024
@@ -11,25 +11,27 @@
 # Igor Sheludko <igor.sheludko@gmail.com>, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Veselina Slavkova, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Veselina Slavkova, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-07-27 17:12+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"helpdesk_sale_timesheet/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: helpdesk_sale_timesheet
 #: model:helpdesk.sla,name:helpdesk_sale_timesheet.helpdesk_sla_4
 msgid "4 hours to finish"
-msgstr ""
+msgstr "4 часа до приключване"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_sale_timesheet
@@ -40,6 +42,11 @@ msgid ""
 "the cancellation of the sales order.\" invisible=\"sale_order_state != "
 "'cancel'\"/>"
 msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning\" title=\"Поръчката за "
+"продажба, свързана с този тикет, е отменена. Препоръчваме да актуализирате "
+"артикула от поръчката за продажба или да откажете този тикет в съответствие "
+"с отказването на поръчката за продажба.\" invisible=\"sale_order_state != "
+"'cancel'\"/>"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_account_analytic_line
@@ -54,12 +61,12 @@ msgstr "Цвят"
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_helpdesk_ticket_convert_wizard
 msgid "Convert Helpdesk Tickets to Tasks"
-msgstr ""
+msgstr "Преобразуване на заявки от бюро за помощ в задачи"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_project_task_convert_wizard
 msgid "Convert Project Tasks to Tickets"
-msgstr ""
+msgstr "Преобразуване на проектни задачи в заявки"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
@@ -101,22 +108,22 @@ msgstr "Фактури"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_my_timesheets_inherit
 msgid "No Ticket"
-msgstr ""
+msgstr "Няма тикет"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_ticket_view_form_inherit_helpdesk_sale_timesheet
 msgid "Non-billable"
-msgstr ""
+msgstr "Нефактурируемо"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_helpdesk_ticket_inherit
 msgid "Not Billed"
-msgstr ""
+msgstr "Нефактурирано"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.helpdesk_sla_view_form_inherit_sale_timesheet
 msgid "OR"
-msgstr ""
+msgstr "ИЛИ"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_team__project_id
@@ -129,27 +136,29 @@ msgid ""
 "Project to which the timesheets of this helpdesk team's tickets will be "
 "linked."
 msgstr ""
+"Проект, към който ще бъдат свързани графиците за тикетите на този екип за "
+"поддръжка."
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__sale_order_id
 msgid "Ref. Sales Order"
-msgstr ""
+msgstr "Реф. поръчка за продажба"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__use_helpdesk_sale_timesheet
 msgid "Reinvoicing Timesheet activated on Team"
-msgstr ""
+msgstr "Префактуриране на графика за време, активирано за екипа"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_sla_report_analysis__remaining_hours_so
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket_report_analysis__remaining_hours_so
 msgid "Remaining Hours on SO"
-msgstr ""
+msgstr "Оставащи часове по ПП"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_helpdesk_sla_report_analysis
 msgid "SLA Status Analysis"
-msgstr ""
+msgstr "Анализ на състоянието на SLA"
 
 #. module: helpdesk_sale_timesheet
 #. odoo-python
@@ -168,7 +177,7 @@ msgstr "Поръчка"
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket_report_analysis__sale_line_id
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Sales Order Item"
-msgstr ""
+msgstr "Артикул от поръчка за продажба"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,help:helpdesk_sale_timesheet.field_helpdesk_ticket__sale_line_id
@@ -181,6 +190,14 @@ msgid ""
 "You can also change or remove the sales order item of each timesheet entry "
 "individually."
 msgstr ""
+"Артикул от поръчка за продажба, към който ще бъде добавено времето, "
+"прекарано по този тикет, за да бъде фактурирано на вашия клиент.\n"
+"По подразбиране се избира последният предплатен артикул от поръчка за "
+"продажба, който има оставащо време.\n"
+"Премахнете артикула от поръчката за продажба, за да направите този тикет "
+"нефактуируем.\n"
+"Можете също да промените или премахнете артикула от поръчката за продажба за "
+"всеки запис в графика за време поотделно."
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model,name:helpdesk_sale_timesheet.model_sale_order_line
@@ -197,7 +214,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/helpdesk_sale_timesheet/controllers/portal.py:0
 msgid "Search in Ticket"
-msgstr ""
+msgstr "Търсене в тикет"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_sla__product_ids
@@ -207,7 +224,7 @@ msgstr "Услуги"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_my_timesheets_inherit
 msgid "Task/Ticket"
-msgstr ""
+msgstr "Задача/Тикет"
 
 #. module: helpdesk_sale_timesheet
 #. odoo-python
@@ -234,17 +251,17 @@ msgstr "Тикети"
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_sla__use_helpdesk_sale_timesheet
 msgid "Time Billing"
-msgstr ""
+msgstr "Фактуриране на време"
 
 #. module: helpdesk_sale_timesheet
 #: model:ir.model.fields,field_description:helpdesk_sale_timesheet.field_helpdesk_ticket__remaining_hours_so
 msgid "Time Remaining on SO"
-msgstr ""
+msgstr "Оставащо време по ПП"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Time Remaining on SO:"
-msgstr ""
+msgstr "Оставащо време по ПП:"
 
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.portal_helpdesk_ticket_timesheet
@@ -260,7 +277,7 @@ msgstr "Графици"
 #. module: helpdesk_sale_timesheet
 #: model_terms:ir.ui.view,arch_db:helpdesk_sale_timesheet.tickets_followup_timesheet
 msgid "Total Time Spent:"
-msgstr ""
+msgstr "Общо прекарано време:"
 
 #. module: helpdesk_sale_timesheet
 #. odoo-python
@@ -269,3 +286,5 @@ msgid ""
 "You cannot link order item %(order_id)s - %(product_id)s to this ticket "
 "because it is not a service product."
 msgstr ""
+"Не можете да свържете артикул от поръчка %(order_id)s - %(product_id)s към "
+"този тикет, защото той не е продукт услуга."

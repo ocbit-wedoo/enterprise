@@ -298,6 +298,43 @@ class TestEdiXmls(TestPeEdiCommon):
                 expected_etree = self.get_xml_tree_from_string(expected_file.read())
             self.assertXmlTreeEqual(current_etree, expected_etree)
 
+    def test_invoice_tax_free_tourist(self):
+        """ A Tax Free sale (operation type 2106) to a tourist identified by passport is issued as an invoice """
+        self.partner_a.write({
+            'l10n_latam_identification_type_id': self.env.ref('l10n_latam_base.it_pass').id,
+            'vat': 'AB1234567',
+            'country_id': self.env.ref('base.us').id,
+        })
+        with freeze_time(self.frozen_today), \
+                patch('odoo.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
+                   new=mocked_l10n_pe_edi_post_invoice_web_service):
+            invoice = self.env['account.move'].create({
+                'name': 'F FFI-%s1' % self.time_name,
+                'move_type': 'out_invoice',
+                'partner_id': self.partner_a.id,
+                'invoice_date': '2017-01-01',
+                'date': '2017-01-01',
+                'l10n_pe_edi_operation_type': '2106',
+                'invoice_line_ids': [Command.create({
+                    'product_id': self.product.id,
+                    'price_unit': 100.0,
+                    'quantity': 1,
+                    'tax_ids': [Command.set(self.tax_18.ids)],
+                })],
+            })
+            self.assertIn(self.env.ref('l10n_pe.document_type01'), invoice.l10n_latam_available_document_type_ids)
+            invoice.l10n_latam_document_type_id = self.env.ref('l10n_pe.document_type01')
+            invoice.with_context(edi_test_mode=True).action_post()
+
+            generated_files = self._process_documents_web_services(invoice, {'pe_ubl_2_1'})
+            self.assertTrue(generated_files)
+            edi_xml = self.edi_format._l10n_pe_edi_unzip_edi_document(generated_files[0])
+
+        etree = self.get_xml_tree_from_string(edi_xml)
+        invoice_type_code = etree.find('./{*}InvoiceTypeCode')
+        self.assertEqual((invoice_type_code.text, invoice_type_code.get('listID')), ('01', '2106'))
+        self.assertEqual(etree.find('.//{*}AccountingCustomerParty//{*}PartyIdentification/{*}ID').get('schemeID'), '7')
+
     def test_invoice_foreign_customer(self):
         """Invoice for a foreign customer"""
         co_identification_type = self.env['l10n_latam.identification.type'].sudo().create({
@@ -339,4 +376,124 @@ class TestEdiXmls(TestPeEdiCommon):
 
         with file_open('l10n_pe_edi/tests/test_files/foreign_customer.xml', 'rb') as expected_invoice_file:
             expected_etree = self.get_xml_tree_from_string(expected_invoice_file.read())
+        self.assertXmlTreeEqual(current_etree, expected_etree)
+
+    def test_reversal_cancel_reason_mapping(self):
+        """Test that the cancel and credit reason in the reversal wizard are correctly mapped to the fields in the Peruvian EDI tab."""
+
+        move = self._create_invoice()
+        move.action_post()
+
+        reversal_wizard = self.env['account.move.reversal'].with_context(
+            active_model="account.move",
+            active_ids=move.ids
+        ).create({
+            'reason': 'Test reason',
+            'journal_id': move.journal_id.id,
+            'l10n_pe_edi_refund_reason': '01',
+        })
+        action = reversal_wizard.reverse_moves()
+        reverse_move = self.env['account.move'].browse(action['res_id'])
+        self.assertEqual(reverse_move.l10n_pe_edi_cancel_reason, 'Test reason')
+        self.assertEqual(reverse_move.l10n_pe_edi_refund_reason, '01')
+
+    def test_invoice_downpayment_rounding(self):
+        """ Test a 40% down payment invoice on a sale order with several 0% taxes and
+            products having price unit with more than 2 decimals.
+        """
+        self.ensure_installed('sale')
+
+        self.env.company.tax_calculation_rounding_method = 'round_globally'
+
+        tax_group_exo = self.env['account.tax.group'].create({
+            'name': 'EXO',
+            'l10n_pe_edi_code': 'EXO',
+        })
+        tax_group_ina = self.env['account.tax.group'].create({
+            'name': 'INA',
+            'l10n_pe_edi_code': 'INA',
+        })
+        tax_0_ina = self.env['account.tax'].create({
+            'name': 'tax_0_ina',
+            'amount_type': 'percent',
+            'amount': 0,
+            'l10n_pe_edi_tax_code': '9998',
+            'l10n_pe_edi_unece_category': 'Z',
+            'type_tax_use': 'sale',
+            'tax_group_id': tax_group_ina.id,
+        })
+        tax_0_exo = self.env['account.tax'].create({
+            'name': 'tax_0_exo',
+            'amount_type': 'percent',
+            'amount': 0,
+            'l10n_pe_edi_tax_code': '9997',
+            'l10n_pe_edi_unece_category': 'Z',
+            'type_tax_use': 'sale',
+            'tax_group_id': tax_group_exo.id,
+        })
+        product_a = self.env['product.product'].create({
+            'name': 'product_pe_a',
+            'uom_id': self.env.ref('uom.product_uom_unit').id,
+            'unspsc_code_id': self.env.ref('product_unspsc.unspsc_code_01010101').id,
+        })
+        product_b = self.env['product.product'].create({
+            'name': 'product_pe_b',
+            'uom_id': self.env.ref('uom.product_uom_unit').id,
+            'unspsc_code_id': self.env.ref('product_unspsc.unspsc_code_01010101').id,
+        })
+        product_c = self.env['product.product'].create({
+            'name': 'product_pe_c',
+            'uom_id': self.env.ref('uom.product_uom_unit').id,
+            'unspsc_code_id': self.env.ref('product_unspsc.unspsc_code_01010101').id,
+        })
+
+        with freeze_time(self.frozen_today):
+            sale_order = self.env['sale.order'].create({  # noqa: OLS03001
+                'partner_id': self.partner_a.id,
+                'order_line': [
+                    Command.create({
+                        'product_id': product_a.id,
+                        'price_unit': 123.50,
+                        'product_uom_qty': 3,
+                        'tax_id': [Command.set(self.tax_18.ids)],
+                    }),
+                    Command.create({
+                        'product_id': product_b.id,
+                        'price_unit': 27.544216,
+                        'product_uom_qty': 2,
+                        'tax_id': [Command.set(tax_0_ina.ids)],
+                    }),
+                    Command.create({
+                        'product_id': product_c.id,
+                        'price_unit': 43.490867,
+                        'product_uom_qty': 1,
+                        'tax_id': [Command.set(tax_0_exo.ids)],
+                    }),
+                ]
+            })
+            sale_order.action_confirm()
+
+            context = {
+                'active_model': 'sale.order',
+                'active_ids': [sale_order.id],
+                'active_id': sale_order.id,
+                'default_journal_id': self.company_data['default_journal_sale'].id,
+            }
+            downpayment = self.env['sale.advance.payment.inv'].with_context(context).create({  # noqa: OLS03001
+                'advance_payment_method': 'percentage',
+                'amount': 40,
+            })._create_invoices(sale_order)
+
+            with patch('odoo.addons.l10n_pe_edi.models.account_edi_format.AccountEdiFormat._l10n_pe_edi_post_invoice_web_service',
+                   new=mocked_l10n_pe_edi_post_invoice_web_service):
+                downpayment.action_post()
+
+                generated_files = self._process_documents_web_services(downpayment, {'pe_ubl_2_1'})
+                self.assertTrue(generated_files)
+
+        zip_edi_str = generated_files[0]
+        edi_xml = self.edi_format._l10n_pe_edi_unzip_edi_document(zip_edi_str)
+        current_etree = self.get_xml_tree_from_string(edi_xml)
+        with file_open('l10n_pe_edi/tests/test_files/invoice_downpayment_rounding.xml', 'rb') as expected_file:
+            expected_etree = self.get_xml_tree_from_string(expected_file.read())
         self.assertXmlTreeEqual(current_etree, expected_etree)

@@ -1,1 +1,2 @@
 from . import test_trial_balance_groupby_partner
+from . import test_co_libro_diario

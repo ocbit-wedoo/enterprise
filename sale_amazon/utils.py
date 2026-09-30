@@ -143,12 +143,7 @@ def make_sp_api_request(account, operation, path_parameter='', payload=None, met
     payload = payload or {}
 
     # Refresh the credentials used to sign the request.
-    if const.API_OPERATIONS_MAPPING[operation]['restricted_resource_path'] is None:  # No RDT is required
-        refresh_access_token(account)
-        access_token = account.access_token
-    else:  # The operation requires an RDT to access restricted data.
-        refresh_restricted_data_token(account)
-        access_token = account.restricted_data_token
+    refresh_access_token(account)
 
     # Build the request headers
     host = url_parse(domain).netloc
@@ -157,7 +152,7 @@ def make_sp_api_request(account, operation, path_parameter='', payload=None, met
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
         'host': host,
-        'x-amz-access-token': access_token,
+        'x-amz-access-token': account.access_token,
         'x-amz-date': now.strftime('%Y%m%dT%H%M%SZ'),
     }
     try:
@@ -214,40 +209,6 @@ def refresh_access_token(account):
                 seconds=response_content['expires_in']
             ),
         })
-
-
-def refresh_restricted_data_token(account):
-    """ Request a new Restricted Data Token (RDT) if it is expired and save it on the account.
-
-    The request includes the restricted path of all restricted operation to avoid refreshing the RDT
-    for each new operation.
-
-    :param recordset account: The account for which a Restricted Data Token must be requested, as an
-                              `amazon.account` record.
-    :return: None
-    """
-    if datetime.utcnow() > account.restricted_data_token_expiry - timedelta(minutes=5):
-        all_restricted_operations = [
-            k for k, map in const.API_OPERATIONS_MAPPING.items() if map['restricted_resource_path']
-        ]
-        OPERATIONS_MAPPING = const.API_OPERATIONS_MAPPING
-        payload = {
-            'restrictedResources': [{
-                'method': 'GET',
-                'path': OPERATIONS_MAPPING[operation]['restricted_resource_path'],
-                'dataElements': OPERATIONS_MAPPING[operation]['restricted_resource_data_elements'],
-            } for operation in all_restricted_operations]
-        }
-        response_content = make_sp_api_request(
-            account, 'createRestrictedDataToken', payload=payload, method='POST'
-        )
-        account.write({
-            'restricted_data_token': response_content['restrictedDataToken'],
-            'restricted_data_token_expiry': datetime.utcnow() + timedelta(
-                seconds=response_content['expiresIn']
-            ),
-        })
-
 
 #=== FEEDS MANAGEMENT ===#
 
@@ -420,8 +381,8 @@ def get_feed_document(account, document_ref):
 def pull_batch_data(account, operation, payload, path_parameter='', method='GET'):
     """ Pull a batch of data from the SP-API.
 
-    If request results are paginated, the 'NextToken' returned with the response is added to the
-    payload to pull the next page's batch with the following call.
+    If request results are paginated, the 'paginationToken' returned with the response is added to
+    the payload to pull the next page's batch with the following call.
 
     :param recordset account: The Amazon account on behalf of which the data must be pulled.
     :param str operation: The SP-API operation to be called by the request.
@@ -434,11 +395,10 @@ def pull_batch_data(account, operation, payload, path_parameter='', method='GET'
     response_content = make_sp_api_request(
         account, operation, path_parameter=path_parameter, payload=payload, method=method
     )
-    batch_data = response_content['payload']
-    next_token = response_content['payload'].get('NextToken')
-    has_next_page = bool(next_token)
-    payload['NextToken'] = next_token
-    return batch_data, has_next_page
+    pagination_token = response_content.get('paginationToken')
+    has_next_page = bool(pagination_token)
+    payload['paginationToken'] = pagination_token
+    return response_content, has_next_page
 
 
 @contextmanager
@@ -454,8 +414,6 @@ def preserve_credentials(account):
     fields_to_preserve = [
         'access_token',
         'access_token_expiry',
-        'restricted_data_token',
-        'restricted_data_token_expiry',
     ]
     credentials = {field: account[field] for field in fields_to_preserve}  # Load credentials.
     yield  # Execute the code in the context.

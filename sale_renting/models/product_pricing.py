@@ -111,6 +111,12 @@ class ProductPricing(models.Model):
         :param datetime end_date: end of the duration.
         :return dict: duration length in different units.
         """
+        start_date = fields.Datetime.to_datetime(start_date)
+        end_date = fields.Datetime.to_datetime(end_date)
+
+        if not start_date or not end_date:
+            return {}
+
         tz = self._get_tz()
         localized_start_date = start_date.astimezone(timezone(tz))
         localized_end_date = end_date.astimezone(timezone(tz))

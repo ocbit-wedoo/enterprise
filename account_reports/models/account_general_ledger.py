@@ -457,7 +457,9 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
             account_name = self.env['account.account']._field_to_sql(account_alias, 'name')
             account_type = self.env['account.account']._field_to_sql(account_alias, 'account_type')
             if order_by_account_code:
-                order_account_by_accounts = self.env['account.account']._order_to_sql(self.env['account.account']._order, query, account_alias)
+                # The ids come from the already ordered account report lines. Reuse their exact order because
+                # account codes are not unique across companies and SQL does not guarantee the order of ties.
+                order_account_by_accounts = SQL('array_position(%s, account_move_line.account_id)', expanded_account_ids)
             query = SQL(
                 '''
                 SELECT

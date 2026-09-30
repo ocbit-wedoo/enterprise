@@ -153,6 +153,25 @@ class WhatsAppComposerInternals(WhatsAppComposerCase, CronMixinCase):
                 })
 
     @users('user_wa_admin')
+    def test_composer_free_text_variables_ordering(self):
+        """ Test that body variables are sent in the correct order """
+        template = self.template_with_10_body_variables
+        template.invalidate_recordset(['variable_ids'])
+        template.variable_ids[0].field_type = 'user_name'
+        expected_values = [f'demo value {index}' for index in range(1, 10)] + ['WhatsApp Wasin']
+        composer = self._instanciate_wa_composer_from_records(template, from_records=self.customers[0])
+        with self.mockWhatsappGateway():
+            composer.action_send_whatsapp_template()
+            self.assertWAMessage(
+                'sent',
+                fields_values={'body': f"<p>Hello I am {' '.join(expected_values)}</p>"},
+            )
+            self.assertListEqual(
+                [parameter['text'] for parameter in self._wa_msg_sent_vals[0]['components'][0]['parameters']],
+                expected_values,
+            )
+
+    @users('user_wa_admin')
     def test_composer_free_text_with_10_body_variables(self):
         """ Test free_text with 10 body variables """
         template = self.template_with_10_body_variables

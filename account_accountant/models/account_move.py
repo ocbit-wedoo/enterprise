@@ -666,19 +666,17 @@ class AccountMoveLine(models.Model):
 
     @api.model
     def _build_predictive_query(self, move_id, additional_domain=None, partner=None):
-        move_query = self.env['account.move']._where_calc([
+        move_ids = self.env['account.move'].search([
             ('move_type', '=', move_id.move_type),
             ('state', '=', 'posted'),
             ('partner_id', '=', (partner or move_id.partner_id).id),
             ('company_id', '=', move_id.journal_id.company_id.id or self.env.company.id),
-        ])
-        move_query.order = 'account_move.invoice_date'
-        move_query.limit = int(self.env["ir.config_parameter"].sudo().get_param(
+        ], order='invoice_date desc, id desc', limit=int(self.env["ir.config_parameter"].sudo().get_param(
             "account.bill.predict.history.limit",
             '100',
-        ))
+        ))).ids
         return self.env['account.move.line']._where_calc([
-            ('move_id', 'in', move_query),
+            ('move_id', 'in', move_ids),
             ('display_type', '=', 'product'),
         ] + (additional_domain or []))
 
@@ -730,7 +728,7 @@ class AccountMoveLine(models.Model):
                 main_source = SQL("%s %s", main_source, SQL("GROUP BY account_move_line.id, account_move_line.name, account_move_line.partner_id"))
 
             self.env.cr.execute(SQL("""
-                WITH account_move_line AS MATERIALIZED (%(account_move_line)s),
+                WITH account_move_line AS (%(account_move_line)s),
 
                 source AS (%(source)s),
 

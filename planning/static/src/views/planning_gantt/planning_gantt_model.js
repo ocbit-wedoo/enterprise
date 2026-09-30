@@ -67,11 +67,21 @@ export class PlanningGanttModel extends GanttModel {
                 displayOpenShift = true;
             }
         }
-        if (displayRoleOpenShift){
+        if (displayRoleOpenShift) {
             searchParams.domain = Domain.and([domain, [["is_users_role", "=", true]]]).toList();
-        }
-        else if (displayOpenShift) {
-            searchParams.domain = Domain.or([domain, "[('resource_id', '=', false)]"]).toList();
+        } else if (displayOpenShift) {
+            searchParams.domain = Domain.or([
+                domain,
+                Domain.and([
+                    Domain.removeDomainLeaves(domain, [
+                        "resource_id",
+                        "department_id",
+                        "manager_id",
+                        "job_title",
+                    ]),
+                    [["resource_id", "=", false]],
+                ]),
+            ]).toList();
         }
         return super.load({ ...searchParams, context: { ...context, show_job_title: true } });
     }

@@ -317,9 +317,19 @@ class Planning(models.Model):
                     AND S1.allocated_percentage + S2.allocated_percentage > 100
                     and S1.id in %s
                     AND (%s or S2.state = 'published')
+                    AND S1.company_id IN %s
+                    AND S2.company_id IN %s
                 GROUP BY S1.id;
             """
-            self.env.cr.execute(query, (tuple(self.ids), self.env.user.has_group('planning.group_planning_manager')))
+            self.env.cr.execute(
+                query,
+                (
+                    tuple(self.ids),
+                    self.env.user.has_group('planning.group_planning_manager'),
+                    tuple(self.env.companies.ids),
+                    tuple(self.env.companies.ids),
+                ),
+            )
             overlap_mapping = dict(self.env.cr.fetchall())
             for slot in self:
                 slot_result = overlap_mapping.get(slot.id, [])
@@ -336,9 +346,18 @@ class Planning(models.Model):
                        AND s.start_datetime < %s
                        AND s.end_datetime > %s
                        AND s.allocated_percentage + %s > 100
+                       AND s.company_id IN %s
                 """
-                self.env.cr.execute(query, (self.employee_id.id, self.end_datetime,
-                                            self.start_datetime, self.allocated_percentage))
+                self.env.cr.execute(
+                    query,
+                    (
+                        self.employee_id.id,
+                        self.end_datetime,
+                        self.start_datetime,
+                        self.allocated_percentage,
+                        tuple(self.env.companies.ids),
+                    ),
+                )
                 overlaps = self.env.cr.dictfetchall()
                 conflict_slot_ids = overlaps[0]['conflict_ids']
                 if conflict_slot_ids:
@@ -650,7 +669,7 @@ class Planning(models.Model):
             m = round(modf(template_id.end_time)[0] * 60.0)
             end = (start + relativedelta(days=(template_id.duration_days - 1), hour=0, minute=0, second=0))
             if template_id.duration_days > 1 and resource_id.calendar_id:
-                end = resource.calendar_id.plan_days(template_id.duration_days, start, compute_leaves=True) or end
+                end = resource.calendar_id.plan_days(template_id.duration_days, start.replace(hour=0, minute=0), compute_leaves=True) or end
             end = end.replace(hour=int(h), minute=int(m))
 
         # Need to remove the tzinfo in start and end as without these it leads to a traceback
@@ -1320,7 +1339,9 @@ class Planning(models.Model):
     @api.model
     def action_rollback_auto_plan_ids(self, shifts_data):
         open_shift_assigned = shifts_data["open_shift_assigned"]
-        self.browse(open_shift_assigned).resource_id = False
+        shifts = self.browse(open_shift_assigned)
+        with self.env.protecting([self._fields['allocated_hours']], shifts):
+            shifts.write({'resource_id': False})
 
     # ----------------------------------------------------
     # Gantt - Calendar view
@@ -2479,12 +2500,13 @@ class PlanningPlanning(models.Model):
             # /!\ For security reason, we only given the public employee to render mail template
             for employee in self.env['hr.employee.public'].browse(employees.ids):
                 if employee.work_email:
+                    assigned_new_shift = bool(slots.filtered(lambda slot: slot.employee_id.id == employee.id))
                     template_context['employee'] = employee
                     template_context['start_datetime'] = self.date_start
                     template_context['end_datetime'] = self.date_end
                     template_context['planning_url'] = employee_url_map[employee.id]
-                    template_context['planning_url_ics'] = ics_url_per_employee_id[employee.id]
-                    template_context['assigned_new_shift'] = bool(slots.filtered(lambda slot: slot.employee_id.id == employee.id))
+                    template_context['planning_url_ics'] = ics_url_per_employee_id[employee.id] if assigned_new_shift else False
+                    template_context['assigned_new_shift'] = assigned_new_shift
                     template.with_context(**template_context).send_mail(self.id, email_values={'email_to': employee.work_email, 'email_from': email_from}, email_layout_xmlid='mail.mail_notification_light')
         # mark as sent
         slots.write({

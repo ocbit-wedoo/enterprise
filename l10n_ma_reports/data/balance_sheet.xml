@@ -1362,7 +1362,7 @@
                                             <record id="account_financial_report_bs_p_i_a_nrfy_net_pl" model="account.report.expression">
                                                 <field name="label">net_pl</field>
                                                 <field name="engine">aggregation</field>
-                                                <field name="formula">MA_PL_XVI.cur_tot</field>
+                                                <field name="formula">MA_PL_XVI.balance</field>
                                                 <field name="subformula">cross_report</field>
                                                 <field name="date_scope">from_fiscalyear</field>
                                             </record>

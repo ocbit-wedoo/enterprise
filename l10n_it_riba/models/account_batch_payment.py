@@ -23,8 +23,8 @@ class AccountBatchPayment(models.Model):
             errors.append(_("Journal '%s' has no associated bank account.", self.journal_id.name))
         elif (not bank_account.acc_number or bank_account.acc_type != 'iban'):
             errors.append(_("The bank account associated with the journal '%s' has no IBAN.", self.journal_id.name))
-        elif bank_account.acc_number[:2] != 'IT':
-            errors.append(_("Only bank accounts with an Italian IBAN are allowed to use Ri.Ba. payments"))
+        elif bank_account.acc_number[:2] not in ['IT', 'SM']:
+            errors.append(_("Only bank accounts with an Italian or San Marino IBAN are allowed to use Ri.Ba. payments"))
         errors += self.payment_ids._l10n_it_riba_check()
         return errors
 

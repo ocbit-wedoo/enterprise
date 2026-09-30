@@ -52,7 +52,7 @@ class PosSession(models.Model):
         # Return the dictionary to prevent running the remaining code.
         if isinstance(res, dict):
             return res
-        orders = self.order_ids.filtered(lambda o: o.state in ['done', 'invoiced'])
+        orders = self.order_ids.filtered(lambda o: o.state != 'draft')
         # We don't want to block the user that need to validate his session order in order to create his TSS
         if self.config_id.is_company_country_germany and self.config_id.l10n_de_fiskaly_tss_id and orders:
             orders = orders.sorted('write_date')  # there are possible cases where the end date won't be set
@@ -172,20 +172,21 @@ class PosSession(models.Model):
         # if we have total 40 orders 30 in older sessions and 10 in current search_count gives 40, but we need to start from 31
         # so we need to remove the number of orders of current session to get the length of old orders
         next_transaction_export_id = self.env['pos.order'].search_count([('config_id', '=', config.id)]) - len(orders)
-        for i, order in enumerate(orders, start=1):
-            if order.partner_id:
-                buyer = {
-                    'name': f'{order.partner_id.name[:50]}',
-                    'buyer_export_id': f'{order.partner_id.id}',
-                    'type': 'Kunde' if company.id != order.partner_id.company_id.id else 'Mitarbeiter',
-                    'address': {
-                        'street': (order.partner_id.street or 'N/A')[:60],  # minimum 1 character required
-                        'postal_code': (order.partner_id.zip or 'N/A')[:10],  # minimum 1 character required
-                        'country_code': COUNTRY_CODE_MAP.get(order.partner_id.country_id.code) or 'DEU',
-                    },
-                }
-            else:
-                buyer = {'name': 'Customer', 'buyer_export_id': 'null', 'type': 'Kunde'}
+        # Orders are displayed with the newest first, but we log them from oldest
+        # to newest to preserve the chronological order of events.
+        for i, order in enumerate(reversed(orders), start=1):
+            buyer = {}
+            if partner := order.partner_id:
+                buyer.update({
+                    'name': f'{partner.name[:50]}',
+                    'buyer_export_id': f'{partner.id}',
+                    'type': 'Kunde' if company.id != partner.company_id.id else 'Mitarbeiter',
+                    'address': {'country_code': COUNTRY_CODE_MAP.get(partner.country_id.code) or 'DEU'},
+                })
+                if street := partner.street:
+                    buyer['address']['street'] = street[:60]
+                if postal_code := partner.zip:
+                    buyer['address']['postal_code'] = postal_code[:10]
 
             lines_data, payment_types = order._prepare_lines_and_payments()
             adjusted_order_total = self.currency_id.round(sum(
@@ -198,7 +199,7 @@ class PosSession(models.Model):
                     'tx_id': f'{order.l10n_de_fiskaly_transaction_uuid}',
                     'transaction_export_id': str(next_transaction_export_id + i),
                     'closing_client_id': f'{config.l10n_de_fiskaly_client_id}',
-                    'type': 'Beleg',
+                    'type': 'AVBelegabbruch' if order.state == 'cancel' else 'Beleg',
                     'storno': False,
                     'number': order.id,
                     'timestamp_start': order.l10n_de_fiskaly_time_start and int(order.l10n_de_fiskaly_time_start.timestamp()) or 0,
@@ -207,7 +208,6 @@ class PosSession(models.Model):
                         'user_export_id': f'{(order.user_id or order.create_uid).id}',
                         'name': f'{(order.user_id or order.create_uid).name[:50]}',
                     },
-                    'buyer': buyer,
                 },
                 'data': {
                     'full_amount_incl_vat': float_repr(adjusted_order_total, precision),
@@ -218,6 +218,13 @@ class PosSession(models.Model):
                 # `l10n_de_fiskaly_signature_public_key` is set only when the transaction finishes successfully (no 5xx errors or network issues).
                 'security': {'tss_tx_id': f'{order.l10n_de_fiskaly_transaction_uuid}'} if order.l10n_de_fiskaly_signature_public_key else {'error_message': 'Error while reaching TSS may be due to network issues or TSS unavailability.'},
             }
+            if buyer:
+                transaction['head']['buyer'] = buyer
+            if order.refunded_order_id:
+                transaction['head']['references'] = [{
+                    'type': 'InterneTransaktion',
+                    'tx_id': order.refunded_order_id.l10n_de_fiskaly_transaction_uuid
+                }]
             transactions.append(transaction)
 
         return {

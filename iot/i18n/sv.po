@@ -15,12 +15,13 @@
 # Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
 # Mikael Åkerberg <mikael.akerberg@mariaakerberg.com>, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
+# Hanna Kharraziha <hakha@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:45+0000\n"
-"PO-Revision-Date: 2026-05-17 05:59+0000\n"
+"PO-Revision-Date: 2026-09-17 17:35+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Swedish <https://translate.odoo.com/projects/odoo-18/iot/sv/>"
 "\n"
@@ -29,7 +30,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.view_add_iot_box
@@ -171,7 +172,7 @@ msgstr "Företag"
 #. module: iot
 #: model:ir.ui.menu,name:iot.view_iot_selected_printer_local_action
 msgid "Configuration"
-msgstr "Konfiguration"
+msgstr "Inställningar"
 
 #. module: iot
 #: model_terms:ir.ui.view,arch_db:iot.iot_box_view_kanban
@@ -286,13 +287,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:iot.field_iot_box__ip
 #: model:ir.model.fields,field_description:iot.field_iot_device__iot_ip
 msgid "Domain Address"
-msgstr ""
+msgstr "Domännamn"
 
 #. module: iot
 #. odoo-javascript
 #: code:addons/iot/static/src/view_widgets/iot_download_logs.xml:0
 msgid "Download Logs"
-msgstr ""
+msgstr "Ladda ner loggar"
 
 #. module: iot
 #. odoo-javascript
@@ -465,12 +466,12 @@ msgstr "Layout"
 #. module: iot
 #: model:ir.model.fields,field_description:iot.field_iot_device__manual_measurement
 msgid "Manual Measurement"
-msgstr ""
+msgstr "Manuella mätningar"
 
 #. module: iot
 #: model:ir.model.fields,help:iot.field_iot_device__manual_measurement
 msgid "Manually read the measurement from the device"
-msgstr ""
+msgstr "Läs av mätningar från enheten manuellt"
 
 #. module: iot
 #: model:ir.model.fields,help:iot.field_iot_device__is_scanner
@@ -655,7 +656,7 @@ msgstr ""
 #: code:addons/iot/static/src/client_action/delete_local_storage.xml:0
 #: model:ir.ui.menu,name:iot.iot_clear_selected_devices
 msgid "Reset Linked Printers"
-msgstr ""
+msgstr "Återställ länkade skrivare"
 
 #. module: iot
 #. odoo-javascript
@@ -857,7 +858,7 @@ msgstr ""
 #. module: iot
 #: model:ir.actions.client,name:iot.action_iot_delete_linked_devices_menu
 msgid "reset.linked.printers"
-msgstr ""
+msgstr "reset.linked.printers"
 
 #. module: iot
 #: model_terms:ir.actions.act_window,help:iot.iot_box_action

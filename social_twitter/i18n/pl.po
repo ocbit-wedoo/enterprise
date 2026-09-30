@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:52+0000\n"
-"PO-Revision-Date: 2026-05-13 16:55+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-06 09:28+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "social_twitter/pl/>\n"
 "Language: pl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: social_twitter
 #. odoo-python
@@ -50,7 +50,7 @@ msgstr "<i class=\"fa fa-comments me-1\" title=\"Comments\"/>"
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
 msgid "<i class=\"fa fa-heart me-1\" title=\"Likes\"/>"
-msgstr "<i class=\"fa fa-heart me-1\" title=\"Likes\"/>"
+msgstr "<i class=\"fa fa-heart me-1\" title=\"Polubienia\"/>"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
@@ -69,7 +69,7 @@ msgstr "<i class=\"fa fa-retweet me-1\" title=\"Repostuj post\"/>"
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.twitter_preview
 msgid "@x ·"
-msgstr ""
+msgstr "@x ·"
 
 #. module: social_twitter
 #. odoo-python
@@ -208,7 +208,7 @@ msgstr ""
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "Failed to post comment: %(error)s with the account %(account)s."
 msgstr ""
-"Publikowanie komentarza nie powiodło się: %(error)s z konta %(account)s"
+"Publikowanie komentarza nie powiodło się: %(error)s z konta %(account)s."
 
 #. module: social_twitter
 #: model:social.stream.type,name:social_twitter.stream_type_twitter_likes
@@ -303,7 +303,7 @@ msgstr "Wprowadź wiadomość X lub prześlij kilka obrazów X."
 #. odoo-javascript
 #: code:addons/social_twitter/static/src/xml/social_twitter_templates.xml:0
 msgid "Post"
-msgstr "Zaksięguj"
+msgstr "Wpis"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.twitter_preview
@@ -313,7 +313,7 @@ msgstr "Opublikuj obraz"
 #. module: social_twitter
 #: model:social.stream.type,name:social_twitter.stream_type_twitter_follow
 msgid "Posts of"
-msgstr "Posty"
+msgstr "Wpisy"
 
 #. module: social_twitter
 #. odoo-javascript
@@ -351,7 +351,7 @@ msgstr "Przeczytaj więcej o kontach X"
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "Replies from posts older than 7 days must be accessed on Twitter.com"
-msgstr ""
+msgstr "Odpowiedzi na posty starsze niż 7 dni są dostępne na Twitter.com"
 
 #. module: social_twitter
 #: model_terms:ir.ui.view,arch_db:social_twitter.social_stream_post_view_kanban
@@ -503,7 +503,7 @@ msgstr "Nieznany"
 #. odoo-python
 #: code:addons/social_twitter/models/social_stream_post.py:0
 msgid "Unknown error"
-msgstr "Nieokreślony błąd"
+msgstr "Nieznany błąd"
 
 #. module: social_twitter
 #: model:ir.model.fields,field_description:social_twitter.field_res_config_settings__twitter_use_own_account

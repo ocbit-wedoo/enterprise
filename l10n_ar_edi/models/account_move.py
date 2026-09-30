@@ -153,12 +153,15 @@ class AccountMove(models.Model):
                 nro_doc_rec = int(
                     commercial_partner_id.country_id.l10n_ar_legal_entity_vat
                     if commercial_partner_id.is_company else commercial_partner_id.country_id.l10n_ar_natural_vat)
+                tipo_doc_rec = 80  # Always send CUIT Pais for foreign partners
             else:
                 nro_doc_rec = commercial_partner_id._get_id_number_sanitize() or False
+                tipo_doc_rec = int(rec._get_partner_code_id(commercial_partner_id))
 
-            data.update({'nroDocRec': nro_doc_rec or 0})
-            if commercial_partner_id.l10n_latam_identification_type_id:
-                data.update({'tipoDocRec': int(rec._get_partner_code_id(commercial_partner_id))})
+            data.update({
+                'nroDocRec': nro_doc_rec or 0,
+                'tipoDocRec': tipo_doc_rec
+            })
             # For more info go to https://www.afip.gob.ar/fe/qr/especificaciones.asp
             rec.l10n_ar_afip_qr_code = 'https://www.afip.gob.ar/fe/qr/?p=%s' % base64.b64encode(json.dumps(
                 data).encode()).decode('ascii')

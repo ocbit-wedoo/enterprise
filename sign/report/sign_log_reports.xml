@@ -56,7 +56,7 @@
                                 <t t-foreach="o.sudo().request_item_ids" t-as="sri">
                                     <tr>
                                         <td><span t-field="sri.partner_id.name">John Smith</span></td>
-                                        <td><span t-field="sri.partner_id.email">john@example.com</span></td>
+                                        <td><span t-field="sri.signer_email">john@example.com</span></td>
                                         <td class="text-center">
                                             <t t-if="sri.access_via_link or sri.partner_id.user_id != False">
                                                 <i class="fa fa-check-square-o"/>
@@ -111,7 +111,7 @@
                                     </td>
                                     <td>
                                         <span t-field="log.partner_id">Marc Demo</span>
-                                        <span t-if="log.partner_id.email" t-field="log.partner_id.email">demo@email.com</span>
+                                        <span t-field="log.sign_request_item_id.signer_email">demo@email.com</span>
                                     </td>
                                     <td> <span t-out="o._get_user_formatted_datetime(log.log_date)">20-03-2000</span> </td>
                                     <td groups="sign.group_sign_manager">
@@ -162,7 +162,7 @@
                             <tr t-foreach="view_logs" t-as="log">
                                 <td>
                                     <span t-field="log.partner_id">Demo Partner</span>
-                                    <span t-field="log.partner_id.email">demo@email.com</span>
+                                    <span t-field="log.sign_request_item_id.signer_email">demo@email.com</span>
                                 </td>
                                 <td> <span t-out="o._get_user_formatted_datetime(log.log_date)">20-03-2000</span> </td>
                                 <td> <span t-field="log.request_state">Antwrep</span> </td>

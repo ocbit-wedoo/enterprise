@@ -30,7 +30,7 @@ CATALOG52 = [
 REFUND_REASON = [
     ('01', 'Cancellation of the operation'),
     ('02', 'Cancellation by error in the RUC'),
-    ('03', 'Correction by error in the description'),
+    ('03', 'Correction by error in the description and/or SUNAT product code'),
     ('04', 'Global discount'),
     ('05', 'Discount per item'),
     ('06', 'Total refund'),
@@ -60,9 +60,10 @@ class AccountMove(models.Model):
         selection=[
             ('01', 'Default interest'),
             ('02', 'Increase in value'),
-            ('03', 'Penalties / other concepts'),
+            ('03', 'Other concepts'),
             ('11', 'Adjustments of export operations'),
             ('12', 'Adjustments affecting the IVAP'),
+            ('13', 'Penalties'),
         ],
         string="Debit Reason",
         help='It contains all possible values for the charge reason according to Catalog No. 10')
@@ -72,7 +73,7 @@ class AccountMove(models.Model):
         help="Peru: Reason given by the user for cancelling this move, structure of voided summary: sac:VoidReasonDescription.")
     l10n_pe_edi_operation_type = fields.Selection(
         selection=[
-            ('0101', '[0101] Internal sale'),
+            ('0101', '[0101] Internal sale not subject to detraction or perception'),
             ('0112', '[0112] Internal Sale - Sustains Natural Person Deductible Expenses'),
             ('0113', '[0113] Internal Sale-NRUS'),
             ('0200', '[0200] Export of Goods'),
@@ -85,13 +86,14 @@ class AccountMove(models.Model):
             ('0207', '[0207] Exportation of Services - Supply of electric power in favor of subjects domiciled in ZED'),
             ('0208', '[0208] Exportation of Services - Provision of services partially carried out abroad'),
             ('0301', '[0301] Operations with air waybill (issued in the national scope)'),
-            ('0302', '[0302] Passenger rail transport operations'), ('0303', '[0303] Oil royalty Pay Operations'),
+            ('0302', '[0302] Passenger rail transport operations'), ('0303', '[0303] Oil royalty Pay Operations (Obsolete)'),
             ('0401', '[0401] Non-domiciled sales that do not qualify as an export'),
             ('1001', '[1001] Operation Subject to Detraction'),
             ('1002', '[1002] Operation Subject to Detraction - Hydrobiological Resources'),
             ('1003', '[1003] Operation Subject to Drawdown - Passenger Transport Services'),
             ('1004', '[1004] Operation Subject to Drawdown - Cargo Transportation Services'),
-            ('2001', '[2001] Operation Subject to Perception')
+            ('2001', '[2001] Operation Subject to Perception'),
+            ('2106', '[2106] National sale to tourists - Tax Free'),
         ],
         string="Operation Type (PE)",
         store=True, readonly=False,
@@ -184,7 +186,10 @@ class AccountMove(models.Model):
                 move.state == 'draft'
                 and move.country_code == 'PE'
                 and move.partner_id.l10n_latam_identification_type_id.l10n_pe_vat_code != '6'
-                and move.l10n_pe_edi_operation_type in ('0200', '0201', '0202', '0203', '0204', '0205', '0206', '0207', '0208')
+                and (
+                    move.l10n_pe_edi_operation_type in ('0200', '0201', '0202', '0203', '0204', '0205', '0206', '0207', '0208')
+                    or move.l10n_pe_edi_operation_type == '2106' and move.move_type == 'out_invoice'
+                )
                 and move.journal_id.type == 'sale'
             )
         )

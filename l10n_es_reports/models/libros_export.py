@@ -58,6 +58,30 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
                 'file_export_type': _('XLSX'),
             })
 
+    def _l10n_es_libros_is_income_line(self, line):
+        return line.move_id.is_sale_document(include_receipts=True)
+
+    def _l10n_es_libros_get_tax_period_vals(self, date):
+        periodicity = self.env.company.account_tax_periodicity
+        if periodicity == 'monthly':
+            tax_period_date = date
+            period = f'{tax_period_date.month:02d}'
+        else:
+            tax_period_date = date
+            period = str(get_quarter_number(tax_period_date)) + 'T'
+        return {
+            'year': tax_period_date.year,
+            'period': period,
+        }
+
+    def _l10n_es_libros_write_sheet_line_vals(self, sheet, row_idx, line_vals, fields, options):
+        for col_idx, field in enumerate(fields):
+            if field in FORMAT_NEEDED_FIELDS and line_vals[field] and options.get('number_format'):
+                sheet.write(row_idx, col_idx, line_vals[field], options['number_format'])
+            else:
+                sheet.write(row_idx, col_idx, line_vals[field])
+        return row_idx + 1
+
     def _l10n_es_libros_fill_header(self, sheet_income, sheet_expense):
         def fill_header(sheet_val, header_title, subheaders=None):
             if not subheaders:
@@ -124,35 +148,29 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
             fill_header(sheet_val, 'Inmueble', ('Situación', 'Referencia Catastral'))
             fill_header(sheet_val, 'Referencia Externa')
 
-    def _l10n_es_libros_get_common_line_vals(self, line, tax):
-        iae_group = self.env.company.l10n_es_reports_iae_group
-        partner = line.partner_id
-        exempt_reason = line.move_id.invoice_line_ids.tax_ids.filtered(lambda t: t.l10n_es_exempt_reason == 'E2')
-        sign = -1 if line.move_id.is_sale_document(include_receipts=True) else 1
+    def _l10n_es_libros_get_operation_code(self, line):
+        taxes = line.move_id.invoice_line_ids.tax_ids.flatten_taxes_hierarchy()
+        if line.move_id.is_sale_document(include_receipts=True):
+            return taxes._l10n_es_get_regime_code()
+        mod_303_10 = self.env.ref('l10n_es.mod_303_casilla_10_balance')._get_matching_tags()
+        mod_303_11 = self.env.ref('l10n_es.mod_303_casilla_11_balance')._get_matching_tags()
+        if taxes.repartition_line_ids.tag_ids & (mod_303_10 + mod_303_11):
+            return '09'
+        return '01'
 
-        delivery_date = line.move_id.delivery_date
-
+    def _l10n_es_fill_common_line_vals(self, company, partner, date, delivery_date, invoice_type, operation_code, amount):
+        iae_group = company.l10n_es_reports_iae_group
         common_line_vals = {
-            'year': line.date.year,
-            'period': str(get_quarter_number(line.date)) + 'T',
             'activity_code': iae_group[0],
             'activity_type': iae_group[1:3],
             'activity_group': iae_group[3:],
-            'invoice_type': {
-                'out_invoice': 'F2' if line.move_id.l10n_es_is_simplified else 'F1',
-                'out_receipt': 'F2' if line.move_id.l10n_es_is_simplified else 'F1',
-                'out_refund': 'R5' if line.move_id.l10n_es_is_simplified else 'R1',
-                'in_invoice': 'F5' if tax.l10n_es_type == 'dua' else 'F1',
-                'in_receipt': 'F5' if tax.l10n_es_type == 'dua' else 'F1',
-                'in_refund': 'R4',
-            }[line.move_type],
-            'date_expedition': format_date(self.env, line.invoice_date, date_format='dd/MM/yyyy'),
-            'date_transaction': format_date(self.env, delivery_date,
-                                            date_format='dd/MM/yyyy') if delivery_date and delivery_date != line.invoice_date else '',
-            'partner_name': partner.name,
-            'operation_code': '02' if exempt_reason else '01',
-            'total_amount': line.balance * sign,
-            'base_amount': line.balance * sign,
+            'invoice_type': invoice_type,
+            'date_expedition': format_date(self.env, date, date_format='dd/MM/yyyy'),
+            'date_transaction': format_date(self.env, delivery_date, date_format='dd/MM/yyyy') if delivery_date and delivery_date != date else '',
+            'partner_name': partner.name or '',
+            'operation_code': operation_code,
+            'total_amount': amount,
+            'base_amount': amount,
             'tax_rate': 0,
             'taxed_amount': 0,
             'surcharge_type': 0,
@@ -160,6 +178,7 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
             'withholding_type': 0,
             'withholding_amount': 0,
         }
+        common_line_vals.update(self._l10n_es_libros_get_tax_period_vals(date))
         if (not partner.country_id or partner.country_id.code == 'ES') and partner.vat:
             common_line_vals['partner_nif_id'] = partner.vat[2:] if partner.vat.startswith('ES') else partner.vat
         elif partner.vat and partner.country_id in self.env.ref('base.europe').country_ids:
@@ -169,8 +188,36 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
             common_line_vals['partner_nif_id'] = partner.vat
             common_line_vals['partner_nif_type'] = "06"
             common_line_vals['partner_nif_code'] = partner.country_id.code
-
         return common_line_vals
+
+    def _l10n_es_libros_get_common_line_vals(self, line, tax):
+        partner = line.partner_id
+        is_sale_document = self._l10n_es_libros_is_income_line(line)
+        sign = -1 if is_sale_document else 1
+
+        delivery_date = line.move_id.delivery_date
+        date_expedition = line.date if line.move_type == 'entry' else line.invoice_date
+        invoice_type = {
+            'out_invoice': 'F2' if line.move_id.l10n_es_is_simplified else 'F1',
+            'out_receipt': 'F2' if line.move_id.l10n_es_is_simplified else 'F1',
+            'out_refund': 'R5' if line.move_id.l10n_es_is_simplified else 'R1',
+            'in_invoice': 'F5' if tax.l10n_es_type == 'dua' else 'F1',
+            'in_receipt': 'F5' if tax.l10n_es_type == 'dua' else 'F1',
+            'in_refund': 'R4',
+            'entry': 'R5' if line.is_refund else 'F4',
+        }[line.move_type]
+        operation_code = self._l10n_es_libros_get_operation_code(line)
+        amount = sign * line.balance
+
+        return self._l10n_es_fill_common_line_vals(
+            line.company_id,
+            partner,
+            date_expedition,
+            delivery_date,
+            invoice_type,
+            operation_code,
+            amount,
+        )
 
     def _l10n_es_libros_create_income_line_vals(self, line, tax):
         line_vals = {field: '' for field in INCOME_FIELDS}
@@ -211,7 +258,7 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
 
     @api.model
     def _l10n_es_libros_merge_base_line(self, line_vals, base_line):
-        is_income = base_line.move_id.is_sale_document(include_receipts=True)
+        is_income = self._l10n_es_libros_is_income_line(base_line)
         sign = -1 if is_income else 1
         new_balance = line_vals['base_amount'] + base_line.balance * sign
         line_vals.update({
@@ -248,7 +295,8 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
                 'taxed_amount': line_vals['taxed_amount'] + tax_amount,
             })
             # add amount to tax_deductible only if the line have mod303 in the tax grid (supports pro rata tax type)
-            if not line.move_id.is_sale_document(include_receipts=True) and any('mod303' in tag for tag in line.tax_tag_ids.mapped('name')):
+            is_income = self._l10n_es_libros_is_income_line(line)
+            if not is_income and any('mod303' in tag for tag in line.tax_tag_ids.mapped('name')):
                 line_vals['tax_deductible'] += tax_amount
 
     def _l10n_es_libros_format_sheet_line_vals(self, sheet_line_vals):
@@ -272,11 +320,12 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
         base_amount_by_tax = defaultdict(lambda: defaultdict(lambda: defaultdict(float)))
         # generate the report lines from the invoice lines
         for line in lines.filtered(lambda l: l.tax_ids):
-            is_income = line.move_id.is_sale_document(include_receipts=True)
+            is_income = self._l10n_es_libros_is_income_line(line)
             sheet_line_vals = inc_line_vals if is_income else exp_line_vals
             create_line_vals = self._l10n_es_libros_create_income_line_vals if is_income else self._l10n_es_libros_create_expense_line_vals
             move = line.move_id
-            sheet_line_vals.setdefault(move.id, {})
+            move_key = (move.id, line.is_refund)
+            sheet_line_vals.setdefault(move_key, {})
             taxes = line.tax_ids.flatten_taxes_hierarchy()
             tax_key = tuple(taxes)
             ignore_line = True
@@ -296,28 +345,31 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
                     if not regular_tax:
                         regular_tax = tax
                 # compute the new accumulated base amount for this tax
-                base_amount_by_tax[move][tax_key][tax] += abs(line.balance)
+                base_amount_by_tax[move_key][tax_key][tax] += abs(line.balance)
             # if ignore_line is True, then all the taxes are "ignore" and/or "retencion" ones
             if ignore_line:
-                del base_amount_by_tax[move][tax_key]
+                del base_amount_by_tax[move_key][tax_key]
                 continue    # no report line should be created for such line
             # initialize [inc/exp]_line_vals with base balance and first regular tax of invoice lines
-            if tax_key in sheet_line_vals[move.id]:
-                self._l10n_es_libros_merge_base_line(sheet_line_vals[move.id][tax_key], line)
+            if tax_key in sheet_line_vals[move_key]:
+                self._l10n_es_libros_merge_base_line(sheet_line_vals[move_key][tax_key], line)
             else:
-                sheet_line_vals[move.id][tax_key] = create_line_vals(line, regular_tax)
+                sheet_line_vals[move_key][tax_key] = create_line_vals(line, regular_tax)
 
         # loop on each tax line and compute the tax amount for each line based on the ratio
         # of the base amount
         tax_lines = (line for line in lines if line.tax_line_id)
         for line in tax_lines:
-            is_income = line.move_id.is_sale_document(include_receipts=True)
+            is_income = self._l10n_es_libros_is_income_line(line)
+            if not is_income and line.tax_repartition_line_id.factor_percent < 0:
+                continue
             sheet_line_vals = inc_line_vals if is_income else exp_line_vals
             move, tax = line.move_id, line.tax_line_id
             sign = -1 if is_income else 1
             remaining_tax_base_amount = line.tax_base_amount
             remaining_tax_balance = line.balance
-            for tax_key, data in base_amount_by_tax[move].items():
+            move_key = (move.id, line.is_refund)
+            for tax_key, data in base_amount_by_tax[move_key].items():
                 if tax not in tax_key:
                     continue
                 remaining_tax_base_amount -= data[tax]
@@ -329,29 +381,31 @@ class GenericTaxReportCustomHandler(models.AbstractModel):
                     tax_amount = move.company_id.currency_id.round(line.balance * ratio)
                     remaining_tax_balance -= tax_amount
                 # update the report line with the tax amount
-                self._l10n_es_libros_merge_line_tax(sheet_line_vals[move.id][tax_key], line, tax, tax_amount * sign)
+                self._l10n_es_libros_merge_line_tax(sheet_line_vals[move_key][tax_key], line, tax, tax_amount * sign)
 
         self._l10n_es_libros_format_sheet_line_vals(inc_line_vals)
         self._l10n_es_libros_format_sheet_line_vals(exp_line_vals)
         return inc_line_vals, exp_line_vals
 
+    def _l10n_es_libros_get_fill_domain(self, report, options):
+        return report._get_options_domain(options, 'strict_range') + [('move_id.move_type', '!=', 'entry')]
+
     def _l10n_es_libros_fill_content(self, sheet_income, sheet_expense, report, options):
-        domain = report._get_options_domain(options, 'strict_range') + [('move_type', '!=', 'entry')]
+        domain = self._l10n_es_libros_get_fill_domain(report, options)
         lines = self.env['account.move.line'].search(domain)
 
         inc_line_vals, exp_line_vals = self._l10n_es_libros_get_sheet_line_vals(lines)
-        sheet_inc_vals = {'sheet': sheet_income, 'line_vals': inc_line_vals, 'row_idx': 2, 'fields': INCOME_FIELDS}
-        sheet_exp_vals = {'sheet': sheet_expense, 'line_vals': exp_line_vals, 'row_idx': 2, 'fields': EXPENSE_FIELDS}
-
-        for sheet_vals in (sheet_inc_vals, sheet_exp_vals):
-            for move_idx in sheet_vals['line_vals']:
-                for line_vals in sheet_vals['line_vals'][move_idx].values():
-                    for col_idx, field in enumerate(sheet_vals['fields']):
-                        if field in FORMAT_NEEDED_FIELDS and line_vals[field] and options.get('number_format'):
-                            sheet_vals['sheet'].write(sheet_vals['row_idx'], col_idx, line_vals[field], options.get('number_format'))
-                        else:
-                            sheet_vals['sheet'].write(sheet_vals['row_idx'], col_idx, line_vals[field])
-                    sheet_vals['row_idx'] += 1
+        row_trackers = {'inc': 2, 'exp': 2}
+        sheet_configs = (
+            {'sheet': sheet_income, 'line_vals': inc_line_vals, 'type': 'inc', 'fields': INCOME_FIELDS},
+            {'sheet': sheet_expense, 'line_vals': exp_line_vals, 'type': 'exp', 'fields': EXPENSE_FIELDS},
+        )
+        for config in sheet_configs:
+            for move_idx in config['line_vals']:
+                for line_vals in config['line_vals'][move_idx].values():
+                    row_trackers[config['type']] = self._l10n_es_libros_write_sheet_line_vals(
+                        config['sheet'], row_trackers[config['type']], line_vals, config['fields'], options)
+        return row_trackers
 
     def export_libros_de_iva(self, options):
         if not self.env.company.l10n_es_reports_iae_group:

@@ -363,11 +363,17 @@ class AccountMove(models.Model):
         else:
             return 1, "Normal"
 
+    def _l10n_br_edi_references_original_per_line(self):
+        """Returns whether Avalara expects the original NF-e on each line rather than in the header."""
+        return self.move_type == "out_refund" and not self.l10n_br_is_service_transaction
+
     def _l10n_br_edi_get_invoice_refs(self):
         """For credit and debit notes this returns the appropriate reference to the original invoice. For tax
         calculation we send these references as documentCode, which are Odoo references (e.g. account.move_31).
         For EDI the government requires these references as refNFe instead. They should contain the access key
-        assigned when the original invoice was e-invoiced. Returns a (dict, errors) tuple."""
+        assigned when the original invoice was e-invoiced. Goods returns are the exception: Avalara wants them
+        referenced per line, so _l10n_br_prepare_invoice_payload drops this from the header again. Returns a
+        (dict, errors) tuple."""
         if origin := self._l10n_br_get_origin_invoice():
             if not origin.l10n_br_access_key:
                 return {}, (
@@ -382,6 +388,21 @@ class AccountMove(models.Model):
 
         return {}, None
 
+    def _l10n_br_edi_add_referenced_access_key(self, tax_calculation_response):
+        """Sets the access key SEFAZ requires on each referenced line, replacing the calculate-time code."""
+        if not self._l10n_br_edi_references_original_per_line():
+            return
+
+        access_key = self._l10n_br_get_origin_invoice().l10n_br_access_key
+        if not access_key:
+            return
+
+        for line in tax_calculation_response.get("lines", []):
+            # Lines the response did not reference are left alone: there is nothing to key them to.
+            if referenced_item := line.get("referencedItem"):
+                referenced_item.pop("documentCode", None)
+                referenced_item["invoiceAccessKey"] = access_key
+
     def _l10n_br_edi_get_tax_data(self):
         """Due to Avalara bugs they're unable to resolve we have to change their tax calculation response before
         sending it back to them. This returns a tuple with what to include in the request ("lines" and "summary")
@@ -395,6 +416,8 @@ class AccountMove(models.Model):
                 for key in keys_to_remove_when_null:
                     if key in detail and detail[key] is None:
                         del detail[key]
+
+        self._l10n_br_edi_add_referenced_access_key(tax_calculation_response)
 
         return tax_calculation_response, tax_calculation_response.pop("header")
 
@@ -626,6 +649,10 @@ class AccountMove(models.Model):
         # statements.
         deep_update(payload, deep_clean(extra_payload))
 
+        if self._l10n_br_edi_references_original_per_line():
+            # The reference goes on the lines instead, see _l10n_br_edi_add_referenced_access_key.
+            payload.get("header", {}).pop("invoicesRefs", None)
+
         # This adds the "lines" and "summary" dicts received during tax calculation.
         payload.update(tax_data_to_include)
 
@@ -819,7 +846,7 @@ class AccountMove(models.Model):
     def _get_edi_decoder(self, file_data, new=False):
         # EXTENDS 'account'
         def is_nfe(content):
-            return b"<nfeProc " in content and b"<NFe " in content
+            return b"<nfeProc " in content and b"<NFe" in content
 
         if file_data['type'] == 'xml' and is_nfe(file_data['content']):
             return self._l10n_br_edi_import_invoice

@@ -863,6 +863,38 @@ class TestGeneralLedgerReport(TestAccountReportsCommon, odoo.tests.HttpCase):
         for (line, expected_vals) in zip(lines_list, expected_vals_list):
             self.assertEqual(line.decode('utf-8'), ','.join(expected_vals) + '\n')
 
+    def test_general_ledger_aml_query_account_order(self):
+        receivable_account = self.company_data['default_account_receivable']
+        revenue_account = self.company_data['default_account_revenue']
+        self.env['account.move'].create({
+            'move_type': 'entry',
+            'date': '2010-01-01',
+            'journal_id': self.company_data['default_journal_misc'].id,
+            'line_ids': [
+                Command.create({'account_id': receivable_account.id, 'debit': 100.0}),
+                Command.create({'account_id': revenue_account.id, 'credit': 100.0}),
+            ],
+        }).action_post()
+
+        options = self._generate_options(self.report, '2010-01-01', '2010-01-31')
+        self.report._init_currency_table(options)
+        self.env.flush_all()
+        account_order = [revenue_account.id, receivable_account.id]
+        handler = self.env[self.report.custom_handler_model_name]
+        aml_query, aml_params = handler._get_query_amls(
+            self.report,
+            options,
+            account_order,
+            order_by_account_code=True,
+        )
+        self.env.cr.execute(aml_query, aml_params)
+        result_account_order = list(dict.fromkeys(
+            aml_result['account_id']
+            for aml_result in self.env.cr.dictfetchall()
+        ))
+
+        self.assertEqual(result_account_order, account_order)
+
     def test_general_ledger_export_csv(self):
         move_1 = self.init_invoice('out_invoice', invoice_date='2010-01-01', amounts=[100])
         move_2 = self.init_invoice('out_invoice', invoice_date='2010-01-15', amounts=[150])
@@ -974,3 +1006,30 @@ class TestGeneralLedgerReport(TestAccountReportsCommon, odoo.tests.HttpCase):
             [      '',                  move.name, '2010-01-01',              '',        '',         '',   '0.00', '100.00', '-100.00'],
             [      '',                    'Total',           '',              '',        '',         '', '100.00', '100.00',    '0.00'],
         ])
+
+    def test_open_gl_from_bs_then_change_date_filter(self):
+        """
+        Test that the 'filter_search_bar' option key is not filtered out when updating the date filter after opening
+        the General Ledger from a balance sheet line
+        """
+
+        # Open Balance Sheet
+        balance_sheet = self.env.ref('account_reports.balance_sheet')
+        bs_options = self._generate_options(balance_sheet, '2017-06-01', '2017-06-01', default_options={'unfold_all': True})
+        lines = balance_sheet._get_lines(bs_options)
+        line = [l for l in lines if l.get('caret_options')][:1]
+        self.assertLinesValues(line, [0, 1], [('121000 Account Receivable', 1000.0)], bs_options)
+
+        # Open General Ledger
+        general_ledger = self.env.ref('account_reports.general_ledger_report')
+        params = {'line_id': line[0]['id']}
+        res = balance_sheet.caret_option_open_general_ledger(bs_options, params)
+        gl_options = res['params']['options']
+
+        # options are updated afterward by the search() in account_reports/static/src/components/account_report/search_bar/search_bar.js
+        gl_options['filter_search_bar'] = '121000'
+
+        # Update the date filter
+        gl_options['date'] = {**gl_options['date'], 'filter': 'this_month'}
+        new_gl_options = general_ledger.with_context(res['context']).get_options(gl_options)
+        self.assertEqual(new_gl_options['filter_search_bar'], '121000', 'the filter_search_bar key should still be present and set in the options')

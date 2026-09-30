@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-20 18:45+0000\n"
-"PO-Revision-Date: 2026-03-21 18:31+0000\n"
+"PO-Revision-Date: 2026-08-20 16:17+0000\n"
 "Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
 "appointment/fa/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: appointment
 #. odoo-python
@@ -40,7 +40,7 @@ msgstr "# قرار ملاقات‌ها"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count_request
 msgid "# Appointments To Confirm"
-msgstr ""
+msgstr "تعداد قرار ملاقات برای تأیید"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__calendar_event_count
@@ -67,7 +67,7 @@ msgstr "# کارکنان"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__appointment_count_upcoming
 msgid "# Upcoming Appointments"
-msgstr ""
+msgstr "تعداد قرار ملاقات‌های پیش رو"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_calendar
@@ -96,7 +96,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/appointment/controllers/calendar_view.py:0
 msgid "%(name)s - My availabilities"
-msgstr ""
+msgstr "%(name)s - زمان‌های قابل دسترس من"
 
 #. module: appointment
 #. odoo-python
@@ -690,6 +690,7 @@ msgstr ""
 msgid ""
 "<i class=\"fa fa-check-circle text-success me-3\"/>Appointment Scheduled!"
 msgstr ""
+"<i class=\"fa fa-check-circle text-success me-3\"/>قرار ملاقات زمان‌بندی شد!"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
@@ -702,6 +703,8 @@ msgid ""
 "<i class=\"fa fa-lg fa-calendar-plus-o me-3 text-primary\"/>Schedule another "
 "meeting"
 msgstr ""
+"<i class=\"fa fa-lg fa-calendar-plus-o me-3 text-primary\"/>زمان‌بندی جلسه‌ای "
+"دیگر"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_form_gantt_booking
@@ -732,7 +735,7 @@ msgstr "<i class=\"fa fa-plus me-1\"/>افزودن مهمانان"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<i class=\"fa fa-thumbs-up me-3 text-info\"/>Appointment Reserved!"
-msgstr ""
+msgstr "<i class=\"fa fa-thumbs-up me-3 text-info\"/>قرار ملاقات رزرو شد!"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -746,7 +749,7 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<i class=\"fa fa-times text-danger me-3\"/>Appointment Cancelled"
-msgstr ""
+msgstr "<i class=\"fa fa-times text-danger me-3\"/>قرار ملاقات لغو شد"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_details
@@ -806,12 +809,12 @@ msgstr "<small class=\"text-uppercase text-muted\">جزئیات جلسه</small>
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<small>Add to Google Agenda</small>"
-msgstr ""
+msgstr "<small>افزودن به برنامه کاری گوگل</small>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<small>Add to iCal/Outlook</small>"
-msgstr ""
+msgstr "<small>افزودن به iCal/اوت‌لوک</small>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -849,7 +852,7 @@ msgstr ""
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "<span class=\"mx-1\">or</span>"
-msgstr ""
+msgstr "<span class=\"mx-1\">یا</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -859,37 +862,37 @@ msgstr "<span class=\"text-muted\">حاضرین</span>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">Details</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">جزئیات</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">Duration</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">مدت زمان</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">For</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">برای</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">How to join</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">نحوه پیوستن</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">Resources</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">منابع</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">When</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">زمان</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span class=\"text-muted\">Where</span>"
-msgstr ""
+msgstr "<span class=\"text-muted\">مکان</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -905,12 +908,12 @@ msgstr "<span> ساعت</span>"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_form
 msgid "<span>Add more details about you</span>"
-msgstr ""
+msgstr "<span>جزئیات بیشتری درباره خود اضافه کنید</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "<span>Not available anymore?</span>"
-msgstr ""
+msgstr "<span>قادر به شرکت در جلسه نیستید؟</span>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -1017,6 +1020,8 @@ msgstr "فهرستی از اطلاعات مختلف برای ایجاد یک ق�
 msgid ""
 "A list of slots information is needed to update this custom appointment type"
 msgstr ""
+"برای به‌روزرسانی نوع قرار ملاقات سفارشی، لیستی از اطلاعات اسلات‌های زمانی مورد "
+"نیاز است"
 
 #. module: appointment
 #. odoo-python
@@ -1360,7 +1365,7 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_event__appointment_status
 msgid "Appointment Status"
-msgstr ""
+msgstr "وضعیت قرار ملاقات"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__name
@@ -1389,13 +1394,13 @@ msgstr "انواع قرار ملاقات"
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Appointment cancelled"
-msgstr ""
+msgstr "قرار ملاقات لغو شد"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Appointment cancelled by: %(partners)s"
-msgstr ""
+msgstr "%(partners)s قرار ملاقات را لغو کرد"
 
 #. module: appointment
 #. odoo-python
@@ -1559,7 +1564,7 @@ msgstr "نشانی لینک مبدأ"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Book a Resource"
-msgstr ""
+msgstr "رزرو منبع"
 
 #. module: appointment
 #. odoo-python
@@ -1598,7 +1603,7 @@ msgstr "جزئیات رزرو"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__booked_mail_template_id
 msgid "Booking Email"
-msgstr ""
+msgstr "ایمیل رزرو"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_booking_line__event_stop
@@ -1657,12 +1662,12 @@ msgstr "لغو قبل از (ساعت)"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Cancel your appointment"
-msgstr ""
+msgstr "جلسه را لغو کنید"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__canceled_mail_template_id
 msgid "Cancellation Email"
-msgstr ""
+msgstr "ایمیل لغو"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__calendar_event__appointment_status__cancelled
@@ -1721,7 +1726,7 @@ msgstr "اعلام حضور شد"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_search_booking
 msgid "Checked-in"
-msgstr ""
+msgstr "وارد شده"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointments_list_layout
@@ -1802,7 +1807,7 @@ msgstr "اتصال"
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__connectors_displayed
 msgid "Connectors Displayed"
-msgstr ""
+msgstr "رابط‌های نمایش داده شده"
 
 #. module: appointment
 #: model:ir.model,name:appointment.model_res_partner
@@ -1856,7 +1861,7 @@ msgstr "ایجاد روز(های) پایانی"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_type_action_helper/appointment_type_action_helper.xml:0
 msgid "Create a Schedule from scratch or use one of our templates:"
-msgstr ""
+msgstr "زمان‌بندی جدیدی ایجاد کنید یا از یکی از قالب‌های ما استفاده کنید:"
 
 #. module: appointment
 #. odoo-javascript
@@ -1864,7 +1869,7 @@ msgstr ""
 #: code:addons/appointment/models/appointment_type.py:0
 #: code:addons/appointment/static/src/views/appointment_invite/appointment_share_link_list_controller.js:0
 msgid "Create a Share Link"
-msgstr ""
+msgstr "ایجاد لینک اشتراک‌گذاری"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_resource_action
@@ -1973,6 +1978,13 @@ msgid ""
 "        defining non-recurring time slot (e.g. 10th of April 2021 from 10 to "
 "11 am) from its calendar."
 msgstr ""
+"نوع بازه زمانی را تعریف می‌کند. بازه تکرارشونده نوع پیش‌فرضی است که برای\n"
+"         نوع قراری استفاده می‌شود که به طور مکرر در انواعی مانند نوبت پزشکی "
+"کاربرد دارد.\n"
+"         نوع یک مرحله‌ای فقط زمانی استفاده می‌ شود که کاربر با تعریف بازه "
+"زمانی غیرتکرارشونده \n"
+"         یک نوع قرار سفارشی از تقویم برای مشتری ایجاد کند (مثلاً 21 فروردین "
+"1400 از ساعت 10 تا 11 صبح)."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__event_videocall_source
@@ -1997,7 +2009,7 @@ msgstr "خدمات دندان‌پزشکی"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Describe what you need"
-msgstr ""
+msgstr "نیازمندی خود را توضیح دهید"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__description
@@ -2058,7 +2070,7 @@ msgstr "تصویر کاربران/منابع را روی وب‌سایت نما�
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__category_time_display
 msgid "Displayed category time fields"
-msgstr ""
+msgstr "فیلدهای زمانی دسته‌بندی نمایش داده شده"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__appointment_manual_confirmation
@@ -2072,7 +2084,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Do you have any dietary preferences or restrictions ?"
-msgstr ""
+msgstr "آیا ترجیح یا محدودیت رژیمی دارید؟"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_question__question_type__select
@@ -2251,12 +2263,12 @@ msgstr ""
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__hide_duration
 msgid "Hide Duration"
-msgstr ""
+msgstr "مخفی کردن مدت زمان"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__hide_timezone
 msgid "Hide Time Zone"
-msgstr ""
+msgstr "مخفی کردن منطقه زمانی"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__assign_method
@@ -2339,6 +2351,8 @@ msgstr ""
 msgid ""
 "If set an email will be sent to the customer when the appointment is booked."
 msgstr ""
+"با تعریف این فیلد، به هنگام رزرو شدن قرار ملاقات یک ایمیل به مشتری ارسال "
+"خواهد شد."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__canceled_mail_template_id
@@ -2346,6 +2360,8 @@ msgid ""
 "If set an email will be sent to the customer when the appointment is "
 "cancelled."
 msgstr ""
+"با تنظیم بودن این گزینه، هرگاه قرار ملاقات لغو شود، ایمیلی به مشتری ارسال "
+"می‌شود."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_resource__active
@@ -2455,7 +2471,7 @@ msgstr "منتشر شده است"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Join using"
-msgstr ""
+msgstr "پیوستن از طریق"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__country_ids
@@ -2507,7 +2523,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/appointment/static/src/js/appointment_validation.js:0
 msgid "Link Copied!"
-msgstr ""
+msgstr "لینک کپی شد!"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
@@ -2530,7 +2546,7 @@ msgstr "لینک در کلیپ‌ بورد کپی شد!"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.xml:0
 msgid "Link copied to your clipboard!"
-msgstr ""
+msgstr "لینک در کلیپ‌بورد کپی شد!"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_resource__linked_resource_ids
@@ -2664,7 +2680,7 @@ msgstr "هدایت"
 #. odoo-python
 #: code:addons/appointment/models/calendar_event.py:0
 msgid "Need to reschedule?"
-msgstr ""
+msgstr "نیاز به برنامه‌ریزی مجدد دارید؟"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_calendar_alarm__default_for_new_appointment_type
@@ -2717,7 +2733,7 @@ msgstr "هنوز لینکی به اشتراک گذاشته نشده است!"
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_gantt_booking_resource
 #: model_terms:ir.ui.view,arch_db:appointment.calendar_event_view_search_booking
 msgid "No Show"
-msgstr ""
+msgstr "عدم حضور"
 
 #. module: appointment
 #: model_terms:ir.actions.act_window,help:appointment.appointment_type_action_custom
@@ -2815,14 +2831,14 @@ msgstr "فقط قرار ملاقاتی که زمان مشخصی ندارد بر�
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "Oops! Your appointment is scheduled in less than"
-msgstr ""
+msgstr "قرار ملاقات شما برای کمتر از"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_calendar/appointment_calendar_controller.js:0
 #: code:addons/appointment/static/src/views/custom_appointment_form_dialog/custom_appointment_form_dialog.js:0
 msgid "Open Appointment Type Form"
-msgstr ""
+msgstr "ورود به فرم قرار ملاقات"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_resource_view_form
@@ -2961,7 +2977,7 @@ msgstr "رتبه‌ها"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_type_action_helper/appointment_type_action_helper.xml:0
 msgid "Ready to make scheduling easy?"
-msgstr ""
+msgstr "آماده‌اید که زمان‌بندی را آسان کنید؟"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_manage_leaves__reason
@@ -3018,7 +3034,7 @@ msgstr "منبع"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Resource %s"
-msgstr ""
+msgstr "منبع %s"
 
 #. module: appointment
 #: model:ir.actions.act_window,name:appointment.calendar_event_action_view_bookings_resources
@@ -3096,7 +3112,7 @@ msgstr "محدود به کاربران"
 #. odoo-javascript
 #: code:addons/appointment/static/src/xml/appointment_no_slot.xml:0
 msgid "Review Booking"
-msgstr ""
+msgstr "بازبینی رزرواسیون"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_kanban
@@ -3128,13 +3144,13 @@ msgstr "ذخیره و بستن"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/custom_appointment_form_dialog/custom_appointment_form_dialog.xml:0
 msgid "Save & Copy Link"
-msgstr ""
+msgstr "ذخیره و کپی لینک"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/custom_appointment_form_dialog/custom_appointment_form_dialog.xml:0
 msgid "Save and Copy Link"
-msgstr ""
+msgstr "ذخیره و کپی لینک"
 
 #. module: appointment
 #: model:ir.ui.menu,name:appointment.menu_appointment_schedule_resources
@@ -3202,17 +3218,17 @@ msgstr "جستجو براساس مسئولیت"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_invite_view_form
 msgid "Select Appointments to share..."
-msgstr ""
+msgstr "قرار ملاقات‌هایی که می‌خواهید به اشتراک بگذارید را انتخاب کنید..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_manage_leaves_view_form
 msgid "Select Resources"
-msgstr ""
+msgstr "انتخاب منابع"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Select Resources..."
-msgstr ""
+msgstr "منابع را انتخاب کنید..."
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__assign_method__time_resource
@@ -3227,7 +3243,7 @@ msgstr "انتخاب زمان و تاریخ و سپس انتصاب خودکار"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Select Users..."
-msgstr ""
+msgstr "کاربران را انتخاب کنید..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_info
@@ -3291,7 +3307,7 @@ msgstr "اشتراک‌گذاری"
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/kanban/kanban_controller.js:0
 msgid "Share Appointment"
-msgstr ""
+msgstr "اشتراک‌گذاری قرار ملاقات"
 
 #. module: appointment
 #. odoo-javascript
@@ -3425,7 +3441,7 @@ msgstr "ترکیب منابع"
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_type__category__custom
 msgid "Specific Slots"
-msgstr ""
+msgstr "زمان‌های مشخص"
 
 #. module: appointment
 #: model:ir.model.fields.selection,name:appointment.selection__appointment_invite__resources_choice__specific_resources
@@ -3519,7 +3535,7 @@ msgstr "نشانه‌ها"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
 msgid "Synchronize your Calendar to avoid double-booking"
-msgstr ""
+msgstr "برای جلوگیری از رزرو دوگانه، تقویم خود را همگام‌سازی کنید"
 
 #. module: appointment
 #. odoo-python
@@ -3531,13 +3547,13 @@ msgstr "میز"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Table %s"
-msgstr ""
+msgstr "میز %s"
 
 #. module: appointment
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Table Booking"
-msgstr ""
+msgstr "رزرو میز"
 
 #. module: appointment
 #: model:appointment.type,name:appointment.appointment_type_tennis_court
@@ -3582,6 +3598,7 @@ msgid ""
 "The configuration has changed and synchronization is not possible anymore. "
 "Please reload the page."
 msgstr ""
+"این پیکربندی تغییر کرده و همگام‌سازی دیگر ممکن نیست. لطفاً صفحه را رفرش کنید."
 
 #. module: appointment
 #: model:ir.model.constraint,message:appointment.constraint_appointment_slot_check_start_and_end_hour
@@ -3601,6 +3618,8 @@ msgid ""
 "The event %s cannot have an appointment status without being linked to an "
 "appointment type."
 msgstr ""
+"رویداد %s نمی‌تواند بدون لینک شدن به نوع قرار ملاقات دارای وضعیت قرار ملاقات "
+"باشد."
 
 #. module: appointment
 #. odoo-python
@@ -3754,12 +3773,12 @@ msgstr "تا"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "To make any changes, please contact"
-msgstr ""
+msgstr "برای هرگونه تغییرات، تماس بگیرید:"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "To make any changes, please contact us."
-msgstr ""
+msgstr "برای هرگونه تغییرات، با ما تماس بگیرید."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_invite__access_token
@@ -3842,13 +3861,13 @@ msgstr "پیش رو"
 #: model:ir.model.fields,field_description:appointment.field_res_partner__upcoming_appointment_ids
 #: model:ir.model.fields,field_description:appointment.field_res_users__upcoming_appointment_ids
 msgid "Upcoming Appointments"
-msgstr ""
+msgstr "قرار ملاقات‌های آینده"
 
 #. module: appointment
 #. odoo-javascript
 #: code:addons/appointment/static/src/views/appointment_invite/appointment_share_link_list_controller.js:0
 msgid "Update a Share Link"
-msgstr ""
+msgstr "به‌روزرسانی لینک اشتراک‌گذاری"
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_calendar_alarm__default_for_new_appointment_type
@@ -3860,6 +3879,8 @@ msgstr "به عنوان پیشفرض برای انواع قرار ملاقات �
 #: model_terms:ir.actions.act_window,help:appointment.calendar_event_action_report_all
 msgid "Use this menu to overview your Appointments once you get some bookings."
 msgstr ""
+"بعد از دریافت رزرواسیون، برای بررسی قرار ملاقات‌های خود از این منو استفاده "
+"کنید."
 
 #. module: appointment
 #: model:ir.model.fields,help:appointment.field_appointment_type__category
@@ -3897,7 +3918,7 @@ msgstr "کاربران"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "Video Call"
-msgstr ""
+msgstr "تماس تصویری"
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__event_videocall_source
@@ -3913,7 +3934,7 @@ msgstr "نما"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "We will come back to you to confirm it."
-msgstr ""
+msgstr "برای تأیید با شما تماس خواهیم گرفت."
 
 #. module: appointment
 #: model:ir.model.fields,field_description:appointment.field_appointment_type__website_message_ids
@@ -3966,7 +3987,7 @@ msgstr "قرار ملاقات شما"
 #. odoo-javascript
 #: code:addons/appointment/static/src/components/appointment_sync_button/appointment_sync_button.js:0
 msgid "Your calendar is already configured and was successfully synchronized."
-msgstr ""
+msgstr "تقویم شما در حال حاضر پیکربندی شده و با موفقیت همگام‌سازی شده است."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_meeting_user
@@ -4040,7 +4061,7 @@ msgstr "به طورمثال زمین تنیس 1"
 #. odoo-python
 #: code:addons/appointment/models/templates/appointment_type.py:0
 msgid "e.g. Vegetarian, Lactose Intolerant, ..."
-msgstr ""
+msgstr "مثال: گیاهخوار، حساسیت به لاکتوز و..."
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
@@ -4084,7 +4105,7 @@ msgstr "بازه‌ی زمانی دیگیر برای این ماه وجود ند
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "hour(s) and cannot be cancelled at this time.<br/>"
-msgstr ""
+msgstr "ساعت زمان‌بندی شده است و در این زمان قابل لغو نیست.<br/>"
 
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_type_view_form
@@ -4122,7 +4143,7 @@ msgstr "فردی"
 #. module: appointment
 #: model_terms:ir.ui.view,arch_db:appointment.appointment_validated
 msgid "this link"
-msgstr ""
+msgstr "این لینک"
 
 #. module: appointment
 #. odoo-javascript

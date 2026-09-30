@@ -57,7 +57,7 @@ class AccountMove(models.Model):
 
     def button_draft(self):
         # Overridden in order to delete the carryover values when resetting the tax closing to draft
-        super().button_draft()
+        res = super().button_draft()
         for closing_move in self.filtered(lambda m: m.tax_closing_report_id):
             report = closing_move.tax_closing_report_id
             options = closing_move._get_tax_closing_report_options(closing_move.company_id, closing_move.fiscal_position_id, report, closing_move.date)
@@ -82,6 +82,7 @@ class AccountMove(models.Model):
                 raise UserError(_("You cannot reset this closing entry to draft, as another closing entry has been posted at a later date."))
 
             carryover_values.unlink()
+        return res
 
     def _has_subsequent_posted_closing_moves(self):
         self.ensure_one()

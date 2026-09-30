@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class ResConfigSettings(models.TransientModel):
@@ -63,3 +63,20 @@ class ResConfigSettings(models.TransientModel):
         domain=[('deprecated', '=', False)],
         string="Purchase Tax Base Account",
     )
+    l10n_ec_edi_provider_vat = fields.Char(
+        string="Software Provider RUC",
+        compute='_compute_l10n_ec_edi_provider_vat',
+        inverse='_inverse_l10n_ec_edi_provider_vat',
+        help="RUC of the provider of the billing software, reported on electronic documents and their RIDE",
+    )
+
+    # Trigger compute since 'company_id' is returned by default_get
+    @api.depends('company_id')
+    def _compute_l10n_ec_edi_provider_vat(self):
+        for config in self:
+            config.l10n_ec_edi_provider_vat = config.env['ir.config_parameter'].sudo().get_param('l10n_ec_edi.provider_vat')
+
+    def _inverse_l10n_ec_edi_provider_vat(self):
+        for config in self:
+            self.env['ir.config_parameter'].sudo().set_param(
+                'l10n_ec_edi.provider_vat', (config.l10n_ec_edi_provider_vat or '').strip() or False)

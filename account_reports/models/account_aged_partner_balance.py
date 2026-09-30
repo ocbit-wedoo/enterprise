@@ -99,7 +99,8 @@ class AgedPartnerBalanceCustomHandler(models.AbstractModel):
         interval = options['aging_interval']
         periods = [(False, fields.Date.to_string(date_to))]
         # Since we added the first period in the list we have to do one less iteration
-        nb_periods = len([column for column in options['columns'] if column['expression_label'].startswith('period')]) - 1
+        nb_column_groups = len(options['column_groups'])
+        nb_periods = len([column for column in options['columns'] if column['expression_label'].startswith('period')]) // nb_column_groups - 1
         for i in range(nb_periods):
             start_date = minus_days(date_to, (interval * i) + 1)
             # The last element of the list will have False for the end date

@@ -389,7 +389,7 @@ class EasypostRequest():
         endpoint = "orders/%s" % order_id
         response = self._make_api_request(endpoint)
         for shipment in response.get('shipments'):
-            public_url = shipment.get('tracker', {}).get('public_url')
+            public_url = (shipment.get('tracker') or {}).get('public_url')
             if public_url:
                 tracking_public_urls.append([shipment['tracking_code'], public_url])
         return tracking_public_urls

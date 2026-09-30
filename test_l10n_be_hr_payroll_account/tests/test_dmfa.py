@@ -217,12 +217,12 @@ class TestDMFA(AccountTestInvoicingCommon):
             'partner_id': cls.employee.address_id.id,
         })
 
-    def _generate_dmfa_declaration(self, file_type='S', return_declaration=False, skip_signature=True):
+    def _generate_dmfa_declaration(self, quarter='1', file_type='S', return_declaration=False, skip_signature=True):
         dmfa = self.env['l10n_be.dmfa'].with_user(self.payroll_manager).create({
             'reference': 'TESTDMFA',
             'company_id': self.belgian_company.id,
             'year': '2025',
-            'quarter': '1',
+            'quarter': quarter,
             'declaration_type': 'batch',
             'file_type': file_type,
         })
@@ -632,6 +632,76 @@ class TestDMFA(AccountTestInvoicingCommon):
         dmfa_dict = self._generate_dmfa_declaration()
         expected_dict = {'DmfAOriginal': {'@{http://www.w3.org/2001/XMLSchema-instance}noNamespaceSchemaLocation': 'DmfAOriginal_20211.xsd', 'Form': {'Identification': 'DMFA', 'FormCreationDate': '2025-04-10', 'FormCreationHour': '10:00:00.000', 'AttestationStatus': '0', 'TypeForm': 'SU', 'Reference': {'ReferenceType': '1', 'ReferenceOrigin': '1', 'ReferenceNbr': 'TESTDMFA'}, 'EmployerDeclaration': {'Quarter': '20251', 'NOSSRegistrationNbr': '123456789', 'Trusteeship': '0', 'CompanyID': '0123456789', 'NetOwedAmount': '00000229863', 'System5': '0', 'NaturalPerson': {'NaturalPersonSequenceNbr': '1', 'INSS': '91111111192', 'NaturalPersonUserReference': str(self.employee.id), 'WorkerRecord': {'EmployerClass': '010', 'WorkerCode': '495', 'NOSSQuarterStartingDate': '2025-01-01', 'NOSSQuarterEndingDate': '2025-03-31', 'Border': '0', 'Occupation': {'OccupationSequenceNbr': '1', 'OccupationStartingDate': '2018-12-31', 'JointCommissionNbr': '200', 'WorkingDaysSystem': '500', 'ContractType': '0', 'RefMeanWorkingHours': '3800', 'MeanWorkingHours': '3800', 'Retired': '0', 'OccupationUserReference': str(self.contract.id), 'LocalUnitID': '0000000123', 'Service': {'ServiceSequenceNbr': '1', 'ServiceCode': '001', 'ServiceNbrDays': '06400', 'ServiceNbrHours': '48640'}, 'Remun': [{'RemunSequenceNbr': '1', 'RemunCode': '001', 'RemunAmount': '00000602700'}, {'RemunSequenceNbr': '2', 'RemunCode': '010', 'RemunAmount': '00000047880'}, {'RemunSequenceNbr': '3', 'RemunCode': '002', 'BonusPaymentFrequency': '00', 'RemunAmount': '00000200000'}], 'OccupationDeduction': {'DeductionCode': '3000', 'DeductionAmount': '00000039565'}}, 'WorkerContribution': [{'ContributionWorkerCode': '256', 'ContributionType': '0', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000000080'}, {'ContributionWorkerCode': '255', 'ContributionType': '0', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000000161'}, {'ContributionWorkerCode': '495', 'ContributionType': '0', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000305588'}, {'ContributionWorkerCode': '809', 'ContributionType': '5', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000001445'}, {'ContributionWorkerCode': '810', 'ContributionType': '0', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000001365'}, {'ContributionWorkerCode': '831', 'ContributionType': '0', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000001846'}, {'ContributionWorkerCode': '856', 'ContributionType': '0', 'ContributionAmount': '00000000690'}, {'ContributionWorkerCode': '859', 'ContributionType': '0', 'ContributionCalculationBasis': '00000802700', 'ContributionAmount': '00000000803'}], 'WorkerDeduction': {'DeductionCode': '0001', 'DeductionAmount': '00000052516'}}}, 'CompanyVehicle': {'CompanyVehicleSequenceNbr': '1', 'LicensePlate': 'TEST'}, 'ContributionUnrelatedToNP': [{'UnrelatedEmployerClass': '010', 'UnrelatedWorkerCode': '862', 'UnrelatedAmount': '00000009966'}, {'UnrelatedEmployerClass': '010', 'UnrelatedWorkerCode': '870', 'UnrelatedCalculationBasis': '00000000000', 'UnrelatedAmount': '00000000000'}]}}}}
         self.assertDictEqual(dmfa_dict, expected_dict)
+
+    @freeze_time("2026-01-01 10:00:00")
+    def test_09_declaration_no_worked_days_lines(self):
+        '''
+        Test that the DMFA declaration is generated correctly when there are no worked days lines in the payslips.
+        Backport of odoo/enterprise#106689.
+        '''
+        self.contract.write({
+            'wage': 2000,
+            'wage_on_signature': 2000,
+        })
+        leave = self.env['hr.leave'].create({
+            'employee_id': self.employee.id,
+            'request_date_from': date(2025, 10, 1),
+            'request_date_to': date(2025, 12, 31),
+            'holiday_status_id': self.env.ref('hr_holidays.holiday_status_unpaid').id,
+        })
+        leave.action_approve()
+        payslips = self.env['hr.payslip'].create([{
+            'name': 'Payslip Jan 2025',
+            'contract_id': self.contract.id,
+            'date_from': datetime(2025, 1, 1),
+            'date_to': datetime(2025, 1, 31),
+            'employee_id': self.employee.id,
+            'struct_id': self.env.ref('l10n_be_hr_payroll.hr_payroll_structure_cp200_employee_salary').id,
+            'company_id': self.belgian_company.id,
+        },
+        {
+            'name': 'Payslip Oct 2025',
+            'contract_id': self.contract.id,
+            'date_from': datetime(2025, 10, 1),
+            'date_to': datetime(2025, 10, 31),
+            'employee_id': self.employee.id,
+            'struct_id': self.env.ref('l10n_be_hr_payroll.hr_payroll_structure_cp200_employee_salary').id,
+            'company_id': self.belgian_company.id,
+        }, {
+            'name': 'Payslip Nov 2025',
+            'contract_id': self.contract.id,
+            'date_from': datetime(2025, 11, 1),
+            'date_to': datetime(2025, 11, 30),
+            'employee_id': self.employee.id,
+            'struct_id': self.env.ref('l10n_be_hr_payroll.hr_payroll_structure_cp200_employee_salary').id,
+            'company_id': self.belgian_company.id,
+        }, {
+            'name': 'Payslip Dec 2025',
+            'contract_id': self.contract.id,
+            'date_from': datetime(2025, 12, 1),
+            'date_to': datetime(2025, 12, 31),
+            'employee_id': self.employee.id,
+            'struct_id': self.env.ref('l10n_be_hr_payroll.hr_payroll_structure_cp200_employee_salary').id,
+            'company_id': self.belgian_company.id,
+            'input_line_ids': [(0, 0, {
+                'input_type_id': self.env.ref('l10n_be_hr_payroll.input_simple_december_pay').id,
+                'amount': 200,
+            })],
+        }, {
+            'name': 'PFA',
+            'contract_id': self.contract.id,
+            'date_from': datetime(2025, 12, 1),
+            'date_to': datetime(2025, 12, 31),
+            'employee_id': self.employee.id,
+            'struct_id': self.env.ref('l10n_be_hr_payroll.hr_payroll_structure_cp200_thirteen_month').id,
+            'company_id': self.belgian_company.id,
+        }])
+        payslips.compute_sheet()
+        payslips.action_payslip_done()
+
+        dmfa_dict = self._generate_dmfa_declaration(quarter='4')
+        expected_dict = {'DmfAOriginal': {'@{http://www.w3.org/2001/XMLSchema-instance}noNamespaceSchemaLocation': 'DmfAOriginal_20211.xsd', 'Form': {'Identification': 'DMFA', 'FormCreationDate': '2026-01-01', 'FormCreationHour': '10:00:00.000', 'AttestationStatus': '0', 'TypeForm': 'SU', 'Reference': {'ReferenceType': '1', 'ReferenceOrigin': '1', 'ReferenceNbr': 'TESTDMFA'}, 'EmployerDeclaration': {'Quarter': '20254', 'NOSSRegistrationNbr': '123456789', 'Trusteeship': '0', 'CompanyID': '0123456789', 'NetOwedAmount': '00000087506', 'System5': '0', 'NaturalPerson': {'NaturalPersonSequenceNbr': '1', 'INSS': '91111111192', 'NaturalPersonUserReference': str(self.employee.id), 'WorkerRecord': {'EmployerClass': '010', 'WorkerCode': '495', 'NOSSQuarterStartingDate': '2025-10-01', 'NOSSQuarterEndingDate': '2025-12-31', 'Border': '0', 'Occupation': {'OccupationSequenceNbr': '1', 'OccupationStartingDate': '2018-12-31', 'JointCommissionNbr': '200', 'WorkingDaysSystem': '500', 'ContractType': '0', 'RefMeanWorkingHours': '3800', 'MeanWorkingHours': '3800', 'Retired': '0', 'OccupationUserReference': str(self.contract.id), 'LocalUnitID': '0000000123', 'Remun': [{'RemunSequenceNbr': '1', 'RemunCode': '010', 'RemunAmount': '00000047880'}, {'RemunSequenceNbr': '2', 'RemunCode': '002', 'BonusPaymentFrequency': '12', 'RemunAmount': '00000200000'}]}, 'WorkerContribution': [{'ContributionWorkerCode': '255', 'ContributionType': '0', 'ContributionCalculationBasis': '00000200000', 'ContributionAmount': '00000000040'}, {'ContributionWorkerCode': '495', 'ContributionType': '0', 'ContributionCalculationBasis': '00000200000', 'ContributionAmount': '00000076140'}, {'ContributionWorkerCode': '809', 'ContributionType': '5', 'ContributionCalculationBasis': '00000200000', 'ContributionAmount': '00000000360'}, {'ContributionWorkerCode': '810', 'ContributionType': '0', 'ContributionCalculationBasis': '00000200000', 'ContributionAmount': '00000000340'}, {'ContributionWorkerCode': '831', 'ContributionType': '0', 'ContributionCalculationBasis': '00000200000', 'ContributionAmount': '00000000460'}, {'ContributionWorkerCode': '856', 'ContributionType': '0', 'ContributionAmount': '00000000000'}, {'ContributionWorkerCode': '859', 'ContributionType': '0', 'ContributionCalculationBasis': '00000200000', 'ContributionAmount': '00000000200'}]}}, 'CompanyVehicle': {'CompanyVehicleSequenceNbr': '1', 'LicensePlate': 'TEST'}, 'ContributionUnrelatedToNP': [{'UnrelatedEmployerClass': '010', 'UnrelatedWorkerCode': '862', 'UnrelatedAmount': '00000009966'}, {'UnrelatedEmployerClass': '010', 'UnrelatedWorkerCode': '870', 'UnrelatedCalculationBasis': '00000000000', 'UnrelatedAmount': '00000000000'}]}}}}
+        self.assertDictEqual(expected_dict, dmfa_dict)
 
     @freeze_time("2025-04-10 10:00:00")
     def test_90_dmfa_sftp_flow_invalid_acrf(self):

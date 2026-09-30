@@ -15,6 +15,7 @@ ISSUING_ENTITY = [
     ('10', 'Municipality of Lima'),
     ('11', 'Ministry of Health'),
     ('12', 'Regional government'),
+    ('13', 'Supervisory Agency for Investment in Energy and Mining'),
 ]
 
 class L10nPeEdiVehicle(models.Model):

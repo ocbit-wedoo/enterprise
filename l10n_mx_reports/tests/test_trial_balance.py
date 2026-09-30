@@ -424,24 +424,24 @@ class TestL10nMXTrialBalanceReport(TestL10nMXTrialBalanceReportCommon):
         every account present in the trial balance (except unaffected
         earnings account) is present in the xml.
 
+        NumCta corresponds to Account Group code
         SaldoIni corresponds to Initial Balance
-        SaldoFin corresponds to End Balance
         Debe corresponds to Debit in the current period
         Haber corresponds to Credit in the current period
-        NumCta corresponds to Account Group code
+        SaldoFin corresponds to End Balance
         """
         expected_sat_xml = b"""<?xml version='1.0' encoding='utf-8'?>
         <BCE:Balanza xmlns:BCE="http://www.sat.gob.mx/esquemas/ContabilidadE/1_3/BalanzaComprobacion" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/esquemas/ContabilidadE/1_3/BalanzaComprobacion http://www.sat.gob.mx/esquemas/ContabilidadE/1_3/BalanzaComprobacion/BalanzaComprobacion_1_3.xsd" Version="1.3" RFC="EKU9003173C9" Mes="01" Anio="2021" TipoEnvio="N" Sello="___ignore___" Certificado="___ignore___" noCertificado="___ignore___">
-            <BCE:Ctas Debe="75.00" NumCta="201" Haber="0.00" SaldoFin="-1075.00" SaldoIni="-1000.00"/>
-            <BCE:Ctas Debe="75.00" NumCta="201.01" Haber="0.00" SaldoFin="-1075.00" SaldoIni="-1000.00"/>
-            <BCE:Ctas Debe="450.00" NumCta="205" Haber="450.00" SaldoFin="0.00" SaldoIni="0.00"/>
-            <BCE:Ctas Debe="450.00" NumCta="205.06" Haber="450.00" SaldoFin="0.00" SaldoIni="0.00"/>
-            <BCE:Ctas Debe="0.00" NumCta="305" Haber="0.00" SaldoFin="1000.00" SaldoIni="1000.00"/>
-            <BCE:Ctas Debe="0.00" NumCta="305.01" Haber="0.00" SaldoFin="1000.00" SaldoIni="1000.00"/>
-            <BCE:Ctas Debe="0.00" NumCta="401" Haber="325.00" SaldoFin="325.00" SaldoIni="0.00"/>
-            <BCE:Ctas Debe="0.00" NumCta="401.01" Haber="325.00" SaldoFin="325.00" SaldoIni="0.00"/>
-            <BCE:Ctas Debe="250.00" NumCta="601" Haber="0.00" SaldoFin="250.00" SaldoIni="0.00"/>
-            <BCE:Ctas Debe="250.00" NumCta="601.84" Haber="0.00" SaldoFin="250.00" SaldoIni="0.00"/>
+            <BCE:Ctas NumCta="201" SaldoIni="-1000.00" Debe="75.00" Haber="0.00" SaldoFin="-1075.00"/>
+            <BCE:Ctas NumCta="201.01" SaldoIni="-1000.00" Debe="75.00" Haber="0.00" SaldoFin="-1075.00"/>
+            <BCE:Ctas NumCta="205" SaldoIni="0.00" Debe="450.00" Haber="450.00" SaldoFin="0.00"/>
+            <BCE:Ctas NumCta="205.06" SaldoIni="0.00" Debe="450.00" Haber="450.00" SaldoFin="0.00"/>
+            <BCE:Ctas NumCta="305" SaldoIni="1000.00" Debe="0.00" Haber="0.00" SaldoFin="1000.00"/>
+            <BCE:Ctas NumCta="305.01" SaldoIni="1000.00" Debe="0.00" Haber="0.00" SaldoFin="1000.00"/>
+            <BCE:Ctas NumCta="401" SaldoIni="0.00" Debe="0.00" Haber="325.00" SaldoFin="325.00"/>
+            <BCE:Ctas NumCta="401.01" SaldoIni="0.00" Debe="0.00" Haber="325.00" SaldoFin="325.00"/>
+            <BCE:Ctas NumCta="601" SaldoIni="0.00" Debe="250.00" Haber="0.00" SaldoFin="250.00"/>
+            <BCE:Ctas NumCta="601.84" SaldoIni="0.00" Debe="250.00" Haber="0.00" SaldoFin="250.00"/>
         </BCE:Balanza>
         """
 

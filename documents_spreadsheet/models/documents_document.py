@@ -570,3 +570,13 @@ class Document(models.Model):
 
     def _get_writable_record_name_field(self):
         return 'name'
+
+    def _get_spreadsheet_data_hash(self):
+        """The spreadsheet data is stored in the document's own attachment,
+        not in a `spreadsheet_binary_data` one. `checksum` is already related
+        to `attachment_id.checksum`, so no content is loaded.
+        """
+        self.ensure_one()
+        if self.handler != "spreadsheet":
+            return False
+        return self.sudo().checksum or False

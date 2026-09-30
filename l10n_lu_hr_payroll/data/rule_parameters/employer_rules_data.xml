@@ -16,6 +16,12 @@
         <field name="rule_parameter_id" ref="rule_parameter_accident_insurance_rate"/>
         <field name="date_from" eval="datetime(2024, 1, 1).date()"/>
     </record>
+    <record id="rule_parameter_accident_insurance_rate_2026" model="hr.rule.parameter.value">
+        <!-- Source: https://ccss.public.lu/en/parametres-sociaux.html -->
+        <field name="parameter_value">0.65</field>
+        <field name="rule_parameter_id" ref="rule_parameter_accident_insurance_rate"/>
+        <field name="date_from" eval="datetime(2026, 1, 1).date()"/>
+    </record>
 
     <!-- Source: https://mde.public.lu/fr/affiliation-financement/financement.html -->
     <record id="rule_parameter_mutuality_rates" model="hr.rule.parameter">
@@ -32,5 +38,10 @@
         <field name="parameter_value">(0.01, 0.01, 0.42, 1.36)</field>
         <field name="rule_parameter_id" ref="rule_parameter_mutuality_rates"/>
         <field name="date_from" eval="datetime(2024, 1, 1).date()"/>
+    </record>
+    <record id="rule_parameter_mutuality_rates_2026" model="hr.rule.parameter.value">
+        <field name="parameter_value">(0.23, 0.95, 1.56, 2.66)</field>
+        <field name="rule_parameter_id" ref="rule_parameter_mutuality_rates"/>
+        <field name="date_from" eval="datetime(2026, 1, 1).date()"/>
     </record>
 </odoo>

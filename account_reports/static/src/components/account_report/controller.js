@@ -47,7 +47,7 @@ export class AccountReportController {
         if (
             options !== undefined
             && this.loadingCallNumber === loadingCallNumber
-            && (this.lastOpenedSectionByReport === {} || this.lastOpenedSectionByReport[options['selected_variant_id']] === options['selected_section_id'])
+            && (!Object.keys(this.lastOpenedSectionByReport).length || this.lastOpenedSectionByReport[options['selected_variant_id']] === options['selected_section_id'])
         ) {
             // the options gotten from the python correspond to the ones that called this displayReport
             this.options = options;
@@ -525,23 +525,32 @@ export class AccountReportController {
 
     async unfoldLine(lineIndex) {
         const targetLine = this.lines[lineIndex];
-        let lastLineIndex = lineIndex + 1;
 
-        if (this.isLoadedLine(lineIndex))
-            lastLineIndex = await this.unfoldLoadedLine(lineIndex);
-        else if (targetLine.expand_function) {
-            lastLineIndex = await this.unfoldNewLine(lineIndex);
+        // Prevent concurrent unfold calls for the same line (e.g. from rapid clicks or a slow connection).
+        if (targetLine.unfolding) return;
+        targetLine.unfolding = true;
+
+        try {
+            let lastLineIndex = lineIndex + 1;
+
+            if (this.isLoadedLine(lineIndex))
+                lastLineIndex = await this.unfoldLoadedLine(lineIndex);
+            else if (targetLine.expand_function) {
+                lastLineIndex = await this.unfoldNewLine(lineIndex);
+            }
+
+            this.setLineVisibility(this.lines.slice(lineIndex + 1, lastLineIndex));
+            targetLine.unfolded = true;
+            this.refreshVisibleAnnotations();
+
+            // Update options
+            if (!this.options.unfolded_lines.includes(targetLine.id))
+                this.options.unfolded_lines.push(targetLine.id);
+
+            this.saveSessionOptions(this.options);
+        } finally {
+            targetLine.unfolding = false;
         }
-
-        this.setLineVisibility(this.lines.slice(lineIndex + 1, lastLineIndex));
-        targetLine.unfolded = true;
-        this.refreshVisibleAnnotations();
-
-        // Update options
-        if (!this.options.unfolded_lines.includes(targetLine.id))
-            this.options.unfolded_lines.push(targetLine.id);
-
-        this.saveSessionOptions(this.options);
     }
 
     foldLine(lineIndex) {

@@ -1,25 +1,27 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_followup
+# * account_followup
 #
 # Translators:
 # zakariya moradi, 2025
 # Tiffany Chang, 2025
 # Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:48+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-09-03 16:31+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"account_followup/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: account_followup
 #. odoo-python
@@ -31,7 +33,7 @@ msgstr "%(company)s یادآوری پرداخت - %(partner)s"
 #. odoo-python
 #: code:addons/account_followup/models/account_followup.py:0
 msgid "%(delay)s days (copy of %(name)s)"
-msgstr ""
+msgstr "%(delay)s روز (کپی %(name)s)"
 
 #. module: account_followup
 #: model:ir.actions.report,print_report_name:account_followup.action_report_followup
@@ -198,6 +200,45 @@ msgid ""
 "                </div>\n"
 "            "
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p>\n"
+"        <t t-if=\"object.id != object.commercial_partner_id.id\">\n"
+"            <t t-out=\"object.name or ''\"/> (<t t-"
+"out=\"object.commercial_partner_id.name or ''\"/>) گرامی،\n"
+"        </t>\n"
+"        <t t-else=\"\">\n"
+"            <t t-out=\"object.name or ''\"/> گرامی،\n"
+"        </t>\n"
+"        <br/>\n"
+"        متأسفیم که علی‌رغم ارسال یادآوری، حساب شما همچنان به‌صورت جدی معوق "
+"مانده است.\n"
+"        <br/>\n"
+"        ضروری است که فوراً پرداخت انجام شود؛ در غیر این صورت ممکن است مجبور "
+"شویم حساب شما را مسدود کنیم، که به معنای عدم امکان ارائه (کالا/خدمات) به شرکت "
+"شما خواهد بود. لطفاً اقدامات لازم را برای انجام این پرداخت در ۸ روز آینده "
+"انجام دهید.\n"
+"        <br/>\n"
+"        در صورتی که مشکلی در پرداخت این فاکتور وجود دارد که ما از آن بی‌اطلاع "
+"هستیم، لطفاً با واحد حسابداری تماس بگیرید تا بتوانیم موضوع را در کوتاه‌ترین "
+"زمان ممکن برطرف کنیم.\n"
+"        <br/>\n"
+"        جزئیات پرداخت‌های سررسید شده در ادامه درج شده است.\n"
+"        <br/>\n"
+"        با احترام،\n"
+"        <t t-if=\"not is_html_empty(object._get_followup_responsible()"
+".signature)\">\n"
+"            <br/>\n"
+"            <t t-out=\"object._get_followup_responsible().signature\"/>\n"
+"        </t>\n"
+"        <t t-else=\"\">\n"
+"            <br/>\n"
+"            --\n"
+"            <br/>\n"
+"            <t t-out=\"object._get_followup_responsible().name\"/>\n"
+"        </t>\n"
+"    </p>\n"
+"</div>\n"
+"            "
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.res_partner_view_form
@@ -501,7 +542,7 @@ msgstr "گیرندگان دیگر"
 #. odoo-python
 #: code:addons/account_followup/models/res_partner.py:0
 msgid "Follow-up %(partner)s - %(date)s.pdf"
-msgstr ""
+msgstr "پیگیری %(partner)s - %(date)s.pdf"
 
 #. module: account_followup
 #: model:ir.model.fields.selection,name:account_followup.selection__res_partner__type__followup
@@ -585,7 +626,7 @@ msgstr "پیام پیگیری چهارم "
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__has_moves
 #: model:ir.model.fields,field_description:account_followup.field_res_users__has_moves
 msgid "Has Moves"
-msgstr ""
+msgstr "دارای انتقال است"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__id
@@ -601,6 +642,9 @@ msgid ""
 "notifications about any email reply made by the partner on the reminder "
 "email."
 msgstr ""
+"در صورت تنظیم، این کاربران به‌عنوان دنبال‌کننده طرف همکار اضافه می‌شوند و به "
+"ازای هر پاسخی که طرف همکار به ایمیل یادآوری ارسال کند، اعلان دریافت خواهند "
+"کرد."
 
 #. module: account_followup
 #: model:ir.model.fields.selection,name:account_followup.selection__res_partner__followup_status__in_need_of_action
@@ -610,7 +654,7 @@ msgstr "نیاز به اقدام"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.view_partner_property_form_followup
 msgid "Invoice Follow-ups"
-msgstr ""
+msgstr "پیگیری‌های فاکتور"
 
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.template_followup_report
@@ -705,6 +749,9 @@ msgid ""
 "                Sending a reminder will set this date depending on the "
 "levels configuration, and you can change it manually."
 msgstr ""
+"هیچ اقدام پیگیری قبل از این تاریخ انجام نخواهد شد.  \n"
+"ارسال یادآوری، این تاریخ را بسته به پیکربندی سطوح تنظیم می‌کند و می‌توانید آن "
+"را به صورت دستی تغییر دهید."
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__activity_note
@@ -743,7 +790,7 @@ msgstr "مبدا"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.customer_statements_search_view
 msgid "Overdue Customer Invoices"
-msgstr ""
+msgstr "فاکتورهای سررسید گذشته مشتری"
 
 #. module: account_followup
 #. odoo-python
@@ -776,7 +823,7 @@ msgstr "چاپ نامه پیگیری"
 #. module: account_followup
 #: model:ir.actions.server,name:account_followup.action_account_reports_customer_statements_do_followup
 msgid "Process Follow-ups"
-msgstr ""
+msgstr "پیگیری‌های فرآیند"
 
 #. module: account_followup
 #. odoo-python
@@ -808,7 +855,7 @@ msgstr "گزارش‌دهی"
 #. module: account_followup
 #: model_terms:ir.ui.view,arch_db:account_followup.customer_statements_search_view
 msgid "Requires Follow-up"
-msgstr ""
+msgstr "نیازمند پیگیری"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_account_followup_followup_line__activity_default_responsible_type
@@ -942,13 +989,13 @@ msgstr "مجموع"
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__total_all_due
 #: model:ir.model.fields,field_description:account_followup.field_res_users__total_all_due
 msgid "Total All Due"
-msgstr ""
+msgstr "کل سررسید"
 
 #. module: account_followup
 #: model:ir.model.fields,field_description:account_followup.field_res_partner__total_all_overdue
 #: model:ir.model.fields,field_description:account_followup.field_res_users__total_all_overdue
 msgid "Total All Overdue"
-msgstr ""
+msgstr "کل تأخیر از سررسید"
 
 #. module: account_followup
 #. odoo-python

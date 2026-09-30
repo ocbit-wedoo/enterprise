@@ -4,9 +4,7 @@
 <div t-name="spreadsheet_edition.CellThreadPopover"
     t-key="props.threadId"
     t-on-focusin="() => this.onFocused()"
-    class="o-thread-popover"
-    t-on-click.prevent="">
-    <!-- the prevent on click is necessary because we cannot benefit from the scroller service event listener -->
+    class="o-thread-popover">
     <t t-if="state.thread.id">
         <div t-att-class="{'o-thread-highlight': !props.isInteractive}">
             <CellThread threadId="state.thread.id" t-key="state.thread.localId" edit="props.isInteractive" />

@@ -143,3 +143,22 @@ class TestRepair(HelpdeskCommon):
         self.assertRecordValues(delivery.move_ids, [{'product_id': product.id, 'quantity': 1.0}])
         return_picking = so.picking_ids.filtered(lambda p: p.picking_type_id == so.warehouse_id.in_type_id)
         self.assertRecordValues(return_picking.move_ids, [{'product_id': product.id, 'quantity': 1.0}])
+
+    def test_helpdesk_repair_sale_order_uses_customer_salesperson(self):
+        """Ensure quotation created from helpdesk repairs assign the customer's salesperson."""
+        self.test_team.use_product_repairs = True
+        self.partner.user_id = self.env.user
+
+        ticket = self.env['helpdesk.ticket'].create({
+            'name': 'Test ticket',
+            'partner_id': self.partner.id,
+            'team_id': self.test_team.id,
+        })
+
+        repair_action = ticket.action_repair_order_form()
+        repair_order = self.env['repair.order'].with_context(repair_action['context']).create({})
+
+        repair_order.action_create_sale_order()
+
+        self.assertFalse(repair_order.user_id)
+        self.assertEqual(repair_order.sale_order_id.user_id, self.env.user)

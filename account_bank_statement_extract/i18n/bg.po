@@ -8,13 +8,14 @@
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Ивайло Малинов <iv.malinov@gmail.com>, 2024
 # "v.kanev" <v.kanev@tutanota.com>, 2026.
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2026-03-20 14:24+0000\n"
-"Last-Translator: \"v.kanev\" <v.kanev@tutanota.com>\n"
+"PO-Revision-Date: 2026-08-21 21:13+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
 "Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
 "account_bank_statement_extract/bg/>\n"
 "Language: bg\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__message_needaction
@@ -47,7 +48,7 @@ msgstr "Банкови Извлечения"
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__extract_can_show_send_button
 msgid "Can show the ocr send button"
-msgstr ""
+msgstr "Може да показва бутона за изпращане на ocr"
 
 #. module: account_bank_statement_extract
 #: model:ir.model,name:account_bank_statement_extract.model_res_company
@@ -62,7 +63,7 @@ msgstr "Конфигурационни настройки"
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_res_company__extract_bank_statement_digitalization_mode
 msgid "Digitization mode on bank statements"
-msgstr ""
+msgstr "Режим на дигитализация на банковите извлечения"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields.selection,name:account_bank_statement_extract.selection__res_company__extract_bank_statement_digitalization_mode__auto_send
@@ -82,17 +83,17 @@ msgstr "Съобщение за грешка"
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__extract_state_processed
 msgid "Extract State Processed"
-msgstr ""
+msgstr "Състояние на извличане - обработено"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__extract_state
 msgid "Extract state"
-msgstr ""
+msgstr "Състояние на извличане"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__extract_status
 msgid "Extract status"
-msgstr ""
+msgstr "Статус на извличане"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__message_follower_ids
@@ -108,7 +109,7 @@ msgstr "Последователи (партньори)"
 #. odoo-python
 #: code:addons/account_bank_statement_extract/models/account_journal.py:0
 msgid "Generated Bank Statements"
-msgstr ""
+msgstr "Генерирани банкови извлечения"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__has_message
@@ -118,7 +119,7 @@ msgstr "има съобщение"
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__extract_document_uuid
 msgid "ID of the request to IAP-OCR"
-msgstr ""
+msgstr "ID на заявката към IAP-OCR"
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,help:account_bank_statement_extract.field_account_bank_statement__message_needaction
@@ -139,7 +140,7 @@ msgstr "е последовател"
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__is_in_extractable_state
 msgid "Is In Extractable State"
-msgstr ""
+msgstr "В състояние за извличане ли е"
 
 #. module: account_bank_statement_extract
 #: model:ir.model,name:account_bank_statement_extract.model_account_journal
@@ -165,7 +166,7 @@ msgstr "Съобщения"
 #. odoo-python
 #: code:addons/account_bank_statement_extract/models/account_journal.py:0
 msgid "Mixing PDF/Image files with other file types is not allowed."
-msgstr ""
+msgstr "Смесването на PDF/Изображения с други типове файлове не е позволено."
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__message_needaction_counter
@@ -203,6 +204,7 @@ msgstr "SMS грешка при доставка"
 msgid ""
 "Statement and transactions have been updated using Artificial Intelligence."
 msgstr ""
+"Извлечението и транзакциите бяха обновени с помощта на изкуствен интелект."
 
 #. module: account_bank_statement_extract
 #: model:ir.model.fields,field_description:account_bank_statement_extract.field_account_bank_statement__website_message_ids

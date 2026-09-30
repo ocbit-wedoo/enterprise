@@ -26,12 +26,8 @@ class L10nUyEdiDocument(models.Model):
             edi_doc.display_name = f"({edi_doc.l10n_latam_document_type_id.doc_code_prefix} {edi_doc.l10n_latam_document_number})"
 
     def _get_origin_record(self):
-        self.ensure_one()
-        if self.move_id:
-            return self.move_id
-        if self.picking_id:
-            return self.picking_id
-        return False
+        # EXTENDS 'l10n_uy_edi'
+        return super()._get_origin_record() or self.picking_id
 
     def _get_picking_uuid(self, origin_record):
         """UUID to identify picking (shortcut for testing env unicity)"""
@@ -49,11 +45,6 @@ class L10nUyEdiDocument(models.Model):
         if not tag:
             raise UserError(self.env._("You need to define the origin record of this EDI document"))
         return tag
-
-    def _get_pdf(self):
-        # EXTEND from l10n_uy_edi
-        """Get PDF for the document"""
-        return super()._get_pdf()
 
     def action_update_dgi_state(self):
         pickings = self.filtered(lambda x: x.picking_id)

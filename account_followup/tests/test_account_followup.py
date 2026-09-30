@@ -560,3 +560,108 @@ class TestAccountFollowupReports(TestAccountFollowupCommon, MailCommon):
             }
             self.partner_a.send_followup_email(options=options)
         self.assertMailMail(mail_cc, 'sent', author=self.env.user.partner_id)
+
+    def test_has_moves_without_invoice(self):
+        """
+        Test that has_moves is True for a partner referenced
+        only at account.move.line level (no partner at move level)
+        """
+        partner = self.env['res.partner'].create({'name': 'Test Partner'})
+        move = self.env['account.move'].create({
+            'move_type': 'entry',
+            'line_ids': [
+                Command.create({
+                    'partner_id': partner.id,
+                    'account_id': self.company_data['default_account_receivable'].id,
+                    'debit': 100.0,
+                    'credit': 0.0,
+                }),
+                Command.create({
+                    'account_id': self.company_data['default_account_revenue'].id,
+                    'debit': 0.0,
+                    'credit': 100.0,
+                }),
+            ],
+        })
+        move.action_post()
+        self.assertTrue(partner.has_moves)
+
+    def test_has_moves_on_multiple_partners(self):
+        """
+        Test that `has_moves` is computed correctly when the compute runs on a
+        recordset: each partner gets its own value, whichever source the move is
+        linked to it through.
+        """
+        commercial_entity = self.env['res.partner'].create({'name': 'Commercial Entity', 'is_company': True})
+        partner_contact, partner_line, partner_shipping, partner_without_moves = self.env['res.partner'].create([
+            {'name': 'Partner Contact', 'parent_id': commercial_entity.id},
+            {'name': 'Partner Line'},
+            {'name': 'Partner Shipping'},
+            {'name': 'Partner Without Moves'},
+        ])
+        # Matches `partner_id` for the contact and `commercial_partner_id` for its parent.
+        self.env['account.move'].create({
+            'move_type': 'entry',
+            'partner_id': partner_contact.id,
+            'line_ids': [
+                Command.create({
+                    'partner_id': False,
+                    'account_id': self.company_data['default_account_revenue'].id,
+                    'debit': 100.0,
+                    'credit': 0.0,
+                }),
+                Command.create({
+                    'partner_id': False,
+                    'account_id': self.company_data['default_account_expense'].id,
+                    'debit': 0.0,
+                    'credit': 100.0,
+                }),
+            ],
+        })
+        # Matches `partner_id` at `account.move.line` level only, the move itself has no partner.
+        move = self.env['account.move'].create({
+            'move_type': 'entry',
+            'line_ids': [
+                Command.create({
+                    'partner_id': partner_line.id,
+                    'account_id': self.company_data['default_account_receivable'].id,
+                    'debit': 100.0,
+                    'credit': 0.0,
+                }),
+                Command.create({
+                    'account_id': self.company_data['default_account_revenue'].id,
+                    'debit': 0.0,
+                    'credit': 100.0,
+                }),
+            ],
+        })
+        move.action_post()
+        # Matches `partner_shipping_id` only, the invoice itself is for another partner.
+        self.env['account.move'].create({
+            'move_type': 'out_invoice',
+            'invoice_date': '2025-01-01',
+            'partner_id': self.partner_a.id,
+            'partner_shipping_id': partner_shipping.id,
+            'invoice_line_ids': [Command.create({
+                'quantity': 1,
+                'price_unit': 500,
+                'tax_ids': [],
+            })],
+        })
+
+        partners = partner_contact + commercial_entity + partner_line + partner_shipping + partner_without_moves
+        self.assertEqual(partners.mapped('has_moves'), [True, True, True, True, False])
+
+    def test_has_moves_on_new_partner(self):
+        """
+        Test that `has_moves` can be computed on a partner that has no database
+        id yet.
+        """
+        partner_invoice = self.env['res.partner'].create({'name': 'Partner Invoice'})
+        self.create_invoice('2025-01-01', partner=partner_invoice)
+
+        self.assertFalse(self.env['res.partner'].new({'name': 'New Partner'}).has_moves)
+
+        new_partner = self.env['res.partner'].new({'name': 'Another New Partner'})
+        partners = new_partner + partner_invoice
+        self.assertEqual(partners.mapped('has_moves'), [False, True])

@@ -33,12 +33,17 @@ class GeneralLedgerCustomHandler(models.AbstractModel):
         result_strf = DATEFORMAT_SIE4 if use_sie4_format else DATEFORMAT_MAIN
         datetime_from = datetime.strptime(options['date']['date_from'], DATEFORMAT_MAIN)
         datetime_to = datetime.strptime(options['date']['date_to'], DATEFORMAT_MAIN)
+        previous_fiscal_year = self.env['account.fiscal.year'].search([
+            ('date_to', '<=', options['date']['date_from'])
+        ], order='date_to desc', limit=1)
+        prev_date_from = previous_fiscal_year.date_from if previous_fiscal_year else (datetime_from - relativedelta(years=1))
+        prev_date_to = previous_fiscal_year.date_to if previous_fiscal_year else (datetime_from - relativedelta(days=1))
         return {
-            'prev_date_from': (datetime_from - relativedelta(years=1)).strftime(result_strf),
-            'prev_date_to': (datetime_to - relativedelta(years=1)).strftime(result_strf),
+            'prev_date_from': prev_date_from.strftime(result_strf),
+            'prev_date_to': prev_date_to.strftime(result_strf),
             'curr_date_from': datetime_from.strftime(result_strf),
             'curr_date_to': datetime_to.strftime(result_strf),
-            'next_date_from': (datetime_from + relativedelta(years=1)).strftime(result_strf),
+            'next_date_from': (datetime_to + relativedelta(days=1)).strftime(result_strf),
             'next_date_to': (datetime_to + relativedelta(years=1)).strftime(result_strf),
         }
 

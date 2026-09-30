@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* website_sale_renting
+# * website_sale_renting
 #
 # Translators:
 # Petko Karamotchev, 2024
@@ -11,20 +11,22 @@
 # Albena Mincheva <albena_vicheva@abv.bg>, 2024
 # Maria Boyadjieva <marabo2000@gmail.com>, 2024
 # Martin Dinovski, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Martin Dinovski, 2025\n"
-"Language-Team: Bulgarian (https://app.transifex.com/odoo/teams/41243/bg/)\n"
+"PO-Revision-Date: 2026-08-21 21:15+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Bulgarian <https://translate.odoo.com/projects/odoo-18/"
+"website_sale_renting/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: website_sale_renting
 #. odoo-python
@@ -47,6 +49,11 @@ msgid ""
 "                rentals that last less than %(duration)s %(unit)s.\n"
 "            "
 msgstr ""
+"\n"
+"                Продължителността на наема е твърде кратка. За съжаление не "
+"обработваме\n"
+"                наеми с продължителност под %(duration)s %(unit)s.\n"
+"            "
 
 #. module: website_sale_renting
 #. odoo-python
@@ -58,6 +65,12 @@ msgid ""
 "                Unfortunately, we do not process pickups on that weekday.\n"
 "            "
 msgstr ""
+"\n"
+"                Вашият продукт за наем има невалидна дата на вземане (%"
+"(start_date)s).\n"
+"                За съжаление не обработваме вземания в този ден от "
+"седмицата.\n"
+"            "
 
 #. module: website_sale_renting
 #. odoo-python
@@ -69,6 +82,12 @@ msgid ""
 "                Unfortunately, we do not process returns on that weekday.\n"
 "            "
 msgstr ""
+"\n"
+"                Вашият продукт за наем има невалидна дата на връщане (%"
+"(end_date)s).\n"
+"                За съжаление не обработваме връщания в този ден от "
+"седмицата.\n"
+"            "
 
 #. module: website_sale_renting
 #. odoo-python
@@ -82,6 +101,13 @@ msgid ""
 "                returns on those weekdays.\n"
 "            "
 msgstr ""
+"\n"
+"                Вашият продукт за наем има невалидни дати на вземане (%"
+"(start_date)s) и\n"
+"                връщане (%(end_date)s). За съжаление не обработваме "
+"вземания, нито\n"
+"                връщания в тези дни от седмицата.\n"
+"            "
 
 #. module: website_sale_renting
 #. odoo-python
@@ -95,30 +121,37 @@ msgid ""
 "            inconvenience.\n"
 "        "
 msgstr ""
+"\n"
+"            Някои от вашите продукти за наем (%(product)s) не могат да бъдат "
+"наети през\n"
+"            избрания период и количката ви трябва да бъде обновена. "
+"Извиняваме се за\n"
+"            неудобството.\n"
+"        "
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "(%s days)."
-msgstr ""
+msgstr "(%s дни)."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "(%s hours)."
-msgstr ""
+msgstr "(%s часа)."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "(%s months)."
-msgstr ""
+msgstr "(%s месеца)."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "(%s weeks)."
-msgstr ""
+msgstr "(%s седмици)."
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.s_rental_search_options
@@ -130,7 +163,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.products
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.products_collapsible
 msgid "<b>Rental Period</b>"
-msgstr ""
+msgstr "<b>Период на наем</b>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_product
@@ -138,6 +171,8 @@ msgid ""
 "<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
 "                            <span name=\"renting_warning_message\"/>"
 msgstr ""
+"<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
+"                            <span name=\"renting_warning_message\"/>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.cart
@@ -145,6 +180,8 @@ msgid ""
 "<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
 "                        <span name=\"renting_warning_message\"/>"
 msgstr ""
+"<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
+"                        <span name=\"renting_warning_message\"/>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.s_rental_search
@@ -152,6 +189,8 @@ msgid ""
 "<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
 "                    <span name=\"renting_warning_message\"/>"
 msgstr ""
+"<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
+"                    <span name=\"renting_warning_message\"/>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.datepicker
@@ -159,6 +198,8 @@ msgid ""
 "<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
 "                <span name=\"renting_warning_message\"/>"
 msgstr ""
+"<i class=\"fa fa-warning\" role=\"img\" aria-label=\"Warning\"/>\n"
+"                <span name=\"renting_warning_message\"/>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.o_wsale_offcanvas
@@ -167,16 +208,18 @@ msgid ""
 "<small class=\"mx-auto\"><b>Clear Rental Period</b></small>\n"
 "                                <i class=\"oi oi-close\" role=\"img\"/>"
 msgstr ""
+"<small class=\"mx-auto\"><b>Изчисти периода на наем</b></small>\n"
+"                                <i class=\"oi oi-close\" role=\"img\"/>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_search_result_price
 msgid "<small>from</small>"
-msgstr ""
+msgstr "<small>от</small>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_search_result_price
 msgid "<small>per</small>"
-msgstr ""
+msgstr "<small>на</small>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.s_rental_search
@@ -188,13 +231,13 @@ msgstr ""
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.suggested_products_list
 msgid "<span class=\"ps-1\">per</span>"
-msgstr ""
+msgstr "<span class=\"ps-1\">на</span>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.price_dynamic_filter_template_product_product
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_products_price
 msgid "<span>/</span>"
-msgstr ""
+msgstr "<span>/</span>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_product
@@ -205,12 +248,12 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.products_item
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_products_price
 msgid "<span>per</span>"
-msgstr ""
+msgstr "<span>на</span>"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.rental_product
 msgid "<strong class=\"attribute_name\">Pricing</strong>"
-msgstr ""
+msgstr "<strong class=\"attribute_name\">Ценообразуване</strong>"
 
 #. module: website_sale_renting
 #. odoo-javascript
@@ -226,7 +269,7 @@ msgstr ""
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.s_rental_search_options
 msgid "Attribute Filter"
-msgstr ""
+msgstr "Филтър по атрибут"
 
 #. module: website_sale_renting
 #: model:ir.model,name:website_sale_renting.model_res_company
@@ -256,7 +299,7 @@ msgstr "Дни"
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.res_config_settings_view_form
 msgid "Days during which pickup and return are not possible."
-msgstr ""
+msgstr "Дни, в които вземане и връщане не са възможни."
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.cart
@@ -280,7 +323,7 @@ msgstr "От"
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.o_wsale_offcanvas
 msgid "Go to your cart"
-msgstr ""
+msgstr "Към вашата количка"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.s_rental_search_options
@@ -296,23 +339,23 @@ msgstr "Часове"
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_company__renting_minimal_time_duration
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_config_settings__renting_minimal_time_duration
 msgid "Minimal Rental Duration"
-msgstr ""
+msgstr "Минимална продължителност на наема"
 
 #. module: website_sale_renting
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_company__renting_minimal_time_unit
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_config_settings__renting_minimal_time_unit
 msgid "Minimal Rental Duration Unit"
-msgstr ""
+msgstr "Единица за минимална продължителност на наема"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.res_config_settings_view_form
 msgid "Minimal duration between pickup and return."
-msgstr ""
+msgstr "Минимална продължителност между вземане и връщане."
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.res_config_settings_view_form
 msgid "Minimal time of rental"
-msgstr ""
+msgstr "Минимално време на наем"
 
 #. module: website_sale_renting
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_company__renting_forbidden_mon
@@ -329,19 +372,19 @@ msgstr "Месеци"
 #. odoo-python
 #: code:addons/website_sale_renting/models/sale_order.py:0
 msgid "No dates were specified on your rental order."
-msgstr ""
+msgstr "Във вашата поръчка за наем не са посочени дати."
 
 #. module: website_sale_renting
 #. odoo-python
 #: code:addons/website_sale_renting/models/product_template.py:0
 msgid "Please choose a return date that is after the pickup date."
-msgstr ""
+msgstr "Моля, изберете дата на връщане, която е след датата на вземане."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "Please select a rental period."
-msgstr ""
+msgstr "Моля, изберете период на наем."
 
 #. module: website_sale_renting
 #: model:ir.model,name:website_sale_renting.model_product_pricelist
@@ -351,7 +394,7 @@ msgstr "Ценова листа"
 #. module: website_sale_renting
 #: model:ir.model,name:website_sale_renting.model_product_pricing
 msgid "Pricing rule of rental products"
-msgstr ""
+msgstr "Правило за ценообразуване на продукти под наем"
 
 #. module: website_sale_renting
 #: model:ir.model,name:website_sale_renting.model_product_template
@@ -367,27 +410,27 @@ msgstr "Продуктов вариант"
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.res_config_settings_view_form
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.res_config_settings_view_form_inherit_website
 msgid "Rent Online"
-msgstr ""
+msgstr "Наеми онлайн"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.cart_summary
 msgid "Rental Period"
-msgstr ""
+msgstr "Период на наем"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.accordion_rental_item
 msgid "Rental Pricing"
-msgstr ""
+msgstr "Ценообразуване на наема"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.snippets
 msgid "Rental Search"
-msgstr ""
+msgstr "Търсене на наем"
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.cart
 msgid "Rental period"
-msgstr ""
+msgstr "Период на наем"
 
 #. module: website_sale_renting
 #: model:ir.model,name:website_sale_renting.model_sale_order
@@ -409,7 +452,7 @@ msgstr "Събота"
 #: model:ir.model.fields,help:website_sale_renting.field_res_config_settings__tz
 #: model:ir.model.fields,help:website_sale_renting.field_website__tz
 msgid "Select your website timezone here."
-msgstr ""
+msgstr "Изберете часовия пояс на вашия уебсайт тук."
 
 #. module: website_sale_renting
 #. odoo-python
@@ -418,6 +461,8 @@ msgid ""
 "Some of your rental products cannot be rented during the selected period and "
 "your cart must be updated. We're sorry for the inconvenience."
 msgstr ""
+"Някои от вашите продукти за наем не могат да бъдат наети през избрания "
+"период и количката ви трябва да бъде обновена. Извиняваме се за неудобството."
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.cart
@@ -436,7 +481,7 @@ msgstr "Неделя"
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.o_wsale_offcanvas
 msgid "The period must be the same for all the products in your cart."
-msgstr ""
+msgstr "Периодът трябва да е еднакъв за всички продукти във вашата количка."
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.products
@@ -445,24 +490,26 @@ msgid ""
 "The period must be the same for all the products in your cart. Go to your "
 "cart to change it or create different orders."
 msgstr ""
+"Периодът трябва да е еднакъв за всички продукти във вашата количка. Отидете "
+"в количката, за да го промените, или създайте отделни поръчки."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "The pickup date cannot be in the past."
-msgstr ""
+msgstr "Датата на вземане не може да бъде в миналото."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "The rental lasts less than the minimal rental duration %s"
-msgstr ""
+msgstr "Наемът продължава по-малко от минималната продължителност на наема %s"
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "The return date should be after the pickup date."
-msgstr ""
+msgstr "Датата на връщане трябва да е след датата на вземане."
 
 #. module: website_sale_renting
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_company__renting_forbidden_thu
@@ -480,7 +527,7 @@ msgstr "Часови пояс"
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.s_rental_search_options
 msgid "Timing"
-msgstr ""
+msgstr "Време"
 
 #. module: website_sale_renting
 #: model:ir.model.fields,field_description:website_sale_renting.field_res_company__renting_forbidden_tue
@@ -491,7 +538,7 @@ msgstr "Вторник"
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.res_config_settings_view_form
 msgid "Unavailability days"
-msgstr ""
+msgstr "Дни на недостъпност"
 
 #. module: website_sale_renting
 #: model:ir.model,name:website_sale_renting.model_website
@@ -513,19 +560,19 @@ msgstr "Седмици"
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "You cannot pick up your rental on that day of the week."
-msgstr ""
+msgstr "Не можете да получите наема си в този ден от седмицата."
 
 #. module: website_sale_renting
 #. odoo-javascript
 #: code:addons/website_sale_renting/static/src/js/renting_mixin.js:0
 msgid "You cannot return your rental on that day of the week."
-msgstr ""
+msgstr "Не можете да върнете наема си в този ден от седмицата."
 
 #. module: website_sale_renting
 #. odoo-python
 #: code:addons/website_sale_renting/models/sale_order.py:0
 msgid "Your rental product cannot be pickedup in the past."
-msgstr ""
+msgstr "Вашият продукт под наем не може да бъде получен в миналото."
 
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.products_item
@@ -536,4 +583,4 @@ msgstr "от"
 #. module: website_sale_renting
 #: model_terms:ir.ui.view,arch_db:website_sale_renting.o_wsale_offcanvas
 msgid "to change it or create different orders."
-msgstr ""
+msgstr "за да я промените или да създадете различни поръчки."

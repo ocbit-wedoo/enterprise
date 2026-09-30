@@ -3,6 +3,7 @@
 import { click, getFixture, patchDate, getNodesTextContent } from "@web/../tests/helpers/utils";
 import { removeFacet } from "@web/../tests/search/helpers";
 import { setupViewRegistries } from "@web/../tests/views/helpers";
+import { patchUserWithCleanup } from "@web/../tests/helpers/mock_services";
 
 import { start } from "@mail/../tests/helpers/test_utils";
 
@@ -10,7 +11,7 @@ import { addModelNamesToFetch } from "@bus/../tests/helpers/model_definitions_he
 
 import { TimesheetGridSetupHelper } from "./helpers";
 
-let serverData, target, timesheetGridSetup;
+let employeeIds, serverData, target, timesheetGridSetup;
 
 addModelNamesToFetch(["project.project", "project.task"]);
 
@@ -55,6 +56,7 @@ QUnit.module("Views", (hooks) => {
     hooks.beforeEach(async () => {
         timesheetGridSetup = new TimesheetGridSetupHelper();
         const result = await timesheetGridSetup.setupTimesheetGrid();
+        employeeIds = result.employeeIds;
         serverData = result.serverData;
         target = getFixture();
         setupViewRegistries();
@@ -710,4 +712,38 @@ QUnit.module("Views", (hooks) => {
             "2 whole columns and 3 cells for employee Mario in 2017-01-24 column."
         );
     });
+
+    QUnit.test("test grid avatar when user has not employee access", async (assert) => {
+        const hasGroup = async () => false;
+        patchUserWithCleanup({ hasGroup });
+        const { openView } = await start({
+            serverData,
+            async mockRPC(route, args) {
+                return await timesheetGridSetup.mockTimesheetGridRPC(route, args);
+            },
+        });
+
+        await openView({
+            res_model: "analytic.line",
+            views: [[false, "grid"]],
+            context: { group_by: [] },
+        });
+
+        const imageSrcList = Array.from(
+            target.querySelectorAll(".o_avatar:not(.o_user_avatar) img"),
+            img => img.getAttribute("data-src")
+        );
+
+        const expectedUrls = employeeIds.map(empId =>
+            `/web/image/hr.employee.public/${empId}/avatar_128`
+        );
+
+        expectedUrls.forEach(expectedUrl => {
+            assert.ok(
+                imageSrcList.includes(expectedUrl),
+                `Expected image URL not found: ${expectedUrl}`
+            );
+        });
+    });
+
 });

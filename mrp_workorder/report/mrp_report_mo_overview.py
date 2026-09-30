@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from odoo import models
+from odoo import models, _
 
 class ReportMoOverview(models.AbstractModel):
     _inherit = 'report.mrp.report_mo_overview'
@@ -14,8 +14,7 @@ class ReportMoOverview(models.AbstractModel):
         index = 0
         for workorder in production.workorder_ids:
             for employee, time_ids in workorder.time_ids.grouped('employee_id').items():
-                if not employee:
-                    continue
+                employee_name = employee.display_name if employee else _("Employee")
                 for times in time_ids.grouped('employee_cost').values():
                     hourly_cost = times[0].employee_cost
                     duration = sum(times.mapped('duration'))
@@ -26,7 +25,7 @@ class ReportMoOverview(models.AbstractModel):
                     operations.append({
                         'level': level,
                         'index': f"{current_index}WE{index}",
-                        'name': f"{employee.display_name}: {workorder.display_name}",
+                        'name': f"{employee_name}: {workorder.display_name}",
                         'quantity': duration / 60,
                         'uom_name': done_operation_uom,
                         'uom_precision': 4,

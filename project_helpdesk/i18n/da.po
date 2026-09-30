@@ -9,13 +9,14 @@
 # Lucas Holm, 2024
 # Martin Trigaux, 2024
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:48+0000\n"
-"PO-Revision-Date: 2026-05-16 18:31+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-23 12:27+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
 "Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
 "project_helpdesk/da/>\n"
 "Language: da\n"
@@ -23,23 +24,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: project_helpdesk
 #: model_terms:ir.ui.view,arch_db:project_helpdesk.helpdesk_ticket_convert_to_task_wizard_view_form
 #: model_terms:ir.ui.view,arch_db:project_helpdesk.project_task_convert_to_ticket_wizard_view_form
 msgid "Convert"
-msgstr "Omdan"
+msgstr "Konvertér"
 
 #. module: project_helpdesk
 #: model:ir.model,name:project_helpdesk.model_helpdesk_ticket_convert_wizard
 msgid "Convert Helpdesk Tickets to Tasks"
-msgstr "Omdan Helpdesk supportsager til opgaver "
+msgstr "Konvertér sager i kundeservice til opgaver"
 
 #. module: project_helpdesk
 #: model:ir.model,name:project_helpdesk.model_project_task_convert_wizard
 msgid "Convert Project Tasks to Tickets"
-msgstr "Omdan projektopgaver til supportsager"
+msgstr "Konvertér projektopgaver til supportsager"
 
 #. module: project_helpdesk
 #. odoo-python
@@ -47,7 +48,7 @@ msgstr "Omdan projektopgaver til supportsager"
 #: model:ir.actions.server,name:project_helpdesk.action_ticket_convert_to_task
 #: model_terms:ir.ui.view,arch_db:project_helpdesk.helpdesk_ticket_convert_to_task_wizard_view_form
 msgid "Convert to Task"
-msgstr "Omdan til opgave"
+msgstr "Konvertér til opgave"
 
 #. module: project_helpdesk
 #. odoo-python
@@ -55,19 +56,19 @@ msgstr "Omdan til opgave"
 #: model:ir.actions.server,name:project_helpdesk.action_task_convert_to_ticket
 #: model_terms:ir.ui.view,arch_db:project_helpdesk.project_task_convert_to_ticket_wizard_view_form
 msgid "Convert to Ticket"
-msgstr "Omdan til supportsag"
+msgstr "Konvertér til supportsag"
 
 #. module: project_helpdesk
 #. odoo-python
 #: code:addons/project_helpdesk/wizard/helpdesk_ticket_convert_wizard.py:0
 msgid "Converted Tasks"
-msgstr "Omdannede opgaver"
+msgstr "Konverterede opgaver"
 
 #. module: project_helpdesk
 #. odoo-python
 #: code:addons/project_helpdesk/wizard/project_task_convert_wizard.py:0
 msgid "Converted Tickets"
-msgstr "Omdannet til supportsager"
+msgstr "Konverteret til supportsager"
 
 #. module: project_helpdesk
 #: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__create_uid
@@ -91,12 +92,12 @@ msgstr "Kassér"
 #: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__display_name
 #: model:ir.model.fields,field_description:project_helpdesk.field_project_task_convert_wizard__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: project_helpdesk
 #: model:ir.model,name:project_helpdesk.model_helpdesk_ticket
 msgid "Helpdesk Ticket"
-msgstr "Helpdesk sag"
+msgstr "Kundeservicesag"
 
 #. module: project_helpdesk
 #: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__id
@@ -125,7 +126,7 @@ msgstr "Projekt"
 #. odoo-python
 #: code:addons/project_helpdesk/models/project.py:0
 msgid "Recurring tasks cannot be converted into tickets."
-msgstr "Gentagende opgaver kan ikke omdannes til supportsager"
+msgstr "Gentagne opgaver kan ikke konverteres til supportsager."
 
 #. module: project_helpdesk
 #: model:ir.model.fields,field_description:project_helpdesk.field_helpdesk_ticket_convert_wizard__stage_id

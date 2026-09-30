@@ -62,7 +62,7 @@ class ProductCode(models.Model):
     _inherit = 'product.unspsc.code'
 
     def _load_pos_data(self, data):
-        domain = []
+        domain = self._load_pos_data_domain(data)
         fields = self._load_pos_data_fields(data['pos.config']['data'][0]['id'])
         data = self.search_read(domain, fields, load=False)
         return {
@@ -73,3 +73,9 @@ class ProductCode(models.Model):
     @api.model
     def _load_pos_data_fields(self, config_id):
         return ['code']
+
+    @api.model
+    def _load_pos_data_domain(self, data):
+        products = data['product.product']['data']
+        code_ids = [product['unspsc_code_id'] for product in products if product.get('unspsc_code_id')]
+        return [('id', 'in', code_ids)]

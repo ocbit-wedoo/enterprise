@@ -8,6 +8,9 @@ from odoo.addons.stock_account.tests.test_stockvaluationlayer import TestStockVa
 
 from collections import OrderedDict
 
+import zipfile
+import io
+
 
 @tagged("post_install", "post_install_l10n", "-at_install", "l10n_pe_lib")
 class TestPeReportsLib(TestAccountReportsCommon, TestStockValuationCommon):
@@ -693,3 +696,32 @@ class TestPeReportsLib(TestAccountReportsCommon, TestStockValuationCommon):
                 'op_status': '1'
             })
         ])
+
+    def test_l10n_pe_export_lib_to_txt_csv_format(self):
+        """
+        Test that the CSV generation completes without a ValueError (fixes Python 3.14+ strictness)
+        and correctly ends every row with a pipe to satisfy SUNAT PLE requirements.
+        """
+        self.account_base.l10n_pe_fs_rubric_ids = self.env.ref('l10n_pe_reports_lib.l10n_pe_fs_rubric_1D0109')
+        self.account_base.flush_model()
+
+        result = self.handler.l10n_pe_export_lib_to_txt(self.default_options)
+
+        self.assertEqual(result.get('file_type'), 'zip')
+        self.assertTrue(result.get('file_content'))
+
+        with zipfile.ZipFile(io.BytesIO(result['file_content'])) as z:
+            txt_files = z.namelist()
+            self.assertTrue(txt_files, "The exported zip should not be empty.")
+
+            for filename in txt_files:
+                content = z.read(filename).decode('utf-8')
+                if content:
+                    lines = content.split('\n')
+                    if lines and not lines[-1]:
+                        lines.pop()
+                    for line in lines:
+                        self.assertTrue(
+                            line.endswith('|'),
+                            f"File {filename} has a line that does not end with a pipe: {line}"
+                        )

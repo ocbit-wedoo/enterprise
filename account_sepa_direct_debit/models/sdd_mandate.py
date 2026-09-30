@@ -3,7 +3,7 @@
 from datetime import datetime
 
 from odoo import Command, api, fields, models, _
-from odoo.exceptions import RedirectWarning, UserError
+from odoo.exceptions import RedirectWarning, UserError, ValidationError
 from odoo.tools import SQL
 
 SDD_MIN_PRENOT_PERIOD = 2
@@ -206,19 +206,19 @@ class SDDMandate(models.Model):
         """
         expiry_date_per_mandate = {}
         delay_36_months = fields.date_utils.relativedelta(months=36)
-        payments_collected_per_mandate = dict(self.env['account.payment']._read_group([
+        latest_payment_date_per_mandate = dict(self.env['account.payment']._read_group([
                 ('sdd_mandate_id', 'in', self.ids),
                 ('payment_method_code', 'in', self.env['account.payment.method']._get_sdd_payment_method_code()),
                 ('state', '=', 'paid'),
             ],
             groupby=['sdd_mandate_id'],
-            aggregates=['id:recordset'],
+            aggregates=['date:max'],
         ))
         for mandate in self:
-            payments_collected = payments_collected_per_mandate.get(mandate, self.env['account.payment'])
+            last_payment_date = latest_payment_date_per_mandate.get(mandate) or mandate.start_date
 
             dates = [mandate.end_date] if mandate.end_date else []
-            dates.append(max(payments_collected.mapped('date'), default=mandate.start_date) + delay_36_months)
+            dates.append(last_payment_date + delay_36_months)
             expiry_date_per_mandate[mandate] = min(dates)  # Todo use records
 
         return expiry_date_per_mandate
@@ -313,6 +313,12 @@ class SDDMandate(models.Model):
                     "to allow enough time for the customer to check that their account is adequately funded.",
                     SDD_MIN_PRENOT_PERIOD
                 ))
+
+    @api.constrains('partner_id', 'partner_bank_id')
+    def _validate_partner_bank_id(self):
+        for mandate in self:
+            if mandate.partner_bank_id and mandate.partner_id != mandate.partner_bank_id.partner_id:
+                raise ValidationError(_("Mandate customer and bank account need to match."))
 
     def _ensure_required_data(self):
         """ Helper to make sure we don't send/validate a mandate missing the required data """

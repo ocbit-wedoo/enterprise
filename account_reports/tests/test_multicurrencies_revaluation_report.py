@@ -669,11 +669,11 @@ class TestMultiCurrenciesRevaluationReport(TestAccountReportsCommon):
             [   0,                                                                          1,                      2,                       3,              4],
             [
                 ('Accounts To Adjust',                                                     '',                     '',                      '',             ''),
-                ('CAD (1 USD = 4.0 CAD)',                                              1000.0,                  500.0,                   250.0,         -250.0),
-                ('211000 Account Payable',                                             1000.0,                  500.0,                   250.0,         -250.0),
-                ('RBILL/2023/01/0001 (Reversal of: BILL/2023/01/0001)',                1000.0,                  500.0,                   250.0,         -250.0),
-                ('Total 211000 Account Payable',                                       1000.0,                  500.0,                   250.0,         -250.0),
-                ('Total CAD',                                                          1000.0,                  500.0,                   250.0,         -250.0),
+                ('CAD (1 USD = 4.0 CAD)',                                              1000.0,                 1000.0,                   250.0,         -750.0),
+                ('211000 Account Payable',                                             1000.0,                 1000.0,                   250.0,         -750.0),
+                ('RBILL/2023/01/0001 (Reversal of: BILL/2023/01/0001)',                1000.0,                 1000.0,                   250.0,         -750.0),
+                ('Total 211000 Account Payable',                                       1000.0,                 1000.0,                   250.0,         -750.0),
+                ('Total CAD',                                                          1000.0,                 1000.0,                   250.0,         -750.0),
             ],
             options,
             currency_map={
@@ -878,6 +878,8 @@ class TestMultiCurrenciesRevaluationReport(TestAccountReportsCommon):
         })
         reversal = move_reversal.reverse_moves()
         credit_note = self.env['account.move'].browse(reversal['res_id'])
+        # Setting the currency rate manually instead of taking it from the origin invoice
+        credit_note.invoice_currency_rate = 2.0
         credit_note.invoice_line_ids[0].price_unit = 300  # Only reverse for 300
         credit_note.action_post()
         line_to_reconciles = (invoice + credit_note).line_ids.filtered(lambda l: l.account_type == self.company_data['default_account_receivable'].account_type)

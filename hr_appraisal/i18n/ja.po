@@ -8,12 +8,13 @@
 # Junko Augias, 2025
 #
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
+# Ryoko Tsuda <ryoko@quartile.co>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2026-05-28 12:47+0000\n"
+"PO-Revision-Date: 2026-09-08 01:57+0000\n"
 "Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "hr_appraisal/ja/>\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -41,7 +42,7 @@ msgstr "%s (コピー)"
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "%s's Goals"
-msgstr "%sのゴール"
+msgstr "%sの目標"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -1485,7 +1486,7 @@ msgstr "Eメール作成"
 #. module: hr_appraisal
 #: model:ir.model,name:hr_appraisal.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: hr_appraisal
 #: model:ir.ui.menu,name:hr_appraisal.menu_hr_appraisal_configuration
@@ -1942,7 +1943,7 @@ msgstr "チェックした場合は、新しいメッセージに注意が必要
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal_goal__message_has_error
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal_goal__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
-msgstr "チェックした場合は、一部のメッセージに配信エラーが発生されました。"
+msgstr "チェックされている場合、一部のメッセージで送信エラーが発生しています。"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,field_description:hr_appraisal.field_hr_appraisal__image_1920
@@ -2052,7 +2053,7 @@ msgstr "遅延"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_search
 msgid "Late Activities"
-msgstr "遅れた活動"
+msgstr "期限超過の活動"
 
 #. module: hr_appraisal
 #: model:ir.actions.server,name:hr_appraisal.action_load_appraisal_demo_data
@@ -2063,7 +2064,7 @@ msgstr "評価シナリオをロード"
 #. odoo-javascript
 #: code:addons/hr_appraisal/static/src/views/appraisal_helper_view.xml:0
 msgid "Load sample data"
-msgstr "サンプルデータをロード"
+msgstr "サンプルデータを読込"
 
 #. module: hr_appraisal
 #: model_terms:hr.appraisal.template,appraisal_manager_feedback_template:hr_appraisal.hr_appraisal_default_template
@@ -2271,7 +2272,7 @@ msgstr "エラー数"
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__message_needaction_counter
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal_goal__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "アクションを必要とするメッセージの数"
+msgstr "対応が必要なメッセージ数"
 
 #. module: hr_appraisal
 #: model:ir.model.fields,help:hr_appraisal.field_hr_appraisal__message_has_error_counter
@@ -2698,7 +2699,7 @@ msgstr "未確認"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_search
 msgid "To Do"
-msgstr "未処理"
+msgstr "未着手"
 
 #. module: hr_appraisal
 #: model:ir.model.fields.selection,name:hr_appraisal.selection__hr_appraisal_report__state__new
@@ -2715,7 +2716,7 @@ msgstr "評価を作成するには少なくとも2人の従業員が必要で�
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_search
 msgid "Today Activities"
-msgstr "本日の活動"
+msgstr "今日の活動"
 
 #. module: hr_appraisal
 #: model:hr.appraisal.goal.tag,name:hr_appraisal.hr_appraisal_goal_tag_training
@@ -2870,7 +2871,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/hr_appraisal/models/hr_appraisal.py:0
 msgid "You cannot delete appraisal which is not in draft or cancelled state"
-msgstr "ドラフトまたは取消されていない鑑定は削除できません。"
+msgstr "下書きまたは取消されていない鑑定は削除できません。"
 
 #. module: hr_appraisal
 #. odoo-python
@@ -2913,7 +2914,7 @@ msgstr "例: 英語のレベルを向上させる"
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.view_hr_appraisal_form
 msgid "e.g. John Doe"
-msgstr "例: 鈴木 一郎"
+msgstr "例: John Doe"
 
 #. module: hr_appraisal
 #: model_terms:ir.ui.view,arch_db:hr_appraisal.hr_appraisal_goal_tag_view_tree

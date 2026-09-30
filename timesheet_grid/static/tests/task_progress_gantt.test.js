@@ -18,7 +18,7 @@ class Task extends models.Model {
             name: "Blop",
             start: "2020-06-14 08:00:00",
             stop: "2020-06-24 08:00:00",
-            progress: 50.0,
+            progress: 0.5,
             project_id: 1,
         },
         {

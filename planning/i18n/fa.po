@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* planning
+# * planning
 #
 # Translators:
 # zakariya moradi, 2025
@@ -10,20 +10,22 @@
 # Hanna Kheradroosta, 2025
 # Faraz Sadri Alamdari <ifarazir@gmail.com>, 2025
 # Naser mars, 2025
-#
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-10 18:47+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Naser mars, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"POT-Creation-Date: 2026-06-12 17:46+0000\n"
+"PO-Revision-Date: 2026-08-12 16:31+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/planning/"
+"fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: planning
 #. odoo-python
@@ -117,6 +119,9 @@ msgid ""
 "duplicate it instead.</i> <b>Adjust the size</b> of the shift to modify its "
 "period."
 msgstr ""
+"برای زمان‌بندی مجدد شیفت خود، آن را </b>بکشید و رها کنید<b>. <i>نکته: برای "
+"تکثیر آن، دکمه CTRL (یا Cmd) را بزنید. <i> برای ویرایش بازه زمانی شیفت <b>"
+"اندازه آن را تنظیم کنید<b>."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_ics_description
@@ -127,12 +132,12 @@ msgstr "<b>یادداشت:</b>"
 #. odoo-javascript
 #: code:addons/planning/static/src/js/tours/planning.js:0
 msgid "<b>Publish & send</b> your employee's planning."
-msgstr ""
+msgstr "برنامه‌ریزی کارمندان را <b>انتشار و ارسال</b> کنید."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_ics_description
 msgid "<b>Role:</b>"
-msgstr ""
+msgstr "<b>نقش:</b>"
 
 #. module: planning
 #: model:mail.template,body_html:planning.email_template_shift_switch_email
@@ -207,6 +212,75 @@ msgid ""
 "                </div>\n"
 "            "
 msgstr ""
+"<div>\n"
+"                    <p t-if=\"ctx.get('old_assignee_name')\"><t t-"
+"out=\"ctx['old_assignee_name']\">آفتاب حقانی</t>  گرامی،</p>\n"
+"                    <p t-else=\"\">با سلام و احترام،</p>\n"
+"                    <br/>\n"
+"                    <p>\n"
+"                        شیفتی که قصد تغییر آن را داشتید\n"
+"                        <t t-if=\"ctx.get('new_assignee_name')\"> به <t t-"
+"out=\"ctx['new_assignee_name']\">کارمند دمو</t></t> اختصاص یافت.\n"
+"                    </p>\n"
+"                    <table style=\"margin-left: 30px;\">\n"
+"                        <tr t-if=\"(ctx.get('start_datetime') and ctx.get"
+"('end_datetime'))                                   or ctx.get"
+"('allocated_hours')                                   or ctx.get"
+"('allocated_percentage')\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"تاریخ</th>\n"
+"                            <td style=\"padding: 5px;\">\n"
+"                                <span t-if=\"ctx.get('start_datetime') and "
+"ctx.get('end_datetime')\" t-out=\"'%s ⟶ %s' % "
+"(                                     "
+"ctx['start_datetime'],                                     "
+"ctx['end_datetime'],                                 )\">\n"
+"                                    1403/03/21, 8:00 AM ⟶ 1403/03/21, 4:00 "
+"PM\n"
+"                                </span>\n"
+"                                <span t-if=\"ctx.get('allocated_hours')\" "
+"style=\"opacity: 0.5;\">\n"
+"                                    (<t t-out=\"ctx['allocated_hours']\">"
+"4:00</t>h)\n"
+"                                </span>\n"
+"                                <span t-if=\"ctx.get('allocated_percentage') "
+"and ctx['allocated_percentage'] != '100'\" style=\"opacity: 0.5;\">\n"
+"                                    (<t t-"
+"out=\"ctx['allocated_percentage']\">50</t>%)\n"
+"                                </span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.role_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"نقش</th>\n"
+"                            <td style=\"padding: 5px;\" t-"
+"out=\"object.role_id.name or ''\">متصدی</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'project_id') and "
+"object.project_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"پروژه</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.sudo()"
+".project_id.name or ''\">جمع‌آوری داده</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'sale_line_id') and "
+"object.sale_line_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"آیتم سفارش فروش</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.sudo()"
+".sale_line_id.name or ''\">قهوه</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'name') and object.name\">"
+"\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"یادداشت</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.name "
+"or ''\">/</td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <br/>\n"
+"                </div>\n"
+"            "
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
@@ -215,19 +289,23 @@ msgid ""
 "                        You have successfully requested to switch your "
 "shift. You will be notified when another employee takes over your shift."
 msgstr ""
+"<i class=\"fa fa-check-circle\"/>\n"
+"                        شما با موفقیت درخواست تعویض شیفت خود را ثبت کردید. "
+"هنگامی که کارمند دیگری شیفت شما را بر عهده بگیرد، به شما اطلاع داده خواهد شد."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
 msgid ""
 "<i class=\"fa fa-check-circle\"/> Request to switch shift cancelled "
 "successfully."
-msgstr ""
+msgstr "<i class=\"fa fa-check-circle\"/> درخواست تعویض شیفت با موفقیت لغو شد."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
 msgid ""
 "<i class=\"fa fa-check-circle\"/> This shift is no longer assigned to you."
 msgstr ""
+"<i class=\"fa fa-check-circle\"/> این شیفت دیگر به شما اختصاص داده نشده است."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
@@ -235,6 +313,8 @@ msgid ""
 "<i class=\"fa fa-check-circle\"/> You were successfully assigned this open "
 "shift."
 msgstr ""
+"<i class=\"fa fa-check-circle\"/> این شیفت باز با موفقیت به شما اختصاص داده "
+"شد."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_kanban
@@ -242,6 +322,7 @@ msgid ""
 "<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"Hours\" title=\"Hours\"/"
 ">"
 msgstr ""
+"<i class=\"fa fa-clock-o\" role=\"img\" aria-label=\"ساعت\" title=\"ساعت\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_assignee_contact_popover
@@ -249,6 +330,8 @@ msgid ""
 "<i class=\"fa fa-envelope-o\" title=\"Mail\" role=\"img\" style=\"padding-"
 "right: 2px\"/>"
 msgstr ""
+"<i class=\"fa fa-envelope-o\" title=\"پیام\" role=\"img\" style=\"padding-"
+"right: 2px\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
@@ -256,6 +339,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-circle\"/> This shift is already assigned to "
 "another employee."
 msgstr ""
+"<i class=\"fa fa-exclamation-circle\"/> این شیفت قبلاً به کارمند دیگری اختصاص "
+"داده شده است."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
@@ -263,6 +348,8 @@ msgid ""
 "<i class=\"fa fa-exclamation-circle\"/> You can no longer unassign yourself "
 "from this shift."
 msgstr ""
+"<i class=\"fa fa-exclamation-circle\"/> شما دیگر نمی‌توانید خود را از این "
+"شیفت خارج کنید."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_form
@@ -270,6 +357,8 @@ msgid ""
 "<i class=\"fa fa-long-arrow-right my-1 mx-1\" aria-label=\"Arrow icon\" "
 "title=\"Arrow\"/>"
 msgstr ""
+"<i class=\"fa fa-long-arrow-right my-1 mx-1\" aria-label=\"آیکون فلش\" "
+"title=\"فلش\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.open_slots_list_template
@@ -277,11 +366,12 @@ msgid ""
 "<i class=\"fa fa-long-arrow-right\" aria-label=\"Arrow icon\" "
 "title=\"Arrow\"/>"
 msgstr ""
+"<i class=\"fa fa-long-arrow-right\" aria-label=\"آیکون فلش\" title=\"فلش\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_gantt
 msgid "<i class=\"fa fa-long-arrow-right\" title=\"Arrow\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-long-arrow-right\" title=\"فلش\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_assignee_contact_popover
@@ -289,6 +379,8 @@ msgid ""
 "<i class=\"fa fa-phone\" title=\"Phone\" role=\"img\" style=\"padding-right: "
 "2px\"/>"
 msgstr ""
+"<i class=\"fa fa-phone\" title=\"تلفن\" role=\"img\" style=\"padding-right: "
+"2px\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_kanban
@@ -380,6 +472,10 @@ msgid ""
 "aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
 "                                    <span class=\"o_end_date\"/>"
 msgstr ""
+"<span class=\"o_start_date\"/>\n"
+"                                    <i class=\"mx-1 fa fa-long-arrow-right\" "
+"aria-label=\"آیکون فلش\" title=\"فلش\"/>\n"
+"                                    <span class=\"o_end_date\"/>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.hr_employee_view_form_inherit
@@ -438,11 +534,13 @@ msgid ""
 "<span><b>Congratulations!</b> You are now a master of planning.\n"
 "        </span>"
 msgstr ""
+"<span><b>تبریک!</b> حالا دیگر استاد برنامه‌ریزی هستید.\n"
+"        </span>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.res_config_settings_view_form
 msgid "<span>Allow employees to:</span>"
-msgstr ""
+msgstr "<span>به کارمند اجازه دهید:</span>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
@@ -451,11 +549,12 @@ msgid ""
 "<span>The employee assigned would like to switch shifts with someone else.</"
 "span>"
 msgstr ""
+"<span>کارمند تخصیص یافته می‌خواهد با فرد دیگری شیفت خود را تعویض کند.</span>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.res_config_settings_view_form
 msgid "<span>months ahead</span>"
-msgstr ""
+msgstr "<span>ماه آینده</span>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_gantt
@@ -577,6 +676,118 @@ msgid ""
 "                </div>\n"
 "            </body>"
 msgstr ""
+"<style>\n"
+"                    .planning_mail_template_button {\n"
+"                        padding: 5px 10px;\n"
+"                        text-decoration: none;\n"
+"                        border: 1px;\n"
+"                        border-radius: 3px;\n"
+"                        text-align: center;\n"
+"                        color: #374151;\n"
+"                        background-color: #E7E9ED;\n"
+"                        border: solid #E7E9ED;\n"
+"                        flex: 1 1 40%;\n"
+"                    }\n"
+"                    .top_button {\n"
+"                        color: #FFFFFF;\n"
+"                        background-color: #714B67;\n"
+"                        border: solid #714B67;\n"
+"                        flex: 1 1 60%;\n"
+"                    }\n"
+"                    .button_box {\n"
+"                        display: flex;\n"
+"                        flex-wrap: wrap;\n"
+"                        gap: 10px;\n"
+"                        margin: 20px 15px 0px 15px;\n"
+"                    }\n"
+"                </style>\n"
+"                <body dir=\"rtl\" style=\"font-family:IRANSans, IRANSansX, "
+"Arial,sans-serif\"><div>\n"
+"                    <p t-if=\"ctx.get('employee_name')\"><t t-"
+"out=\"ctx['employee_name']\">آفتاب حقانی</t> گرامی</p>\n"
+"                    <p t-else=\"\">با سلام،</p>\n"
+"                    <br/>\n"
+"                    <p t-if=\"ctx.get('open_shift_available')\">شیفت آزاد "
+"جدیدی در دسترس است:</p>\n"
+"                    <p t-else=\"\">شما به این شیفت اختصاص یافتید:</p>\n"
+"                    <table style=\"margin-left: 30px;\">\n"
+"                        <tr t-if=\"(ctx.get('start_datetime') and ctx.get"
+"('end_datetime'))                                   or ctx.get"
+"('allocated_hours')                                   or ctx.get"
+"('allocated_percentage')\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"تاریخ</th>\n"
+"                            <td style=\"padding: 5px;\">\n"
+"                                <span t-if=\"ctx.get('start_datetime') and "
+"ctx.get('end_datetime')\" t-out=\"'%s ⟶ %s' % "
+"(                                     "
+"ctx['start_datetime'],                                     "
+"ctx['end_datetime'],                                 )\">\n"
+"                                    1403/08/06, 8:00 AM ⟶ 1403/08/6, 4:00 "
+"PM\n"
+"                                </span>\n"
+"                                <span t-if=\"ctx.get('allocated_hours')\" "
+"style=\"opacity: 0.5;\">\n"
+"                                    (<t t-out=\"ctx['allocated_hours']\">"
+"4:00</t>h)\n"
+"                                </span>\n"
+"                                <span t-if=\"ctx.get('allocated_percentage') "
+"and ctx['allocated_percentage'] != '100'\" style=\"opacity: 0.5;\">\n"
+"                                    (<t t-"
+"out=\"ctx['allocated_percentage']\">50</t>%)\n"
+"                                </span>\n"
+"                            </td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"object.role_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"نقش</th>\n"
+"                            <td style=\"padding: 5px;\" t-"
+"out=\"object.role_id.name or ''\">متصدی</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'project_id') and "
+"object.project_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"پروژه</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.sudo()"
+".project_id.name or ''\">جمع‌آوری داده</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'sale_line_id') and "
+"object.sale_line_id\">\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"آیتم سفارش فروش</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.sudo()"
+".sale_line_id.name or ''\">قهوه</td>\n"
+"                        </tr>\n"
+"                        <tr t-if=\"hasattr(object, 'name') and object.name\">"
+"\n"
+"                            <th style=\"padding: 5px; text-align: left;\">"
+"یادداشت</th>\n"
+"                            <td style=\"padding: 5px;\" t-out=\"object.name "
+"or ''\">/</td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    <div class=\"button_box\">\n"
+"                        <a t-if=\"ctx.get('available_link')\" t-att-"
+"href=\"ctx['available_link']\" target=\"_blank\" "
+"class=\"planning_mail_template_button top_button\">شیفت را قبول می‌کنم</a>\n"
+"                        <a t-if=\"ctx.get('unavailable_link')\" t-att-"
+"href=\"ctx['unavailable_link']\" target=\"_blank\" "
+"class=\"planning_mail_template_button top_button\">در دسترس نیستم</a>\n"
+"                        <a t-if=\"ctx.get('google_url')\" t-att-"
+"href=\"ctx['google_url']\" target=\"_blank\" "
+"class=\"planning_mail_template_button\">افزودن به تقویم گوگل</a>\n"
+"                        <a t-if=\"ctx.get('iCal_url')\" t-att-"
+"href=\"ctx['iCal_url']\" target=\"_blank\" "
+"class=\"planning_mail_template_button\">افزودن به iCal/اوت‌لوک</a>\n"
+"                    </div>\n"
+"                    <br/>\n"
+"<p t-if=\"ctx.get('open_shift_available')\">اگر علاقه‌مند و در دسترس هستید، "
+"لطفاً خود را به شیفت آزاد اختصاص دهید.</p>\n"
+"<p t-else=\"\">در صورتی که شیفت فعلی مناسب شما نیست، توصیه می‌کنیم با "
+"همکارانتان تماس بگیرید و درخواست جابه‌جایی شیفت دهید. ممکن است آن‌ها نیز "
+"علاقه‌مند به تعویض شیفت با شما باشند.</p>\n"
+"</div>\n"
+"            </body>"
 
 #. module: planning
 #: model:mail.template,body_html:planning.email_template_planning_planning
@@ -655,7 +866,7 @@ msgstr "تکرار آن تا زمانی که تاریخ معینی تعیین ش
 #. odoo-python
 #: code:addons/planning/models/planning_recurrency.py:0
 msgid "A shift must be in the same company as its recurrence."
-msgstr ""
+msgstr "یک شیفت باید در همان شرکت تکرار شونده خود باشد."
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_role__active
@@ -667,7 +878,7 @@ msgstr "فعال"
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_gantt/planning_gantt_controller.js:0
 msgid "Add Shift"
-msgstr ""
+msgstr "افزودن شیفت"
 
 #. module: planning
 #: model:ir.model.fields,help:planning.field_planning_send__note
@@ -677,12 +888,12 @@ msgstr "پیام تکمیلی در ایمیل ارسال شده به کارکن�
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_send_view_form
 msgid "Additional message included in the email sent to your employees"
-msgstr ""
+msgstr "پیام تکمیلی در ایمیل ارسال شده به کارمندان"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
 msgid "Additional note sent to the employee"
-msgstr ""
+msgstr "یادداشت تکمیلی که به کارمند ارسال می‌شود"
 
 #. module: planning
 #: model:res.groups,name:planning.group_planning_manager
@@ -696,13 +907,15 @@ msgid ""
 "All open shifts have already been assigned, or there are no resources "
 "available to take them at this time."
 msgstr ""
+"همه شیفت‌های باز تخصیص یافته‌اند، یا اینکه منابعی برای پذیرش این شیفت‌ها در این "
+"زمان وجود ندارد."
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_calendar/planning_ask_recurrence_update/planning_ask_recurrence_update_dialog.js:0
 #: model:ir.model.fields.selection,name:planning.selection__planning_slot__recurrence_update__all
 msgid "All shifts"
-msgstr ""
+msgstr "همه شیفت‌ها"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
@@ -719,7 +932,7 @@ msgstr "ساعت اختصاص داده شده"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "Allocated Percentage"
-msgstr ""
+msgstr "درصد تخصیص یافته"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_analysis_report__allocated_hours
@@ -731,7 +944,7 @@ msgstr "زمان تخصیص داده شده"
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot__allocated_percentage
 msgid "Allocated Time %"
-msgstr ""
+msgstr "زمان تخصیص یافته %"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_analysis_report__allocated_percentage
@@ -746,7 +959,7 @@ msgstr "زمان تخصیص یافته:"
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_planning_slot_check_allocated_hours_positive
 msgid "Allocated hours and allocated time percentage cannot be negative."
-msgstr ""
+msgstr "درصد ساعات و زمان تخصیص یافته نمی‌تواند منفی باشد."
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot__allocation_type
@@ -759,6 +972,8 @@ msgid ""
 "Analyze the allocation of your resources across roles, projects, and sales "
 "orders, and estimate future needs."
 msgstr ""
+"تخصیص منابع به نقش‌ها، پروژه‌ها و سفارش‌های فروش را تحلیل کرده و نیازهای آتی را "
+"تخمین بزنید."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_form
@@ -776,13 +991,15 @@ msgid ""
 "Archiving this resource will transform all of its future shifts into open "
 "shifts. Are you sure you want to continue?"
 msgstr ""
+"بایگانی کردن این منبع باعث می‌شود تمام شیفت‌های آینده آن به شیفت باز تغییر "
+"حالت دهند. از ادامه این کار مطمئن هستید؟"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_form/planning_form_view.js:0
 #: code:addons/planning/static/src/views/planning_gantt/planning_gantt_renderer.js:0
 msgid "Are you sure you want to delete this shift?"
-msgstr ""
+msgstr "از حذف این شیفت مطمئن هستید؟"
 
 #. module: planning
 #. odoo-javascript
@@ -801,12 +1018,12 @@ msgstr "آیکون فلش"
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "Ask To Switch"
-msgstr ""
+msgstr "درخواست تعویض"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
 msgid "Ask to Switch"
-msgstr ""
+msgstr "درخواست تعویض"
 
 #. module: planning
 #. odoo-javascript
@@ -816,6 +1033,9 @@ msgid ""
 "open shifts for the roles you will be needing to complete a mission. Then, "
 "assign those open shifts to the resources that are available.</i>"
 msgstr ""
+"<b>منبع</b> را تخصیص دهید یا فعلاً آن را آزاد بگذارید. <i>نکته: برای نقش‌هایی "
+"که برای انجام مأموریت به آنها نیاز دارید، شیفت‌های باز ایجاد کنید. سپس "
+"شیفت‌های باز را به منابع موجود اختصاص دهید.</i>"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.unwanted_slots_list_template
@@ -829,14 +1049,14 @@ msgstr "محول کننده"
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
 msgid "Auto Plan"
-msgstr ""
+msgstr "برنامه‌ریزی خودکار"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_calendar/planning_calendar_controller.xml:0
 #: code:addons/planning/static/src/views/planning_gantt/planning_gantt_controller.xml:0
 msgid "Automatically plan open shifts and sales orders"
-msgstr ""
+msgstr "برنامه‌ریزی خودکار شیفت‌های باز و سفارش‌های فروش"
 
 #. module: planning
 #. odoo-javascript
@@ -867,7 +1087,7 @@ msgstr "بر اساس نقش"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.unwanted_slots_list_template
 msgid "CANCEL SWITCH"
-msgstr ""
+msgstr "لغو تعویض"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
@@ -875,7 +1095,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "Cancel Switch"
-msgstr ""
+msgstr "لغو سوئیچ"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.hr_employee_view_form_simplified
@@ -913,6 +1133,8 @@ msgid ""
 "Company linked to the material resource. Leave empty for the resource to be "
 "available in every company."
 msgstr ""
+"شرکت لینک شده به منبع مواد اولیه. برای اینکه منبع در تمام شرکت‌ها در دسترس "
+"باشد، خالی بگذارید."
 
 #. module: planning
 #: model:ir.model,name:planning.model_res_config_settings
@@ -1015,12 +1237,12 @@ msgstr "مهلت به روز برای لغو تخصیص شیفت"
 #: model:ir.model.fields,field_description:planning.field_hr_employee__default_planning_role_id
 #: model:ir.model.fields,field_description:planning.field_resource_resource__default_role_id
 msgid "Default Role"
-msgstr ""
+msgstr "نقش پیش‌فرض"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.resource_resource_search_view_inherit
 msgid "Default Roles"
-msgstr ""
+msgstr "نقش‌های پیش‌فرض"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.employee_no_email_list_wizard
@@ -1028,6 +1250,8 @@ msgid ""
 "Define a work email address for the following employees so they will receive "
 "the planning."
 msgstr ""
+"برای اینکه کارمندان زیر بتوانند برنامه‌ریزی خود را دریافت کنند، برای آنها "
+"آدرس ایمیل کاری تعریف کنید."
 
 #. module: planning
 #: model:ir.model.fields,help:planning.field_planning_slot__role_id
@@ -1059,7 +1283,7 @@ msgstr "حذف"
 #. odoo-javascript
 #: code:addons/planning/static/src/components/address_recurrency_confirmation_dialog/address_recurrency_confirmation_dialog.js:0
 msgid "Delete Recurring Shift"
-msgstr ""
+msgstr "حذف شیفت تکرارشونده"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_analysis_report__department_id
@@ -1099,7 +1323,7 @@ msgstr "نام نمایش داده شده"
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_resources
 msgid "Distribute your material resources across projects and sales orders."
-msgstr ""
+msgstr "منابع خود را در پروژه‌ها و سفارش‌های فروش توزیع کنید."
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_roles
@@ -1121,6 +1345,9 @@ msgid ""
 "Drag a shift to another day to reschedule it, or to another row to reassign "
 "the shift. Press CTRL (or Cmd on Mac) while dragging a shift to duplicate it."
 msgstr ""
+"برای زمان‌بندی مجدد شیفت آن را به روز دیگری بکشید و رها کنید. یا برای اینکه "
+"شیفت را به شخص دیگری اختصاص دهید آن را به ردیف دیگری بکشید. برای تکثیر شیفت، "
+"به هنگام کشیدن دکمه CTRL (یا Cmd در مک) را نگه دارید."
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot__duration
@@ -1130,7 +1357,7 @@ msgstr "مدت زمان"
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__duration_days
 msgid "Duration Days"
-msgstr ""
+msgstr "مدت زمان بر حسب روز"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_kanban
@@ -1142,7 +1369,7 @@ msgstr "ویرایش"
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_calendar/planning_ask_recurrence_update/planning_ask_recurrence_update_dialog.xml:0
 msgid "Edit Recurrent Shift"
-msgstr ""
+msgstr "ویرایش شیفت تکرارشونده"
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_roles
@@ -1156,16 +1383,20 @@ msgid ""
 "of another employee, notifying the person who requested to switch that the "
 "shift has been taken"
 msgstr ""
+"ایمیلی که هرگاه کارمند خود را به شیفت ناخواسته کارمند دیگری اختصاص می‌دهد به "
+"طور خودکار ارسال می‌شود و به شخصی که درخواست تعویض داده است اطلاع می‌دهد که "
+"شیفت گرفته شده است."
 
 #. module: planning
 #: model:mail.template,description:planning.email_template_slot_single
 msgid "Email sent automatically when publishing a shift"
-msgstr ""
+msgstr "این ایمیل در زمان انتشار شیفت به صورت خودکار ارسال می‌شود"
 
 #. module: planning
 #: model:mail.template,description:planning.email_template_planning_planning
 msgid "Email sent automatically when publishing the schedule of your employees"
 msgstr ""
+"این ایمیل در زمان انتشار برنامه‌ریزی کارمندان به صورت خودکار ارسال می‌شود"
 
 #. module: planning
 #: model:ir.model,name:planning.model_hr_employee
@@ -1184,7 +1415,7 @@ msgstr "نام کارمند"
 #: model:ir.model.fields,field_description:planning.field_res_config_settings__planning_employee_unavailabilities
 #: model_terms:ir.ui.view,arch_db:planning.res_config_settings_view_form
 msgid "Employee Unavailabilities"
-msgstr ""
+msgstr "زمان‌های عدم دسترسی کارمندان"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_send__employee_ids
@@ -1197,7 +1428,7 @@ msgstr "کارمندان"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.employee_no_email_list_wizard
 msgid "Employees with no Work Email"
-msgstr ""
+msgstr "کارمندان بدون ایمیل محل کار"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.resource_planning
@@ -1214,7 +1445,7 @@ msgstr "تاریخ پایان"
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__end_time
 msgid "End Hour"
-msgstr ""
+msgstr "ساعت پایان"
 
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_hr_employee_employee_token_unique
@@ -1238,6 +1469,8 @@ msgid ""
 "Find here your planning. Assign yourself open shifts that match your roles, "
 "or indicate your unavailability."
 msgstr ""
+"برنامه‌ریزی شما اینجا قرار دارد. خود را شیفت‌های باز که با نقش‌های شما مطابقت "
+"داشته باشند تخصیص دهید یا در دسترس نبودن خود را مشخص کنید."
 
 #. module: planning
 #. odoo-python
@@ -1248,12 +1481,12 @@ msgstr "ابتدا باید تاریخ دعوت را مشخص کنید."
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.view_employee_filter_inherit_hr
 msgid "Fixed Hours"
-msgstr ""
+msgstr "ساعات ثابت"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.view_employee_filter_inherit_hr
 msgid "Flexible Hours"
-msgstr ""
+msgstr "ساعات انعطاف‌پذیر"
 
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__planning_slot__allocation_type__forecast
@@ -1290,7 +1523,7 @@ msgstr "تولید شیفت ها"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.brand_promotion
 msgid "Give depth to your"
-msgstr ""
+msgstr "به برنامه‌های خود"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_search
@@ -1304,12 +1537,12 @@ msgstr "گروه‌بندی برمبنای"
 #: model:ir.model.fields,field_description:planning.field_hr_employee_base__has_slots
 #: model:ir.model.fields,field_description:planning.field_hr_employee_public__has_slots
 msgid "Has Slots"
-msgstr ""
+msgstr "دارای اسلات"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_analysis_report__request_to_switch
 msgid "Has there been a request to switch on this shift slot?"
-msgstr ""
+msgstr "درخواستی برای تعویض این اسلات شیفت وجود دارد؟"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__name
@@ -1433,6 +1666,8 @@ msgid ""
 "Let employees switch shifts with colleagues or unassign themselves when "
 "unavailable"
 msgstr ""
+"به کارمندان اجازه دهید شیفت‌ها را با همکاران تعویض کنند یا در صورت عدم دسترسی "
+"خود را از شیفت خارج کنند"
 
 #. module: planning
 #. odoo-javascript
@@ -1442,6 +1677,9 @@ msgid ""
 "schedule</b> and easily plan your shifts with just one click by <em>copying "
 "the previous week's schedule</em>."
 msgstr ""
+"بیایید ویژگی‌های جالب نمای گانت را بررسی کنیم. آماده باشید تا <b>برنامه خود "
+"را به اشتراک بگذارید</b> و به راحتی با <em>کپی برنامه هفته گذشته</em> "
+"شیفت‌های خود را با یک کلیک برنامه‌ریزی کنید."
 
 #. module: planning
 #. odoo-javascript
@@ -1450,12 +1688,14 @@ msgid ""
 "Let's create your first <b>shift</b>. <i>Tip: use the (+) shortcut available "
 "on each cell of the Gantt view to save time.</i>"
 msgstr ""
+"اولین <b>شیفت</b> خود را ایجاد کنید. <i>نکته: برای صرفه‌جویی در زمان از "
+"میان‌بر (+) در همه خانه‌های نمای گانت استفاده کنید.</i>"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/js/tours/planning.js:0
 msgid "Let's schedule a <b>shift</b> for this time range."
-msgstr ""
+msgstr "بیایید یک <b>شیفت</b> برای این بازه زمانی برنامه‌ریزی کنیم."
 
 #. module: planning
 #. odoo-javascript
@@ -1478,7 +1718,7 @@ msgstr ""
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_shift_template
 msgid "Make encoding shifts easy with templates."
-msgstr ""
+msgstr "با استفاده از قالب‌ها می‌توانید کدگذاری شیفت‌ها را آسان کنید."
 
 #. module: planning
 #: model:planning.role,name:planning.planning_role_management
@@ -1554,7 +1794,7 @@ msgstr "برنامه ریزی من"
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_search
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "My Roles"
-msgstr ""
+msgstr "نقش‌های من"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
@@ -1584,7 +1824,7 @@ msgstr "رویداد جدید"
 #: code:addons/planning/models/planning.py:0
 #: code:addons/planning/static/src/views/planning_calendar/planning_calendar_controller.js:0
 msgid "New Shift"
-msgstr ""
+msgstr "شیفت جدید"
 
 #. module: planning
 #. odoo-python
@@ -1595,18 +1835,18 @@ msgstr ""
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "Next Week"
-msgstr ""
+msgstr "هفته آینده"
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/wizard/planning_send.py:0
 msgid "No Email Address for Some Employees"
-msgstr ""
+msgstr "برخی کارمندان آدرس ایمیلی ندارند"
 
 #. module: planning
 #: model:ir.model.fields,help:planning.field_planning_recurrency__repeat_number
 msgid "No Of Repetitions of the plannings"
-msgstr ""
+msgstr "تعداد تکرارهای برنامه‌ریزی"
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_report_action_analysis
@@ -1616,7 +1856,7 @@ msgstr "هنوز هیچ داده ای وجود ندارد!"
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_resources
 msgid "No material resources found. Let's create one!"
-msgstr ""
+msgstr "منبعی برای مواد یافت نشد. منبع جدیدی ایجاد کنید!"
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_roles
@@ -1656,11 +1896,12 @@ msgid ""
 "Now that this week is ready, let's get started on <b>next week's schedule</"
 "b>."
 msgstr ""
+"حالا که برنامه‌ریزی این هفته انجام شد، بریم سراغ <b>زمان‌بندی هفته بعد</b>."
 
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__planning_slot__repeat_type__x_times
 msgid "Number of Occurrences"
-msgstr ""
+msgstr "تعداد تکرار"
 
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__planning_recurrency__repeat_type__x_times
@@ -1671,7 +1912,7 @@ msgstr "تعداد تکرارها"
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "Open Shift"
-msgstr ""
+msgstr "شیفت باز"
 
 #. module: planning
 #. odoo-javascript
@@ -1692,13 +1933,13 @@ msgstr "شیفت‌های باز موجود"
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_hooks.js:0
 msgid "Open shifts assigned"
-msgstr ""
+msgstr "شیفت‌های باز اختصاص داده شده"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_hooks.js:0
 msgid "Open shifts unscheduled"
-msgstr ""
+msgstr "شیفت‌های باز برنامه‌ریزی نشده"
 
 #. module: planning
 #. odoo-javascript
@@ -1728,6 +1969,7 @@ msgid ""
 "Plan resource allocation across projects and estimate deadlines more "
 "accurately"
 msgstr ""
+"تخصیص منابع را برای پروژه‌ها برنامه‌ریزی کنید و سررسیدها را دقیق‌تر تخمین بزنید"
 
 #. module: planning
 #. odoo-javascript
@@ -1736,6 +1978,7 @@ msgid ""
 "Plan your shifts in one click by <b>copying the schedule from the previous "
 "week</b>."
 msgstr ""
+"شیفت‌های خود را <b>کپی برنامه از هفته گذشته</b> و با یک کلیک برنامه‌ریزی کنید."
 
 #. module: planning
 #. odoo-javascript
@@ -1744,6 +1987,8 @@ msgid ""
 "Plan your shifts in one click by <b>copying the schedule from the previous "
 "week</b>. Open the menu to access this option."
 msgstr ""
+"شیفت‌های خود را <b>کپی برنامه از هفته گذشته</b> و با یک کلیک برنامه‌ریزی کنید. "
+"برای دسترسی به این گزینه، منو را باز کنید."
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__start_time
@@ -1777,7 +2022,7 @@ msgstr "تحلیل برنامه ریزی"
 #. module: planning
 #: model:ir.model,name:planning.model_planning_analysis_report
 msgid "Planning Analysis Report"
-msgstr ""
+msgstr "گزارش تحلیل برنامه‌ریزی"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.resource_planning
@@ -1803,17 +2048,17 @@ msgstr "لیست نقش برنامه ریزی"
 #. module: planning
 #: model:ir.model,name:planning.model_planning_slot
 msgid "Planning Shift"
-msgstr ""
+msgstr "شیفت برنامه‌ریزی"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_analysis_report__slot_id
 msgid "Planning Slot"
-msgstr ""
+msgstr "بازه برنامه‌ریزی"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_role__slot_properties_definition
 msgid "Planning Slot Properties"
-msgstr ""
+msgstr "ویژگی‌های بازه زمانی"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
@@ -1823,17 +2068,17 @@ msgstr "برنامه ریزی:"
 #. module: planning
 #: model:mail.template,name:planning.email_template_planning_planning
 msgid "Planning: New Schedule"
-msgstr ""
+msgstr "برنامه‌ریزی: زمان‌بندی جدید"
 
 #. module: planning
 #: model:mail.template,name:planning.email_template_slot_single
 msgid "Planning: New Shift"
-msgstr ""
+msgstr "برنامه‌ریزی: شیفت جدید"
 
 #. module: planning
 #: model:mail.template,name:planning.email_template_shift_switch_email
 msgid "Planning: Shift Re-assigned"
-msgstr ""
+msgstr "برنامه‌ریزی: تخصیص مجدد شیفت"
 
 #. module: planning
 #: model:ir.actions.server,name:planning.ir_cron_forecast_schedule_ir_actions_server
@@ -1863,18 +2108,20 @@ msgid ""
 "Please add a work email for the following employee so that they can receive "
 "their planning:"
 msgstr ""
+"لطفاً یک ایمیل کاری برای کارمند زیر اضافه کنید تا بتواند برنامه‌ریزی خود را "
+"دریافت کند:"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/components/conflicting_slot_ids_field/conflicting_slot_ids_field.xml:0
 msgid "Prepare for the ultimate multi-tasking challenge:"
-msgstr ""
+msgstr "برای چالش نهایی چندوظیفه‌ای آماده شوید:"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_gantt/planning_gantt_renderer_controls.xml:0
 msgid "Press Ctrl to duplicate the shift"
-msgstr ""
+msgstr "برای تکثیر شیفت Ctrl را فشار دهید"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_res_config_settings__module_project_forecast
@@ -1911,7 +2158,7 @@ msgstr "انتشار و ارسال"
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_send_action
 msgid "Publish & Send the Schedule by Email"
-msgstr ""
+msgstr "انتشار و ارسال زمان‌بندی از طریق ایمیل"
 
 #. module: planning
 #. odoo-javascript
@@ -1947,13 +2194,13 @@ msgstr "تکرار"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.res_config_settings_view_form
 msgid "Recurring Shifts"
-msgstr ""
+msgstr "شیفت‌های تکرارشونده"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_form/planning_form_view.js:0
 msgid "Recurring shifts created"
-msgstr ""
+msgstr "شیفت‌های تکرارشونده ایجاد شده"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_recurrency__slot_ids
@@ -2016,7 +2263,7 @@ msgstr "گزارش"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "Requests to Switch"
-msgstr ""
+msgstr "درخواست تعویض"
 
 #. module: planning
 #: model:ir.actions.server,name:planning.model_planning_slot_action_reset_to_draft
@@ -2035,7 +2282,7 @@ msgstr "منبع"
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot__resource_color
 msgid "Resource color"
-msgstr ""
+msgstr "رنگ منبع"
 
 #. module: planning
 #: model:ir.model,name:planning.model_resource_resource
@@ -2064,6 +2311,8 @@ msgid ""
 "This role will also have precedence over the other roles of the employee "
 "when planning orders."
 msgstr ""
+"این نقش به طور در زمان ایجاد شیفت برای کارمند انتخاب می‌شود.\n"
+"این نقش همچنین در زمان برنامه‌ریزی سفارش‌ها، بر سایر نقش‌های کارمند اولویت دارد."
 
 #. module: planning
 #: model:ir.model.fields,help:planning.field_resource_resource__default_role_id
@@ -2073,11 +2322,13 @@ msgid ""
 "This role will also have precedence over the other roles of the resource "
 "when planning shifts."
 msgstr ""
+"این نقش به طور در زمان ایجاد شیفت برای منبع انتخاب می‌شود.\n"
+"این نقش همچنین در زمان برنامه‌ریزی سفارش‌ها، بر سایر نقش‌های منبع اولویت دارد."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_ics_description
 msgid "Role:"
-msgstr ""
+msgstr "نقش:"
 
 #. module: planning
 #. odoo-javascript
@@ -2103,6 +2354,13 @@ msgid ""
 "(with the default planning role having precedence over the other ones).\n"
 "Leave empty for the employee to be assigned shifts regardless of the role."
 msgstr ""
+"نقش‌هایی که کارمند می‌تواند داشته باشد. با ایجاد شیفت برای کارمند، فقط قالب‌های "
+"شیفت این نقش‌ها نمایش داده خواهد شد.\n"
+"بر همین اساس، در زمان انتشار زمان‌بندی برای کارمند، فقط شیفت‌های آزاد برای این "
+"نقش‌ها ارسال می‌شود.\n"
+"علاوه بر این، فقط سفارش‌های مربوط به این نقش‌ها، به کارمند محول می‌شود. (با "
+"اولویت نقش برنامه‌ریزی پیش‌فرض نسبت به سایر نقش‌ها).\n"
+"اگر خالی باشد، کارمند صرف نظر از نقش به شیفت‌ها تخصیص خواهد یافت."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
@@ -2112,7 +2370,7 @@ msgstr "ذخیره"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.employee_no_email_list_wizard
 msgid "Save & Send Schedule"
-msgstr ""
+msgstr "ذخیره و ارسال زمان‌بندی"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
@@ -2156,7 +2414,7 @@ msgstr "زمانبندی بر اساس نقش"
 #. odoo-python
 #: code:addons/planning/wizard/planning_send.py:0
 msgid "Schedule sent to your employees"
-msgstr ""
+msgstr "برنامه به کارمندان ارسال شد"
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_schedule_by_resource
@@ -2165,6 +2423,8 @@ msgid ""
 "Schedule your human and material resources across roles, projects and sales "
 "orders."
 msgstr ""
+"منابع انسانی و فیزیکی خود را بر مبنای نقش‌ها، پروژه‌ها و سفارش‌های فروش "
+"زمان‌بندی کنید."
 
 #. module: planning
 #. odoo-python
@@ -2181,7 +2441,7 @@ msgstr "توکن امنیتی"
 #. odoo-javascript
 #: code:addons/planning/static/src/components/conflicting_slot_ids_field/conflicting_slot_ids_field.xml:0
 msgid "See conflicting shifts"
-msgstr ""
+msgstr "مشاهده شیفت‌های متضاد"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
@@ -2214,6 +2474,8 @@ msgid ""
 "Share the schedule with your team by publishing and sending it. Open the "
 "menu to access this option."
 msgstr ""
+"با انتشار و ارسال، برنامه را با تیم خود به اشتراک بگذارید. برای دسترسی به "
+"این گزینه منو را باز کنید."
 
 #. module: planning
 #. odoo-python
@@ -2253,18 +2515,18 @@ msgstr "قالب های شیفت"
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_form/planning_form_view.js:0
 msgid "Shift saved as template"
-msgstr ""
+msgstr "شیفت به عنوان قالب ذخیره شد"
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "Shift sent"
-msgstr ""
+msgstr "شیفت ارسال شد"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "Shifts Planned"
-msgstr ""
+msgstr "شیفت‌های برنامه‌ریزی شده"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
@@ -2281,7 +2543,7 @@ msgstr "شیفت ها در تداخل"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
 msgid "Shifts of Your Department Member"
-msgstr ""
+msgstr "شیفت‌های عضو دپارتمان شما"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_search_base
@@ -2292,13 +2554,13 @@ msgstr "شیفت های اعضای تیم شما"
 #. odoo-python
 #: code:addons/planning/wizard/planning_send.py:0
 msgid "Shifts published — employees without a work email were skipped"
-msgstr ""
+msgstr "شیفت‌ها منتشر شدند - از کارمندانی که ایمیل کاری نداشتند صرف نظر شد"
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "Shifts reset to draft"
-msgstr ""
+msgstr "شیفت‌ها به پیش‌نویس بازنشانی شدند"
 
 #. module: planning
 #: model:planning.role,name:planning.planning_shipping_associate
@@ -2313,7 +2575,7 @@ msgstr "از زمان انتشار این شیفت تغییراتی ایجاد �
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_form
 msgid "Span"
-msgstr ""
+msgstr "بازه زمانی"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.resource_planning
@@ -2323,7 +2585,7 @@ msgstr "شروع"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_form
 msgid "Start & End Hours"
-msgstr ""
+msgstr "ساعات شروع و پایان"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_analysis_report__start_datetime
@@ -2348,7 +2610,7 @@ msgstr "تاریخ پایان"
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__res_company__planning_employee_unavailabilities__switch
 msgid "Switch shifts with other employees"
-msgstr ""
+msgstr "با سایر کارمندان شیفت خود را تعویض کند"
 
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_res_company_planning_self_unassign_days_before_positive
@@ -2360,7 +2622,7 @@ msgstr "مقدار روزهای قبل از واگذاری باید مثبت ی�
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "The company does not allow you to unassign yourself from shifts."
-msgstr ""
+msgstr "شرکت به شما اجازه نمی‌دهد خود را از شیفت‌ها خارج کنید."
 
 #. module: planning
 #. odoo-python
@@ -2371,7 +2633,7 @@ msgstr "مهلت لغو تخصیص به پایان رسیده است."
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_planning_slot_check_start_date_lower_end_date
 msgid "The end date of a shift should be after its start date."
-msgstr ""
+msgstr "تاریخ پایان شیفت باید پس از تاریخ شروع آن باشد."
 
 #. module: planning
 #. odoo-python
@@ -2382,7 +2644,7 @@ msgstr "تعداد تکرارها نمی تواند منفی باشد."
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_planning_recurrency_check_repeat_interval_positive
 msgid "The recurrence should be greater than 0."
-msgstr ""
+msgstr "تکرار باید بیشتر از 0 باشد."
 
 #. module: planning
 #. odoo-python
@@ -2394,7 +2656,7 @@ msgstr ""
 #. odoo-javascript
 #: code:addons/planning/static/src/views/planning_form/planning_form_view.js:0
 msgid "The shift has successfully been created."
-msgstr ""
+msgstr "شیفت با موفقیت ایجاد شد."
 
 #. module: planning
 #. odoo-javascript
@@ -2403,7 +2665,7 @@ msgstr ""
 #: code:addons/planning/wizard/planning_send.py:0
 msgid ""
 "The shifts have already been published, or there are no shifts to publish."
-msgstr ""
+msgstr "این شیفت‌ها قبلاً منتشر شده‌اند یا هیچ شیفتی برای انتشار وجود ندارد."
 
 #. module: planning
 #. odoo-python
@@ -2414,37 +2676,37 @@ msgstr "شیفت ها با موفقیت منتشر و ارسال شدند."
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_planning_slot_template_check_duration_days_positive
 msgid "The span must be at least 1 working day."
-msgstr ""
+msgstr "بازه باید حداقل 1 روز کاری باشد."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
 "The start and end hours must be greater or equal to 0 and lower than 24."
-msgstr ""
+msgstr "ساعت شروع و پایان باید بزرگتر یا مساوی با 0 و کمتر از 24 باشد."
 
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_planning_slot_template_check_start_time_lower_than_24
 msgid "The start hour cannot be greater than 24."
-msgstr ""
+msgstr "ساعت شروع نمی‌تواند بیشتر از 24 باشد."
 
 #. module: planning
 #: model:ir.model.constraint,message:planning.constraint_planning_slot_template_check_start_time_positive
 msgid "The start hour cannot be negative."
-msgstr ""
+msgstr "ساعت شروع نمی‌تواند منفی باشد."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning_template.py:0
 msgid ""
-"The start hour cannot be before the end hour for a one-day shift template."
+"The start hour cannot be after the end hour for a one-day shift template."
 msgstr ""
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "There are no resources available for this open shift."
-msgstr ""
+msgstr "برای این شیفت باز منبعی وجود ندارد."
 
 #. module: planning
 #. odoo-javascript
@@ -2452,7 +2714,7 @@ msgstr ""
 msgid ""
 "There are no shifts planned for the previous week, or they have already been "
 "copied."
-msgstr ""
+msgstr "شیفتی برای هفته قبل برنامه‌ریزی نشده است یا اینکه قبلاً کپی شده‌اند."
 
 #. module: planning
 #. odoo-python
@@ -2470,7 +2732,7 @@ msgstr "هیچ شیفتی برای بازنشانی به پیش نویس وجو�
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "This Progress Bar is not implemented."
-msgstr ""
+msgstr "این نوار وضعیت پیاده‌سازی نشده است."
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_slot__was_copied
@@ -2487,7 +2749,7 @@ msgstr "این هفته"
 #: code:addons/planning/static/src/views/planning_calendar/planning_ask_recurrence_update/planning_ask_recurrence_update_dialog.js:0
 #: model:ir.model.fields.selection,name:planning.selection__planning_slot__recurrence_update__subsequent
 msgid "This and following shifts"
-msgstr ""
+msgstr "این شیفت و شیفت‌های بعدی"
 
 #. module: planning
 #. odoo-python
@@ -2496,12 +2758,14 @@ msgid ""
 "This employee is not expected to work during this period, either because "
 "they do not have a current contract or because they are on leave."
 msgstr ""
+"به دلیل نداشتن قرارداد جاری یا به دلیل مرخصی، انتظار نمی‌رود این کارمند در "
+"این دوره کار کند."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "This method must take two slots in argument."
-msgstr ""
+msgstr "این متد باید دو شیفت را به عنوان آرگومان بگیرد."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
@@ -2517,13 +2781,13 @@ msgstr ""
 #: code:addons/planning/static/src/views/planning_calendar/planning_ask_recurrence_update/planning_ask_recurrence_update_dialog.js:0
 #: model:ir.model.fields.selection,name:planning.selection__planning_slot__recurrence_update__this
 msgid "This shift"
-msgstr ""
+msgstr "این شیفت"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/components/address_recurrency_confirmation_dialog/address_recurrency_confirmation_dialog.xml:0
 msgid "This shift is recurrent. Delete:"
-msgstr ""
+msgstr "این شیفت تکرارشونده است. حذف:"
 
 #. module: planning
 #: model:digest.tip,name:planning.digest_tip_planning_0
@@ -2538,6 +2802,10 @@ msgid ""
 "passes by in order to always get shifts 6 months ahead. This value can be "
 "modified from the settings of Planning, in debug mode."
 msgstr ""
+"برای جلوگیری از آلودگی پایگاه داده و بروز مشکلات عملکردی، شیفت‌ها تنها برای 6 "
+"ماه آینده ایجاد می‌شوند. با گذشت زمان، شیفت‌های بعدی به تدریج ساخته می‌شوند و "
+"همیشه برای برای 6 ماه آینده داده شیفت داریم. در حالت اشکال‌زدایی می‌توان این "
+"مقدار را از تنظیمات برنامه‌ریزی تغییر داد."
 
 #. module: planning
 #. odoo-javascript
@@ -2560,7 +2828,7 @@ msgstr "نوع"
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__res_company__planning_employee_unavailabilities__unassign
 msgid "Unassign themselves from shifts"
-msgstr ""
+msgstr "خودش را از شیفت خارج کند"
 
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__planning_recurrency__repeat_type__until
@@ -2571,7 +2839,7 @@ msgstr "تا"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.unwanted_slots_list_template
 msgid "Unwanted Shifts Available"
-msgstr ""
+msgstr "شیفت‌های ناخواسته‌ای وجود دارند"
 
 #. module: planning
 #: model:ir.model.fields,help:planning.field_planning_recurrency__repeat_until
@@ -2594,7 +2862,7 @@ msgstr "مشاهده برنامه‌ریزی"
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_action_roles
 msgid "Waiter"
-msgstr ""
+msgstr "پیشخدمت"
 
 #. module: planning
 #. odoo-javascript
@@ -2622,7 +2890,7 @@ msgstr "مکان کاری"
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_slot_template_view_form
 msgid "Working Days"
-msgstr ""
+msgstr "روز کاری"
 
 #. module: planning
 #. odoo-javascript
@@ -2633,6 +2901,10 @@ msgid ""
 "needing to complete a mission. Then, assign those open shifts to the "
 "resources that are available.</i>"
 msgstr ""
+"<b>نقشی</b> که کارمند انجام خواهد داد را بنویسید (<i>مثال: سرآشپز، متصدی، "
+"پیشخدمت و سایر نقش‌ها</i>). <i>نکته: برای نقش‌هایی که برای انجام یک مأموریت به "
+"آنها نیاز دارید، شیفت‌های باز ایجاد کنید. سپس، شیفت‌های باز را به منابع موجود "
+"اختصاص دهید.</i>"
 
 #. module: planning
 #: model:ir.model.fields.selection,name:planning.selection__planning_recurrency__repeat_unit__year
@@ -2644,7 +2916,7 @@ msgstr "سال"
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You are not allowed to reset shifts to draft."
-msgstr ""
+msgstr "شما مجاز به بازنشانی شیفت‌ها به پیش‌نویس نیستید."
 
 #. module: planning
 #. odoo-python
@@ -2662,43 +2934,45 @@ msgstr "شما نمی توانید کارمند دیگری غیر از خودت�
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You cannot assign yourself to a shift in the past."
-msgstr ""
+msgstr "نمی‌توانید خودتان را به شیفتی که در گذشته است تخصیص دهید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You cannot cancel a request to switch made by another user."
-msgstr ""
+msgstr "شما نمی‌توانید درخواست تعویض ایجاد شده توسط کاربر دیگر را لغو کنید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You cannot cancel a request to switch that is in the past."
-msgstr ""
+msgstr "نمی‌توانید درخواست تعویض شیفتی که در گذشته باشد را لغو کنید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You cannot request to switch a shift that is assigned to another user."
 msgstr ""
+"شما نمی‌توانید درخواست تعویض شیفتی را بدهید که به کاربر دیگری اختصاص داده شده "
+"است."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You cannot switch a shift that is in the past."
-msgstr ""
+msgstr "نمی‌توانید شیفتی که در گذشته است را تعویض کنید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You cannot unassign yourself from a shift in the past."
-msgstr ""
+msgstr "نمی‌توانید خودتان را از شیفتی که در گذشته است خارج کنید."
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/js/planning_calendar_front.js:0
 msgid "You don't have any shifts planned yet."
-msgstr ""
+msgstr "شما هنوز شیفتی را برنامه‌ریزی نکرده‌اید."
 
 #. module: planning
 #. odoo-javascript
@@ -2707,24 +2981,26 @@ msgid ""
 "You don't have any shifts planned yet. You can assign yourself some of the "
 "available open shifts."
 msgstr ""
+"شما هنوز شیفتی را برنامه‌ریزی نکرده‌اید. می‌توانید برخی از شیفت‌های باز موجود را "
+"به خود اختصاص دهید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You don't have the right to assign yourself to shifts."
-msgstr ""
+msgstr "شما حق اختصاص دادن خود به شیفت‌ها را ندارید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You don't have the right to cancel a request to switch."
-msgstr ""
+msgstr "شما سطح دسترسی لغو درخواست سوئیچ را ندارید."
 
 #. module: planning
 #. odoo-python
 #: code:addons/planning/models/planning.py:0
 msgid "You don't have the right to switch shifts."
-msgstr ""
+msgstr "شما سطح دسترسی سوئیچ شیفت را ندارید."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.slot_unassign
@@ -2751,12 +3027,14 @@ msgid ""
 "Your shift on {{ ctx.get('start_datetime') }} was re-assigned to "
 "{{ ctx.get('new_assignee_name', 'Marc Demo') }}"
 msgstr ""
+"شیفت شما در {{ ctx.get('start_datetime') }} به {{ ctx.get"
+"('new_assignee_name', 'Marc Demo') }} تخصیص یافت"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/components/address_recurrency_confirmation_dialog/address_recurrency_confirmation_dialog.xml:0
 msgid "all shifts"
-msgstr ""
+msgstr "همه شیفت‌ها"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
@@ -2773,18 +3051,18 @@ msgstr "چند روز قبل از شروع شیفت"
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
 msgid "e.g. Bartender"
-msgstr ""
+msgstr "مثال: متصدی"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_role_view_tree
 msgid "e.g. Cleaner"
-msgstr ""
+msgstr "مثا:، نظافت‌چی"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.resource_resource_form_view_inherit
 #: model_terms:ir.ui.view,arch_db:planning.resource_resource_tree_view_inherit
 msgid "e.g. Crane"
-msgstr ""
+msgstr "مثال: جرثقیل"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.hr_employee_view_form_simplified
@@ -2801,13 +3079,13 @@ msgstr "شیفت(های) دیگر در تداخل."
 #. odoo-javascript
 #: code:addons/planning/static/src/components/address_recurrency_confirmation_dialog/address_recurrency_confirmation_dialog.xml:0
 msgid "this and following shifts"
-msgstr ""
+msgstr "این شیفت و شیفت‌های بعدی"
 
 #. module: planning
 #. odoo-javascript
 #: code:addons/planning/static/src/components/address_recurrency_confirmation_dialog/address_recurrency_confirmation_dialog.xml:0
 msgid "this shift"
-msgstr ""
+msgstr "این شیفت"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template

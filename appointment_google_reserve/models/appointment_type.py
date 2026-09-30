@@ -213,9 +213,11 @@ class AppointmentType(models.Model):
     def _google_reserve_format_slot_availabilities_users(self, slot):
         [start_utc, end_utc] = slot["UTC"]
 
+        spots_total = len(slot["slot"].restrict_to_user_ids or self.staff_user_ids)
+        spots_open = len(slot["available_staff_users"]) if "available_staff_users" in slot else 0
         return {
-            "spots_total": len(slot["slot"].restrict_to_user_ids or self.staff_user_ids),
-            "spots_open": len(slot["available_staff_users"]) if "available_staff_users" in slot else 0,
+            "spots_total": spots_total,
+            "spots_open": min(spots_open, spots_total),
             "duration_sec": int((end_utc - start_utc).total_seconds()),
             "start_sec": cal.timegm(start_utc.timetuple()),
         }
@@ -328,7 +330,7 @@ class AppointmentType(models.Model):
                         break
 
             availabilities.append({
-                'spots_open': open_spots,
+                'spots_open': min(open_spots, total_spots),
                 'spots_total': total_spots,
                 'duration_sec': int((end_utc - start_utc).total_seconds()),
                 'start_sec': cal.timegm(start_utc.timetuple()),

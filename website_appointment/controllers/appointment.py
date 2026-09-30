@@ -125,6 +125,11 @@ class WebsiteAppointment(AppointmentController):
 
         :param skip_resource_selection: If true, skip the selection, and instead see all availabilities. No user should be selected.
         """
+        # Ensure we do not compute wrong values (e.g. max capacity) in the super call, based on
+        # resource_selected or resource_default before emptying them here due to skip_resource_selection.
+        if skip_resource_selection:
+            kwargs['skip_resource_selection_reset_resources'] = 1
+
         values = super()._prepare_appointment_type_page_values(appointment_type, staff_user_id, resource_selected_id, **kwargs)
         values['skip_resource_selection'] = skip_resource_selection
         if skip_resource_selection:

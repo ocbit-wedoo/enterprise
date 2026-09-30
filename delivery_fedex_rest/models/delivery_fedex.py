@@ -190,8 +190,9 @@ class ProviderFedex(models.Model):
             if response.get('documents'):
                 logmessage += Markup("<br/><b>") + _("Required documents:") + Markup("</b> ") + response.get('documents')
 
+            file_extension = 'zpl' if self.fedex_rest_label_file_type == 'ZPLII' else self.fedex_rest_label_file_type
             attachments = [
-                ('%s-%s.%s' % (self._get_delivery_label_prefix(), nr, self.fedex_rest_label_file_type), base64.b64decode(label))
+                ('%s-%s.%s' % (self._get_delivery_label_prefix(), nr, file_extension), base64.b64decode(label))
                 for nr, label in response.get('labels')
             ]
             if response.get('invoice'):
@@ -236,7 +237,8 @@ class ProviderFedex(models.Model):
         if response.get('documents'):
             logmessage += Markup("<b>") + _("Required documents:") + Markup("</b> ") + response.get('documents')
 
-        fedex_labels = [('%s-%s.%s' % (self.get_return_label_prefix(), nr, self.fedex_rest_label_file_type), base64.b64decode(label))
+        file_extension = 'zpl' if self.fedex_rest_label_file_type == 'ZPLII' else self.fedex_rest_label_file_type
+        fedex_labels = [('%s-%s.%s' % (self.get_return_label_prefix(), nr, file_extension), base64.b64decode(label))
                         for nr, label in response.get('labels')]
         picking.message_post(body=logmessage, attachments=fedex_labels)
 

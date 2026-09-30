@@ -387,4 +387,44 @@ class TestPlanningLeaves(TestCommon):
         )
 
         self.assertEqual(unavailabilities[employee.resource_id.id][0]['start'], public_holiday.date_from.astimezone(utc))
-        self.assertEqual(unavailabilities[employee.resource_id.id][0]['stop'], public_holiday.date_to.astimezone(utc))
+        self.assertEqual(unavailabilities[employee.resource_id.id][0]['stop'], public_holiday.date_to.astimezone(utc).replace(microsecond=999999))
+
+    def test_planning_gantt_unavailability_flexible_employee(self):
+        employee = self.env['hr.employee'].create({
+            'name': 'Test Employee',
+            'tz': 'UTC',
+        })
+        flexible_calendar = self.env['resource.calendar'].create({
+            'name': 'Flex Calendar',
+            'tz': 'UTC',
+            'flexible_hours': True,
+            'hours_per_day': 8,
+            'full_time_required_hours': 40,
+            'attendance_ids': [],
+        })
+        employee.resource_calendar_id = flexible_calendar
+
+        self.env['hr.leave'].create({
+            'name': "Party",
+            'holiday_status_id': self.leave_type.id,
+            'request_date_from': datetime.datetime(2026, 4, 20, 8, 0, 0),
+            'request_date_to': datetime.datetime(2026, 4, 24, 16, 0, 0),
+            'employee_id': employee.id,
+        }).action_validate()
+
+        leave_unavailability = self.env['planning.slot']._gantt_unavailability(
+            'resource_id',
+            [employee.resource_id.id],
+            datetime.datetime(2026, 4, 18),
+            datetime.datetime(2026, 4, 25),
+            'week',
+        )
+
+        self.assertEqual(
+            leave_unavailability[employee.resource_id.id][0]['start'],
+            datetime.datetime(2026, 4, 20, 0, 0, 0, tzinfo=utc)
+        )
+        self.assertEqual(
+            leave_unavailability[employee.resource_id.id][0]['stop'],
+            datetime.datetime(2026, 4, 24, 23, 59, 59, 999999, tzinfo=utc)
+        )

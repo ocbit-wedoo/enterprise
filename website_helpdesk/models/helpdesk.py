@@ -66,24 +66,48 @@ class HelpdeskTeam(models.Model):
         return teams
 
     def unlink(self):
-        self.website_menu_id.unlink()
+        self._unlink_unused_menus()
         return super(HelpdeskTeam, self).unlink()
+
+    def _unlink_unused_menus(self):
+        """Remove the website menus of `self` that no other team (active or
+        archived) still relies on, since a menu can be shared by several teams
+        on the same website.
+
+        When called with the `include_reusable_teams` context key, also
+        returns the other teams currently pointing to a website menu, so
+        `_ensure_website_menu` can reuse an existing menu for `self`'s website
+        instead of creating a duplicate.
+        """
+        menus = self.website_menu_id
+        include_reusable_teams = self.env.context.get('include_reusable_teams')
+        if not menus and not include_reusable_teams:
+            return
+
+        domain = [
+            ('use_website_helpdesk_form', '=', True),
+            ('id', 'not in', self.ids),
+        ]
+        # if we have menus to check, only look at teams using those menus.
+        # otherwise, we're just looking for any menu to reuse, so fetch all teams that have one.
+        domain.append(('website_menu_id', 'in', menus.ids) if menus else ('website_menu_id', '!=', False))
+        other_teams_with_menu = self.env['helpdesk.team'].sudo().with_context(active_test=False).search(domain)
+
+        if menus:
+            (menus - other_teams_with_menu.website_menu_id).unlink()
+        if include_reusable_teams:
+            return other_teams_with_menu
 
     def _ensure_submit_form_view(self):
         teams = self.filtered('use_website_helpdesk_form')
         if not teams:
             return
 
-        default_form = self.env.ref('website_helpdesk.ticket_submit_form').sudo().arch
+        submit_form = self.env.ref('website_helpdesk.ticket_submit_form').sudo()
         for team in teams:
             if not team.website_form_view_id:
                 xmlid = 'website_helpdesk.team_form_' + str(team.id)
-                form_template = self.env['ir.ui.view'].sudo().create({
-                    'type': 'qweb',
-                    'arch': default_form,
-                    'name': xmlid,
-                    'key': xmlid
-                })
+                form_template = submit_form.copy({'name': xmlid, 'key': xmlid})
                 self.env['ir.model.data'].sudo().create({
                     'module': 'website_helpdesk',
                     'name': xmlid.split('.')[1],
@@ -94,34 +118,38 @@ class HelpdeskTeam(models.Model):
                 team.website_form_view_id = form_template.id
 
     def _ensure_website_menu(self):
-        with_website = self.filtered_domain([('use_website_helpdesk_form', '=', True)])
-        without_website = self - with_website
-        without_website.website_menu_id.unlink()
+        teams_with_form_enabled = self.filtered_domain([('use_website_helpdesk_form', '=', True)])
+        teams_with_form_disabled = self - teams_with_form_enabled
+        teams_needing_menu = teams_with_form_enabled.filtered(lambda team: not team.website_menu_id)
 
-        team_count_by_website = dict(
-            self.env['helpdesk.team']._read_group(
-                [('use_website_helpdesk_form', '=', True)],
-                ['website_id'],
-                ['__count'],
-            )
-        )
-        teams_per_website = with_website.grouped('website_id')
-        # process each website separately
-        for website, teams in teams_per_website.items():
-            if any(team.website_menu_id for team in teams):
+        # nothing to release and nothing to assign: e.g. archiving a team that
+        # already owns its menu, or duplicating one whose menu got copied along
+        if not teams_with_form_disabled.website_menu_id and not teams_needing_menu:
+            return
+
+        other_teams_with_menu = teams_with_form_disabled.with_context(
+            include_reusable_teams=True
+        )._unlink_unused_menus()
+        teams_with_form_disabled.website_menu_id = False
+
+        teams_with_menu_by_website = other_teams_with_menu.grouped('website_id')
+        for website, teams in teams_needing_menu.grouped('website_id').items():
+            parent_menu = website.menu_id
+            if not parent_menu:
                 continue
-            team_count = team_count_by_website.get(website.id, 0)
-            if team_count <= 1:
-                parent_menu = website.menu_id
-                if parent_menu:
-                    menu = self.env['website.menu'].sudo().create({
-                        'name': _('Help'),
-                        'url': '/helpdesk',
-                        'parent_id': parent_menu.id,
-                        'sequence': 50,
-                        'website_id': website.id,
-                    })
-                    teams.website_menu_id = menu.id
+
+            team_with_existing_menu = teams_with_menu_by_website.get(website)
+            if team_with_existing_menu:
+                menu = team_with_existing_menu[:1].website_menu_id
+            else:
+                menu = self.env['website.menu'].sudo().create({
+                    'name': _('Help'),
+                    'url': '/helpdesk',
+                    'parent_id': parent_menu.id,
+                    'sequence': 50,
+                    'website_id': website.id,
+                })
+            teams.website_menu_id = menu.id
 
     @api.depends('name', 'use_website_helpdesk_form', 'company_id')
     def _compute_form_url(self):

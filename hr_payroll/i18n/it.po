@@ -6,15 +6,15 @@
 # Wil Odoo, 2025
 # Marianna Ciofani, 2025
 # Sergio Zanchetta <primes2h@gmail.com>, 2025
-# "Marianna Ciofani (cima)" <cima@odoo.com>, 2025.
+# "Marianna Ciofani (cima)" <cima@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-17 18:45+0000\n"
-"PO-Revision-Date: 2026-04-18 09:16+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-07-29 09:32+0000\n"
+"Last-Translator: \"Marianna Ciofani (cima)\" <cima@odoo.com>\n"
 "Language-Team: Italian <https://translate.odoo.com/projects/odoo-18/"
 "hr_payroll/it/>\n"
 "Language: it\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n != 0 && n % 1000000 == "
 "0) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: hr_payroll
 #. odoo-python
@@ -276,7 +276,7 @@ msgid ""
 "<span class=\"o_stat_text\">Salary Attachments</span>\n"
 "                            <span class=\"o_stat_value\">New</span>"
 msgstr ""
-"<span class=\"o_stat_text\">Allegati stipendio</span>\n"
+"<span class=\"o_stat_text\">Pignoramenti stipendio</span>\n"
 "                            <span class=\"o_stat_value\">Nuovo</span>"
 
 #. module: hr_payroll
@@ -724,7 +724,7 @@ msgstr "Nome allegato"
 #. module: hr_payroll
 #: model:hr.salary.rule,name:hr_payroll.default_attachment_of_salary_rule
 msgid "Attachment of Salary"
-msgstr "Allegato dello stipendio"
+msgstr "Pignoramento dello stipendio"
 
 #. module: hr_payroll
 #: model:ir.model.fields.selection,name:hr_payroll.selection__hr_payroll_report__work_entry_source__attendance
@@ -930,8 +930,8 @@ msgid ""
 "Check if the value of the salary attachment must be taken into account as "
 "negative (-X)"
 msgstr ""
-"Controlla se il valore dell'allegato salariale deve essere considerato "
-"negativo (-X)."
+"Controlla se il valore del pignoramento dello stipendio deve essere "
+"considerato negativo (-X)."
 
 #. module: hr_payroll
 #. odoo-javascript
@@ -1282,7 +1282,7 @@ msgstr "Creazione pagamento SEPA"
 #. module: hr_payroll
 #: model:ir.actions.server,name:hr_payroll.action_new_salary_attachment
 msgid "Create Salary Attachment"
-msgstr "Crea allegato stipendio"
+msgstr "Crea pignoramento stipendio"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_work_entry_export_mixin__create_uid
@@ -3061,7 +3061,8 @@ msgstr "Numero di messaggi con errore di consegna"
 #: model:ir.model.fields,help:hr_payroll.field_hr_salary_attachment__occurrences
 msgid "Number of times the salary attachment will appear on the payslip."
 msgstr ""
-"Numero di volte in cui l'allegato dello stipendio apparirà sulla busta paga."
+"Numero di volte in cui il pignoramento dello stipendio apparirà sulla busta "
+"paga."
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_attachment__occurrences
@@ -3955,19 +3956,19 @@ msgstr "Retribuzione"
 #: model:ir.model,name:hr_payroll.model_hr_salary_attachment
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_attachment_view_form
 msgid "Salary Attachment"
-msgstr "Allegato stipendio"
+msgstr "Pignoramento dello stipendio"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_contract__salary_attachments_count
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_contract_history__salary_attachment_count
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_employee__salary_attachment_count
 msgid "Salary Attachment Count"
-msgstr "Numero di allegati stipendio"
+msgstr "Numero di pignoramenti stipendio"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_payslip__salary_attachment_count
 msgid "Salary Attachment count"
-msgstr "Numero di allegati stipendio"
+msgstr "Numero di pignoramenti stipendio"
 
 #. module: hr_payroll
 #. odoo-python
@@ -3982,7 +3983,7 @@ msgstr "Numero di allegati stipendio"
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_attachment_view_tree
 #: model_terms:ir.ui.view,arch_db:hr_payroll.view_hr_payslip_form
 msgid "Salary Attachments"
-msgstr "Allegati stipendio"
+msgstr "Pignoramenti dello stipendio"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_rule_category_form
@@ -4111,7 +4112,7 @@ msgstr "Ricerca buste paga"
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.hr_salary_attachment_view_search
 msgid "Search Salary Attachment"
-msgstr "Cerca allegato stipendio"
+msgstr "Cerca pignoramento stipendio"
 
 #. module: hr_payroll
 #: model_terms:ir.ui.view,arch_db:hr_payroll.view_hr_rule_filter
@@ -5344,7 +5345,7 @@ msgstr "Impossibile eliminare una busta paga non in bozza o annullata."
 #. odoo-python
 #: code:addons/hr_payroll/models/hr_salary_attachment.py:0
 msgid "You cannot delete a running salary attachment!"
-msgstr "Non si può cancellare un allegato dello stipendio in corso!"
+msgstr "Non si può cancellare un pignoramento dello stipendio in corso!"
 
 #. module: hr_payroll
 #. odoo-python

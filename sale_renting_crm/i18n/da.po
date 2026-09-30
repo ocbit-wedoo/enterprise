@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* sale_renting_crm
+# * sale_renting_crm
 #
 # Translators:
 # Mads Søndergaard, 2024
@@ -8,30 +8,32 @@
 # Martin Trigaux, 2024
 # Mads Søndergaard, 2024
 # Kira Petersen, 2025
-#
+# "Kira Petersen François (peti)" <peti@odoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:49+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Kira Petersen, 2025\n"
-"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"PO-Revision-Date: 2026-06-23 12:58+0000\n"
+"Last-Translator: \"Kira Petersen François (peti)\" <peti@odoo.com>\n"
+"Language-Team: Danish <https://translate.odoo.com/projects/odoo-18/"
+"sale_renting_crm/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_renting_crm
 #: model_terms:ir.ui.view,arch_db:sale_renting_crm.crm_case_form_view_oppor
 msgid "<span class=\"o_stat_text\"> Rental Orders</span>"
-msgstr "<span class=\"o_stat_text\"> Lejeordre</span>"
+msgstr "<span class=\"o_stat_text\"> Lejeordrer</span>"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead_rental__lead_id
 msgid "Associated Lead"
-msgstr "Associeret kundeemne"
+msgstr "Tilknyttet lead"
 
 #. module: sale_renting_crm
 #: model_terms:ir.ui.view,arch_db:sale_renting_crm.crm_lead_rental_view_form
@@ -46,7 +48,7 @@ msgstr "Bekræft"
 #. module: sale_renting_crm
 #: model:ir.model,name:sale_renting_crm.model_crm_lead_rental
 msgid "Convert Lead to Rental Order"
-msgstr "Konvertér kundeemne til lejeordre"
+msgstr "Konvertér leads til lejeordre"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields.selection,name:sale_renting_crm.selection__crm_lead_rental__action__create
@@ -76,7 +78,7 @@ msgstr "Kunde"
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead_rental__display_name
 msgid "Display Name"
-msgstr "Vis navn"
+msgstr "Visningsnavn"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields.selection,name:sale_renting_crm.selection__crm_lead_rental__action__nothing
@@ -106,29 +108,29 @@ msgstr "Kundeemne/Salgsmulighed"
 #. module: sale_renting_crm
 #: model:ir.model.fields.selection,name:sale_renting_crm.selection__crm_lead_rental__action__exist
 msgid "Link to an existing customer"
-msgstr "Link til eksisterende kunde"
+msgstr "Link til en eksisterende kunde"
 
 #. module: sale_renting_crm
 #: model:ir.actions.act_window,name:sale_renting_crm.crm_lead_to_rental_action
 #: model_terms:ir.ui.view,arch_db:sale_renting_crm.crm_case_form_view_oppor
 #: model_terms:ir.ui.view,arch_db:sale_renting_crm.crm_lead_rental_view_form
 msgid "New Rental"
-msgstr "Ny Leje"
+msgstr "Ny udlejning"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead__rental_order_count
 msgid "Number of Rental Orders"
-msgstr "Antal Lejeordre"
+msgstr "Antal lejeordrer"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead__rental_quotation_count
 msgid "Number of Rental Quotations"
-msgstr "Antal af Lejetilbud"
+msgstr "Antal lejetilbud"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_sale_order__opportunity_id
 msgid "Opportunity"
-msgstr "Salgsmuligheder"
+msgstr "Salgsmulighed"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead_rental__action
@@ -140,7 +142,7 @@ msgstr "Lejekunde"
 #: code:addons/sale_renting_crm/models/crm_lead.py:0
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead__rental_order_ids
 msgid "Rental Orders"
-msgstr "Udlejning ordre"
+msgstr "Udlejningsordrer"
 
 #. module: sale_renting_crm
 #: model_terms:ir.ui.view,arch_db:sale_renting_crm.crm_case_form_view_oppor
@@ -155,7 +157,7 @@ msgstr "Salgsordre"
 #. module: sale_renting_crm
 #: model:ir.model.fields,field_description:sale_renting_crm.field_crm_lead__rental_amount_total
 msgid "Sum of Rental Orders"
-msgstr "Sum af Lejeordre"
+msgstr "Summen af lejeordre"
 
 #. module: sale_renting_crm
 #: model:ir.model.fields,help:sale_renting_crm.field_crm_lead__rental_amount_total
@@ -166,4 +168,4 @@ msgstr "Total før moms for bekræftede salgsordrer"
 #. odoo-python
 #: code:addons/sale_renting_crm/wizard/crm_lead_rental.py:0
 msgid "You can only apply this action from a lead."
-msgstr "Du kan kun anvende denne handling fra et kundeemne."
+msgstr "Du kan kun anvende denne handling fra et lead."

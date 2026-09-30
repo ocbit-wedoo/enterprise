@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <odoo>
+    <!-- Source: https://ccss.public.lu/en/parametres-sociaux.html -->
     <record id="rule_parameter_health_fund_tax" model="hr.rule.parameter">
         <field name="name">Lux Tax: Health Fund</field>
         <field name="code">l10n_lu_health_fund_tax</field>
@@ -20,6 +21,11 @@
         <field name="parameter_value">8</field>
         <field name="rule_parameter_id" ref="rule_parameter_retirement_fund_tax"/>
         <field name="date_from" eval="datetime(2017, 1, 1).date()"/>
+    </record>
+    <record id="rule_parameter_retirement_fund_tax_2026" model="hr.rule.parameter.value">
+        <field name="parameter_value">8.5</field>
+        <field name="rule_parameter_id" ref="rule_parameter_retirement_fund_tax"/>
+        <field name="date_from" eval="datetime(2026, 1, 1).date()"/>
     </record>
 
     <record id="rule_parameter_cash_sickness_fund_tax" model="hr.rule.parameter">

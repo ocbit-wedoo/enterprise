@@ -1,25 +1,28 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* account_online_synchronization
+# * account_online_synchronization
 #
 # Translators:
 # zakariya moradi, 2025
 # ebrahim khorami, 2025
 # Tiffany Chang, 2025
 #
+# Weblate <noreply-mt-weblate@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:46+0000\n"
-"PO-Revision-Date: 2024-09-25 09:44+0000\n"
-"Last-Translator: Tiffany Chang, 2025\n"
-"Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
+"PO-Revision-Date: 2026-08-11 18:03+0000\n"
+"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"Language-Team: Persian <https://translate.odoo.com/projects/odoo-18/"
+"account_online_synchronization/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_online_synchronization
 #. odoo-python
@@ -30,12 +33,16 @@ msgid ""
 "If you've already opened a ticket for this issue, don't report it again: a "
 "support agent will contact you shortly."
 msgstr ""
+"\n"
+"\n"
+"اگر قبلاً برای این موضوع تیکت ایجاد کرده‌اید، نیازی به گزارش دوباره نیست؛ "
+"کارشناسان پشتیبانی به زودی با شما تماس خواهند گرفت."
 
 #. module: account_online_synchronization
 #. odoo-python
 #: code:addons/account_online_synchronization/wizard/account_journal_duplicate_transactions.py:0
 msgid "%s duplicate transactions"
-msgstr ""
+msgstr "%s تراکنش تکراری"
 
 #. module: account_online_synchronization
 #. odoo-javascript
@@ -56,7 +63,7 @@ msgstr "0 تراکنش یافت شد"
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.account_duplicate_transaction_wizard_view_form
 msgid "<i class=\"fa fa-trash me-1\"/> Delete Selected"
-msgstr ""
+msgstr "<i class=\"fa fa-trash me-1\"/> حذف انتخاب شده‌ها"
 
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.account_journal_form
@@ -388,7 +395,7 @@ msgstr "به بانک متصل شوید"
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.account_journal_dashboard_inherit_online_sync
 msgid "Connect bank"
-msgstr ""
+msgstr "اتصال بانک"
 
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.portal_renew_consent
@@ -554,7 +561,7 @@ msgstr "بازیابی ..."
 #: code:addons/account_online_synchronization/models/account_journal.py:0
 #: code:addons/account_online_synchronization/static/src/components/bank_reconciliation/find_duplicate_transactions_cog_menu.xml:0
 msgid "Find Duplicate Transactions"
-msgstr ""
+msgstr "جستجوی تراکنش‌های تکراری"
 
 #. module: account_online_synchronization
 #. odoo-javascript
@@ -567,7 +574,7 @@ msgstr "یافتن تراکنش‌های مفقوده"
 #. module: account_online_synchronization
 #: model:ir.model.fields,field_description:account_online_synchronization.field_account_duplicate_transaction_wizard__first_ids_in_group
 msgid "First Ids In Group"
-msgstr ""
+msgstr "اولین شناسه‌ها در گروه"
 
 #. module: account_online_synchronization
 #: model:ir.model.fields,field_description:account_online_synchronization.field_account_online_link__message_follower_ids
@@ -661,6 +668,10 @@ msgid ""
 "If the automatic sync is disabled. that will be due to security policy on "
 "the bank's end. So, they have to launch the sync manually"
 msgstr ""
+"در صورت امکان، سعی خواهیم کرد تراکنش‌های جدید را به صورت خودکار برای این "
+"رکورد دریافت کنیم                \n"
+"اگر همگام‌سازی خودکار غیرفعال باشد، علت آن سیاست امنیتی از سمت بانک خواهد "
+"بود. پس لازم است همگام‌سازی به صورت دستی اجرا شود"
 
 #. module: account_online_synchronization
 #. odoo-javascript
@@ -731,6 +742,9 @@ msgid ""
 "already has existing entries. You can't link selected bank account in %"
 "(currency_name)s to it"
 msgstr ""
+"دفتر روزنامه %(journal_name)s با واحد پول دیگری تنظیم شده و در حال حاضر "
+"دارای ثبت است. بنابراین، نمی‌توانید حساب بانکی انتخاب شده بر حسب %"
+"(currency_name)s را به آن لینک کنید"
 
 #. module: account_online_synchronization
 #: model:ir.model.fields,field_description:account_online_synchronization.field_account_online_link__last_refresh
@@ -1053,7 +1067,7 @@ msgstr "خطای تحویل پیامک"
 #. odoo-javascript
 #: code:addons/account_online_synchronization/static/src/components/bank_configure/bank_configure.xml:0
 msgid "Search over"
-msgstr ""
+msgstr "در میان بیش از"
 
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.portal_renew_consent
@@ -1101,7 +1115,7 @@ msgstr "در صورتی که ارائه‌دهنده شماره حساب کام�
 #. odoo-javascript
 #: code:addons/account_online_synchronization/static/src/components/bank_configure/bank_configure.xml:0
 msgid "Setup Bank"
-msgstr ""
+msgstr "تنظیم بانک"
 
 #. module: account_online_synchronization
 #. odoo-python
@@ -1112,13 +1126,13 @@ msgstr "تنظیم حساب بانکی"
 #. module: account_online_synchronization
 #: model:ir.model.fields,field_description:account_online_synchronization.field_account_online_link__show_sync_actions
 msgid "Show Sync Actions"
-msgstr ""
+msgstr "نمایش عملیات همگام‌سازی"
 
 #. module: account_online_synchronization
 #. odoo-javascript
 #: code:addons/account_online_synchronization/static/src/components/views/account_online_authorization_kanban_controller.xml:0
 msgid "Some transactions"
-msgstr ""
+msgstr "برخی از تراکنش‌ها"
 
 #. module: account_online_synchronization
 #: model:ir.model.fields,field_description:account_online_synchronization.field_account_duplicate_transaction_wizard__date
@@ -1177,11 +1191,12 @@ msgid ""
 "This action will delete all selected transactions. Are you sure you want to "
 "proceed?"
 msgstr ""
+"این عملیات همه تراکنش‌های انتخاب شده را حذف می‌کند. از ادامه کار مطمئن هستید؟"
 
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.account_online_link_view_form
 msgid "This button will reset the fetching status"
-msgstr ""
+msgstr "این دکمه وضعیت دریافت را بازنشانی می‌کند"
 
 #. module: account_online_synchronization
 #. odoo-python
@@ -1269,7 +1284,7 @@ msgstr "تاریخچه ارتباط با وبسایت"
 #. module: account_online_synchronization
 #: model:ir.model,name:account_online_synchronization.model_account_duplicate_transaction_wizard
 msgid "Wizard for duplicate transactions"
-msgstr ""
+msgstr "ویزارد تراکنش‌های تکراری"
 
 #. module: account_online_synchronization
 #: model:ir.model,name:account_online_synchronization.model_account_missing_transaction_wizard
@@ -1297,7 +1312,7 @@ msgstr "می‌توانید با پشتیبانی اودوو تماس بگیری
 #. odoo-python
 #: code:addons/account_online_synchronization/models/account_online.py:0
 msgid "You can manage your bank synchronization consent for this connection %s"
-msgstr ""
+msgstr "می‌توانید رضایت همگام‌سازی بانکی خود را برای اتصال %s"
 
 #. module: account_online_synchronization
 #. odoo-python
@@ -1353,7 +1368,7 @@ msgstr "حساب بانکی که باید متصل شود:"
 #. odoo-javascript
 #: code:addons/account_online_synchronization/static/src/components/bank_configure/bank_configure.xml:0
 msgid "banks"
-msgstr ""
+msgstr "بانک جستجوی کنید"
 
 #. module: account_online_synchronization
 #. odoo-javascript
@@ -1365,13 +1380,13 @@ msgstr "مورد"
 #. odoo-javascript
 #: code:addons/account_online_synchronization/static/src/components/bank_configure/bank_configure.xml:0
 msgid "loading..."
-msgstr ""
+msgstr "در حال بارگذاری..."
 
 #. module: account_online_synchronization
 #. odoo-javascript
 #: code:addons/account_online_synchronization/static/src/components/views/account_online_authorization_kanban_controller.xml:0
 msgid "may be duplicates."
-msgstr ""
+msgstr "ممکن است تکراری باشند."
 
 #. module: account_online_synchronization
 #: model_terms:ir.ui.view,arch_db:account_online_synchronization.portal_renew_consent

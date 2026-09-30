@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-29 17:48+0000\n"
-"PO-Revision-Date: 2026-04-11 18:33+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-20 09:33+0000\n"
+"Last-Translator: \"Marta (wacm)\" <wacm@odoo.com>\n"
 "Language-Team: Polish <https://translate.odoo.com/projects/odoo-18/"
 "account_intrastat/pl/>\n"
 "Language: pl\n"
@@ -24,13 +24,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: account_intrastat
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid ", which cannot be reported."
-msgstr ", które nie może być zaraportowane"
+msgstr ", które nie może być zaraportowane."
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__1_000_kwh
@@ -87,12 +87,12 @@ msgstr "Wszyscy partnerzy"
 #: code:addons/account_intrastat/models/account_intrastat_report.py:0
 #: code:addons/account_intrastat/static/src/components/intrastat_report/filters/filters.js:0
 msgid "Arrival"
-msgstr "Przyjazd"
+msgstr "Przybycie"
 
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.invoice_form_inherit_account_intrastat
 msgid "Arrival country"
-msgstr "Kraj przyjazdu"
+msgstr "Kraj przybycia"
 
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.view_intrastat_code_search
@@ -108,13 +108,13 @@ msgstr "Przez typ"
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid "Check the expired"
-msgstr "Sprawdź, czy wygasły"
+msgstr "Sprawdź przeterminowane"
 
 #. module: account_intrastat
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid "Check the premature"
-msgstr "Sprawdź przedwczesność"
+msgstr "Sprawdź przedwczesne"
 
 #. module: account_intrastat
 #: model:account.report.column,name:account_intrastat.intrastat_report_column_commodity_code
@@ -216,7 +216,7 @@ msgstr "Intrastat"
 #. module: account_intrastat
 #: model:account.report,name:account_intrastat.intrastat_report
 msgid "Intrastat (Goods)"
-msgstr "Intrastat (Dobra)"
+msgstr "Intrastat (Towary)"
 
 #. module: account_intrastat
 #: model:ir.actions.act_window,name:account_intrastat.action_report_intrastat_code_tree
@@ -254,7 +254,7 @@ msgstr "Raport Intrastat"
 #. module: account_intrastat
 #: model:ir.model,name:account_intrastat.model_account_intrastat_report_handler
 msgid "Intrastat Report Custom Handler"
-msgstr "Customowy handler raportu Intrastat"
+msgstr "Niestandardowy procesor raportu Intrastat"
 
 #. module: account_intrastat
 #: model:ir.model.fields,field_description:account_intrastat.field_product_template__intrastat_supplementary_unit
@@ -282,7 +282,7 @@ msgstr "Kod intrastat"
 #: model:ir.model.fields,help:account_intrastat.field_account_move__intrastat_country_id
 msgid "Intrastat country, arrival for sales, dispatch for purchases"
 msgstr ""
-"Kraj Intrastat, przybycie w przypadku sprzedaży, wysłanie w przypadku zakupu"
+"Kraj Intrastat, przybycie w przypadku sprzedaży, wydanie w przypadku zakupu"
 
 #. module: account_intrastat
 #: model:ir.model.fields,field_description:account_intrastat.field_res_country__intrastat
@@ -304,19 +304,19 @@ msgstr "Kod transakcji Intrastat"
 #. odoo-python
 #: code:addons/account_intrastat/models/product.py:0
 msgid "Invalid Intrastat Code"
-msgstr ""
+msgstr "Nieprawidłowy kod Intrastat"
 
 #. module: account_intrastat
 #. odoo-python
 #: code:addons/account_intrastat/models/account_intrastat_report.py:0
 msgid "Invalid commodity intrastat code products."
-msgstr "Nieprawidłowy kod Intrastat towaru."
+msgstr "Nieprawidłowy kod towaru Intrastat."
 
 #. module: account_intrastat
 #. odoo-python
 #: code:addons/account_intrastat/models/account_intrastat_report.py:0
 msgid "Invalid transaction intrastat code entries."
-msgstr "Nieważne wpisy kodu intrastat transakcji."
+msgstr "Nieważne wpisy kodu transakcji intrastat."
 
 #. module: account_intrastat
 #. odoo-python
@@ -332,17 +332,17 @@ msgstr "Pozycje faktury"
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.account_move_tree_view_account_intrastat_transport_codes
 msgid "Journal Entries"
-msgstr "Zapisy księgowe"
+msgstr "Wpisy dziennika"
 
 #. module: account_intrastat
 #: model:ir.model,name:account_intrastat.model_account_move
 msgid "Journal Entry"
-msgstr "Zapis dziennika"
+msgstr "Wpis dziennika"
 
 #. module: account_intrastat
 #: model:ir.model,name:account_intrastat.model_account_move_line
 msgid "Journal Item"
-msgstr "Pozycja zapisu"
+msgstr "Pozycja dziennika"
 
 #. module: account_intrastat
 #. odoo-python
@@ -368,6 +368,8 @@ msgid ""
 "Note that the selected commodity code is invalid based on its start or "
 "expiry date. You can still select it."
 msgstr ""
+"Zwróć uwagę na to, że wybrany kod towaru jest nieprawidłowy ze względu na "
+"datę rozpoczęcia lub wygaśnięcia. Nadal można go wybrać."
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -388,7 +390,7 @@ msgstr "Kraj pochodzenia"
 #. module: account_intrastat
 #: model:account.report.column,name:account_intrastat.intrastat_report_column_partner_vat
 msgid "Partner VAT"
-msgstr "Partner VAT"
+msgstr "NIP partnera"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -424,19 +426,19 @@ msgstr "Region"
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid "Some lines have expired intrastat"
-msgstr "Niektóre linie mają wygasły intrastat"
+msgstr "Niektóre wiersze mają wygasły intrastat"
 
 #. module: account_intrastat
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid "Some lines have premature intrastat"
-msgstr "Niektóre linie mają przedwczesny intrastat"
+msgstr "Niektóre wiersze mają przedwczesny intrastat"
 
 #. module: account_intrastat
 #. odoo-javascript
 #: code:addons/account_intrastat/static/src/components/intrastat_report/warnings.xml:0
 msgid "Some lines have undefined"
-msgstr "Niektóre linie mają niezdefiniowane"
+msgstr "Niektóre wiersze mają niezdefiniowane"
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -465,7 +467,7 @@ msgstr "Jednostki uzupełniające"
 #. module: account_intrastat
 #: model_terms:ir.ui.view,arch_db:account_intrastat.product_product_tree_view_account_intrastat_supplementary_unit
 msgid "Supplementary Units per Product"
-msgstr "Jednostki uzupełniające na produkt"
+msgstr "Jednostki uzupełniające wg. produktu"
 
 #. module: account_intrastat
 #: model:account.report.column,name:account_intrastat.intrastat_report_column_system
@@ -507,6 +509,8 @@ msgid ""
 "The product template has no products/variants. At least one variant is "
 "required to set the Intrastat values."
 msgstr ""
+"Szablon produktu nie zawiera produktów/wariantów. Do ustawienia wartości "
+"Intrastat wymagany jest co najmniej jeden wariant."
 
 #. module: account_intrastat
 #. odoo-javascript
@@ -683,13 +687,13 @@ msgstr "m"
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__m2
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__m2
 msgid "m2"
-msgstr "m2"
+msgstr "m²"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__m3
 #: model:ir.model.fields.selection,name:account_intrastat.selection__product_template__intrastat_supplementary_unit__m3
 msgid "m3"
-msgstr "m3"
+msgstr "m³"
 
 #. module: account_intrastat
 #: model:ir.model.fields.selection,name:account_intrastat.selection__account_intrastat_code__supplementary_unit__p/st

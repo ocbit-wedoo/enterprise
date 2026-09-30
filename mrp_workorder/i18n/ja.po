@@ -8,13 +8,14 @@
 #
 # "Junko Augias (juau)" <juau@odoo.com>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2026.
+# Ryoko Tsuda <ryoko@quartile.co>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-04-10 18:48+0000\n"
-"PO-Revision-Date: 2026-05-06 21:38+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-09-04 08:44+0000\n"
+"Last-Translator: \"Junko Augias (juau)\" <juau@odoo.com>\n"
 "Language-Team: Japanese <https://translate.odoo.com/projects/odoo-18/"
 "mrp_workorder/ja/>\n"
 "Language: ja\n"
@@ -22,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17\n"
+"X-Generator: Weblate 2026.8.1\n"
 
 #. module: mrp_workorder
 #. odoo-python
@@ -303,7 +304,7 @@ msgstr "閉じる"
 #. odoo-javascript
 #: code:addons/mrp_workorder/static/src/mrp_display/mrp_display_record.xml:0
 msgid "Close Production"
-msgstr "製造をクローズ"
+msgstr "製造を終了"
 
 #. module: mrp_workorder
 #: model:product.attribute,name:mrp_workorder.product_attribute_color_radio
@@ -334,7 +335,7 @@ msgstr "構成品数量 To Do"
 #. module: mrp_workorder
 #: model:ir.model,name:mrp_workorder.model_res_config_settings
 msgid "Config Settings"
-msgstr "コンフィグ設定"
+msgstr "構成設定"
 
 #. module: mrp_workorder
 #: model_terms:ir.ui.view,arch_db:mrp_workorder.stock_picking_type_view_kanban
@@ -1127,7 +1128,7 @@ msgstr "ラベル印刷"
 #. module: mrp_workorder
 #: model:ir.model,name:mrp_workorder.model_stock_move_line
 msgid "Product Moves (Stock Move Line)"
-msgstr "プロダクトの移動(在庫移動ライン)"
+msgstr "プロダクト移動(在庫移動明細行)"
 
 #. module: mrp_workorder
 #: model:ir.model.fields,field_description:mrp_workorder.field_quality_point__component_id
@@ -1584,9 +1585,9 @@ msgid ""
 "                                    quality control, consumed quantities, "
 "lot/serial numbers, etc."
 msgstr ""
-"ここから作業オーダ、指示書を追跡し、製造工程を記録します:\n"
-"                                    品質管理、消費量、ロット/シリアル番号な"
-"ど。"
+"ここから作業オーダを追跡し、指示書を表示し、製造工程を記録します:\n"
+"                                    品質管理、消費量、ロット/シリアル番号など"
+"。"
 
 #. module: mrp_workorder
 #: model:ir.model.fields,field_description:mrp_workorder.field_quality_check__product_tracking

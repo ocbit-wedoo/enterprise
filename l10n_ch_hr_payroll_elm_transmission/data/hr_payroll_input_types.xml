@@ -878,6 +878,14 @@
     </record>
 
 
+    <record id="l10n_ch_elm_input_WT_2000_NET" model="hr.payslip.input.type">
+        <field name="name">(2000) Loss-of-earnings indemnity (APG) (Net compensation)</field>
+        <field name="code">WT_2000_NET</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
     <record id="l10n_ch_elm_input_WT_2005" model="hr.payslip.input.type">
         <field name="name">(2005) Military compensation benefit (CCM)</field>
         <field name="code">WT_2005</field>
@@ -886,9 +894,25 @@
     </record>
 
 
+    <record id="l10n_ch_elm_input_WT_2005_NET" model="hr.payslip.input.type">
+        <field name="name">(2005) Military compensation benefit (CCM) (Net compensation)</field>
+        <field name="code">WT_2005_NET</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
     <record id="l10n_ch_elm_input_WT_2010" model="hr.payslip.input.type">
         <field name="name">(2010) Subsidiary military fund</field>
         <field name="code">WT_2010</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
+    <record id="l10n_ch_elm_input_WT_2010_NET" model="hr.payslip.input.type">
+        <field name="name">(2010) Subsidiary military fund (Net compensation)</field>
+        <field name="code">WT_2010_NET</field>
         <field name="country_id" ref="base.ch"/>
         <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
     </record>
@@ -905,6 +929,14 @@
     <record id="l10n_ch_elm_input_WT_2020" model="hr.payslip.input.type">
         <field name="name">(2020) Military insurance compensation</field>
         <field name="code">WT_2020</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
+    <record id="l10n_ch_elm_input_WT_2020_NET" model="hr.payslip.input.type">
+        <field name="name">(2020) Military insurance compensation (Net compensation)</field>
+        <field name="code">WT_2020_NET</field>
         <field name="country_id" ref="base.ch"/>
         <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
     </record>
@@ -934,6 +966,14 @@
     </record>
 
 
+    <record id="l10n_ch_elm_input_WT_2025_NET" model="hr.payslip.input.type">
+        <field name="name">(2025) DI allowance (Net compensation)</field>
+        <field name="code">WT_2025_NET</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
     <record id="l10n_ch_elm_input_WT_2026" model="hr.payslip.input.type">
         <field name="name">(2026) DI pension</field>
         <field name="code">WT_2026</field>
@@ -953,6 +993,14 @@
     <record id="l10n_ch_elm_input_WT_2030" model="hr.payslip.input.type">
         <field name="name">(2030) Accident - daily allowance</field>
         <field name="code">WT_2030</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
+    <record id="l10n_ch_elm_input_WT_2030_NET" model="hr.payslip.input.type">
+        <field name="name">(2030) Accident - daily allowance (Net compensation)</field>
+        <field name="code">WT_2030_NET</field>
         <field name="country_id" ref="base.ch"/>
         <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
     </record>
@@ -982,9 +1030,25 @@
     </record>
 
 
+    <record id="l10n_ch_elm_input_WT_2035_NET" model="hr.payslip.input.type">
+        <field name="name">(2035) Daily sickness allowance (Net compensation)</field>
+        <field name="code">WT_2035_NET</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
     <record id="l10n_ch_elm_input_WT_2040" model="hr.payslip.input.type">
         <field name="name">(2040) Maternity/Paternity allowance</field>
         <field name="code">WT_2040</field>
+        <field name="country_id" ref="base.ch"/>
+        <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
+    </record>
+
+
+    <record id="l10n_ch_elm_input_WT_2040_NET" model="hr.payslip.input.type">
+        <field name="name">(2040) Maternity/Paternity allowance (Net compensation)</field>
+        <field name="code">WT_2040_NET</field>
         <field name="country_id" ref="base.ch"/>
         <field name="struct_ids" eval="[(4, ref('l10n_ch_hr_payroll_elm_transmission.hr_payroll_structure_ch_elm'))]"/>
     </record>

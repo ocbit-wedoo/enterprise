@@ -921,6 +921,79 @@ registry.category("web_tour.tours").add('test_mrp_manual_consumption_in_shopfloo
         },
 ]});
 
+registry.category("web_tour.tours").add("test_mrp_lot_not_assigned_manual_consumption", {
+    steps: () => [
+        {
+            trigger: ".form-check:has(input[name='All MO'])",
+            run: "click",
+        },
+        {
+            trigger: ".form-check:has(input[name='All MO']:checked)",
+        },
+        {
+            trigger: "button:contains('Confirm')",
+            run: "click",
+        },
+        {
+            trigger:
+                ".o_mrp_display_record:contains('MANUALLOT') .o_mrp_record_line:contains('Register Production')",
+            run: "click",
+        },
+        {
+            trigger: ".o_field_widget[name='qty_done'] input",
+            run: "edit 2",
+        },
+        {
+            trigger: "button:contains('Validate')",
+            run: "click",
+        },
+        {
+            trigger: ".btn-primary:contains('Close Production')",
+            run: "click",
+        },
+        {
+            trigger: `.o_error_dialog:contains("You need to supply Lot/Serial Number for products and 'consume' them")`,
+        },
+        {
+            trigger: ".modal-content button.btn-close",
+            run: "click",
+        },
+        {
+            trigger: ".o_mrp_display_record:not(.o_fadeout_animation) span:contains('MANUALLOT')",
+        },
+        {
+            trigger:
+                ".o_mrp_display_record:contains('MANUALLOT') .o_mrp_record_line:contains('Component')",
+            run: "click",
+        },
+        {
+            trigger: ".modal-title:contains('Detailed Operations')",
+        },
+        {
+            trigger: ".o_widget_generate_serials button",
+            run: "click",
+        },
+        {
+            trigger: ".modal-title:contains('Generate Lot numbers')",
+        },
+        {
+            trigger: "button.btn-primary:contains('Generate')",
+            run: "click",
+        },
+        {
+            trigger: ".btn.o_form_button_save",
+            run: "click",
+        },
+        {
+            trigger: ".btn-primary:contains('Close Production')",
+            run: "click",
+        },
+        {
+            trigger: ".o_mrp_display_record.o_fadeout_animation span:contains('MANUALLOT')",
+        },
+    ],
+});
+
 registry.category("web_tour.tours").add("test_component_registration_on_split_productions", {
     steps: () => [
         {
@@ -1165,6 +1238,56 @@ registry.category("web_tour.tours").add("test_mrp_lot_generation_quantity_check"
         },
         {
             trigger: ".o_web_client:not(:has(.modal-content))",
+        },
+    ],
+});
+
+registry.category("web_tour.tours").add("test_gear_disabled_during_open_mo", {
+    steps: () => [
+        {
+            content: "Select the workcenter",
+            trigger: '.form-check:has(input[name="Nuclear Workcenter"])',
+            run: "click",
+        },
+        {
+            trigger: '.form-check:has(input[name="Nuclear Workcenter"]:checked)',
+        },
+        {
+            content: "Confirm workcenter",
+            trigger: 'button:contains("Confirm")',
+            run: "click",
+        },
+        {
+            content: "Select workcenter tab",
+            trigger: 'button.btn-light:contains("Nuclear Workcenter")',
+            run: "click",
+        },
+        {
+            content: "Wait for two WO cards to appear",
+            trigger: ".o_mrp_display_records:has(.o_mrp_display_record:nth-child(2))",
+        },
+        {
+            content: "Open gear menu on the first WO card",
+            trigger: ".o_mrp_display_record:nth-child(1) .card-footer button.fa-gear",
+            run: "click",
+        },
+        {
+            content: "Click Open Manufacturing Order",
+            trigger: 'button[name="openMO"]',
+            run: "click",
+        },
+        {
+            content: "Click gear on the other WO card while navigation is pending",
+            trigger: ".o_mrp_display_record:nth-child(2) .card-footer button.fa-gear",
+            run: "click",
+        },
+        {
+            content: "Verify the gear menu did not open on the other card while navigation was pending",
+            trigger: "body:not(:has(.o_mrp_menu_dialog)) .o_mrp_display_record:nth-child(2)",
+        },
+        {
+            content: "Verify navigation completed and MO form view is loaded",
+            trigger: ".o_form_view .o_field_widget[name='product_id']",
         },
     ],
 });

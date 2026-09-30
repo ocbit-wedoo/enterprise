@@ -131,6 +131,7 @@ class StockQuant(models.Model):
             'inventory_quantity',
             'inventory_quantity_set',
             'quantity',
+            'available_quantity',
             'product_uom_id',
             'lot_id',
             'package_id',

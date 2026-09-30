@@ -4,15 +4,15 @@
 #
 # Translators:
 # Wil Odoo, 2025
-# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2025
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2025, 2026.
 # Weblate <noreply-mt-weblate@weblate.org>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-29 18:50+0000\n"
-"PO-Revision-Date: 2026-04-11 09:06+0000\n"
-"Last-Translator: Weblate <noreply-mt-weblate@weblate.org>\n"
+"PO-Revision-Date: 2026-06-13 09:19+0000\n"
+"Last-Translator: Alina Lisnenko <alina.lisnenko@erp.co.ua>\n"
 "Language-Team: Ukrainian <https://translate.odoo.com/projects/odoo-18/"
 "sale_commission/uk/>\n"
 "Language: uk\n"
@@ -23,7 +23,7 @@ msgstr ""
 "? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > "
 "14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % "
 "100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.6.1\n"
 
 #. module: sale_commission
 #. odoo-python
@@ -34,7 +34,7 @@ msgstr "%s (копія)"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "<span class=\"o_stat_text\">Commissions</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Комісія</span>"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement_report__achieved
@@ -45,7 +45,7 @@ msgstr "Заархівовано"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_report__achieved_rate
 msgid "Achieved Rate"
-msgstr ""
+msgstr "Досягнутий показник"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__achievement_ids
@@ -55,12 +55,12 @@ msgstr "Виконання"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_res_config_settings__group_commission_forecast
 msgid "Achievement Forecast"
-msgstr ""
+msgstr "Прогноз досягнення"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_achievement_report_view_search
 msgid "Achievement Report"
-msgstr ""
+msgstr "Звіт досягнення"
 
 #. module: sale_commission
 #: model:ir.actions.act_window,name:sale_commission.sale_achievement_action_report
@@ -84,45 +84,45 @@ msgstr "Активно"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_search
 msgid "Active Plans"
-msgstr ""
+msgstr "Активні плани"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_user_wizard
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Add Multiple Salespersons"
-msgstr ""
+msgstr "Додати декілька продавців"
 
 #. module: sale_commission
 #: model:ir.actions.act_window,name:sale_commission.sale_subscription_change_customer_wizard_action
 msgid "Add Salespersons"
-msgstr ""
+msgstr "Додати продавців"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Add a new Sales Person"
-msgstr ""
+msgstr "Додати нового продавця"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Add a new achievement"
-msgstr ""
+msgstr "Додати нове досягнення"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Add a new commission level"
-msgstr ""
+msgstr "Додати новий рівень комісії"
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_achievement.py:0
 msgid "Adjustment %s"
-msgstr ""
+msgstr "Коригування %s"
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_achievement.py:0
 msgid "Adjustment: %s"
-msgstr ""
+msgstr "Коригування: %s"
 
 #. module: sale_commission
 #: model:ir.actions.act_window,name:sale_commission.sale_commission_action_achievement
@@ -138,7 +138,7 @@ msgstr "Усі категорії"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "All products"
-msgstr ""
+msgstr "Усі товари"
 
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_achievement
@@ -146,6 +146,8 @@ msgid ""
 "Allows you to manually adjust a salesperson's achievements\n"
 "                for a specific period and commission plan."
 msgstr ""
+"Дозволяє вручну коригувати досягнення продавця\n"
+"за певний період та план комісійних."
 
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_forecast
@@ -153,6 +155,8 @@ msgid ""
 "Allows you to manually set a salesperson's forecast\n"
 "                for a specific period and commission plan."
 msgstr ""
+"Дозволяє вручну встановити прогноз продавця\n"
+" на певний період та план комісійних."
 
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_my_forecast
@@ -160,6 +164,8 @@ msgid ""
 "Allows you to manually set your sales' forecast\n"
 "                for a specific period and commission plan."
 msgstr ""
+"Дозволяє вручну встановити прогноз продажів \n"
+"на певний період та план комісійних."
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement__amount
@@ -170,13 +176,13 @@ msgstr "Сума"
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_achievement__type__amount_invoiced
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_plan_achievement__type__amount_invoiced
 msgid "Amount Invoiced"
-msgstr ""
+msgstr "Сума виставлена у рахунку"
 
 #. module: sale_commission
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_achievement__type__amount_sold
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_plan_achievement__type__amount_sold
 msgid "Amount Sold"
-msgstr ""
+msgstr "Сума продажів"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
@@ -207,7 +213,7 @@ msgstr "Базується на"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_search
 msgid "By Quarter"
-msgstr ""
+msgstr "За кварталом"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_user_wizard
@@ -234,13 +240,13 @@ msgstr "Комісія"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_achievement_view_search
 msgid "Commission Achievement"
-msgstr ""
+msgstr "Досягнення комісії"
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/report/commission_report.py:0
 msgid "Commission Detail: %(name)s"
-msgstr ""
+msgstr "Деталі комісії: %(name)s"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_plan
@@ -262,22 +268,22 @@ msgstr "Виконання плану комісійних"
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_plan_target
 msgid "Commission Plan Target"
-msgstr ""
+msgstr "Цільовий план комісії"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_plan_target_commission
 msgid "Commission Plan Target Commission"
-msgstr ""
+msgstr "Цільовий план комісії"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_plan_target_forecast
 msgid "Commission Plan Target Forecast"
-msgstr ""
+msgstr "Прогноз цільового плану комісії"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_plan_user
 msgid "Commission Plan User"
-msgstr ""
+msgstr "Користувач плану комісії"
 
 #. module: sale_commission
 #: model:ir.actions.act_window,name:sale_commission.sale_commission_action_plan
@@ -288,7 +294,7 @@ msgstr "Плани комісії"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_search
 msgid "Commission Report"
-msgstr ""
+msgstr "Звіт комісії"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_res_users__commission_plan_users_ids
@@ -326,7 +332,7 @@ msgstr "Завершено"
 msgid ""
 "Compute commissions of your sales people based on their achievements and "
 "targets"
-msgstr ""
+msgstr "Розраховуйте комісії ваших продавців на основі їхніх досягнень та цілей"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_res_config_settings
@@ -336,18 +342,18 @@ msgstr "Налаштування"
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_plan
 msgid "Create a new commission plan"
-msgstr ""
+msgstr "Створити новий план комісії"
 
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_achievement
 msgid "Create an adjustment"
-msgstr ""
+msgstr "Створити коригування"
 
 #. module: sale_commission
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_forecast
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_my_forecast
 msgid "Create an forecast"
-msgstr ""
+msgstr "Створити прогноз"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement__create_uid
@@ -392,7 +398,7 @@ msgstr "Курс валюти"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_achievement_report_view_search
 msgid "Current Period"
-msgstr ""
+msgstr "Поточний період"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement__date
@@ -403,7 +409,7 @@ msgstr "Дата"
 #. module: sale_commission
 #: model:ir.model.fields,help:sale_commission.field_crm_team__commission_plan_ids
 msgid "Default commission plan for team members."
-msgstr ""
+msgstr "Стандартний план комісійних для членів команди."
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_list
@@ -439,12 +445,12 @@ msgstr "Чернетка"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Effective Period"
-msgstr ""
+msgstr "Ефективний період"
 
 #. module: sale_commission
 #: model:res.groups,name:sale_commission.group_commission_forecast
 msgid "Enable Commission Forecast"
-msgstr ""
+msgstr "Увімкнути прогноз комісії"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_list
@@ -459,11 +465,13 @@ msgid ""
 "Ensure you are assigned to a commission plan and have made sales that "
 "qualify for commissions"
 msgstr ""
+"Переконайтеся, що вам призначено план комісійних, і ви здійснили продажі, "
+"які відповідають вимогам для отримання комісійних"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_res_users__filtered_commission_plan_users_ids
 msgid "Filtered Commission Plan Users"
-msgstr ""
+msgstr "Відфільтровані користувачі комісійного плану"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__message_follower_ids
@@ -497,7 +505,7 @@ msgstr "Від"
 #. odoo-python
 #: code:addons/sale_commission/model/commission_plan_user.py:0
 msgid "From must be before To"
-msgstr ""
+msgstr "Від має бути до До"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_achievement_report_view_search
@@ -615,19 +623,19 @@ msgstr "Щомісяця"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_achievement_report_view_search
 msgid "My Achievements"
-msgstr ""
+msgstr "Мої досягнення"
 
 #. module: sale_commission
 #: model:ir.actions.act_window,name:sale_commission.sale_commission_action_my_report
 #: model:ir.ui.menu,name:sale_commission.sale_commission_my_menu
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_search
 msgid "My Commissions"
-msgstr ""
+msgstr "Моя комісія"
 
 #. module: sale_commission
 #: model:ir.actions.act_window,name:sale_commission.sale_commission_action_my_forecast
 msgid "My Forecast"
-msgstr ""
+msgstr "Мій прогноз"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_search
@@ -673,17 +681,17 @@ msgstr "OTC"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan_target_commission__amount_rate
 msgid "OTC %"
-msgstr ""
+msgstr "OTC %"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__commission_amount
 msgid "On Target Commission"
-msgstr ""
+msgstr "На цільовій комісії"
 
 #. module: sale_commission
 #: model:ir.model.fields,help:sale_commission.field_sale_commission_plan_target_commission__amount_rate
 msgid "On Target Commission rate"
-msgstr ""
+msgstr "На ставці цільової комісії"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_search
@@ -693,7 +701,7 @@ msgstr "У процесі"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan_user__other_plans
 msgid "Other plans"
-msgstr ""
+msgstr "Інші плани"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_report__payment_date
@@ -742,7 +750,7 @@ msgstr "Товар"
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_achievement__type__qty_invoiced
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_plan_achievement__type__qty_invoiced
 msgid "Quantity Invoiced"
-msgstr ""
+msgstr "Кількість виставлена у рахунку"
 
 #. module: sale_commission
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_achievement__type__qty_sold
@@ -773,13 +781,13 @@ msgstr "Пов’язано"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement_report__related_res_model
 msgid "Related Res Model"
-msgstr ""
+msgstr "Повʼязана Res модель"
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_plan.py:0
 msgid "Related commissions"
-msgstr ""
+msgstr "Повʼязані комісії"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
@@ -794,22 +802,22 @@ msgstr "Помилка доставки SMS"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__team_id
 msgid "Sale team"
-msgstr ""
+msgstr "Команда продажу"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_achievement_report
 msgid "Sales Achievement Report"
-msgstr ""
+msgstr "Звіт досягнення продажів"
 
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_report
 msgid "Sales Commission Report"
-msgstr ""
+msgstr "Звіт комісії продажів"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Sales People"
-msgstr ""
+msgstr "Продавці"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement__user_id
@@ -841,7 +849,7 @@ msgstr "Продавець"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_list
 msgid "See associated achievements"
-msgstr ""
+msgstr "Див. пов'язані досягнення"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_achievement_report_view_list
@@ -872,56 +880,56 @@ msgstr "Ціль"
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_report__target_amount
 msgid "Target Amount"
-msgstr ""
+msgstr "Цільова сума"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__target_commission_ids
 msgid "Target Commission"
-msgstr ""
+msgstr "Цільова комісія"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__target_commission_graph
 msgid "Target Commission Graph"
-msgstr ""
+msgstr "Графік цільової комісії"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Target Frequency"
-msgstr ""
+msgstr "Цільова частота"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan_target_commission__target_rate
 msgid "Target completion (%)"
-msgstr ""
+msgstr "Виконання цілі (%)"
 
 #. module: sale_commission
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_plan__type__target
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "Targets"
-msgstr ""
+msgstr "Цілі"
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_plan.py:0
 msgid "The plan should have at least one target with an achievement rate of 0%"
-msgstr ""
+msgstr "План повинен мати принаймні одну ціль з коефіцієнтом досягнення 0%"
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_plan.py:0
 msgid "The start date must be before the end date."
-msgstr ""
+msgstr "Дата початку має бути раніше дати завершення."
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_plan.py:0
 msgid "The team is required in team plan."
-msgstr ""
+msgstr "Команда обов'язкова в командному плані."
 
 #. module: sale_commission
 #: model:ir.model.constraint,message:sale_commission.constraint_sale_commission_plan_user_user_uniq
 msgid "The user is already present in the plan"
-msgstr ""
+msgstr "Користувач вже присутній у плані"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_target_forecast_view_search
@@ -944,17 +952,17 @@ msgstr "До"
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_list
 msgid "Total Target"
-msgstr ""
+msgstr "Всього цілі"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_list
 msgid "Total achieved"
-msgstr ""
+msgstr "Всього досягнуто"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_report_view_list
 msgid "Total commission"
-msgstr ""
+msgstr "Всього комісії"
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_achievement__type
@@ -969,7 +977,7 @@ msgstr "Тип"
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_report
 #: model_terms:ir.actions.act_window,help:sale_commission.sale_commission_action_report_sale
 msgid "Unfortunately, there are no commissions for you"
-msgstr ""
+msgstr "На жаль, для вас немає комісійних"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_search
@@ -1000,12 +1008,13 @@ msgstr "Тип користувача"
 #: code:addons/sale_commission/model/commission_plan_user.py:0
 msgid "User period cannot end after the plan."
 msgstr ""
+"Період користування не може закінчуватися після закінчення терміну дії плану."
 
 #. module: sale_commission
 #. odoo-python
 #: code:addons/sale_commission/model/commission_plan_user.py:0
 msgid "User period cannot start before the plan."
-msgstr ""
+msgstr "Період користування не може розпочатися раніше за план."
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_plan__website_message_ids
@@ -1020,7 +1029,7 @@ msgstr "Історія бесіди на сайті"
 #. module: sale_commission
 #: model:ir.model,name:sale_commission.model_sale_commission_plan_user_wizard
 msgid "Wizard for selecting multiple users"
-msgstr ""
+msgstr "Майстер вибору кількох користувачів"
 
 #. module: sale_commission
 #: model:ir.model.fields.selection,name:sale_commission.selection__sale_commission_plan__periodicity__year
@@ -1032,16 +1041,17 @@ msgstr "Щорічно"
 #: code:addons/sale_commission/model/commission_plan_target_forecast.py:0
 msgid "You cannot create a forecast for an user that is not in the plan."
 msgstr ""
+"Ви не можете створити прогноз для користувача, який не входить до плану."
 
 #. module: sale_commission
 #: model:ir.model.fields,field_description:sale_commission.field_sale_commission_report__forecast_id
 msgid "fc"
-msgstr ""
+msgstr "fc"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
 msgid "i.e. Commissions plan 2025"
-msgstr ""
+msgstr "напр. План комісії 2025"
 
 #. module: sale_commission
 #: model_terms:ir.ui.view,arch_db:sale_commission.sale_commission_plan_view_form
